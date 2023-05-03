@@ -1,3 +1,3 @@
-import { EVERYTHING, allow } from "zodiac-roles-sdk"
+import { applyPermissions as apply } from "zodiac-roles-sdk"
 
-export const p = allow.mainnet.dai[EVERYTHING]()
+export { apply }

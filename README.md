@@ -29,11 +29,16 @@ const calls = await res.json()
 
 ## Contribute
 
-The project is structured with a monorepo.
 Install all dependencies:
 
 ```
 yarn
+```
+
+Fetch ABIs and generate types for sdk:
+
+```
+yarn prepare
 ```
 
 Start app dev server and watch sources for changes:
