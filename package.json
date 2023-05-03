@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "build": "yarn workspaces foreach -pt run build",
+    "prepare": "yarn workspace defi-presets run prepare",
     "dev": "yarn workspaces foreach -pi run dev",
     "check:prettier": "prettier '**/*.{js,ts,tsx,json}' --ignore-path .gitignore --list-different",
     "fix:prettier": "prettier '**/*.{js,ts,tsx,json}' --ignore-path .gitignore --write"

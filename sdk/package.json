@@ -1,7 +1,6 @@
 {
   "name": "defi-presets",
   "description": "Permission presets for Zodiac Roles covering interactions with DeFi protocols",
-  "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,14 +15,24 @@
     "README.md"
   ],
   "scripts": {
+    "prepare": "eth-sdk",
     "build": "rimraf dist && tsup src/index.ts --format esm,cjs",
     "dev": "tsup src/index.ts --format esm --watch"
   },
-  "devDependencies": {
+  "dependencies": {
     "@dethcrypto/eth-sdk": "^0.3.3",
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/bignumber": "^5.7.0",
+    "ethers": "^5.7.0",
+    "zodiac-roles-sdk": "^2.0.0"
+  },
+  "devDependencies": {
     "rimraf": "^5.0.0",
     "ts-node": "^10.9.1",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
+  },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
   }
 }
