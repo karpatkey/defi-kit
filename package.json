@@ -1,0 +1,22 @@
+{
+  "name": "defi-presets-monorepo",
+  "private": true,
+  "repository": "https://github.com/gnosis/defi-presets.git",
+  "author": "Gnosis Guild",
+  "license": "LGPL-3.0",
+  "workspaces": [
+    "sdk",
+    "app"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach -pt run build",
+    "dev": "yarn workspaces foreach -pi run dev",
+    "check:prettier": "prettier '**/*.{js,ts,tsx,json}' --ignore-path .gitignore --list-different",
+    "fix:prettier": "prettier '**/*.{js,ts,tsx,json}' --ignore-path .gitignore --write"
+  },
+  "packageManager": "yarn@3.5.1",
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  }
+}
