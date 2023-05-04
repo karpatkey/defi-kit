@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { Inter } from "next/font/google"
-import { a } from "defi-presets"
-console.log({ a })
+
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
