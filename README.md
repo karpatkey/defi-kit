@@ -11,11 +11,13 @@ yarn add defi-presets
 ```
 
 ```typescript
-import { apply, allow } from "defi-presets"
+import { applyPermissions, allow } from "defi-presets"
 
-const calls = await apply(rolesModAddress, roleId, [
-  allow.cowswap.swap(tokenIn, tokenOut),
-])
+const calls = await applyPermissions(
+  roleId,
+  [allow.cowswap.swap(tokenIn, tokenOut)],
+  {}
+)
 ```
 
 ### REST API
@@ -26,6 +28,61 @@ const res = await fetch(
 )
 const calls = await res.json()
 ```
+
+#### Routes
+
+```
+GET https://presets.karpatkey.com/api/v1/<chain>:<address>/<role>/<allow|revoke>/<protocol>/<action>?<query>
+```
+
+- `chain`: chain short name (see [official list](https://github.com/ethereum-lists/chains))
+- `address`: address of the Roles mod
+- `role`: ID of the role to update
+- `protocol`: protocol name
+- `action`: `swap`/`lp`/`stake`/`lend`/`borrow`
+- `query`: action specific query parameters
+
+#### Responses
+
+All requests have a JSON response of the same schema:
+
+```json
+{
+  "version": "1.0",
+  "chainId": "1",
+  "meta": {
+    "name": "",
+    "description": "",
+    "txBuilderVersion": "1.8.0"
+  },
+  "createdAt": 1683187179279,
+  "transactions": [
+    {
+      "to": "0x...",
+      "data": "0x...",
+      "value": "0"
+    }
+  ]
+}
+```
+
+This JSON can be uploaded to the Safe Transaction Builder app for execution.
+
+#### Protocols
+
+##### `curve`
+
+###### Actions
+
+- `lp`
+- `stake`
+
+##### `compound`
+
+###### Actions
+
+- `lend`
+- `borrow`
 
 ## Contribute
 
