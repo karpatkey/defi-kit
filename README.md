@@ -70,31 +70,27 @@ This JSON can be uploaded to the Safe Transaction Builder app for execution.
 
 #### Actions
 
-##### `lp`
+##### `deposit`
 
-Add and remove liquidity from AMM pools
+Deposit and withdraw liquidity from AMM pools or money markets
 
 ##### `stake`
 
 Stake LP tokens
 
-##### `lend`
-
-Lend assets to earn interest and optionally allow using them as collateral
-
 ##### `borrow`
 
-Borrow assets against some collateral
+Borrow assets against collateral on money markets
 
 #### Protocols
 
 ##### `curve`
 
-Supported actions: `lp`, `stake`
+Supported actions: `deposit`, `stake`
 
 ##### `compound`
 
-Supported actions: `lend`, `borrow`
+Supported actions: `deposit`, `borrow`
 
 ## Contribute
 
