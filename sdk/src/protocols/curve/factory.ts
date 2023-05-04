@@ -1,6 +1,5 @@
-
 import { PresetAllowEntry } from "zodiac-roles-sdk"
-import { allowErc20Approve } from "../erc20"
+import { allowErc20Approve } from "../../erc20"
 
 import { Pool } from "./types"
 

@@ -68,21 +68,33 @@ All requests have a JSON response of the same schema:
 
 This JSON can be uploaded to the Safe Transaction Builder app for execution.
 
+#### Actions
+
+##### `lp`
+
+Add and remove liquidity from AMM pools
+
+##### `stake`
+
+Stake LP tokens
+
+##### `lend`
+
+Lend assets to earn interest and optionally allow using them as collateral
+
+##### `borrow`
+
+Borrow assets against some collateral
+
 #### Protocols
 
 ##### `curve`
 
-###### Actions
-
-- `lp`
-- `stake`
+Supported actions: `lp`, `stake`
 
 ##### `compound`
 
-###### Actions
-
-- `lend`
-- `borrow`
+Supported actions: `lend`, `borrow`
 
 ## Contribute
 

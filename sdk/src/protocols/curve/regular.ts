@@ -1,21 +1,27 @@
 import { PresetAllowEntry } from "zodiac-roles-sdk"
 
-import { allowErc20Approve } from "../erc20"
+import { allowErc20Approve } from "../../erc20"
 import { Pool } from "./types"
 
-export const allowRegularPool = (pool: Pool): PresetAllowEntry[] => {
+export const allowDeposit = (pool: Pool): PresetAllowEntry[] => {
   const tokens = (pool.tokens as readonly string[]).filter(
     (token) =>
       token.toLowerCase() !== "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
   )
 
   const result: PresetAllowEntry[] = [
-    //Gotta make sure the token address is not "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
     ...allowErc20Approve(tokens, [pool.address]),
     {
       targetAddress: pool.address,
       signature: `add_liquidity(uint256[${pool.tokens.length}],uint256)`,
     },
+  ]
+
+  return result
+}
+
+export const allowWithdraw = (pool: Pool): PresetAllowEntry[] => {
+  const result: PresetAllowEntry[] = [
     {
       targetAddress: pool.address,
       signature: "remove_liquidity_one_coin(uint256,int128,uint256)",
@@ -28,6 +34,19 @@ export const allowRegularPool = (pool: Pool): PresetAllowEntry[] => {
       targetAddress: pool.address,
       signature: `remove_liquidity_imbalance(uint256[${pool.tokens.length}],uint256)`,
     },
+  ]
+
+  return result
+}
+
+export const allowSwap = (pool: Pool): PresetAllowEntry[] => {
+  const tokens = (pool.tokens as readonly string[]).filter(
+    (token) =>
+      token.toLowerCase() !== "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+  )
+
+  const result: PresetAllowEntry[] = [
+    ...allowErc20Approve(tokens, [pool.address]),
     {
       targetAddress: pool.address,
       signature: "exchange(int128,int128,uint256,uint256)",

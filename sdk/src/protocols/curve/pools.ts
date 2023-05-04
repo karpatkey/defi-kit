@@ -1,6 +1,6 @@
 export default [
   {
-    name: "Curve DAI/USDC/USDT",
+    name: "DAI/USDC/USDT",
     type: "regular",
     meta: false,
     address: "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7",
@@ -27,7 +27,7 @@ export default [
     },
   },
   {
-    name: "Curve aDAI/aUSDC/aUSDT",
+    name: "aDAI/aUSDC/aUSDT",
     type: "regular",
     meta: false,
     address: "0xDeBF20617708857ebe4F679508E7b7863a8A8EeE",
@@ -43,7 +43,7 @@ export default [
     },
   },
   {
-    name: "Curve ETH/aETHc",
+    name: "ETH/aETHc",
     type: "regular",
     meta: false,
     address: "0xA96A65c051bF88B4095Ee1f2451C2A9d43F53Ae2",
@@ -58,7 +58,7 @@ export default [
     },
   },
   {
-    name: "Curve yDAI/yUSDC/yUSDT/yBUSD",
+    name: "yDAI/yUSDC/yUSDT/yBUSD",
     type: "regular",
     meta: false,
     address: "0x79a8C46DeA5aDa233ABaFFD40F3A0A2B1e5A4F27",
@@ -78,7 +78,7 @@ export default [
     },
   },
   {
-    name: "Curve cDAI/cUSDC",
+    name: "cDAI/cUSDC",
     type: "regular",
     meta: false,
     address: "0xA2B47E3D5c44877cca798226B7B8118F9BFb7A56",
@@ -96,7 +96,7 @@ export default [
     },
   },
   {
-    name: "Curve EURS/sEUR",
+    name: "EURS/sEUR",
     type: "regular",
     meta: false,
     address: "0x0Ce6a5fF5217e38315f87032CF90686C96627CAA",
@@ -111,7 +111,7 @@ export default [
     },
   },
   {
-    name: "Curve HBTC/WBTC",
+    name: "HBTC/WBTC",
     type: "regular",
     meta: false,
     address: "0x4CA9b3063Ec5866A4B82E437059D2C43d1be596F",
@@ -126,7 +126,7 @@ export default [
     },
   },
   {
-    name: "Curve iDAI/iUSDC/iUSDT",
+    name: "iDAI/iUSDC/iUSDT",
     type: "regular",
     meta: false,
     address: "0x2dded6Da1BF5DBdF597C45fcFaa3194e53EcfeAF",
@@ -142,7 +142,7 @@ export default [
     },
   },
   {
-    name: "Curve LINK/sLINK",
+    name: "LINK/sLINK",
     type: "regular",
     meta: false,
     address: "0xF178C0b5Bb7e7aBF4e12A4838C7b7c5bA2C623c0",
@@ -157,7 +157,7 @@ export default [
     },
   },
   {
-    name: "Curve ycDAI/ycUSDC/ycUSDT/USDP",
+    name: "ycDAI/ycUSDC/ycUSDT/USDP",
     type: "regular",
     meta: false,
     address: "0x06364f10B501e868329afBc005b3492902d6C763",
@@ -177,7 +177,7 @@ export default [
     },
   },
   {
-    name: "Curve renBTC/WBTC",
+    name: "renBTC/WBTC",
     type: "regular",
     meta: false,
     address: "0x93054188d876f558f4a66B2EF1d97d16eDf0895B",
@@ -192,7 +192,7 @@ export default [
     },
   },
   {
-    name: "Curve aDAI/aSUSD",
+    name: "aDAI/aSUSD",
     type: "regular",
     meta: false,
     address: "0xEB16Ae0052ed37f479f7fe63849198Df1765a733",
@@ -207,7 +207,7 @@ export default [
     },
   },
   {
-    name: "Curve renBTC/WBTC/sBTC",
+    name: "renBTC/WBTC/sBTC",
     type: "regular",
     meta: false,
     address: "0x7fC77b5c7614E1533320Ea6DDc2Eb61fa00A9714",
@@ -226,7 +226,7 @@ export default [
     },
   },
   {
-    name: "Curve ETH/sETH",
+    name: "ETH/sETH",
     type: "regular",
     meta: false,
     address: "0xc5424B857f758E906013F3555Dad202e4bdB4567",
@@ -241,7 +241,7 @@ export default [
     },
   },
   {
-    name: "Curve ETH/stETH",
+    name: "ETH/stETH",
     type: "regular",
     meta: false,
     address: "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022",
@@ -256,7 +256,7 @@ export default [
     },
   },
   {
-    name: "Curve DAI/USDC/USDT/sUSD",
+    name: "DAI/USDC/USDT/sUSD",
     type: "regular",
     meta: false,
     address: "0xA5407eAE9Ba41422680e2e00537571bcC53efBfD",
@@ -276,7 +276,7 @@ export default [
     },
   },
   {
-    name: "Curve cDAI/cUSDC/USDT",
+    name: "cDAI/cUSDC/USDT",
     type: "regular",
     meta: false,
     address: "0x52EA46506B9CC5Ef470C5bf89f17Dc28bB35D85C",
@@ -295,7 +295,7 @@ export default [
     },
   },
   {
-    name: "Curve yDAI/yUSDC/yUSDT/yTUSD",
+    name: "yDAI/yUSDC/yUSDT/yTUSD",
     type: "regular",
     meta: false,
     address: "0x45F783CCE6B7FF23B2ab2D70e416cdb7D6055f51",
@@ -315,7 +315,7 @@ export default [
     },
   },
   {
-    name: "Curve DUSD/3Crv",
+    name: "DUSD/3Crv",
     type: "regular",
     meta: true,
     address: "0x8038C01A0390a8c547446a0b2c18fc9aEFEcc10c",
@@ -341,7 +341,7 @@ export default [
     },
   },
   {
-    name: "Curve GUSD/3Crv",
+    name: "GUSD/3Crv",
     type: "regular",
     meta: true,
     address: "0x4f062658EaAF2C1ccf8C8e36D6824CDf41167956",
@@ -367,7 +367,7 @@ export default [
     },
   },
   {
-    name: "Curve HUSD/3Crv",
+    name: "HUSD/3Crv",
     type: "regular",
     meta: true,
     address: "0x3eF6A01A0f81D6046290f3e2A8c5b843e738E604",
@@ -393,7 +393,7 @@ export default [
     },
   },
   {
-    name: "Curve LINKUSD/3Crv",
+    name: "LINKUSD/3Crv",
     type: "regular",
     meta: true,
     address: "0xE7a24EF0C5e95Ffb0f6684b813A78F2a3AD7D171",
@@ -415,7 +415,7 @@ export default [
     },
   },
   {
-    name: "Curve mUSD/3Crv",
+    name: "mUSD/3Crv",
     type: "regular",
     meta: true,
     address: "0x8474DdbE98F5aA3179B3B3F5942D724aFcdec9f6",
@@ -441,7 +441,7 @@ export default [
     },
   },
   {
-    name: "Curve RSV/3Crv",
+    name: "RSV/3Crv",
     type: "regular",
     meta: true,
     address: "0xC18cC39da8b11dA8c3541C598eE022258F9744da",
@@ -467,7 +467,7 @@ export default [
     },
   },
   {
-    name: "Curve USDK/3Crv",
+    name: "USDK/3Crv",
     type: "regular",
     meta: true,
     address: "0x3E01dD8a5E1fb3481F0F589056b428Fc308AF0Fb",
@@ -493,7 +493,7 @@ export default [
     },
   },
   {
-    name: "Curve USDN/3Crv",
+    name: "USDN/3Crv",
     type: "regular",
     meta: true,
     address: "0x0f9cb53Ebe405d49A0bbdBD291A65Ff571bC83e1",
@@ -519,7 +519,7 @@ export default [
     },
   },
   {
-    name: "Curve USDP/3Crv",
+    name: "USDP/3Crv",
     type: "regular",
     meta: true,
     address: "0x42d7025938bEc20B69cBae5A77421082407f053A",
@@ -545,7 +545,7 @@ export default [
     },
   },
   {
-    name: "Curve UST/3Crv",
+    name: "UST/3Crv",
     type: "regular",
     meta: true,
     address: "0x890f4e345B1dAED0367A877a1612f86A1f86985f",
@@ -571,7 +571,7 @@ export default [
     },
   },
   {
-    name: "Curve BBTC/crvRenWSBTC",
+    name: "BBTC/crvRenWSBTC",
     type: "regular",
     meta: true,
     address: "0x071c661B4DeefB59E2a3DdB20Db036821eeE8F4b",
@@ -597,7 +597,7 @@ export default [
     },
   },
   {
-    name: "Curve oBTC/crvRenWSBTC",
+    name: "oBTC/crvRenWSBTC",
     type: "regular",
     meta: true,
     address: "0xd81dA8D904b52208541Bade1bD6595D8a251F8dd",
@@ -623,7 +623,7 @@ export default [
     },
   },
   {
-    name: "Curve pBTC/crvRenWSBTC",
+    name: "pBTC/crvRenWSBTC",
     type: "regular",
     meta: true,
     address: "0x7F55DDe206dbAD629C080068923b36fe9D6bDBeF",
@@ -649,7 +649,7 @@ export default [
     },
   },
   {
-    name: "Curve TBTC/crvRenWSBTC",
+    name: "TBTC/crvRenWSBTC",
     type: "regular",
     meta: true,
     address: "0xC25099792E9349C7DD09759744ea681C7de2cb66",
@@ -675,7 +675,7 @@ export default [
     },
   },
   {
-    name: "Curve TUSD/3Crv",
+    name: "TUSD/3Crv",
     type: "regular",
     meta: true,
     address: "0xEcd5e75AFb02eFa118AF914515D6521aaBd189F1",
@@ -701,7 +701,7 @@ export default [
     },
   },
   {
-    name: "Curve LUSD/3Crv",
+    name: "LUSD/3Crv",
     type: "regular",
     meta: true,
     address: "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
@@ -727,7 +727,7 @@ export default [
     },
   },
   {
-    name: "Curve FRAX/3Crv",
+    name: "FRAX/3Crv",
     type: "regular",
     meta: true,
     address: "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B",
@@ -753,7 +753,7 @@ export default [
     },
   },
   {
-    name: "Curve BUSD/3Crv",
+    name: "BUSD/3Crv",
     type: "regular",
     meta: true,
     address: "0x4807862AA8b2bF68830e4C8dc86D0e9A998e085a",
@@ -779,7 +779,7 @@ export default [
     },
   },
   {
-    name: "Curve ETH/rETH",
+    name: "ETH/rETH",
     type: "regular",
     meta: false,
     address: "0xF9440930043eb3997fc70e1339dBb11F341de7A8",
@@ -794,7 +794,7 @@ export default [
     },
   },
   {
-    name: "Curve alUSD/3Crv",
+    name: "alUSD/3Crv",
     type: "regular",
     meta: true,
     address: "0x43b4FdFD4Ff969587185cDB6f0BD875c5Fc83f8c",
@@ -820,7 +820,7 @@ export default [
     },
   },
   {
-    name: "Curve USDT/WBTC/WETH",
+    name: "USDT/WBTC/WETH",
     type: "regular",
     meta: false,
     address: "0x80466c64868E1ab14a1Ddf27A676C3fcBE638Fe5",
@@ -839,7 +839,7 @@ export default [
     },
   },
   {
-    name: "Curve RAI/3Crv",
+    name: "RAI/3Crv",
     type: "regular",
     meta: true,
     address: "0x618788357D0EBd8A37e763ADab3bc575D54c2C7d",
@@ -865,7 +865,7 @@ export default [
     },
   },
   {
-    name: "Curve MIM/3Crv",
+    name: "MIM/3Crv",
     type: "regular",
     meta: true,
     address: "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
@@ -891,7 +891,7 @@ export default [
     },
   },
   {
-    name: "Curve EURT/sEUR",
+    name: "EURT/sEUR",
     type: "regular",
     meta: false,
     address: "0xFD5dB7463a3aB53fD211b4af195c5BCCC1A03890",
@@ -906,7 +906,7 @@ export default [
     },
   },
   {
-    name: "Curve USDC/USDT/UST/FRAX",
+    name: "USDC/USDT/UST/FRAX",
     type: "regular",
     meta: false,
     address: "0x4e0915C88bC70750D68C481540F081fEFaF22273",
@@ -923,7 +923,7 @@ export default [
     },
   },
   {
-    name: "Curve USDC/USDT",
+    name: "USDC/USDT",
     type: "regular",
     meta: false,
     address: "0x1005F7406f32a61BD760CfA14aCCd2737913d546",
@@ -938,7 +938,7 @@ export default [
     },
   },
   {
-    name: "Curve FRAX/USDC",
+    name: "FRAX/USDC",
     type: "regular",
     meta: false,
     address: "0xDcEF968d416a41Cdac0ED8702fAC8128A64241A2",
@@ -956,7 +956,7 @@ export default [
     },
   },
   {
-    name: "Curve ETH/frxETH",
+    name: "ETH/frxETH",
     type: "regular",
     meta: false,
     address: "0xa1F8A6807c402E4A15ef4EBa36528A3FED24E577",
@@ -971,7 +971,7 @@ export default [
     },
   },
   {
-    name: "Curve ibEUR/sUSD",
+    name: "ibEUR/sUSD",
     type: "factory",
     meta: false,
     address: "0x1F71f05CF491595652378Fe94B7820344A551B8E",
@@ -982,7 +982,7 @@ export default [
     ],
   },
   {
-    name: "Curve EURT/sEUR",
+    name: "EURT/sEUR",
     type: "factory",
     meta: false,
     address: "0xFD5dB7463a3aB53fD211b4af195c5BCCC1A03890",
@@ -993,7 +993,7 @@ export default [
     ],
   },
   {
-    name: "Curve ibKRW/sKRW",
+    name: "ibKRW/sKRW",
     type: "factory",
     meta: false,
     address: "0x8461A004b50d321CB22B7d034969cE6803911899",
@@ -1008,7 +1008,7 @@ export default [
     },
   },
   {
-    name: "Curve ibEUR/sEUR",
+    name: "ibEUR/sEUR",
     type: "factory",
     meta: false,
     address: "0x19b080FE1ffA0553469D20Ca36219F17Fcf03859",
@@ -1023,7 +1023,7 @@ export default [
     },
   },
   {
-    name: "Curve CRV/yvBOOST/cvxCRV/sCRV",
+    name: "CRV/yvBOOST/cvxCRV/sCRV",
     type: "factory",
     meta: false,
     address: "0xDa5B670CcD418a187a3066674A8002Adc9356Ad1",
@@ -1036,7 +1036,7 @@ export default [
     ],
   },
   {
-    name: "Curve OUSD/3Crv",
+    name: "OUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0x87650D7bbfC3A9F10587d7778206671719d9910D",
@@ -1062,7 +1062,7 @@ export default [
     },
   },
   {
-    name: "Curve aUSDC/aDAI",
+    name: "aUSDC/aDAI",
     type: "factory",
     meta: false,
     address: "0x6A274dE3e2462c7614702474D64d376729831dCa",
@@ -1077,7 +1077,7 @@ export default [
     },
   },
   {
-    name: "Curve FEI/3Crv",
+    name: "FEI/3Crv",
     type: "factory",
     meta: true,
     address: "0x06cb22615BA53E60D67Bf6C341a0fD5E718E1655",
@@ -1103,7 +1103,7 @@ export default [
     },
   },
   {
-    name: "Curve alUSD/3Crv",
+    name: "alUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0x43b4FdFD4Ff969587185cDB6f0BD875c5Fc83f8c",
@@ -1125,7 +1125,7 @@ export default [
     },
   },
   {
-    name: "Curve FRAX/3Crv",
+    name: "FRAX/3Crv",
     type: "factory",
     meta: true,
     address: "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B",
@@ -1147,7 +1147,7 @@ export default [
     },
   },
   {
-    name: "Curve GrapefruitUSD/3Crv",
+    name: "GrapefruitUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0xf5A95ccDe486B5fE98852bB02d8eC80a4b9422BD",
@@ -1169,7 +1169,7 @@ export default [
     },
   },
   {
-    name: "Curve LUSD/3Crv",
+    name: "LUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
@@ -1191,7 +1191,7 @@ export default [
     },
   },
   {
-    name: "Curve MIM/3Crv",
+    name: "MIM/3Crv",
     type: "factory",
     meta: true,
     address: "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
@@ -1213,7 +1213,7 @@ export default [
     },
   },
   {
-    name: "Curve nUSD/3Crv",
+    name: "nUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0x67d9eAe741944D4402eB0D1cB3bC3a168EC1764c",
@@ -1235,7 +1235,7 @@ export default [
     },
   },
   {
-    name: "Curve CRV/cvxCRV",
+    name: "CRV/cvxCRV",
     type: "factory",
     meta: false,
     address: "0x9D0464996170c6B9e75eED71c68B99dDEDf279e8",
@@ -1250,7 +1250,7 @@ export default [
     },
   },
   {
-    name: "Curve USDM/3Crv",
+    name: "USDM/3Crv",
     type: "factory",
     meta: true,
     address: "0x5B3b5DF2BF2B6543f78e053bD91C4Bdd820929f1",
@@ -1276,7 +1276,7 @@ export default [
     },
   },
   {
-    name: "Curve PAR/EURT/EURS/sEUR",
+    name: "PAR/EURT/EURS/sEUR",
     type: "factory",
     meta: false,
     address: "0x3CFAa1596777CAD9f5004F9a0c443d912E262243",
@@ -1289,7 +1289,7 @@ export default [
     ],
   },
   {
-    name: "Curve waUSD/3Crv",
+    name: "waUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0x9f6664205988C3bf4B12B851c075102714869535",
@@ -1311,7 +1311,7 @@ export default [
     },
   },
   {
-    name: "Curve DOLA/3Crv",
+    name: "DOLA/3Crv",
     type: "factory",
     meta: true,
     address: "0xAA5A67c256e27A5d80712c51971408db3370927D",
@@ -1337,7 +1337,7 @@ export default [
     },
   },
   {
-    name: "Curve ibJPY/sJPY",
+    name: "ibJPY/sJPY",
     type: "factory",
     meta: false,
     address: "0x8818a9bb44Fbf33502bE7c15c500d0C783B73067",
@@ -1352,7 +1352,7 @@ export default [
     },
   },
   {
-    name: "Curve ibAUD/sAUD",
+    name: "ibAUD/sAUD",
     type: "factory",
     meta: false,
     address: "0x3F1B0278A9ee595635B61817630cC19DE792f506",
@@ -1367,7 +1367,7 @@ export default [
     },
   },
   {
-    name: "Curve ibGBP/sGBP",
+    name: "ibGBP/sGBP",
     type: "factory",
     meta: false,
     address: "0xD6Ac1CB9019137a896343Da59dDE6d097F710538",
@@ -1382,7 +1382,7 @@ export default [
     },
   },
   {
-    name: "Curve ibCHF/sCHF",
+    name: "ibCHF/sCHF",
     type: "factory",
     meta: false,
     address: "0x9c2C8910F113181783c249d8F6Aa41b51Cde0f0c",
@@ -1397,7 +1397,7 @@ export default [
     },
   },
   {
-    name: "Curve OPEN/MATIC",
+    name: "OPEN/MATIC",
     type: "factory",
     meta: false,
     address: "0xc8a7C1c4B748970F57cA59326BcD49F5c9dc43E3",
@@ -1408,7 +1408,7 @@ export default [
     ],
   },
   {
-    name: "Curve EURN/EURT",
+    name: "EURN/EURT",
     type: "factory",
     meta: false,
     address: "0x3Fb78e61784C9c637D560eDE23Ad57CA1294c14a",
@@ -1423,7 +1423,7 @@ export default [
     },
   },
   {
-    name: "Curve ETH/alETH",
+    name: "ETH/alETH",
     type: "factory",
     meta: false,
     address: "0xC4C319E2D4d66CcA4464C0c2B32c9Bd23ebe784e",
@@ -1438,7 +1438,7 @@ export default [
     },
   },
   {
-    name: "Curve tBTC/crvRenWSBTC",
+    name: "tBTC/crvRenWSBTC",
     type: "factory",
     meta: true,
     address: "0xfa65aa60a9D45623c57D383fb4cf8Fb8b854cC4D",
@@ -1464,7 +1464,7 @@ export default [
     },
   },
   {
-    name: "Curve kUSD/3Crv",
+    name: "kUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0xAc5f019a302c4c8caAC0a7F28183ac62E6e80034",
@@ -1486,7 +1486,7 @@ export default [
     },
   },
   {
-    name: "Curve PWRD/3Crv",
+    name: "PWRD/3Crv",
     type: "factory",
     meta: true,
     address: "0xbcb91E689114B9Cc865AD7871845C95241Df4105",
@@ -1512,7 +1512,7 @@ export default [
     },
   },
   {
-    name: "Curve fUSD/3Crv",
+    name: "fUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0xC2F5FeA5197a3d92736500Fd7733Fcc7a3bBDf3F",
@@ -1534,7 +1534,7 @@ export default [
     },
   },
   {
-    name: "Curve wCOINBASE-IOU/3Crv",
+    name: "wCOINBASE-IOU/3Crv",
     type: "factory",
     meta: true,
     address: "0x705DA2596cf6aaA2FEA36f2a59985EC9e8aeC7E2",
@@ -1556,7 +1556,7 @@ export default [
     },
   },
   {
-    name: "Curve DEI/3Crv",
+    name: "DEI/3Crv",
     type: "factory",
     meta: true,
     address: "0x6870F9b4DD5d34C7FC53D0d85D9dBd1aAB339BF7",
@@ -1578,7 +1578,7 @@ export default [
     },
   },
   {
-    name: "Curve MIM/UST",
+    name: "MIM/UST",
     type: "factory",
     meta: false,
     address: "0x55A8a39bc9694714E2874c1ce77aa1E599461E18",
@@ -1593,7 +1593,7 @@ export default [
     },
   },
   {
-    name: "Curve vETH2/WETH",
+    name: "vETH2/WETH",
     type: "factory",
     meta: false,
     address: "0xf03bD3cfE85f00bF5819AC20f0870cE8a8d1F0D8",
@@ -1604,7 +1604,7 @@ export default [
     ],
   },
   {
-    name: "Curve CVX/bveCVX",
+    name: "CVX/bveCVX",
     type: "factory",
     meta: false,
     address: "0x04c90C198b2eFF55716079bc06d7CCc4aa4d7512",
@@ -1619,7 +1619,7 @@ export default [
     },
   },
   {
-    name: "Curve UST/3Crv",
+    name: "UST/3Crv",
     type: "factory",
     meta: true,
     address: "0xCEAF7747579696A2F0bb206a14210e3c9e6fB269",
@@ -1645,7 +1645,7 @@ export default [
     },
   },
   {
-    name: "Curve ETH/aETHb",
+    name: "ETH/aETHb",
     type: "factory",
     meta: false,
     address: "0xFB9a265b5a1f52d97838Ec7274A0b1442efAcC87",
@@ -1660,7 +1660,7 @@ export default [
     },
   },
   {
-    name: "Curve FRAX/FEI/alUSD",
+    name: "FRAX/FEI/alUSD",
     type: "factory",
     meta: false,
     address: "0xBaaa1F5DbA42C3389bDbc2c9D2dE134F5cD0Dc89",
@@ -1676,7 +1676,7 @@ export default [
     },
   },
   {
-    name: "Curve MATIC/aMATICb",
+    name: "MATIC/aMATICb",
     type: "factory",
     meta: false,
     address: "0x1F6bb2a7a2A84d08bb821B89E38cA651175aeDd4",
@@ -1691,7 +1691,7 @@ export default [
     },
   },
   {
-    name: "Curve USDP/3Crv",
+    name: "USDP/3Crv",
     type: "factory",
     meta: true,
     address: "0xc270b3B858c335B6BA5D5b10e2Da8a09976005ad",
@@ -1717,7 +1717,7 @@ export default [
     },
   },
   {
-    name: "Curve wibBTC/crvRenWSBTC",
+    name: "wibBTC/crvRenWSBTC",
     type: "factory",
     meta: true,
     address: "0xFbdCA68601f835b27790D98bbb8eC7f05FDEaA9B",
@@ -1743,7 +1743,7 @@ export default [
     },
   },
   {
-    name: "Curve ZARP/ibZAR",
+    name: "ZARP/ibZAR",
     type: "factory",
     meta: false,
     address: "0xcbD5cC53C5b846671C6434Ab301AD4d210c21184",
@@ -1758,7 +1758,7 @@ export default [
     },
   },
   {
-    name: "Curve agEUR/EURT/EURS",
+    name: "agEUR/EURT/EURS",
     type: "factory",
     meta: false,
     address: "0xb9446c4Ef5EBE66268dA6700D26f96273DE3d571",
@@ -1774,7 +1774,7 @@ export default [
     },
   },
   {
-    name: "Curve tWETH/WETH",
+    name: "tWETH/WETH",
     type: "factory",
     meta: false,
     address: "0x06d39e95977349431E3d800d49C63B4D472e10FB",
@@ -1785,7 +1785,7 @@ export default [
     ],
   },
   {
-    name: "Curve XSTUSD/3Crv",
+    name: "XSTUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0x1033812EFeC8716BBaE0c19e5678698D25E26eDf",
@@ -1811,7 +1811,7 @@ export default [
     },
   },
   {
-    name: "Curve XIM/3Crv",
+    name: "XIM/3Crv",
     type: "factory",
     meta: true,
     address: "0x6d8fF88973b15dF3e2dc6ABb9aF29Cad8C2B5Ef5",
@@ -1837,7 +1837,7 @@ export default [
     },
   },
   {
-    name: "Curve HOME/3Crv",
+    name: "HOME/3Crv",
     type: "factory",
     meta: true,
     address: "0x3b22B869ba3c0a495Cead0B8A009b70886d37fAC",
@@ -1859,7 +1859,7 @@ export default [
     },
   },
   {
-    name: "Curve JPYC/ibJPY",
+    name: "JPYC/ibJPY",
     type: "factory",
     meta: false,
     address: "0xbB2dC673E1091abCA3eaDB622b18f6D4634b2CD9",
@@ -1870,7 +1870,7 @@ export default [
     ],
   },
   {
-    name: "Curve CVX/bentCVX",
+    name: "CVX/bentCVX",
     type: "factory",
     meta: false,
     address: "0xf083FBa98dED0f9C970e5a418500bad08D8b9732",
@@ -1881,7 +1881,7 @@ export default [
     ],
   },
   {
-    name: "Curve USX/3Crv",
+    name: "USX/3Crv",
     type: "factory",
     meta: true,
     address: "0x76264772707c8Bc24261516b560cBF3Cbe6F7819",
@@ -1903,7 +1903,7 @@ export default [
     },
   },
   {
-    name: "Curve ibEUR/agEUR",
+    name: "ibEUR/agEUR",
     type: "factory",
     meta: false,
     address: "0xB37D6c07482Bc11cd28a1f11f1a6ad7b66Dec933",
@@ -1918,7 +1918,7 @@ export default [
     },
   },
   {
-    name: "Curve tFRAX/FRAX",
+    name: "tFRAX/FRAX",
     type: "factory",
     meta: false,
     address: "0x694650a0B2866472c2EEA27827CE6253C1D13074",
@@ -1929,7 +1929,7 @@ export default [
     ],
   },
   {
-    name: "Curve BEAN/3Crv",
+    name: "BEAN/3Crv",
     type: "factory",
     meta: true,
     address: "0x3a70DfA7d2262988064A2D051dd47521E43c9BdD",
@@ -1955,7 +1955,7 @@ export default [
     },
   },
   {
-    name: "Curve USDV/3Crv",
+    name: "USDV/3Crv",
     type: "factory",
     meta: true,
     address: "0x7abD51BbA7f9F6Ae87aC77e1eA1C5783adA56e5c",
@@ -1977,7 +1977,7 @@ export default [
     },
   },
   {
-    name: "Curve BaoUSD/3Crv",
+    name: "BaoUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0x0FaFaFD3C393ead5F5129cFC7e0E12367088c473",
@@ -1999,7 +1999,7 @@ export default [
     },
   },
   {
-    name: "Curve tGAMMA/GAMMA",
+    name: "tGAMMA/GAMMA",
     type: "factory",
     meta: false,
     address: "0x9462F2b3C9bEeA8afc334Cdb1D1382B072e494eA",
@@ -2010,7 +2010,7 @@ export default [
     ],
   },
   {
-    name: "Curve tSNX/SNX",
+    name: "tSNX/SNX",
     type: "factory",
     meta: false,
     address: "0x50B0D9171160d6EB8Aa39E090Da51E7e078E81c4",
@@ -2021,7 +2021,7 @@ export default [
     ],
   },
   {
-    name: "Curve rETH/wstETH",
+    name: "rETH/wstETH",
     type: "factory",
     meta: false,
     address: "0x447Ddd4960d9fdBF6af9a790560d0AF76795CB08",
@@ -2036,7 +2036,7 @@ export default [
     },
   },
   {
-    name: "Curve tAPW/APW",
+    name: "tAPW/APW",
     type: "factory",
     meta: false,
     address: "0xCaf8703f8664731cEd11f63bB0570E53Ab4600A9",
@@ -2047,7 +2047,7 @@ export default [
     ],
   },
   {
-    name: "Curve tTCR/TCR",
+    name: "tTCR/TCR",
     type: "factory",
     meta: false,
     address: "0x01FE650EF2f8e2982295489AE6aDc1413bF6011F",
@@ -2058,7 +2058,7 @@ export default [
     ],
   },
   {
-    name: "Curve tFOX/FOX",
+    name: "tFOX/FOX",
     type: "factory",
     meta: false,
     address: "0xC250B22d15e43d95fBE27B12d98B6098f8493eaC",
@@ -2069,7 +2069,7 @@ export default [
     ],
   },
   {
-    name: "Curve tSUSHI/SUSHI",
+    name: "tSUSHI/SUSHI",
     type: "factory",
     meta: false,
     address: "0x0437ac6109e8A366A1F4816edF312A36952DB856",
@@ -2080,7 +2080,7 @@ export default [
     ],
   },
   {
-    name: "Curve tALCX/ALCX",
+    name: "tALCX/ALCX",
     type: "factory",
     meta: false,
     address: "0x9001a452d39A8710D27ED5c2E10431C13F5Fba74",
@@ -2091,7 +2091,7 @@ export default [
     ],
   },
   {
-    name: "Curve tFXS/FXS",
+    name: "tFXS/FXS",
     type: "factory",
     meta: false,
     address: "0x961226B64AD373275130234145b96D100Dc0b655",
@@ -2102,7 +2102,7 @@ export default [
     ],
   },
   {
-    name: "Curve tFXS/FXS",
+    name: "tFXS/FXS",
     type: "factory",
     meta: false,
     address: "0xe7E4366f6ED6aFd23e88154C00B532BDc0352333",
@@ -2113,7 +2113,7 @@ export default [
     ],
   },
   {
-    name: "Curve DYDX/stkDYDX",
+    name: "DYDX/stkDYDX",
     type: "factory",
     meta: false,
     address: "0x04EcD49246bf5143E43e2305136c46AeB6fAd400",
@@ -2124,7 +2124,7 @@ export default [
     ],
   },
   {
-    name: "Curve pBTC/crvRenWSBTC",
+    name: "pBTC/crvRenWSBTC",
     type: "factory",
     meta: true,
     address: "0xC9467E453620f16b57a34a770C6bceBECe002587",
@@ -2150,7 +2150,7 @@ export default [
     },
   },
   {
-    name: "Curve FXS/sdFXS",
+    name: "FXS/sdFXS",
     type: "factory",
     meta: false,
     address: "0x8c524635d52bd7b1Bd55E062303177a7d916C046",
@@ -2165,7 +2165,7 @@ export default [
     },
   },
   {
-    name: "Curve ANGLE/sdANGLE",
+    name: "ANGLE/sdANGLE",
     type: "factory",
     meta: false,
     address: "0x48fF31bBbD8Ab553Ebe7cBD84e1eA3dBa8f54957",
@@ -2180,7 +2180,7 @@ export default [
     },
   },
   {
-    name: "Curve dfxCAD/CADC",
+    name: "dfxCAD/CADC",
     type: "factory",
     meta: false,
     address: "0x9CA41a2DaB3CEE15308998868ca644e2e3be5C59",
@@ -2195,7 +2195,7 @@ export default [
     },
   },
   {
-    name: "Curve sETH2/stETH",
+    name: "sETH2/stETH",
     type: "factory",
     meta: false,
     address: "0xE95E4c2dAC312F31Dc605533D5A4d0aF42579308",
@@ -2210,7 +2210,7 @@ export default [
     },
   },
   {
-    name: "Curve FIAT/3Crv",
+    name: "FIAT/3Crv",
     type: "factory",
     meta: true,
     address: "0xDB8Cc7eCeD700A4bfFdE98013760Ff31FF9408D8",
@@ -2236,7 +2236,7 @@ export default [
     },
   },
   {
-    name: "Curve CRV/sdCRV",
+    name: "CRV/sdCRV",
     type: "factory",
     meta: false,
     address: "0xf7b55C3732aD8b2c2dA7c24f30A69f55c54FB717",
@@ -2251,7 +2251,7 @@ export default [
     },
   },
   {
-    name: "Curve ARTH.usd/FRAX",
+    name: "ARTH.usd/FRAX",
     type: "factory",
     meta: false,
     address: "0x5a59Fd6018186471727FAAeAE4e57890aBC49B08",
@@ -2262,7 +2262,7 @@ export default [
     ],
   },
   {
-    name: "Curve PUSd/3Crv",
+    name: "PUSd/3Crv",
     type: "factory",
     meta: true,
     address: "0x8EE017541375F6Bcd802ba119bdDC94dad6911A1",
@@ -2288,7 +2288,7 @@ export default [
     },
   },
   {
-    name: "Curve USDD/3Crv",
+    name: "USDD/3Crv",
     type: "factory",
     meta: true,
     address: "0xe6b5CC1B4b47305c58392CE3D359B10282FC36Ea",
@@ -2314,7 +2314,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/stETH",
+    name: "WETH/stETH",
     type: "factory",
     meta: false,
     address: "0x828b154032950C8ff7CF8085D841723Db2696056",
@@ -2329,7 +2329,7 @@ export default [
     },
   },
   {
-    name: "Curve ApeUSD/FRAX",
+    name: "ApeUSD/FRAX",
     type: "factory",
     meta: false,
     address: "0x1977870a4c18a728C19Dd4eB6542451DF06e0A4b",
@@ -2340,7 +2340,7 @@ export default [
     ],
   },
   {
-    name: "Curve HOME/3Crv",
+    name: "HOME/3Crv",
     type: "factory",
     meta: true,
     address: "0x5c6A6Cf9Ae657A73b98454D17986AF41fC7b44ee",
@@ -2366,7 +2366,7 @@ export default [
     },
   },
   {
-    name: "Curve xFraxTempleLP/UNI-V2",
+    name: "xFraxTempleLP/UNI-V2",
     type: "factory",
     meta: false,
     address: "0xdaDfD00A2bBEb1abc4936b1644a3033e1B653228",
@@ -2381,7 +2381,7 @@ export default [
     },
   },
   {
-    name: "Curve wOMI/OMI",
+    name: "wOMI/OMI",
     type: "factory",
     meta: false,
     address: "0xeE98d56f60A5905CbB52348c8719B247DaFe60ec",
@@ -2392,7 +2392,7 @@ export default [
     ],
   },
   {
-    name: "Curve OMI/3Crv",
+    name: "OMI/3Crv",
     type: "factory",
     meta: true,
     address: "0x8116E7c29f60FdacF3954891A038f845565EF5A0",
@@ -2414,7 +2414,7 @@ export default [
     },
   },
   {
-    name: "Curve USDS/3Crv",
+    name: "USDS/3Crv",
     type: "factory",
     meta: true,
     address: "0xdE495223F7cD7EE0cDe1AddbD6836046bBdf3ad3",
@@ -2436,7 +2436,7 @@ export default [
     },
   },
   {
-    name: "Curve USDI/3Crv",
+    name: "USDI/3Crv",
     type: "factory",
     meta: true,
     address: "0x63594B2011a0F2616586Bf3EeF8096d42272F916",
@@ -2458,7 +2458,7 @@ export default [
     },
   },
   {
-    name: "Curve lvUSD/3Crv",
+    name: "lvUSD/3Crv",
     type: "factory",
     meta: true,
     address: "0x67C7f0a63BA70a2dAc69477B716551FC921aed00",
@@ -2484,7 +2484,7 @@ export default [
     },
   },
   {
-    name: "Curve USDD/crvFRAX",
+    name: "USDD/crvFRAX",
     type: "factory",
     meta: true,
     address: "0x4606326b4Db89373F5377C316d3b0F6e55Bc6A20",
@@ -2509,7 +2509,7 @@ export default [
     },
   },
   {
-    name: "Curve sUSD/crvFRAX",
+    name: "sUSD/crvFRAX",
     type: "factory",
     meta: true,
     address: "0xe3c190c57b5959Ae62EfE3B6797058B76bA2f5eF",
@@ -2534,7 +2534,7 @@ export default [
     },
   },
   {
-    name: "Curve LUSD/crvFRAX",
+    name: "LUSD/crvFRAX",
     type: "factory",
     meta: true,
     address: "0x497CE58F34605B9944E6b15EcafE6b001206fd25",
@@ -2559,7 +2559,7 @@ export default [
     },
   },
   {
-    name: "Curve ApeUSD/crvFRAX",
+    name: "ApeUSD/crvFRAX",
     type: "factory",
     meta: true,
     address: "0x04b727C7e246CA70d496ecF52E6b6280f3c8077D",
@@ -2584,7 +2584,7 @@ export default [
     },
   },
   {
-    name: "Curve GUSD/crvFRAX",
+    name: "GUSD/crvFRAX",
     type: "factory",
     meta: true,
     address: "0x4e43151b78b5fbb16298C1161fcbF7531d5F8D93",
@@ -2609,7 +2609,7 @@ export default [
     },
   },
   {
-    name: "Curve BUSD/crvFRAX",
+    name: "BUSD/crvFRAX",
     type: "factory",
     meta: true,
     address: "0x8fdb0bB9365a46B145Db80D0B1C5C5e979C84190",
@@ -2634,7 +2634,7 @@ export default [
     },
   },
   {
-    name: "Curve TUSD/crvFRAX",
+    name: "TUSD/crvFRAX",
     type: "factory",
     meta: true,
     address: "0x33baeDa08b8afACc4d3d07cf31d49FC1F1f3E893",
@@ -2659,7 +2659,7 @@ export default [
     },
   },
   {
-    name: "Curve cEUR/agEUR/EUROC",
+    name: "cEUR/agEUR/EUROC",
     type: "factory",
     meta: false,
     address: "0xe7A3b38c39F97E977723bd1239C3470702568e7B",
@@ -2675,7 +2675,7 @@ export default [
     },
   },
   {
-    name: "Curve alUSD/crvFRAX",
+    name: "alUSD/crvFRAX",
     type: "factory",
     meta: true,
     address: "0xB30dA2376F63De30b42dC055C93fa474F31330A5",
@@ -2700,7 +2700,7 @@ export default [
     },
   },
   {
-    name: "Curve GCD/USDP",
+    name: "GCD/USDP",
     type: "factory",
     meta: false,
     address: "0x649c1B0e70A80210bcFB3C4eb5DDAd175B90BE4d",
@@ -2711,7 +2711,7 @@ export default [
     ],
   },
   {
-    name: "Curve stETH/aETHb",
+    name: "stETH/aETHb",
     type: "factory",
     meta: false,
     address: "0x875DF0bA24ccD867f8217593ee27253280772A97",
@@ -2722,7 +2722,7 @@ export default [
     ],
   },
   {
-    name: "Curve LFT/sdLFT",
+    name: "LFT/sdLFT",
     type: "factory",
     meta: false,
     address: "0xC69b00366F07840fF939cc9fdF866C3dCCB10804",
@@ -2733,7 +2733,7 @@ export default [
     ],
   },
   {
-    name: "Curve BEAN/3Crv",
+    name: "BEAN/3Crv",
     type: "factory",
     meta: true,
     address: "0xc9C32cd16Bf7eFB85Ff14e0c8603cc90F6F2eE49",
@@ -2755,7 +2755,7 @@ export default [
     },
   },
   {
-    name: "Curve ETH/frxETH",
+    name: "ETH/frxETH",
     type: "factory",
     meta: false,
     address: "0x7c0316C925E12eBfC55e0f325794B43eaD425157",
@@ -2766,7 +2766,7 @@ export default [
     ],
   },
   {
-    name: "Curve tMYC/MYC",
+    name: "tMYC/MYC",
     type: "factory",
     meta: false,
     address: "0x83D78bf3f861e898cCA47BD076b3839Ab5469d70",
@@ -2777,7 +2777,7 @@ export default [
     ],
   },
   {
-    name: "Curve fxUSD/crvFRAX",
+    name: "fxUSD/crvFRAX",
     type: "factory",
     meta: true,
     address: "0x0AaCe9b6c491d5cD9F80665A2fCc1af09e9CCf00",
@@ -2798,7 +2798,7 @@ export default [
     },
   },
   {
-    name: "Curve xUSD1/3Crv",
+    name: "xUSD1/3Crv",
     type: "factory",
     meta: true,
     address: "0x92Da88e2e6f96cC7c667Cd1367BD090ADF3c6053",
@@ -2820,7 +2820,7 @@ export default [
     },
   },
   {
-    name: "Curve xUSD1/3Crv",
+    name: "xUSD1/3Crv",
     type: "factory",
     meta: true,
     address: "0xc5481720517e1B170CF1d19cEaaBE07c37896Eb2",
@@ -2842,7 +2842,7 @@ export default [
     },
   },
   {
-    name: "Curve agEUR/EUROC",
+    name: "agEUR/EUROC",
     type: "factory",
     meta: false,
     address: "0xBa3436Fd341F2C8A928452Db3C5A3670d1d5Cc73",
@@ -2857,7 +2857,7 @@ export default [
     },
   },
   {
-    name: "Curve APW/sdAPW",
+    name: "APW/sdAPW",
     type: "factory",
     meta: false,
     address: "0x6788f608CfE5CfCD02e6152eC79505341E0774be",
@@ -2868,7 +2868,7 @@ export default [
     ],
   },
   {
-    name: "Curve PUSd/crvFRAX",
+    name: "PUSd/crvFRAX",
     type: "factory",
     meta: true,
     address: "0xC47EBd6c0f68fD5963005D28D0ba533750E5C11B",
@@ -2893,7 +2893,7 @@ export default [
     },
   },
   {
-    name: "Curve MAI/crvFRAX",
+    name: "MAI/crvFRAX",
     type: "factory",
     meta: true,
     address: "0x66E335622ad7a6C9c72c98dbfCCE684996a20Ef9",
@@ -2918,7 +2918,7 @@ export default [
     },
   },
   {
-    name: "Curve DOLA/crvFRAX",
+    name: "DOLA/crvFRAX",
     type: "factory",
     meta: true,
     address: "0xE57180685E3348589E9521aa53Af0BCD497E884d",
@@ -2943,7 +2943,7 @@ export default [
     },
   },
   {
-    name: "Curve BPT/sdBPT",
+    name: "BPT/sdBPT",
     type: "factory",
     meta: false,
     address: "0x9d259cA698746586107C234e9E9461d385ca1041",
@@ -2954,7 +2954,7 @@ export default [
     ],
   },
   {
-    name: "Curve MAI/LUSD",
+    name: "MAI/LUSD",
     type: "factory",
     meta: false,
     address: "0xF8048E871dF466BD187078cb38CB914476319d33",
@@ -2969,7 +2969,7 @@ export default [
     },
   },
   {
-    name: "Curve CRV/yCRV",
+    name: "CRV/yCRV",
     type: "factory",
     meta: false,
     address: "0x453D92C7d4263201C69aACfaf589Ed14202d83a4",
@@ -2984,7 +2984,7 @@ export default [
     },
   },
   {
-    name: "Curve ETH/pETH",
+    name: "ETH/pETH",
     type: "factory",
     meta: false,
     address: "0x9848482da3Ee3076165ce6497eDA906E66bB85C5",
@@ -2999,7 +2999,7 @@ export default [
     },
   },
   {
-    name: "Curve UZD/3Crv",
+    name: "UZD/3Crv",
     type: "factory",
     meta: true,
     address: "0x28B0Cf1baFB707F2c6826d10caf6DD901a6540C5",
@@ -3025,7 +3025,7 @@ export default [
     },
   },
   {
-    name: "Curve tCVX/tclevCVX",
+    name: "tCVX/tclevCVX",
     type: "factory",
     meta: false,
     address: "0xd0E24cB3e766581952dBf258b78e89c63A37f5fb",
@@ -3036,7 +3036,7 @@ export default [
     ],
   },
   {
-    name: "Curve CVX/clevCVX",
+    name: "CVX/clevCVX",
     type: "factory",
     meta: false,
     address: "0xF9078Fb962A7D13F55d40d49C8AA6472aBD1A5a6",
@@ -3047,7 +3047,7 @@ export default [
     ],
   },
   {
-    name: "Curve US/3Crv",
+    name: "US/3Crv",
     type: "factory",
     meta: true,
     address: "0xC0Ec468c1B6B94a107B0A83c7a0f6529B388f43A",
@@ -3073,7 +3073,7 @@ export default [
     },
   },
   {
-    name: "Curve UZD/3Crv",
+    name: "UZD/3Crv",
     type: "factory",
     meta: true,
     address: "0xbeDca4252b27cc12ed7DaF393F331886F86cd3CE",
@@ -3099,7 +3099,7 @@ export default [
     },
   },
   {
-    name: "Curve USDT/WBTC/WETH",
+    name: "USDT/WBTC/WETH",
     type: "crypto v2",
     meta: false,
     address: "0xD51a44d3FaE010294C616388b506AcdA1bfAAE46",
@@ -3118,7 +3118,7 @@ export default [
     },
   },
   {
-    name: "Curve EURT/3Crv",
+    name: "EURT/3Crv",
     type: "crypto v2",
     meta: true,
     address: "0x9838eCcC42659FA8AA7daF2aD134b53984c9427b",
@@ -3144,7 +3144,7 @@ export default [
     },
   },
   {
-    name: "Curve USDC/EURS",
+    name: "USDC/EURS",
     type: "crypto v2",
     meta: false,
     address: "0x98a7F18d4E56Cfe84E3D081B40001B3d5bD3eB8B",
@@ -3159,7 +3159,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/CRV",
+    name: "WETH/CRV",
     type: "crypto v2",
     meta: false,
     address: "0x8301AE4fc9c624d1D396cbDAa1ed877821D7C511",
@@ -3174,7 +3174,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/CVX",
+    name: "WETH/CVX",
     type: "crypto v2",
     meta: false,
     address: "0xB576491F1E6e5E62f1d8F26062Ee822B40B0E0d4",
@@ -3189,7 +3189,7 @@ export default [
     },
   },
   {
-    name: "Curve XAUt/3Crv",
+    name: "XAUt/3Crv",
     type: "crypto v2",
     meta: true,
     address: "0xAdCFcf9894335dC340f6Cd182aFA45999F45Fc44",
@@ -3215,7 +3215,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/SPELL",
+    name: "WETH/SPELL",
     type: "crypto v2",
     meta: false,
     address: "0x98638FAcf9a3865cd033F36548713183f6996122",
@@ -3230,7 +3230,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/T",
+    name: "WETH/T",
     type: "crypto v2",
     meta: false,
     address: "0x752eBeb79963cf0732E9c0fec72a49FD1DEfAEAC",
@@ -3245,7 +3245,7 @@ export default [
     },
   },
   {
-    name: "Curve EUROC/3Crv",
+    name: "EUROC/3Crv",
     type: "crypto v2",
     meta: true,
     address: "0xE84f5b1582BA325fDf9cE6B0c1F087ccfC924e54",
@@ -3271,7 +3271,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/FXS",
+    name: "WETH/FXS",
     type: "crypto factory",
     meta: false,
     address: "0x941Eb6F616114e4Ecaa85377945EA306002612FE",
@@ -3286,7 +3286,7 @@ export default [
     },
   },
   {
-    name: "Curve BADGER/WBTC",
+    name: "BADGER/WBTC",
     type: "crypto factory",
     meta: false,
     address: "0x50f3752289e1456BfA505afd37B241bca23e685d",
@@ -3301,7 +3301,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/YFI",
+    name: "WETH/YFI",
     type: "crypto factory",
     meta: false,
     address: "0xC26b89A667578ec7b3f11b2F98d6Fd15C07C54ba",
@@ -3316,7 +3316,7 @@ export default [
     },
   },
   {
-    name: "Curve AAVE/palStkAAVE",
+    name: "AAVE/palStkAAVE",
     type: "crypto factory",
     meta: false,
     address: "0x48536EC5233297C367fd0b6979B75d9270bB6B15",
@@ -3331,7 +3331,7 @@ export default [
     },
   },
   {
-    name: "Curve DYDX/WETH",
+    name: "DYDX/WETH",
     type: "crypto factory",
     meta: false,
     address: "0x8b0aFa4b63a3581b731dA9D79774a3eaE63B5ABD",
@@ -3346,7 +3346,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/SDT",
+    name: "WETH/SDT",
     type: "crypto factory",
     meta: false,
     address: "0xfB8814D005C5f32874391e888da6eB2fE7a27902",
@@ -3361,7 +3361,7 @@ export default [
     },
   },
   {
-    name: "Curve CADC/USDC",
+    name: "CADC/USDC",
     type: "crypto factory",
     meta: false,
     address: "0xE07BDe9Eb53DEFfa979daE36882014B758111a78",
@@ -3376,7 +3376,7 @@ export default [
     },
   },
   {
-    name: "Curve RAI/agEUR",
+    name: "RAI/agEUR",
     type: "crypto factory",
     meta: false,
     address: "0xB6d9b32407BfA562D9211acDba2631a46c850956",
@@ -3391,7 +3391,7 @@ export default [
     },
   },
   {
-    name: "Curve PAR/USDC",
+    name: "PAR/USDC",
     type: "crypto factory",
     meta: false,
     address: "0xDaD60C5B748306BA5a0c9a3c3482A8D1153DAd2a",
@@ -3402,7 +3402,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/DUCK",
+    name: "WETH/DUCK",
     type: "crypto factory",
     meta: false,
     address: "0xd8C49617e6A2C7584Ddbeab652368ee84954BF5c",
@@ -3417,7 +3417,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/BTRFLY",
+    name: "WETH/BTRFLY",
     type: "crypto factory",
     meta: false,
     address: "0xF43b15Ab692fDe1F9c24a9FCE700AdCC809D5391",
@@ -3432,7 +3432,7 @@ export default [
     },
   },
   {
-    name: "Curve FXS/cvxFXS",
+    name: "FXS/cvxFXS",
     type: "crypto factory",
     meta: false,
     address: "0xd658A338613198204DCa1143Ac3F01A722b5d94A",
@@ -3447,7 +3447,7 @@ export default [
     },
   },
   {
-    name: "Curve OHM/WETH",
+    name: "OHM/WETH",
     type: "crypto factory",
     meta: false,
     address: "0x6ec38b3228251a0C5D491Faf66858e2E23d7728B",
@@ -3462,7 +3462,7 @@ export default [
     },
   },
   {
-    name: "Curve Silo/FRAX",
+    name: "Silo/FRAX",
     type: "crypto factory",
     meta: false,
     address: "0x9a22CDB1CA1cdd2371cD5BB5199564C4E89465eb",
@@ -3477,7 +3477,7 @@ export default [
     },
   },
   {
-    name: "Curve FIDU/USDC",
+    name: "FIDU/USDC",
     type: "crypto factory",
     meta: false,
     address: "0x80aa1a80a30055DAA084E599836532F3e58c95E2",
@@ -3488,7 +3488,7 @@ export default [
     ],
   },
   {
-    name: "Curve ibEUR/USDC",
+    name: "ibEUR/USDC",
     type: "crypto factory",
     meta: false,
     address: "0x1570af3dF649Fc74872c5B8F280A162a3bdD4EB6",
@@ -3503,7 +3503,7 @@ export default [
     },
   },
   {
-    name: "Curve ibAUD/USDC",
+    name: "ibAUD/USDC",
     type: "crypto factory",
     meta: false,
     address: "0x5b692073F141C31384faE55856CfB6CBfFE91E60",
@@ -3518,7 +3518,7 @@ export default [
     },
   },
   {
-    name: "Curve ibCHF/USDC",
+    name: "ibCHF/USDC",
     type: "crypto factory",
     meta: false,
     address: "0x6Df0D77F0496CE44e72D695943950D8641fcA5Cf",
@@ -3533,7 +3533,7 @@ export default [
     },
   },
   {
-    name: "Curve ibGBP/USDC",
+    name: "ibGBP/USDC",
     type: "crypto factory",
     meta: false,
     address: "0xAcCe4Fe9Ce2A6FE9af83e7CF321a3fF7675e0AB6",
@@ -3548,7 +3548,7 @@ export default [
     },
   },
   {
-    name: "Curve ibJPY/USDC",
+    name: "ibJPY/USDC",
     type: "crypto factory",
     meta: false,
     address: "0xEB0265938c1190Ab4E3E1f6583bC956dF47C0F93",
@@ -3563,7 +3563,7 @@ export default [
     },
   },
   {
-    name: "Curve ibKRW/USDC",
+    name: "ibKRW/USDC",
     type: "crypto factory",
     meta: false,
     address: "0xef04f337fCB2ea220B6e8dB5eDbE2D774837581c",
@@ -3578,7 +3578,7 @@ export default [
     },
   },
   {
-    name: "Curve STG/USDC",
+    name: "STG/USDC",
     type: "crypto factory",
     meta: false,
     address: "0x3211C6cBeF1429da3D0d58494938299C92Ad5860",
@@ -3593,7 +3593,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/PAL",
+    name: "WETH/PAL",
     type: "crypto factory",
     meta: false,
     address: "0x75A6787C7EE60424358B449B539A8b774c9B4862",
@@ -3608,7 +3608,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/KP3R",
+    name: "WETH/KP3R",
     type: "crypto factory",
     meta: false,
     address: "0x21410232B484136404911780bC32756D5d1a9Fa9",
@@ -3623,7 +3623,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/LFT",
+    name: "WETH/LFT",
     type: "crypto factory",
     meta: false,
     address: "0xfE4A08f22FE65759Ba91dB2E2CADa09B4415B0d7",
@@ -3638,7 +3638,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/JPEG",
+    name: "WETH/JPEG",
     type: "crypto factory",
     meta: false,
     address: "0x7E050cf658777cc1Da4a4508E79d71859044B60E",
@@ -3653,7 +3653,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/CNC",
+    name: "WETH/CNC",
     type: "crypto factory",
     meta: false,
     address: "0x782115c863A05abF8795dF377D89AAd1AAdF4Dfa",
@@ -3664,7 +3664,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/CNC",
+    name: "WETH/CNC",
     type: "crypto factory",
     meta: false,
     address: "0x838af967537350D2C44ABB8c010E49E32673ab94",
@@ -3679,7 +3679,7 @@ export default [
     },
   },
   {
-    name: "Curve FRAX/FPI",
+    name: "FRAX/FPI",
     type: "crypto factory",
     meta: false,
     address: "0xf861483fa7E511fbc37487D91B6FAa803aF5d37c",
@@ -3694,7 +3694,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/VIRTUE",
+    name: "WETH/VIRTUE",
     type: "crypto factory",
     meta: false,
     address: "0xD0a1D2a9350824516ae8729b8311557BA7E55BFF",
@@ -3705,7 +3705,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/CXD",
+    name: "WETH/CXD",
     type: "crypto factory",
     meta: false,
     address: "0x5D898FD41875b14c1781fb497AeCAb8E9B24dfC9",
@@ -3720,7 +3720,7 @@ export default [
     },
   },
   {
-    name: "Curve USDC/CXD",
+    name: "USDC/CXD",
     type: "crypto factory",
     meta: false,
     address: "0x4535913573D299A6372ca43b90aA6Be1CF68f779",
@@ -3731,7 +3731,7 @@ export default [
     ],
   },
   {
-    name: "Curve Test CTDL/WBTC",
+    name: "Test CTDL/WBTC",
     type: "crypto factory",
     meta: false,
     address: "0x3c42B0f384D2912661C940d46cfFE1CD10F1c66F",
@@ -3742,7 +3742,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/TOKE",
+    name: "WETH/TOKE",
     type: "crypto factory",
     meta: false,
     address: "0xe0e970a99bc4F53804D8145beBBc7eBc9422Ba7F",
@@ -3757,7 +3757,7 @@ export default [
     },
   },
   {
-    name: "Curve DAI/bSTBL",
+    name: "DAI/bSTBL",
     type: "crypto factory",
     meta: false,
     address: "0xA148BD19E26Ff9604f6A608E22BFb7B772D0d1A3",
@@ -3768,7 +3768,7 @@ export default [
     ],
   },
   {
-    name: "Curve CVX/pxCVX",
+    name: "CVX/pxCVX",
     type: "crypto factory",
     meta: false,
     address: "0xF3456E8061461e144b3f252E69DcD5b6070fdEE0",
@@ -3779,7 +3779,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/UNBNK",
+    name: "WETH/UNBNK",
     type: "crypto factory",
     meta: false,
     address: "0x5114f86027d4c9a509Cba072B8135A171402C6d5",
@@ -3794,7 +3794,7 @@ export default [
     },
   },
   {
-    name: "Curve frETH/WETH",
+    name: "frETH/WETH",
     type: "crypto factory",
     meta: false,
     address: "0x6E77889Ff348A16547cABa3Ce011cB120Ed73bFc",
@@ -3809,7 +3809,7 @@ export default [
     },
   },
   {
-    name: "Curve aCRV/CRV",
+    name: "aCRV/CRV",
     type: "crypto factory",
     meta: false,
     address: "0x95f3672a418230c5664b7154Dfce0ACfa7EEd68D",
@@ -3820,7 +3820,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/RAREPEPE",
+    name: "WETH/RAREPEPE",
     type: "crypto factory",
     meta: false,
     address: "0xdDBDCEBb989B1ef804338d6c9a902f91c2738936",
@@ -3831,7 +3831,7 @@ export default [
     ],
   },
   {
-    name: "Curve MATIC/SHIB",
+    name: "MATIC/SHIB",
     type: "crypto factory",
     meta: false,
     address: "0xb2c248C0B0DB7d28dfa0123438B40Bb31FB8AA05",
@@ -3842,7 +3842,7 @@ export default [
     ],
   },
   {
-    name: "Curve MATIC/FLEET",
+    name: "MATIC/FLEET",
     type: "crypto factory",
     meta: false,
     address: "0x799D141e83D88996C48B98A4f8EB3D96AB422DD3",
@@ -3853,7 +3853,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/CTR",
+    name: "WETH/CTR",
     type: "crypto factory",
     meta: false,
     address: "0x383aD525211B8A1A9c13532CC021773052b2F4f8",
@@ -3864,7 +3864,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/BTRFLY",
+    name: "WETH/BTRFLY",
     type: "crypto factory",
     meta: false,
     address: "0x6e314039f4C56000F4ebb3a7854A84cC6225Fb92",
@@ -3879,7 +3879,7 @@ export default [
     },
   },
   {
-    name: "Curve RAI/LUSD",
+    name: "RAI/LUSD",
     type: "crypto factory",
     meta: false,
     address: "0xc58fDB8A50AB921A73535656A7c69387Dd863ff6",
@@ -3890,7 +3890,7 @@ export default [
     ],
   },
   {
-    name: "Curve FXS/FPIS",
+    name: "FXS/FPIS",
     type: "crypto factory",
     meta: false,
     address: "0xD4e2fdC354c5DFfb865798Ca98c2b9d5382F687C",
@@ -3901,7 +3901,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/cbETH",
+    name: "WETH/cbETH",
     type: "crypto factory",
     meta: false,
     address: "0x5FAE7E604FC3e24fd43A72867ceBaC94c65b404A",
@@ -3916,7 +3916,7 @@ export default [
     },
   },
   {
-    name: "Curve agEUR/crvFRAX",
+    name: "agEUR/crvFRAX",
     type: "crypto factory",
     meta: true,
     address: "0x58257e4291F95165184b4beA7793a1d6F8e7b627",
@@ -3941,7 +3941,7 @@ export default [
     },
   },
   {
-    name: "Curve cvxFXS/crvFRAX",
+    name: "cvxFXS/crvFRAX",
     type: "crypto factory",
     meta: true,
     address: "0x21d158d95C2e150e144c36FC64E3653B8D6c6267",
@@ -3966,7 +3966,7 @@ export default [
     },
   },
   {
-    name: "Curve CVX/crvFRAX",
+    name: "CVX/crvFRAX",
     type: "crypto factory",
     meta: true,
     address: "0xBEc570d92AFB7fFc553bdD9d4B4638121000b10D",
@@ -3991,7 +3991,7 @@ export default [
     },
   },
   {
-    name: "Curve ALCX/crvFRAX",
+    name: "ALCX/crvFRAX",
     type: "crypto factory",
     meta: true,
     address: "0x4149d1038575CE235E03E03B39487a80FD709D31",
@@ -4016,7 +4016,7 @@ export default [
     },
   },
   {
-    name: "Curve cvxCRV/crvFRAX",
+    name: "cvxCRV/crvFRAX",
     type: "crypto factory",
     meta: true,
     address: "0x31c325A01861c7dBd331a9270296a31296D797A0",
@@ -4041,7 +4041,7 @@ export default [
     },
   },
   {
-    name: "Curve GYEN/USDC",
+    name: "GYEN/USDC",
     type: "crypto factory",
     meta: false,
     address: "0x611a95bf3cc0EF593f22c4E4D8EB4d6C937E006C",
@@ -4052,7 +4052,7 @@ export default [
     ],
   },
   {
-    name: "Curve BADGER/crvFRAX",
+    name: "BADGER/crvFRAX",
     type: "crypto factory",
     meta: true,
     address: "0x13B876C26Ad6d21cb87AE459EaF6d7A1b788A113",
@@ -4077,7 +4077,7 @@ export default [
     },
   },
   {
-    name: "Curve ZARP/USDC",
+    name: "ZARP/USDC",
     type: "crypto factory",
     meta: false,
     address: "0x4D19E7fD118FD751fEa7c0324D7E7b0A3D05EbA4",
@@ -4088,7 +4088,7 @@ export default [
     ],
   },
   {
-    name: "Curve BENT/crvFRAX",
+    name: "BENT/crvFRAX",
     type: "crypto factory",
     meta: true,
     address: "0x825722AF244432319C1E32b6b18AdED2d4A014Df",
@@ -4113,7 +4113,7 @@ export default [
     },
   },
   {
-    name: "Curve bentCVX/crvFRAX",
+    name: "bentCVX/crvFRAX",
     type: "crypto factory",
     meta: true,
     address: "0x02dFA5C793A9CE4d767a86259245A162a57f2dB4",
@@ -4134,7 +4134,7 @@ export default [
     },
   },
   {
-    name: "Curve OHM/ARTH",
+    name: "OHM/ARTH",
     type: "crypto factory",
     meta: false,
     address: "0x27A8697fBD2ed137d88E74132a5558FA43656175",
@@ -4145,7 +4145,7 @@ export default [
     ],
   },
   {
-    name: "Curve RAI/LUSD",
+    name: "RAI/LUSD",
     type: "crypto factory",
     meta: false,
     address: "0x167dE3887eDEbE5012544373C5871481bD95Cc4e",
@@ -4156,7 +4156,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/FRAX",
+    name: "WETH/FRAX",
     type: "crypto factory",
     meta: false,
     address: "0x1631D0E588D475CEe4be0f51b7410DaaAaBD7034",
@@ -4167,7 +4167,7 @@ export default [
     ],
   },
   {
-    name: "Curve RAI/USDC",
+    name: "RAI/USDC",
     type: "crypto factory",
     meta: false,
     address: "0x96A3F551c99797998dC33E2D816D567db61EE1c2",
@@ -4178,7 +4178,7 @@ export default [
     ],
   },
   {
-    name: "Curve DUCK/USDP",
+    name: "DUCK/USDP",
     type: "crypto factory",
     meta: false,
     address: "0xF039050dC36fD59Ff1117B14BFdFf92dFA9dE9Fc",
@@ -4193,7 +4193,7 @@ export default [
     },
   },
   {
-    name: "Curve DUCK/USDT",
+    name: "DUCK/USDT",
     type: "crypto factory",
     meta: false,
     address: "0xFEB0784F5D0940686143b3A025Af731Ee6A81197",
@@ -4208,7 +4208,7 @@ export default [
     },
   },
   {
-    name: "Curve DCHF/3Crv",
+    name: "DCHF/3Crv",
     type: "crypto factory",
     meta: true,
     address: "0xDcb11E81C8B8a1e06BF4b50d4F6f3bb31f7478C3",
@@ -4234,7 +4234,7 @@ export default [
     },
   },
   {
-    name: "Curve RAI/DAI",
+    name: "RAI/DAI",
     type: "crypto factory",
     meta: false,
     address: "0xBCAA09F2873F87aB4bf3A6fE97991f4bCC959e7e",
@@ -4245,7 +4245,7 @@ export default [
     ],
   },
   {
-    name: "Curve bl/LUSD3CRV-f",
+    name: "bl/LUSD3CRV-f",
     type: "crypto factory",
     meta: false,
     address: "0xF4A3cca34470b5Ba21E2bb1eD365ACf68B4d4598",
@@ -4260,7 +4260,7 @@ export default [
     },
   },
   {
-    name: "Curve bLUSD/LUSD3CRV-f",
+    name: "bLUSD/LUSD3CRV-f",
     type: "crypto factory",
     meta: false,
     address: "0x74ED5d42203806c8CDCf2F04Ca5F60DC777b901c",
@@ -4275,7 +4275,7 @@ export default [
     },
   },
   {
-    name: "Curve SDT/crvFRAX",
+    name: "SDT/crvFRAX",
     type: "crypto factory",
     meta: true,
     address: "0x3e3C6c7db23cdDEF80B694679aaF1bCd9517D0Ae",
@@ -4300,7 +4300,7 @@ export default [
     },
   },
   {
-    name: "Curve RSR/crvFRAX",
+    name: "RSR/crvFRAX",
     type: "crypto factory",
     meta: true,
     address: "0x6a6283aB6e31C2AeC3fA08697A8F806b740660b2",
@@ -4325,7 +4325,7 @@ export default [
     },
   },
   {
-    name: "Curve WETH/CLEV",
+    name: "WETH/CLEV",
     type: "crypto factory",
     meta: false,
     address: "0x342D1C4Aa76EA6F5E5871b7f11A019a0eB713A4f",
@@ -4336,7 +4336,7 @@ export default [
     ],
   },
   {
-    name: "Curve ARTH/3Crv",
+    name: "ARTH/3Crv",
     type: "crypto factory",
     meta: true,
     address: "0x96f34Bb82fcA57e475e6ad218b0dd0C5c78DF423",
@@ -4358,7 +4358,7 @@ export default [
     },
   },
   {
-    name: "Curve ARTH/WETH",
+    name: "ARTH/WETH",
     type: "crypto factory",
     meta: false,
     address: "0x19a0CA9a0dc2A5034F47DcC164169Cffd7ed2410",
@@ -4369,7 +4369,7 @@ export default [
     ],
   },
   {
-    name: "Curve SMKL/SMKL",
+    name: "SMKL/SMKL",
     type: "crypto factory",
     meta: false,
     address: "0x1628E0A42682570c815da52480734a8c2A2Ca2DD",
@@ -4380,7 +4380,7 @@ export default [
     ],
   },
   {
-    name: "Curve SMKL/WETH",
+    name: "SMKL/WETH",
     type: "crypto factory",
     meta: false,
     address: "0x4E6706889d519ba6e6CED330D76582f875DF3C9c",
@@ -4391,7 +4391,7 @@ export default [
     ],
   },
   {
-    name: "Curve PETAL/RAI",
+    name: "PETAL/RAI",
     type: "crypto factory",
     meta: false,
     address: "0x29b2178F5f9FB4f775A2f1a7fEA685FFbA0fAe32",
@@ -4402,7 +4402,7 @@ export default [
     ],
   },
   {
-    name: "Curve WETH/CTR",
+    name: "WETH/CTR",
     type: "crypto factory",
     meta: false,
     address: "0xf2f12B364F614925aB8E2C8BFc606edB9282Ba09",

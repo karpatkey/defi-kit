@@ -1,3 +1,3 @@
-import { applyPermissions as apply } from "zodiac-roles-sdk"
+import * as allow from "./protocols"
 
-export { apply }
+export { allow }
