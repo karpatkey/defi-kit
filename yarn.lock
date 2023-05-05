@@ -38,6 +38,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@carbon/icon-helpers@npm:^10.39.0":
+  version: 10.39.0
+  resolution: "@carbon/icon-helpers@npm:10.39.0"
+  checksum: b99ed8f595045ca1d6cb41181dfc731e79aa8bc372af4613728d6edc15421ac8d692dc5947c2e56a6fc039c43ae5771e7228edefac6d157f22f99f354e650940
+  languageName: node
+  linkType: hard
+
+"@carbon/icons-react@npm:^11.19.0":
+  version: 11.19.0
+  resolution: "@carbon/icons-react@npm:11.19.0"
+  dependencies:
+    "@carbon/icon-helpers": ^10.39.0
+    "@carbon/telemetry": 0.1.0
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ">=16"
+  checksum: 5d8ccda738d6f62dc530eb2836fc65959e76728ac644f94bf7c2ea7e9b2b80fd0b214586d61fb745f385b9ee5db0bb176d8d79c9281967c7b34217ae7f3afb3c
+  languageName: node
+  linkType: hard
+
+"@carbon/telemetry@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@carbon/telemetry@npm:0.1.0"
+  bin:
+    carbon-telemetry: bin/carbon-telemetry.js
+  checksum: e93039763ed40b612a1cb5c70001d5e7e92ff034f1559676d47ce9a98e6285ba2856f6a59146b03e6349702eb96d61f2fe91349e981ca858e45c4527a3c1e876
+  languageName: node
+  linkType: hard
+
 "@cspotcode/source-map-support@npm:^0.8.0":
   version: 0.8.1
   resolution: "@cspotcode/source-map-support@npm:0.8.1"
@@ -1426,6 +1455,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/carbon__icons-react@npm:^11":
+  version: 11.16.0
+  resolution: "@types/carbon__icons-react@npm:11.16.0"
+  checksum: b546783723c172decb727639fa63d2f97bfa361c058a25ef03dcc58cefbe8caf8a3ff56cd10d8e14c868a3d2989e77c29056de2ce91c7ad7dd4686e6d213f5a7
+  languageName: node
+  linkType: hard
+
 "@types/hast@npm:^2.0.0":
   version: 2.3.4
   resolution: "@types/hast@npm:2.3.4"
@@ -2766,7 +2802,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "defi-presets-app@workspace:app"
   dependencies:
+    "@carbon/icons-react": ^11.19.0
     "@trpc/server": ^10.25.0
+    "@types/carbon__icons-react": ^11
     "@types/node": 18.16.3
     "@types/react": 18.2.0
     "@types/react-dom": 18.2.1
@@ -6245,7 +6283,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
