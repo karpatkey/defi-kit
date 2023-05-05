@@ -1,32 +1,22 @@
-import { GetStaticProps, InferGetStaticPropsType } from "next"
-import { createSwaggerSpec } from "next-swagger-doc"
+import type { NextPage } from "next"
 import dynamic from "next/dynamic"
 import "swagger-ui-react/swagger-ui.css"
 
-const SwaggerUI = dynamic<{
-  spec?: any
-}>(import("swagger-ui-react"), { ssr: false })
+const SwaggerUI = dynamic(() => import("swagger-ui-react"), { ssr: false })
 
-function ApiDoc({ spec }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <SwaggerUI spec={spec} />
+const Docs: NextPage = () => {
+  // Serve Swagger UI with our OpenAPI schema
+  return (
+    <SwaggerUI url="/api/v1/openapi.json" plugins={[DisableAuthorizePlugin]} />
+  )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const spec: Record<string, any> = createSwaggerSpec({
-    definition: {
-      openapi: "3.0.0",
-      info: {
-        title: "DeFi Presets API",
-        version: "1.0",
-      },
-    },
-  })
+export default Docs
 
+const DisableAuthorizePlugin = function () {
   return {
-    props: {
-      spec,
+    wrapComponents: {
+      authorizeBtn: () => () => null,
     },
   }
 }
-
-export default ApiDoc
