@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@carbon/icons-react": "^11.19.0",
-    "@types/carbon__icons-react": "^11",
     "@trpc/server": "^10.25.0",
+    "@types/carbon__icons-react": "^11",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
