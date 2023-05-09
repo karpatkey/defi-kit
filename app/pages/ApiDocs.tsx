@@ -4,14 +4,14 @@ import "swagger-ui-react/swagger-ui.css"
 
 const SwaggerUI = dynamic(() => import("swagger-ui-react"), { ssr: false })
 
-const Docs: NextPage = () => {
+const ApiDocs: NextPage = () => {
   // Serve Swagger UI with our OpenAPI schema
   return (
     <SwaggerUI url="/api/v1/openapi.json" plugins={[DisableAuthorizePlugin]} />
   )
 }
 
-export default Docs
+export default ApiDocs
 
 const DisableAuthorizePlugin = function () {
   return {

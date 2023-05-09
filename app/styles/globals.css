@@ -1,24 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+
   --foreground-rgb: 35, 35, 35;
   --background-rgb: 238, 237, 237;
+
+  --callout-rgb: 238, 240, 241;
+  --callout-border-rgb: 172, 175, 176;
+  --card-rgb: 180, 185, 188;
+  --card-border-rgb: 131, 134, 135;
+
+  --white: #eeeded;
+  --bright: #bdbdbd;
+  --dark: #6b6b6b;
+  --black: #232323;
+
+  --green: #54b9a1;
+  --orange: #f0b065;
+  --red: #df5c64;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 238, 237, 237;
-    --background-rgb: 35, 35, 35;
-  }
+.nx-bg-gray-100 {
+  background-color: rgb(var(--background-rgb)) !important;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+.swagger-ui {
+  font-family: var(--font-sans) !important;
 }
-
-* {
-  border-color: rgb(var(--background-rgb));
+.swagger-ui h2 {
+  font-family: var(--font-mono) !important;
+  font-weight: 600 !important;
 }
