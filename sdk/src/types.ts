@@ -1,13 +1,9 @@
 export enum Action {
-  swap = "swap",
   deposit = "deposit",
-  withdraw = "withdraw",
-  stake = "stake",
-  unstake = "unstake",
-  claim = "claim",
   lend = "lend",
-  borrow = "borrow",
-  repay = "repay",
+  stake = "stake",
+  claim = "claim",
+  swap = "swap",
 }
 
 export enum Protocol {

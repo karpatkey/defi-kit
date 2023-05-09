@@ -5,7 +5,7 @@ import * as regular from "./regular"
 import { Pool } from "./types"
 import { allowZapAdd, allowZapRemove } from "./zap"
 
-export const deposit = (nameOrAddress: Pool["name"] | Pool["address"]) => {
+const depositOnly = (nameOrAddress: Pool["name"] | Pool["address"]) => {
   const pool = findPool(nameOrAddress)
 
   const result: PresetAllowEntry[] = []
@@ -24,7 +24,7 @@ export const deposit = (nameOrAddress: Pool["name"] | Pool["address"]) => {
   return result
 }
 
-export const withdraw = (nameOrAddress: Pool["name"] | Pool["address"]) => {
+const withdraw = (nameOrAddress: Pool["name"] | Pool["address"]) => {
   const pool = findPool(nameOrAddress)
 
   const result: PresetAllowEntry[] = []
@@ -42,6 +42,11 @@ export const withdraw = (nameOrAddress: Pool["name"] | Pool["address"]) => {
 
   return result
 }
+
+export const deposit = (nameOrAddress: Pool["name"] | Pool["address"]) => [
+  ...depositOnly(nameOrAddress),
+  ...withdraw(nameOrAddress),
+]
 
 export const swap = (nameOrAddress: Pool["name"] | Pool["address"]) => {
   const pool = findPool(nameOrAddress)

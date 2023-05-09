@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@carbon/icons-react": "^11.19.0",
+    "@ethersproject/strings": "^5.7.0",
     "@trpc/server": "^10.25.0",
     "@types/carbon__icons-react": "^11",
     "@types/node": "18.16.3",
@@ -20,6 +21,7 @@
     "defi-presets": "workspace:*",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.4",
+    "ethers": "^5.7.0",
     "next": "13.3.4",
     "nextra": "^2.5.0",
     "nextra-theme-docs": "^2.5.0",
@@ -29,6 +31,7 @@
     "swagger-ui-react": "^4.18.3",
     "trpc-openapi": "^1.1.2",
     "typescript": "5.0.4",
-    "zod": "^3.21.4"
+    "zod": "^3.21.4",
+    "zodiac-roles-sdk": "^2.0.1"
   }
 }

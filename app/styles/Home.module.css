@@ -83,8 +83,8 @@
 }
 
 .title {
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 60px;
+  font-weight: 400;
   font-family: var(--font-mono);
 }
 .subtitle a {

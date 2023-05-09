@@ -8,4 +8,5 @@ export default defineConfig({
     resolve: true,
     entry: "./src/index.ts",
   },
+  // noExternal: ["@dethcrypto/eth-sdk"],
 })
