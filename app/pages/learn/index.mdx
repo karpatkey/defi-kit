@@ -1,3 +1,10 @@
 # Overview
 
-DeFi Presets are set of carefully designed permissions for [Zodiac Roles](https://github.com/gnosis/zodiac-modifier-roles).
+DeFi Presets are set of carefully designed permissions covering interactions with DeFi protocols.
+In combination with [Zodiac Roles](https://github.com/gnosis/zodiac-modifier-roles) they allow enforcing safe treasury management practices for funds held in a [Safe](https://safe.global).
+
+Zodiac Roles is a Safe module that allows to define custom roles and assign them to addresses.
+These accounts will then be able to make the Safe execute transactions within the scope of permissions granted to the role.
+
+Defining permissions requires an intricate understanding of the underlying protocols and their security implications.
+DeFi Presets help in this endeavor by a defining a set of [standard actions](/learn/actions) abstracting over implementation specific differences between protocols.
