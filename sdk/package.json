@@ -1,13 +1,13 @@
 {
   "name": "defi-presets",
   "description": "Permission presets for Zodiac Roles covering interactions with DeFi protocols",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
