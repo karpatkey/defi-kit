@@ -4,6 +4,7 @@ import pools from "./pools"
 import * as regular from "./regular"
 import { Pool } from "./types"
 import { allowZapAdd, allowZapRemove } from "./zap"
+import { NotFoundError } from "../../errors"
 
 const depositOnly = (nameOrAddress: Pool["name"] | Pool["address"]) => {
   const pool = findPool(nameOrAddress)
@@ -63,7 +64,7 @@ export const swap = (nameOrAddress: Pool["name"] | Pool["address"]) => {
   return result
 }
 
-const findPool = (nameOrAddress: Pool["name"] | Pool["address"]) => {
+const findPool = (nameOrAddress: string) => {
   const nameOrAddressLower = nameOrAddress.toLowerCase()
   const pool = pools.find(
     (pool) =>
@@ -71,7 +72,7 @@ const findPool = (nameOrAddress: Pool["name"] | Pool["address"]) => {
       pool.address.toLowerCase() === nameOrAddressLower
   )
   if (!pool) {
-    throw new Error(`Pool not found: ${nameOrAddress}`)
+    throw new NotFoundError(`Pool not found: ${nameOrAddress}`)
   }
   return pool
 }
