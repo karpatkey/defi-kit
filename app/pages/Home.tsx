@@ -56,6 +56,19 @@ const Home = () => (
         <p>Understand the ideas behind it and learn how to use DeFi Presets</p>
       </a>
 
+      <a href="/sdk-playground" className={styles.card}>
+        <h2>
+          SDK{" "}
+          <span>
+            <ArrowRight />
+          </span>
+        </h2>
+        <p>
+          Mix and match presets using the TypeScript SDK in a browser
+          playground.
+        </p>
+      </a>
+
       <a href="/api-docs" className={styles.card}>
         <h2>
           API{" "}
@@ -64,23 +77,6 @@ const Home = () => (
           </span>
         </h2>
         <p>View all API endpoints and try them out right from your browser.</p>
-      </a>
-
-      <a
-        href="https://www.karpatkey.com/contact"
-        className={styles.card}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <h2>
-          Support{" "}
-          <span>
-            <ArrowRight />
-          </span>
-        </h2>
-        <p>
-          Contact us for support on adopting safe treasury management practices.
-        </p>
       </a>
 
       <a

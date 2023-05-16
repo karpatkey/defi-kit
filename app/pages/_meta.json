@@ -16,6 +16,14 @@
     "type": "page",
     "title": "Learn"
   },
+  "sdk-playground": {
+    "type": "page",
+    "title": "SDK",
+    "theme": {
+      "typesetting": "article",
+      "layout": "full"
+    }
+  },
   "api-docs": {
     "type": "page",
     "title": "API",
@@ -23,12 +31,6 @@
       "typesetting": "article",
       "layout": "full"
     }
-  },
-  "support": {
-    "type": "page",
-    "title": "Support",
-    "href": "https://www.karpatkey.com/contact",
-    "newWindow": true
   },
   "contribute": {
     "type": "page",
