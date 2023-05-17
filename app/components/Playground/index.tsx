@@ -8,6 +8,10 @@ import { setupPlayground } from "playground"
 // This gets set by the playground
 declare const playground: ReturnType<typeof setupPlayground>
 
+declare var window: Window & {
+  wasLoaded?: boolean
+}
+
 const withPrefix = (str: string) => str
 const i = (str: string) => str
 
@@ -33,6 +37,9 @@ const getPlaygroundUrls = () => {
 
 const Playground: React.FC<{}> = () => {
   useEffect(() => {
+    if (window.wasLoaded) window.location.reload()
+    window.wasLoaded = true
+
     if (!document.getElementById("monaco-editor-embed")) return
     if (document.getElementById("monaco-editor-embed")!.childElementCount > 0) {
       return console.log("Playground already loaded")
