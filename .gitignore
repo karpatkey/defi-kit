@@ -16,4 +16,6 @@ app/out/
 app/build
 app/next-env.d.ts
 
+playground/build
+
 sdk/dist

@@ -6,7 +6,8 @@
   "license": "LGPL-3.0",
   "workspaces": [
     "sdk",
-    "app"
+    "app",
+    "playground"
   ],
   "scripts": {
     "build": "yarn workspaces foreach -pt run build",

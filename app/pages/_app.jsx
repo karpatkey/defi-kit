@@ -1,5 +1,6 @@
 import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google"
 import "../styles/globals.css"
+import "../components/Playground/styles.scss"
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],

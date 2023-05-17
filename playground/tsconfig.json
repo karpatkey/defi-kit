@@ -1,0 +1,17 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "outDir": "build",
+    "jsx": "react",
+    "target": "ES2016",
+    "module": "AMD",
+    "lib": ["dom", "esnext"],
+    "declaration": true,
+    "inlineSources": true,
+    "inlineSourceMap": true,
+    "rootDir": "./src",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  }
+}
