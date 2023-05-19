@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@typescript/sandbox": "0.1.0",
+    "defi-presets": "workspace:*",
     "lz-string": "^1.5.0"
   },
   "devDependencies": {

@@ -1,3 +1,4 @@
+import * as defiPresetsSdk from "defi-presets"
 import { PlaygroundPlugin, PluginFactory } from ".."
 import { createUI } from "../createUI"
 import { localize } from "../localizeWithFallback"
@@ -10,6 +11,11 @@ const cancelButtonSVG = `
 <line x1="0.707107" y1="1.29289" x2="11.7071" y2="12.2929" stroke-width="2"/>
 </svg>
 `
+declare global {
+  interface Window {
+    defiPresetsSdk?: typeof defiPresetsSdk
+  }
+}
 
 export const runPlugin: PluginFactory = (i, utils) => {
   const plugin: PlaygroundPlugin = {
@@ -21,7 +27,9 @@ export const runPlugin: PluginFactory = (i, utils) => {
       const clearLogsAction = {
         id: "clear-logs-play",
         label: "Clear Playground Logs",
-        keybindings: [sandbox.monaco.KeyMod.CtrlCmd | sandbox.monaco.KeyCode.KeyK],
+        keybindings: [
+          sandbox.monaco.KeyMod.CtrlCmd | sandbox.monaco.KeyCode.KeyK,
+        ],
 
         contextMenuGroupId: "run",
         contextMenuOrder: 1.5,
@@ -53,7 +61,7 @@ export const runPlugin: PluginFactory = (i, utils) => {
       const clearLogsButton = document.createElement("div")
       clearLogsButton.id = "clear-logs-button"
       clearLogsButton.innerHTML = cancelButtonSVG
-      clearLogsButton.onclick = e => {
+      clearLogsButton.onclick = (e) => {
         e.preventDefault()
         clearLogsAction.run()
 
@@ -70,8 +78,11 @@ export const runPlugin: PluginFactory = (i, utils) => {
 
         const eleLog = document.getElementById("log")!
         eleLog.innerHTML = allLogs
-          .filter(log => {
-            const userLoggedText = log.substring(log.indexOf(":") + 1, log.indexOf("&nbsp;<br>"))
+          .filter((log) => {
+            const userLoggedText = log.substring(
+              log.indexOf(":") + 1,
+              log.indexOf("&nbsp;<br>")
+            )
             return userLoggedText.includes(inputText)
           })
           .join("<hr />")
@@ -140,7 +151,7 @@ function rewireLoggingToElement(
 ) {
   const rawConsole = console
 
-  closure.then(js => {
+  closure.then((js) => {
     const replace = {} as any
     bindLoggingFunc(replace, rawConsole, "log", "LOG")
     bindLoggingFunc(replace, rawConsole, "debug", "DBG")
@@ -150,16 +161,18 @@ function rewireLoggingToElement(
     const console = Object.assign({}, rawConsole, replace)
     try {
       const safeJS = sanitizeJS(js)
+      // make sdk globally available so we can use it in the eval()
+      window.defiPresetsSdk = defiPresetsSdk
       eval(safeJS)
     } catch (error) {
       console.error(i("play_run_js_fail"))
       console.error(error)
 
-      if (error instanceof SyntaxError && /\bexport\b/u.test(error.message)) {
-        console.warn(
-          'Tip: Change the Module setting to "CommonJS" in TS Config settings to allow top-level exports to work in the Playground'
-        )
-      }
+      // if (error instanceof SyntaxError && /\bexport\b/u.test(error.message)) {
+      //   console.warn(
+      //     'Tip: Change the Module setting to "CommonJS" in TS Config settings to allow top-level exports to work in the Playground'
+      //   )
+      // }
     }
   })
 
@@ -198,10 +211,18 @@ function rewireLoggingToElement(
     } else if (typeof arg === "symbol") {
       textRep = `<span class='literal'>${htmlEscape(String(arg))}</span>`
     } else if (Array.isArray(arg)) {
-      textRep = "[" + arg.map(objectToText).join(replacers["<span class='comma'>, </span>"]) + "]"
+      textRep =
+        "[" +
+        arg.map(objectToText).join(replacers["<span class='comma'>, </span>"]) +
+        "]"
     } else if (arg instanceof Set) {
       const setIter = [...arg]
-      textRep = `Set (${arg.size}) {` + setIter.map(objectToText).join(replacers["<span class='comma'>, </span>"]) + "}"
+      textRep =
+        `Set (${arg.size}) {` +
+        setIter
+          .map(objectToText)
+          .join(replacers["<span class='comma'>, </span>"]) +
+        "}"
     } else if (arg instanceof Map) {
       const mapIter = [...arg.entries()]
       textRep =
@@ -215,16 +236,18 @@ function rewireLoggingToElement(
     } else if (isObj) {
       const name = arg.constructor && arg.constructor.name
       // No one needs to know an obj is an obj
-      const nameWithoutObject = name && name === "Object" ? "" : htmlEscape(name)
+      const nameWithoutObject =
+        name && name === "Object" ? "" : htmlEscape(name)
       const prefix = nameWithoutObject ? `${nameWithoutObject}: ` : ""
 
       // JSON.stringify omits any keys with a value of undefined. To get around this, we replace undefined with the text __undefined__ and then do a global replace using regex back to keyword undefined
       textRep =
         prefix +
-        JSON.stringify(arg, (_, value) => (value === undefined ? "__undefined__" : value), 2).replace(
-          /"__undefined__"/g,
-          "undefined"
-        )
+        JSON.stringify(
+          arg,
+          (_, value) => (value === undefined ? "__undefined__" : value),
+          2
+        ).replace(/"__undefined__"/g, "undefined")
 
       textRep = htmlEscape(textRep)
     } else {
@@ -241,7 +264,7 @@ function rewireLoggingToElement(
       return output + textRep + comma + " "
     }, "")
 
-    Object.keys(replacers).forEach(k => {
+    Object.keys(replacers).forEach((k) => {
       result = result.replace(new RegExp((replacers as any)[k], "g"), k)
     })
 
@@ -250,10 +273,17 @@ function rewireLoggingToElement(
 }
 
 // The reflect-metadata runtime is available, so allow that to go through
+// Replace sdk imports with the global window reference
 function sanitizeJS(code: string) {
-  return code.replace(`import "reflect-metadata"`, "").replace(`require("reflect-metadata")`, "")
+  return code
+    .replace(`require("reflect-metadata")`, "")
+    .replace(`require("defi-presets")`, "window.defiPresetsSdk")
 }
 
 function htmlEscape(str: string) {
-  return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
 }

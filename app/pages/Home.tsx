@@ -63,10 +63,7 @@ const Home = () => (
             <ArrowRight />
           </span>
         </h2>
-        <p>
-          Mix and match presets using the TypeScript SDK in a browser
-          playground.
-        </p>
+        <p>Mix and match presets using the TypeScript SDK playground.</p>
       </a>
 
       <a href="/api-docs" className={styles.card}>

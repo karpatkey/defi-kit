@@ -25,7 +25,7 @@ const getPlaygroundUrls = () => {
   const commitPrefix = "/"
 
   return {
-    sandboxRoot: `https://www.typescriptlang.org/js/a44adff/sandbox`,
+    sandboxRoot: `https://www.typescriptlang.org/js/sandbox`,
     playgroundRoot: `/js${commitPrefix}playground`,
     playgroundWorker: `/js${commitPrefix}playground-worker/index.js`,
   }
@@ -222,7 +222,6 @@ const Playground: React.FC<{}> = () => {
               text:
                 localStorage.getItem("sandbox-history") ||
                 i("play_default_code_sample"),
-              compilerOptions: {},
               domID: "monaco-editor-embed",
               filetype: extension,
               acquireTypes: !localStorage.getItem("disable-ata"),
@@ -231,6 +230,9 @@ const Playground: React.FC<{}> = () => {
               monacoSettings: {
                 fontFamily: "var(--code-font)",
                 fontLigatures: true,
+              },
+              compilerOptions: {
+                module: main.languages.typescript.ModuleKind.CommonJS,
               },
             },
             main,

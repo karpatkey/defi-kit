@@ -18,8 +18,15 @@ import { createExporter } from "./exporter"
 import { createUI } from "./createUI"
 import { getExampleSourceCode } from "./getExample"
 import { ExampleHighlighter } from "./monaco/ExampleHighlight"
-import { createConfigDropdown, updateConfigDropdownForCompilerOptions } from "./createConfigDropdown"
-import { allowConnectingToLocalhost, activePlugins, addCustomPlugin } from "./sidebar/plugins"
+import {
+  createConfigDropdown,
+  updateConfigDropdownForCompilerOptions,
+} from "./createConfigDropdown"
+import {
+  allowConnectingToLocalhost,
+  activePlugins,
+  addCustomPlugin,
+} from "./sidebar/plugins"
 import { createUtils, PluginUtils } from "./pluginUtils"
 import type React from "react"
 import { settingsPlugin, getPlaygroundPlugins } from "./sidebar/settings"
@@ -29,7 +36,10 @@ import { createTwoslashInlayProvider } from "./twoslashInlays"
 export { PluginUtils } from "./pluginUtils"
 
 export type PluginFactory = {
-  (i: (key: string, components?: any) => string, utils: PluginUtils): PlaygroundPlugin
+  (
+    i: (key: string, components?: any) => string,
+    utils: PluginUtils
+  ): PlaygroundPlugin
 }
 
 /** The interface of all sidebar plugins */
@@ -45,7 +55,11 @@ export interface PlaygroundPlugin {
   /** After we show the tab */
   didMount?: (sandbox: Sandbox, container: HTMLDivElement) => void
   /** Model changes while this plugin is actively selected  */
-  modelChanged?: (sandbox: Sandbox, model: import("monaco-editor").editor.ITextModel, container: HTMLDivElement) => void
+  modelChanged?: (
+    sandbox: Sandbox,
+    model: import("monaco-editor").editor.ITextModel,
+    container: HTMLDivElement
+  ) => void
   /** Delayed model changes while this plugin is actively selected, useful when you are working with the TS API because it won't run on every keypress */
   modelChangedDebounce?: (
     sandbox: Sandbox,
@@ -78,14 +92,21 @@ export const setupPlayground = (
   i: (key: string) => string,
   react: typeof React
 ) => {
-  const playgroundParent = sandbox.getDomNode().parentElement!.parentElement!.parentElement!
+  const playgroundParent =
+    sandbox.getDomNode().parentElement!.parentElement!.parentElement!
 
   // UI to the left
   const leftNav = createNavigationSection()
-  playgroundParent.insertBefore(leftNav, sandbox.getDomNode().parentElement!.parentElement!)
+  playgroundParent.insertBefore(
+    leftNav,
+    sandbox.getDomNode().parentElement!.parentElement!
+  )
 
   const dragBarLeft = createDragBar("left")
-  playgroundParent.insertBefore(dragBarLeft, sandbox.getDomNode().parentElement!.parentElement!)
+  playgroundParent.insertBefore(
+    dragBarLeft,
+    sandbox.getDomNode().parentElement!.parentElement!
+  )
 
   const showNav = () => {
     const right = document.getElementsByClassName("playground-sidebar").item(0)!
@@ -122,7 +143,10 @@ export const setupPlayground = (
   const tabs = [] as HTMLButtonElement[]
 
   // Let's things like the workbench hook into tab changes
-  let didUpdateTab: (newPlugin: PlaygroundPlugin, previousPlugin: PlaygroundPlugin) => void | undefined
+  let didUpdateTab: (
+    newPlugin: PlaygroundPlugin,
+    previousPlugin: PlaygroundPlugin
+  ) => void | undefined
 
   const registerPlugin = (plugin: PlaygroundPlugin) => {
     plugins.push(plugin)
@@ -131,12 +155,14 @@ export const setupPlayground = (
 
     tabs.push(tab)
 
-    const tabClicked: HTMLElement["onclick"] = e => {
+    const tabClicked: HTMLElement["onclick"] = (e) => {
       const previousPlugin = getCurrentPlugin()
       let newTab = e.target as HTMLElement
       // It could be a notification you clicked on
       if (newTab.tagName === "DIV") newTab = newTab.parentElement!
-      const newPlugin = plugins.find(p => `playground-plugin-tab-${p.id}` == newTab.id)!
+      const newPlugin = plugins.find(
+        (p) => `playground-plugin-tab-${p.id}` == newTab.id
+      )!
       activatePlugin(newPlugin, previousPlugin, sandbox, tabBar, container)
       didUpdateTab && didUpdateTab(newPlugin, previousPlugin)
     }
@@ -145,30 +171,38 @@ export const setupPlayground = (
     tab.onclick = tabClicked
   }
 
-  const setDidUpdateTab = (func: (newPlugin: PlaygroundPlugin, previousPlugin: PlaygroundPlugin) => void) => {
+  const setDidUpdateTab = (
+    func: (
+      newPlugin: PlaygroundPlugin,
+      previousPlugin: PlaygroundPlugin
+    ) => void
+  ) => {
     didUpdateTab = func
   }
 
   const getCurrentPlugin = () => {
-    const selectedTab = tabs.find(t => t.classList.contains("active"))!
+    const selectedTab = tabs.find((t) => t.classList.contains("active"))!
     return plugins[tabs.indexOf(selectedTab)]
   }
 
   const defaultPlugins = config.plugins || getPlaygroundPlugins()
   const utils = createUtils(sandbox, react)
-  const initialPlugins = defaultPlugins.map(f => f(i, utils))
-  initialPlugins.forEach(p => registerPlugin(p))
+  const initialPlugins = defaultPlugins.map((f) => f(i, utils))
+  initialPlugins.forEach((p) => registerPlugin(p))
 
   // Choose which should be selected
-  const priorityPlugin = plugins.find(plugin => plugin.shouldBeSelected && plugin.shouldBeSelected())
+  const priorityPlugin = plugins.find(
+    (plugin) => plugin.shouldBeSelected && plugin.shouldBeSelected()
+  )
   const selectedPlugin = priorityPlugin || plugins[0]
   const selectedTab = tabs[plugins.indexOf(selectedPlugin)]!
   selectedTab.onclick!({ target: selectedTab } as any)
 
   let debouncingTimer = false
-  sandbox.editor.onDidChangeModelContent(_event => {
+  sandbox.editor.onDidChangeModelContent((_event) => {
     const plugin = getCurrentPlugin()
-    if (plugin.modelChanged) plugin.modelChanged(sandbox, sandbox.getModel(), container)
+    if (plugin.modelChanged)
+      plugin.modelChanged(sandbox, sandbox.getModel(), container)
 
     // This needs to be last in the function
     if (debouncingTimer) return
@@ -191,21 +225,21 @@ export const setupPlayground = (
       const lenses = !showFileCodeLens
         ? []
         : [
-          {
-            range: {
-              startLineNumber: 1,
-              startColumn: 1,
-              endLineNumber: 2,
-              endColumn: 1,
+            {
+              range: {
+                startLineNumber: 1,
+                startColumn: 1,
+                endLineNumber: 2,
+                endColumn: 1,
+              },
+              id: "implicit-filename-first",
+              command: {
+                id: "noop",
+                title: `// @filename: ${sandbox.filepath}`,
+              },
             },
-            id: "implicit-filename-first",
-            command: {
-              id: "noop",
-              title: `// @filename: ${sandbox.filepath}`,
-            },
-          },
-        ]
-      return { lenses, dispose: () => { } }
+          ]
+      return { lenses, dispose: () => {} }
     },
   })
 
@@ -235,18 +269,21 @@ export const setupPlayground = (
   })
 
   // Keeps track of whether the project has been set up as an ESM module via a package.json
-  let isESMMode = false
+  let isESMMode = true
 
   // When any compiler flags are changed, trigger a potential change to the URL
   sandbox.setDidUpdateCompilerSettings(async () => {
     playgroundDebouncedMainFunction()
     // @ts-ignore
-    window.appInsights && window.appInsights.trackEvent({ name: "Compiler Settings changed" })
+    window.appInsights &&
+      window.appInsights.trackEvent({ name: "Compiler Settings changed" })
 
     const model = sandbox.editor.getModel()
     const plugin = getCurrentPlugin()
-    if (model && plugin.modelChanged) plugin.modelChanged(sandbox, model, container)
-    if (model && plugin.modelChangedDebounce) plugin.modelChangedDebounce(sandbox, model, container)
+    if (model && plugin.modelChanged)
+      plugin.modelChanged(sandbox, model, container)
+    if (model && plugin.modelChangedDebounce)
+      plugin.modelChangedDebounce(sandbox, model, container)
 
     const alwaysUpdateURL = !localStorage.getItem("disable-save-on-type")
     if (alwaysUpdateURL) {
@@ -268,13 +305,23 @@ export const setupPlayground = (
         ui.flashInfo(i("play_esm_mode"))
       }, 300)
 
-      const nextRes = (moduleNumber === 199 || moduleNumber === 100 ? 99 : 2) as import("monaco-editor").languages.typescript.ModuleResolutionKind
-      sandbox.setCompilerSettings({ target: 99, moduleResolution: nextRes, module: moduleNumber })
-      sandbox.addLibraryToRuntime(JSON.stringify({ name: "playground", type: "module" }), "/package.json")
+      const nextRes = (
+        moduleNumber === 199 || moduleNumber === 100 ? 99 : 2
+      ) as import("monaco-editor").languages.typescript.ModuleResolutionKind
+      sandbox.setCompilerSettings({
+        target: 99,
+        moduleResolution: nextRes,
+        module: moduleNumber,
+      })
+      sandbox.addLibraryToRuntime(
+        JSON.stringify({ name: "playground", type: "module" }),
+        "/package.json"
+      )
     }
   })
 
-  const skipInitiallySettingHash = document.location.hash && document.location.hash.includes("example/")
+  const skipInitiallySettingHash =
+    document.location.hash && document.location.hash.includes("example/")
   if (!skipInitiallySettingHash) playgroundDebouncedMainFunction()
 
   // Setup working with the existing UI, once it's loaded
@@ -284,17 +331,27 @@ export const setupPlayground = (
   // Set up the label for the dropdown
   const versionButton = document.querySelectorAll("#versions > a").item(0)
   versionButton.innerHTML = "v" + sandbox.ts.version + " <span class='caret'/>"
-  versionButton.setAttribute("aria-label", `Select version of TypeScript, currently ${sandbox.ts.version}`)
+  versionButton.setAttribute(
+    "aria-label",
+    `Select version of TypeScript, currently ${sandbox.ts.version}`
+  )
 
   // Add the versions to the dropdown
   const versionsMenu = document.querySelectorAll("#versions > ul").item(0)
 
   // Enable all submenus
-  document.querySelectorAll("nav ul li").forEach(e => e.classList.add("active"))
+  document
+    .querySelectorAll("nav ul li")
+    .forEach((e) => e.classList.add("active"))
 
   const notWorkingInPlayground = ["3.1.6", "3.0.1", "2.8.1", "2.7.2", "2.4.1"]
 
-  const allVersions = [...sandbox.supportedVersions.filter(f => !notWorkingInPlayground.includes(f)), "Nightly"]
+  const allVersions = [
+    ...sandbox.supportedVersions.filter(
+      (f) => !notWorkingInPlayground.includes(f)
+    ),
+    "Nightly",
+  ]
 
   allVersions.forEach((v: string) => {
     const li = document.createElement("li")
@@ -328,9 +385,9 @@ export const setupPlayground = (
   })
 
   // Support dropdowns
-  document.querySelectorAll(".navbar-sub li.dropdown > a").forEach(link => {
+  document.querySelectorAll(".navbar-sub li.dropdown > a").forEach((link) => {
     const a = link as HTMLAnchorElement
-    a.onclick = _e => {
+    a.onclick = (_e) => {
       if (a.parentElement!.classList.contains("open")) {
         escapePressed()
       } else {
@@ -338,19 +395,30 @@ export const setupPlayground = (
         a.parentElement!.classList.toggle("open")
         a.setAttribute("aria-expanded", "true")
 
-        const exampleContainer = a.closest("li")!.getElementsByClassName("dropdown-dialog").item(0) as HTMLElement
+        const exampleContainer = a
+          .closest("li")!
+          .getElementsByClassName("dropdown-dialog")
+          .item(0) as HTMLElement
         if (!exampleContainer) return
 
-        const firstLabel = exampleContainer.querySelector("label") as HTMLElement
+        const firstLabel = exampleContainer.querySelector(
+          "label"
+        ) as HTMLElement
         if (firstLabel) firstLabel.focus()
 
         // Set exact height and widths for the popovers for the main playground navigation
         const isPlaygroundSubmenu = !!a.closest("nav")
         if (isPlaygroundSubmenu) {
-          const playgroundContainer = document.getElementById("playground-container")!
-          exampleContainer.style.height = `calc(${playgroundContainer.getBoundingClientRect().height + 26}px - 4rem)`
+          const playgroundContainer = document.getElementById(
+            "playground-container"
+          )!
+          exampleContainer.style.height = `calc(${
+            playgroundContainer.getBoundingClientRect().height + 26
+          }px - 4rem)`
 
-          const sideBarWidth = (document.querySelector(".playground-sidebar") as any).offsetWidth
+          const sideBarWidth = (
+            document.querySelector(".playground-sidebar") as any
+          ).offsetWidth
           exampleContainer.style.width = `calc(100% - ${sideBarWidth}px - 71px)`
 
           // All this is to make sure that tabbing stays inside the dropdown for tsconfig/examples
@@ -359,12 +427,18 @@ export const setupPlayground = (
           if (lastButton) {
             redirectTabPressTo(lastButton, exampleContainer, ".examples-close")
           } else {
-            const sections = document.querySelectorAll(".dropdown-dialog .section-content")
-            sections.forEach(s => {
+            const sections = document.querySelectorAll(
+              ".dropdown-dialog .section-content"
+            )
+            sections.forEach((s) => {
               const buttons = s.querySelectorAll("a.example-link")
               const lastButton = buttons.item(buttons.length - 1) as HTMLElement
               if (lastButton) {
-                redirectTabPressTo(lastButton, exampleContainer, ".examples-close")
+                redirectTabPressTo(
+                  lastButton,
+                  exampleContainer,
+                  ".examples-close"
+                )
               }
             })
           }
@@ -376,8 +450,12 @@ export const setupPlayground = (
 
   /** Handles removing the dropdowns like tsconfig/examples/handbook */
   const escapePressed = () => {
-    document.querySelectorAll(".navbar-sub li.open").forEach(i => i.classList.remove("open"))
-    document.querySelectorAll(".navbar-sub li").forEach(i => i.setAttribute("aria-expanded", "false"))
+    document
+      .querySelectorAll(".navbar-sub li.open")
+      .forEach((i) => i.classList.remove("open"))
+    document
+      .querySelectorAll(".navbar-sub li")
+      .forEach((i) => i.setAttribute("aria-expanded", "false"))
 
     hideNavForHandbook(sandbox)
   }
@@ -416,7 +494,7 @@ export const setupPlayground = (
 
   const shareButton = document.getElementById("share-button")
   if (shareButton) {
-    shareButton.onclick = e => {
+    shareButton.onclick = (e) => {
       e.preventDefault()
       shareAction.run()
       return false
@@ -444,7 +522,7 @@ export const setupPlayground = (
   if (runButton) {
     runButton.onclick = () => {
       const run = sandbox.getRunnableJS()
-      const runPlugin = plugins.find(p => p.id === "logs")!
+      const runPlugin = plugins.find((p) => p.id === "logs")!
       activatePlugin(runPlugin, getCurrentPlugin(), sandbox, tabBar, container)
 
       runWithCustomLogs(run, i)
@@ -456,7 +534,7 @@ export const setupPlayground = (
   }
 
   // Handle the close buttons on the examples
-  document.querySelectorAll("button.examples-close").forEach(b => {
+  document.querySelectorAll("button.examples-close").forEach((b) => {
     const button = b as HTMLButtonElement
     button.onclick = escapePressed
   })
@@ -473,7 +551,8 @@ export const setupPlayground = (
         return
       }
 
-      const showingHandbook = handbookButton.parentElement!.classList.contains("open")
+      const showingHandbook =
+        handbookButton.parentElement!.classList.contains("open")
       if (!showingHandbook) {
         escapePressed()
 
@@ -500,16 +579,25 @@ export const setupPlayground = (
 
     settingsToggle.onclick = () => {
       const open = settingsToggle.parentElement!.classList.contains("open")
-      const sidebarTabs = document.querySelector(".playground-plugin-tabview") as HTMLDivElement
-      const sidebarContent = document.querySelector(".playground-plugin-container") as HTMLDivElement
-      let settingsContent = document.querySelector(".playground-settings-container") as HTMLDivElement
+      const sidebarTabs = document.querySelector(
+        ".playground-plugin-tabview"
+      ) as HTMLDivElement
+      const sidebarContent = document.querySelector(
+        ".playground-plugin-container"
+      ) as HTMLDivElement
+      let settingsContent = document.querySelector(
+        ".playground-settings-container"
+      ) as HTMLDivElement
 
       if (!settingsContent) {
         settingsContent = document.createElement("div")
-        settingsContent.className = "playground-settings-container playground-plugin-container"
+        settingsContent.className =
+          "playground-settings-container playground-plugin-container"
         const settings = settingsPlugin(i, utils)
         settings.didMount && settings.didMount(sandbox, settingsContent)
-        document.querySelector(".playground-sidebar")!.appendChild(settingsContent)
+        document
+          .querySelector(".playground-sidebar")!
+          .appendChild(settingsContent)
 
         // When the last tab item is hit, go back to the settings button
         const labels = document.querySelectorAll(".playground-sidebar input")
@@ -527,15 +615,19 @@ export const setupPlayground = (
         sidebarTabs.style.display = "none"
         sidebarContent.style.display = "none"
         settingsContent.style.display = "block"
-        document.querySelector<HTMLElement>(".playground-sidebar label")!.focus()
+        document
+          .querySelector<HTMLElement>(".playground-sidebar label")!
+          .focus()
       }
       settingsToggle.parentElement!.classList.toggle("open")
     }
 
-    settingsToggle.addEventListener("keydown", e => {
+    settingsToggle.addEventListener("keydown", (e) => {
       const isOpen = settingsToggle.parentElement!.classList.contains("open")
       if (e.key === "Tab" && isOpen) {
-        const result = document.querySelector(".playground-options li input") as any
+        const result = document.querySelector(
+          ".playground-options li input"
+        ) as any
         result.focus()
         e.preventDefault()
       }
@@ -546,7 +638,7 @@ export const setupPlayground = (
   if (location.hash.startsWith("#example")) {
     const exampleName = location.hash.replace("#example/", "").trim()
     sandbox.config.logger.log("Loading example:", exampleName)
-    getExampleSourceCode(config.prefix, config.lang, exampleName).then(ex => {
+    getExampleSourceCode(config.prefix, config.lang, exampleName).then((ex) => {
       if (ex.example && ex.code) {
         const { example, code } = ex
 
@@ -571,7 +663,9 @@ export const setupPlayground = (
         sandbox.setText(code)
       } else {
         suppressNextTextChangeForHashChange = true
-        sandbox.setText("// There was an issue getting the example, bad URL? Check the console in the developer tools")
+        sandbox.setText(
+          "// There was an issue getting the example, bad URL? Check the console in the developer tools"
+        )
       }
     })
   }
@@ -579,22 +673,33 @@ export const setupPlayground = (
   // Set the errors number in the sidebar tabs
   const model = sandbox.getModel()
   model.onDidChangeDecorations(() => {
-    const markers = sandbox.monaco.editor.getModelMarkers({ resource: model.uri }).filter(m => m.severity !== 1)
+    const markers = sandbox.monaco.editor
+      .getModelMarkers({ resource: model.uri })
+      .filter((m) => m.severity !== 1)
     utils.setNotifications("errors", markers.length)
   })
 
   // Sets up a way to click between examples
-  monaco.languages.registerLinkProvider(sandbox.language, new ExampleHighlighter())
+  monaco.languages.registerLinkProvider(
+    sandbox.language,
+    new ExampleHighlighter()
+  )
 
-  const languageSelector = document.getElementById("language-selector") as HTMLSelectElement
+  const languageSelector = document.getElementById(
+    "language-selector"
+  ) as HTMLSelectElement
   if (languageSelector) {
     const params = new URLSearchParams(location.search)
     const options = ["ts", "d.ts", "js"]
-    languageSelector.options.selectedIndex = options.indexOf(params.get("filetype") || "ts")
+    languageSelector.options.selectedIndex = options.indexOf(
+      params.get("filetype") || "ts"
+    )
 
     languageSelector.onchange = () => {
       const filetype = options[Number(languageSelector.selectedIndex || 0)]
-      const query = sandbox.createURLQueryWithCompilerOptions(sandbox, { filetype })
+      const query = sandbox.createURLQueryWithCompilerOptions(sandbox, {
+        filetype,
+      })
       const fullURL = `${document.location.protocol}//${document.location.host}${document.location.pathname}${query}`
       // @ts-ignore
       document.location = fullURL
@@ -654,11 +759,18 @@ export const setupPlayground = (
     playground.registerPlugin(readyPlugin)
 
     // Auto-select the dev plugin
-    const pluginWantsFront = readyPlugin.shouldBeSelected && readyPlugin.shouldBeSelected()
+    const pluginWantsFront =
+      readyPlugin.shouldBeSelected && readyPlugin.shouldBeSelected()
 
     if (pluginWantsFront || autoActivate) {
       // Auto-select the dev plugin
-      activatePlugin(readyPlugin, getCurrentPlugin(), sandbox, tabBar, container)
+      activatePlugin(
+        readyPlugin,
+        getCurrentPlugin(),
+        sandbox,
+        tabBar,
+        container
+      )
     }
   }
 
@@ -690,9 +802,12 @@ export const setupPlayground = (
     try {
       // @ts-ignore
       const re = window.require
-      re([`unpkg/${plugin}@latest/dist/index`], (devPlugin: PlaygroundPlugin) => {
-        activateExternalPlugin(devPlugin, autoEnable)
-      })
+      re(
+        [`unpkg/${plugin}@latest/dist/index`],
+        (devPlugin: PlaygroundPlugin) => {
+          activateExternalPlugin(devPlugin, autoEnable)
+        }
+      )
     } catch (error) {
       console.error("Problem loading up the plugin:", plugin)
       console.error(error)
@@ -701,15 +816,20 @@ export const setupPlayground = (
 
   if (config.supportCustomPlugins) {
     // Grab ones from localstorage
-    activePlugins().forEach(p => downloadPlugin(p.id, false))
+    activePlugins().forEach((p) => downloadPlugin(p.id, false))
 
     // Offer to install one if 'install-plugin' is a query param
     const params = new URLSearchParams(location.search)
     const pluginToInstall = params.get("install-plugin")
     if (pluginToInstall) {
-      const alreadyInstalled = activePlugins().find(p => p.id === pluginToInstall)
+      const alreadyInstalled = activePlugins().find(
+        (p) => p.id === pluginToInstall
+      )
       if (!alreadyInstalled) {
-        const shouldDoIt = confirm("Would you like to install the third party plugin?\n\n" + pluginToInstall)
+        const shouldDoIt = confirm(
+          "Would you like to install the third party plugin?\n\n" +
+            pluginToInstall
+        )
         if (shouldDoIt) {
           addCustomPlugin(pluginToInstall)
           downloadPlugin(pluginToInstall, true)
@@ -720,10 +840,14 @@ export const setupPlayground = (
 
   const [tsMajor, tsMinor] = sandbox.ts.version.split(".")
   if (
-    (parseInt(tsMajor) > 4 || (parseInt(tsMajor) == 4 && parseInt(tsMinor) >= 6)) &&
+    (parseInt(tsMajor) > 4 ||
+      (parseInt(tsMajor) == 4 && parseInt(tsMinor) >= 6)) &&
     monaco.languages.registerInlayHintsProvider
   ) {
-    monaco.languages.registerInlayHintsProvider(sandbox.language, createTwoslashInlayProvider(sandbox))
+    monaco.languages.registerInlayHintsProvider(
+      sandbox.language,
+      createTwoslashInlayProvider(sandbox)
+    )
   }
 
   if (location.hash.startsWith("#show-examples")) {
@@ -750,8 +874,12 @@ export const setupPlayground = (
 
 export type Playground = ReturnType<typeof setupPlayground>
 
-const redirectTabPressTo = (element: HTMLElement, container: HTMLElement | undefined, query: string) => {
-  element.addEventListener("keydown", e => {
+const redirectTabPressTo = (
+  element: HTMLElement,
+  container: HTMLElement | undefined,
+  query: string
+) => {
+  element.addEventListener("keydown", (e) => {
     if (e.key === "Tab") {
       const host = container || document
       const result = host.querySelector(query) as any
