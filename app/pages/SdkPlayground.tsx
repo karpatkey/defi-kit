@@ -9,11 +9,13 @@ const SdkPlayground: NextPage = () => {
         <Playground />
       </div>
       <style jsx global>{`
-        .playground-wrapper {
-          position: fixed;
-          left: 0;
-          height: calc(100vh - 64px - 140px);
-          width: 100vw;
+        html,
+        body {
+          overflow: hidden;
+        }
+
+        .nextra-content {
+          min-height: calc(100vh - 64px - 140px);
         }
       `}</style>
     </>

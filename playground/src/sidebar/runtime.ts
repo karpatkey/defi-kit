@@ -6,10 +6,7 @@ import { localize } from "../localizeWithFallback"
 let allLogs: string[] = []
 let addedClearAction = false
 const cancelButtonSVG = `
-<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="6" cy="7" r="5" stroke-width="2"/>
-<line x1="0.707107" y1="1.29289" x2="11.7071" y2="12.2929" stroke-width="2"/>
-</svg>
+<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true"><path d="M2,16H2A14,14,0,1,0,16,2,14,14,0,0,0,2,16Zm23.15,7.75L8.25,6.85a12,12,0,0,1,16.9,16.9ZM8.24,25.16A12,12,0,0,1,6.84,8.27L23.73,25.16a12,12,0,0,1-15.49,0Z"></path><title>Error</title></svg>
 `
 declare global {
   interface Window {
@@ -20,7 +17,7 @@ declare global {
 export const runPlugin: PluginFactory = (i, utils) => {
   const plugin: PlaygroundPlugin = {
     id: "logs",
-    displayName: i("play_sidebar_logs"),
+    displayName: "Logs",
     willMount: (sandbox, container) => {
       const ui = createUI()
 
@@ -36,7 +33,7 @@ export const runPlugin: PluginFactory = (i, utils) => {
 
         run: function () {
           clearLogs()
-          ui.flashInfo(i("play_clear_logs"))
+          ui.flashInfo("Logs cleared")
         },
       }
 
@@ -72,7 +69,7 @@ export const runPlugin: PluginFactory = (i, utils) => {
 
       const filterTextBox = document.createElement("input")
       filterTextBox.id = "filter-logs"
-      filterTextBox.placeholder = i("play_sidebar_tools_filter_placeholder")
+      filterTextBox.placeholder = "Filter logs"
       filterTextBox.addEventListener("input", (e: any) => {
         const inputText = e.target.value
 
@@ -165,7 +162,7 @@ function rewireLoggingToElement(
       window.defiPresetsSdk = defiPresetsSdk
       eval(safeJS)
     } catch (error) {
-      console.error(i("play_run_js_fail"))
+      console.error("Executed JavaScript Failed:")
       console.error(error)
 
       // if (error instanceof SyntaxError && /\bexport\b/u.test(error.message)) {

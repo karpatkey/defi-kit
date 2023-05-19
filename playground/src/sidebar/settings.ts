@@ -9,14 +9,14 @@ import { LocalStorageOption } from "../ds/createDesignSystem"
 
 export const getPlaygroundPlugins = (): PluginFactory[] => {
   const defaults = []
-  if (!localStorage.getItem("disable-sidebar-js")) defaults.push(compiledJSPlugin)
-  if (!localStorage.getItem("disable-sidebar-dts")) defaults.push(showDTSPlugin)
+  // if (!localStorage.getItem("disable-sidebar-js")) defaults.push(compiledJSPlugin)
+  // if (!localStorage.getItem("disable-sidebar-dts")) defaults.push(showDTSPlugin)
   if (!localStorage.getItem("disable-sidebar-err")) defaults.push(showErrors)
   if (!localStorage.getItem("disable-sidebar-run")) defaults.push(runPlugin)
-  if (!localStorage.getItem("disable-sidebar-plugins")) defaults.push(optionsPlugin)
+  // if (!localStorage.getItem("disable-sidebar-plugins")) defaults.push(optionsPlugin)
 
   // Sidebar items which are more dev/introspection focused
-  if (localStorage.getItem("enable-sidebar-ast")) defaults.push(showASTPlugin)
+  // if (localStorage.getItem("enable-sidebar-ast")) defaults.push(showASTPlugin)
 
   // Don't let it ever be zero, this is mostly laziness on my part but every
   // possible UI state needs to be considered across so many other states

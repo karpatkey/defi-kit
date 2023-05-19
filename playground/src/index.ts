@@ -302,7 +302,7 @@ export const setupPlayground = (
       if (isESMMode) return
       isESMMode = true
       setTimeout(() => {
-        ui.flashInfo(i("play_esm_mode"))
+        ui.flashInfo("Switched to ESM mode")
       }, 300)
 
       const nextRes = (
@@ -409,12 +409,12 @@ export const setupPlayground = (
         // Set exact height and widths for the popovers for the main playground navigation
         const isPlaygroundSubmenu = !!a.closest("nav")
         if (isPlaygroundSubmenu) {
-          const playgroundContainer = document.getElementById(
-            "playground-container"
-          )!
-          exampleContainer.style.height = `calc(${
-            playgroundContainer.getBoundingClientRect().height + 26
-          }px - 4rem)`
+          // const playgroundContainer = document.getElementById(
+          //   "playground-container"
+          // )!
+          // exampleContainer.style.height = `calc(${
+          //   playgroundContainer.getBoundingClientRect().height + 26
+          // }px - 4rem)`
 
           const sideBarWidth = (
             document.querySelector(".playground-sidebar") as any
@@ -486,7 +486,7 @@ export const setupPlayground = (
       const newURL = sandbox.createURLQueryWithCompilerOptions(sandbox)
       window.history.replaceState({}, "", newURL)
       window.navigator.clipboard.writeText(location.href.toString()).then(
-        () => ui.flashInfo(i("play_export_clipboard")),
+        () => ui.flashInfo("URL copied to clipboard"),
         (e: any) => alert(e)
       )
     },
@@ -527,8 +527,7 @@ export const setupPlayground = (
 
       runWithCustomLogs(run, i)
 
-      const isJS = sandbox.config.filetype === "js"
-      ui.flashInfo(i(isJS ? "play_run_js" : "play_run_ts"))
+      ui.flashInfo("Executed transpiled TypeScript")
       return false
     }
   }

@@ -1,9 +1,14 @@
 import { UI } from "./createUI"
 
 type Sandbox = import("@typescript/sandbox").Sandbox
-type CompilerOptions = import("monaco-editor").languages.typescript.CompilerOptions
+type CompilerOptions =
+  import("monaco-editor").languages.typescript.CompilerOptions
 
-export const createExporter = (sandbox: Sandbox, monaco: typeof import("monaco-editor"), ui: UI) => {
+export const createExporter = (
+  sandbox: Sandbox,
+  monaco: typeof import("monaco-editor"),
+  ui: UI
+) => {
   function getScriptTargetText(option: any) {
     return monaco.languages.typescript.ScriptTarget[option]
   }
@@ -23,7 +28,9 @@ export const createExporter = (sandbox: Sandbox, monaco: typeof import("monaco-e
   }
 
   function getModuleResolutionText(option: any) {
-    return option === monaco.languages.typescript.ModuleResolutionKind.Classic ? "classic" : "node"
+    return option === monaco.languages.typescript.ModuleResolutionKind.Classic
+      ? "classic"
+      : "node"
   }
 
   // These are the compiler's defaults, and we want a diff from
@@ -66,14 +73,17 @@ export const createExporter = (sandbox: Sandbox, monaco: typeof import("monaco-e
       moduleResolution: moduleResolutionText,
     }
 
-    const diffFromTSCDefaults = Object.entries(opts).reduce((acc, [key, value]) => {
-      if ((opts as any)[key] && value != defaultCompilerOptionsForTSC[key]) {
-        // @ts-ignore
-        acc[key] = opts[key]
-      }
+    const diffFromTSCDefaults = Object.entries(opts).reduce(
+      (acc, [key, value]) => {
+        if ((opts as any)[key] && value != defaultCompilerOptionsForTSC[key]) {
+          // @ts-ignore
+          acc[key] = opts[key]
+        }
 
-      return acc
-    }, {})
+        return acc
+      },
+      {}
+    )
 
     return diffFromTSCDefaults
   }
@@ -94,7 +104,9 @@ export const createExporter = (sandbox: Sandbox, monaco: typeof import("monaco-e
     form.setAttribute("style", "display:none;")
 
     form.appendChild(createHiddenInput("project[title]", project.title))
-    form.appendChild(createHiddenInput("project[description]", project.description))
+    form.appendChild(
+      createHiddenInput("project[description]", project.description)
+    )
     form.appendChild(createHiddenInput("project[template]", project.template))
 
     if (project.tags) {
@@ -104,15 +116,24 @@ export const createExporter = (sandbox: Sandbox, monaco: typeof import("monaco-e
     }
 
     if (project.dependencies) {
-      form.appendChild(createHiddenInput("project[dependencies]", JSON.stringify(project.dependencies)))
+      form.appendChild(
+        createHiddenInput(
+          "project[dependencies]",
+          JSON.stringify(project.dependencies)
+        )
+      )
     }
 
     if (project.settings) {
-      form.appendChild(createHiddenInput("project[settings]", JSON.stringify(project.settings)))
+      form.appendChild(
+        createHiddenInput("project[settings]", JSON.stringify(project.settings))
+      )
     }
 
-    Object.keys(project.files).forEach(path => {
-      form.appendChild(createHiddenInput(`project[files][${path}]`, project.files[path]))
+    Object.keys(project.files).forEach((path) => {
+      form.appendChild(
+        createHiddenInput(`project[files][${path}]`, project.files[path])
+      )
     })
 
     return form
@@ -148,19 +169,28 @@ export const createExporter = (sandbox: Sandbox, monaco: typeof import("monaco-e
   }
 
   function openInBugWorkbench() {
-    const hash = `#code/${sandbox.lzstring.compressToEncodedURIComponent(sandbox.getText())}`
+    const hash = `#code/${sandbox.lzstring.compressToEncodedURIComponent(
+      sandbox.getText()
+    )}`
     document.location.assign(`/dev/bug-workbench/${hash}`)
   }
 
   function openInTSAST() {
-    const hash = `#code/${sandbox.lzstring.compressToEncodedURIComponent(sandbox.getText())}`
+    const hash = `#code/${sandbox.lzstring.compressToEncodedURIComponent(
+      sandbox.getText()
+    )}`
     document.location.assign(`https://ts-ast-viewer.com/${hash}`)
   }
 
   function openInVSCodeDev() {
     const search = document.location.search
-    const hash = `#code/${sandbox.lzstring.compressToEncodedURIComponent(sandbox.getText())}`
-    document.location.assign(`https://insiders.vscode.dev/tsplay/${search}${hash}`)
+    const hash = `#code/${sandbox.lzstring.compressToEncodedURIComponent(
+      sandbox.getText()
+    )}`
+    window.open(`https://insiders.vscode.dev/tsplay/${search}${hash}`, "_blank")
+    // document.location.assign(
+    //   `https://insiders.vscode.dev/tsplay/${search}${hash}`
+    // )
   }
 
   function openProjectInCodeSandbox() {
@@ -191,7 +221,8 @@ export const createExporter = (sandbox: Sandbox, monaco: typeof import("monaco-e
       .replace(/=+$/, "") // Remove ending '='
 
     const url = `https://codesandbox.io/api/v1/sandboxes/define?view=editor&parameters=${parameters}`
-    document.location.assign(url)
+    window.open(url, "_blank")
+    // document.location.assign(url)
 
     // Alternative using the http URL API, which uses POST. This has the trade-off where
     // the async nature of the call means that the redirect at the end triggers
@@ -262,7 +293,13 @@ ${codify(stringifiedCompilerOptions, "json")}
     const query = sandbox.createURLQueryWithCompilerOptions(sandbox)
     const fullURL = `${document.location.protocol}//${document.location.host}${document.location.pathname}${query}`
     const chat = `[Playground Link](${fullURL})`
-    ui.showModal(chat, document.getElementById("exports-dropdown")!, "Markdown for chat", undefined, e)
+    ui.showModal(
+      chat,
+      document.getElementById("exports-dropdown")!,
+      "Markdown for chat",
+      undefined,
+      e
+    )
     return false
   }
 
@@ -273,13 +310,20 @@ ${codify(stringifiedCompilerOptions, "json")}
     const fullURL = `${document.location.protocol}//${document.location.host}${document.location.pathname}${query}`
 
     const ts = sandbox.getText()
-    const preview = ts.length > 200 ? ts.substring(0, 200) + "..." : ts.substring(0, 200)
+    const preview =
+      ts.length > 200 ? ts.substring(0, 200) + "..." : ts.substring(0, 200)
 
     const jsx = getJsxEmitText(sandbox.getCompilerOptions().jsx)
     const codeLanguage = jsx !== undefined ? "tsx" : "ts"
     const code = "```" + codeLanguage + "\n" + preview + "\n```\n"
     const chat = `${code}\n[Playground Link](${fullURL})`
-    ui.showModal(chat, document.getElementById("exports-dropdown")!, "Markdown code", undefined, e)
+    ui.showModal(
+      chat,
+      document.getElementById("exports-dropdown")!,
+      "Markdown code",
+      undefined,
+      e
+    )
     return false
   }
 

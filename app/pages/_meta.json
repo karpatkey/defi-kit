@@ -20,16 +20,16 @@
     "type": "page",
     "title": "SDK",
     "theme": {
-      "typesetting": "article",
-      "layout": "full"
+      "layout": "full",
+      "timestamp": false
     }
   },
   "api-docs": {
     "type": "page",
     "title": "API",
     "theme": {
-      "typesetting": "article",
-      "layout": "full"
+      "layout": "full",
+      "timestamp": false
     }
   },
   "contribute": {

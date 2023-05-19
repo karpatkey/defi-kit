@@ -12,7 +12,9 @@ export const showErrors: PluginFactory = (i, utils) => {
   const updateUI = () => {
     if (!sandbox) return
     const model = sandbox.getModel()
-    const markers = sandbox.monaco.editor.getModelMarkers({ resource: model.uri })
+    const markers = sandbox.monaco.editor.getModelMarkers({
+      resource: model.uri,
+    })
 
     // Bail early if there's nothing to show
     if (!markers.length) {
@@ -30,8 +32,14 @@ export const showErrors: PluginFactory = (i, utils) => {
     ds.clearDeltaDecorators(true)
 
     // The hover can trigger this, so avoid that loop
-    const markerIDs = markers.filter(m => m.severity !== 1).map(m => m.startColumn + m.startLineNumber)
-    if (markerIDs.length === prevMarkers.length && markerIDs.every((value, index) => value === prevMarkers[index])) return
+    const markerIDs = markers
+      .filter((m) => m.severity !== 1)
+      .map((m) => m.startColumn + m.startLineNumber)
+    if (
+      markerIDs.length === prevMarkers.length &&
+      markerIDs.every((value, index) => value === prevMarkers[index])
+    )
+      return
     prevMarkers = markerIDs
 
     // Clean any potential empty screens
@@ -44,12 +52,14 @@ export const showErrors: PluginFactory = (i, utils) => {
 
   const plugin: PlaygroundPlugin = {
     id: "errors",
-    displayName: i("play_sidebar_errors"),
+    displayName: "Errors",
     didMount: (_sandbox, _container) => {
       sandbox = _sandbox
       container = _container
       ds = utils.createDesignSystem(container)
-      changeDecoratorsDispose = sandbox.getModel().onDidChangeDecorations(updateUI)
+      changeDecoratorsDispose = sandbox
+        .getModel()
+        .onDidChangeDecorations(updateUI)
       prevMarkers = []
       updateUI()
     },
@@ -66,8 +76,11 @@ const markersToTSDiags = (
   markers: import("monaco-editor").editor.IMarker[]
 ): import("typescript").DiagnosticRelatedInformation[] => {
   return markers
-    .map(m => {
-      const start = model.getOffsetAt({ column: m.startColumn, lineNumber: m.startLineNumber })
+    .map((m) => {
+      const start = model.getOffsetAt({
+        column: m.startColumn,
+        lineNumber: m.startLineNumber,
+      })
       return {
         code: -1,
         category: markerToDiagSeverity(m.severity),

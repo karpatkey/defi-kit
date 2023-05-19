@@ -1,3 +1,12 @@
+:root {
+  --playground-dragbar-border: #e5e5e5;
+  --color-highlight-strong: var(--green);
+  --playground-dropdown-border: #e5e5e5;
+  --playground-dropdown-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  --playground-dropdown-bg: #fff;
+  --text-color: rgba(75, 85, 99, var(--tw-text-opacity));
+}
+
 .navbar-sub {
   clear: both;
   display: flex;
@@ -12,8 +21,6 @@
 }
 .navbar-sub li.name {
   width: 200px;
-  font-size: 1.2rem;
-  font-weight: 600;
 }
 .navbar-sub li.name span {
   padding-top: 0.7rem;
@@ -22,8 +29,6 @@
 .navbar-sub li {
   list-style: none;
   display: flex;
-  font-weight: 600;
-  font-size: 1rem;
 }
 .navbar-sub li.divider {
   height: 1px;
@@ -56,7 +61,6 @@
 .navbar-sub li.dropdown ul.dropdown-menu {
   min-width: 300px;
   padding: 5px 0;
-  margin: 2px 0 0;
   font-size: 14px;
   text-align: left;
   list-style: none;
@@ -93,6 +97,7 @@
 .navbar-sub li.dropdown ul.dropdown-menu a {
   display: block;
   width: 100%;
+  padding: 0.7rem 0.75rem 0.5rem 0.7rem;
 }
 .navbar-sub li.dropdown ul.dropdown-menu li:hover {
   color: #262626;
@@ -111,7 +116,7 @@
   margin: 0;
 }
 .navbar-sub li.dropdown .dropdown-dialog a {
-  color: var(--link-color);
+  color: var(--green);
   padding-left: 0;
   padding-bottom: 0.2rem;
 }
@@ -207,7 +212,7 @@
   > div
   label
   > span {
-  font-family: var(--code-font);
+  font-family: var(--font-mono);
   margin-left: 4px;
 }
 .navbar-sub li.dropdown .dropdown-dialog #compiler-dropdowns {
@@ -217,7 +222,7 @@
 .navbar-sub li.dropdown .dropdown-dialog #compiler-dropdowns label {
   margin-right: 0.5rem;
   width: 33%;
-  font-family: var(--code-font);
+  font-family: var(--font-mono);
 }
 .navbar-sub li.dropdown .dropdown-dialog #compiler-dropdowns label select {
   margin-left: 1rem;
@@ -229,8 +234,6 @@
   label
   span.compiler-flag-blurb {
   display: block;
-  font-family: var(--body-font);
-  font-weight: 400;
 }
 
 main > nav {
@@ -297,18 +300,21 @@ main #editor-toolbar li:hover {
 }
 
 #editor-toolbar > ul > li > a:first-child {
-  padding-left: 1rem;
+  padding-left: max(env(safe-area-inset-left), 1.5rem);
 }
 
 #playground-container {
   display: flex;
-  height: 800px;
+  position: fixed;
+  left: 0;
+  height: calc(100vh - 64px - 140px);
+  width: 100vw;
 }
 #playground-container ol {
   padding: 0;
 }
 #playground-container #navigation-container {
-  background-color: var(--blue-tinged-bg);
+  background-color: var(--color-highlight-bg);
   overflow-y: auto;
 }
 #playground-container #navigation-container h4 {
@@ -321,8 +327,6 @@ main #editor-toolbar li:hover {
 #playground-container #navigation-container ul li {
   padding-left: 12px;
   list-style: none;
-  font-size: 14px;
-  font-weight: 600;
   cursor: pointer;
   line-height: 22px;
   height: 22px;
@@ -343,7 +347,7 @@ main #editor-toolbar li:hover {
   background-color: #ffffff50;
 }
 #playground-container #navigation-container ul li.selectable.selected {
-  background-color: var(--blue-tinged-strong);
+  /* background-color: var(--color-highlight-strong); */
 }
 #playground-container #navigation-container ul li.selectable.selected a {
   color: var(--text-color);
@@ -355,128 +359,6 @@ main #editor-toolbar li:hover {
   width: 60px;
   margin-left: 0;
   margin-top: 10px;
-}
-#playground-container #story-container {
-  padding: 20px;
-  padding-top: 0;
-  overflow-y: auto;
-  font-size: 0.9rem;
-}
-#playground-container #story-container .highlight pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f7f7f7;
-  border-radius: 3px;
-}
-#playground-container #story-container details[open] {
-  padding-left: 1rem;
-  border-left: 2px solid var(--blue-tinged-strong);
-}
-#playground-container #story-container details[open] summary {
-  margin-left: -0.5rem;
-}
-#playground-container #story-container summary:hover {
-  cursor: pointer;
-  background-color: var(--background-minor-highlight-color);
-}
-#playground-container #story-container kbd {
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
-  color: #333;
-  display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  line-height: 1.4;
-  margin: 0 0.1em;
-  padding: 0.1em 0.6em;
-  text-shadow: 0 1px 0 #fff;
-}
-#playground-container #story-container .highlight {
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-#playground-container #story-container .pl-c {
-  color: #969896;
-}
-#playground-container #story-container .pl-c1,
-#playground-container #story-container .pl-s .pl-v {
-  color: #0086b3;
-}
-#playground-container #story-container .pl-e,
-#playground-container #story-container .pl-en {
-  color: #795da3;
-}
-#playground-container #story-container .pl-s .pl-s1,
-#playground-container #story-container .pl-smi {
-  color: #333;
-}
-#playground-container #story-container .pl-ent {
-  color: #63a35c;
-}
-#playground-container #story-container .pl-k {
-  color: #a71d5d;
-}
-#playground-container #story-container .pl-pds,
-#playground-container #story-container .pl-s,
-#playground-container #story-container .pl-s .pl-pse .pl-s1,
-#playground-container #story-container .pl-sr,
-#playground-container #story-container .pl-sr .pl-cce,
-#playground-container #story-container .pl-sr .pl-sra,
-#playground-container #story-container .pl-sr .pl-sre {
-  color: #183691;
-}
-#playground-container #story-container .pl-v {
-  color: #ed6a43;
-}
-#playground-container #story-container .pl-id {
-  color: #b52a1d;
-}
-#playground-container #story-container .pl-ii {
-  background-color: #b52a1d;
-  color: #f8f8f8;
-}
-#playground-container #story-container .pl-sr .pl-cce {
-  color: #63a35c;
-  font-weight: bold;
-}
-#playground-container #story-container .pl-ml {
-  color: #693a17;
-}
-#playground-container #story-container .pl-mh,
-#playground-container #story-container .pl-mh .pl-en,
-#playground-container #story-container .pl-ms {
-  color: #1d3e81;
-  font-weight: bold;
-}
-#playground-container #story-container .pl-mq {
-  color: #008080;
-}
-#playground-container #story-container .pl-mi {
-  color: #333;
-  font-style: italic;
-}
-#playground-container #story-container .pl-mb {
-  color: #333;
-  font-weight: bold;
-}
-#playground-container #story-container .pl-md {
-  background-color: #ffecec;
-  color: #bd2c00;
-}
-#playground-container #story-container .pl-mi1 {
-  background-color: #eaffea;
-  color: #55a532;
-}
-#playground-container #story-container .pl-mdr {
-  color: #795da3;
-  font-weight: bold;
-}
-#playground-container #story-container .pl-mo {
-  color: #1d3e81;
 }
 #playground-container #editor-container {
   width: calc(100% - 360px);
@@ -492,14 +374,16 @@ main #editor-toolbar li:hover {
   flex-direction: column;
 }
 #playground-container #editor-container #monaco-editor-embed {
-  height: 100%;
+  height: calc(100% - 10px);
 }
 #playground-container #editor-container #editor-toolbar {
   height: 3rem;
-  border-bottom: 1px #c4c4c4 solid;
+  border-bottom: 1px var(--border-color) solid;
   margin-right: -2px;
   margin-bottom: 10px;
   position: relative;
+  font-size: 14px;
+  color: var(--text-color);
 }
 #playground-container #editor-container #editor-toolbar ul.right {
   background-color: var(--playground-dropdown-bg);
@@ -509,21 +393,21 @@ main #editor-toolbar li:hover {
 #playground-container .playground-dragbar {
   padding: 3px;
   cursor: col-resize;
-  background-color: var(--playground-dragbar-bg);
   border-left: 1px var(--playground-dragbar-border) solid;
   margin-left: 2px;
 }
 #playground-container .playground-dragbar.left {
   border-left: none;
-  background-color: var(--blue-tinged-bg);
   border-right: 1px var(--playground-dragbar-border) solid;
   margin-left: 0;
 }
 #playground-container .playground-dragbar:hover {
-  background-color: var(--blue-tinged-tinged-strong);
+  background-color: var(--color-highlight-strong);
+  opacity: 0.4;
 }
 #playground-container .playground-dragbar.selected {
-  background-color: var(--blue-tinged-strong);
+  background-color: var(--color-highlight-strong);
+  opacity: 0.4;
 }
 #playground-container .playground-sidebar {
   flex-basis: 320px;
@@ -581,7 +465,7 @@ main #editor-toolbar li:hover {
   .playground-plugin-container
   pre
   code {
-  font-family: var(--code-font);
+  font-family: var(--font-mono);
   font-size: 14px;
   line-height: 19px;
 }
@@ -594,6 +478,9 @@ main #editor-toolbar li:hover {
   overflow-y: hidden;
   padding-bottom: 6px;
   flex-wrap: wrap;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--text-color);
 }
 @media (max-width: 800px) {
   #playground-container .playground-sidebar .playground-plugin-tabview {
@@ -601,13 +488,10 @@ main #editor-toolbar li:hover {
   }
 }
 #playground-container .playground-sidebar .playground-plugin-tabview button {
-  font-family: var(--body-font);
   cursor: pointer;
   margin: 5px 2px;
   margin-top: 14px;
   padding-top: 0px;
-  font-size: 14px;
-  font-weight: 600;
   background: none;
   color: inherit;
   border: none;
@@ -639,14 +523,10 @@ main #editor-toolbar li:hover {
   .playground-sidebar
   .playground-plugin-tabview
   button.active {
-  border-bottom: 1px solid var(--link-color);
+  font-weight: bold;
+  color: #000;
 }
-#playground-container
-  .playground-sidebar
-  .playground-plugin-tabview
-  button:focus {
-  color: var(--link-color);
-}
+
 #playground-container .playground-sidebar .playground-settings-container {
   margin: 0;
 }
@@ -659,6 +539,7 @@ main #editor-toolbar li:hover {
   display: flex;
   border-top: 1px var(--playground-dragbar-border) solid;
   border-bottom: 1px var(--playground-dragbar-border) solid;
+  border-top: 1px solid var(--border-color);
   margin-top: 1px;
   padding: 3px;
   align-items: center;
@@ -666,14 +547,15 @@ main #editor-toolbar li:hover {
 .playground-plugin-container #log-tools svg {
   stroke: var(--text-color);
   cursor: pointer;
-  padding-right: 5px;
+  padding-right: 8px;
 }
 .playground-plugin-container #log-container {
   overflow: auto;
-  font-family: var(--code-font);
+  font-family: var(--font-mono);
   line-height: 1.5rem;
   white-space: pre-wrap;
   height: 95%;
+  font-size: 14px;
 }
 .playground-plugin-container #log-container #log {
   margin-top: 1rem;
@@ -703,7 +585,7 @@ main #editor-toolbar li:hover {
   color: #777;
 }
 .playground-plugin-container div.ast {
-  font-family: var(--code-font);
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   line-height: 0.3rem;
 }
@@ -781,7 +663,7 @@ main #editor-toolbar li:hover {
   content: "-";
 }
 .playground-plugin-container ul.compiler-diagnostics {
-  font-family: var(--code-font);
+  font-family: var(--font-mono);
   margin: 0;
   padding: 0;
 }
@@ -816,9 +698,6 @@ main #editor-toolbar li:hover {
 .playground-plugin-container .playground-options li {
   list-style: none;
   margin-bottom: 1rem;
-}
-.playground-plugin-container .playground-options li span {
-  font-weight: 600;
 }
 .playground-plugin-container .briefly-highlight {
   animation: highlight ease 1s 1;
@@ -877,9 +756,6 @@ input.good {
 #playground-container .playground-plugins label {
   padding-left: 30px;
   padding-right: 10px;
-}
-#playground-container .playground-plugins label span {
-  font-weight: 600;
 }
 
 .custom-modules li a {
@@ -940,7 +816,7 @@ input.good {
   padding: 0;
 }
 #popover-modal textarea {
-  font-family: var(--code-font);
+  font-family: var(--font-mono);
   padding: 8px;
 }
 #popover-modal .close {
@@ -1075,4 +951,8 @@ input.good {
 
 .monaco-list {
   background-color: var(--background-color);
+}
+
+#versions {
+  display: none;
 }

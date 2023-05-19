@@ -67,7 +67,7 @@ const Playground: React.FC<{}> = () => {
     // @ts-ignore - for React-based plugins
     window.reactDOM = ReactDOM
     // @ts-ignore - so that plugins etc can use i18n
-    window.i = i
+    // window.i = i
 
     const getLoaderScript = document.createElement("script")
     getLoaderScript.src = withPrefix(
@@ -201,9 +201,9 @@ const Playground: React.FC<{}> = () => {
           const container = document.getElementById("playground-container")!
           container.style.display = "flex"
           const height = Math.max(window.innerHeight, 600)
-          container.style.height = `${
-            height - Math.round(container.getClientRects()[0].top) - 18
-          }px`
+          // container.style.height = `${
+          //   height - Math.round(container.getClientRects()[0].top) - 18
+          // }px`
 
           const extension = (
             !!params.get("useJavaScript")
@@ -221,14 +221,26 @@ const Playground: React.FC<{}> = () => {
             {
               text:
                 localStorage.getItem("sandbox-history") ||
-                i("play_default_code_sample"),
+                `// Welcome to the DeFi Presets SDK Playground
+// 
+// You could use this for exploring the SDK and composing your role permissions.
+
+import { allow } from 'defi-presets';
+
+// Mix and match the permissions you need
+const permissions = [
+  ...allow.curve
+]
+
+console.log(permissions)
+`,
               domID: "monaco-editor-embed",
               filetype: extension,
               acquireTypes: !localStorage.getItem("disable-ata"),
               supportTwoslashCompilerOptions: true,
               customTypeScriptWorkerPath: workerPath,
               monacoSettings: {
-                fontFamily: "var(--code-font)",
+                fontFamily: "var(--font-mono)",
                 fontLigatures: true,
               },
               compilerOptions: {
@@ -271,191 +283,115 @@ const Playground: React.FC<{}> = () => {
     <div>
       {/** This is the top nav, which is outside of the editor  */}
 
-      <div
-        className="raised"
-        style={{
-          paddingTop: "0",
-          marginTop: "0",
-          marginBottom: "3rem",
-          paddingBottom: "1.5rem",
-        }}
-      >
-        <div id="loader">
-          <div className="lds-grid">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <p id="loading-message" role="status">
-            Downloading TypeScript
-          </p>
+      <div id="loader">
+        <div className="lds-grid">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <div id="playground-container" style={{ display: "none" }}>
-          <div id="editor-container">
-            <div id="story-container" style={{ display: "none" }}></div>
-            <div id="editor-toolbar" className="navbar-sub">
-              <ul>
-                <li id="versions" className="dropdown">
-                  <a
-                    href="#"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="menu"
-                    aria-expanded="false"
-                    aria-controls="versions-dropdown"
-                    id="versions-button"
-                  >
-                    Downloading version... <span className="caret" />
-                  </a>
-                  <ul
-                    className="dropdown-menu versions"
-                    id="versions-dropdown"
-                    aria-labelledby="versions-button"
-                  ></ul>
-                </li>
-                <li>
-                  <a id="run-button" href="#" role="button">
-                    Run
-                  </a>
-                </li>
+        <p id="loading-message" role="status">
+          Initialing playground
+        </p>
+      </div>
+      <div id="playground-container" style={{ display: "none" }}>
+        <div id="editor-container">
+          <div id="story-container" style={{ display: "none" }}></div>
+          <div id="editor-toolbar" className="navbar-sub">
+            <ul>
+              <li id="versions" className="dropdown">
+                <a
+                  href="#"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="menu"
+                  aria-expanded="false"
+                  aria-controls="versions-dropdown"
+                  id="versions-button"
+                >
+                  Downloading version... <span className="caret" />
+                </a>
+                <ul
+                  className="dropdown-menu versions"
+                  id="versions-dropdown"
+                  aria-labelledby="versions-button"
+                ></ul>
+              </li>
+              <li>
+                <a id="run-button" href="#" role="button">
+                  Run
+                </a>
+              </li>
 
-                <li className="dropdown">
-                  <a
-                    href="#"
-                    id="exports-dropdown"
-                    className="dropdown-toggle"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    aria-controls="export-dropdown-menu"
-                  >
-                    Export <span className="caret"></span>
-                  </a>
-                  <ul
-                    className="dropdown-menu"
-                    id="export-dropdown-menu"
-                    aria-labelledby="whatisnew-button"
-                  >
-                    <li>
-                      <a
-                        href="#"
-                        onClick={() => playground.exporter.exportAsTweet()}
-                        aria-label="Tweet link to playground"
-                      >
-                        Tweet link to playground
-                      </a>
-                    </li>
-                    <li role="separator" className="divider"></li>
-                    <li>
-                      <a
-                        href="#"
-                        onClick={(e: any) =>
-                          playground.exporter.copyAsMarkdownIssue(e)
-                        }
-                        aria-label={i("play_export_copy_md")}
-                      >
-                        {i("play_export_copy_md")}
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        onClick={(e: any) => playground.exporter.copyForChat(e)}
-                        aria-label={i("play_export_copy_link")}
-                      >
-                        {i("play_export_copy_link")}
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a
-                        href="#"
-                        onClick={(e: any) =>
-                          playground.exporter.copyForChatWithPreview(e)
-                        }
-                        aria-label={i("play_export_copy_link_preview")}
-                      >
-                        {i("play_export_copy_link_preview")}
-                      </a>
-                    </li>
-                    <li role="separator" className="divider"></li>
-                    <li>
-                      <a
-                        href="#"
-                        onClick={() => playground.exporter.openInTSAST()}
-                        aria-label={i("play_export_tsast")}
-                      >
-                        {i("play_export_tsast")}
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        onClick={() => playground.exporter.openInBugWorkbench()}
-                        aria-label={i("play_export_bugworkbench")}
-                      >
-                        {i("play_export_bugworkbench")}
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        onClick={() => playground.exporter.openInVSCodeDev()}
-                        aria-label={i("play_export_vscode_dev_play")}
-                      >
-                        {i("play_export_vscode_dev_play")}
-                      </a>
-                    </li>
-                    <li role="separator" className="divider"></li>
-                    <li>
-                      <a
-                        href="#"
-                        onClick={() =>
-                          playground.exporter.openProjectInCodeSandbox()
-                        }
-                        aria-label={i("play_export_sandbox")}
-                      >
-                        {i("play_export_sandbox")}
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        onClick={() =>
-                          playground.exporter.openProjectInStackBlitz()
-                        }
-                        aria-label={i("play_export_stackblitz")}
-                      >
-                        {i("play_export_stackblitz")}
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a id="share-button" href="#" role="button">
-                    {i("play_toolbar_share")}
-                  </a>
-                </li>
-              </ul>
+              <li className="dropdown">
+                <a
+                  href="#"
+                  id="exports-dropdown"
+                  className="dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-controls="export-dropdown-menu"
+                >
+                  Export <span className="caret"></span>
+                </a>
+                <ul className="dropdown-menu" id="export-dropdown-menu">
+                  <li>
+                    <a
+                      href="#"
+                      onClick={() => playground.exporter.openInVSCodeDev()}
+                      aria-label="Open in VSCode TS Playground"
+                    >
+                      Open in VSCode TS Playground
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      onClick={() =>
+                        playground.exporter.openProjectInCodeSandbox()
+                      }
+                      aria-label="Open in CodeSandbox"
+                    >
+                      Open in CodeSandbox
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      onClick={() =>
+                        playground.exporter.openProjectInStackBlitz()
+                      }
+                      aria-label="Open in StackBlitz"
+                    >
+                      Open in StackBlitz
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a id="share-button" href="#" role="button">
+                  Share
+                </a>
+              </li>
+            </ul>
 
-              <ul className="right">
-                <li>
-                  <a id="sidebar-toggle" aria-label="Hide Sidebar" href="#">
-                    &#x21E5;
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/** This is the div which monaco is added into - careful, lots of changes happen here at runtime **/}
-            <div id="monaco-editor-embed" />
+            <ul className="right">
+              <li>
+                <a id="sidebar-toggle" aria-label="Hide Sidebar" href="#">
+                  &#x21E5;
+                </a>
+              </li>
+            </ul>
           </div>
+          {/** This is the div which monaco is added into - careful, lots of changes happen here at runtime **/}
+          <div id="monaco-editor-embed" />
         </div>
       </div>
     </div>

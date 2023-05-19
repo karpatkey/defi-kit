@@ -18,6 +18,8 @@
   --green: #54b9a1;
   --orange: #f0b065;
   --red: #df5c64;
+
+  --border-color: rgb(229, 231, 235);
 }
 
 .nx-bg-gray-100 {
