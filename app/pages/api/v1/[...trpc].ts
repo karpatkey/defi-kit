@@ -1,4 +1,9 @@
 import { appRouter } from "@/server/router"
 import { createOpenApiNextHandler } from "trpc-openapi"
 
-export default createOpenApiNextHandler({ router: appRouter })
+export default createOpenApiNextHandler({
+  router: appRouter,
+  onError() {},
+  responseMeta: {},
+  createContext() {},
+})
