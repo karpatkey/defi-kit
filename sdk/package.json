@@ -7,7 +7,13 @@
   "exports": {
     ".": {
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./mainnet": {
+      "require": "./dist/mainnet.js",
+      "import": "./dist/mainnet.mjs",
+      "types": "./dist/mainnet.d.ts"
     }
   },
   "files": [
@@ -16,13 +22,13 @@
   ],
   "scripts": {
     "prepare": "eth-sdk",
-    "build": "rimraf dist && tsup src/index.ts --format esm,cjs",
-    "dev": "tsup src/index.ts --format esm --watch"
+    "build": "rimraf dist && tsup --format esm,cjs",
+    "dev": "tsup --format esm --watch"
   },
   "dependencies": {
     "@dethcrypto/eth-sdk": "^0.3.4",
     "ethers": "^5.7.2",
-    "zodiac-roles-sdk": "^2.0.1"
+    "zodiac-roles-sdk": "^2.0.2"
   },
   "devDependencies": {
     "rimraf": "^5.0.0",

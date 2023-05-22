@@ -1,72 +1,18 @@
-import { PresetAllowEntry } from "zodiac-roles-sdk"
-
-import pools from "./pools"
-import * as regular from "./regular"
-import { Pool } from "./types"
-import { allowZapAdd, allowZapRemove } from "./zap"
+import { MainnetPool } from "./types"
+import mainnetPools from "./pools/mainnet"
 import { NotFoundError } from "../../errors"
+import { deposit, swap } from "./actions"
 
-const depositOnly = (nameOrAddress: Pool["name"] | Pool["address"]) => {
-  const pool = findPool(nameOrAddress)
-
-  const result: PresetAllowEntry[] = []
-  switch (pool.type) {
-    case "regular":
-      result.push(...regular.allowDeposit(pool))
-      break
-    default:
-      throw new Error(`Not yet implemented: ${pool.type}`)
-  }
-
-  if ("zap" in pool) {
-    result.push(...allowZapAdd(pool))
-  }
-
-  return result
+export const mainnet = {
+  deposit: (nameOrAddress: MainnetPool["name"] | MainnetPool["address"]) =>
+    deposit(findMainnetPool(nameOrAddress)),
+  swap: (nameOrAddress: MainnetPool["name"] | MainnetPool["address"]) =>
+    swap(findMainnetPool(nameOrAddress)),
 }
 
-const withdraw = (nameOrAddress: Pool["name"] | Pool["address"]) => {
-  const pool = findPool(nameOrAddress)
-
-  const result: PresetAllowEntry[] = []
-  switch (pool.type) {
-    case "regular":
-      result.push(...regular.allowWithdraw(pool))
-      break
-    default:
-      throw new Error(`Not yet implemented: ${pool.type}`)
-  }
-
-  if ("zap" in pool) {
-    result.push(...allowZapRemove(pool))
-  }
-
-  return result
-}
-
-export const deposit = (nameOrAddress: Pool["name"] | Pool["address"]) => [
-  ...depositOnly(nameOrAddress),
-  ...withdraw(nameOrAddress),
-]
-
-export const swap = (nameOrAddress: Pool["name"] | Pool["address"]) => {
-  const pool = findPool(nameOrAddress)
-
-  const result: PresetAllowEntry[] = []
-  switch (pool.type) {
-    case "regular":
-      result.push(...regular.allowSwap(pool))
-      break
-    default:
-      throw new Error(`Not yet implemented: ${pool.type}`)
-  }
-
-  return result
-}
-
-const findPool = (nameOrAddress: string) => {
+const findMainnetPool = (nameOrAddress: string) => {
   const nameOrAddressLower = nameOrAddress.toLowerCase()
-  const pool = pools.find(
+  const pool = mainnetPools.find(
     (pool) =>
       pool.name.toLowerCase() === nameOrAddressLower ||
       pool.address.toLowerCase() === nameOrAddressLower
