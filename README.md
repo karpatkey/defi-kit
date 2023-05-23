@@ -103,7 +103,7 @@ yarn
 Fetch ABIs and generate types for sdk:
 
 ```
-yarn prepare
+yarn setup
 ```
 
 Start app dev server and watch sources for changes:

@@ -1,5 +1,6 @@
 {
   "name": "defi-presets",
+  "version": "0.1.0",
   "description": "Permission presets for Zodiac Roles covering interactions with DeFi protocols",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -30,7 +31,7 @@
     "README.md"
   ],
   "scripts": {
-    "prepare": "eth-sdk",
+    "setup": "eth-sdk",
     "build": "rimraf dist && tsup --format esm,cjs",
     "dev": "tsup --format esm --watch"
   },
