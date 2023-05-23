@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import ReactDOM from "react-dom"
-import { setupPlayground } from "playground"
+import { getExampleSourceCode, setupPlayground } from "playground"
 // import * as main from "monaco-editor"
 
 // import { RenderExamples } from "../components/ShowExamples"
@@ -221,19 +221,7 @@ const Playground: React.FC<{}> = () => {
             {
               text:
                 localStorage.getItem("sandbox-history") ||
-                `// Welcome to the DeFi Presets SDK Playground
-// 
-// You could use this for exploring the SDK and composing your role permissions.
-
-import { allow } from 'defi-presets';
-
-// Mix and match the permissions you need
-const permissions = [
-  ...allow.curve
-]
-
-console.log(permissions)
-`,
+                getExampleSourceCode("default"),
               domID: "monaco-editor-embed",
               filetype: extension,
               acquireTypes: !localStorage.getItem("disable-ata"),
@@ -375,6 +363,50 @@ console.log(permissions)
                   </li>
                 </ul>
               </li>
+
+              <li className="dropdown">
+                <a
+                  href="#"
+                  id="exports-dropdown"
+                  className="dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-controls="export-dropdown-menu"
+                >
+                  Examples <span className="caret"></span>
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a
+                      href="#example/default"
+                      onClick={(ev) => {
+                        ev.preventDefault()
+                        ;(window as any).disableSaveOnType = true
+                        window.location.hash = "#example/default"
+                        location.reload()
+                      }}
+                    >
+                      Compose presets and derive permissions
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#example/apply"
+                      onClick={(ev) => {
+                        ev.preventDefault()
+                        ;(window as any).disableSaveOnType = true
+                        window.location.hash = "#example/apply"
+                        location.reload()
+                      }}
+                    >
+                      Apply permissions to a role
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
               <li>
                 <a id="share-button" href="#" role="button">
                   Share
