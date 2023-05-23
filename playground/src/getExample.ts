@@ -7,7 +7,7 @@ export const getExampleSourceCode = (exampleName: string) => {
   return `// Welcome to the DeFi Presets SDK Playground
 // You can use this for exploring the SDK and composing your role permissions.
 
-import { allow, apply, encodeBytes32String } from 'defi-presets'
+import { allow, apply, encodeBytes32String } from 'defi-presets/mainnet'
 
 // Mix and match the permissions you need
 const permissions = [

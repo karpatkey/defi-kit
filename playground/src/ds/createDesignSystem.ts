@@ -58,6 +58,8 @@ export const createDesignSystem = (sandbox: Sandbox) => {
       pos: { start: number; end: number },
       config: { type: "error" | "info" }
     ) => {
+      return
+
       element.onmouseenter = () => {
         if (!decorationLock) {
           const model = sandbox.getModel()
@@ -66,7 +68,12 @@ export const createDesignSystem = (sandbox: Sandbox) => {
 
           decorations = sandbox.editor.deltaDecorations(decorations, [
             {
-              range: new sandbox.monaco.Range(start.lineNumber, start.column, end.lineNumber, end.column),
+              range: new sandbox.monaco.Range(
+                start.lineNumber,
+                start.column,
+                end.lineNumber,
+                end.column
+              ),
               options: { inlineClassName: "highlight-" + config.type },
             },
           ])
@@ -110,7 +117,9 @@ export const createDesignSystem = (sandbox: Sandbox) => {
       input.type = "checkbox"
       input.id = key
 
-      input.checked = invertedLogic ? !localStorage.getItem(key) : !!localStorage.getItem(key)
+      input.checked = invertedLogic
+        ? !localStorage.getItem(key)
+        : !!localStorage.getItem(key)
 
       input.onchange = () => {
         if (input.checked) {
@@ -137,7 +146,10 @@ export const createDesignSystem = (sandbox: Sandbox) => {
       return li
     }
 
-    const button = (settings: { label: string; onclick?: (ev: MouseEvent) => void }) => {
+    const button = (settings: {
+      label: string
+      onclick?: (ev: MouseEvent) => void
+    }) => {
       const join = document.createElement("input")
       join.type = "button"
       join.value = settings.label
@@ -183,7 +195,7 @@ export const createDesignSystem = (sandbox: Sandbox) => {
 
       /** Support left/right in the tab bar for accessibility */
       let tabFocus = 0
-      tabBar.addEventListener("keydown", e => {
+      tabBar.addEventListener("keydown", (e) => {
         const tabs = tabBar.querySelectorAll('[role="tab"]')
         // Move right
         if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
@@ -219,15 +231,18 @@ export const createDesignSystem = (sandbox: Sandbox) => {
       return element
     }
 
-    const listDiags = (model: import("monaco-editor").editor.ITextModel, diags: DiagnosticRelatedInformation[]) => {
+    const listDiags = (
+      model: import("monaco-editor").editor.ITextModel,
+      diags: DiagnosticRelatedInformation[]
+    ) => {
       const errorUL = document.createElement("ul")
       errorUL.className = "compiler-diagnostics"
-      errorUL.onmouseleave = ev => {
+      errorUL.onmouseleave = (ev) => {
         clearDeltaDecorators()
       }
       container.appendChild(errorUL)
 
-      diags.forEach(diag => {
+      diags.forEach((diag) => {
         const li = document.createElement("li")
         li.classList.add("diagnostic")
         switch (diag.category) {
@@ -248,12 +263,20 @@ export const createDesignSystem = (sandbox: Sandbox) => {
         if (typeof diag === "string") {
           li.textContent = diag
         } else {
-          li.textContent = sandbox.ts.flattenDiagnosticMessageText(diag.messageText, "\n", 4)
+          li.textContent = sandbox.ts.flattenDiagnosticMessageText(
+            diag.messageText,
+            "\n",
+            4
+          )
         }
         errorUL.appendChild(li)
 
         if (diag.start && diag.length) {
-          addEditorHoverToElement(li, { start: diag.start, end: diag.start + diag.length }, { type: "error" })
+          addEditorHoverToElement(
+            li,
+            { start: diag.start, end: diag.start + diag.length },
+            { type: "error" }
+          )
         }
 
         li.onclick = () => {
@@ -264,8 +287,16 @@ export const createDesignSystem = (sandbox: Sandbox) => {
             const end = model.getPositionAt(diag.start + diag.length)
             decorations = sandbox.editor.deltaDecorations(decorations, [
               {
-                range: new sandbox.monaco.Range(start.lineNumber, start.column, end.lineNumber, end.column),
-                options: { inlineClassName: "error-highlight", isWholeLine: true },
+                range: new sandbox.monaco.Range(
+                  start.lineNumber,
+                  start.column,
+                  end.lineNumber,
+                  end.column
+                ),
+                options: {
+                  inlineClassName: "error-highlight",
+                  isWholeLine: true,
+                },
               },
             ])
 
@@ -280,11 +311,17 @@ export const createDesignSystem = (sandbox: Sandbox) => {
       return errorUL
     }
 
-    const showOptionList = (options: LocalStorageOption[], style: OptionsListConfig) => {
+    const showOptionList = (
+      options: LocalStorageOption[],
+      style: OptionsListConfig
+    ) => {
       const ol = document.createElement("ol")
-      ol.className = style.style === "separated" ? "playground-options" : "playground-options tight"
+      ol.className =
+        style.style === "separated"
+          ? "playground-options"
+          : "playground-options tight"
 
-      options.forEach(option => {
+      options.forEach((option) => {
         if (style.style === "rows") option.oneline = true
         if (style.requireRestart) option.requireRestart = true
 
@@ -295,7 +332,10 @@ export const createDesignSystem = (sandbox: Sandbox) => {
       container.appendChild(ol)
     }
 
-    const createASTTree = (node: Node, settings?: { closedByDefault?: true }) => {
+    const createASTTree = (
+      node: Node,
+      settings?: { closedByDefault?: true }
+    ) => {
       const autoOpen = !settings || !settings.closedByDefault
 
       const div = document.createElement("div")
@@ -311,7 +351,11 @@ export const createDesignSystem = (sandbox: Sandbox) => {
 
       type NodeInfo = ReturnType<typeof infoForNode>
 
-      const renderLiteralField = (key: string, value: string, info: NodeInfo) => {
+      const renderLiteralField = (
+        key: string,
+        value: string,
+        info: NodeInfo
+      ) => {
         const li = document.createElement("li")
         const typeofSpan = `ast-node-${typeof value}`
         let suffix = ""
@@ -330,7 +374,11 @@ export const createDesignSystem = (sandbox: Sandbox) => {
         return li
       }
 
-      const renderManyChildren = (key: string, nodes: Node[], depth: number) => {
+      const renderManyChildren = (
+        key: string,
+        nodes: Node[],
+        depth: number
+      ) => {
         const childers = document.createElement("div")
         childers.classList.add("ast-children")
 
@@ -338,7 +386,7 @@ export const createDesignSystem = (sandbox: Sandbox) => {
         li.innerHTML = `${key}: [<br/>`
         childers.appendChild(li)
 
-        nodes.forEach(node => {
+        nodes.forEach((node) => {
           renderItem(childers, node, depth + 1)
         })
 
@@ -348,7 +396,11 @@ export const createDesignSystem = (sandbox: Sandbox) => {
         return childers
       }
 
-      const renderItem = (parentElement: Element, node: Node, depth: number) => {
+      const renderItem = (
+        parentElement: Element,
+        node: Node,
+        depth: number
+      ) => {
         const itemDiv = document.createElement("div")
         parentElement.appendChild(itemDiv)
         itemDiv.className = "ast-tree-start"
@@ -368,22 +420,36 @@ export const createDesignSystem = (sandbox: Sandbox) => {
         a.classList.add("node-name")
         a.textContent = info.name
         itemDiv.appendChild(a)
-        a.onclick = _ => a.parentElement!.classList.toggle("open")
-        addEditorHoverToElement(a, { start: node.pos, end: node.end }, { type: "info" })
+        a.onclick = (_) => a.parentElement!.classList.toggle("open")
+        addEditorHoverToElement(
+          a,
+          { start: node.pos, end: node.end },
+          { type: "info" }
+        )
 
         const properties = document.createElement("ul")
         properties.className = "ast-tree"
         itemDiv.appendChild(properties)
 
-        Object.keys(node).forEach(field => {
+        Object.keys(node).forEach((field) => {
           if (typeof field === "function") return
           if (field === "parent" || field === "flowNode") return
 
           const value = (node as any)[field]
-          if (typeof value === "object" && Array.isArray(value) && value[0] && "pos" in value[0] && "end" in value[0]) {
+          if (
+            typeof value === "object" &&
+            Array.isArray(value) &&
+            value[0] &&
+            "pos" in value[0] &&
+            "end" in value[0]
+          ) {
             //  Is an array of Nodes
             properties.appendChild(renderManyChildren(field, value, depth))
-          } else if (typeof value === "object" && "pos" in value && "end" in value) {
+          } else if (
+            typeof value === "object" &&
+            "pos" in value &&
+            "end" in value
+          ) {
             // Is a single child property
             properties.appendChild(renderSingleChild(field, value, depth))
           } else {

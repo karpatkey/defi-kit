@@ -636,7 +636,7 @@ export const setupPlayground = (
       }
     })
   }
-  console.log(location.hash.startsWith("#example"))
+
   // Support grabbing examples from the location hash
   if (location.hash.startsWith("#example")) {
     const exampleName = location.hash.replace("#example/", "").trim()
@@ -707,12 +707,12 @@ export const setupPlayground = (
 
   console.log(`Using TypeScript ${window.ts.version}`)
 
-  console.log("Available globals:")
-  console.log("\twindow.ts", window.ts)
-  console.log("\twindow.sandbox", window.sandbox)
-  console.log("\twindow.playground", window.playground)
-  console.log("\twindow.react", window.react)
-  console.log("\twindow.reactDOM", window.reactDOM)
+  // console.log("Available globals:")
+  // console.log("\twindow.ts", window.ts)
+  // console.log("\twindow.sandbox", window.sandbox)
+  // console.log("\twindow.playground", window.playground)
+  // console.log("\twindow.react", window.react)
+  // console.log("\twindow.reactDOM", window.reactDOM)
 
   /** The plugin system */
   const activateExternalPlugin = (

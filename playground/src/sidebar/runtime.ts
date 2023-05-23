@@ -1,4 +1,5 @@
 import * as defiPresetsSdk from "defi-presets"
+import * as defiPresetsSdkMainnet from "defi-presets/mainnet"
 import { PlaygroundPlugin, PluginFactory } from ".."
 import { createUI } from "../createUI"
 import { localize } from "../localizeWithFallback"
@@ -11,6 +12,7 @@ const cancelButtonSVG = `
 declare global {
   interface Window {
     defiPresetsSdk?: typeof defiPresetsSdk
+    defiPresetsSdkMainnet?: typeof defiPresetsSdkMainnet
   }
 }
 
@@ -160,6 +162,7 @@ function rewireLoggingToElement(
       const safeJS = sanitizeJS(js)
       // make sdk globally available so we can use it in the eval()
       window.defiPresetsSdk = defiPresetsSdk
+      window.defiPresetsSdkMainnet = defiPresetsSdkMainnet
       eval(safeJS)
     } catch (error) {
       console.error("Executed JavaScript Failed:")
@@ -275,6 +278,7 @@ function sanitizeJS(code: string) {
   return code
     .replace(`require("reflect-metadata")`, "")
     .replace(`require("defi-presets")`, "window.defiPresetsSdk")
+    .replace(`require("defi-presets/mainnet")`, "window.defiPresetsSdkMainnet")
 }
 
 function htmlEscape(str: string) {
