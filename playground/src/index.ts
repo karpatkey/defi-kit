@@ -85,6 +85,8 @@ interface PlaygroundConfig {
   supportCustomPlugins: boolean
 }
 
+export { getExampleSourceCode }
+
 export const setupPlayground = (
   sandbox: Sandbox,
   monaco: Monaco,
@@ -257,7 +259,8 @@ export const setupPlayground = (
   }
 
   sandbox.editor.onDidBlurEditorText(() => {
-    const alwaysUpdateURL = !localStorage.getItem("disable-save-on-type")
+    const alwaysUpdateURL =
+      !localStorage.getItem("disable-save-on-type") || !window.disableSaveOnType
     if (alwaysUpdateURL) {
       if (suppressNextTextChangeForHashChange) {
         suppressNextTextChangeForHashChange = false
@@ -285,7 +288,8 @@ export const setupPlayground = (
     if (model && plugin.modelChangedDebounce)
       plugin.modelChangedDebounce(sandbox, model, container)
 
-    const alwaysUpdateURL = !localStorage.getItem("disable-save-on-type")
+    const alwaysUpdateURL =
+      !localStorage.getItem("disable-save-on-type") || !window.disableSaveOnType
     if (alwaysUpdateURL) {
       const newURL = sandbox.createURLQueryWithCompilerOptions(sandbox)
       window.history.replaceState({}, "", newURL)
@@ -319,9 +323,9 @@ export const setupPlayground = (
       )
     }
   })
-
   const skipInitiallySettingHash =
     document.location.hash && document.location.hash.includes("example/")
+
   if (!skipInitiallySettingHash) playgroundDebouncedMainFunction()
 
   // Setup working with the existing UI, once it's loaded
@@ -632,41 +636,14 @@ export const setupPlayground = (
       }
     })
   }
-
+  console.log(location.hash.startsWith("#example"))
   // Support grabbing examples from the location hash
   if (location.hash.startsWith("#example")) {
     const exampleName = location.hash.replace("#example/", "").trim()
     sandbox.config.logger.log("Loading example:", exampleName)
-    getExampleSourceCode(config.prefix, config.lang, exampleName).then((ex) => {
-      if (ex.example && ex.code) {
-        const { example, code } = ex
-
-        // Update the localstorage showing that you've seen this page
-        if (localStorage) {
-          const seenText = localStorage.getItem("examples-seen") || "{}"
-          const seen = JSON.parse(seenText)
-          seen[example.id] = example.hash
-          localStorage.setItem("examples-seen", JSON.stringify(seen))
-        }
-
-        const allLinks = document.querySelectorAll("example-link")
-        // @ts-ignore
-        for (const link of allLinks) {
-          if (link.textContent === example.title) {
-            link.classList.add("highlight")
-          }
-        }
-
-        document.title = "TypeScript Playground - " + example.title
-        suppressNextTextChangeForHashChange = true
-        sandbox.setText(code)
-      } else {
-        suppressNextTextChangeForHashChange = true
-        sandbox.setText(
-          "// There was an issue getting the example, bad URL? Check the console in the developer tools"
-        )
-      }
-    })
+    const code = getExampleSourceCode(exampleName)
+    suppressNextTextChangeForHashChange = true
+    sandbox.setText(code)
   }
 
   // Set the errors number in the sidebar tabs

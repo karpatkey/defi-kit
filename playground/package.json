@@ -9,7 +9,8 @@
     "build"
   ],
   "scripts": {
-    "build": "rimraf build && tsc"
+    "build": "rimraf build && tsc",
+    "dev": "tsc --watch"
   },
   "dependencies": {
     "@typescript/sandbox": "0.1.0",

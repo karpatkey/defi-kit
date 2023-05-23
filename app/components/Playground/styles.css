@@ -267,23 +267,19 @@ button.examples-close {
   right: 20px;
 }
 
-main #editor-toolbar > ul > li {
+#editor-toolbar > ul > li {
   margin-left: 0px;
   margin-bottom: 0px;
   position: relative;
 }
-main #editor-toolbar > ul > li > a {
+#editor-toolbar > ul > li > a {
   padding-top: 0.8rem;
 }
-@media (prefers-color-scheme: dark) {
-  main #editor-toolbar > ul > li > a:hover {
-    border-bottom: 1px solid white;
-  }
-}
-main #editor-toolbar > ul > li .dropdown-menu {
+
+#editor-toolbar > ul > li .dropdown-menu {
   left: 4px;
 }
-main #editor-toolbar li:hover {
+#editor-toolbar li:hover {
   background-color: var(--playground-toolbar-hover-bg);
 }
 

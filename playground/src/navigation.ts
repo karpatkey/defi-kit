@@ -6,8 +6,13 @@ type StoryContent =
 
 import type { Sandbox } from "@typescript/sandbox"
 
+declare const window: any
+
 /** Use the handbook TOC which is injected into the globals to create a sidebar  */
-export const showNavForHandbook = (sandbox: Sandbox, escapeFunction: () => void) => {
+export const showNavForHandbook = (
+  sandbox: Sandbox,
+  escapeFunction: () => void
+) => {
   // @ts-ignore
   const content = window.playgroundHandbookTOC.docs
 
@@ -25,7 +30,7 @@ export const showNavForHandbook = (sandbox: Sandbox, escapeFunction: () => void)
   if (nav) nav.classList.add("handbook")
 }
 
-/** 
+/**
  * Hides the nav and the close button, specifically only when we have
  * the handbook open and not when a gist is open
  */
@@ -37,7 +42,9 @@ export const hideNavForHandbook = (sandbox: Sandbox) => {
   showCode(sandbox)
   nav.style.display = "none"
 
-  const leftDrag = document.querySelector(".playground-dragbar.left") as HTMLElement
+  const leftDrag = document.querySelector(
+    ".playground-dragbar.left"
+  ) as HTMLElement
   if (leftDrag) leftDrag.style.display = "none"
 
   const story = document.getElementById("editor-container")
@@ -45,11 +52,16 @@ export const hideNavForHandbook = (sandbox: Sandbox) => {
   if (story && possibleButtonToRemove) story.removeChild(possibleButtonToRemove)
 }
 
-/** 
+/**
  * Assumes a nav has been set up already, and then fills out the content of the nav bar
  * with clickable links for each potential story.
  */
-const updateNavWithStoryContent = (title: string, storyContent: StoryContent[], prefix: string, sandbox: Sandbox) => {
+const updateNavWithStoryContent = (
+  title: string,
+  storyContent: StoryContent[],
+  prefix: string,
+  sandbox: Sandbox
+) => {
   const nav = document.getElementById("navigation-container")
   if (!nav) return
 
@@ -84,7 +96,7 @@ const updateNavWithStoryContent = (title: string, storyContent: StoryContent[], 
         a.innerHTML = `${logo}${element.title}`
         a.href = `/play#${prefix}-${i}`
 
-        a.onclick = e => {
+        a.onclick = (e) => {
           e.preventDefault()
 
           // Note: I'm not sure why this is needed?
@@ -99,17 +111,19 @@ const updateNavWithStoryContent = (title: string, storyContent: StoryContent[], 
           switch (element.type) {
             case "code":
               setCode(element.code, sandbox)
-              break;
+              break
             case "html":
               setStory(element.html, sandbox)
-              break;
+              break
             case "href":
               setStoryViaHref(element.href, sandbox)
-              break;
+              break
           }
 
           // Set the URL after selecting
-          const alwaysUpdateURL = !localStorage.getItem("disable-save-on-type")
+          const alwaysUpdateURL =
+            !localStorage.getItem("disable-save-on-type") ||
+            !window.disableSaveOnType
           if (alwaysUpdateURL) {
             location.hash = `${prefix}-${i}`
           }
@@ -139,23 +153,27 @@ const updateNavWithStoryContent = (title: string, storyContent: StoryContent[], 
   }
 }
 
-// Use fetch to grab the HTML from a URL, with a special case 
+// Use fetch to grab the HTML from a URL, with a special case
 // when that is a gatsby URL where we pull out the important
 // HTML from inside the __gatsby id.
 const setStoryViaHref = (href: string, sandbox: Sandbox) => {
-  fetch(href).then(async req => {
+  fetch(href).then(async (req) => {
     if (req.ok) {
       const text = await req.text()
 
       if (text.includes("___gatsby")) {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(text, "text/html");
+        const parser = new DOMParser()
+        const doc = parser.parseFromString(text, "text/html")
 
-        const gatsby = doc.getElementById('___gatsby')
+        const gatsby = doc.getElementById("___gatsby")
         if (gatsby) {
           gatsby.id = "___inner_g"
-          if (gatsby.firstChild && (gatsby.firstChild as HTMLElement).id === "gatsby-focus-wrapper") {
-            (gatsby.firstChild as HTMLElement).id = "gatsby-playground-handbook-inner"
+          if (
+            gatsby.firstChild &&
+            (gatsby.firstChild as HTMLElement).id === "gatsby-focus-wrapper"
+          ) {
+            ;(gatsby.firstChild as HTMLElement).id =
+              "gatsby-playground-handbook-inner"
           }
           setStory(gatsby, sandbox)
         }
@@ -163,18 +181,24 @@ const setStoryViaHref = (href: string, sandbox: Sandbox) => {
       }
 
       if (document.location.host === "localhost:8000") {
-        setStory("<p>Because the gatsby dev server uses JS to build your pages, and not statically, the page will not load during dev. It does work in prod though - use <code>yarn build-site</code> to test locally with a static build.</p>", sandbox)
+        setStory(
+          "<p>Because the gatsby dev server uses JS to build your pages, and not statically, the page will not load during dev. It does work in prod though - use <code>yarn build-site</code> to test locally with a static build.</p>",
+          sandbox
+        )
       } else {
         setStory(text, sandbox)
       }
     } else {
-      setStory(`<p>Failed to load the content at ${href}. Reason: ${req.status} ${req.statusText}</p>`, sandbox)
+      setStory(
+        `<p>Failed to load the content at ${href}. Reason: ${req.status} ${req.statusText}</p>`,
+        sandbox
+      )
     }
   })
 }
 
-/** 
- * Passing in either a root HTML element or the HTML for the story, present a 
+/**
+ * Passing in either a root HTML element or the HTML for the story, present a
  * markdown doc as a 'story' inside the playground.
  */
 const setStory = (html: string | HTMLElement, sandbox: Sandbox) => {
@@ -204,17 +228,22 @@ const setStory = (html: string | HTMLElement, sandbox: Sandbox) => {
 
     // overwrite playground links
     if (a.hash.includes("#code/")) {
-      a.onclick = e => {
+      a.onclick = (e) => {
         const code = a.hash.replace("#code/", "").trim()
         let userCode = sandbox.lzstring.decompressFromEncodedURIComponent(code)
         // Fallback incase there is an extra level of decoding:
         // https://gitter.im/Microsoft/TypeScript?at=5dc478ab9c39821509ff189a
-        if (!userCode) userCode = sandbox.lzstring.decompressFromEncodedURIComponent(decodeURIComponent(code))
+        if (!userCode)
+          userCode = sandbox.lzstring.decompressFromEncodedURIComponent(
+            decodeURIComponent(code)
+          )
         if (userCode) setCode(userCode, sandbox)
 
         e.preventDefault()
 
-        const alreadySelected = document.getElementById("navigation-container")!.querySelector("li.selected") as HTMLElement
+        const alreadySelected = document
+          .getElementById("navigation-container")!
+          .querySelector("li.selected") as HTMLElement
         if (alreadySelected) alreadySelected.classList.remove("selected")
         return false
       }
@@ -222,13 +251,14 @@ const setStory = (html: string | HTMLElement, sandbox: Sandbox) => {
 
     // overwrite gist/handbook links
     else if (a.hash.includes("#handbook")) {
-      a.onclick = e => {
+      a.onclick = (e) => {
         const index = Number(a.hash.split("-")[1])
         const nav = document.getElementById("navigation-container")
         if (!nav) return
         const ul = nav.getElementsByTagName("ul").item(0)!
 
-        const targetedLi = ul.children.item(Number(index) || 0) || ul.children.item(0)
+        const targetedLi =
+          ul.children.item(Number(index) || 0) || ul.children.item(0)
         if (targetedLi) {
           const a = targetedLi.getElementsByTagName("a").item(0)
           // @ts-ignore
