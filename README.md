@@ -39,7 +39,7 @@ GET https://presets.karpatkey.com/api/v1/<chain>:<address>/<role>/<allow|revoke>
 - `address`: address of the Roles mod
 - `role`: ID of the role to update
 - `protocol`: protocol name
-- `action`: `swap`/`deposit`/`stake`/`borrow`/`harvest`
+- `action`: `deposit`/`stake`/`borrow`/`claim`/`swap`
 - `query`: action specific query parameters
 
 #### Responses
@@ -70,21 +70,27 @@ This JSON can be uploaded to the Safe Transaction Builder app for execution.
 
 #### Actions
 
+One of the main goals of the project is systematizing the DeFi ecosystem using a set of standard actions.
+
 ##### `deposit`
 
 Deposit and withdraw liquidity from AMM pools or money markets
+
+##### `borrow`
+
+Borrow assets against collateral deposited on money markets
 
 ##### `stake`
 
 Stake LP tokens
 
-##### `borrow`
-
-Borrow assets against collateral on money markets
-
-##### `harvest`
+##### `claim`
 
 Claim rewards from staking
+
+##### `swap`
+
+Swap tokens in exchange
 
 ## Contribute
 

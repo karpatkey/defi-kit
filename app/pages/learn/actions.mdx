@@ -1,24 +1,28 @@
 # Actions
 
-A set of standard actions.
+One of the main goals of the project is systematizing the DeFi ecosystem using a set of standard actions.
 
 #### `deposit`
 
-Deposing and withdraing funds into a money market or AMM pool.
+Deposit to and withdraw funds from a money market or AMM pool.
 
 ##### Parameters
 
-| Name     | Type   | Description                                                          |
-| :------- | :----- | :------------------------------------------------------------------- |
-| `target` | string | The ID of the money market or AMM pool, ususally a contract address. |
+| Name     | Type   | Description                                                                      |
+| :------- | :----- | :------------------------------------------------------------------------------- |
+| `target` | string | The ID of the money market or AMM pool, can be a contract address or pool label. |
+
+#### `borrow`
+
+Borrow assets against collateral deposited on money markets.
 
 #### `stake`
 
 Stake and unstake LP or deposit tokens into a vault.
 
-#### `harvest`
+#### `claim`
 
-Harvest rewards from a vault.
+Claim rewards from staking and farming.
 
 #### `swap`
 
