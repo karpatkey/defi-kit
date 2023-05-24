@@ -41,7 +41,7 @@
     "zodiac-roles-sdk": "^2.0.2"
   },
   "devDependencies": {
-    "rimraf": "^5.0.0",
+    "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"

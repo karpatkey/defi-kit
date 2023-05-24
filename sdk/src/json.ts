@@ -14,7 +14,6 @@ export const createExportJson = (chainId: ChainId) => {
     meta?: {
       name: string
       description: string
-      txBuilderVersion: string
     }
   ) {
     const transactions = calls.map((data) => ({
@@ -29,7 +28,7 @@ export const createExportJson = (chainId: ChainId) => {
       meta: {
         name: meta?.name || "Update role permissions",
         description: meta?.description || "",
-        txBuilderVersion: meta?.txBuilderVersion || "1.13.3",
+        txBuilderVersion: "1.13.3",
       },
       createdAt: Date.now(),
       transactions,

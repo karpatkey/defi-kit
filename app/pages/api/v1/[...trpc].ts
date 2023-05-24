@@ -4,6 +4,6 @@ import { createOpenApiNextHandler } from "trpc-openapi"
 export default createOpenApiNextHandler({
   router: appRouter,
   onError() {},
-  responseMeta: {},
+  responseMeta() {},
   createContext() {},
 })
