@@ -562,10 +562,11 @@ button.examples-close {
 .playground-plugin-container #log-container .log-error {
   color: red;
 }
-.playground-plugin-container #log-container .log-info {
-  color: skyblue;
-}
+.playground-plugin-container #log-container .log-info,
 .playground-plugin-container #log-container .log-log {
+  color: dodgerblue;
+}
+.playground-plugin-container #log-container .log-debug {
   color: silver;
 }
 .playground-plugin-container #log-container .log-warn,

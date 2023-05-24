@@ -1,8 +1,7 @@
-import * as defiPresetsSdk from "defi-presets"
-import * as defiPresetsSdkMainnet from "defi-presets/mainnet"
 import { PlaygroundPlugin, PluginFactory } from ".."
 import { createUI } from "../createUI"
 import { localize } from "../localizeWithFallback"
+import { System } from "./system"
 
 let allLogs: string[] = []
 let addedClearAction = false
@@ -11,8 +10,7 @@ const cancelButtonSVG = `
 `
 declare global {
   interface Window {
-    defiPresetsSdk?: typeof defiPresetsSdk
-    defiPresetsSdkMainnet?: typeof defiPresetsSdkMainnet
+    System?: typeof System
   }
 }
 
@@ -159,13 +157,10 @@ function rewireLoggingToElement(
     replace["clear"] = clearLogs
     const console = Object.assign({}, rawConsole, replace)
     try {
-      const safeJS = sanitizeJS(js)
       // make sdk globally available so we can use it in the eval()
-      window.defiPresetsSdk = defiPresetsSdk
-      window.defiPresetsSdkMainnet = defiPresetsSdkMainnet
-      eval(safeJS)
+      window.System = System
+      eval(js)
     } catch (error) {
-      console.error("Executed JavaScript Failed:")
       console.error(error)
 
       // if (error instanceof SyntaxError && /\bexport\b/u.test(error.message)) {
@@ -270,15 +265,6 @@ function rewireLoggingToElement(
 
     return result
   }
-}
-
-// The reflect-metadata runtime is available, so allow that to go through
-// Replace sdk imports with the global window reference
-function sanitizeJS(code: string) {
-  return code
-    .replace(`require("reflect-metadata")`, "")
-    .replace(`require("defi-presets")`, "window.defiPresetsSdk")
-    .replace(`require("defi-presets/mainnet")`, "window.defiPresetsSdkMainnet")
 }
 
 function htmlEscape(str: string) {

@@ -232,7 +232,8 @@ const Playground: React.FC<{}> = () => {
                 fontLigatures: true,
               },
               compilerOptions: {
-                module: main.languages.typescript.ModuleKind.CommonJS,
+                module: main.languages.typescript.ModuleKind.System,
+                target: main.languages.typescript.ScriptTarget.ES2017,
               },
             },
             main,

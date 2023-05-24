@@ -67,10 +67,12 @@ export const createExporter = (
 
     const opts = {
       ...restOptions,
-      ...(targetText && { target: targetText }),
+      // ...(targetText && { target: targetText }),
       ...(jsxText && { jsx: jsxText }),
-      ...(moduleKindText && { module: moduleKindText }),
-      moduleResolution: moduleResolutionText,
+      // ...(moduleKindText && { module: moduleKindText }),
+      // moduleResolution: moduleResolutionText,
+      target: "es2017",
+      module: "esnext",
     }
 
     const diffFromTSCDefaults = Object.entries(opts).reduce(
@@ -141,7 +143,12 @@ export const createExporter = (
 
   const typescriptVersion = sandbox.ts.version
   // prettier-ignore
-  const stringifiedCompilerOptions = JSON.stringify({ compilerOptions: getValidCompilerOptions(sandbox.getCompilerOptions()) }, null, '  ')
+  console.log('okoko', getValidCompilerOptions(sandbox.getCompilerOptions()))
+  const stringifiedCompilerOptions = JSON.stringify(
+    { compilerOptions: getValidCompilerOptions(sandbox.getCompilerOptions()) },
+    null,
+    "  "
+  )
 
   // TODO: pull deps
   function openProjectInStackBlitz() {

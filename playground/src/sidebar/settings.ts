@@ -9,7 +9,8 @@ import { LocalStorageOption } from "../ds/createDesignSystem"
 
 export const getPlaygroundPlugins = (): PluginFactory[] => {
   const defaults = []
-  // if (!localStorage.getItem("disable-sidebar-js")) defaults.push(compiledJSPlugin)
+  // if (!localStorage.getItem("disable-sidebar-js"))
+  //   defaults.push(compiledJSPlugin)
   // if (!localStorage.getItem("disable-sidebar-dts")) defaults.push(showDTSPlugin)
   if (!localStorage.getItem("disable-sidebar-err")) defaults.push(showErrors)
   if (!localStorage.getItem("disable-sidebar-run")) defaults.push(runPlugin)
