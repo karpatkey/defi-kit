@@ -33,3 +33,7 @@
   font-family: var(--font-mono) !important;
   font-weight: 600 !important;
 }
+
+.swagger-ui pre code {
+  display: inline;
+}

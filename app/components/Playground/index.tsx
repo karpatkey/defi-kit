@@ -331,7 +331,7 @@ const Playground: React.FC<{}> = () => {
                   Export <span className="caret"></span>
                 </a>
                 <ul className="dropdown-menu" id="export-dropdown-menu">
-                  <li>
+                  {/* <li>
                     <a
                       href="#"
                       onClick={() => playground.exporter.openInVSCodeDev()}
@@ -339,7 +339,7 @@ const Playground: React.FC<{}> = () => {
                     >
                       Open in VSCode TS Playground
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <a
                       href="#"

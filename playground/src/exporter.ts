@@ -142,8 +142,6 @@ export const createExporter = (
   }
 
   const typescriptVersion = sandbox.ts.version
-  // prettier-ignore
-  console.log('okoko', getValidCompilerOptions(sandbox.getCompilerOptions()))
   const stringifiedCompilerOptions = JSON.stringify(
     { compilerOptions: getValidCompilerOptions(sandbox.getCompilerOptions()) },
     null,
@@ -162,6 +160,7 @@ export const createExporter = (
       },
       dependencies: {
         typescript: typescriptVersion,
+        "defi-presets": "latest",
       },
     }
     const form = createProjectForm(project)
@@ -209,6 +208,7 @@ export const createExporter = (
           description: "TypeScript playground exported Sandbox",
           dependencies: {
             typescript: typescriptVersion,
+            "defi-presets": "latest",
           },
         },
       },
