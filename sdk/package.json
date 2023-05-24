@@ -1,6 +1,6 @@
 {
   "name": "defi-presets",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Permission presets for Zodiac Roles covering interactions with DeFi protocols",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -10,19 +10,19 @@
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
     },
-    "./mainnet": {
-      "require": "./dist/mainnet.js",
-      "import": "./dist/mainnet.mjs",
-      "types": "./dist/mainnet.d.ts"
+    "./eth": {
+      "require": "./dist/eth.js",
+      "import": "./dist/eth.mjs",
+      "types": "./dist/eth.d.ts"
     }
   },
   "typesVersions": {
     "*": {
       "index": [
-        "./dist/mainnet.d.ts"
+        "./dist/eth.d.ts"
       ],
-      "mainnet": [
-        "./dist/mainnet.d.ts"
+      "eth": [
+        "./dist/eth.d.ts"
       ]
     }
   },

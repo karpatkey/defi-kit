@@ -1,18 +1,18 @@
-import { MainnetPool } from "./types"
-import mainnetPools from "./pools/mainnet"
+import { EthPool } from "./types"
+import ethPools from "./pools/eth"
 import { NotFoundError } from "../../errors"
 import { deposit, swap } from "./actions"
 
-export const mainnet = {
-  deposit: (nameOrAddress: MainnetPool["name"] | MainnetPool["address"]) =>
-    deposit(findMainnetPool(nameOrAddress)),
-  swap: (nameOrAddress: MainnetPool["name"] | MainnetPool["address"]) =>
-    swap(findMainnetPool(nameOrAddress)),
+export const eth = {
+  deposit: (nameOrAddress: EthPool["name"] | EthPool["address"]) =>
+    deposit(findEthPool(nameOrAddress)),
+  swap: (nameOrAddress: EthPool["name"] | EthPool["address"]) =>
+    swap(findEthPool(nameOrAddress)),
 }
 
-const findMainnetPool = (nameOrAddress: string) => {
+const findEthPool = (nameOrAddress: string) => {
   const nameOrAddressLower = nameOrAddress.toLowerCase()
-  const pool = mainnetPools.find(
+  const pool = ethPools.find(
     (pool) =>
       pool.name.toLowerCase() === nameOrAddressLower ||
       pool.address.toLowerCase() === nameOrAddressLower

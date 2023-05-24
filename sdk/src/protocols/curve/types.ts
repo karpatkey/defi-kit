@@ -1,8 +1,8 @@
-import mainnetPools from "./pools/mainnet"
+import ethPools from "./pools/eth"
 
 type ArrayElement<ArrayType extends readonly unknown[]> =
   ArrayType extends readonly (infer ElementType)[] ? ElementType : never
 
-export type MainnetPool = ArrayElement<typeof mainnetPools>
+export type EthPool = ArrayElement<typeof ethPools>
 
-export type Pool = MainnetPool
+export type Pool = EthPool

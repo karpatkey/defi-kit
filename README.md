@@ -1,4 +1,4 @@
-# DeFi Permission Presets
+# DeFi Presets
 
 Permission presets for [Zodiac Roles](https://github.com/gnosis/zodiac-modifier-roles) covering interactions with DeFi protocols.
 
@@ -24,7 +24,7 @@ const calls = await applyPermissions(
 
 ```typescript
 const res = await fetch(
-  "https://presets.karpatkey.com/api/v1/allow/cowswap/swap?mod=<ADDRESS>"
+  "https://presets.karpatkey.com/api/v1/eth:<MOD>/<ROLE>/allow/cowswap/swap?in=<TOKEN_IN>&out=<TOKEN_OUT>"
 )
 const calls = await res.json()
 ```
@@ -39,12 +39,12 @@ GET https://presets.karpatkey.com/api/v1/<chain>:<address>/<role>/<allow|revoke>
 - `address`: address of the Roles mod
 - `role`: ID of the role to update
 - `protocol`: protocol name
-- `action`: `swap`/`lp`/`stake`/`lend`/`borrow`
+- `action`: `swap`/`deposit`/`stake`/`borrow`/`harvest`
 - `query`: action specific query parameters
 
 #### Responses
 
-All requests have a JSON response of the same schema:
+All requests have a JSON response with transactions for updating role permissions:
 
 ```json
 {
@@ -53,7 +53,7 @@ All requests have a JSON response of the same schema:
   "meta": {
     "name": "",
     "description": "",
-    "txBuilderVersion": "1.8.0"
+    "txBuilderVersion": "1.13.3"
   },
   "createdAt": 1683187179279,
   "transactions": [
@@ -82,15 +82,9 @@ Stake LP tokens
 
 Borrow assets against collateral on money markets
 
-#### Protocols
+##### `harvest`
 
-##### `curve`
-
-Supported actions: `deposit`, `stake`
-
-##### `compound`
-
-Supported actions: `deposit`, `borrow`
+Claim rewards from staking
 
 ## Contribute
 
@@ -100,7 +94,7 @@ Install all dependencies:
 yarn
 ```
 
-Fetch ABIs and generate types for sdk:
+Fetch ABIs and generate types for the sdk package:
 
 ```
 yarn setup

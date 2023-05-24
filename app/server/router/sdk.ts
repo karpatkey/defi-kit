@@ -1,7 +1,7 @@
-import * as mainnetSdk from "defi-presets/mainnet"
+import * as eth from "defi-presets/eth"
 
 export const sdks = {
-  eth: mainnetSdk,
+  eth,
   // gor: 5,
   // bnb: 56,
   // gno: 100,
