@@ -1,3 +1,5 @@
+import { PresetAllowEntry } from "zodiac-roles-sdk"
+
 export enum Action {
   deposit = "deposit",
   lend = "lend",
@@ -9,3 +11,6 @@ export enum Action {
 export enum Protocol {
   curve = "curve",
 }
+
+export type Deposit = (pool: string) => PresetAllowEntry[]
+export type Swap = (pool: string) => PresetAllowEntry[]

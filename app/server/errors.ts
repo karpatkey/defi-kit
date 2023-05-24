@@ -1,4 +1,4 @@
-import { NotFoundError } from "@/../sdk/dist"
+import { NotFoundError } from "defi-presets"
 import { TRPCError } from "@trpc/server"
 
 /** Map defi-presets errors to tRPC errors */
