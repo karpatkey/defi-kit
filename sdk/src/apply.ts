@@ -41,6 +41,11 @@ type Options = (
 }
 
 export const createApply = (chainId: ChainId) => {
+  /**
+   * Applies the passed permissions to the role.
+   * @param roleKey The role key of the role to apply the permissions to
+   * @param entries The permissions to apply
+   */
   return async function apply(
     roleKey: string,
     entries: PresetAllowEntry[],

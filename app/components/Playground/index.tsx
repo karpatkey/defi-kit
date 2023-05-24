@@ -389,7 +389,7 @@ const Playground: React.FC<{}> = () => {
                         location.reload()
                       }}
                     >
-                      Compose presets and derive permissions
+                      Compose permissions and update role
                     </a>
                   </li>
                   <li>
