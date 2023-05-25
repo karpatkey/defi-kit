@@ -1,12 +1,18 @@
-import z from "zod"
+import zod from "zod"
+import { extendZodWithOpenApi } from "@asteasolutions/zod-to-openapi"
+
+extendZodWithOpenApi(zod)
 
 const ADDRESS = /^0x[0-9a-fA-F]{40}$/
 
-export const schema = {
-  address: () => z.string().regex(ADDRESS),
+export const z = {
+  ...zod,
 
-  commaSeparatedList: (element: z.ZodString) =>
-    z.string().transform((val) => val.split(",").map((v) => element.parse(v))),
+  address: () =>
+    z
+      .string()
+      .regex(ADDRESS)
+      .openapi({ example: "0x0000000000000000000000000000000000000000" }),
 
   transactionsJson: () =>
     z.object({

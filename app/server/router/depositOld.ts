@@ -1,31 +1,10 @@
+import { z } from "zod"
 import { mapError } from "../errors"
 import { t } from "./trpc"
 
 import { parseInputs } from "./utils"
-import { ChainPrefix, sdks } from "../sdk"
-import { schema, z } from "./schema"
-import { registry } from "../openapi"
-
-const registerDeposit = (chainPrefix: ChainPrefix, protocol: string) =>
-  registry.registerPath({
-    method: "get",
-    path: `/${chainPrefix}:{mod}/{role}/allow/${protocol}/deposit`,
-    summary: `Allow managing deposits to the \`target\` ${protocol} pool`,
-    request: {
-      params: z.object({ id: z.string() }),
-    },
-
-    responses: {
-      200: {
-        description: "Object with user data.",
-        content: {
-          "application/json": {
-            schema: z.transactionsJson(),
-          },
-        },
-      },
-    },
-  })
+import { ChainPrefix, sdks } from "./sdk"
+import { schema } from "./schema"
 
 export const makeDepositProcedure = (
   chainPrefix: ChainPrefix,

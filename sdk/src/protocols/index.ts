@@ -2,7 +2,7 @@ import { ProtocolActions } from "../types"
 import * as curve from "./curve"
 import * as cowswap from "./cowswap"
 
-// group all protocols actions by network
+// group all protocols actions by chain
 
 export const eth = {
   curve: curve.eth,
