@@ -36,6 +36,7 @@ const makeProcedure = (
 
 export const appRouter = t.router({
   eth: makeRouterForNetwork("eth"),
+  gor: makeRouterForNetwork("gor"),
 })
 
 // export type AppRouter = typeof appRouter

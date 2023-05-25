@@ -1,8 +1,9 @@
 import * as eth from "defi-presets/eth"
+import * as gor from "defi-presets/gor"
 
 export const sdks = {
   eth,
-  // gor: 5,
+  gor,
   // bnb: 56,
   // gno: 100,
   // matic: 137,

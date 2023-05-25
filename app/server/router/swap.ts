@@ -16,8 +16,8 @@ export const makeSwapProcedure = (
       openapi: {
         method: "GET",
         path: `/${chainPrefix}:{mod}/{role}/allow/${protocol}/swap`,
-        summary: `Allow making swaps in the \`target\` ${protocol} pool`,
-        description: `Responds the calls required for configuring the role to allow making swaps in the ${protocol} pool specified by \`target\`.`,
+        summary: `Allow swapping tokens via ${protocol}`,
+        description: `Responds the calls required for configuring the role to allow making swaps using ${protocol}.`,
         tags: [protocol],
       },
     })
@@ -25,23 +25,30 @@ export const makeSwapProcedure = (
       z.object({
         mod: schema.address(),
         role: z.string(),
-        target: z.string(),
+        sell: z.string().optional(),
+        buy: z.string().optional(),
       })
     )
     .output(schema.transactionsJson())
     .query(async (opts) => {
       const { roleKey, modAddress } = parseInputs(opts.input)
       try {
-        const entries = sdk.allow[protocol as keyof typeof sdk.allow].swap(
-          opts.input.target as any
+        // if (!(protocol in sdk.allow)) throw new Error("invariant violation")
+        // if (!("swap" in sdk.allow[protocol as keyof typeof sdk.allow]))
+        //   throw new Error("invariant violation")
+        const swap = (sdk.allow as any)[protocol].swap
+        const entries = swap(
+          opts.input.sell && [opts.input.sell],
+          opts.input.buy && [opts.input.buy]
         )
+
         const calls = await sdk.apply(roleKey, entries, {
           address: modAddress,
           mode: "extend",
         })
         return sdk.exportJson(modAddress, calls, {
           name: `Extend permissions of "${opts.input.role}" role`,
-          description: "",
+          description: `Allow swapping tokens via ${protocol}`,
         })
       } catch (e) {
         throw mapError(e)

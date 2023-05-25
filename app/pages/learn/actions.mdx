@@ -8,9 +8,9 @@ Deposit to and withdraw funds from a money market or AMM pool.
 
 ##### Parameters
 
-| Name     | Type   | Description                                                                      |
-| :------- | :----- | :------------------------------------------------------------------------------- |
-| `target` | string | The ID of the money market or AMM pool, can be a contract address or pool label. |
+| Name     | Type              | Description                                                                      |
+| :------- | :---------------- | :------------------------------------------------------------------------------- |
+| `target` | string (required) | The ID of the money market or AMM pool, can be a contract address or pool label. |
 
 #### `borrow`
 
@@ -27,3 +27,11 @@ Claim rewards from staking and farming.
 #### `swap`
 
 Swap tokens on a DEX.
+
+##### Parameters
+
+| Name    | Type     | Description                                                                              |
+| :------ | :------- | :--------------------------------------------------------------------------------------- |
+| `sell`  | string[] | A list of tokens that can can be sold, can be a contract address or token symbol         |
+| `buy`   | string[] | A list of tokens that can can be bought, can be a contract address or token symbol       |
+| `pools` | string[] | The set of AMM pool that can be used for swaps, can be a contract address or pool label. |

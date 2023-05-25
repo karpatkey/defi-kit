@@ -32,16 +32,16 @@ export const makeDepositProcedure = (
     .query(async (opts) => {
       const { roleKey, modAddress } = parseInputs(opts.input)
       try {
-        const entries = sdk.allow[protocol as keyof typeof sdk.allow].deposit(
-          opts.input.target as any
-        )
+        const deposit = (sdk.allow as any)[protocol].deposit
+        const entries = deposit(opts.input.target)
+
         const calls = await sdk.apply(roleKey, entries, {
           address: modAddress,
           mode: "extend",
         })
         return sdk.exportJson(modAddress, calls, {
           name: `Extend permissions of "${opts.input.role}" role`,
-          description: "",
+          description: `Allow managing deposits to the \`target\` ${protocol} pool`,
         })
       } catch (e) {
         throw mapError(e)
