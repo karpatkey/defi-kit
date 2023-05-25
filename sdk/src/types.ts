@@ -1,21 +1,25 @@
-import { PresetAllowEntry } from "zodiac-roles-sdk"
+import { PresetAllowEntry } from "zodiac-roles-sdk/index"
 
-export enum Action {
-  deposit = "deposit",
-  borrow = "borrow",
-  stake = "stake",
-  claim = "claim",
-  swap = "swap",
+export type Action = "deposit" | "borrow" | "stake" | "claim" | "swap"
+
+export enum Chains {
+  eth = "eth",
+  gor = "gor",
 }
 
-export enum Protocol {
-  curve = "curve",
-}
-
+// These types define the common interface for actions across all protocols
 export type ProtocolActions = {
-  [Action.deposit]?: (...args: any[]) => PresetAllowEntry[]
-  [Action.borrow]?: (...args: any[]) => PresetAllowEntry[]
-  [Action.stake]?: (...args: any[]) => PresetAllowEntry[]
-  [Action.claim]?: (...args: any[]) => PresetAllowEntry[]
-  [Action.swap]?: (...args: any[]) => PresetAllowEntry[]
+  deposit?: (options: { target: any }) => PresetAllowEntry[]
+
+  borrow?: (options: {}) => PresetAllowEntry[]
+
+  stake?: (options: {}) => PresetAllowEntry[]
+
+  claim?: (options: {}) => PresetAllowEntry[]
+
+  swap?: (options: {
+    sell?: any[]
+    buy?: any[]
+    pools?: any[]
+  }) => PresetAllowEntry[]
 }

@@ -1,7 +1,7 @@
 import { PresetAllowEntry } from "zodiac-roles-sdk"
 
 import * as regular from "./regular"
-import { Pool } from "./types"
+import { Pool, Token } from "./types"
 import { allowZapAdd, allowZapRemove } from "./zap"
 
 const depositOnly = (pool: Pool) => {
@@ -40,11 +40,15 @@ const withdraw = (pool: Pool) => {
 
 export const deposit = (pool: Pool) => [...depositOnly(pool), ...withdraw(pool)]
 
-export const swap = (pool: Pool) => {
+export const swap = (
+  pool: Pool,
+  sell: Token[] | undefined,
+  buy: Token[] | undefined
+) => {
   const result: PresetAllowEntry[] = []
   switch (pool.type) {
     case "regular":
-      result.push(...regular.allowSwap(pool))
+      result.push(...regular.allowSwap(pool, sell, buy))
       break
     default:
       throw new Error(`Not yet implemented: ${pool.type}`)
