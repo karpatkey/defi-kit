@@ -7,7 +7,7 @@ import { registry } from "@/server/openapi"
 const handler = (req: NextApiRequest, res: NextApiResponse) => {
   const generator = new OpenApiGeneratorV31(registry.definitions)
   const document = generator.generateDocument({
-    openapi: "3.1.0",
+    openapi: "3.0.0",
     info: {
       version: "1.0.0",
       title: "DeFi Presets",

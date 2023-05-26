@@ -1,12 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next"
+import { deposit } from "@/server/actions/deposit"
+import { handle } from "@/server/handle"
 
-type ResponseData = {
-  message: string
-}
-
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
-) {
-  res.status(200).json({ message: "Hello from Next.js!" })
-}
+export default handle(deposit)

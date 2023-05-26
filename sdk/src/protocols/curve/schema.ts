@@ -3,10 +3,10 @@ import ethPools from "./pools/eth"
 
 const ethTokens = [...new Set(ethPools.flatMap((pool) => pool.tokens))]
 
-const zPool = z.union([
-  ...ethPools.map((pool) => z.literal(pool.name)),
-  ...ethPools.map((pool) => z.literal(pool.address)),
-] as any)
+const zPool = z.enum([
+  ...ethPools.map((pool) => pool.name),
+  ...ethPools.map((pool) => pool.address),
+] as [string, string, ...string[]])
 
 const zToken = z.union(ethTokens.map((address) => z.literal(address)) as any)
 

@@ -1,23 +1,24 @@
 import { getAddress } from "ethers/lib/utils"
 import { z } from "zod"
+import { extendZodWithOpenApi } from "@asteasolutions/zod-to-openapi"
 
 // zx = "zod extension", providing custom zod types
+
+extendZodWithOpenApi(z)
 
 const ADDRESS = /^0x[0-9a-fA-F]{40}$/
 
 export const zx = {
   address: () =>
-    z
-      .custom<`0x${string}`>((val) => ADDRESS.test(val as string))
-      .transform((val, ctx) => {
-        try {
-          return getAddress(val)
-        } catch (e) {
-          ctx.addIssue({
-            code: z.ZodIssueCode.custom,
-            message: "Address checksum is invalid",
-          })
-          return z.NEVER
-        }
-      }),
+    z.string().transform((val, ctx) => {
+      try {
+        return getAddress(val) as `0x${string}`
+      } catch (e) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: "Address checksum is invalid",
+        })
+        return z.NEVER
+      }
+    }),
 }

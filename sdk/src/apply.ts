@@ -6,7 +6,9 @@ import {
   encodeCalls,
   Target,
   ChainId,
+  c,
 } from "zodiac-roles-sdk"
+import { NotFoundError } from "./errors"
 
 export const derivePermissions = (entries: PresetAllowEntry[]) => {
   const permissions = fillPreset(
@@ -52,10 +54,20 @@ export const createApply = (chainId: ChainId) => {
     options: Options
   ) {
     const permissions = derivePermissions(entries)
-    return await applyPermissions(
-      roleKey,
-      permissions,
-      "address" in options ? { ...options, network: chainId } : options
-    )
+
+    try {
+      return await applyPermissions(
+        roleKey,
+        permissions,
+        "address" in options ? { ...options, network: chainId } : options
+      )
+    } catch (e) {
+      // make role not found error to NotFoundError so the API will respond with 404
+      if (e instanceof Error && e.message.indexOf("not found") !== -1) {
+        throw new NotFoundError(e.message)
+      }
+
+      throw e
+    }
   }
 }

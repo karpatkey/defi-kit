@@ -4,7 +4,7 @@ import { t } from "./trpc"
 
 import { parseInputs } from "./utils"
 import { ChainPrefix, sdks } from "./sdk"
-import { schema } from "./schema"
+import { schema } from "../schema"
 
 export const makeSwapProcedure = (
   chainPrefix: ChainPrefix,

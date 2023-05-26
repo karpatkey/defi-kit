@@ -2,7 +2,7 @@ import { PresetAllowEntry } from "zodiac-roles-sdk/index"
 
 export type Action = "deposit" | "borrow" | "stake" | "claim" | "swap"
 
-export enum Chains {
+export enum Chain {
   eth = "eth",
   gor = "gor",
 }
