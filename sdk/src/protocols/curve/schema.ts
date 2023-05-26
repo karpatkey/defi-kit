@@ -8,7 +8,7 @@ const zPool = z.enum([
   ...ethPools.map((pool) => pool.address),
 ] as [string, string, ...string[]])
 
-const zToken = z.union(ethTokens.map((address) => z.literal(address)) as any)
+const zToken = z.enum(ethTokens as [string, string, ...string[]])
 
 export const eth = {
   deposit: z.object({

@@ -8,18 +8,18 @@ import { ChainPrefix, sdks } from "../sdk"
 import { docParams, queryBase, transactionsJson } from "../schema"
 import { ActionHandler } from "../handle"
 
-export const registerDeposit = (
+export const registerSwap = (
   registry: OpenAPIRegistry,
   chainPrefix: ChainPrefix,
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].deposit
+  const querySchema = schema[protocol].swap
 
   registry.registerPath({
     method: "get",
-    path: `/${chainPrefix}:{mod}/{role}/allow/${protocol}/deposit`,
-    summary: `Allow managing deposits to the \`target\` ${protocol} pool`,
+    path: `/${chainPrefix}:{mod}/{role}/allow/${protocol}/swap`,
+    summary: `Allow making swaps on ${protocol}`,
     tags: [protocol],
     request: {
       params: docParams,
@@ -39,7 +39,7 @@ export const registerDeposit = (
   })
 }
 
-export const deposit: ActionHandler = async (query) => {
+export const swap: ActionHandler = async (query) => {
   const {
     mod: { chain, address },
     role,
@@ -53,16 +53,16 @@ export const deposit: ActionHandler = async (query) => {
     throw new NotFoundError(`${protocol} is not supported on ${chain}`)
   }
 
-  const allowDeposit = (allow as any)[protocol].deposit as
-    | ProtocolActions["deposit"]
+  const allowSwap = (allow as any)[protocol].swap as
+    | ProtocolActions["swap"]
     | undefined
-  const depositParams = (schema as any)[protocol].deposit as any
+  const swapParams = (schema as any)[protocol].swap as any
 
-  if (!allowDeposit || !depositParams) {
+  if (!allowSwap || !swapParams) {
     throw new NotFoundError(`${protocol} is not supported on ${chain}`)
   }
 
-  const entries = allowDeposit(depositParams.parse(query))
+  const entries = allowSwap(swapParams.parse(query))
 
   const calls = await sdk.apply(role, entries, {
     address,
@@ -71,6 +71,6 @@ export const deposit: ActionHandler = async (query) => {
 
   return sdk.exportJson(address, calls, {
     name: `Extend permissions of "${decodeBytes32String(role)}" role`,
-    description: `Allow managing deposits to the \`target\` ${protocol} pool`,
+    description: `Allow making swaps on ${protocol}`,
   })
 }

@@ -4,8 +4,10 @@ import {
   OpenAPIRegistry,
   extendZodWithOpenApi,
 } from "@asteasolutions/zod-to-openapi"
-import { registerDeposit } from "./actions/deposit"
+
 import { sdks } from "./sdk"
+import { registerDeposit } from "./actions/deposit"
+import { registerSwap } from "./actions/swap"
 
 extendZodWithOpenApi(zod)
 
@@ -22,7 +24,7 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
           registerDeposit(registry, chainPrefix, protocol)
           return
         case "swap":
-          // TODO: register swap
+          registerSwap(registry, chainPrefix, protocol)
           return
         default:
           throw new Error(`Unknown action: ${action}`)
