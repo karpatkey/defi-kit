@@ -134,11 +134,11 @@ Once a protocol has been added to the SDK, a couple of extra steps are necessary
 
    ```typescript
    export const eth = {
-     deposit: z.object({ targets: z.enum(...) }),
+     deposit: z.object({ targets: z.enum(...).array() }),
    }
 
    export const gno = {
-     deposit: z.object({ targets: z.enum(...) }),
+     deposit: z.object({ targets: z.enum(...).array() }),
    }
    ```
 

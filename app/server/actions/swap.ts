@@ -7,6 +7,7 @@ import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
 import { ChainPrefix, sdks } from "../sdk"
 import { docParams, queryBase, transactionsJson } from "../schema"
 import { ActionHandler } from "../handle"
+import { parseQuery } from "../parse"
 
 export const registerSwap = (
   registry: OpenAPIRegistry,
@@ -62,7 +63,7 @@ export const swap: ActionHandler = async (query) => {
     throw new NotFoundError(`${protocol} is not supported on ${chain}`)
   }
 
-  const entries = allowSwap(swapParams.parse(query))
+  const entries = allowSwap(parseQuery(query, swapParams))
 
   const calls = await sdk.apply(role, entries, {
     address,
