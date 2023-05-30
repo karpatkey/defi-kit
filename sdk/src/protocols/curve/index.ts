@@ -4,8 +4,8 @@ import { NotFoundError } from "../../errors"
 import { deposit, swap } from "./actions"
 
 export const eth = {
-  deposit: (options: { target: EthPool["name"] | EthPool["address"] }) =>
-    deposit(findPool(ethPools, options.target)),
+  deposit: (options: { targets: (EthPool["name"] | EthPool["address"])[] }) =>
+    options.targets.flatMap((target) => deposit(findPool(ethPools, target))),
 
   swap: (options: {
     sell?: EthToken[]

@@ -12,8 +12,7 @@ import { allow, apply } from 'defi-presets/eth'
 
 // Mix and match the permissions you need
 const permissions = [
-  ...allow.curve.deposit('DAI/USDC/USDT'),
-  ...allow.curve.deposit('DAI/USDC/USDT/sUSD'),
+  ...allow.curve.deposit({ targets: ['DAI/USDC/USDT', 'DAI/USDC/USDT/sUSD'] })
 ]
 
 // Apply the permissions to a role

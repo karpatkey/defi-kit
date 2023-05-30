@@ -8,21 +8,39 @@ Deposit to and withdraw funds from a money market or AMM pool.
 
 ##### Parameters
 
-| Name     | Type              | Description                                                                      |
-| :------- | :---------------- | :------------------------------------------------------------------------------- |
-| `target` | string (required) | The ID of the money market or AMM pool, can be a contract address or pool label. |
+| Name      | Type                  | Description                                                                                          |
+| :-------- | :-------------------- | :--------------------------------------------------------------------------------------------------- |
+| `targets` | _string[] (required)_ | The set of money markets or AMM pools for depositing funds, can be contract addresses or pool labels |
 
 #### `borrow`
 
 Borrow assets against collateral deposited on money markets.
 
+##### Parameters
+
+| Name     | Type                  | Description                                                                        |
+| :------- | :-------------------- | :--------------------------------------------------------------------------------- |
+| `tokens` | _string[] (required)_ | The set of tokens that can be borrowed, can be contract addresses or token symbols |
+
 #### `stake`
 
-Stake and unstake LP or deposit tokens into a vault.
+Stake and unstake LP tokens into a vault or gauge.
+
+##### Parameters
+
+| Name      | Type                  | Description                                                                        |
+| :-------- | :-------------------- | :--------------------------------------------------------------------------------- |
+| `targets` | _string[] (required)_ | The set of vaults for staking LP tokens, can be contract addresses or vault labels |
 
 #### `claim`
 
 Claim rewards from staking and farming.
+
+##### Parameters
+
+| Name      | Type                  | Description                                                  |
+| :-------- | :-------------------- | :----------------------------------------------------------- |
+| `targets` | _string[] (required)_ | The set of rewards contract addresses to allow claiming from |
 
 #### `swap`
 
@@ -30,8 +48,8 @@ Swap tokens on a DEX.
 
 ##### Parameters
 
-| Name    | Type     | Description                                                                              |
-| :------ | :------- | :--------------------------------------------------------------------------------------- |
-| `sell`  | string[] | A list of tokens that can can be sold, can be a contract address or token symbol         |
-| `buy`   | string[] | A list of tokens that can can be bought, can be a contract address or token symbol       |
-| `pools` | string[] | The set of AMM pool that can be used for swaps, can be a contract address or pool label. |
+| Name    | Type       | Description                                                                              |
+| :------ | :--------- | :--------------------------------------------------------------------------------------- |
+| `sell`  | _string[]_ | The set of tokens that can can be sold, can be contract addresses or token symbols       |
+| `buy`   | _string[]_ | The set of tokens that can can be bought, can be contract addresses or token symbols     |
+| `pools` | _string[]_ | The set of AMM pool that can be used for swaps, can be contract addresses or pool labels |
