@@ -19,7 +19,7 @@ export const registerDeposit = (
   registry.registerPath({
     method: "get",
     path: `/${chainPrefix}:{mod}/{role}/allow/${protocol}/deposit`,
-    summary: `Allow managing deposits to the \`target\` ${protocol} pool`,
+    summary: `Allow managing deposits to the target ${protocol} pools`,
     tags: [protocol],
     request: {
       params: docParams,

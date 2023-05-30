@@ -10,9 +10,13 @@ export const getExampleSourceCode = (exampleName: string) => {
 import { encodeBytes32String } from 'defi-presets'
 import { allow, apply } from 'defi-presets/eth'
 
+const DAI = '0x6B175474E89094C44Da98b954EedeAC495271d0F'
+const USDC = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'
+
 // Mix and match the permissions you need
 const permissions = [
-  ...allow.curve.deposit({ targets: ['DAI/USDC/USDT', 'DAI/USDC/USDT/sUSD'] })
+  ...allow.curve.deposit({ targets: ['DAI/USDC/USDT', 'DAI/USDC/USDT/sUSD'] }),
+  ...allow.curve.swap({ sell: [DAI, USDC], buy: [DAI, USDC] })
 ]
 
 // Apply the permissions to a role

@@ -55,6 +55,10 @@ const filterPoolsByTokens = (
         return false
       }
     }
+
+    // TODO remove this when we support all pool types
+    if (pool.type !== "regular") return false
+
     return true
   })
 }
