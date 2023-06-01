@@ -3203,6 +3203,7 @@ __metadata:
   resolution: "defi-presets-monorepo@workspace:."
   dependencies:
     prettier: ^2.8.8
+    rimraf: ^3.0.2
     typescript: ^5.0.4
   languageName: unknown
   linkType: soft

@@ -7,7 +7,8 @@
   "workspaces": [
     "sdk",
     "app",
-    "playground"
+    "playground",
+    "defi-presets"
   ],
   "scripts": {
     "build": "yarn workspaces foreach -pt run build",
@@ -19,6 +20,7 @@
   "packageManager": "yarn@3.5.1",
   "devDependencies": {
     "prettier": "^2.8.8",
+    "rimraf": "^3.0.2",
     "typescript": "^5.0.4"
   }
 }
