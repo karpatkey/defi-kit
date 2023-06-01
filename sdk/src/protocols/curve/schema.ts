@@ -12,7 +12,7 @@ const zToken = z.enum(ethTokens as [string, string, ...string[]])
 
 export const eth = {
   deposit: z.object({
-    target: zPool,
+    targets: zPool.array(),
   }),
 
   swap: z.object({

@@ -4,8 +4,8 @@ import { NotFoundError } from "../../errors"
 import { deposit, swap } from "./actions"
 
 export const eth = {
-  deposit: (options: { target: EthPool["name"] | EthPool["address"] }) =>
-    deposit(findPool(ethPools, options.target)),
+  deposit: (options: { targets: (EthPool["name"] | EthPool["address"])[] }) =>
+    options.targets.flatMap((target) => deposit(findPool(ethPools, target))),
 
   swap: (options: {
     sell?: EthToken[]
@@ -55,6 +55,10 @@ const filterPoolsByTokens = (
         return false
       }
     }
+
+    // TODO remove this when we support all pool types
+    if (pool.type !== "regular") return false
+
     return true
   })
 }

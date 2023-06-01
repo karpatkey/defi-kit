@@ -7,6 +7,7 @@ import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
 import { ChainPrefix, sdks } from "../sdk"
 import { docParams, queryBase, transactionsJson } from "../schema"
 import { ActionHandler } from "../handle"
+import { parseQuery } from "../parse"
 
 export const registerDeposit = (
   registry: OpenAPIRegistry,
@@ -19,7 +20,7 @@ export const registerDeposit = (
   registry.registerPath({
     method: "get",
     path: `/${chainPrefix}:{mod}/{role}/allow/${protocol}/deposit`,
-    summary: `Allow managing deposits to the \`target\` ${protocol} pool`,
+    summary: `Allow managing deposits to the target ${protocol} pools`,
     tags: [protocol],
     request: {
       params: docParams,
@@ -62,7 +63,7 @@ export const deposit: ActionHandler = async (query) => {
     throw new NotFoundError(`${protocol} is not supported on ${chain}`)
   }
 
-  const entries = allowDeposit(depositParams.parse(query))
+  const entries = allowDeposit(parseQuery(query, depositParams))
 
   const calls = await sdk.apply(role, entries, {
     address,

@@ -3186,7 +3186,7 @@ __metadata:
     ethers: ^5.7.2
     next: 13.4.4
     nextra: ^2.6.2
-    nextra-theme-docs: ^2.6.1
+    nextra-theme-docs: ^2.6.2
     playground: "workspace:*"
     postcss: 8.4.24
     react: 18.2.0
@@ -7127,9 +7127,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nextra-theme-docs@npm:^2.6.1":
-  version: 2.6.1
-  resolution: "nextra-theme-docs@npm:2.6.1"
+"nextra-theme-docs@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "nextra-theme-docs@npm:2.6.2"
   dependencies:
     "@headlessui/react": ^1.7.10
     "@popperjs/core": ^2.11.6
@@ -7145,10 +7145,10 @@ __metadata:
     zod: ^3.20.2
   peerDependencies:
     next: ">=9.5.3"
-    nextra: 2.6.1
+    nextra: 2.6.2
     react: ">=16.13.1"
     react-dom: ">=16.13.1"
-  checksum: f07f1e820e7677114620a9073b9be34f2d022934032fe5c3bad842ddbf577c9142a609f4e3b4a17c5046b5d1b54f828070212217e239f19fa9d62e84937ac549
+  checksum: f4eb7e50b9a5da73269a1f77eda374d9cca35e27749bc7eed6a70324edaf793c43a51220314e95e1f8de6678072e2ce08dec29727f2b816b405f70afa3c6ad06
   languageName: node
   linkType: hard
 

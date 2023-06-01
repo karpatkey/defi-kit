@@ -9,7 +9,7 @@ const Home = () => (
       <p>
         GET&nbsp;
         <code className={styles.code}>
-          /eth:0x1234…cdef/allow/manager/cowswap/swap?in=DAI&out=WETH
+          /eth:0x1234…cdef/manager/allow/cowswap/swap?sell=DAI&buy=WETH
         </code>
       </p>
       <div>

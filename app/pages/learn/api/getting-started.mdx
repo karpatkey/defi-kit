@@ -18,12 +18,12 @@ All endpoints are accessible via HTTP GET requests. You can make requests right 
 
 **Example request:**
 
-[https://presets.karpatkey.com/api/v1/eth:0x6b175474e89094c44da98b954eedeac495271d0f/sdf/allow/curve/deposit?target=0x6b175474e89094c44da98b954eedeac495271d0f](/api/v1/eth:0x6b175474e89094c44da98b954eedeac495271d0f/sdf/allow/curve/deposit?target=0x6b175474e89094c44da98b954eedeac495271d0f)
+[https://presets.karpatkey.com/api/v1/eth:0x6b175474e89094c44da98b954eedeac495271d0f/manager/allow/curve/deposit?targets=DAI/USDC/USDT](/api/v1/eth:0x6b175474e89094c44da98b954eedeac495271d0f/manager/allow/curve/deposit?targets=DAI/USDC/USDT)
 
 Same request in curl:
 
 ```bash
 curl -X 'GET' \
-  'https://presets.karpatkey.com/api/v1/eth:0x6b175474e89094c44da98b954eedeac495271d0f/sdf/allow/curve/deposit?target=0x6b175474e89094c44da98b954eedeac495271d0f' \
+  'https://presets.karpatkey.com/api/v1/eth:0x6b175474e89094c44da98b954eedeac495271d0f/manager/allow/curve/deposit?targets=DAI/USDC/USDT' \
   -H 'accept: application/json'
 ```
