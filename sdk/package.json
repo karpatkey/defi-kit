@@ -44,7 +44,7 @@
     "dev": "tsup --format esm --watch"
   },
   "dependencies": {
-    "@asteasolutions/zod-to-openapi": "^5.0.0",
+    "@asteasolutions/zod-to-openapi": "^5.1.0",
     "@dethcrypto/eth-sdk": "^0.3.4",
     "@dethcrypto/eth-sdk-client": "^0.1.6",
     "ethers": "^5.7.2",

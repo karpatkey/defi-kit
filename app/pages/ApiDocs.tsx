@@ -8,7 +8,7 @@ const SwaggerUI = dynamic<SwaggerUIProps>(
   {
     ssr: false,
   }
-)
+) as React.FC<SwaggerUIProps>
 
 const ApiDocs: NextPage = () => {
   // Serve Swagger UI with our OpenAPI schema
