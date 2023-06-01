@@ -5,14 +5,14 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@asteasolutions/zod-to-openapi@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "@asteasolutions/zod-to-openapi@npm:5.0.0"
+"@asteasolutions/zod-to-openapi@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@asteasolutions/zod-to-openapi@npm:5.1.0"
   dependencies:
     openapi3-ts: ^4.1.2
   peerDependencies:
     zod: ^3.20.2
-  checksum: 55fb0a3931da080edb197a0d639dfad03cbdaf6fc2a02bdd966842b8ed84cc4f02054ba217c1899802ca4d78b4043a2efd040a5d3c400735b0de35846a82a8b5
+  checksum: dcbb95b73bb1ce908572114d3a9f1e71be39c09c283e76169542e8049ebcd2f1aee5d6597b0beef772bc28178bee7fcba8f847bcc0b6cf42dfd613f9d91c492f
   languageName: node
   linkType: hard
 
@@ -1019,12 +1019,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:13.4.3":
-  version: 13.4.3
-  resolution: "@next/eslint-plugin-next@npm:13.4.3"
+"@next/eslint-plugin-next@npm:13.4.4":
+  version: 13.4.4
+  resolution: "@next/eslint-plugin-next@npm:13.4.4"
   dependencies:
     glob: 7.1.7
-  checksum: 3d49270e79ab4d3fcd67bad3b56a1810816db7dc73edc3442e2f2d5b17b05bea59308f96c442a42be2e7a98c4d29bc4707a718659ba17bb5b1aca9516513c87f
+  checksum: 0a14780aed31d5faa6fa4b0a28f1ee7852d5ed5ed2dad166f05b2ed614bd1802fa033d7b313bcfb053b523f708c379052081069802b087f8ce22c787f361621a
   languageName: node
   linkType: hard
 
@@ -1635,10 +1635,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/carbon__icons-react@npm:^11.16.0":
-  version: 11.16.0
-  resolution: "@types/carbon__icons-react@npm:11.16.0"
-  checksum: b546783723c172decb727639fa63d2f97bfa361c058a25ef03dcc58cefbe8caf8a3ff56cd10d8e14c868a3d2989e77c29056de2ce91c7ad7dd4686e6d213f5a7
+"@types/carbon__icons-react@npm:^11.20.0":
+  version: 11.20.0
+  resolution: "@types/carbon__icons-react@npm:11.20.0"
+  checksum: 5352fd9501f75214504482dde59b6f834c3fa287ca230dd87ba062febb62c6d24a658cfb854f23990b99b3fd061e37588aaf4095b409cad73346eb3d5a1e3d3a
   languageName: node
   linkType: hard
 
@@ -1760,10 +1760,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.16.14":
-  version: 18.16.14
-  resolution: "@types/node@npm:18.16.14"
-  checksum: c11cb3c787236414efe58240ae71854971592554d82ff9d201876ce7cafd51c37aaa001c63602d002e8238614d7331bd6d48ac4c1c0caa826799980b6846fb08
+"@types/node@npm:18.16.16":
+  version: 18.16.16
+  resolution: "@types/node@npm:18.16.16"
+  checksum: 0efad726dd1e0bef71c392c708fc5d78c5b39c46b0ac5186fee74de4ccb1b2e847b3fa468da67d62812f56569da721b15bf31bdc795e6c69b56c73a45079ed2d
   languageName: node
   linkType: hard
 
@@ -3170,11 +3170,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "defi-presets-app@workspace:app"
   dependencies:
-    "@asteasolutions/zod-to-openapi": ^5.0.0
+    "@asteasolutions/zod-to-openapi": ^5.1.0
     "@carbon/icons-react": ^11.20.0
     "@ethersproject/strings": ^5.7.0
-    "@types/carbon__icons-react": ^11.16.0
-    "@types/node": 18.16.14
+    "@types/carbon__icons-react": ^11.20.0
+    "@types/node": 18.16.16
     "@types/react": 18.2.7
     "@types/react-dom": 18.2.4
     "@types/swagger-ui-react": ^4.18.0
@@ -3182,13 +3182,13 @@ __metadata:
     autoprefixer: 10.4.14
     defi-presets: "workspace:*"
     eslint: 8.41.0
-    eslint-config-next: 13.4.3
+    eslint-config-next: 13.4.4
     ethers: ^5.7.2
     next: 13.4.4
-    nextra: ^2.6.1
+    nextra: ^2.6.2
     nextra-theme-docs: ^2.6.1
     playground: "workspace:*"
-    postcss: 8.4.23
+    postcss: 8.4.24
     react: 18.2.0
     react-dom: 18.2.0
     swagger-ui-react: ^4.19.0
@@ -3212,7 +3212,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "defi-presets@workspace:sdk"
   dependencies:
-    "@asteasolutions/zod-to-openapi": ^5.0.0
+    "@asteasolutions/zod-to-openapi": ^5.1.0
     "@dethcrypto/eth-sdk": ^0.3.4
     "@dethcrypto/eth-sdk-client": ^0.1.6
     ethers: ^5.7.2
@@ -3621,11 +3621,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:13.4.3":
-  version: 13.4.3
-  resolution: "eslint-config-next@npm:13.4.3"
+"eslint-config-next@npm:13.4.4":
+  version: 13.4.4
+  resolution: "eslint-config-next@npm:13.4.4"
   dependencies:
-    "@next/eslint-plugin-next": 13.4.3
+    "@next/eslint-plugin-next": 13.4.4
     "@rushstack/eslint-patch": ^1.1.3
     "@typescript-eslint/parser": ^5.42.0
     eslint-import-resolver-node: ^0.3.6
@@ -3640,7 +3640,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 618313f0bc23d3600734b6abbd6a8469c64084ddc365a9ba77d662f40e044d28ab3c205718028d2dc197a5771f8178be92542826e5ae20f240ac978c727f905a
+  checksum: 8f35474e3222d7c83966a716ed9bc5973643677da790596939c9c5a36216d01aae55027d0c14a6a4ba88e632f0e48129a9f05370540c6b9e07d4737a49b02d8c
   languageName: node
   linkType: hard
 
@@ -7152,9 +7152,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nextra@npm:^2.6.1":
-  version: 2.6.1
-  resolution: "nextra@npm:2.6.1"
+"nextra@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "nextra@npm:2.6.2"
   dependencies:
     "@mdx-js/mdx": ^2.3.0
     "@mdx-js/react": ^2.3.0
@@ -7182,7 +7182,7 @@ __metadata:
     next: ">=9.5.3"
     react: ">=16.13.1"
     react-dom: ">=16.13.1"
-  checksum: 3418b2dfde1c1c663dacc00b20439249ebed2289115631e6e67bf965683e787ea3ff49e6f3b28502b9f2ea70792551c4500854ca2ed44783088685d81ca5966c
+  checksum: a4272a1be96909344cb74c506dcbbe5f38c7d685e45fcd2ff0ac1c03a70de615fddf4133f8c3ae577e87ec8cae787cfd779e764a681564f4987f0dd28d9f2023
   languageName: node
   linkType: hard
 
@@ -7800,14 +7800,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.23":
-  version: 8.4.23
-  resolution: "postcss@npm:8.4.23"
+"postcss@npm:8.4.24":
+  version: 8.4.24
+  resolution: "postcss@npm:8.4.24"
   dependencies:
     nanoid: ^3.3.6
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: 8bb9d1b2ea6e694f8987d4f18c94617971b2b8d141602725fedcc2222fdc413b776a6e1b969a25d627d7b2681ca5aabb56f59e727ef94072e1b6ac8412105a2f
+  checksum: 814e2126dacfea313588eda09cc99a9b4c26ec55c059188aa7a916d20d26d483483106dc5ff9e560731b59f45c5bb91b945dfadc670aed875cc90ddbbf4e787d
   languageName: node
   linkType: hard
 
