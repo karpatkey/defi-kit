@@ -1,4 +1,5 @@
 {
   "framework": "nextjs",
-  "buildCommand": "next build"
+  "buildCommand": "yarn build",
+  "outputDirectory": "app/.next"
 }
