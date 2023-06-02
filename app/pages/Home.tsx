@@ -77,7 +77,7 @@ const Home = () => (
       </a>
 
       <a
-        href="https://github.com/gnosis/defi-presets"
+        href="https://github.com/KarpatkeyDAO/defi-presets"
         className={styles.card}
         target="_blank"
         rel="noopener noreferrer"

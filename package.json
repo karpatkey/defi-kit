@@ -1,7 +1,7 @@
 {
   "name": "defi-presets-monorepo",
   "private": true,
-  "repository": "https://github.com/gnosis/defi-presets.git",
+  "repository": "https://github.com/KarpatkeyDAO/defi-presets.git",
   "author": "Gnosis Guild",
   "license": "LGPL-3.0",
   "workspaces": [
