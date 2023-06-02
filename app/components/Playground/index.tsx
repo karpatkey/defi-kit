@@ -285,7 +285,7 @@ const Playground: React.FC<{}> = () => {
           <div></div>
         </div>
         <p id="loading-message" role="status">
-          Initialing playground
+          Initializing playground
         </p>
       </div>
       <div id="playground-container" style={{ display: "none" }}>
