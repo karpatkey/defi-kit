@@ -20,6 +20,9 @@ const config: DocsThemeConfig = {
   },
   primaryHue: 32,
   darkMode: false,
+  nextThemes: {
+    defaultTheme: "light",
+  },
   head: function useHead() {
     const { title } = useConfig()
 
