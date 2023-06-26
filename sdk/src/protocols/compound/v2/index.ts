@@ -1,7 +1,7 @@
 import { NotFoundError } from "../../../errors"
 import tokens from "./tokens"
 import { Token } from "./types"
-import { depositEther, depositToken, borrowEther, borrowToken, stake } from "./actions"
+import { deposit, borrow } from "./actions"
 
 const findToken = (
   tokens: readonly Token[],
@@ -23,22 +23,15 @@ export const eth = {
   deposit: ({
     target,
   }: {
-    target: "ETH" | Token["symbol"] | Token["token"]
+    target: Token["symbol"] | Token["token"]
   }) => {
-    return target === "ETH"
-      ? depositEther()
-      : depositToken(findToken(tokens, target))
+      return deposit(findToken(tokens, target))
   },
   borrow: ({
     target,
   }: {
-    target: "ETH" | Token["symbol"] | Token["token"]
+    target: Token["symbol"] | Token["token"]
   }) => {
-    return target === "ETH"
-      ? borrowEther()
-      : borrowToken(findToken(tokens, target))
-  },
-  stake: () => {
-    return stake()
-  },
+    return borrow(findToken(tokens, target))
+  }
 }

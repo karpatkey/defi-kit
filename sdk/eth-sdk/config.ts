@@ -11,6 +11,14 @@ export const contracts = {
       stkaave: "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
       stkabpt: "0xa1116930326D21fB917d5A27F1E9943A9595fb47",
     },
+    aaveV3: {
+      aaveLendingPoolV3: "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
+      wrappedTokenGatewayV3: "0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C"
+    },
+    compoundV2: {
+      comptroller: "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
+      maximillion: "0xf859A1AD94BcF445A406B892eF0d3082f4174088"
+    },
     curve: {
       regularPool: "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7",
       metaPool: "0x4f062658eaaf2c1ccf8c8e36d6824cdf41167956",

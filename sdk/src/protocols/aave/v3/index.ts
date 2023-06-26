@@ -1,7 +1,8 @@
 import { NotFoundError } from "../../../errors"
 import tokens from "./tokens"
 import { Token } from "./types"
-import { depositEther, depositToken, borrowEther, borrowToken, stake } from "./actions"
+import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
+import { stake } from "../v2/actions"
 
 const findToken = (
   tokens: readonly Token[],
