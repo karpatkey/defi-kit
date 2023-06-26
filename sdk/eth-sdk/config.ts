@@ -13,11 +13,12 @@ export const contracts = {
     },
     aaveV3: {
       aaveLendingPoolV3: "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
-      wrappedTokenGatewayV3: "0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C"
+      wrappedTokenGatewayV3: "0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C",
     },
     compoundV2: {
       comptroller: "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
-      maximillion: "0xf859A1AD94BcF445A406B892eF0d3082f4174088"
+      maximillion: "0xf859A1AD94BcF445A406B892eF0d3082f4174088",
+      cToken: "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643",
     },
     curve: {
       regularPool: "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7",
