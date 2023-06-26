@@ -8,7 +8,7 @@ import { contracts } from "../../../eth-sdk/config"
 
 export const deposit = (pool: Pool) => {
   return [
-    ...allowErc20Approve(pool.tokens, contracts.mainnet.balancer.relayer),
+    ...allowErc20Approve(pool.tokens, [contracts.mainnet.balancer.vault]),
 
     allow.mainnet.balancer.relayer.multicall(
       c.every(
@@ -24,7 +24,12 @@ export const deposit = (pool: Pool) => {
               }
             )
           ),
-          matchesCalldata()
+
+
+          matchesCalldata(),
+
+
+          ...
         )
       )
     ),
