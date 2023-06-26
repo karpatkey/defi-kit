@@ -1,0 +1,35 @@
+export default [
+  {
+    bpt: "0x0017C363B29d8F86d82E9681552685F68F34b7e4",
+    id: "0x0017c363b29d8f86d82e9681552685f68f34b7e4000200000000000000000209",
+    name: "USDC/Skorge",
+    type: "LiquidityBootstrapping",
+    gauge: "0x0000000000000000000000000000000000000000",
+    tokens: [
+      "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "0xAdC8c01EE53Df97DB1fdACb4BE44756DBCa1e834",
+    ],
+  },
+  {
+    bpt: "0x0022B6E4Ff3DDBf0c36c7c6c7C7F3062f36be5F8",
+    id: "0x0022b6e4ff3ddbf0c36c7c6c7c7f3062f36be5f8000200000000000000000330",
+    name: "USDC/SHHH",
+    type: "LiquidityBootstrapping",
+    gauge: "0x0000000000000000000000000000000000000000",
+    tokens: [
+      "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "0xF5c28117c88C99dCD0c60737758329f893431781",
+    ],
+  },
+  {
+    bpt: "0x006962F9DE1Aa0639F893aFf1F08eDDf40a67AD5",
+    id: "0x006962f9de1aa0639f893aff1f08eddf40a67ad500020000000000000000020c",
+    name: "Cawlt/WETH",
+    type: "LiquidityBootstrapping",
+    gauge: "0x0000000000000000000000000000000000000000",
+    tokens: [
+      "0x8Ec39e54303269CfEa50BB0555cf7A73fd933f73",
+      "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    ],
+  },
+] as const

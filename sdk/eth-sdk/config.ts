@@ -19,6 +19,10 @@ export const contracts = {
       steth: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
       wsteth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
     },
+    balancer: {
+      relayer: "0xfeA793Aa415061C483D2390414275AD314B3F621",
+      relayerLibrary: "0xf77018c0d817dA22caDbDf504C00c0d32cE1e5C2",
+    },
   },
   goerli: {
     cowswap: {

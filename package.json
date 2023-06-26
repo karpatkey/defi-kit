@@ -15,7 +15,8 @@
     "dev": "yarn workspaces foreach -pi run dev",
     "check:prettier": "prettier '**/*.{js,ts,tsx,json,md}' --ignore-path .gitignore --list-different",
     "fix:prettier": "prettier '**/*.{js,ts,tsx,json,md}' --ignore-path .gitignore --write",
-    "fetch-info:aave": "env-cmd -f ./scripts/.env python scripts/aave.py"
+    "fetch-info:aave": "env-cmd -f ./scripts/.env python scripts/aave.py",
+    "fetch-info:balancer": "env-cmd -f ./scripts/.env python scripts/balancer.py"
   },
   "packageManager": "yarn@3.5.1",
   "devDependencies": {
