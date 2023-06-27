@@ -21,7 +21,7 @@ export const contracts = {
       cToken: "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643",
     },
     compoundV3: {
-      cUSDCv3: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+      comet: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
       MainnetBulker: "0xa397a8C2086C554B531c02E29f3291c9704B00c7",
       CometRewards: "0x1b0e765f6224c21223aea2af16c1c46e38885a40",
     },
@@ -32,6 +32,7 @@ export const contracts = {
     lido: {
       steth: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
       wsteth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      unsteth: "0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1"
     },
     balancer: {
       relayer: "0xfeA793Aa415061C483D2390414275AD314B3F621",

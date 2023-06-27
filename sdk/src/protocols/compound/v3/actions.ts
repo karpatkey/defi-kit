@@ -1,6 +1,6 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { AVATAR, c } from "zodiac-roles-sdk/index"
-import { matchesCalldata } from "../../../conditions"
+import { PresetFunction } from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types"
 import { Comet } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
@@ -12,11 +12,18 @@ const ACTION_WITHDRAW_NATIVE_TOKEN = "0x414354494f4e5f57495448445241575f4e415449
 // const ACTION_WITHDRAW_ASSET = "0x414354494f4e5f57495448445241575f41535345540000000000000000000000"
 // const ACTION_CLAIM_REWARD = "0x414354494f4e5f434c41494d5f52455741524400000000000000000000000000"
 
+const _allow = (token: Comet): PresetFunction => {
+  return {
+    // IMPORTANT: the allow() function was added to the cUSDCv3 abi, using the cUSDCv3 Ext (0x285617313887d43256F852cAE0Ee4de4b68D45B0) abi
+    ...allow.mainnet.compoundV3.comet.allow(contracts.mainnet.compoundV3.MainnetBulker),
+    targetAddress: token.address,
+  }
+}
+
 export const deposit = (token: Comet) => {
   const permissions = []
   permissions.push(
-    // IMPORTANT: the allow() function was added to the cUSDCv3 abi, using the cUSDCv3 Ext (0x285617313887d43256F852cAE0Ee4de4b68D45B0) abi
-    allow.mainnet.compoundV3.cUSDCv3.allow(contracts.mainnet.compoundV3.MainnetBulker)
+    _allow(token)
   )
   if (token.symbol != "ETH") {
     permissions.push(allowErc20Approve([token.token], [contracts.mainnet.compoundV3.cUSDCv3]))
