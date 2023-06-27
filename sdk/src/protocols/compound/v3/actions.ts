@@ -14,7 +14,7 @@ const ACTION_WITHDRAW_NATIVE_TOKEN = "0x414354494f4e5f57495448445241575f4e415449
 
 const _allow = (token: Comet): PresetFunction => {
   return {
-    // IMPORTANT: the allow() function was added to the cUSDCv3 abi, using the cUSDCv3 Ext (0x285617313887d43256F852cAE0Ee4de4b68D45B0) abi
+    // IMPORTANT: the allow() function was added to the comet abi, using the cUSDCv3 Ext (0x285617313887d43256F852cAE0Ee4de4b68D45B0) abi
     ...allow.mainnet.compoundV3.comet.allow(contracts.mainnet.compoundV3.MainnetBulker),
     targetAddress: token.address,
   }
