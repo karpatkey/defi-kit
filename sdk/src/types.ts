@@ -10,7 +10,7 @@ export enum Chain {
 
 // These types define the common interface for actions across all protocols
 export type ProtocolActions = {
-  deposit?: (options: { targets: any[] }) => PresetAllowEntry[]
+  deposit?: (options: { targets: any[], tokens?: any[] }) => PresetAllowEntry[]
 
   borrow?: (options: {}) => PresetAllowEntry[]
 

@@ -20,6 +20,11 @@ export const contracts = {
       maximillion: "0xf859A1AD94BcF445A406B892eF0d3082f4174088",
       cToken: "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643",
     },
+    compoundV3: {
+      cUSDCv3: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+      MainnetBulker: "0xa397a8C2086C554B531c02E29f3291c9704B00c7",
+      CometRewards: "0x1b0e765f6224c21223aea2af16c1c46e38885a40",
+    },
     curve: {
       regularPool: "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7",
       metaPool: "0x4f062658eaaf2c1ccf8c8e36d6824cdf41167956",

@@ -8,11 +8,13 @@ import { c, forAll } from "zodiac-roles-sdk"
 import { PresetFunction } from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types"
 
 
-// export const _mint = (ctoken: cToken) => ({
-//   targetAddress: ctoken,
-//   signature: "mint(uint256)",
-//   send: true,
-// })
+// const _mint = (ctoken: cToken): PresetFunction => {
+//   return {
+//     targetAddress: ctoken,
+//     signature: "mint(uint256)",
+//     send: true,
+//   }
+// }
 
 const _mint = (ctoken: cToken): PresetFunction => {
   return {

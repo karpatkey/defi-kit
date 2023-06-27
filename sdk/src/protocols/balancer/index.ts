@@ -5,9 +5,11 @@ import { deposit, swap } from "./actions"
 
 export const eth = {
   deposit: (options: {
-    targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
+    targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[],
+    tokens?: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[],
+
   }) =>
-    options.targets.flatMap((target) => deposit(findPool(ethPools, target))),
+    options.targets.flatMap((target) => deposit(findPool(ethPools, target)), tokens),
 
   swap: (options: {
     sell?: EthToken[]
