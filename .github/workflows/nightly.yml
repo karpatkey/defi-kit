@@ -1,6 +1,10 @@
-name: Fetch protocol info and update config files
+name: Check for protocol updates
 
 on:
+  push:
+    branches:
+      - aave-v2
+
   schedule:
     - cron: "0 0 * * *" # Every day at 00:00
 
@@ -8,37 +12,59 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  update-protocols:
     runs-on: ubuntu-latest
+    env:
+      CONFIG_PATH: ${{ github.workspace }}/scripts/config.json
     steps:
-      - uses: actions/checkout@v2 # checkout the repository content
+      - uses: actions/checkout@v3
 
-      - name: setup python
+      - name: Setup python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10" # install the python version needed
+          python-version: "3.10"
+          cache: "pip"
 
-      - run: cd scripts
-
-      - name: install python packages
+      - name: Write config file
+        env:
+          DEFI_PROTOCOLS_CONFIG_JSON: ${{ secrets.DEFI_PROTOCOLS_CONFIG_JSON }}
         run: |
+          echo $DEFI_PROTOCOLS_CONFIG_JSON >> $CONFIG_PATH
+
+      - name: Install python dependencies
+        run: |
+          cd scripts
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run aave.py
-        env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python main.py
+      - name: Run aave_v2.py
+        run: python scripts/aave_v2.py
+      - name: Run aave_v3.py
+        run: python scripts/aave_v3.py
 
-      - name: commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
-
-      - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
+      - uses: actions/setup-node@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          node-version: 16
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+            .yarn/cache
+            .yarn/install-state.gz
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+
+      - name: Run prettier
+        run: |
+          yarn
+          yarn fix:prettier
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v3.10.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: protocol updates
+          title: "[nightly] Protocol updates"
+          body: >
+            The nightly job detected updates to the protocol configs
+          labels: bot
+          branch: protocol-updates
