@@ -5,7 +5,7 @@ from defi_protocols import Balancer
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
 from pathlib import Path
-from dump import dump
+from lib.dump import dump
 import os
 
 
@@ -56,8 +56,7 @@ def subgraph_query():
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def transactions_data(blockchain):
 
-    result = {}
-
+    result = []
     web3 = get_node(blockchain)
 
     pools = subgraph_query()
@@ -96,7 +95,7 @@ def transactions_data(blockchain):
 
         pool_id_hex = '0x' + lptoken_data['poolId'].hex()
 
-        pool_name = 'Balancer'
+        pool_name = ''
 
         for i in range(len(pool_tokens)):
 
@@ -107,17 +106,18 @@ def transactions_data(blockchain):
             token_symbol = get_symbol(token_address, blockchain)
 
             if i == 0 or (lptoken_data['bptIndex'] == 0 and i == 1):
-                pool_name += ' %s' % token_symbol
+                pool_name += token_symbol
             else:
                 pool_name += '/%s' % token_symbol
         
-        result[lptoken_address] = {
-            'pool id': pool_id_hex,
-            'pool name': pool_name, 
-            'pool type': pool['poolType'],
+        result.append({
+            'bpt': lptoken_address,
+            'id': pool_id_hex,
+            'name': pool_name, 
+            'type': pool['poolType'],
             'gauge': gauge_address,
             'tokens': pool_tokens
-        }
+        })
 
         print(j)
         j += 1
