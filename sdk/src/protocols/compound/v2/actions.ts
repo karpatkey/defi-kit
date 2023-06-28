@@ -6,42 +6,51 @@ import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
 import { PresetFunction } from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types"
 
-const _mint2 = (ctoken: cToken): PresetFunction => {
+
+// const _mint = (ctoken: cToken): PresetFunction => {
+//   return {
+//     targetAddress: ctoken,
+//     signature: "mint(uint256)",
+//     send: true,
+//   }
+// }
+
+const _mint = (ctoken: cToken): PresetFunction => {
   return {
     ...allow.mainnet.compoundV2.cToken.mint(undefined, { send: true }),
     targetAddress: ctoken,
   }
 }
 
-export const _mint = (ctoken: cToken) => ({
-  targetAddress: ctoken,
-  signature: "mint(uint256)",
-  send: true,
-})
+// it is called when MAX underlying amount is withdrawn
+const _redeem = (ctoken: cToken): PresetFunction => {
+  return {
+    ...allow.mainnet.compoundV2.cToken.redeem(),
+    targetAddress: ctoken,
+  }
+}
 
-export const _redeem = (ctoken: cToken[]) =>
-  forAll(ctoken, {
-    signature: "redeem(uint256)",
-    condition: c.matchesAbi([undefined], ["uint256"]),
-  })
+// it is called when MAX underlying amount is NOT withdrawn
+const _redeemUnderlying = (ctoken: cToken): PresetFunction => {
+  return {
+    ...allow.mainnet.compoundV2.cToken.redeemUnderlying(),
+    targetAddress: ctoken,
+  }
+}
 
-export const _redeemUnderlying = (ctoken: cToken[]) =>
-  forAll(ctoken, {
-    signature: "redeemUnderlying(uint256)",
-    condition: c.matchesAbi([undefined], ["uint256"]),
-  })
+const _borrow = (ctoken: cToken): PresetFunction => {
+  return {
+    ...allow.mainnet.compoundV2.cToken.borrow(),
+    targetAddress: ctoken,
+  }
+}
 
-export const _borrow = (ctoken: cToken[]) =>
-  forAll(ctoken, {
-    signature: "borrow(uint256)",
-    condition: c.matchesAbi([undefined], ["uint256"]),
-  })
-
-export const _repay = (ctoken: cToken[]) =>
-  forAll(ctoken, {
-    signature: "repayBorrow(uint256)",
-    condition: c.matchesAbi([undefined], ["uint256"]),
-  })
+const _repay = (ctoken: cToken): PresetFunction => {
+  return {
+    ...allow.mainnet.compoundV2.cToken.repayBorrow(),
+    targetAddress: ctoken,
+  }
+}
 
 export const deposit = (token: Token) => {
   const permissions = []
@@ -52,8 +61,8 @@ export const deposit = (token: Token) => {
       permissions.push(allowErc20Approve([token.token], [token.cToken]))
     }
     permissions.push(_mint(token.cToken))
-    permissions.push(_redeem([token.cToken]))
-    permissions.push(_redeemUnderlying([token.cToken]))
+    permissions.push(_redeem(token.cToken))
+    permissions.push(_redeemUnderlying(token.cToken))
     permissions.push(
       allow.mainnet.compoundV2.comptroller.enterMarkets([token.cToken])
     )
@@ -75,9 +84,9 @@ export const borrow = (token: Token) => {
   const permissions = []
   if (token.symbol != "ETH") {
     permissions.push(allowErc20Approve([token.token], [token.cToken]))
-    permissions.push(_repay([token.cToken]))
+    permissions.push(_repay(token.cToken))
   } else {
     permissions.push(allow.mainnet.compoundV2.maximillion.repayBehalf(AVATAR))
   }
-  permissions.push(_borrow([token.cToken]))
+  permissions.push(_borrow(token.cToken))
 }
