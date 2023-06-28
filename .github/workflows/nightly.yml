@@ -55,7 +55,6 @@ jobs:
 
       - name: Run prettier
         run: |
-          cd ..
           yarn
           yarn fix:prettier
 
