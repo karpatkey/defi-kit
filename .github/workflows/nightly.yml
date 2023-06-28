@@ -29,17 +29,16 @@ jobs:
         run: |
           echo $POSTGRESQL_HOST >> $CONFIG_PATH
 
-      - run: cd scripts
-
       - name: install python packages
         run: |
+          cd scripts
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: run aave_v2.py
-        run: python aave_v2.py
+        run: python scripts/aave_v2.py
       - name: run aave_v3.py
-        run: python aave_v3py
+        run: python scripts/aave_v3py
 
       - uses: actions/setup-node@v3
         with:
