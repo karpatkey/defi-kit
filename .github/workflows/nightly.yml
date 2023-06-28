@@ -40,7 +40,7 @@ jobs:
       - name: Run aave_v2.py
         run: python scripts/aave_v2.py
       - name: Run aave_v3.py
-        run: python scripts/aave_v3py
+        run: python scripts/aave_v3.py
 
       - uses: actions/setup-node@v3
         with:
