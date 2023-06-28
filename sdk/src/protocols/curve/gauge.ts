@@ -21,7 +21,7 @@ export const allowGauge = (pool: Pool) => {
     {
       targetAddress: CRV_MINTER,
       signature: "mint(address)",
-      condition: c.matchesAbi([pool.gauge.address], ["address"]),
+      condition: c.abiEncodedMatches([pool.gauge.address], ["address"]),
     },
   ]
 
@@ -29,7 +29,7 @@ export const allowGauge = (pool: Pool) => {
     result.push({
       targetAddress: pool.gauge.address,
       signature: "claim_rewards(address)",
-      condition: c.matchesAbi([AVATAR], ["address"]),
+      condition: c.abiEncodedMatches([AVATAR], ["address"]),
     })
   }
 

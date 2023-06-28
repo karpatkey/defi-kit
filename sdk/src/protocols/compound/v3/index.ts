@@ -1,13 +1,9 @@
 import { NotFoundError } from "../../../errors"
 import comets from "./_comets"
-import { Comet, Collaterals } from "./types"
+import { Comet, Token } from "./types"
 import { deposit, borrow } from "./actions"
 
-
-const findComet = (
-  comets: readonly Comet[],
-  symbolOrAddress: string
-): Comet => {
+const findComet = (symbolOrAddress: string): Comet => {
   const symbolAddressLower = symbolOrAddress.toLowerCase()
   const comet = comets.find(
     (comet) =>
@@ -20,32 +16,34 @@ const findComet = (
   return comet
 }
 
-const findToken = (
-  collaterals: readonly Collaterals[],
-  symbolOrAddress: string
-) => {
+const findToken = (symbolOrAddress: string) => {
   const symbolAddressLower = symbolOrAddress.toLowerCase()
-  const collateral = collaterals.find(
-    (collateral) =>
-      collateral.symbol.toLowerCase() === symbolAddressLower ||
-      collateral.address.toLowerCase() === symbolAddressLower
+  const tokens = comets.flatMap((comet) => [
+    comet.borrowToken,
+    ...comet.collateralTokens,
+  ])
+  const token = tokens.find(
+    (token) =>
+      token.symbol.toLowerCase() === symbolAddressLower ||
+      token.address.toLowerCase() === symbolAddressLower
   )
-  if (!collateral) {
-    throw new NotFoundError(`Collateral not found: ${symbolOrAddress}`)
+  if (!token) {
+    throw new NotFoundError(`Token not found: ${symbolOrAddress}`)
   }
-  return collateral
+  return token
 }
 
 export const eth = {
   deposit: ({
     target,
+    tokens,
   }: {
-    target: Comet["symbol"] | Comet["address"],
-    tokens?: (Comet['collateralTokens'][number]['address'] | Comet['collateralTokens'][number]['symbol'])[]
+    target: Comet["symbol"] | Comet["address"]
+    tokens?: (Token["address"] | Token["symbol"])[]
   }) => {
-      return deposit(findComet(comets, target), tokens.map(findToken()))
+    return deposit(findComet(target), tokens?.map(findToken))
   },
   borrow: () => {
     return borrow()
-  }
+  },
 }

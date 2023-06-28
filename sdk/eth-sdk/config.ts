@@ -32,11 +32,12 @@ export const contracts = {
     lido: {
       steth: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
       wsteth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      unsteth: "0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1"
+      unsteth: "0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1",
     },
     balancer: {
       relayer: "0xfeA793Aa415061C483D2390414275AD314B3F621",
       relayerLibrary: "0xf77018c0d817dA22caDbDf504C00c0d32cE1e5C2",
+      vault: "0xba12222222228d8ba445958a75a0704d566bf2c8",
     },
   },
   goerli: {
