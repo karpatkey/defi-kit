@@ -1,6 +1,6 @@
 import { NotFoundError } from "../../../errors"
 import comets from "./_comets"
-import { Comet, Token } from "./types"
+import { Comet, Token, BorrowToken } from "./types"
 import { deposit, borrow } from "./actions"
 
 const findComet = (symbolOrAddress: string): Comet => {
@@ -9,6 +9,19 @@ const findComet = (symbolOrAddress: string): Comet => {
     (comet) =>
       comet.symbol.toLowerCase() === symbolAddressLower ||
       comet.address.toLowerCase() === symbolAddressLower
+  )
+  if (!comet) {
+    throw new NotFoundError(`Comet not found: ${symbolOrAddress}`)
+  }
+  return comet
+}
+
+const findCometByBorrowToken = (symbolOrAddress: string): Comet => {
+  const symbolAddressLower = symbolOrAddress.toLowerCase()
+  const comet = comets.find(
+    (comet) =>
+      comet.borrowToken.symbol.toLowerCase() === symbolAddressLower ||
+      comet.borrowToken.address.toLowerCase() === symbolAddressLower
   )
   if (!comet) {
     throw new NotFoundError(`Comet not found: ${symbolOrAddress}`)
@@ -43,7 +56,11 @@ export const eth = {
   }) => {
     return deposit(findComet(target), tokens?.map(findToken))
   },
-  borrow: () => {
-    return borrow()
+  borrow: ({
+    target,
+  }: {
+    target: BorrowToken["symbol"] | BorrowToken["address"]
+  }) => {
+    return borrow(findCometByBorrowToken(target))
   },
 }

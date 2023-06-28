@@ -16,7 +16,10 @@ interface DepositOptions {
   tokens?: any[]
 }
 
-interface BorrowOptions {}
+interface BorrowOptions {
+  /** The target market from where to borrow */
+  targets: any[]
+}
 
 interface StakeOptions {}
 

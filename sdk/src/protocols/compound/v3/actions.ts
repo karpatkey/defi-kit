@@ -1,6 +1,6 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { AVATAR, c } from "zodiac-roles-sdk/index"
-import { PresetFunction } from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types"
+import { PresetAllowEntry, PresetFunction } from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types"
 import { Comet, Token } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
@@ -28,75 +28,73 @@ export const deposit = (
   comet: Comet,
   tokens: Token[] = [comet.borrowToken, ...comet.collateralTokens]
 ) => {
-  const permissions = []
-  permissions.push(_allow(comet))
-  if (comet.symbol !== "ETH") {
-    permissions.push(
-      allowErc20Approve([comet.token], [contracts.mainnet.compoundV3.cUSDCv3])
-    )
-    permissions.push(allow.mainnet.compoundV3.cUSDCv3.supply(comet.token))
-    // allow.mainnet.compoundV3.MainnetBulker.invoke(
-    //   [ACTION_SUPPLY_ASSET],
-    //   [contracts.mainnet.compoundV3.cUSDCv3, AVATAR, token.token],
-    // )
-    permissions.push(allow.mainnet.compoundV3.cUSDCv3.withdraw(comet.token))
-    // allow.mainnet.compoundV3.MainnetBulker.invoke(
-    //   [ACTION_WITHDRAW_ASSET],
-    //   [contracts.mainnet.compoundV3.cUSDCv3, AVATAR, token.token],
-    // )
-  } else {
+  const erc20Tokens = tokens.filter(token => token.symbol !== 'ETH')
+  const erc20TokenAddresses = erc20Tokens.map(token => token.address)
+
+  const permissions = [
+    // allow allowing the bulker
+    _allow(comet),
+
+    // allow approvals for all deposit tokens to the comet
+    ...allowErc20Approve(
+      erc20TokenAddresses,
+      [comet.address]
+    ),
+
+
+    // allow supply and withdraw of ERC-20 tokens
+    {...allow.mainnet.compoundV3.comet.supply(c.or(...(erc20TokenAddresses as [string, string, ...string[]]))), targetAddress: comet.address},
+    {...allow.mainnet.compoundV3.comet.withdraw(c.or(...(erc20TokenAddresses as [string, string, ...string[]]))), targetAddress: comet.address},
+  ]
+
+  if(tokens.some(token => token.symbol === 'ETH')) {
+    // allow supply and withdraw of ETH through the bulker contract
     permissions.push(
       allow.mainnet.compoundV3.MainnetBulker.invoke(
         [ACTION_SUPPLY_NATIVE_TOKEN],
         c.matches([
           c.abiEncodedMatches(
-            [contracts.mainnet.compoundV3.cUSDCv3, AVATAR],
+            [comet.address, AVATAR],
             ["address", "address", "uint256"]
           ),
         ]),
         { send: true }
-      )
-    )
-    permissions.push(
+      ),
+
       allow.mainnet.compoundV3.MainnetBulker.invoke(
         [ACTION_WITHDRAW_NATIVE_TOKEN],
         c.matches([
           c.abiEncodedMatches(
-            [contracts.mainnet.compoundV3.cUSDCv3, AVATAR],
+            [comet.address, AVATAR],
             ["address", "address", "uint256"]
           ),
         ])
       )
     )
   }
-  permissions.push(
-    allow.mainnet.compoundV3.CometRewards.claim(
-      contracts.mainnet.compoundV3.cUSDCv3,
-      AVATAR
-    )
-  )
-  // permissions.push(
-  //   allow.mainnet.compoundV3.MainnetBulker.invoke(
-  //     [ACTION_CLAIM_REWARD],
-  //     [contracts.mainnet.compoundV3.cUSDCv3, contracts.mainnet.compoundV3.CometRewards, AVATAR]
-  //   )
-  // )
 
   return permissions
 }
 
-export const borrow = () => {
-  return [
-    allowErc20Approve([USDC], [contracts.mainnet.compoundV3.cUSDCv3]),
-    allow.mainnet.compoundV3.cUSDCv3.supply(USDC),
-    // allow.mainnet.compoundV3.MainnetBulker.invoke(
-    //   [ACTION_SUPPLY_ASSET],
-    //   [contracts.mainnet.compoundV3.cUSDCv3, AVATAR, USDC],
-    // ),
-    allow.mainnet.compoundV3.cUSDCv3.withdraw(USDC),
-    // allow.mainnet.compoundV3.MainnetBulker.invoke(
-    //   [ACTION_WITHDRAW_ASSET],
-    //   [contracts.mainnet.compoundV3.cUSDCv3, AVATAR, USDC],
-    // )
+export const borrow = (comet: Comet) => {
+  const permissions: PresetAllowEntry[] = [
+    {...allow.mainnet.compoundV3.comet.supply(comet.borrowToken.address), targetAddress: comet.address},
+    {...allow.mainnet.compoundV3.comet.withdraw(comet.borrowToken.address), targetAddress: comet.address},
+    // Other option to avoid the if(comet.borrowToken.symbol !== 'ETH')
+    // ...(comet.borrowToken.symbol !== 'ETH' ? allowErc20Approve([comet.borrowToken.address], [comet.address]) : []),
   ]
+  
+  if(comet.borrowToken.symbol !== 'ETH') {
+    permissions.push(
+      ...allowErc20Approve([comet.borrowToken.address], [comet.address])
+    )
+  }
+
+}
+
+export const claim = (comet: Comet) => {
+  return [allow.mainnet.compoundV3.CometRewards.claim(
+    comet.address,
+    AVATAR
+  )]
 }
