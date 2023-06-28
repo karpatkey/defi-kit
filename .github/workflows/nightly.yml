@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  update-protocols:
     runs-on: ubuntu-latest
     env:
       CONFIG_PATH: ${{ github.workspace }}/scripts/config.json
@@ -34,10 +34,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: run aave.py
-        env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
-        run: python main.py
+      - name: run aave_v2.py
+        run: python aave_v2.py
+      - name: run aave_v3.py
+        run: python aave_v3py
 
       - uses: actions/setup-node@v3
         with:
