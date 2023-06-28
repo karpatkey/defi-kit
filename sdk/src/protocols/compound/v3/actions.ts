@@ -1,6 +1,9 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { AVATAR, c } from "zodiac-roles-sdk/index"
-import { PresetAllowEntry, PresetFunction } from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types"
+import {
+  PresetAllowEntry,
+  PresetFunction,
+} from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types"
 import { Comet, Token } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
@@ -28,26 +31,32 @@ export const deposit = (
   comet: Comet,
   tokens: Token[] = [comet.borrowToken, ...comet.collateralTokens]
 ) => {
-  const erc20Tokens = tokens.filter(token => token.symbol !== 'ETH')
-  const erc20TokenAddresses = erc20Tokens.map(token => token.address)
+  const erc20Tokens = tokens.filter((token) => token.symbol !== "ETH")
+  const erc20TokenAddresses = erc20Tokens.map((token) => token.address)
 
   const permissions = [
     // allow allowing the bulker
     _allow(comet),
 
     // allow approvals for all deposit tokens to the comet
-    ...allowErc20Approve(
-      erc20TokenAddresses,
-      [comet.address]
-    ),
-
+    ...allowErc20Approve(erc20TokenAddresses, [comet.address]),
 
     // allow supply and withdraw of ERC-20 tokens
-    {...allow.mainnet.compoundV3.comet.supply(c.or(...(erc20TokenAddresses as [string, string, ...string[]]))), targetAddress: comet.address},
-    {...allow.mainnet.compoundV3.comet.withdraw(c.or(...(erc20TokenAddresses as [string, string, ...string[]]))), targetAddress: comet.address},
+    {
+      ...allow.mainnet.compoundV3.comet.supply(
+        c.or(...(erc20TokenAddresses as [string, string, ...string[]]))
+      ),
+      targetAddress: comet.address,
+    },
+    {
+      ...allow.mainnet.compoundV3.comet.withdraw(
+        c.or(...(erc20TokenAddresses as [string, string, ...string[]]))
+      ),
+      targetAddress: comet.address,
+    },
   ]
 
-  if(tokens.some(token => token.symbol === 'ETH')) {
+  if (tokens.some((token) => token.symbol === "ETH")) {
     // allow supply and withdraw of ETH through the bulker contract
     permissions.push(
       allow.mainnet.compoundV3.MainnetBulker.invoke(
@@ -78,23 +87,25 @@ export const deposit = (
 
 export const borrow = (comet: Comet) => {
   const permissions: PresetAllowEntry[] = [
-    {...allow.mainnet.compoundV3.comet.supply(comet.borrowToken.address), targetAddress: comet.address},
-    {...allow.mainnet.compoundV3.comet.withdraw(comet.borrowToken.address), targetAddress: comet.address},
+    {
+      ...allow.mainnet.compoundV3.comet.supply(comet.borrowToken.address),
+      targetAddress: comet.address,
+    },
+    {
+      ...allow.mainnet.compoundV3.comet.withdraw(comet.borrowToken.address),
+      targetAddress: comet.address,
+    },
     // Other option to avoid the if(comet.borrowToken.symbol !== 'ETH')
     // ...(comet.borrowToken.symbol !== 'ETH' ? allowErc20Approve([comet.borrowToken.address], [comet.address]) : []),
   ]
-  
-  if(comet.borrowToken.symbol !== 'ETH') {
+
+  if (comet.borrowToken.symbol !== "ETH") {
     permissions.push(
       ...allowErc20Approve([comet.borrowToken.address], [comet.address])
     )
   }
-
 }
 
 export const claim = (comet: Comet) => {
-  return [allow.mainnet.compoundV3.CometRewards.claim(
-    comet.address,
-    AVATAR
-  )]
+  return [allow.mainnet.compoundV3.CometRewards.claim(comet.address, AVATAR)]
 }

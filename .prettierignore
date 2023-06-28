@@ -1,0 +1,14 @@
+
+node_modules
+
+.yarn
+app/coverage
+app/.next/
+app/out/
+app/build/
+app/next-env.d.ts
+
+playground/build
+
+sdk/dist
+sdk/eth-sdk/abis

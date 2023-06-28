@@ -25,7 +25,7 @@ export const depositToken = (token: Token) => {
     ),
     allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
       token.token
-    )
+    ),
   ]
 }
 
@@ -41,9 +41,7 @@ export const depositEther = () => [
     undefined,
     AVATAR
   ),
-  allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
-    WETH
-  )
+  allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(WETH),
 ]
 
 export const borrowToken = (token: Token) => {
@@ -64,7 +62,7 @@ export const borrowToken = (token: Token) => {
       undefined,
       undefined,
       AVATAR
-    )
+    ),
   ]
 }
 
@@ -82,7 +80,7 @@ export const borrowEther = () => {
       undefined,
       "0x",
       { send: true }
-    )
+    ),
   ]
 }
 
@@ -96,25 +94,13 @@ export const stake = () => {
       [contracts.mainnet.aaveV2.abpt],
       [contracts.mainnet.aaveV2.stkabpt]
     ),
-    allow.mainnet.aaveV2.stkaave.stake(
-      AVATAR
-    ),
-    allow.mainnet.aaveV2.stkabpt.stake(
-      AVATAR
-    ),
-    allow.mainnet.aaveV2.stkaave.redeem(
-      AVATAR
-    ),
-    allow.mainnet.aaveV2.stkabpt.redeem(
-      AVATAR
-    ),
+    allow.mainnet.aaveV2.stkaave.stake(AVATAR),
+    allow.mainnet.aaveV2.stkabpt.stake(AVATAR),
+    allow.mainnet.aaveV2.stkaave.redeem(AVATAR),
+    allow.mainnet.aaveV2.stkabpt.redeem(AVATAR),
     allow.mainnet.aaveV2.stkaave.cooldown(),
     allow.mainnet.aaveV2.stkabpt.cooldown(),
-    allow.mainnet.aaveV2.stkaave.claimRewards(
-      AVATAR
-    ),
-    allow.mainnet.aaveV2.stkabpt.claimRewards(
-      AVATAR
-    ),
+    allow.mainnet.aaveV2.stkaave.claimRewards(AVATAR),
+    allow.mainnet.aaveV2.stkabpt.claimRewards(AVATAR),
   ]
 }

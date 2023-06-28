@@ -25,7 +25,7 @@ export const depositToken = (token: Token) => {
     ),
     allow.mainnet.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(
       token.token
-    )
+    ),
   ]
 }
 
@@ -41,9 +41,7 @@ export const depositEther = () => [
     undefined,
     AVATAR
   ),
-  allow.mainnet.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(
-    WETH
-  )
+  allow.mainnet.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(WETH),
 ]
 
 export const borrowToken = (token: Token) => {
@@ -64,7 +62,7 @@ export const borrowToken = (token: Token) => {
       undefined,
       undefined,
       AVATAR
-    )
+    ),
   ]
 }
 
@@ -82,6 +80,6 @@ export const borrowEther = () => {
       undefined,
       "0x",
       { send: true }
-    )
+    ),
   ]
 }

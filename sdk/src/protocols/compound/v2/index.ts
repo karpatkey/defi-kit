@@ -20,18 +20,10 @@ const findToken = (
 }
 
 export const eth = {
-  deposit: ({
-    target,
-  }: {
-    target: Token["symbol"] | Token["token"]
-  }) => {
-      return deposit(findToken(tokens, target))
+  deposit: ({ target }: { target: Token["symbol"] | Token["token"] }) => {
+    return deposit(findToken(tokens, target))
   },
-  borrow: ({
-    target,
-  }: {
-    target: Token["symbol"] | Token["token"]
-  }) => {
+  borrow: ({ target }: { target: Token["symbol"] | Token["token"] }) => {
     return borrow(findToken(tokens, target))
-  }
+  },
 }

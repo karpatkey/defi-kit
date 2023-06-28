@@ -13,8 +13,8 @@
     "build": "yarn workspaces foreach -pt run build",
     "setup": "yarn workspace defi-presets run setup",
     "dev": "yarn workspaces foreach -pi run dev",
-    "check:prettier": "prettier '**/*.{js,ts,tsx,json,md}' --ignore-path .gitignore --list-different",
-    "fix:prettier": "prettier '**/*.{js,ts,tsx,json,md}' --ignore-path .gitignore --write",
+    "check:prettier": "prettier '**/*.{js,ts,tsx,json,md}' --list-different",
+    "fix:prettier": "prettier '**/*.{js,ts,tsx,json,md}' --write",
     "run-script": "cd scripts && env-cmd python"
   },
   "packageManager": "yarn@3.5.1",

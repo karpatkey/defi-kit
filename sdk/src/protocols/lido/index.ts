@@ -16,7 +16,7 @@ export const eth = {
     allow.mainnet.lido.wsteth.wrap(),
     allow.mainnet.lido.wsteth.unwrap(),
     allow.mainnet.lido.steth.submit(undefined, { send: true }),
-    // Request stETH Withdrawal - Locks your stETH in the queue. In exchange you receive an NFT, that represents your position 
+    // Request stETH Withdrawal - Locks your stETH in the queue. In exchange you receive an NFT, that represents your position
     // in the queue
     allow.mainnet.lido.unsteth.requestWithdrawals(undefined, AVATAR),
     // When the unstETH has no allowance over the owner's stETH
@@ -26,6 +26,9 @@ export const eth = {
     // in the queue. In exchange you receive an NFT, that represents your position in the queue
     allow.mainnet.lido.unsteth.requestWithdrawals(undefined, AVATAR),
     // When the unstETH has no allowance over the owner's wstETH
-    allow.mainnet.lido.unsteth.requestWithdrawalsWstETHWithPermit(undefined, AVATAR),
+    allow.mainnet.lido.unsteth.requestWithdrawalsWstETHWithPermit(
+      undefined,
+      AVATAR
+    ),
   ],
 }

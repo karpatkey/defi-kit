@@ -2,7 +2,10 @@ import { PlaygroundPlugin, PluginFactory } from ".."
 
 import { allNPMPlugins } from "./fixtures/npmPlugins"
 
-const pluginRegistry = ["typescript-playground-presentation-mode", "playground-transformer-timeline"]
+const pluginRegistry = [
+  "typescript-playground-presentation-mode",
+  "playground-transformer-timeline",
+]
 
 /** Whether the playground should actively reach out to an existing plugin */
 export const allowConnectingToLocalhost = () => {
@@ -10,12 +13,14 @@ export const allowConnectingToLocalhost = () => {
 }
 
 export const activePlugins = () => {
-  const existing = customPlugins().map(module => ({ id: module }))
-  return existing.concat(allNPMPlugins.filter(p => !!localStorage.getItem("plugin-" + p.id)))
+  const existing = customPlugins().map((module) => ({ id: module }))
+  return existing.concat(
+    allNPMPlugins.filter((p) => !!localStorage.getItem("plugin-" + p.id))
+  )
 }
 
 const removeCustomPlugins = (mod: string) => {
-  const newPlugins = customPlugins().filter(p => p !== mod)
+  const newPlugins = customPlugins().filter((p) => p !== mod)
   localStorage.setItem("custom-plugins-playground", JSON.stringify(newPlugins))
 }
 
@@ -26,7 +31,10 @@ export const addCustomPlugin = (mod: string) => {
   // @ts-ignore
   window.appInsights &&
     // @ts-ignore
-    window.appInsights.trackEvent({ name: "Added Custom Module", properties: { id: mod } })
+    window.appInsights.trackEvent({
+      name: "Added Custom Module",
+      properties: { id: mod },
+    })
 }
 
 const customPlugins = (): string[] => {
@@ -41,14 +49,16 @@ export const optionsPlugin: PluginFactory = (i, utils) => {
     willMount: (_sandbox, container) => {
       const ds = utils.createDesignSystem(container)
 
-      const featured = allNPMPlugins.filter(p => pluginRegistry.includes(p.id))
-      const rest = allNPMPlugins.filter(p => !pluginRegistry.includes(p.id))
+      const featured = allNPMPlugins.filter((p) =>
+        pluginRegistry.includes(p.id)
+      )
+      const rest = allNPMPlugins.filter((p) => !pluginRegistry.includes(p.id))
 
       ds.subtitle(i("play_sidebar_featured_plugins"))
 
       const featuredPluginsOL = document.createElement("ol")
       featuredPluginsOL.className = "playground-plugins featured"
-      featured.forEach(plugin => {
+      featured.forEach((plugin) => {
         const settingButton = createPlugin(plugin)
         featuredPluginsOL.appendChild(settingButton)
       })
@@ -58,7 +68,7 @@ export const optionsPlugin: PluginFactory = (i, utils) => {
 
       const pluginsOL = document.createElement("ol")
       pluginsOL.className = "playground-plugins"
-      rest.forEach(plugin => {
+      rest.forEach((plugin) => {
         const settingButton = createPlugin(plugin)
         pluginsOL.appendChild(settingButton)
       })
@@ -79,7 +89,7 @@ export const optionsPlugin: PluginFactory = (i, utils) => {
         while (customModulesOL.firstChild) {
           customModulesOL.removeChild(customModulesOL.firstChild)
         }
-        customPlugins().forEach(module => {
+        customPlugins().forEach((module) => {
           const li = document.createElement("li")
           li.innerHTML = module
           const a = document.createElement("a")
@@ -121,7 +131,7 @@ export const optionsPlugin: PluginFactory = (i, utils) => {
     },
   }
 
-  const createPlugin = (plugin: typeof allNPMPlugins[0]) => {
+  const createPlugin = (plugin: (typeof allNPMPlugins)[0]) => {
     const li = document.createElement("li")
     const div = document.createElement("div")
 
@@ -133,7 +143,9 @@ export const optionsPlugin: PluginFactory = (i, utils) => {
     const escapedDescription = p.innerHTML
 
     const top = `<span>${plugin.name}</span> by <a href='https://www.npmjs.com/~${plugin.author}'>${plugin.author}</a><br/>${escapedDescription}`
-    const repo = plugin.href.includes("github") ? `| <a href="${plugin.href}">repo</a>` : ""
+    const repo = plugin.href.includes("github")
+      ? `| <a href="${plugin.href}">repo</a>`
+      : ""
     const bottom = `<a href='https://www.npmjs.com/package/${plugin.id}'>npm</a> ${repo}`
     label.innerHTML = `${top}<br/>${bottom}`
 
@@ -150,7 +162,10 @@ export const optionsPlugin: PluginFactory = (i, utils) => {
         // @ts-ignore
         window.appInsights &&
           // @ts-ignore
-          window.appInsights.trackEvent({ name: "Added Registry Plugin", properties: { id: key } })
+          window.appInsights.trackEvent({
+            name: "Added Registry Plugin",
+            properties: { id: key },
+          })
         localStorage.setItem(key, "true")
       } else {
         localStorage.removeItem(key)
@@ -170,11 +185,13 @@ export const optionsPlugin: PluginFactory = (i, utils) => {
 
     const newModuleInput = document.createElement("input")
     newModuleInput.type = "text"
-    newModuleInput.placeholder = i("play_sidebar_plugins_options_modules_placeholder")
+    newModuleInput.placeholder = i(
+      "play_sidebar_plugins_options_modules_placeholder"
+    )
     newModuleInput.setAttribute("aria-labelledby", "custom-modules-header")
     form.appendChild(newModuleInput)
 
-    form.onsubmit = e => {
+    form.onsubmit = (e) => {
       const ds = utils.createDesignSystem(form)
       ds.declareRestartRequired(i)
 

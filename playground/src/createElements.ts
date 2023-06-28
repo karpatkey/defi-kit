@@ -48,7 +48,10 @@ export const createDragBar = (side: "left" | "right") => {
     if (window.localStorage) {
       window.localStorage.setItem("dragbar-left", "" + leftSize)
       window.localStorage.setItem("dragbar-right", "" + rightSize)
-      window.localStorage.setItem("dragbar-window-width", "" + window.innerWidth)
+      window.localStorage.setItem(
+        "dragbar-window-width",
+        "" + window.innerWidth
+      )
     }
 
     // @ts-ignore - I know what I'm doing
@@ -59,11 +62,13 @@ export const createDragBar = (side: "left" | "right") => {
     e.cancelBubble = true
   }
 
-  sidebar.addEventListener("mousedown", e => {
+  sidebar.addEventListener("mousedown", (e) => {
     sidebar.classList.add("selected")
     left = document.getElementById("navigation-container")!
     middle = document.getElementById("editor-container")!
-    right = sidebar.parentElement?.getElementsByClassName("playground-sidebar").item(0)! as any
+    right = sidebar.parentElement
+      ?.getElementsByClassName("playground-sidebar")
+      .item(0)! as any
     // Handle dragging all over the screen
     document.addEventListener("mousemove", drag)
 
@@ -83,7 +88,8 @@ export const createDragBar = (side: "left" | "right") => {
   return sidebar
 }
 
-export const sidebarHidden = () => !!window.localStorage.getItem("sidebar-hidden")
+export const sidebarHidden = () =>
+  !!window.localStorage.getItem("sidebar-hidden")
 
 export const createSidebar = () => {
   const sidebar = document.createElement("div")
@@ -99,7 +105,10 @@ export const createSidebar = () => {
 
   if (window.localStorage && window.localStorage.getItem("dragbar-x")) {
     // Don't restore the x pos if the window isn't the same size
-    if (window.innerWidth === Number(window.localStorage.getItem("dragbar-window-width"))) {
+    if (
+      window.innerWidth ===
+      Number(window.localStorage.getItem("dragbar-window-width"))
+    ) {
       // Set the dragger to the previous x pos
       let width = window.localStorage.getItem("dragbar-x")
 
@@ -126,15 +135,24 @@ export const setupSidebarToggle = () => {
   const toggle = document.getElementById("sidebar-toggle")!
 
   const updateToggle = () => {
-    const sidebar = window.document.querySelector(".playground-sidebar") as HTMLDivElement
+    const sidebar = window.document.querySelector(
+      ".playground-sidebar"
+    ) as HTMLDivElement
     const sidebarShowing = sidebar.style.display !== "none"
 
-    toggle.innerHTML = sidebarShowing ? toggleIconWhenOpen : toggleIconWhenClosed
-    toggle.setAttribute("aria-label", sidebarShowing ? "Hide Sidebar" : "Show Sidebar")
+    toggle.innerHTML = sidebarShowing
+      ? toggleIconWhenOpen
+      : toggleIconWhenClosed
+    toggle.setAttribute(
+      "aria-label",
+      sidebarShowing ? "Hide Sidebar" : "Show Sidebar"
+    )
   }
 
   toggle.onclick = () => {
-    const sidebar = window.document.querySelector(".playground-sidebar") as HTMLDivElement
+    const sidebar = window.document.querySelector(
+      ".playground-sidebar"
+    ) as HTMLDivElement
     const newState = sidebar.style.display !== "none"
 
     if (newState) {
@@ -166,8 +184,10 @@ export const createTabBar = () => {
 
   /** Support left/right in the tab bar for accessibility */
   let tabFocus = 0
-  tabBar.addEventListener("keydown", e => {
-    const tabs = document.querySelectorAll('.playground-plugin-tabview [role="tab"]')
+  tabBar.addEventListener("keydown", (e) => {
+    const tabs = document.querySelectorAll(
+      '.playground-plugin-tabview [role="tab"]'
+    )
     // Move right
     if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
       tabs[tabFocus].setAttribute("tabindex", "-1")
@@ -221,16 +241,22 @@ export const activatePlugin = (
   // @ts-ignore - This works at runtime
   for (const tab of tabBar.children) {
     if (tab.id === `playground-plugin-tab-${plugin.id}`) newPluginTab = tab
-    if (previousPlugin && tab.id === `playground-plugin-tab-${previousPlugin.id}`) oldPluginTab = tab
+    if (
+      previousPlugin &&
+      tab.id === `playground-plugin-tab-${previousPlugin.id}`
+    )
+      oldPluginTab = tab
   }
 
   // @ts-ignore
-  if (!newPluginTab) throw new Error("Could not get a tab for the plugin: " + plugin.displayName)
+  if (!newPluginTab)
+    throw new Error("Could not get a tab for the plugin: " + plugin.displayName)
 
   // Tell the old plugin it's getting the boot
   // @ts-ignore
   if (previousPlugin && oldPluginTab) {
-    if (previousPlugin.willUnmount) previousPlugin.willUnmount(sandbox, container)
+    if (previousPlugin.willUnmount)
+      previousPlugin.willUnmount(sandbox, container)
     oldPluginTab.classList.remove("active")
     oldPluginTab.setAttribute("aria-selected", "false")
     oldPluginTab.removeAttribute("tabindex")
@@ -248,12 +274,15 @@ export const activatePlugin = (
 
   // Tell the new plugin to start doing some work
   if (plugin.willMount) plugin.willMount(sandbox, container)
-  if (plugin.modelChanged) plugin.modelChanged(sandbox, sandbox.getModel(), container)
-  if (plugin.modelChangedDebounce) plugin.modelChangedDebounce(sandbox, sandbox.getModel(), container)
+  if (plugin.modelChanged)
+    plugin.modelChanged(sandbox, sandbox.getModel(), container)
+  if (plugin.modelChangedDebounce)
+    plugin.modelChangedDebounce(sandbox, sandbox.getModel(), container)
   if (plugin.didMount) plugin.didMount(sandbox, container)
 
   // Let the previous plugin do any slow work after it's all done
-  if (previousPlugin && previousPlugin.didUnmount) previousPlugin.didUnmount(sandbox, container)
+  if (previousPlugin && previousPlugin.didUnmount)
+    previousPlugin.didUnmount(sandbox, container)
 }
 
 export const createNavigationSection = () => {

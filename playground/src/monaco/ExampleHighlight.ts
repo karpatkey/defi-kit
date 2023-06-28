@@ -2,7 +2,7 @@
  * Allows inline clicking on internal URLs to get different example code
  */
 export class ExampleHighlighter {
-  provideLinks(model: import('monaco-editor').editor.IModel) {
+  provideLinks(model: import("monaco-editor").editor.IModel) {
     const text = model.getValue()
 
     // https://regex101.com/r/3uM4Fa/1
@@ -24,9 +24,9 @@ export class ExampleHighlighter {
         endColumn: endPos.column,
       }
 
-      const url = document.location.href.split('#')[0]
+      const url = document.location.href.split("#")[0]
       links.push({
-        url: url + '#example/' + match[1],
+        url: url + "#example/" + match[1],
         range,
       })
     }
