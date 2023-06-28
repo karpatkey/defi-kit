@@ -19,25 +19,27 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: setup python
+      - name: Setup python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
           cache: "pip"
 
-      - name: setup config file
+      - name: Write config file
+        env:
+          DEFI_PROTOCOLS_CONFIG_JSON: ${{ secrets.DEFI_PROTOCOLS_CONFIG_JSON }}
         run: |
-          echo $POSTGRESQL_HOST >> $CONFIG_PATH
+          echo $DEFI_PROTOCOLS_CONFIG_JSON >> $CONFIG_PATH
 
-      - name: install python packages
+      - name: Install python dependencies
         run: |
           cd scripts
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: run aave_v2.py
+      - name: Run aave_v2.py
         run: python scripts/aave_v2.py
-      - name: run aave_v3.py
+      - name: Run aave_v3.py
         run: python scripts/aave_v3py
 
       - uses: actions/setup-node@v3
@@ -51,13 +53,13 @@ jobs:
             .yarn/install-state.gz
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
 
-      - name: run prettier
+      - name: Run prettier
         run: |
           cd ..
           yarn
           yarn fix:prettier
 
-      - name: create pr
+      - name: Create PR
         uses: peter-evans/create-pull-request@v3.10.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
