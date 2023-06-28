@@ -68,7 +68,7 @@ export default [
     "borrowingEnabled": false,
     "stableBorrowRateEnabled": false,
     "isActive": true,
-    "isFrozen": false,
+    "isFrozen": true,
     "aTokenAddress": "0xB9D7CB55f463405CDfBe4E90a6D2Df01C2B92BF1",
     "stableDebtTokenAddress": "0xD939F7430dC8D5a427f156dE1012A56C18AcB6Aa",
     "variableDebtTokenAddress": "0x5BdB050A92CADcCfCDcCCBFC17204a1C9cC0Ab73"
@@ -152,7 +152,7 @@ export default [
     "borrowingEnabled": false,
     "stableBorrowRateEnabled": true,
     "isActive": true,
-    "isFrozen": false,
+    "isFrozen": true,
     "aTokenAddress": "0xa06bC25B5805d5F8d82847D191Cb4Af5A3e873E0",
     "stableDebtTokenAddress": "0xFB4AEc4Cc858F2539EBd3D37f2a43eAe5b15b98a",
     "variableDebtTokenAddress": "0x0b8f12b1788BFdE65Aa1ca52E3e9F3Ba401be16D"
@@ -176,7 +176,7 @@ export default [
     "borrowingEnabled": false,
     "stableBorrowRateEnabled": true,
     "isActive": true,
-    "isFrozen": false,
+    "isFrozen": true,
     "aTokenAddress": "0xc713e5E149D5D0715DcD1c156a020976e7E56B88",
     "stableDebtTokenAddress": "0xC01C8E4b12a89456a9fD4e4e75B72546Bf53f0B5",
     "variableDebtTokenAddress": "0xba728eAd5e496BE00DCF66F650b6d7758eCB50f8"
@@ -200,7 +200,7 @@ export default [
     "borrowingEnabled": false,
     "stableBorrowRateEnabled": false,
     "isActive": true,
-    "isFrozen": false,
+    "isFrozen": true,
     "aTokenAddress": "0x35f6B052C598d933D69A4EEC4D04c73A191fE6c2",
     "stableDebtTokenAddress": "0x8575c8ae70bDB71606A53AeA1c6789cB0fBF3166",
     "variableDebtTokenAddress": "0x267EB8Cf715455517F9BD5834AeAE3CeA1EBdbD8"
@@ -392,7 +392,7 @@ export default [
     "borrowingEnabled": false,
     "stableBorrowRateEnabled": false,
     "isActive": true,
-    "isFrozen": false,
+    "isFrozen": true,
     "aTokenAddress": "0x9a14e23A58edf4EFDcB360f68cd1b95ce2081a2F",
     "stableDebtTokenAddress": "0x34441FFD1948E49dC7a607882D0c38Efd0083815",
     "variableDebtTokenAddress": "0x176808047cc9b7A2C9AE202c593ED42dDD7C0D13"
@@ -428,7 +428,7 @@ export default [
     "borrowingEnabled": false,
     "stableBorrowRateEnabled": false,
     "isActive": true,
-    "isFrozen": false,
+    "isFrozen": true,
     "aTokenAddress": "0xB29130CBcC3F791f077eAdE0266168E808E5151e",
     "stableDebtTokenAddress": "0x1278d6ED804d59d2d18a5Aa5638DfD591A79aF0a",
     "variableDebtTokenAddress": "0xD7896C1B9b4455aFf31473908eB15796ad2295DA"
