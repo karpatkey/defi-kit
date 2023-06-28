@@ -1,10 +1,6 @@
 name: Check for protocol updates
 
 on:
-  push:
-    branches:
-      - aave-v2
-
   schedule:
     - cron: "0 0 * * *" # Every day at 00:00
 
