@@ -8,7 +8,7 @@ const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
 
 export const depositToken = (token: Token) => {
   return [
-    allowErc20Approve(
+    ...allowErc20Approve(
       [token.token],
       [contracts.mainnet.aaveV2.aaveLendingPoolV2]
     ),
@@ -46,7 +46,7 @@ export const depositEther = () => [
 
 export const borrowToken = (token: Token) => {
   return [
-    allowErc20Approve(
+    ...allowErc20Approve(
       [token.token],
       [contracts.mainnet.aaveV2.aaveLendingPoolV2]
     ),
@@ -86,11 +86,11 @@ export const borrowEther = () => {
 
 export const stake = () => {
   return [
-    allowErc20Approve(
+    ...allowErc20Approve(
       [contracts.mainnet.aaveV2.aave],
       [contracts.mainnet.aaveV2.stkaave]
     ),
-    allowErc20Approve(
+    ...allowErc20Approve(
       [contracts.mainnet.aaveV2.abpt],
       [contracts.mainnet.aaveV2.stkabpt]
     ),

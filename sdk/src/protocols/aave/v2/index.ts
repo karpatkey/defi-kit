@@ -27,22 +27,26 @@ const findToken = (
 
 export const eth = {
   deposit: ({
-    target,
+    targets,
   }: {
-    target: "ETH" | Token["symbol"] | Token["token"]
+    targets: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
-    return target === "ETH"
+    return targets.flatMap(
+      (target) => target === 'ETH'
       ? depositEther()
       : depositToken(findToken(tokens, target))
+    )
   },
   borrow: ({
-    target,
+    targets,
   }: {
-    target: "ETH" | Token["symbol"] | Token["token"]
+    targets: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
-    return target === "ETH"
+    return targets.flatMap(
+      (target) => target === 'ETH'
       ? borrowEther()
       : borrowToken(findToken(tokens, target))
+    )
   },
   stake: () => {
     return stake()

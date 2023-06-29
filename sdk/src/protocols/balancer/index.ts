@@ -9,8 +9,7 @@ export const eth = {
     tokens?: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
   }) =>
     options.targets.flatMap(
-      (target) => deposit(findPool(ethPools, target)),
-      tokens
+      (target) => deposit(findPool(ethPools, target))
     ),
 
   swap: (options: {
@@ -29,7 +28,7 @@ export const eth = {
     ).flatMap((pool) => swap(pool, options.sell, options.buy)),
 }
 
-const findPool = (pools: readonly Pool[], nameIdOrBpt: string) => {
+export const findPool = (pools: readonly Pool[], nameIdOrBpt: string) => {
   const nameIdOrBptLower = nameIdOrBpt.toLowerCase()
   const pool = pools.find(
     (pool) =>

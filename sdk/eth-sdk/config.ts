@@ -15,6 +15,14 @@ export const contracts = {
       aaveLendingPoolV3: "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
       wrappedTokenGatewayV3: "0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C",
     },
+    aura: {
+      booster: "0xA57b8d98dAE62B26Ec3bcC4a365338157060B234",
+      reward_pool_deposit_wrapper: "0xB188b1CB84Fb0bA13cb9ee1292769F903A9feC59",
+      bal_depositor_wrapper: "0x68655AD9852a99C87C0934c7290BB62CFa5D4123",
+      b_80bal_20weth_depositor_wrapper: "0xeAd792B55340Aa20181A80d6a16db6A0ECd1b827",
+      aurabal_staking_rewarder: "0x00A7BA8Ae7bca0B10A32Ea1f8e2a1Da980c6CAd2",
+      rewarder: "0x59D66C58E83A26d6a0E35114323f65c3945c89c1",
+    },
     compoundV2: {
       comptroller: "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
       maximillion: "0xf859A1AD94BcF445A406B892eF0d3082f4174088",

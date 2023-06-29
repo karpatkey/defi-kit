@@ -57,7 +57,7 @@ export const deposit = (token: Token) => {
     throw new MintPaused(`Error: c${token.symbol} paused for minting`)
   } else {
     if (token.symbol != "ETH") {
-      permissions.push(allowErc20Approve([token.token], [token.cToken]))
+      permissions.push(...allowErc20Approve([token.token], [token.cToken]))
     }
     permissions.push(_mint(token.cToken))
     permissions.push(_redeem(token.cToken))
@@ -82,10 +82,12 @@ export const deposit = (token: Token) => {
 export const borrow = (token: Token) => {
   const permissions = []
   if (token.symbol != "ETH") {
-    permissions.push(allowErc20Approve([token.token], [token.cToken]))
+    permissions.push(...allowErc20Approve([token.token], [token.cToken]))
     permissions.push(_repay(token.cToken))
   } else {
     permissions.push(allow.mainnet.compoundV2.maximillion.repayBehalf(AVATAR))
   }
   permissions.push(_borrow(token.cToken))
+
+  return permissions
 }
