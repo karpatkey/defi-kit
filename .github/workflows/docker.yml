@@ -1,4 +1,4 @@
-name: Build and push to Docker registry
+name: Build and Push to Docker Registry
 
 # Controls when the action will run.
 on:
@@ -16,9 +16,10 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a three jobs called "test_app", "build", "push_on_docker"
-
+ # This workflow contains a three jobs called "test_app", "build", "push_on_docker"
+  
   docker:
+    
     runs-on: self-hosted
 
     steps:
@@ -32,6 +33,8 @@ jobs:
           tags: |
             type=ref,event=branch
             type=sha,prefix={{branch}}
+            latest
+
 
       - name: Login to Docker
         uses: docker/login-action@v1
