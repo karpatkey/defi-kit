@@ -43,4 +43,4 @@ export const allNPMPlugins = [
     author: "emnudge",
     href: "https://www.npmjs.com/package/ts-playground-plugin-github-explorer",
   },
-];
+]

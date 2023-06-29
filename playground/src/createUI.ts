@@ -10,7 +10,10 @@ export interface UI {
   /** A quick flash of some text */
   flashInfo: (message: string, time?: number) => void
   /** Creates a modal container which you can put your own DOM elements inside */
-  createModalOverlay: (postFocalElement: HTMLElement, classes?: string) => HTMLDivElement
+  createModalOverlay: (
+    postFocalElement: HTMLElement,
+    classes?: string
+  ) => HTMLDivElement
 }
 
 export const createUI = (): UI => {
@@ -33,11 +36,17 @@ export const createUI = (): UI => {
     }, timeout)
   }
 
-  const createModalOverlay = (postFocalElement: HTMLElement, classList?: string) => {
-    document.querySelectorAll(".navbar-sub li.open").forEach(i => i.classList.remove("open"))
+  const createModalOverlay = (
+    postFocalElement: HTMLElement,
+    classList?: string
+  ) => {
+    document
+      .querySelectorAll(".navbar-sub li.open")
+      .forEach((i) => i.classList.remove("open"))
 
     const existingPopover = document.getElementById("popover-modal")
-    if (existingPopover) existingPopover.parentElement!.removeChild(existingPopover)
+    if (existingPopover)
+      existingPopover.parentElement!.removeChild(existingPopover)
 
     const modalBG = document.createElement("div")
     modalBG.id = "popover-background"
@@ -118,15 +127,15 @@ export const createUI = (): UI => {
 
     modal.appendChild(buttonContainer)
     const close = modal.querySelector(".close") as HTMLElement
-    close.addEventListener("keydown", e => {
+    close.addEventListener("keydown", (e) => {
       if (e.key === "Tab") {
-        ; (modal.querySelector("textarea") as any).focus()
+        ;(modal.querySelector("textarea") as any).focus()
         e.preventDefault()
       }
     })
 
     if (links) {
-      Object.keys(links).forEach(name => {
+      Object.keys(links).forEach((name) => {
         const href = links[name]
         const extraButton = document.createElement("button")
         extraButton.innerText = name
@@ -148,9 +157,9 @@ export const createUI = (): UI => {
 
     const buttons = modal.querySelectorAll("button")
     const lastButton = buttons.item(buttons.length - 1) as HTMLElement
-    lastButton.addEventListener("keydown", e => {
+    lastButton.addEventListener("keydown", (e) => {
       if (e.key === "Tab") {
-        ; (document.querySelector(".close") as any).focus()
+        ;(document.querySelector(".close") as any).focus()
         e.preventDefault()
       }
     })

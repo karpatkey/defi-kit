@@ -9,7 +9,9 @@ export const createUtils = (sb: any, react: typeof React) => {
   const requireURL = (path: string) => {
     // https://unpkg.com/browse/typescript-playground-presentation-mode@0.0.1/dist/x.js => unpkg/browse/typescript-playground-presentation-mode@0.0.1/dist/x
     const isDev = document.location.host.includes("localhost")
-    const prefix = isDev ? "local/" : "unpkg/typescript-playground-presentation-mode/dist/"
+    const prefix = isDev
+      ? "local/"
+      : "unpkg/typescript-playground-presentation-mode/dist/"
     return prefix + path
   }
 

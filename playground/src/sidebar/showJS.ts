@@ -11,10 +11,12 @@ export const compiledJSPlugin: PluginFactory = (i, utils) => {
       codeElement = code("")
     },
     modelChangedDebounce: (sandbox, model) => {
-      sandbox.getRunnableJS().then(js => {
-        sandbox.monaco.editor.colorize(js, "javascript", {}).then(coloredJS => {
-          codeElement.innerHTML = coloredJS
-        })
+      sandbox.getRunnableJS().then((js) => {
+        sandbox.monaco.editor
+          .colorize(js, "javascript", {})
+          .then((coloredJS) => {
+            codeElement.innerHTML = coloredJS
+          })
       })
     },
   }

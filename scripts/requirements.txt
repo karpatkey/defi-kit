@@ -1,0 +1,11 @@
+#git+https://github.com/KarpatkeyDAO/defi-protocols-kpk.git#egg=defi_protocols
+#git+ssh://git@github.com/KarpatkeyDAO/defi-protocols-kpk.git#egg=defi_protocols
+
+git+https://github.com/KarpatkeyDAO/defi-protocols.git
+
+
+gql>=3.4.0
+web3>=5.29.0
+requests-toolbelt>=0.10.0
+tqdm>=4.64.1
+eth_abi>=4.0.0

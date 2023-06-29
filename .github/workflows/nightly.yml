@@ -1,0 +1,68 @@
+name: Check for protocol updates
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Every day at 00:00
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-protocols:
+    runs-on: ubuntu-latest
+    env:
+      CONFIG_PATH: ${{ github.workspace }}/scripts/config.json
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Write config file
+        env:
+          DEFI_PROTOCOLS_CONFIG_JSON: ${{ secrets.DEFI_PROTOCOLS_CONFIG_JSON }}
+        run: |
+          echo $DEFI_PROTOCOLS_CONFIG_JSON >> $CONFIG_PATH
+
+      - name: Install python dependencies
+        run: |
+          cd scripts
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run aave_v2.py
+        run: python scripts/aave_v2.py
+      - name: Run aave_v3.py
+        run: python scripts/aave_v3.py
+      - name: Run balancer.py
+        run: python scripts/balancer.py
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+            .yarn/cache
+            .yarn/install-state.gz
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+
+      - name: Run prettier
+        run: |
+          yarn
+          yarn fix:prettier
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v3.10.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: protocol updates
+          title: "[nightly] Protocol updates"
+          body: >
+            The nightly job detected updates to the protocol configs
+          labels: bot
+          branch: protocol-updates

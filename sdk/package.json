@@ -49,7 +49,7 @@
     "@dethcrypto/eth-sdk-client": "^0.1.6",
     "ethers": "^5.7.2",
     "zod": "^3.21.4",
-    "zodiac-roles-sdk": "^2.0.3"
+    "zodiac-roles-sdk": "^2.0.6"
   },
   "devDependencies": {
     "rimraf": "^5.0.1",

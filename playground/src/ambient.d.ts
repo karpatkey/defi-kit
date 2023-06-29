@@ -1,3 +1,3 @@
-declare module 'vfile-message' {
+declare module "vfile-message" {
   export interface VFileMessage {}
 }

@@ -11,10 +11,12 @@ export const showDTSPlugin: PluginFactory = (i, utils) => {
       codeElement = code("")
     },
     modelChanged: (sandbox, model) => {
-      sandbox.getDTSForCode().then(dts => {
-        sandbox.monaco.editor.colorize(dts, "typescript", {}).then(coloredDTS => {
-          codeElement.innerHTML = coloredDTS
-        })
+      sandbox.getDTSForCode().then((dts) => {
+        sandbox.monaco.editor
+          .colorize(dts, "typescript", {})
+          .then((coloredDTS) => {
+            codeElement.innerHTML = coloredDTS
+          })
       })
     },
   }

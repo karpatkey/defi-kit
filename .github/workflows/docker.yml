@@ -6,13 +6,10 @@ on:
   push:
     branches:
       - main
-      - aave-v2
-    
+
   pull_request:
     branches:
       - main
-      - aave-v2
-    
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
