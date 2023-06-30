@@ -21,6 +21,10 @@ export const contracts = {
       bal_depositor_wrapper: "0x68655AD9852a99C87C0934c7290BB62CFa5D4123",
       b_80bal_20weth_depositor_wrapper: "0xeAd792B55340Aa20181A80d6a16db6A0ECd1b827",
       aurabal_staking_rewarder: "0x00A7BA8Ae7bca0B10A32Ea1f8e2a1Da980c6CAd2",
+      stkaurabal: "0xfAA2eD111B4F580fCb85C48E6DC6782Dc5FCD7a6",
+      aurabal_staker: "0xa3fCaFCa8150636C3B736A16Cd73d49cC8A7E10E",
+      aurabal_compounding_rewarder: "0xAc16927429c5c7Af63dD75BC9d8a58c63FfD0147",
+      aura_locker: "0x3Fa73f1E5d8A792C80F426fc8F84FBF7Ce9bBCAC",
       rewarder: "0x59D66C58E83A26d6a0E35114323f65c3945c89c1",
     },
     compoundV2: {

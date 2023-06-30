@@ -5,9 +5,9 @@ import { allowErc20Approve } from "../../erc20"
 import { allow } from "zodiac-roles-sdk/kit"
 import { contracts } from "../../../eth-sdk/config"
 
-export const deposit = (pool: Pool) => {
+export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   return [
-    ...allowErc20Approve(pool.tokens, [contracts.mainnet.balancer.vault]),
+    ...allowErc20Approve(tokens, [contracts.mainnet.balancer.vault]),
 
     allow.mainnet.balancer.relayer.multicall(
       c.every(
@@ -19,7 +19,7 @@ export const deposit = (pool: Pool) => {
               AVATAR,
               AVATAR,
               {
-                assets: pool.tokens, // TODO
+                assets: pool.tokens, // TODO should be ordered by address
               }
             )
           ),
