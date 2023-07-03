@@ -6,6 +6,8 @@ export const contracts = {
       aaveLendingPoolV2: "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9",
       paraSwapRepayAdapter: "0x80Aca0C645fEdABaa20fd2Bf0Daf57885A309FE6",
       wrappedTokenGatewayV2: "0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31",
+      variableDebtWETH: "0xF63B34710400CAd3e044cFfDcAb00a0f32E33eCf",
+      stableDebtWETH: "0x4e977830ba4bd783C0BB7F15d3e243f73FF57121",
       aave: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
       abpt: "0x41A08648C3766F9F9d85598fF102a08f4ef84F84",
       stkaave: "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
@@ -14,6 +16,8 @@ export const contracts = {
     aaveV3: {
       aaveLendingPoolV3: "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
       wrappedTokenGatewayV3: "0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C",
+      variableDebtWETH: "0xeA51d7853EEFb32b6ee06b1C12E6dcCA88Be0fFE",
+      stableDebtWETH: "0x102633152313C81cD80419b6EcF66d14Ad68949A",
     },
     aura: {
       booster: "0xA57b8d98dAE62B26Ec3bcC4a365338157060B234",

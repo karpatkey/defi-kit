@@ -63,11 +63,20 @@ export const borrowToken = (token: Token) => {
       undefined,
       AVATAR
     ),
+    allow.mainnet.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(
+      token.token,
+    )
   ]
 }
 
 export const borrowEther = () => {
   return [
+    allow.mainnet.aaveV3.variableDebtWETH.approveDelegation(
+      contracts.mainnet.aaveV3.wrappedTokenGatewayV3
+    ),
+    allow.mainnet.aaveV2.stableDebtWETH.approveDelegation(
+      contracts.mainnet.aaveV3.wrappedTokenGatewayV3
+    ),
     allow.mainnet.aaveV3.wrappedTokenGatewayV3.borrowETH(
       contracts.mainnet.aaveV3.aaveLendingPoolV3,
       undefined,
@@ -81,5 +90,8 @@ export const borrowEther = () => {
       "0x",
       { send: true }
     ),
+    allow.mainnet.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(
+      WETH,
+    )
   ]
 }
