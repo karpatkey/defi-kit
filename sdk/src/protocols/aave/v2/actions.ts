@@ -1,6 +1,6 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { AVATAR } from "zodiac-roles-sdk/index"
-import { Token } from "./types"
+import { AVATAR, c } from "zodiac-roles-sdk/index"
+import { Token, DelegateToken } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
 
@@ -116,3 +116,44 @@ export const stake = () => {
     allow.mainnet.aaveV2.stkabpt.claimRewards(AVATAR),
   ]
 }
+
+export const governance = (
+  token: DelegateToken,
+  delegatee: string
+) => {
+  const permissions = []
+
+  switch (token.symbol) {
+    case "AAVE":
+      permissions.push(
+        allow.mainnet.aaveV2.aave.delegate(
+          delegatee
+        ),
+        allow.mainnet.aaveV2.aave.delegateByType(
+          delegatee
+        )
+      )
+      break
+    case "stkAAVE":
+      permissions.push(
+        allow.mainnet.aaveV2.stkaave.delegate(
+          delegatee
+        ),
+        allow.mainnet.aaveV2.stkaave.delegateByType(
+          delegatee
+        )
+      )
+      break
+  }
+
+  allow.mainnet.aaveV2.governanceV2.submitVote()
+
+  return permissions
+}
+
+// allow.mainnet.aaveV2.governanceV2Helper.delegateTokensBySig(
+//   c.every(c.or(AAVE, stkAAVE)),
+//   c.every({
+//     delegatee: AVATAR
+//   })
+// )

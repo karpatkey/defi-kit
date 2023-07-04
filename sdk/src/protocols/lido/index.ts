@@ -30,5 +30,10 @@ export const eth = {
       undefined,
       AVATAR
     ),
+
+    // Claim ETH - Once the request is finalized by the oracle report and becomes claimable, 
+    // this function claims your ether and burns the NFT
+    allow.mainnet.lido.unsteth.claimWithdrawal(),
+    allow.mainnet.lido.unsteth.claimWithdrawals()
   ],
 }

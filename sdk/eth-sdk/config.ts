@@ -12,6 +12,8 @@ export const contracts = {
       abpt: "0x41A08648C3766F9F9d85598fF102a08f4ef84F84",
       stkaave: "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
       stkabpt: "0xa1116930326D21fB917d5A27F1E9943A9595fb47",
+      governanceV2: "0xEC568fffba86c094cf06b22134B23074DFE2252c",
+      governanceV2Helper: "0xBb7baf0534423e3108E1D03c259104cDba2C1cB7"
     },
     aaveV3: {
       aaveLendingPoolV3: "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",

@@ -1,8 +1,9 @@
 import { NotFoundError } from "../../../errors"
-import tokens from "./tokens"
-import { Token } from "./types"
+import tokens from "./_info"
+import { Token, DelegateToken } from "./types"
 import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
-import { stake } from "../v2/actions"
+import { findDelegateToken } from "../v2/index"
+import { stake, governance } from "../v2/actions"
 
 const findToken = (
   tokens: readonly Token[],
@@ -46,4 +47,14 @@ export const eth = {
   stake: () => {
     return stake()
   },
+  governance: ({
+    targets, delegatee
+  }: {
+    targets: (DelegateToken["address"] | DelegateToken["symbol"])[],
+    delegatee: string
+  }) => {
+    return targets.flatMap(
+      (target) => governance(findDelegateToken(target), delegatee)
+    )
+  }
 }
