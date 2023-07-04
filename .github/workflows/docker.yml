@@ -52,3 +52,13 @@ jobs:
           push: true
           tags: ${{ steps.docker_meta.outputs.tags }}
           file: ./Dockerfile
+
+  update-deployment:
+      needs: docker
+      runs-on: self-hosted
+      timeout-minutes: 10
+      steps:
+      - uses: tale/kubectl-action@v1
+        with:
+          base64-kube-config: ${{ secrets.KUBE_CONFIG }}
+      - run: kubectl delete pod -n karpatkey-defi-presets -l app=karpatkey-defi-presets --force
