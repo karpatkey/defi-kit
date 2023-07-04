@@ -1,5 +1,5 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { AVATAR, c } from "zodiac-roles-sdk/index"
+import { AVATAR, c } from "zodiac-roles-sdk"
 import {
   PresetAllowEntry,
   PresetFunction,

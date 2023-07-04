@@ -1,5 +1,5 @@
 import { SomeZodObject } from "zod"
-import { PresetAllowEntry } from "zodiac-roles-sdk/index"
+import { PresetAllowEntry } from "zodiac-roles-sdk"
 
 export type Action = "deposit" | "borrow" | "stake" | "claim" | "swap"
 

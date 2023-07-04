@@ -1,7 +1,7 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { allowErc20Approve } from "../../erc20"
 import { contracts } from "../../../eth-sdk/config"
-import { AVATAR } from "zodiac-roles-sdk/index"
+import { AVATAR } from "zodiac-roles-sdk"
 
 export const eth = {
   deposit: () => [
