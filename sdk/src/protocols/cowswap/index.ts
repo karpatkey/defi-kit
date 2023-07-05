@@ -8,7 +8,7 @@ const tokenListScoping = (tokens: string[] | undefined) =>
     ? tokens[0]
     : c.or(...(tokens as [string, string, ...string[]]))
 
-const swap = (options: { sell: string[]; buy: string[] }) => {
+const swap = (options: { sell?: string[]; buy?: string[] }) => {
   const sellScoping = tokenListScoping(options.sell)
   const buyScoping = tokenListScoping(options.buy)
   return [allow.goerli.cowswap.orderSigner.signOrder(sellScoping, buyScoping)]
