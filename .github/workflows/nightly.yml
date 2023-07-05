@@ -39,6 +39,8 @@ jobs:
         run: python scripts/aave_v3.py
       - name: Run balancer.py
         run: python scripts/balancer.py
+      - name: Run aura.py
+        run: python scripts/aura.py
 
       - uses: actions/setup-node@v3
         with:

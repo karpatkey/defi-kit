@@ -62,7 +62,7 @@ yarn build
 
 ### Recipes
 
-#### Add a new protocol to the SDK
+#### Add a new protocol to the SKD
 
 1. Create folder named after the protocol you wanna add in sdk/src/protocols.
 2. Create a index.ts file in that folder.

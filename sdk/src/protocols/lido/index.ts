@@ -1,7 +1,7 @@
+import { AVATAR } from "zodiac-roles-sdk"
 import { allow } from "zodiac-roles-sdk/kit"
 import { allowErc20Approve } from "../../erc20"
 import { contracts } from "../../../eth-sdk/config"
-import { AVATAR } from "zodiac-roles-sdk"
 
 export const eth = {
   deposit: () => [
@@ -30,5 +30,10 @@ export const eth = {
       undefined,
       AVATAR
     ),
+
+    // Claim ETH - Once the request is finalized by the oracle report and becomes claimable,
+    // this function claims your ether and burns the NFT
+    allow.mainnet.lido.unsteth.claimWithdrawal(),
+    allow.mainnet.lido.unsteth.claimWithdrawals(),
   ],
 }

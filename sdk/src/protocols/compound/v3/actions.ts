@@ -104,6 +104,8 @@ export const borrow = (comet: Comet) => {
       ...allowErc20Approve([comet.borrowToken.address], [comet.address])
     )
   }
+
+  return permissions
 }
 
 export const claim = (comet: Comet) => {

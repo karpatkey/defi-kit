@@ -8,7 +8,7 @@ const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
 
 export const depositToken = (token: Token) => {
   return [
-    allowErc20Approve(
+    ...allowErc20Approve(
       [token.token],
       [contracts.mainnet.aaveV3.aaveLendingPoolV3]
     ),
@@ -46,7 +46,7 @@ export const depositEther = () => [
 
 export const borrowToken = (token: Token) => {
   return [
-    allowErc20Approve(
+    ...allowErc20Approve(
       [token.token],
       [contracts.mainnet.aaveV3.aaveLendingPoolV3]
     ),
@@ -63,11 +63,18 @@ export const borrowToken = (token: Token) => {
       undefined,
       AVATAR
     ),
+    allow.mainnet.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(token.token),
   ]
 }
 
 export const borrowEther = () => {
   return [
+    allow.mainnet.aaveV3.variableDebtWETH.approveDelegation(
+      contracts.mainnet.aaveV3.wrappedTokenGatewayV3
+    ),
+    allow.mainnet.aaveV2.stableDebtWETH.approveDelegation(
+      contracts.mainnet.aaveV3.wrappedTokenGatewayV3
+    ),
     allow.mainnet.aaveV3.wrappedTokenGatewayV3.borrowETH(
       contracts.mainnet.aaveV3.aaveLendingPoolV3,
       undefined,
@@ -81,5 +88,6 @@ export const borrowEther = () => {
       "0x",
       { send: true }
     ),
+    allow.mainnet.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(WETH),
   ]
 }

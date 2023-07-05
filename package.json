@@ -10,7 +10,6 @@
     "playground"
   ],
   "scripts": {
-    "start": "yarn workspace defi-presets-app run start",
     "build": "yarn workspaces foreach -pt run build",
     "setup": "yarn workspace defi-presets run setup",
     "dev": "yarn workspaces foreach -pi run dev",

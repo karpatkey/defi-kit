@@ -48,19 +48,23 @@ const findToken = (symbolOrAddress: string) => {
 
 export const eth = {
   deposit: ({
-    target,
+    targets,
     tokens,
   }: {
-    target: Comet["symbol"] | Comet["address"]
+    targets: (Comet["symbol"] | Comet["address"])[]
     tokens?: (Token["address"] | Token["symbol"])[]
   }) => {
-    return deposit(findComet(target), tokens?.map(findToken))
+    return targets.flatMap(
+      (target) => deposit(findComet(target), tokens?.map(findToken))
+    )
   },
   borrow: ({
-    target,
+    targets,
   }: {
-    target: BorrowToken["symbol"] | BorrowToken["address"]
+    targets: (BorrowToken["symbol"] | BorrowToken["address"])[]
   }) => {
-    return borrow(findCometByBorrowToken(target))
+    return targets.flatMap(
+      (target) => borrow(findCometByBorrowToken(target))
+    )
   },
 }
