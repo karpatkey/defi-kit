@@ -8,7 +8,7 @@ import {
   borrowEther,
   borrowToken,
   stake,
-  governance
+  governance,
 } from "./actions"
 
 const findToken = (
@@ -31,8 +31,8 @@ export const findDelegateToken = (nameOrAddress: string): DelegateToken => {
   const symbolAddressLower = nameOrAddress.toLowerCase()
   const delegateToken = delegateTokens.find(
     (delegateToken) =>
-    delegateToken.address.toLowerCase() === symbolAddressLower ||
-    delegateToken.symbol.toLowerCase() === symbolAddressLower
+      delegateToken.address.toLowerCase() === symbolAddressLower ||
+      delegateToken.symbol.toLowerCase() === symbolAddressLower
   )
   if (!delegateToken) {
     throw new NotFoundError(`Token not found: ${nameOrAddress}`)
@@ -40,17 +40,16 @@ export const findDelegateToken = (nameOrAddress: string): DelegateToken => {
   return delegateToken
 }
 
-
 export const eth = {
   deposit: ({
-    targets
+    targets,
   }: {
-    targets: ("ETH" | Token["symbol"] | Token["token"])[],
+    targets: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
-    return targets.flatMap(
-      (target) => target === 'ETH'
-      ? depositEther()
-      : depositToken(findToken(tokens, target))
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? depositEther()
+        : depositToken(findToken(tokens, target))
     )
   },
   borrow: ({
@@ -58,23 +57,22 @@ export const eth = {
   }: {
     targets: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
-    return targets.flatMap(
-      (target) => target === 'ETH'
-      ? borrowEther()
-      : borrowToken(findToken(tokens, target))
+    return targets.flatMap((target) =>
+      target === "ETH" ? borrowEther() : borrowToken(findToken(tokens, target))
     )
   },
   stake: () => {
     return stake()
   },
   governance: ({
-    targets, delegatee
+    targets,
+    delegatee,
   }: {
-    targets: (DelegateToken["address"] | DelegateToken["symbol"])[],
+    targets: (DelegateToken["address"] | DelegateToken["symbol"])[]
     delegatee: string
   }) => {
-    return targets.flatMap(
-      (target) => governance(findDelegateToken(target), delegatee)
+    return targets.flatMap((target) =>
+      governance(findDelegateToken(target), delegatee)
     )
-  }
+  },
 }

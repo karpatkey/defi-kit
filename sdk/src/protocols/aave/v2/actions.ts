@@ -63,9 +63,7 @@ export const borrowToken = (token: Token) => {
       undefined,
       AVATAR
     ),
-    allow.mainnet.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(
-      token.token,
-    )
+    allow.mainnet.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(token.token),
   ]
 }
 
@@ -90,9 +88,7 @@ export const borrowEther = () => {
       "0x",
       { send: true }
     ),
-    allow.mainnet.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(
-      WETH,
-    )
+    allow.mainnet.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(WETH),
   ]
 }
 
@@ -117,31 +113,20 @@ export const stake = () => {
   ]
 }
 
-export const governance = (
-  token: DelegateToken,
-  delegatee: string
-) => {
+export const governance = (token: DelegateToken, delegatee: string) => {
   const permissions = []
 
   switch (token.symbol) {
     case "AAVE":
       permissions.push(
-        allow.mainnet.aaveV2.aave.delegate(
-          delegatee
-        ),
-        allow.mainnet.aaveV2.aave.delegateByType(
-          delegatee
-        )
+        allow.mainnet.aaveV2.aave.delegate(delegatee),
+        allow.mainnet.aaveV2.aave.delegateByType(delegatee)
       )
       break
     case "stkAAVE":
       permissions.push(
-        allow.mainnet.aaveV2.stkaave.delegate(
-          delegatee
-        ),
-        allow.mainnet.aaveV2.stkaave.delegateByType(
-          delegatee
-        )
+        allow.mainnet.aaveV2.stkaave.delegate(delegatee),
+        allow.mainnet.aaveV2.stkaave.delegateByType(delegatee)
       )
       break
   }
