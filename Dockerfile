@@ -8,10 +8,10 @@ RUN yarn install
 
 RUN yarn setup
 
-# RUN yarn build
+RUN yarn build
 
 # Expose the necessary port
 EXPOSE 3000
 
 # Start the app
-CMD yarn dev
+CMD yarn start

@@ -1,7 +1,7 @@
 import { c } from "zodiac-roles-sdk"
 import { allow } from "zodiac-roles-sdk/kit"
 
-const tokenListScoping = (tokens: string[] | undefined) =>
+const tokenListScoping = (tokens?: string[]) =>
   !tokens || tokens.length === 0
     ? undefined
     : tokens.length === 1
