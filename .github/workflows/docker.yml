@@ -6,10 +6,12 @@ on:
   push:
     branches:
       - main
-
-#   pull_request:
-#     branches:
-#       - main
+  
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -19,7 +21,8 @@ jobs:
  # This workflow contains a three jobs called "test_app", "build", "push_on_docker"
   
   docker:
-    
+    if_merged:
+      if: github.event.pull_request.merged == true
     runs-on: self-hosted
 
     steps:
@@ -52,3 +55,13 @@ jobs:
           push: true
           tags: ${{ steps.docker_meta.outputs.tags }}
           file: ./Dockerfile
+
+  update-deployment:
+    needs: docker
+    runs-on: self-hosted
+    timeout-minutes: 10
+    steps:
+    - uses: tale/kubectl-action@v1
+      with:
+        base64-kube-config: ${{ secrets.KUBE_CONFIG }}
+    - run: kubectl delete pod -n karpatkey-defi-presets -l app=karpatkey-defi-presets --force
