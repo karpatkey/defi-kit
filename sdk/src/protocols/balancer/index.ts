@@ -8,8 +8,8 @@ export const eth = {
     targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
     tokens?: EthToken[]
   }) =>
-    options.targets.flatMap(
-      (target) => deposit(findPool(ethPools, target), options.tokens)
+    options.targets.flatMap((target) =>
+      deposit(findPool(ethPools, target), options.tokens)
     ),
 
   swap: (options: {

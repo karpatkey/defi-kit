@@ -13,7 +13,7 @@ export const contracts = {
       stkaave: "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
       stkabpt: "0xa1116930326D21fB917d5A27F1E9943A9595fb47",
       governanceV2: "0xEC568fffba86c094cf06b22134B23074DFE2252c",
-      governanceV2Helper: "0xBb7baf0534423e3108E1D03c259104cDba2C1cB7"
+      governanceV2Helper: "0xBb7baf0534423e3108E1D03c259104cDba2C1cB7",
     },
     aaveV3: {
       aaveLendingPoolV3: "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
@@ -25,11 +25,13 @@ export const contracts = {
       booster: "0xA57b8d98dAE62B26Ec3bcC4a365338157060B234",
       reward_pool_deposit_wrapper: "0xB188b1CB84Fb0bA13cb9ee1292769F903A9feC59",
       bal_depositor_wrapper: "0x68655AD9852a99C87C0934c7290BB62CFa5D4123",
-      b_80bal_20weth_depositor_wrapper: "0xeAd792B55340Aa20181A80d6a16db6A0ECd1b827",
+      b_80bal_20weth_depositor_wrapper:
+        "0xeAd792B55340Aa20181A80d6a16db6A0ECd1b827",
       aurabal_staking_rewarder: "0x00A7BA8Ae7bca0B10A32Ea1f8e2a1Da980c6CAd2",
       stkaurabal: "0xfAA2eD111B4F580fCb85C48E6DC6782Dc5FCD7a6",
       aurabal_staker: "0xa3fCaFCa8150636C3B736A16Cd73d49cC8A7E10E",
-      aurabal_compounding_rewarder: "0xAc16927429c5c7Af63dD75BC9d8a58c63FfD0147",
+      aurabal_compounding_rewarder:
+        "0xAc16927429c5c7Af63dD75BC9d8a58c63FfD0147",
       aura_locker: "0x3Fa73f1E5d8A792C80F426fc8F84FBF7Ce9bBCAC",
       rewarder: "0x59D66C58E83A26d6a0E35114323f65c3945c89c1",
     },

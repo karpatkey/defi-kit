@@ -27,10 +27,10 @@ export const eth = {
   }: {
     targets: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
-    return targets.flatMap(
-      (target) => target === 'ETH'
-      ? depositEther()
-      : depositToken(findToken(tokens, target))
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? depositEther()
+        : depositToken(findToken(tokens, target))
     )
   },
   borrow: ({
@@ -38,23 +38,22 @@ export const eth = {
   }: {
     targets: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
-    return targets.flatMap(
-      (target) => target === 'ETH'
-      ? borrowEther()
-      : borrowToken(findToken(tokens, target))
+    return targets.flatMap((target) =>
+      target === "ETH" ? borrowEther() : borrowToken(findToken(tokens, target))
     )
   },
   stake: () => {
     return stake()
   },
   governance: ({
-    targets, delegatee
+    targets,
+    delegatee,
   }: {
-    targets: (DelegateToken["address"] | DelegateToken["symbol"])[],
+    targets: (DelegateToken["address"] | DelegateToken["symbol"])[]
     delegatee: string
   }) => {
-    return targets.flatMap(
-      (target) => governance(findDelegateToken(target), delegatee)
+    return targets.flatMap((target) =>
+      governance(findDelegateToken(target), delegatee)
     )
-  }
+  },
 }
