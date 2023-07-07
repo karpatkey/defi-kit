@@ -20,7 +20,9 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
 
   if (tokens.length > 0) {
     permissions.push(
-      ...allowErc20Approve(tokenAddresses, [contracts.mainnet.aura.reward_pool_deposit_wrapper]),
+      ...allowErc20Approve(tokenAddresses, [
+        contracts.mainnet.aura.reward_pool_deposit_wrapper,
+      ]),
       allow.mainnet.aura.reward_pool_deposit_wrapper.depositSingle(
         pool.rewarder,
         c.or(...(tokenAddresses as [string, string, ...string[]])),
