@@ -21,13 +21,11 @@ const owner = getOwnerWallet()
 export const rolesMod = Roles__factory.connect(ROLES_ADDRESS, owner)
 export const testRoleKey = encodeBytes32String("TEST-ROLE")
 
-const chainId = getProvider().network.chainId
-
 export const configurePermissions = async (entries: PresetAllowEntry[]) => {
   const calls = await applyPermissions(
     testRoleKey,
     fillPreset(
-      { allow: entries, chainId, placeholders: {} },
+      { allow: entries, chainId: 1, placeholders: {} },
       { AVATAR: getAvatarWallet().address }
     ),
     { address: rolesMod.address, currentPermissions: [], mode: "replace" }
@@ -66,15 +64,21 @@ const mapSdk = <S extends EthSdk>(sdk: S): TestKit<S> => {
 }
 
 const makeTestFunctions = (contract: BaseContract) => {
-  const execThroughRole = rolesMod.connect(getMemberWallet()).functions
+  const execThroughRole = rolesMod.connect(getMemberWallet()).callStatic
     .execTransactionWithRole
 
   return Object.fromEntries(
     Object.keys(contract.functions).map((name) => [
       name,
       async function testCallThroughRolesMod(...args: any[]) {
-        const options =
-          args[contract.interface.functions[name].inputs.length] || {}
+        const res = Object.entries(contract.interface.functions).find(
+          ([signature, fragment]) =>
+            signature === name || signature.startsWith(name + "(")
+        )
+        if (!res) throw new Error(`Function ${name} not found`)
+        const fragment = res[1]
+
+        const options = args[fragment.inputs.length] || {}
         const data = contract.interface.encodeFunctionData(name, args)
         return await execThroughRole(
           contract.address,

@@ -7,8 +7,8 @@ describe("lido", () => {
     beforeAll(async () => {})
 
     it("allows submitting ETH", async () => {
-      await configurePermissions(eth.deposit())
-      test.eth.lido.steth.submit(getAvatarWallet().address)
+      // await configurePermissions(eth.deposit())
+      await test.eth.lido.steth.submit(getAvatarWallet().address)
       // await expect().resolves.not.toThrow(
     })
 
