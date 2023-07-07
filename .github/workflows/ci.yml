@@ -21,12 +21,10 @@ jobs:
            target: wasm32-unknown-unknown
            profile: minimal
            override: true
-       - name: Install Anvil
+       - name: Install anvil
          uses: foundry-rs/foundry-toolchain@v1
          with:
            version: nightly
-       - name: Launch Anvil
-         run: anvil &
 
       - uses: actions/setup-node@v3
         with:
@@ -39,8 +37,15 @@ jobs:
             .yarn/install-state.gz
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
 
-      - name: Run prettier
+      - name: Install dependencies
+        run: yarn
+
+      - name: Run tests
         run: |
-          yarn
-          yarn fix:prettier
+          cd sdk
+          yarn test
+
+      - name: Check formatting
+        run: yarn check:prettier
+      
 
