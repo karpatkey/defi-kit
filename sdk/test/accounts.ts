@@ -65,3 +65,4 @@ export const getWallet = (index: number) => {
 export const getDeployerWallet = () => getWallet(accounts.length - 3)
 export const getAvatarWallet = () => getWallet(accounts.length - 2)
 export const getOwnerWallet = () => getWallet(accounts.length - 1)
+export const getMemberWallet = () => getWallet(0)

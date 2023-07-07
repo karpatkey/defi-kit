@@ -1,8 +1,8 @@
 import { c, forAll } from "zodiac-roles-sdk"
 
 export const allowErc20Approve = (
-  tokens: readonly string[],
-  spenders: readonly string[]
+  tokens: readonly `0x${string}`[],
+  spenders: readonly `0x${string}`[]
 ) =>
   forAll(tokens, {
     signature: "approve(address,uint256)",

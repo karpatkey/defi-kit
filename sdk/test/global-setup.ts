@@ -8,14 +8,23 @@ import {
   ROLES_ADDRESS,
   getAvatarWallet,
   getDeployerWallet,
+  getMemberWallet,
   getOwnerWallet,
 } from "./accounts"
 import { baseSnapshot } from "./snapshot"
+import { encodeBytes32String } from "../src"
+import { getProvider } from "./provider"
 
 export default async () => {
   await waitForNetwork()
-  await deployRolesMod()
 
+  if ((await getProvider().getCode(ROLES_ADDRESS)) !== "0x") {
+    console.log("Roles mod already deployed, skipping global setup.")
+    return
+  }
+
+  await deployRolesMod()
+  await setupRole()
   await baseSnapshot()
 }
 
@@ -36,8 +45,6 @@ async function deployRolesMod() {
   const deployer = getDeployerWallet()
   const avatar = getAvatarWallet()
   const owner = getOwnerWallet()
-
-  console.log("BAL", deployer.address, await deployer.getBalance())
 
   console.log("\nDeploying Integrity...")
   const integrity = await new Integrity__factory(deployer).deploy()
@@ -62,4 +69,11 @@ async function deployRolesMod() {
       "Roles mod was not deployed at the expected address. Something must have changed in the setup, please update the ROLES_ADDRESS constant"
     )
   }
+}
+
+async function setupRole() {
+  const member = getMemberWallet().address
+  const rolesMod = Roles__factory.connect(ROLES_ADDRESS, getOwnerWallet())
+  await rolesMod.assignRoles(member, [encodeBytes32String("TEST-ROLE")], [true])
+  console.log("Created TEST-ROLE role with member:", member)
 }
