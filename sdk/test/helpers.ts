@@ -1,20 +1,15 @@
 import {
-  AVATAR,
   PresetAllowEntry,
   applyPermissions,
-  fillPreset,
+  extendPermissions,
 } from "zodiac-roles-sdk"
 import { Roles__factory } from "./rolesModTypechain"
-import {
-  ROLES_ADDRESS,
-  getAvatarWallet,
-  getMemberWallet,
-  getOwnerWallet,
-} from "./accounts"
+import { ROLES_ADDRESS, getMemberWallet, getOwnerWallet } from "./accounts"
 import { encodeBytes32String } from "../src"
 import { getProvider } from "./provider"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { BaseContract } from "ethers"
+import { derivePermissions } from "../src/apply"
 
 const owner = getOwnerWallet()
 
@@ -24,18 +19,28 @@ export const testRoleKey = encodeBytes32String("TEST-ROLE")
 export const configurePermissions = async (entries: PresetAllowEntry[]) => {
   const calls = await applyPermissions(
     testRoleKey,
-    fillPreset(
-      { allow: entries, chainId: 1, placeholders: {} },
-      { AVATAR: getAvatarWallet().address }
-    ),
-    { address: rolesMod.address, currentPermissions: [], mode: "replace" }
+    derivePermissions(entries),
+    {
+      address: rolesMod.address,
+      currentPermissions: [],
+      mode: "replace",
+      log: console.debug,
+    }
   )
 
-  await Promise.all(
-    calls.map((call) =>
-      owner.sendTransaction({ to: rolesMod.address, data: call })
+  //   await rolesMod.connect(owner).allowTarget(testRoleKey, owner.address, 0)
+  for (let call of calls) {
+    console.log(call)
+    console.log(
+      await owner.sendTransaction({ to: rolesMod.address, data: call })
     )
-  )
+  }
+
+  //   await Promise.all(
+  //     calls.map((call) =>
+  //       owner.sendTransaction({ to: rolesMod.address, data: call })
+  //     )
+  //   )
   console.log("Permissions applied")
 }
 

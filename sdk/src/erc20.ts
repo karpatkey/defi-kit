@@ -6,7 +6,7 @@ export const allowErc20Approve = (
 ) =>
   forAll(tokens, {
     signature: "approve(address,uint256)",
-    condition: c.abiEncodedMatches(
+    condition: c.calldataMatches(
       [
         spenders.length === 1
           ? spenders[0]
