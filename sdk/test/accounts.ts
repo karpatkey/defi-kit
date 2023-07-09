@@ -1,7 +1,7 @@
 import { Wallet } from "ethers"
 import { getProvider } from "./provider"
 
-export const ROLES_ADDRESS = "0x76ca03a67C049477FfB09694dFeF00416dB69746"
+export const ROLES_ADDRESS = "0x1696C7203769A71c97Ca725d42b13270ee493526"
 
 // Default accounts from Anvil
 const accounts = [

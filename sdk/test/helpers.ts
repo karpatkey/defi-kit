@@ -30,12 +30,8 @@ export const configurePermissions = async (entries: PresetAllowEntry[]) => {
 
   console.log(`Applying permissions with ${calls.length} calls`)
 
-  //   await rolesMod.connect(owner).allowTarget(testRoleKey, owner.address, 0)
   for (let call of calls) {
-    console.log(call)
-    console.log(
-      await owner.sendTransaction({ to: rolesMod.address, data: call })
-    )
+    await owner.sendTransaction({ to: rolesMod.address, data: call })
   }
 
   //   await Promise.all(
