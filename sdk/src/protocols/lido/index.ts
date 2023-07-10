@@ -24,7 +24,7 @@ export const eth = {
 
     // Request wstETH Withdrawal - Transfers the wstETH to the unstETH to be burned in exchange for stETH. Then it locks your stETH
     // in the queue. In exchange you receive an NFT, that represents your position in the queue
-    allow.mainnet.lido.unsteth.requestWithdrawals(undefined, AVATAR),
+    allow.mainnet.lido.unsteth.requestWithdrawals(undefined, AVATAR), // TODO duplicate entry
     // When the unstETH has no allowance over the owner's wstETH
     allow.mainnet.lido.unsteth.requestWithdrawalsWstETHWithPermit(
       undefined,

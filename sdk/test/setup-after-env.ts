@@ -2,13 +2,13 @@ import { Roles__factory } from "./rolesModTypechain"
 import { revertToBase } from "./snapshot"
 import { Status } from "./types"
 
-global.afterEach(revertToBase)
+global.afterAll(revertToBase)
 
 declare global {
   namespace jest {
     interface Matchers<R> {
       toBeAllowed(): CustomMatcherResult
-      toBeForbidden(status?: Status): CustomMatcherResult
+      toBeForbidden(status?: Status, info?: string): CustomMatcherResult
     }
   }
 }

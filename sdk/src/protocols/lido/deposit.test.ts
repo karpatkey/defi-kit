@@ -1,54 +1,39 @@
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { eth } from "."
-import {
-  ROLES_ADDRESS,
-  getAvatarWallet,
-  getMemberWallet,
-  getOwnerWallet,
-} from "../../../test/accounts"
-import {
-  configurePermissions,
-  rolesMod,
-  test,
-  testRoleKey,
-} from "../../../test/helpers"
+import { getAvatarWallet, getMemberWallet } from "../../../test/accounts"
+import { configurePermissions, test } from "../../../test/helpers"
+import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
-import { getProvider } from "../../../test/provider"
-import {
-  PermissionChecker__factory,
-  Roles__factory,
-} from "../../../test/rolesModTypechain"
 
 describe("lido", () => {
   describe("deposit", () => {
-    beforeAll(async () => {})
+    beforeAll(async () => {
+      await configurePermissions(eth.deposit())
+    })
 
     it("allows submitting ETH", async () => {
-      await configurePermissions(eth.deposit())
       await expect(
         test.eth.lido.steth.submit(getAvatarWallet().address, { value: 10000 })
       ).toBeAllowed()
     })
 
-    it("allows wrapping and unwrapping stETH", async () => {})
+    it("allows wrapping and unwrapping stETH", async () => {
+      await expect(
+        test.eth.lido.steth.approve(contracts.mainnet.lido.wsteth, 10000)
+      ).toBeAllowed()
+      await expect(test.eth.lido.wsteth.wrap(1000)).toBeAllowed()
+      await expect(test.eth.lido.wsteth.unwrap(1000)).toBeAllowed()
+    })
+
+    it("only allows requesting withdrawals from avatar's positions", async () => {
+      const avatarAddress = getAvatarWallet().address
+      await expect(
+        test.eth.lido.unsteth.requestWithdrawals([1000], avatarAddress)
+      ).toBeAllowed()
+
+      const anotherAddress = getMemberWallet().address
+      await expect(
+        test.eth.lido.unsteth.requestWithdrawals([1000], anotherAddress)
+      ).toBeForbidden(Status.ParameterNotAllowed)
+    })
   })
 })
-
-const permissionsInterface = PermissionChecker__factory.createInterface()
-
-function decodeRolesError(revertData: string) {
-  console.log(permissionsInterface.errors)
-  if (revertData.startsWith("0x")) {
-    const rolesError =
-      Object.keys(rolesMod.interface.errors).find((errSig) =>
-        revertData.startsWith(rolesMod.interface.getSighash(errSig))
-      ) ||
-      Object.keys(permissionsInterface.errors).find((errSig) =>
-        revertData.startsWith(permissionsInterface.getSighash(errSig))
-      )
-
-    if (rolesError) return rolesError
-  }
-
-  return revertData
-}
