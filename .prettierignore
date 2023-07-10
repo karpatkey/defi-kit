@@ -12,3 +12,4 @@ playground/build
 
 sdk/dist
 sdk/eth-sdk/abis
+sdk/test/rolesModTypechain

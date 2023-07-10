@@ -1,0 +1,51 @@
+name: Run continuous integration checks
+
+on: [push]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    env:
+      CONFIG_PATH: ${{ github.workspace }}/scripts/config.json
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          target: wasm32-unknown-unknown
+          profile: minimal
+          override: true
+      - name: Install anvil
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+            .yarn/cache
+            .yarn/install-state.gz
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+
+      - name: Install dependencies & setup
+        run: |
+          yarn
+          yarn setup
+
+      - name: Run tests
+        run: |
+          cd sdk
+          yarn test
+
+      - name: Check formatting
+        run: yarn check:prettier

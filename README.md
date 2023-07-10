@@ -60,6 +60,14 @@ Build sdk and app:
 yarn build
 ```
 
+To run tests, you first need to install `anvil`, which comes with foundry. See [installation instructions](https://book.getfoundry.sh/getting-started/installation).
+
+Then, you can run tests in watch mode using:
+
+```
+yarn test:watch
+```
+
 ### Recipes
 
 #### Add a new protocol to the SDK
