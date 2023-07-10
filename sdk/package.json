@@ -42,7 +42,7 @@
     "setup": "eth-sdk",
     "build": "rimraf dist && tsup --format esm,cjs",
     "dev": "tsup --format esm --watch",
-    "test": "concurrently \"anvil\" \"jest --runInBand\" --kill-others",
+    "test": "concurrently \"anvil\" \"jest --runInBand\" --kill-others --success last",
     "test:watch": "anvil & jest --runInBand --watchAll"
   },
   "dependencies": {
