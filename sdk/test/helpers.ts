@@ -29,16 +29,16 @@ export const configurePermissions = async (entries: PresetAllowEntry[]) => {
   )
 
   console.log(`Applying permissions with ${calls.length} calls`)
-
-  for (let call of calls) {
-    await owner.sendTransaction({ to: rolesMod.address, data: call })
-  }
-
-  //   await Promise.all(
-  //     calls.map((call) =>
-  //       owner.sendTransaction({ to: rolesMod.address, data: call })
-  //     )
-  //   )
+  let nonce = await owner.getTransactionCount()
+  await Promise.all(
+    calls.map((call) =>
+      owner.sendTransaction({
+        to: rolesMod.address,
+        data: call,
+        nonce: nonce++,
+      })
+    )
+  )
   console.log("Permissions applied")
 }
 
@@ -82,7 +82,10 @@ const makeTestFunctions = (contract: BaseContract) => {
         const fragment = res[1]
 
         const options = args[fragment.inputs.length] || {}
-        const data = contract.interface.encodeFunctionData(name, args)
+        const data = contract.interface.encodeFunctionData(
+          name,
+          args.slice(0, fragment.inputs.length)
+        )
         return await execThroughRole(
           contract.address,
           options.value || 0,
