@@ -229,4 +229,16 @@ export default [
     stableDebtTokenAddress: "0x4b62bFAff61AB3985798e5202D2d167F567D0BCD",
     variableDebtTokenAddress: "0xA38fCa8c6Bf9BdA52E76EB78f08CaA3BE7c5A970",
   },
+  {
+    symbol: "FRAX",
+    token: "0x853d955aCEf822Db058eb8505911ED77F175b99e",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: true,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0xd4e245848d6E1220DBE62e155d89fa327E43CB06",
+    stableDebtTokenAddress: "0x219640546c0DFDDCb9ab3bcdA89B324e0a376367",
+    variableDebtTokenAddress: "0x88B8358F5BC87c2D7E116cCA5b65A9eEb2c5EA3F",
+  },
 ] as const
