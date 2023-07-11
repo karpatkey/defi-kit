@@ -1,5 +1,5 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { AVATAR } from "zodiac-roles-sdk"
+import { c } from "zodiac-roles-sdk"
 import { Token } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
@@ -15,13 +15,13 @@ export const depositToken = (token: Token) => {
     allow.mainnet.aaveV3.aaveLendingPoolV3.deposit(
       token.token,
       undefined,
-      AVATAR,
+      c.avatar,
       "0x"
     ),
     allow.mainnet.aaveV3.aaveLendingPoolV3.withdraw(
       token.token,
       undefined,
-      AVATAR
+      c.avatar
     ),
     allow.mainnet.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(
       token.token
@@ -32,14 +32,14 @@ export const depositToken = (token: Token) => {
 export const depositEther = () => [
   allow.mainnet.aaveV3.wrappedTokenGatewayV3.depositETH(
     contracts.mainnet.aaveV3.aaveLendingPoolV3,
-    AVATAR,
+    c.avatar,
     "0x",
     { send: true }
   ),
   allow.mainnet.aaveV3.wrappedTokenGatewayV3.withdrawETH(
     contracts.mainnet.aaveV3.aaveLendingPoolV3,
     undefined,
-    AVATAR
+    c.avatar
   ),
   allow.mainnet.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(WETH),
 ]
@@ -55,13 +55,13 @@ export const borrowToken = (token: Token) => {
       undefined,
       undefined,
       "0x",
-      AVATAR
+      c.avatar
     ),
     allow.mainnet.aaveV3.aaveLendingPoolV3.repay(
       token.token,
       undefined,
       undefined,
-      AVATAR
+      c.avatar
     ),
     allow.mainnet.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(token.token),
   ]

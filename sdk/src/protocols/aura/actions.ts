@@ -1,5 +1,5 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { AVATAR, PresetAllowEntry, c } from "zodiac-roles-sdk"
+import { PresetAllowEntry, c } from "zodiac-roles-sdk"
 import { Pool, StakeToken, Token } from "./types"
 import { allowErc20Approve } from "../../erc20"
 import { contracts } from "../../../eth-sdk/config"
@@ -132,10 +132,10 @@ export const compound = (token: StakeToken) => {
           [token.address],
           [contracts.mainnet.aura.stkaurabal]
         ),
-        allow.mainnet.aura.stkaurabal.deposit(undefined, AVATAR),
-        allow.mainnet.aura.stkaurabal.withdraw(undefined, AVATAR, AVATAR),
+        allow.mainnet.aura.stkaurabal.deposit(undefined, c.avatar),
+        allow.mainnet.aura.stkaurabal.withdraw(undefined, c.avatar, c.avatar),
         // When the MAX amount is unstaked
-        allow.mainnet.aura.stkaurabal.redeem(undefined, AVATAR, AVATAR)
+        allow.mainnet.aura.stkaurabal.redeem(undefined, c.avatar, c.avatar)
       )
       break
   }
@@ -150,8 +150,8 @@ export const compound = (token: StakeToken) => {
 export const lock = (): PresetAllowEntry[] => {
   return [
     ...allowErc20Approve([AURA], [contracts.mainnet.aura.aura_locker]),
-    allow.mainnet.aura.aura_locker.lock(AVATAR),
+    allow.mainnet.aura.aura_locker.lock(c.avatar),
     allow.mainnet.aura.aura_locker.processExpiredLocks(),
-    allow.mainnet.aura.aura_locker["getReward(address)"](AVATAR),
+    allow.mainnet.aura.aura_locker["getReward(address)"](c.avatar),
   ]
 }

@@ -1,4 +1,4 @@
-import { AVATAR, PresetAllowEntry, c } from "zodiac-roles-sdk"
+import { PresetAllowEntry, c } from "zodiac-roles-sdk"
 import { allowErc20Approve } from "../../erc20"
 
 import { Pool } from "./types"
@@ -29,7 +29,7 @@ export const allowGauge = (pool: Pool) => {
     result.push({
       targetAddress: pool.gauge.address,
       signature: "claim_rewards(address)",
-      condition: c.calldataMatches([AVATAR], ["address"]),
+      condition: c.calldataMatches([c.avatar], ["address"]),
     })
   }
 

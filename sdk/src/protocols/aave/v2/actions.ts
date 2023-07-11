@@ -1,5 +1,5 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { AVATAR, c } from "zodiac-roles-sdk"
+import { c } from "zodiac-roles-sdk"
 import { Token, DelegateToken } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
@@ -15,13 +15,13 @@ export const depositToken = (token: Token) => {
     allow.mainnet.aaveV2.aaveLendingPoolV2.deposit(
       token.token,
       undefined,
-      AVATAR,
+      c.avatar,
       "0x"
     ),
     allow.mainnet.aaveV2.aaveLendingPoolV2.withdraw(
       token.token,
       undefined,
-      AVATAR
+      c.avatar
     ),
     allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
       token.token
@@ -32,14 +32,14 @@ export const depositToken = (token: Token) => {
 export const depositEther = () => [
   allow.mainnet.aaveV2.wrappedTokenGatewayV2.depositETH(
     contracts.mainnet.aaveV2.aaveLendingPoolV2,
-    AVATAR,
+    c.avatar,
     "0x",
     { send: true }
   ),
   allow.mainnet.aaveV2.wrappedTokenGatewayV2.withdrawETH(
     contracts.mainnet.aaveV2.aaveLendingPoolV2,
     undefined,
-    AVATAR
+    c.avatar
   ),
   allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(WETH),
 ]
@@ -55,13 +55,13 @@ export const borrowToken = (token: Token) => {
       undefined,
       undefined,
       "0x",
-      AVATAR
+      c.avatar
     ),
     allow.mainnet.aaveV2.aaveLendingPoolV2.repay(
       token.token,
       undefined,
       undefined,
-      AVATAR
+      c.avatar
     ),
     allow.mainnet.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(token.token),
   ]
@@ -102,14 +102,14 @@ export const stake = () => {
       [contracts.mainnet.aaveV2.abpt],
       [contracts.mainnet.aaveV2.stkabpt]
     ),
-    allow.mainnet.aaveV2.stkaave.stake(AVATAR),
-    allow.mainnet.aaveV2.stkabpt.stake(AVATAR),
-    allow.mainnet.aaveV2.stkaave.redeem(AVATAR),
-    allow.mainnet.aaveV2.stkabpt.redeem(AVATAR),
+    allow.mainnet.aaveV2.stkaave.stake(c.avatar),
+    allow.mainnet.aaveV2.stkabpt.stake(c.avatar),
+    allow.mainnet.aaveV2.stkaave.redeem(c.avatar),
+    allow.mainnet.aaveV2.stkabpt.redeem(c.avatar),
     allow.mainnet.aaveV2.stkaave.cooldown(),
     allow.mainnet.aaveV2.stkabpt.cooldown(),
-    allow.mainnet.aaveV2.stkaave.claimRewards(AVATAR),
-    allow.mainnet.aaveV2.stkabpt.claimRewards(AVATAR),
+    allow.mainnet.aaveV2.stkaave.claimRewards(c.avatar),
+    allow.mainnet.aaveV2.stkabpt.claimRewards(c.avatar),
   ]
 }
 
@@ -139,6 +139,6 @@ export const governance = (token: DelegateToken, delegatee: string) => {
 // allow.mainnet.aaveV2.governanceV2Helper.delegateTokensBySig(
 //   c.every(c.or(AAVE, stkAAVE)),
 //   c.every({
-//     delegatee: AVATAR
+//     delegatee: c.avatar
 //   })
 // )

@@ -1,6 +1,6 @@
 import { MintPaused } from "../../../errors"
 import { allow } from "zodiac-roles-sdk/kit"
-import { AVATAR, c, forAll } from "zodiac-roles-sdk"
+import { c, forAll } from "zodiac-roles-sdk"
 import { Token, cToken } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
@@ -70,7 +70,7 @@ export const deposit = (token: Token) => {
     )
     permissions.push(
       allow.mainnet.compoundV2.comptroller["claimComp(address,address[])"](
-        AVATAR,
+        c.avatar,
         [token.cToken]
       )
     )
@@ -85,7 +85,7 @@ export const borrow = (token: Token) => {
     permissions.push(...allowErc20Approve([token.token], [token.cToken]))
     permissions.push(_repay(token.cToken))
   } else {
-    permissions.push(allow.mainnet.compoundV2.maximillion.repayBehalf(AVATAR))
+    permissions.push(allow.mainnet.compoundV2.maximillion.repayBehalf(c.avatar))
   }
   permissions.push(_borrow(token.cToken))
 

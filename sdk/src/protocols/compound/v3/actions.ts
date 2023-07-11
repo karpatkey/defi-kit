@@ -1,5 +1,5 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { AVATAR, c } from "zodiac-roles-sdk"
+import { c } from "zodiac-roles-sdk"
 import {
   PresetAllowEntry,
   PresetFunction,
@@ -63,7 +63,7 @@ export const deposit = (
         [ACTION_SUPPLY_NATIVE_TOKEN],
         c.matches([
           c.abiEncodedMatches(
-            [comet.address, AVATAR],
+            [comet.address, c.avatar],
             ["address", "address", "uint256"]
           ),
         ]),
@@ -74,7 +74,7 @@ export const deposit = (
         [ACTION_WITHDRAW_NATIVE_TOKEN],
         c.matches([
           c.abiEncodedMatches(
-            [comet.address, AVATAR],
+            [comet.address, c.avatar],
             ["address", "address", "uint256"]
           ),
         ])
@@ -109,5 +109,5 @@ export const borrow = (comet: Comet) => {
 }
 
 export const claim = (comet: Comet) => {
-  return [allow.mainnet.compoundV3.CometRewards.claim(comet.address, AVATAR)]
+  return [allow.mainnet.compoundV3.CometRewards.claim(comet.address, c.avatar)]
 }
