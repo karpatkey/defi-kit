@@ -1,7 +1,8 @@
 {
   "search.exclude": {
     "**/.yarn": true,
-    "**/.pnp.*": true
+    "**/.pnp.*": true,
+    "**/dist": true
   },
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "typescript.tsdk": "node_modules/typescript/lib",

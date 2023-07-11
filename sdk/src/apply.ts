@@ -3,10 +3,8 @@ import {
   fillPreset,
   checkPermissionsIntegrity,
   applyPermissions,
-  encodeCalls,
   Target,
   ChainId,
-  c,
 } from "zodiac-roles-sdk"
 import { NotFoundError } from "./errors"
 
