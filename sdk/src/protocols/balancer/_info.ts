@@ -3435,6 +3435,17 @@ export default [
     ],
   },
   {
+    bpt: "0x3de27EFa2F1AA663Ae5D458857e731c129069F29",
+    id: "0x3de27efa2f1aa663ae5d458857e731c129069f29000200000000000000000588",
+    name: "wstETH/AAVE",
+    type: "Weighted",
+    gauge: "0x0000000000000000000000000000000000000000",
+    tokens: [
+      "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+    ],
+  },
+  {
     bpt: "0x3E09E828c716c5e2BC5034EeD7d5eC8677ffba18",
     id: "0x3e09e828c716c5e2bc5034eed7d5ec8677ffba180002000000000000000002b1",
     name: "MPH/WETH",
