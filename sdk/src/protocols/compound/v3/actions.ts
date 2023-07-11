@@ -77,7 +77,11 @@ export const deposit = (
             [comet.address, c.avatar],
             ["address", "address", "uint256"]
           ),
-        ])
+        ]),
+        // Roles mod does not support scoping the same function with different option values.
+        // So we must also allow send here. This is not a problem because the MainnetBulker contract
+        // will refund any sent but unused ETH.
+        { send: true }
       )
     )
   }
