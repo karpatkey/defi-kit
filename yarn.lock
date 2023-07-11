@@ -4374,9 +4374,6 @@ __metadata:
     "@asteasolutions/zod-to-openapi": ^5.1.0
     "@dethcrypto/eth-sdk": ^0.3.4
     "@dethcrypto/eth-sdk-client": ^0.1.6
-    "@ethersproject/bignumber": ^5.7.0
-    "@ethersproject/bytes": ^5.7.0
-    "@ethersproject/logger": ^5.7.0
     "@gnosis.pm/zodiac": ^3.3.2
     "@types/jest": ^29.5.2
     "@types/wait-on": ^5.3.1
@@ -4390,7 +4387,7 @@ __metadata:
     typescript: ^5.0.4
     wait-on: ^7.0.1
     zod: ^3.21.4
-    zodiac-roles-sdk: ^2.1.6
+    zodiac-roles-sdk: ^2.1.8
   languageName: unknown
   linkType: soft
 
@@ -12745,9 +12742,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zodiac-roles-sdk@npm:^2.1.6":
-  version: 2.1.6
-  resolution: "zodiac-roles-sdk@npm:2.1.6"
+"zodiac-roles-sdk@npm:^2.1.8":
+  version: 2.1.8
+  resolution: "zodiac-roles-sdk@npm:2.1.8"
   dependencies:
     ethers: ^5.4.7
     type-fest: ^3.7.1
@@ -12756,7 +12753,7 @@ __metadata:
   peerDependenciesMeta:
     "@dethcrypto/eth-sdk-client":
       optional: true
-  checksum: 8f350d05dcadf0956419ff0c536054da31c95b39d208014a224c20e3927699ee022cfc8dd549f58175c4baa1eb8f50b39549b610ae049e7c1f020ecd9a3f2766
+  checksum: 49c5868928a2cac260ed136ade5de4a590f1a1a34ef0696860ad3f07cdbe56952b7acd20270cf23bf1ffaa741aec62741787d9c2c5baf121d3f205c1c3ac4db0
   languageName: node
   linkType: hard
 
