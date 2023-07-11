@@ -11,10 +11,7 @@ import {
   governance,
 } from "./actions"
 
-const findToken = (
-  tokens: readonly Token[],
-  symbolOrAddress: string
-): Token => {
+const findToken = (symbolOrAddress: string): Token => {
   const nameOrAddressLower = symbolOrAddress.toLowerCase()
   const token = tokens.find(
     (token) =>
@@ -47,23 +44,24 @@ export const eth = {
     targets: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
     return targets.flatMap((target) =>
-      target === "ETH"
-        ? depositEther()
-        : depositToken(findToken(tokens, target))
+      target === "ETH" ? depositEther() : depositToken(findToken(target))
     )
   },
+
   borrow: ({
-    targets,
+    tokens,
   }: {
-    targets: ("ETH" | Token["symbol"] | Token["token"])[]
+    tokens: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
-    return targets.flatMap((target) =>
-      target === "ETH" ? borrowEther() : borrowToken(findToken(tokens, target))
+    return tokens.flatMap((token) =>
+      token === "ETH" ? borrowEther() : borrowToken(findToken(token))
     )
   },
+
   stake: () => {
     return stake()
   },
+
   governance: ({
     targets,
     delegatee,

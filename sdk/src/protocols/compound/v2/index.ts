@@ -3,10 +3,7 @@ import tokens from "./tokens"
 import { Token } from "./types"
 import { deposit, borrow } from "./actions"
 
-const findToken = (
-  tokens: readonly Token[],
-  symbolOrAddress: string
-): Token => {
+const findToken = (symbolOrAddress: string): Token => {
   const nameOrAddressLower = symbolOrAddress.toLowerCase()
   const token = tokens.find(
     (token) =>
@@ -21,9 +18,10 @@ const findToken = (
 
 export const eth = {
   deposit: ({ targets }: { targets: (Token["symbol"] | Token["token"])[] }) => {
-    return targets.flatMap((target) => deposit(findToken(tokens, target)))
+    return targets.flatMap((target) => deposit(findToken(target)))
   },
-  borrow: ({ targets }: { targets: (Token["symbol"] | Token["token"])[] }) => {
-    return targets.flatMap((target) => borrow(findToken(tokens, target)))
+
+  borrow: ({ tokens }: { tokens: (Token["symbol"] | Token["token"])[] }) => {
+    return tokens.flatMap((token) => borrow(findToken(token)))
   },
 }
