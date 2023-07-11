@@ -1,5 +1,5 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { AVATAR, c } from "zodiac-roles-sdk"
+import { AVATAR, PresetAllowEntry, c } from "zodiac-roles-sdk"
 import { Pool, StakeToken, Token } from "./types"
 import { allowErc20Approve } from "../../erc20"
 import { contracts } from "../../../eth-sdk/config"
@@ -11,11 +11,11 @@ const AURA = "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF"
 
 export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   const tokenAddresses = pool.tokens.map((token) => token.address)
-  const permissions = [
+  const permissions: PresetAllowEntry[] = [
     ...allowErc20Approve([pool.bpt], [contracts.mainnet.aura.booster]),
     allow.mainnet.aura.booster.deposit(pool.id),
     allow.mainnet.aura.rewarder.withdrawAndUnwrap(),
-    allow.mainnet.aura.rewarder["getReward()"],
+    allow.mainnet.aura.rewarder["getReward()"](),
   ]
 
   if (tokens.length > 0) {
@@ -35,8 +35,8 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   return permissions
 }
 
-export const stake = (token: StakeToken) => {
-  const permissions = []
+export const stake = (token: StakeToken): PresetAllowEntry[] => {
+  const permissions: PresetAllowEntry[] = []
 
   switch (token.symbol) {
     case "BAL":
@@ -84,13 +84,13 @@ export const stake = (token: StakeToken) => {
       break
   }
 
-  permissions.push(allow.mainnet.aura.aurabal_staking_rewarder["getReward()"])
+  permissions.push(allow.mainnet.aura.aurabal_staking_rewarder["getReward()"]())
 
   return permissions
 }
 
 export const compound = (token: StakeToken) => {
-  const permissions = []
+  const permissions: PresetAllowEntry[] = []
 
   switch (token.symbol) {
     case "BAL":
@@ -141,13 +141,13 @@ export const compound = (token: StakeToken) => {
   }
 
   permissions.push(
-    allow.mainnet.aura.aurabal_compounding_rewarder["getReward()"]
+    allow.mainnet.aura.aurabal_compounding_rewarder["getReward()"]()
   )
 
   return permissions
 }
 
-export const lock = () => {
+export const lock = (): PresetAllowEntry[] => {
   return [
     ...allowErc20Approve([AURA], [contracts.mainnet.aura.aura_locker]),
     allow.mainnet.aura.aura_locker.lock(AVATAR),
