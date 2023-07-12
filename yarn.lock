@@ -23,13 +23,13 @@ __metadata:
   linkType: hard
 
 "@asteasolutions/zod-to-openapi@npm:^5.1.0":
-  version: 5.2.0
-  resolution: "@asteasolutions/zod-to-openapi@npm:5.2.0"
+  version: 5.3.0
+  resolution: "@asteasolutions/zod-to-openapi@npm:5.3.0"
   dependencies:
     openapi3-ts: ^4.1.2
   peerDependencies:
     zod: ^3.20.2
-  checksum: 72611faf4efebc1841a71287ac1d7862b662f84068850e2d98f1c1a694b89e7a297ca6af1d981b3325144edc2d5ae492fe8582f306381df41e14dd0f0be47f2a
+  checksum: 610559bc2f4ece6c2efb5ba48e23d5ff3ceb1e83ef352e386868f460fc7b1a025cec8f836c56a0c4a3c6859db128b0d40215a40560e7ccfb89dddffb2fca283e
   languageName: node
   linkType: hard
 
@@ -4621,7 +4621,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     swagger-ui-react: ^4.19.0
-    typescript: 5.0.4
+    typescript: ^5.0.4
     zod: ^3.21.4
     zod-validation-error: ^1.3.0
   languageName: unknown
@@ -4807,9 +4807,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.431":
-  version: 1.4.456
-  resolution: "electron-to-chromium@npm:1.4.456"
-  checksum: 40e508d643676a54f6418eab8000198c480c3f79e5c9a0c37f4e17e51f22cf86646e14f3fdf36273b84fb06727d815be818ea33758fed1c65b6b277900bce5e6
+  version: 1.4.457
+  resolution: "electron-to-chromium@npm:1.4.457"
+  checksum: 5840a25776e77f3769cfdb2e5250e5f5a27d350c373efd323e38ff4763a0375e512447da4477dd887d56df7b12e360d91484af592ac3e61c969ee52d9aaf7249
   languageName: node
   linkType: hard
 
@@ -12109,16 +12109,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.0.4":
-  version: 5.0.4
-  resolution: "typescript@npm:5.0.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 82b94da3f4604a8946da585f7d6c3025fff8410779e5bde2855ab130d05e4fd08938b9e593b6ebed165bda6ad9292b230984f10952cf82f0a0ca07bbeaa08172
-  languageName: node
-  linkType: hard
-
 "typescript@npm:^5.0.4":
   version: 5.1.6
   resolution: "typescript@npm:5.1.6"
@@ -12126,16 +12116,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: b2f2c35096035fe1f5facd1e38922ccb8558996331405eb00a5111cc948b2e733163cc22fab5db46992aba7dd520fff637f2c1df4996ff0e134e77d3249a7350
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@5.0.4#~builtin<compat/typescript>":
-  version: 5.0.4
-  resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: d26b6ba97b6d163c55dbdffd9bbb4c211667ebebc743accfeb2c8c0154aace7afd097b51165a72a5bad2cf65a4612259344ff60f8e642362aa1695c760d303ac
   languageName: node
   linkType: hard
 
