@@ -78,12 +78,12 @@ export const stake = (token: StakeToken): PresetAllowEntry[] => {
           [token.address],
           [contracts.mainnet.aura.aurabal_staking_rewarder]
         ),
-        allow.mainnet.aura.aurabal_staking_rewarder.stake(),
-        allow.mainnet.aura.aurabal_staking_rewarder.withdraw()
+        allow.mainnet.aura.aurabal_staking_rewarder.stake()
       )
       break
   }
 
+  permissions.push(allow.mainnet.aura.aurabal_staking_rewarder.withdraw())
   permissions.push(allow.mainnet.aura.aurabal_staking_rewarder["getReward()"]())
 
   return permissions
@@ -133,13 +133,15 @@ export const compound = (token: StakeToken) => {
           [contracts.mainnet.aura.stkaurabal]
         ),
         allow.mainnet.aura.stkaurabal.deposit(undefined, c.avatar),
-        allow.mainnet.aura.stkaurabal.withdraw(undefined, c.avatar, c.avatar),
-        // When the MAX amount is unstaked
-        allow.mainnet.aura.stkaurabal.redeem(undefined, c.avatar, c.avatar)
       )
       break
   }
 
+  permissions.push(
+    allow.mainnet.aura.stkaurabal.withdraw(undefined, c.avatar, c.avatar),
+    // When the MAX amount is unstaked
+    allow.mainnet.aura.stkaurabal.redeem(undefined, c.avatar, c.avatar)
+  )
   permissions.push(
     allow.mainnet.aura.aurabal_compounding_rewarder["getReward()"]()
   )
