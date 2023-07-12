@@ -1,5 +1,5 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { AVATAR, c } from "zodiac-roles-sdk"
+import { c } from "zodiac-roles-sdk"
 import {
   PresetAllowEntry,
   PresetFunction,
@@ -63,7 +63,7 @@ export const deposit = (
         [ACTION_SUPPLY_NATIVE_TOKEN],
         c.matches([
           c.abiEncodedMatches(
-            [comet.address, AVATAR],
+            [comet.address, c.avatar],
             ["address", "address", "uint256"]
           ),
         ]),
@@ -74,10 +74,14 @@ export const deposit = (
         [ACTION_WITHDRAW_NATIVE_TOKEN],
         c.matches([
           c.abiEncodedMatches(
-            [comet.address, AVATAR],
+            [comet.address, c.avatar],
             ["address", "address", "uint256"]
           ),
-        ])
+        ]),
+        // Roles mod does not support scoping the same function with different option values.
+        // So we must also allow send here. This is not a problem because the MainnetBulker contract
+        // will refund any sent but unused ETH.
+        { send: true }
       )
     )
   }
@@ -109,5 +113,5 @@ export const borrow = (comet: Comet) => {
 }
 
 export const claim = (comet: Comet) => {
-  return [allow.mainnet.compoundV3.CometRewards.claim(comet.address, AVATAR)]
+  return [allow.mainnet.compoundV3.CometRewards.claim(comet.address, c.avatar)]
 }

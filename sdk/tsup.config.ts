@@ -8,4 +8,10 @@ export default defineConfig({
   dts: {
     resolve: true,
   },
+  noExternal: [
+    "zodiac-roles-sdk/kit",
+    "@dethcrypto/eth-sdk-client",
+    ".dethcrypto/eth-sdk-client",
+  ],
+  external: ["zodiac-roles-sdk"],
 })

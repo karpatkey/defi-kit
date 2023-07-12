@@ -35,13 +35,3 @@ export enum Status {
   CallAllowanceExceeded,
   EtherAllowanceExceeded,
 }
-
-// optionally add a type declaration, e.g. it enables autocompletion in IDEs
-declare module "expect" {
-  interface AsymmetricMatchers {
-    toBeForbidden(received: Promise<any>, status?: Status): void
-  }
-  interface Matchers<R> {
-    toBeForbidden(received: Promise<any>, status?: Status): R
-  }
-}

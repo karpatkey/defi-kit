@@ -1,4 +1,4 @@
-import { AVATAR, PresetAllowEntry, c } from "zodiac-roles-sdk"
+import { PresetAllowEntry, c } from "zodiac-roles-sdk"
 
 import { Pool, Token } from "./types"
 import { allowErc20Approve } from "../../erc20"
@@ -16,15 +16,26 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
             allow.mainnet.balancer.relayerLibrary.joinPool(
               pool.id,
               undefined, // TODO kind??
-              AVATAR,
-              AVATAR,
+              c.avatar,
+              c.avatar,
               {
                 assets: pool.tokens, // TODO should be ordered by address
               }
             )
           ),
 
-          c.calldataMatches()
+          c.calldataMatches(
+            // TODO update to next function
+            allow.mainnet.balancer.relayerLibrary.joinPool(
+              pool.id,
+              undefined, // TODO kind??
+              c.avatar,
+              c.avatar,
+              {
+                assets: pool.tokens, // TODO should be ordered by address
+              }
+            )
+          )
         )
       )
     ),

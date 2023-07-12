@@ -3,22 +3,17 @@ import {
   fillPreset,
   checkPermissionsIntegrity,
   applyPermissions,
-  encodeCalls,
   Target,
   ChainId,
-  c,
 } from "zodiac-roles-sdk"
 import { NotFoundError } from "./errors"
 
 export const derivePermissions = (entries: PresetAllowEntry[]) => {
-  const permissions = fillPreset(
-    {
-      allow: entries,
-      placeholders: {},
-      chainId: 1, // This won't be used (presets only set this field for informational purposes)
-    },
-    {}
-  )
+  const permissions = fillPreset({
+    allow: entries,
+    placeholders: {},
+    chainId: 1, // This won't be used (presets only set this field for informational purposes)
+  })
   checkPermissionsIntegrity(permissions)
   return permissions
 }

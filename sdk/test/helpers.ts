@@ -1,14 +1,10 @@
-import {
-  PresetAllowEntry,
-  applyPermissions,
-  extendPermissions,
-} from "zodiac-roles-sdk"
+import { PresetAllowEntry, applyPermissions } from "zodiac-roles-sdk"
+import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+import { BaseContract } from "ethers"
 import { Roles__factory } from "./rolesModTypechain"
 import { ROLES_ADDRESS, getMemberWallet, getOwnerWallet } from "./accounts"
 import { encodeBytes32String } from "../src"
 import { getProvider } from "./provider"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-import { BaseContract } from "ethers"
 import { derivePermissions } from "../src/apply"
 
 const owner = getOwnerWallet()

@@ -39,6 +39,7 @@ jobs:
 
       - name: Install dependencies & setup
         run: |
+          yarn -v
           yarn
           yarn setup
 

@@ -44,13 +44,15 @@ export const eth = {
   }) => {
     return targets.flatMap((target) => deposit(findPool(target), tokens))
   },
+
   stake: ({
-    targets,
+    tokens,
   }: {
-    targets: (StakeToken["address"] | StakeToken["symbol"])[]
+    tokens: (StakeToken["address"] | StakeToken["symbol"])[]
   }) => {
-    return targets.flatMap((target) => stake(findStakeToken(target)))
+    return tokens.flatMap((token) => stake(findStakeToken(token)))
   },
+
   compound: ({
     targets,
   }: {

@@ -21,7 +21,9 @@ interface BorrowOptions {
   tokens: any[]
 }
 
-interface StakeOptions {}
+interface StakeOptions {
+  tokens: any[]
+}
 
 interface ClaimOptions {}
 
