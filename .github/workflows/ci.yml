@@ -39,6 +39,7 @@ jobs:
 
       - name: Install dependencies & setup
         run: |
+          yarn cache clean
           yarn
           yarn setup
 
