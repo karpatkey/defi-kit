@@ -132,7 +132,7 @@ export const compound = (token: StakeToken) => {
           [token.address],
           [contracts.mainnet.aura.stkaurabal]
         ),
-        allow.mainnet.aura.stkaurabal.deposit(undefined, c.avatar),
+        allow.mainnet.aura.stkaurabal.deposit(undefined, c.avatar)
       )
       break
   }
