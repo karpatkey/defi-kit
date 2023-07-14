@@ -10,7 +10,9 @@ const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 const AURA = "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF"
 
 export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
-  const tokenAddresses = pool.tokens.map((token) => token.address).filter(address => tokens.some(token => token.address === address))
+  const tokenAddresses = pool.tokens
+    .map((token) => token.address)
+    .filter((address) => tokens.some((token) => token.address === address))
 
   const permissions: PresetAllowEntry[] = [
     ...allowErc20Approve([pool.bpt], [contracts.mainnet.aura.booster]),
