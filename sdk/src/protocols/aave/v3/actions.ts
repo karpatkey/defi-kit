@@ -72,7 +72,7 @@ export const borrowEther = () => {
     allow.mainnet.aaveV3.variableDebtWETH.approveDelegation(
       contracts.mainnet.aaveV3.wrappedTokenGatewayV3
     ),
-    allow.mainnet.aaveV2.stableDebtWETH.approveDelegation(
+    allow.mainnet.aaveV3.stableDebtWETH.approveDelegation(
       contracts.mainnet.aaveV3.wrappedTokenGatewayV3
     ),
     allow.mainnet.aaveV3.wrappedTokenGatewayV3.borrowETH(

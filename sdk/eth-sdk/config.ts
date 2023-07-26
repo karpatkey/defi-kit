@@ -35,6 +35,11 @@ export const contracts = {
       aura_locker: "0x3Fa73f1E5d8A792C80F426fc8F84FBF7Ce9bBCAC",
       rewarder: "0x59D66C58E83A26d6a0E35114323f65c3945c89c1",
     },
+    balancer: {
+      relayer: "0xfeA793Aa415061C483D2390414275AD314B3F621",
+      relayerLibrary: "0xf77018c0d817dA22caDbDf504C00c0d32cE1e5C2",
+      vault: "0xba12222222228d8ba445958a75a0704d566bf2c8",
+    },
     compoundV2: {
       comptroller: "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
       maximillion: "0xf859A1AD94BcF445A406B892eF0d3082f4174088",
@@ -54,10 +59,12 @@ export const contracts = {
       wsteth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       unsteth: "0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1",
     },
-    balancer: {
-      relayer: "0xfeA793Aa415061C483D2390414275AD314B3F621",
-      relayerLibrary: "0xf77018c0d817dA22caDbDf504C00c0d32cE1e5C2",
-      vault: "0xba12222222228d8ba445958a75a0704d566bf2c8",
+    spark: {
+      sparkLendingPoolV3: "0xC13e21B648A5Ee794902342038FF3aDAB66BE987",
+      wrappedTokenGatewayV3: "0xBD7D6a9ad7865463DE44B05F04559f65e3B11704",
+      variableDebtWETH: "0x2e7576042566f8D6990e07A1B61Ad1efd86Ae70d",
+      stableDebtWETH: "0x3c6b93D38ffA15ea995D1BC950d5D0Fa6b22bD05",
+      sDAI: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
     },
   },
   goerli: {
