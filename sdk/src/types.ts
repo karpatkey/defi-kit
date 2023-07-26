@@ -1,7 +1,7 @@
 import { SomeZodObject } from "zod"
 import { PresetAllowEntry } from "zodiac-roles-sdk"
 
-export type Action = "deposit" | "borrow" | "stake" | "claim" | "swap" | "sDAI"
+export type Action = "deposit" | "borrow" | "stake" | "claim" | "swap"
 
 export enum Chain {
   eth = "eth",
@@ -22,10 +22,6 @@ interface BorrowOptions {
 }
 
 interface StakeOptions {
-  tokens: any[]
-}
-
-interface sDaiOptions {
   tokens: any[]
 }
 
@@ -60,8 +56,6 @@ export type ProtocolActions = {
   claim?: (options: ClaimOptions) => PresetAllowEntry[]
 
   swap?: (options: SwapOptions) => PresetAllowEntry[]
-
-  sDAI?: (options: sDaiOptions) => PresetAllowEntry[]
 }
 
 // For registering protocols in the REST API we need zod schemas for the specific parameters of each action
@@ -71,5 +65,4 @@ export type ProtocolSchemas = {
   stake?: SomeZodObject
   claim?: SomeZodObject
   swap?: SomeZodObject
-  sDAI?: SomeZodObject
 }
