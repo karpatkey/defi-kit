@@ -96,7 +96,7 @@ export const borrowEther = () => {
   ]
 }
 
-export const stake = () => {
+export const sDAI = () => {
   return [
     ...allowErc20Approve(
       [DAI],
