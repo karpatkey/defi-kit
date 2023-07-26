@@ -12,7 +12,7 @@ export const depositToken = (token: Token) => {
       [token.token],
       [contracts.mainnet.aaveV3.aaveLendingPoolV3]
     ),
-    allow.mainnet.aaveV3.aaveLendingPoolV3.deposit(
+    allow.mainnet.aaveV3.aaveLendingPoolV3.supply(
       token.token,
       undefined,
       c.avatar,

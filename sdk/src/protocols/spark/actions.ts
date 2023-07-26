@@ -13,7 +13,7 @@ export const depositToken = (token: Token) => {
       [token.token],
       [contracts.mainnet.spark.sparkLendingPoolV3]
     ),
-    allow.mainnet.spark.sparkLendingPoolV3.deposit(
+    allow.mainnet.spark.sparkLendingPoolV3.supply(
       token.token,
       undefined,
       c.avatar,
