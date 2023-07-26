@@ -8,6 +8,7 @@ import * as compound_v3 from "./compound/v3"
 import * as curve from "./curve"
 import * as cowswap from "./cowswap"
 import * as lido from "./lido"
+import * as spark from "./spark"
 
 // group all protocols actions by chain
 
@@ -20,6 +21,7 @@ export const eth = {
   compound_v3: compound_v3.eth,
   curve: curve.eth,
   lido: lido.eth,
+  spark: spark.eth,
 } satisfies Record<string, ProtocolActions>
 
 export const gor = {
