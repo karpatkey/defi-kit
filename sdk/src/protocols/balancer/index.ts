@@ -43,20 +43,20 @@ export const findPool = (pools: readonly Pool[], nameIdOrBpt: string) => {
 }
 
 const filterPoolsByTokens = (
-  sell: string[] | undefined,
-  buy: string[] | undefined,
+  sell: EthToken[] | undefined,
+  buy: EthToken[] | undefined,
   pools: readonly Pool[]
 ) => {
   return pools.filter((pool) => {
-    const poolTokens = pool.tokens as readonly string[]
+    const poolTokens = pool.tokens.map((token) => token.address) as readonly string[]
     if (sell && sell.length > 0) {
-      const hasSell = sell.some((token) => poolTokens.includes(token))
+      const hasSell = sell.some((token) => poolTokens.includes(token.address))
       if (!hasSell) {
         return false
       }
     }
     if (buy && buy.length > 0) {
-      const hasBuy = buy.some((token) => poolTokens.includes(token))
+      const hasBuy = buy.some((token) => poolTokens.includes(token.address))
       if (!hasBuy) {
         return false
       }
