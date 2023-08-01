@@ -1,32 +1,7 @@
 import { EthPool, EthToken, Pool } from "./types"
 import ethPools from "./_info"
 import { NotFoundError } from "../../errors"
-import { deposit, swap } from "./actions"
-
-export const eth = {
-  deposit: (options: {
-    targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
-    tokens?: EthToken[]
-  }) =>
-    options.targets.flatMap((target) =>
-      deposit(findPool(ethPools, target), options.tokens)
-    ),
-
-  swap: (options: {
-    sell?: EthToken[]
-    buy?: EthToken[]
-    pools?: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
-  }) =>
-    filterPoolsByTokens(
-      options.sell,
-      options.buy,
-      options.pools
-        ? options.pools.map((addressOrName) =>
-            findPool(ethPools, addressOrName)
-          )
-        : ethPools
-    ).flatMap((pool) => swap(pool, options.sell, options.buy)),
-}
+import { deposit, swap, stake, lock } from "./actions"
 
 export const findPool = (pools: readonly Pool[], nameIdOrBpt: string) => {
   const nameIdOrBptLower = nameIdOrBpt.toLowerCase()
@@ -48,7 +23,9 @@ const filterPoolsByTokens = (
   pools: readonly Pool[]
 ) => {
   return pools.filter((pool) => {
-    const poolTokens = pool.tokens.map((token) => token.address) as readonly string[]
+    const poolTokens = pool.tokens.map(
+      (token) => token.address
+    ) as readonly string[]
     if (sell && sell.length > 0) {
       const hasSell = sell.some((token) => poolTokens.includes(token.address))
       if (!hasSell) {
@@ -63,4 +40,53 @@ const filterPoolsByTokens = (
     }
     return true
   })
+}
+
+const findToken = (symbolOrAddress: string): EthToken => {
+  const symbolAddressLower = symbolOrAddress.toLowerCase()
+  const tokens = ethPools.flatMap((pool) => [...pool.tokens])
+  const token = tokens.find(
+    (token) =>
+      token.symbol.toLowerCase() === symbolAddressLower ||
+      token.address.toLowerCase() === symbolAddressLower
+  )
+  if (!token) {
+    throw new NotFoundError(`Token not found: ${symbolOrAddress}`)
+  }
+  return token
+}
+
+export const eth = {
+  deposit: (options: {
+    targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
+    tokens?: (EthToken["address"] | EthToken["symbol"])[]
+  }) =>
+    options.targets.flatMap((target) =>
+      deposit(findPool(ethPools, target), options.tokens?.map(findToken))
+    ),
+
+  stake: (options: {
+    targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
+  }) => options.targets.flatMap((target) => stake(findPool(ethPools, target))),
+
+  lock: () => {
+    return lock()
+  },
+
+  swap: (options: {
+    sell?: (EthToken["address"] | EthToken["symbol"])[]
+    buy?: (EthToken["address"] | EthToken["symbol"])[]
+    pools?: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
+  }) =>
+    filterPoolsByTokens(
+      options.sell?.map(findToken),
+      options.buy?.map(findToken),
+      options.pools
+        ? options.pools.map((addressOrName) =>
+            findPool(ethPools, addressOrName)
+          )
+        : ethPools
+    ).flatMap((pool) =>
+      swap(pool, options.sell?.map(findToken), options.buy?.map(findToken))
+    ),
 }

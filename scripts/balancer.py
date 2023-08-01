@@ -199,8 +199,6 @@ def transactions_data(blockchain):
     deprecated = 0
     print(len(pools))
     for pool in pools:
-        gauge_address = ZERO_ADDRESS
-
         lptoken_address = vault_contract.functions.getPool(pool['id']).call()[0]
 
         pool_tokens_data = vault_contract.functions.getPoolTokens(pool['id']).call()
@@ -213,7 +211,7 @@ def transactions_data(blockchain):
         try:
             gauge_address = get_gauge_addresses(blockchain, 'latest', web3, lptoken_address)[0]
         except:
-            gauge_address = ZERO_ADDRESS
+            gauge_address = None
         
         pool_name = get_symbol(lptoken_address, blockchain, web3=web3)
         

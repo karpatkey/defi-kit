@@ -39,6 +39,10 @@ export const contracts = {
       relayer: "0xfeA793Aa415061C483D2390414275AD314B3F621",
       relayerLibrary: "0xf77018c0d817dA22caDbDf504C00c0d32cE1e5C2",
       vault: "0xba12222222228d8ba445958a75a0704d566bf2c8",
+      gauge: "0xcD4722B7c24C29e0413BDCd9e51404B4539D14aE",
+      minter: "0x239e55F427D44C3cc793f49bFB507ebe76638a2b",
+      vebal: "0xC128a9954e6c874eA3d62ce62B468bA073093F25",
+      fee_distributor: "0xD3cf852898b21fc233251427c2DC93d3d604F3BB",
     },
     compoundV2: {
       comptroller: "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",

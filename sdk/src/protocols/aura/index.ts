@@ -18,6 +18,20 @@ const findPool = (nameOrAddressOrId: string): Pool => {
   return pool
 }
 
+const findToken = (symbolOrAddress: string): Token => {
+  const symbolAddressLower = symbolOrAddress.toLowerCase()
+  const tokens = pools.flatMap((pool) => [...pool.tokens])
+  const token = tokens.find(
+    (token) =>
+      token.symbol.toLowerCase() === symbolAddressLower ||
+      token.address.toLowerCase() === symbolAddressLower
+  )
+  if (!token) {
+    throw new NotFoundError(`Token not found: ${symbolOrAddress}`)
+  }
+  return token
+}
+
 const findStakeToken = (nameOrAddress: string): StakeToken => {
   const symbolAddressLower = nameOrAddress.toLowerCase()
   const stakeToken = stakeTokens.find(
@@ -40,9 +54,11 @@ export const eth = {
     targets: (Pool["name"] | Pool["bpt"] | Pool["id"])[]
     // "tokens" is an optional parameter since the user might want to allow (or not) the depositSingle() function
     // If "tokens" is not specified then we allow all the pool.tokens[]
-    tokens?: Token[]
+    tokens?: (Token["address"] | Token["symbol"])[]
   }) => {
-    return targets.flatMap((target) => deposit(findPool(target), tokens))
+    return targets.flatMap((target) =>
+      deposit(findPool(target), tokens?.map(findToken))
+    )
   },
 
   stake: ({
