@@ -1,7 +1,6 @@
-
 node_modules
-
 .yarn
+
 app/coverage
 app/.next/
 app/out/
