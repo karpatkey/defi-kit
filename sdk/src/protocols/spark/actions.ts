@@ -98,18 +98,8 @@ export const borrowEther = () => {
 
 export const sDAI = () => {
   return [
-    ...allowErc20Approve(
-      [DAI],
-      [contracts.mainnet.spark.sDAI]
-    ),
-    allow.mainnet.spark.sDAI.deposit(
-      undefined,
-      c.avatar
-    ),
-    allow.mainnet.spark.sDAI.redeem(
-      undefined,
-      c.avatar,
-      c.avatar
-    )
+    ...allowErc20Approve([DAI], [contracts.mainnet.spark.sDAI]),
+    allow.mainnet.spark.sDAI.deposit(undefined, c.avatar),
+    allow.mainnet.spark.sDAI.redeem(undefined, c.avatar, c.avatar),
   ]
 }
