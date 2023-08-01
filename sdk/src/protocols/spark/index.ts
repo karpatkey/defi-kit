@@ -1,7 +1,13 @@
 import { NotFoundError } from "../../errors"
 import tokens from "./_info"
 import { Token } from "./types"
-import { depositEther, depositToken, borrowEther, borrowToken, sDAI } from "./actions"
+import {
+  depositEther,
+  depositToken,
+  borrowEther,
+  borrowToken,
+  sDAI,
+} from "./actions"
 
 const findToken = (symbolOrAddress: string): Token => {
   const nameOrAddressLower = symbolOrAddress.toLowerCase()
