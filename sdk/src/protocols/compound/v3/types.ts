@@ -1,4 +1,4 @@
-import comets from "./_comets"
+import comets from "./_info"
 
 export type Comet = (typeof comets)[number]
 export type Collateral = (typeof comets)[number]["collateralTokens"][number]

@@ -3,8 +3,6 @@ from defi_protocols.constants import *
 from defi_protocols import Aura
 from defi_protocols import Balancer
 from lib.dump import dump
-from pathlib import Path
-import os
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------

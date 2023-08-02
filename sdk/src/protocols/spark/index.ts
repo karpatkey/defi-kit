@@ -43,7 +43,8 @@ export const eth = {
     )
   },
 
-  sDAI: () => {
-    return sDAI()
-  },
+  // TODO move to client-configs
+  // sDAI: () => {
+  //   return sDAI()
+  // },
 }

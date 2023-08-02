@@ -69,9 +69,10 @@ export const eth = {
     targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
   }) => options.targets.flatMap((target) => stake(findPool(ethPools, target))),
 
-  lock: () => {
-    return lock()
-  },
+  // TODO
+  // lock: () => {
+  //   return lock()
+  // },
 
   swap: (options: {
     sell?: (EthToken["address"] | EthToken["symbol"])[]

@@ -14,6 +14,10 @@ const swap = (options: { sell?: string[]; buy?: string[] }) => {
   return [allow.goerli.cowswap.orderSigner.signOrder(sellScoping, buyScoping)]
 }
 
+export const eth = {
+  swap,
+}
+
 export const gor = {
   swap,
 }

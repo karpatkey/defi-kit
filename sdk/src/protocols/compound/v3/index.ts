@@ -1,5 +1,5 @@
 import { NotFoundError } from "../../../errors"
-import comets from "./_comets"
+import comets from "./_info"
 import { Comet, Token, BorrowToken } from "./types"
 import { deposit, borrow } from "./actions"
 

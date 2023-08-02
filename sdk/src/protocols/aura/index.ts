@@ -69,14 +69,17 @@ export const eth = {
     return targets.flatMap((token) => stake(findStakeToken(token)))
   },
 
-  compound: ({
-    targets,
-  }: {
-    targets: (StakeToken["address"] | StakeToken["symbol"])[]
-  }) => {
-    return targets.flatMap((target) => compound(findStakeToken(target)))
-  },
-  lock: () => {
-    return lock()
-  },
+  // TODO standard action? include in stake action? or move to client-configs?
+  // compound: ({
+  //   targets,
+  // }: {
+  //   targets: (StakeToken["address"] | StakeToken["symbol"])[]
+  // }) => {
+  //   return targets.flatMap((target) => compound(findStakeToken(target)))
+  // },
+
+  // TODO introduce new standard action or client-configs?
+  // lock: () => {
+  //   return lock()
+  // },
 }

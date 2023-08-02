@@ -1,3 +1,5 @@
+// This file is auto-generated. Do not edit!
+
 export default [
   {
     address: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",

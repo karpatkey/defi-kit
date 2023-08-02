@@ -62,15 +62,15 @@ export const eth = {
     return stake()
   },
 
-  governance: ({
-    targets,
-    delegatee,
-  }: {
-    targets: (DelegateToken["address"] | DelegateToken["symbol"])[]
-    delegatee: string
-  }) => {
-    return targets.flatMap((target) =>
-      governance(findDelegateToken(target), delegatee)
-    )
-  },
+  // governance: ({
+  //   targets,
+  //   delegatee,
+  // }: {
+  //   targets: (DelegateToken["address"] | DelegateToken["symbol"])[]
+  //   delegatee: string
+  // }) => {
+  //   return targets.flatMap((target) =>
+  //     governance(findDelegateToken(target), delegatee)
+  //   )
+  // },
 }
