@@ -62,11 +62,11 @@ export const eth = {
   },
 
   stake: ({
-    tokens,
+    targets,
   }: {
-    tokens: (StakeToken["address"] | StakeToken["symbol"])[]
+    targets: (StakeToken["address"] | StakeToken["symbol"])[]
   }) => {
-    return tokens.flatMap((token) => stake(findStakeToken(token)))
+    return targets.flatMap((token) => stake(findStakeToken(token)))
   },
 
   compound: ({

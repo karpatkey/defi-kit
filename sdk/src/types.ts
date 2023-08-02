@@ -22,7 +22,7 @@ interface BorrowOptions {
 }
 
 interface StakeOptions {
-  tokens: any[]
+  targets: any[]
 }
 
 interface ClaimOptions {}
