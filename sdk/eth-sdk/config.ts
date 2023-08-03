@@ -59,6 +59,18 @@ export const contracts = {
       relayerLibrary: "0xf77018c0d817dA22caDbDf504C00c0d32cE1e5C2",
       vault: "0xba12222222228d8ba445958a75a0704d566bf2c8",
     },
+    makerdao: {
+      dai: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      cdp_manager: "0x5ef30b9986345249bc32d8928B7ee64DE9435E39",
+      jug: "0x19c0976f590D67707E62397C87829d896Dc0f1F1",
+      maker_proxy_actions: "0x82ecD135Dce65Fbc6DbdD0e4237E0AF93FFD5038",
+      dsr_manager: "0x373238337Bfe1146fb49989fc222523f83081dDb",
+      pot: "0x197E90f9FAD81970bA7976f33CbD77088E5D7cf7",
+      gem_join_wsteth: "0x10CD5fbe1b404B7E19Ef964B63939907bdaf42E2",
+      vat: "0x35D1b3F3D7966A1DFe207aa4514C12a259A0492B",
+      dai_join: "0x9759A6Ac90977b93B58547b4A71c78317f391A28",
+      dsr_proxy_actions: "0x07ee93aEEa0a36FfF2A9B95dd22Bd6049EE54f26"
+    }
   },
   goerli: {
     cowswap: {
