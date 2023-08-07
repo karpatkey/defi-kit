@@ -17,8 +17,14 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   const permissions: PresetAllowEntry[] = [
     ...allowErc20Approve([pool.bpt], [contracts.mainnet.aura.booster]),
     allow.mainnet.aura.booster.deposit(pool.id),
-    allow.mainnet.aura.rewarder.withdrawAndUnwrap(),
-    allow.mainnet.aura.rewarder["getReward()"](),
+    {
+      ...allow.mainnet.aura.rewarder.withdrawAndUnwrap(),
+      targetAddress: pool.rewarder,
+    },
+    {
+      ...allow.mainnet.aura.rewarder["getReward()"](),
+      targetAddress: pool.rewarder,
+    },
   ]
 
   if (tokenAddresses.length > 0) {

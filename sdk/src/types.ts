@@ -22,7 +22,7 @@ interface BorrowOptions {
 }
 
 interface StakeOptions {
-  tokens: any[]
+  targets: any[]
 }
 
 interface ClaimOptions {}
@@ -53,6 +53,7 @@ export type ProtocolActions = {
 
   stake?: (options: StakeOptions) => PresetAllowEntry[]
 
+  // TODO do we wanna keep this as a standard action
   claim?: (options: ClaimOptions) => PresetAllowEntry[]
 
   swap?: (options: SwapOptions) => PresetAllowEntry[]

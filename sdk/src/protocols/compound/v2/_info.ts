@@ -1,3 +1,5 @@
+// This file is auto-generated. Do not edit!
+
 export default [
   {
     cToken: "0x6C8c6b02E7b2BE14d4fA6022Dfd6d75921D90E4E",
@@ -57,13 +59,13 @@ export default [
     cToken: "0x35A18000230DA775CAc24873d00Ff85BccdeD550",
     token: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
     symbol: "UNI",
-    mint_paused: false,
+    mint_paused: true,
   },
   {
     cToken: "0x70e36f6BF80a52b3B46b3aF8e106CC0ed743E8e4",
     token: "0xc00e94Cb662C3520282E6f5717214004A7f26888",
     symbol: "COMP",
-    mint_paused: false,
+    mint_paused: true,
   },
   {
     cToken: "0xccF4429DB6322D5C611ee964527D42E5d685DD6a",
@@ -81,7 +83,7 @@ export default [
     cToken: "0xFAce851a4921ce59e912d19329929CE6da6EB0c7",
     token: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
     symbol: "LINK",
-    mint_paused: false,
+    mint_paused: true,
   },
   {
     cToken: "0x95b4eF2869eBD94BEb4eEE400a99824BF5DC325b",
@@ -93,13 +95,13 @@ export default [
     cToken: "0x4B0181102A0112A2ef11AbEE5563bb4a3176c9d7",
     token: "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
     symbol: "SUSHI",
-    mint_paused: false,
+    mint_paused: true,
   },
   {
     cToken: "0xe65cdB6479BaC1e22340E4E755fAE7E509EcD06c",
     token: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
     symbol: "AAVE",
-    mint_paused: false,
+    mint_paused: true,
   },
   {
     cToken: "0x80a2AE356fc9ef4305676f7a3E2Ed04e12C33946",

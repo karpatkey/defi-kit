@@ -8,7 +8,6 @@ import { Comet, Token } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
 
-const USDC = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
 const ACTION_SUPPLY_NATIVE_TOKEN =
   "0x414354494f4e5f535550504c595f4e41544956455f544f4b454e000000000000"
 const ACTION_WITHDRAW_NATIVE_TOKEN =

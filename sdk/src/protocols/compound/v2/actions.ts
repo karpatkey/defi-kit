@@ -1,9 +1,8 @@
 import { MintPaused } from "../../../errors"
 import { allow } from "zodiac-roles-sdk/kit"
-import { c, forAll } from "zodiac-roles-sdk"
+import { c } from "zodiac-roles-sdk"
 import { Token, cToken } from "./types"
 import { allowErc20Approve } from "../../../erc20"
-import { contracts } from "../../../../eth-sdk/config"
 import { PresetFunction } from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types"
 
 // const _mint = (ctoken: cToken): PresetFunction => {

@@ -1,5 +1,5 @@
 import { NotFoundError } from "../../../errors"
-import tokens from "./tokens"
+import tokens from "./_info"
 import { Token } from "./types"
 import { deposit, borrow } from "./actions"
 

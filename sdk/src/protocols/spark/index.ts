@@ -1,9 +1,13 @@
-import { NotFoundError } from "../../../errors"
+import { NotFoundError } from "../../errors"
 import tokens from "./_info"
-import { Token, DelegateToken } from "./types"
-import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
-import { findDelegateToken } from "../v2/index"
-import { stake, governance } from "../v2/actions"
+import { Token } from "./types"
+import {
+  depositEther,
+  depositToken,
+  borrowEther,
+  borrowToken,
+  sDAI,
+} from "./actions"
 
 const findToken = (symbolOrAddress: string): Token => {
   const nameOrAddressLower = symbolOrAddress.toLowerCase()
@@ -39,19 +43,8 @@ export const eth = {
     )
   },
 
-  stake: () => {
-    return stake()
-  },
-
-  // governance: ({
-  //   targets,
-  //   delegatee,
-  // }: {
-  //   targets: (DelegateToken["address"] | DelegateToken["symbol"])[]
-  //   delegatee: string
-  // }) => {
-  //   return targets.flatMap((target) =>
-  //     governance(findDelegateToken(target), delegatee)
-  //   )
+  // TODO move to client-configs
+  // sDAI: () => {
+  //   return sDAI()
   // },
 }
