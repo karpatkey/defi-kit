@@ -1,4 +1,3 @@
-from defi_protocols import Compound
 from defi_protocols.functions import get_contract, get_symbol, get_node
 from defi_protocols.constants import ETHEREUM, E_ADDRESS
 from lib.dump import dump

@@ -3,9 +3,9 @@ import sys
 lib_path = os.path.abspath(os.path.join(__file__, '..'))
 sys.path.append(lib_path)
 
-from defi_protocols.functions import *
-from defi_protocols.constants import *
-from defi_protocols import Aave
+from defi_protocols.functions import get_node, get_contract
+from defi_protocols.constants import ETHEREUM
+from defi_protocols.Aave import PDP_ETHEREUM, ABI_PDP
 from .dump import dump
 
 PDPV3_ETHEREUM = '0x7B4EB56E7CD4b454BA8ff71E4518426369a138a3'
@@ -19,9 +19,9 @@ def reserves_tokens_data(version=2):
     web3 = get_node(ETHEREUM)
 
     if version == 2:
-        pdp_contract = get_contract(Aave.PDP_ETHEREUM, ETHEREUM, web3=web3, abi=Aave.ABI_PDP)
+        pdp_contract = get_contract(PDP_ETHEREUM, ETHEREUM, web3=web3, abi=ABI_PDP)
     elif version == 3:
-        pdp_contract = get_contract(PDPV3_ETHEREUM, ETHEREUM, web3=web3, abi=Aave.ABI_PDP)
+        pdp_contract = get_contract(PDPV3_ETHEREUM, ETHEREUM, web3=web3, abi=ABI_PDP)
     else:
         return "Error: wrong version!"
 
@@ -53,7 +53,6 @@ def reserves_tokens_data(version=2):
 
         print(i)
         i += 1
-
 
     dump(reserves_tokens_data, 'aave/v' + str(version))
 

@@ -1,5 +1,5 @@
-from defi_protocols.functions import *
-from defi_protocols.constants import *
+from defi_protocols.functions import get_node, get_contract, get_symbol
+from defi_protocols.constants import ETHEREUM
 from defi_protocols import Aura
 from defi_protocols import Balancer
 from lib.dump import dump

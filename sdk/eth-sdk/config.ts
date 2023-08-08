@@ -54,6 +54,15 @@ export const contracts = {
       MainnetBulker: "0xa397a8C2086C554B531c02E29f3291c9704B00c7",
       CometRewards: "0x1b0e765f6224c21223aea2af16c1c46e38885a40",
     },
+    convex: {
+      booster: "0xF403C135812408BFbE8713b5A23a04b3D48AAE31",
+      cvxCRV: "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7",
+      rewarder: "0x0A760466E1B4621579a82a39CB56Dda2F4E70f03",
+      CrvDepositor: "0x8014595F2AB54cD7c604B00E9fb932176fDc86Ae",
+      stkCvxCrv: "0xaa0C3f5F7DFD688C6E646F66CD2a6B66ACdbE434",
+      cvxRewardPool: "0xCF50b810E57Ac33B91dCF525C6ddd9881B139332",
+      vlCVX: "0x72a19342e8F1838460eBFCCEf09F6585e32db86E",
+    },
     curve: {
       regularPool: "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7",
       metaPool: "0x4f062658eaaf2c1ccf8c8e36d6824cdf41167956",

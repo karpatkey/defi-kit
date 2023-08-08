@@ -5,8 +5,9 @@ import * as aura from "./aura"
 import * as balancer from "./balancer"
 import * as compound_v2 from "./compound/v2"
 import * as compound_v3 from "./compound/v3"
-import * as curve from "./curve"
+import * as convex from "./convex"
 import * as cowswap from "./cowswap"
+import * as curve from "./curve"
 import * as lido from "./lido"
 import * as spark from "./spark"
 
@@ -19,6 +20,7 @@ export const eth = {
   balancer: balancer.eth,
   compound_v2: compound_v2.eth,
   compound_v3: compound_v3.eth,
+  convex: convex.eth,
   curve: curve.eth,
   lido: lido.eth,
   spark: spark.eth,
