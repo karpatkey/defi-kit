@@ -1,17 +1,42 @@
-FROM node:lts-alpine as runner
+# FROM node:lts-alpine as runner
+
+# WORKDIR /application
+
+# COPY . .
+
+# RUN yarn install && \
+#     yarn setup && \
+#     yarn build
+
+# # Expose the necessary port
+# EXPOSE 3000
+
+# # Start the app
+# CMD yarn start
+
+
+FROM node:lts-alpine as builder
 
 WORKDIR /application
 
 COPY . .
 
-RUN yarn install
+RUN yarn install && \
+    yarn setup && \
+    yarn build
 
-RUN yarn setup
+FROM node:lts-alpine as runner
 
-RUN yarn build
+WORKDIR /application
 
-# Expose the necessary port
+COPY --from=builder /application/package.json ./
+COPY --from=builder /application/yarn.lock ./
+COPY --from=builder /application/node_modules ./node_modules
+COPY --from=builder /application/app ./app
+COPY --from=builder /application/playground ./playground
+COPY --from=builder /application/scripts ./scripts
+COPY --from=builder /application/sdk ./sdk
+
 EXPOSE 3000
 
-# Start the app
 CMD yarn start
