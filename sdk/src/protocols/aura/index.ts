@@ -78,8 +78,7 @@ export const eth = {
   //   return targets.flatMap((target) => compound(findStakeToken(target)))
   // },
 
-  // TODO introduce new standard action or client-configs?
-  // lock: () => {
-  //   return lock()
-  // },
+  lock: () => {
+    return lock()
+  },
 }

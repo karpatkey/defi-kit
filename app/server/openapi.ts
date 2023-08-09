@@ -10,6 +10,8 @@ import { registerBorrow } from "./actions/borrow"
 import { registerDeposit } from "./actions/deposit"
 import { registerSwap } from "./actions/swap"
 import { registerStake } from "./actions/stake"
+import { registerLock } from "./actions/lock"
+import { registerDelegate } from "./actions/delegate"
 
 extendZodWithOpenApi(zod)
 
@@ -33,6 +35,9 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
           return
         case "stake":
           registerStake(registry, chainPrefix, protocol)
+          return
+        case "lock":
+          registerLock(registry, chainPrefix, protocol)
           return
         default:
           throw new Error(`Unknown action: ${action}`)

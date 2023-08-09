@@ -1,7 +1,7 @@
 import { NotFoundError } from "../../errors"
 import pools from "./_info"
 import { Pool, StakeToken } from "./types"
-import { deposit, stake } from "./actions"
+import { deposit, stake, lock } from "./actions"
 import stakeTokens from "./stakeTokens"
 
 const findPool = (nameOrAddressOrId: string): Pool => {
@@ -49,8 +49,7 @@ export const eth = {
     return targets.flatMap((token) => stake(findStakeToken(token)))
   },
 
-  // TODO introduce new standard action or client-configs?
-  // lock: () => {
-  //   return lock()
-  // },
+  lock: () => {
+    return lock()
+  },
 }

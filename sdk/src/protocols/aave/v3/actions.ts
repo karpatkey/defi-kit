@@ -15,8 +15,7 @@ export const depositToken = (token: Token) => {
     allow.mainnet.aaveV3.aaveLendingPoolV3.supply(
       token.token,
       undefined,
-      c.avatar,
-      "0x"
+      c.avatar
     ),
     allow.mainnet.aaveV3.aaveLendingPoolV3.withdraw(
       token.token,
@@ -33,7 +32,7 @@ export const depositEther = () => [
   allow.mainnet.aaveV3.wrappedTokenGatewayV3.depositETH(
     contracts.mainnet.aaveV3.aaveLendingPoolV3,
     c.avatar,
-    "0x",
+    undefined,
     { send: true }
   ),
   allow.mainnet.aaveV3.wrappedTokenGatewayV3.withdrawETH(
@@ -54,7 +53,7 @@ export const borrowToken = (token: Token) => {
       token.token,
       undefined,
       undefined,
-      "0x",
+      undefined,
       c.avatar
     ),
     allow.mainnet.aaveV3.aaveLendingPoolV3.repay(
@@ -76,16 +75,13 @@ export const borrowEther = () => {
       contracts.mainnet.aaveV3.wrappedTokenGatewayV3
     ),
     allow.mainnet.aaveV3.wrappedTokenGatewayV3.borrowETH(
-      contracts.mainnet.aaveV3.aaveLendingPoolV3,
-      undefined,
-      undefined,
-      "0x"
+      contracts.mainnet.aaveV3.aaveLendingPoolV3
     ),
     allow.mainnet.aaveV3.wrappedTokenGatewayV3.repayETH(
       contracts.mainnet.aaveV3.aaveLendingPoolV3,
       undefined,
       undefined,
-      "0x",
+      c.avatar,
       { send: true }
     ),
     allow.mainnet.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(WETH),
