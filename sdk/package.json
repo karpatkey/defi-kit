@@ -1,5 +1,5 @@
 {
-  "name": "defi-presets",
+  "name": "defi-kit",
   "version": "0.1.11",
   "description": "Permission presets for Zodiac Roles covering interactions with DeFi protocols",
   "main": "dist/index.js",

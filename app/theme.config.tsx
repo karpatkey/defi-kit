@@ -5,10 +5,10 @@ import Image from "next/image"
 
 const config: DocsThemeConfig = {
   project: {
-    link: "https://github.com/KarpatkeyDAO/defi-presets",
+    link: "https://github.com/KarpatkeyDAO/defi-kit",
   },
   docsRepositoryBase:
-    "https://github.com/KarpatkeyDAO/defi-presets/tree/main/app/pages/learn",
+    "https://github.com/KarpatkeyDAO/defi-kit/tree/main/app/pages/learn",
   logo: <span className="text-mono">DeFi Presets</span>,
   useNextSeoProps() {
     const { asPath } = useRouter()

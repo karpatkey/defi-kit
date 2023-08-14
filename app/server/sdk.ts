@@ -1,5 +1,5 @@
-import * as eth from "defi-presets/eth"
-import * as gor from "defi-presets/gor"
+import * as eth from "defi-kit/eth"
+import * as gor from "defi-kit/gor"
 
 export const sdks = {
   eth,

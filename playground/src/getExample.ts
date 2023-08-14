@@ -7,8 +7,8 @@ export const getExampleSourceCode = (exampleName: string) => {
   return `// Welcome to the DeFi Presets SDK Playground
 // You can use this for exploring the SDK and composing your role permissions.
 
-import { encodeBytes32String } from 'defi-presets'
-import { allow, apply } from 'defi-presets/eth'
+import { encodeBytes32String } from 'defi-kit'
+import { allow, apply } from 'defi-kit/eth'
 
 const DAI = '0x6B175474E89094C44Da98b954EedeAC495271d0F'
 const USDC = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'

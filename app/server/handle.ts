@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next"
-import { NotFoundError } from "defi-presets"
+import { NotFoundError } from "defi-kit"
 import { fromZodError } from "zod-validation-error"
 import { ZodError } from "zod"
 

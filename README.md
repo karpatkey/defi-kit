@@ -13,11 +13,11 @@ For in-depth overview, refer to the [docs](https://presets.karpatkey.com/learn).
 ### TypeScript SDK
 
 ```
-yarn add defi-presets
+yarn add defi-kit
 ```
 
 ```typescript
-import { apply, allow } from "defi-presets"
+import { apply, allow } from "defi-kit"
 
 const calls = await apply(roleKey, [...allow.cowswap.swap(tokenIn, tokenOut)], {
   address: rolesModAddress,
@@ -109,7 +109,7 @@ yarn test:watch
 
 6. Implement the functions, adhering to the general API for that action type and returning an array of `PresetAllowEntry[]`. See following section for guidance.
 
-Note: For the new protocol functions to become available in the SDK playground, the changes must first be published to npm as a new version of the _defi-presets_ package.
+Note: For the new protocol functions to become available in the SDK playground, the changes must first be published to npm as a new version of the _defi-kit_ package.
 
 #### Implement an allow function using the typed kit
 
@@ -178,8 +178,8 @@ To run a script locally you need to first go through some setup steps:
 
 - Setup python env, e.g., using anaconda:
   ```bash
-  conda create --name defi-presets python=3.1
-  conda activate defi-presets
+  conda create --name defi-kit python=3.1
+  conda activate defi-kit
   python -m pip install --upgrade pip
   ```
 - Install dependencies:

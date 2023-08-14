@@ -160,7 +160,7 @@ export const createExporter = (
       },
       dependencies: {
         typescript: typescriptVersion,
-        "defi-presets": "latest",
+        "defi-kit": "latest",
       },
     }
     const form = createProjectForm(project)
@@ -208,7 +208,7 @@ export const createExporter = (
           description: "TypeScript playground exported Sandbox",
           dependencies: {
             typescript: typescriptVersion,
-            "defi-presets": "latest",
+            "defi-kit": "latest",
           },
         },
       },
