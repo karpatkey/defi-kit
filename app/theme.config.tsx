@@ -9,12 +9,12 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase:
     "https://github.com/KarpatkeyDAO/defi-kit/tree/main/app/pages/learn",
-  logo: <span className="text-mono">DeFi Presets</span>,
+  logo: <span className="text-mono">DeFi Kit</span>,
   useNextSeoProps() {
     const { asPath } = useRouter()
     if (asPath !== "/") {
       return {
-        titleTemplate: "%s – DeFi Presets",
+        titleTemplate: "%s – DeFi Kit",
       }
     }
   },
@@ -34,17 +34,17 @@ const config: DocsThemeConfig = {
         <meta httpEquiv="Content-Language" content="en" />
         <meta
           name="description"
-          content="Permission presets for safe interactions with DeFi protocols"
+          content="Permissions for Zodiac Roles covering interactions with DeFi protocols"
         />
         <meta
           name="og:description"
-          content="Permission presets for safe interactions with DeFi protocols"
+          content="Permissions for Zodiac Roles covering interactions with DeFi protocols"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/avatar.png" />
         <meta name="og:title" content={title} />
         <meta name="og:image" content="/avatar.png" />
-        <meta name="apple-mobile-web-app-title" content="DeFi Presets" />
+        <meta name="apple-mobile-web-app-title" content="DeFi Kit" />
         <link href="/favicon.png" rel="icon" type="image/png"></link>
         <link href="/avatar.png" rel="apple-touch-icon"></link>
       </>

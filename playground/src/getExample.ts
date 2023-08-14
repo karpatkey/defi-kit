@@ -4,7 +4,7 @@ export const getExampleSourceCode = (exampleName: string) => {
   }
 
   // default example
-  return `// Welcome to the DeFi Presets SDK Playground
+  return `// Welcome to the DeFi Kit SDK Playground
 // You can use this for exploring the SDK and composing your role permissions.
 
 import { encodeBytes32String } from 'defi-kit'

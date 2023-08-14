@@ -1,14 +1,14 @@
-# DeFi Presets
+# DeFi Kit
 
-Permission presets for [Zodiac Roles](https://github.com/gnosis/zodiac-modifier-roles) covering interactions with DeFi protocols.
+Permissions for [Zodiac Roles](https://github.com/gnosis/zodiac-modifier-roles) covering interactions with DeFi protocols
 
-https://presets.karpatkey.com
+https://kit.karpatkey.com
 
 ## Getting started
 
-You can use DeFi Presets as a TypeScript SDK or via a REST API.
+You can use DeFi Kit as a TypeScript SDK or via a REST API.
 Below you can find simple examples for both.
-For in-depth overview, refer to the [docs](https://presets.karpatkey.com/learn).
+For in-depth overview, refer to the [docs](https://kit.karpatkey.com/learn).
 
 ### TypeScript SDK
 
@@ -29,7 +29,7 @@ const calls = await apply(roleKey, [...allow.cowswap.swap(tokenIn, tokenOut)], {
 
 ```typescript
 const res = await fetch(
-  "https://presets.karpatkey.com/api/v1/eth:<MOD>/<ROLE>/allow/cowswap/swap?sell=<TOKEN_IN>&buy=<TOKEN_OUT>"
+  "https://kit.karpatkey.com/api/v1/eth:<MOD>/<ROLE>/allow/cowswap/swap?sell=<TOKEN_IN>&buy=<TOKEN_OUT>"
 )
 const calls = await res.json()
 ```
