@@ -63,7 +63,7 @@ const Home = () => (
             <ArrowRight />
           </span>
         </h2>
-        <p>Mix and match permissions using the TypeScript SDK playground.</p>
+        <p>Mix and match permissions using the TypeScript SDK playground</p>
       </a>
 
       <a href="/api-docs" className={styles.card}>
@@ -73,7 +73,7 @@ const Home = () => (
             <ArrowRight />
           </span>
         </h2>
-        <p>View all API endpoints and try them out right from your browser.</p>
+        <p>View all API endpoints and try them out right from your browser</p>
       </a>
 
       <a
@@ -88,7 +88,7 @@ const Home = () => (
             <ArrowRight />
           </span>
         </h2>
-        <p>Help us improve the API by adding adapters for more protocols.</p>
+        <p>Help us improve DeFi Kit by adding adapters for more protocols</p>
       </a>
     </div>
   </main>
