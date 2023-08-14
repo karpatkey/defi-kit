@@ -4584,9 +4584,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"defi-presets-app@workspace:app":
+"defi-kit-app@workspace:app":
   version: 0.0.0-use.local
-  resolution: "defi-presets-app@workspace:app"
+  resolution: "defi-kit-app@workspace:app"
   dependencies:
     "@asteasolutions/zod-to-openapi": ^5.1.0
     "@carbon/icons-react": ^11.20.0
@@ -4598,7 +4598,7 @@ __metadata:
     "@types/swagger-ui-react": ^4.18.0
     "@typescript/sandbox": ^0.1.0
     autoprefixer: ^10.4.14
-    defi-presets: "workspace:*"
+    defi-kit: "workspace:*"
     eslint: ^8.41.0
     eslint-config-next: ^13.4.4
     ethers: ^5.7.2
@@ -4616,9 +4616,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"defi-presets-monorepo@workspace:.":
+"defi-kit-monorepo@workspace:.":
   version: 0.0.0-use.local
-  resolution: "defi-presets-monorepo@workspace:."
+  resolution: "defi-kit-monorepo@workspace:."
   dependencies:
     env-cmd: ^10.1.0
     prettier: ^2.8.8
@@ -4627,9 +4627,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"defi-presets@workspace:*, defi-presets@workspace:sdk":
+"defi-kit@workspace:*, defi-kit@workspace:sdk":
   version: 0.0.0-use.local
-  resolution: "defi-presets@workspace:sdk"
+  resolution: "defi-kit@workspace:sdk"
   dependencies:
     "@asteasolutions/zod-to-openapi": ^5.1.0
     "@dethcrypto/eth-sdk": ^0.3.4
@@ -9930,7 +9930,7 @@ __metadata:
   resolution: "playground@workspace:playground"
   dependencies:
     "@typescript/sandbox": 0.1.0
-    defi-presets: "workspace:*"
+    defi-kit: "workspace:*"
     lz-string: ^1.5.0
     monaco-editor: ^0.31.1
     monaco-typescript: ^3.7.0

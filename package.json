@@ -1,7 +1,7 @@
 {
-  "name": "defi-presets-monorepo",
+  "name": "defi-kit-monorepo",
   "private": true,
-  "repository": "https://github.com/KarpatkeyDAO/defi-presets.git",
+  "repository": "https://github.com/KarpatkeyDAO/defi-kit.git",
   "author": "Gnosis Guild",
   "license": "LGPL-3.0",
   "workspaces": [
@@ -10,9 +10,9 @@
     "playground"
   ],
   "scripts": {
-    "start": "yarn workspace defi-presets-app run start",
+    "start": "yarn workspace defi-kit-app run start",
     "build": "yarn workspaces foreach -pt run build",
-    "setup": "yarn workspace defi-presets run setup",
+    "setup": "yarn workspace defi-kit run setup",
     "dev": "yarn workspaces foreach -pi run dev",
     "check:prettier": "prettier '**/*.{js,ts,tsx,json,md}' --list-different",
     "fix:prettier": "prettier '**/*.{js,ts,tsx,json,md}' --write",

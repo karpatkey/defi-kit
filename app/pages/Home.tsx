@@ -32,7 +32,7 @@ const Home = () => (
     </div>
 
     <div className={styles.center}>
-      <h1 className={styles.title}>DeFi Presets</h1>
+      <h1 className={styles.title}>DeFi Kit</h1>
       <h3 className={styles.subtitle}>
         <a
           href="https://github.com/gnosis/zodiac-modifier-roles"
@@ -53,7 +53,7 @@ const Home = () => (
             <ArrowRight />
           </span>
         </h2>
-        <p>Understand the ideas behind it and learn how to use DeFi Presets</p>
+        <p>Understand the ideas behind it and learn how to use DeFi Kit</p>
       </a>
 
       <a href="/sdk-playground" className={styles.card}>
@@ -63,7 +63,7 @@ const Home = () => (
             <ArrowRight />
           </span>
         </h2>
-        <p>Mix and match presets using the TypeScript SDK playground.</p>
+        <p>Mix and match permissions using the TypeScript SDK playground.</p>
       </a>
 
       <a href="/api-docs" className={styles.card}>
@@ -77,7 +77,7 @@ const Home = () => (
       </a>
 
       <a
-        href="https://github.com/KarpatkeyDAO/defi-presets"
+        href="https://github.com/KarpatkeyDAO/defi-kit"
         className={styles.card}
         target="_blank"
         rel="noopener noreferrer"

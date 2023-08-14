@@ -15,41 +15,41 @@ With a single click, you can export your work to cloud-based development environ
 The SDK is distributed via npm. For adding it to your project, run:
 
 ```bash
-npm install --save defi-presets
+npm install --save defi-kit
 ```
 
 To install it using yarn, run:
 
 ```bash
-yarn add defi-presets
+yarn add defi-kit
 ```
 
 ## Import Entrypoints
 
 The package is structured into multiple entrypoints, one for each of the supported blockchains and the base entrypoint.
 
-### `defi-presets/eth`
+### `defi-kit/eth`
 
-For Ethereum mainnet, import the `defi-presets/eth` entrypoint:
-
-```typescript
-import { allow, apply } from "defi-presets/eth"
-```
-
-### `defi-presets/gor`
-
-For Görli testnet, import the `defi-presets/gor` entrypoint:
+For Ethereum mainnet, import the `defi-kit/eth` entrypoint:
 
 ```typescript
-import { allow, apply } from "defi-presets/gor"
+import { allow, apply } from "defi-kit/eth"
 ```
 
-### `defi-presets`
+### `defi-kit/gor`
+
+For Görli testnet, import the `defi-kit/gor` entrypoint:
+
+```typescript
+import { allow, apply } from "defi-kit/gor"
+```
+
+### `defi-kit`
 
 The base entrypoint offers some generic utilities that are not specific to any blockchain.
 
 ```typescript
-import { encodeBytes32String, decodeBytes32String } from "defi-presets"
+import { encodeBytes32String, decodeBytes32String } from "defi-kit"
 
 // Roles are referenced with bytes32 keys.
 // Use these helper functions to derive human-readable role identifiers.

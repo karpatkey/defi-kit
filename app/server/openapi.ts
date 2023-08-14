@@ -1,5 +1,5 @@
 import zod from "zod"
-import { Chain } from "defi-presets"
+import { Chain } from "defi-kit"
 import {
   OpenAPIRegistry,
   extendZodWithOpenApi,

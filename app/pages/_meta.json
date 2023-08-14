@@ -1,7 +1,7 @@
 {
   "index": {
     "type": "page",
-    "title": "DeFi Presets",
+    "title": "DeFi Kit",
     "display": "hidden",
     "theme": {
       "layout": "raw",
@@ -35,7 +35,7 @@
   "contribute": {
     "type": "page",
     "title": "Contribute",
-    "href": "https://github.com/KarpatkeyDAO/defi-presets",
+    "href": "https://github.com/KarpatkeyDAO/defi-kit",
     "newWindow": true
   }
 }

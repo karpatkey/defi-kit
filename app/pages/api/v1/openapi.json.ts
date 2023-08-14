@@ -10,9 +10,9 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
     openapi: "3.0.0",
     info: {
       version: "1.0.0",
-      title: "DeFi Presets",
+      title: "DeFi Kit",
       description:
-        "Permission presets for Zodiac Roles covering interactions with DeFi protocols",
+        "Permissions for Zodiac Roles covering interactions with DeFi protocols",
     },
     servers: [{ url: "/api/v1" }],
   })

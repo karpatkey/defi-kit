@@ -1,4 +1,4 @@
-import { Chain, encodeBytes32String, zx } from "defi-presets"
+import { Chain, encodeBytes32String, zx } from "defi-kit"
 import { arrayify } from "ethers/lib/utils"
 import z from "zod"
 
