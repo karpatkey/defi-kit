@@ -1,20 +1,3 @@
-# FROM node:lts-alpine as runner
-
-# WORKDIR /application
-
-# COPY . .
-
-# RUN yarn install && \
-#     yarn setup && \
-#     yarn build
-
-# # Expose the necessary port
-# EXPOSE 3000
-
-# # Start the app
-# CMD yarn start
-
-
 FROM node:lts-alpine as builder
 
 WORKDIR /application
