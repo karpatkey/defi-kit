@@ -124,7 +124,7 @@ export default [
   {
     symbol: "LUSD",
     token: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
-    usageAsCollateralEnabled: false,
+    usageAsCollateralEnabled: true,
     borrowingEnabled: true,
     stableBorrowRateEnabled: false,
     isActive: true,
@@ -137,7 +137,7 @@ export default [
     symbol: "CRV",
     token: "0xD533a949740bb3306d119CC777fa900bA034cd52",
     usageAsCollateralEnabled: true,
-    borrowingEnabled: true,
+    borrowingEnabled: false,
     stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,
