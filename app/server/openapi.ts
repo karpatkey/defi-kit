@@ -39,6 +39,9 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
         case "lock":
           registerLock(registry, chainPrefix, protocol)
           return
+        case "delegate":
+          registerDelegate(registry, chainPrefix, protocol)
+          return
         default:
           throw new Error(`Unknown action: ${action}`)
       }
