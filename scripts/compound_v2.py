@@ -1,4 +1,4 @@
-from defi_protocols import Compound
+from defi_protocols.Compound import ABI_CTOKEN, get_comptoller_address
 from defi_protocols.functions import get_contract, get_symbol, get_node
 from defi_protocols.constants import ETHEREUM, E_ADDRESS
 from web3.exceptions import BadFunctionCallOutput
@@ -15,7 +15,7 @@ def markets_data_v2(blockchain):
 
     web3 = get_node(blockchain)
 
-    comptroller_address = Compound.get_comptoller_address(blockchain)
+    comptroller_address = get_comptoller_address(blockchain)
     comptroller_contract = get_contract(comptroller_address, blockchain, web3=web3, abi=ABI_COMPTROLLER)
 
     markets = comptroller_contract.functions.getAllMarkets().call()
@@ -24,7 +24,7 @@ def markets_data_v2(blockchain):
     i = 1
     for ctoken in markets:
         market = {}
-        ctoken_contract = get_contract(ctoken, blockchain, web3=web3, abi=Compound.ABI_CTOKEN)
+        ctoken_contract = get_contract(ctoken, blockchain, web3=web3, abi=ABI_CTOKEN)
         market['cToken'] = ctoken
         try:
             market['token'] = ctoken_contract.functions.underlying().call()

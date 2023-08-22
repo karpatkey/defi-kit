@@ -15,8 +15,7 @@ export const depositToken = (token: Token) => {
     allow.mainnet.aaveV2.aaveLendingPoolV2.deposit(
       token.token,
       undefined,
-      c.avatar,
-      "0x"
+      c.avatar
     ),
     allow.mainnet.aaveV2.aaveLendingPoolV2.withdraw(
       token.token,
@@ -33,7 +32,7 @@ export const depositEther = () => [
   allow.mainnet.aaveV2.wrappedTokenGatewayV2.depositETH(
     contracts.mainnet.aaveV2.aaveLendingPoolV2,
     c.avatar,
-    "0x",
+    undefined,
     { send: true }
   ),
   allow.mainnet.aaveV2.wrappedTokenGatewayV2.withdrawETH(
@@ -54,7 +53,7 @@ export const borrowToken = (token: Token) => {
       token.token,
       undefined,
       undefined,
-      "0x",
+      undefined,
       c.avatar
     ),
     allow.mainnet.aaveV2.aaveLendingPoolV2.repay(
@@ -76,16 +75,13 @@ export const borrowEther = () => {
       contracts.mainnet.aaveV2.wrappedTokenGatewayV2
     ),
     allow.mainnet.aaveV2.wrappedTokenGatewayV2.borrowETH(
-      contracts.mainnet.aaveV2.aaveLendingPoolV2,
-      undefined,
-      undefined,
-      "0x"
+      contracts.mainnet.aaveV2.aaveLendingPoolV2
     ),
     allow.mainnet.aaveV2.wrappedTokenGatewayV2.repayETH(
       contracts.mainnet.aaveV2.aaveLendingPoolV2,
       undefined,
       undefined,
-      "0x",
+      c.avatar,
       { send: true }
     ),
     allow.mainnet.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(WETH),
@@ -113,7 +109,7 @@ export const stake = () => {
   ]
 }
 
-export const governance = (token: DelegateToken, delegatee: string) => {
+export const delegate = (token: DelegateToken, delegatee: string) => {
   const permissions = []
 
   switch (token.symbol) {

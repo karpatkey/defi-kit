@@ -8,7 +8,7 @@ import {
   borrowEther,
   borrowToken,
   stake,
-  governance,
+  delegate,
 } from "./actions"
 
 const findToken = (symbolOrAddress: string): Token => {
@@ -62,15 +62,15 @@ export const eth = {
     return stake()
   },
 
-  // governance: ({
-  //   targets,
-  //   delegatee,
-  // }: {
-  //   targets: (DelegateToken["address"] | DelegateToken["symbol"])[]
-  //   delegatee: string
-  // }) => {
-  //   return targets.flatMap((target) =>
-  //     governance(findDelegateToken(target), delegatee)
-  //   )
-  // },
+  delegate: ({
+    targets,
+    delegatee,
+  }: {
+    targets: (DelegateToken["address"] | DelegateToken["symbol"])[]
+    delegatee: string
+  }) => {
+    return targets.flatMap((target) =>
+      delegate(findDelegateToken(target), delegatee)
+    )
+  },
 }

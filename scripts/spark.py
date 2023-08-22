@@ -1,5 +1,5 @@
-from defi_protocols.functions import *
-from defi_protocols.constants import *
+from defi_protocols.functions import get_node, get_contract
+from defi_protocols.constants import ETHEREUM
 from lib.dump import dump
 
 # Protocol Data Provider ABI - getAllReservesTokens, getUserReserveData, getReserveConfigurationData, getReserveTokensAddresses
@@ -50,7 +50,6 @@ def reserves_tokens_data():
 
         print(i)
         i += 1
-
 
     dump(reserves_tokens_data, 'spark')
 

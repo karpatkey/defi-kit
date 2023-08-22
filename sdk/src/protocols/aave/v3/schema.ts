@@ -26,8 +26,7 @@ export const eth = {
 
   stake: z.object({}),
 
-  // TODO standard action?
-  governance: z.object({
+  delegate: z.object({
     targets: zDelegateToken.array(),
     delegatee: zDelegatee,
   }),
