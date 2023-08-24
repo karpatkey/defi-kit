@@ -28,37 +28,25 @@ def transactions_data():
             lptoken_data = Balancer.get_lptoken_data(pool_info[0], 'latest', ETHEREUM, web3=web3)
             
             if lptoken_data['poolId'] is not None:
-                if lptoken_data['isBoosted'] == False:
-                    vault_contract = get_contract(Balancer.VAULT, ETHEREUM, web3=web3, abi=Balancer.ABI_VAULT)
-                    pool_tokens = vault_contract.functions.getPoolTokens(lptoken_data['poolId']).call()[0]
+                vault_contract = get_contract(Balancer.VAULT, ETHEREUM, web3=web3, abi=Balancer.ABI_VAULT)
+                pool_tokens = vault_contract.functions.getPoolTokens(lptoken_data['poolId']).call()[0]
 
-                    tokens = []
-                    for pool_token in pool_tokens:
-                        tokens.append(
-                            {
-                                'address': pool_token,
-                                'symbol': get_symbol(pool_token, ETHEREUM, web3=web3)
-                            }
-                        )
-                    
-                    pool_data = {
-                        'name': lptoken_symbol,
-                        'id': str(i),
-                        'bpt': pool_info[0],
-                        'tokens': tokens,
-                        'rewarder':pool_info[3],
-                        # 'shutdown': pool_info[5]
-                    }
+                tokens = []
+                for pool_token in pool_tokens:
+                    tokens.append(
+                        {
+                            'address': pool_token,
+                            'symbol': get_symbol(pool_token, ETHEREUM, web3=web3)
+                        }
+                    )
                 
-                else:
-                    pool_data = {
-                        'name': lptoken_symbol,
-                        'id': str(i),
-                        'bpt': pool_info[0],
-                        'tokens': [],
-                        'rewarder':pool_info[3],
-                        # 'shutdown': pool_info[5]
-                    }
+                pool_data = {
+                    'name': lptoken_symbol,
+                    'id': str(i),
+                    'bpt': pool_info[0],
+                    'tokens': tokens,
+                    'rewarder':pool_info[3],
+                }
 
                 result.append(pool_data)
 
