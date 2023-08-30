@@ -8,7 +8,7 @@ https://kit.karpatkey.com
 
 You can use DeFi Kit as a TypeScript SDK or via a REST API.
 Below you can find simple examples for both.
-For in-depth overview, refer to the [docs](https://kit.karpatkey.com/learn).
+For an in-depth overview refer to the [docs](https://kit.karpatkey.com/learn).
 
 ### TypeScript SDK
 
