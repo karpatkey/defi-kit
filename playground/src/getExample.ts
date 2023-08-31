@@ -22,8 +22,8 @@ const permissions = [
 // Apply the permissions to a role
 const roleKey = encodeBytes32String('my-role')
 const calls = await apply(roleKey, permissions, {
-  currentPermissions: [],
-  mode: 'extend', // keep the current permissions
+  currentTargets: [],
+  mode: 'extend', // keep the current permissions and add the new ones
   log: console.debug
 })
 
