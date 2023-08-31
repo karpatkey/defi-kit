@@ -127,12 +127,12 @@ Note: For the new protocol functions to become available in the SDK playground, 
    ```typescript
    import { allow } from "zodiac-roles-sdk/kit"
 
-   const allowEntries = allow.curve.regularPool.exchange()
+   const permissions = allow.curve.regularPool.exchange()
    ```
 
    In case VSCode IntelliSense does not reflect the newly added contract entries, restart the TypeScript server by pressing cmd+shift+p and selecting "TypeScript: Restart TS Server".
 
-Note that you don't _have_ to use typed allow kits but you can always also author the allow entries manually.
+Note that you don't _have_ to use typed allow kits but you can always also author permissions manually.
 
 #### Add a new protocol to the API
 

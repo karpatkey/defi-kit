@@ -59,9 +59,9 @@ export const borrow: ActionHandler = async (query) => {
     throw new NotFoundError(`${protocol} is not supported on ${chain}`)
   }
 
-  const entries = allowBorrow(parseQuery(query, borrowParamsSchema))
+  const permissions = allowBorrow(parseQuery(query, borrowParamsSchema))
 
-  const calls = await sdk.apply(role, entries, {
+  const calls = await sdk.apply(role, permissions, {
     address,
     mode: "extend",
   })

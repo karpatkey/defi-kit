@@ -59,9 +59,9 @@ export const deposit: ActionHandler = async (query) => {
     throw new NotFoundError(`${protocol} is not supported on ${chain}`)
   }
 
-  const entries = allowDeposit(parseQuery(query, depositParams))
+  const permissions = allowDeposit(parseQuery(query, depositParams))
 
-  const calls = await sdk.apply(role, entries, {
+  const calls = await sdk.apply(role, permissions, {
     address,
     mode: "extend",
   })

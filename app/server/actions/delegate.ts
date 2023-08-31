@@ -59,9 +59,9 @@ export const delegate: ActionHandler = async (query) => {
     throw new NotFoundError(`${protocol} is not supported on ${chain}`)
   }
 
-  const entries = allowDelegate(parseQuery(query, delegateParamsSchema))
+  const permissions = allowDelegate(parseQuery(query, delegateParamsSchema))
 
-  const calls = await sdk.apply(role, entries, {
+  const calls = await sdk.apply(role, permissions, {
     address,
     mode: "extend",
   })

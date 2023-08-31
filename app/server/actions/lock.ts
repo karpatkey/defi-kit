@@ -59,9 +59,9 @@ export const lock: ActionHandler = async (query) => {
     throw new NotFoundError(`${protocol} is not supported on ${chain}`)
   }
 
-  const entries = allowLock(parseQuery(query, lockParamsSchema))
+  const permissions = allowLock(parseQuery(query, lockParamsSchema))
 
-  const calls = await sdk.apply(role, entries, {
+  const calls = await sdk.apply(role, permissions, {
     address,
     mode: "extend",
   })

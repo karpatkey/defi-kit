@@ -59,9 +59,9 @@ export const stake: ActionHandler = async (query) => {
     throw new NotFoundError(`${protocol} is not supported on ${chain}`)
   }
 
-  const entries = allowStake(parseQuery(query, stakeParamsSchema))
+  const permissions = allowStake(parseQuery(query, stakeParamsSchema))
 
-  const calls = await sdk.apply(role, entries, {
+  const calls = await sdk.apply(role, permissions, {
     address,
     mode: "extend",
   })

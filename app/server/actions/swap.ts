@@ -59,9 +59,9 @@ export const swap: ActionHandler = async (query) => {
     throw new NotFoundError(`${protocol} is not supported on ${chain}`)
   }
 
-  const entries = allowSwap(parseQuery(query, swapParams))
+  const permissions = allowSwap(parseQuery(query, swapParams))
 
-  const calls = await sdk.apply(role, entries, {
+  const calls = await sdk.apply(role, permissions, {
     address,
     mode: "extend",
   })
