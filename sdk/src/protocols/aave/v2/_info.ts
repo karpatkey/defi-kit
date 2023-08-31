@@ -114,7 +114,7 @@ export default [
     token: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
     usageAsCollateralEnabled: true,
     borrowingEnabled: true,
-    stableBorrowRateEnabled: true,
+    stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x028171bCA77440897B824Ca71D1c56caC55b68A3",
