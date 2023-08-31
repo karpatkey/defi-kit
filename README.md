@@ -107,7 +107,7 @@ yarn test:watch
    } satisfies Record<string, ProtocolActions>
    ```
 
-6. Implement the functions, adhering to the general API for that action type and returning an array of `PresetAllowEntry[]`. See following section for guidance.
+6. Implement the functions, adhering to the general API for that action type and returning an array of `Permission[]`. See following section for guidance.
 
 Note: For the new protocol functions to become available in the SDK playground, the changes must first be published to npm as a new version of the _defi-kit_ package.
 

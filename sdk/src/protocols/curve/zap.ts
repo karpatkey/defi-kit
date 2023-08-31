@@ -1,11 +1,11 @@
-import { PresetAllowEntry } from "zodiac-roles-sdk"
+import { Permission } from "zodiac-roles-sdk"
 
 import { allowErc20Approve } from "../../erc20"
 import { Pool } from "./types"
 
 export const allowZapAdd = (pool: Pool) => {
   if (!("zap" in pool) || !("basePool" in pool.zap)) return []
-  const result: PresetAllowEntry[] = [
+  const result: Permission[] = [
     ...allowErc20Approve([...pool.zap.basePool.tokens], [pool.zap.address]),
     {
       targetAddress: pool.zap.address,
@@ -20,14 +20,14 @@ export const allowZapAdd = (pool: Pool) => {
 export const allowZapRemove = (pool: Pool) => {
   if (!("zap" in pool)) return []
 
-  const result: PresetAllowEntry[] = [
+  const result: Permission[] = [
     {
       targetAddress: pool.zap.address,
       signature: "remove_liquidity_one_coin(uint256,int128,uint256)",
     },
   ]
   if ("basePool" in pool.zap) {
-    const basePoolFunctions: PresetAllowEntry[] = [
+    const basePoolFunctions: Permission[] = [
       {
         targetAddress: pool.zap.address,
         signature: "remove_liquidity_one_coin(uint256,int128,uint256)",

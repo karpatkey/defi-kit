@@ -1,13 +1,13 @@
-import { PresetAllowEntry } from "zodiac-roles-sdk"
+import { Permission } from "zodiac-roles-sdk"
 import { allowErc20Approve } from "../../erc20"
 
 import { Pool } from "./types"
 
-export const allowFactoryPool = (pool: Pool): PresetAllowEntry[] => {
-  const result: PresetAllowEntry[] = [
+export const allowFactoryPool = (pool: Pool): Permission[] => {
+  const result: Permission[] = [
     //Gotta make sure the token address is not "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
     ...allowErc20Approve(
-      (pool.tokens as readonly string[]).filter(
+      (pool.tokens as readonly `0x${string}`[]).filter(
         (token) =>
           token.toLowerCase() !== "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
       ),

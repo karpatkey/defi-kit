@@ -1,11 +1,11 @@
-import { PresetAllowEntry } from "zodiac-roles-sdk"
+import { Permission } from "zodiac-roles-sdk"
 
 import * as regular from "./regular"
 import { Pool, Token } from "./types"
 import { allowZapAdd, allowZapRemove } from "./zap"
 
 const depositOnly = (pool: Pool) => {
-  const result: PresetAllowEntry[] = []
+  const result: Permission[] = []
   switch (pool.type) {
     case "regular":
       result.push(...regular.allowDeposit(pool))
@@ -22,7 +22,7 @@ const depositOnly = (pool: Pool) => {
 }
 
 const withdraw = (pool: Pool) => {
-  const result: PresetAllowEntry[] = []
+  const result: Permission[] = []
   switch (pool.type) {
     case "regular":
       result.push(...regular.allowWithdraw(pool))
@@ -45,7 +45,7 @@ export const swap = (
   sell: Token[] | undefined,
   buy: Token[] | undefined
 ) => {
-  const result: PresetAllowEntry[] = []
+  const result: Permission[] = []
   switch (pool.type) {
     case "regular":
       result.push(...regular.allowSwap(pool, sell, buy))

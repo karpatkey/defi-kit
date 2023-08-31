@@ -1,6 +1,6 @@
 import { eth } from "."
 import { getAvatarWallet, getMemberWallet } from "../../../../test/accounts"
-import { configurePermissions, test } from "../../../../test/helpers"
+import { applyPermissions, test } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { Status } from "../../../../test/types"
 
@@ -10,7 +10,7 @@ const USDC = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
 describe("aave_v2", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await configurePermissions(eth.deposit({ targets: ["ETH", "USDC"] }))
+      await applyPermissions(eth.deposit({ targets: ["ETH", "USDC"] }))
     })
 
     // Test with ETH

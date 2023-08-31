@@ -1,22 +1,12 @@
 import {
-  PresetAllowEntry,
-  fillPreset,
-  checkPermissionsIntegrity,
-  applyPermissions,
+  Permission,
+  processPermissions as processPermissionsBase,
+  checkIntegrity,
+  applyTargets,
   Target,
   ChainId,
 } from "zodiac-roles-sdk"
 import { NotFoundError } from "./errors"
-
-export const derivePermissions = (entries: PresetAllowEntry[]) => {
-  const permissions = fillPreset({
-    allow: entries,
-    placeholders: {},
-    chainId: 1, // This won't be used (presets only set this field for informational purposes)
-  })
-  checkPermissionsIntegrity(permissions)
-  return permissions
-}
 
 type Options = (
   | {
@@ -24,8 +14,8 @@ type Options = (
       address: string
     }
   | {
-      /** The permissions that are currently set on the role */
-      currentPermissions: Target[]
+      /** The targets that are currently set on the role */
+      currentTargets: Target[]
     }
 ) & {
   /**  The mode to use for updating the permissions of the role:
@@ -41,20 +31,21 @@ export const createApply = (chainId: ChainId) => {
   /**
    * Applies the passed permissions to the role.
    * @param roleKey The role key of the role to apply the permissions to
-   * @param entries The permissions to apply
+   * @param permissions The permissions to apply
    */
   return async function apply(
     roleKey: string,
-    entries: PresetAllowEntry[],
+    permissions: Permission[],
     options: Options
   ) {
-    const permissions = derivePermissions(entries)
+    const targets = processPermissionsBase(permissions)
+    checkIntegrity(targets)
 
     try {
-      return await applyPermissions(
+      return await applyTargets(
         roleKey,
-        permissions,
-        "address" in options ? { ...options, network: chainId } : options
+        targets,
+        "address" in options ? { ...options, chainId } : options
       )
     } catch (e) {
       // make role not found error to NotFoundError so the API will respond with 404

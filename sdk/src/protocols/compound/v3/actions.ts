@@ -1,9 +1,6 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { c } from "zodiac-roles-sdk"
-import {
-  PresetAllowEntry,
-  PresetFunction,
-} from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types"
+import { Permission } from "zodiac-roles-sdk"
 import { Comet, Token } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
@@ -16,7 +13,7 @@ const ACTION_WITHDRAW_NATIVE_TOKEN =
 // const ACTION_WITHDRAW_ASSET = "0x414354494f4e5f57495448445241575f41535345540000000000000000000000"
 // const ACTION_CLAIM_REWARD = "0x414354494f4e5f434c41494d5f52455741524400000000000000000000000000"
 
-const _allow = (token: Comet): PresetFunction => {
+const _allow = (token: Comet): Permission => {
   return {
     // IMPORTANT: the allow() function was added to the comet abi, using the cUSDCv3 Ext (0x285617313887d43256F852cAE0Ee4de4b68D45B0) abi
     ...allow.mainnet.compoundV3.comet.allow(
@@ -89,7 +86,7 @@ export const deposit = (
 }
 
 export const borrow = (comet: Comet) => {
-  const permissions: PresetAllowEntry[] = [
+  const permissions: Permission[] = [
     {
       ...allow.mainnet.compoundV3.comet.supply(comet.borrowToken.address),
       targetAddress: comet.address,

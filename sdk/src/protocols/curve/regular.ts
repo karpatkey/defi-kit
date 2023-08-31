@@ -1,16 +1,16 @@
-import { PresetAllowEntry } from "zodiac-roles-sdk"
+import { Permission } from "zodiac-roles-sdk"
 import { allow } from "zodiac-roles-sdk/kit"
 
 import { allowErc20Approve } from "../../erc20"
 import { Pool, Token } from "./types"
 
-export const allowDeposit = (pool: Pool): PresetAllowEntry[] => {
-  const tokens = (pool.tokens as readonly string[]).filter(
+export const allowDeposit = (pool: Pool): Permission[] => {
+  const tokens = (pool.tokens as readonly `0x${string}`[]).filter(
     (token) =>
       token.toLowerCase() !== "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
   )
 
-  const result: PresetAllowEntry[] = [
+  const result: Permission[] = [
     ...allowErc20Approve(tokens, [pool.address]),
     {
       targetAddress: pool.address,
@@ -21,8 +21,8 @@ export const allowDeposit = (pool: Pool): PresetAllowEntry[] => {
   return result
 }
 
-export const allowWithdraw = (pool: Pool): PresetAllowEntry[] => {
-  const result: PresetAllowEntry[] = [
+export const allowWithdraw = (pool: Pool): Permission[] => {
+  const result: Permission[] = [
     {
       targetAddress: pool.address,
       signature: "remove_liquidity_one_coin(uint256,int128,uint256)",
@@ -44,7 +44,7 @@ export const allowSwap = (
   pool: Pool,
   sell: Token[] | undefined,
   buy: Token[] | undefined
-): PresetAllowEntry[] => {
+): Permission[] => {
   const poolTokens = pool.tokens as readonly Token[]
 
   const sellIndices = sell
@@ -60,7 +60,7 @@ export const allowSwap = (
       token.toLowerCase() !== "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
   )
 
-  const result: PresetAllowEntry[] = [
+  const result: Permission[] = [
     ...allowErc20Approve(tokensThatNeedApprove, [pool.address]),
     {
       ...allow.mainnet.curve.regularPool.exchange(sellIndices, buyIndices),

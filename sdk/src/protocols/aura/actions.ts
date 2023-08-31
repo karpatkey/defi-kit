@@ -1,5 +1,5 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { PresetAllowEntry, c } from "zodiac-roles-sdk"
+import { Permission, c } from "zodiac-roles-sdk"
 import { Pool, StakeToken, Token } from "./types"
 import { allowErc20Approve } from "../../erc20"
 import { contracts } from "../../../eth-sdk/config"
@@ -14,7 +14,7 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
     .map((token) => token.address)
     .filter((address) => tokens.some((token) => token.address === address))
 
-  const permissions: PresetAllowEntry[] = [
+  const permissions: Permission[] = [
     ...allowErc20Approve([pool.bpt], [contracts.mainnet.aura.booster]),
     allow.mainnet.aura.booster.deposit(pool.id),
     {
@@ -44,8 +44,8 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   return permissions
 }
 
-export const stake = (token: StakeToken): PresetAllowEntry[] => {
-  const permissions: PresetAllowEntry[] = []
+export const stake = (token: StakeToken): Permission[] => {
+  const permissions: Permission[] = []
 
   switch (token.symbol) {
     case "BAL":
@@ -99,7 +99,7 @@ export const stake = (token: StakeToken): PresetAllowEntry[] => {
 }
 
 export const compound = (token: StakeToken) => {
-  const permissions: PresetAllowEntry[] = []
+  const permissions: Permission[] = []
 
   switch (token.symbol) {
     case "BAL":
@@ -158,7 +158,7 @@ export const compound = (token: StakeToken) => {
   return permissions
 }
 
-export const lock = (): PresetAllowEntry[] => {
+export const lock = (): Permission[] => {
   return [
     ...allowErc20Approve([AURA], [contracts.mainnet.aura.aura_locker]),
     allow.mainnet.aura.aura_locker.lock(c.avatar),

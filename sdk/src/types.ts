@@ -1,5 +1,5 @@
 import { SomeZodObject } from "zod"
-import { PresetAllowEntry } from "zodiac-roles-sdk"
+import { Permission } from "zodiac-roles-sdk"
 
 export enum Chain {
   eth = "eth",
@@ -52,19 +52,19 @@ type SwapOptions =
 
 // These types define the common interface for actions across all protocols
 export type ProtocolActions = {
-  deposit?: (options: DepositOptions) => PresetAllowEntry[]
+  deposit?: (options: DepositOptions) => Permission[]
 
-  borrow?: (options: BorrowOptions) => PresetAllowEntry[]
+  borrow?: (options: BorrowOptions) => Permission[]
 
-  stake?: (options: StakeOptions) => PresetAllowEntry[]
+  stake?: (options: StakeOptions) => Permission[]
 
-  claim?: (options: ClaimOptions) => PresetAllowEntry[]
+  claim?: (options: ClaimOptions) => Permission[]
 
-  swap?: (options: SwapOptions) => PresetAllowEntry[]
+  swap?: (options: SwapOptions) => Permission[]
 
-  lock?: (options: LockOptions) => PresetAllowEntry[]
+  lock?: (options: LockOptions) => Permission[]
 
-  delegate?: (options: DelegateOptions) => PresetAllowEntry[]
+  delegate?: (options: DelegateOptions) => Permission[]
 }
 
 export type ActionName = keyof ProtocolActions

@@ -1,28 +1,25 @@
-import { PresetAllowEntry, applyPermissions } from "zodiac-roles-sdk"
+import { Permission } from "zodiac-roles-sdk"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { BaseContract } from "ethers"
 import { Roles__factory } from "./rolesModTypechain"
 import { ROLES_ADDRESS, getMemberWallet, getOwnerWallet } from "./accounts"
 import { encodeBytes32String } from "../src"
 import { getProvider } from "./provider"
-import { derivePermissions } from "../src/apply"
+import { createApply } from "../src/apply"
 
 const owner = getOwnerWallet()
 
 export const rolesMod = Roles__factory.connect(ROLES_ADDRESS, owner)
 export const testRoleKey = encodeBytes32String("TEST-ROLE")
 
-export const configurePermissions = async (entries: PresetAllowEntry[]) => {
-  const calls = await applyPermissions(
-    testRoleKey,
-    derivePermissions(entries),
-    {
-      address: rolesMod.address,
-      currentPermissions: [],
-      mode: "replace",
-      log: console.debug,
-    }
-  )
+export const applyPermissions = async (permissions: Permission[]) => {
+  const apply = createApply(1) // chainId here won't matter since we pass currentTargets
+  const calls = await apply(testRoleKey, permissions, {
+    address: rolesMod.address,
+    currentTargets: [],
+    mode: "replace",
+    log: console.debug,
+  })
 
   console.log(`Applying permissions with ${calls.length} calls`)
   let nonce = await owner.getTransactionCount()

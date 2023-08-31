@@ -1,5 +1,5 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { PresetAllowEntry, c } from "zodiac-roles-sdk"
+import { Permission, c } from "zodiac-roles-sdk"
 import { Pool, StakeToken } from "./types"
 import { allowErc20Approve } from "../../erc20"
 import { contracts } from "../../../eth-sdk/config"
@@ -9,7 +9,7 @@ const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 const CVX = "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b"
 
 export const deposit = (pool: Pool) => {
-  const permissions: PresetAllowEntry[] = [
+  const permissions: Permission[] = [
     ...allowErc20Approve([pool.crvLPToken], [contracts.mainnet.convex.booster]),
     ...allowErc20Approve([pool.crvLPToken], [pool.rewarder]),
 
@@ -38,8 +38,8 @@ export const deposit = (pool: Pool) => {
   return permissions
 }
 
-export const stake = (token: StakeToken): PresetAllowEntry[] => {
-  const permissions: PresetAllowEntry[] = []
+export const stake = (token: StakeToken): Permission[] => {
+  const permissions: Permission[] = []
 
   switch (token.symbol) {
     case "cvxCRV":
@@ -74,7 +74,7 @@ export const stake = (token: StakeToken): PresetAllowEntry[] => {
   return permissions
 }
 
-export const lock = (): PresetAllowEntry[] => {
+export const lock = (): Permission[] => {
   return [
     ...allowErc20Approve([CVX], [contracts.mainnet.convex.vlCVX]),
     allow.mainnet.convex.vlCVX.lock(c.avatar),

@@ -1,8 +1,8 @@
-import { PresetAllowEntry, c } from "zodiac-roles-sdk"
+import { Permission, c } from "zodiac-roles-sdk"
+import { allow } from "zodiac-roles-sdk/kit"
 
 import { Pool, Token } from "./types"
 import { allowErc20Approve } from "../../erc20"
-import { allow } from "zodiac-roles-sdk/kit"
 import { contracts } from "../../../eth-sdk/config"
 
 const BAL = "0xba100000625a3754423978a60c9317c58a424e3D"
@@ -26,7 +26,7 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
     )
     .map((token) => token.id)
 
-  const permissions: PresetAllowEntry[] = [
+  const permissions: Permission[] = [
     ...allowErc20Approve(tokenAddresses, [contracts.mainnet.balancer.vault]),
 
     allow.mainnet.balancer.vault.joinPool(
@@ -117,7 +117,7 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
 }
 
 export const stake = (pool: Pool) => {
-  const permissions: PresetAllowEntry[] = []
+  const permissions: Permission[] = []
 
   if (pool.gauge) {
     permissions.push(
@@ -141,7 +141,7 @@ export const stake = (pool: Pool) => {
   return permissions
 }
 
-export const lock = (): PresetAllowEntry[] => {
+export const lock = (): Permission[] => {
   return [
     ...allowErc20Approve([BAL, WETH], [contracts.mainnet.balancer.vault]),
     ...allowErc20Approve([B_80BAL_20WETH], [contracts.mainnet.balancer.vebal]),
@@ -177,7 +177,7 @@ export const swap = (
   sell: Token[] | undefined,
   buy: Token[] | undefined
 ) => {
-  const result: PresetAllowEntry[] = []
+  const result: Permission[] = []
 
   return result
 }

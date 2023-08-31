@@ -1,13 +1,13 @@
 import { eth } from "."
 import { getAvatarWallet, getMemberWallet } from "../../../test/accounts"
-import { configurePermissions, test } from "../../../test/helpers"
+import { applyPermissions, test } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 
 describe("lido", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await configurePermissions(eth.deposit())
+      await applyPermissions(eth.deposit())
     })
 
     it("allows submitting ETH", async () => {
