@@ -69,5 +69,6 @@ export const swap: ActionHandler = async (query) => {
   return sdk.exportJson(address, calls, {
     name: `Extend permissions of "${decodeBytes32String(role)}" role`,
     description: `Allow making swaps on ${protocol}`,
+    includeAbi: true,
   })
 }

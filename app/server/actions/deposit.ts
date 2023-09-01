@@ -69,5 +69,6 @@ export const deposit: ActionHandler = async (query) => {
   return sdk.exportJson(address, calls, {
     name: `Extend permissions of "${decodeBytes32String(role)}" role`,
     description: `Allow managing deposits to the \`target\` ${protocol} pool`,
+    includeAbi: true,
   })
 }

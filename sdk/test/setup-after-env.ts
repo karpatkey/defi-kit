@@ -1,4 +1,3 @@
-import { Roles__factory } from "./rolesModTypechain"
 import { revertToBase } from "./snapshot"
 import { Status } from "./types"
 

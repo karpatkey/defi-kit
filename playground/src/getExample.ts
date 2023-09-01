@@ -32,6 +32,7 @@ console.log(calls)
 
 exportJson(address, calls, {
   name: 'Extend permissions of "my-role"',
+  includeAbi: true,
 })
 `
 }

@@ -69,5 +69,6 @@ export const lock: ActionHandler = async (query) => {
   return sdk.exportJson(address, calls, {
     name: `Extend permissions of "${decodeBytes32String(role)}" role`,
     description: `Allow locking to the ${protocol} \`targets\``,
+    includeAbi: true,
   })
 }

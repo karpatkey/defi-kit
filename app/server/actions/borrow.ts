@@ -69,5 +69,6 @@ export const borrow: ActionHandler = async (query) => {
   return sdk.exportJson(address, calls, {
     name: `Extend permissions of "${decodeBytes32String(role)}" role`,
     description: `Allow borrowing the specified \`tokens\` on ${protocol}`,
+    includeAbi: true,
   })
 }

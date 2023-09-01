@@ -1,4 +1,5 @@
-import { ChainId } from "zodiac-roles-sdk"
+import { Interface, Result } from "ethers/lib/utils"
+import { ChainId, rolesAbi } from "zodiac-roles-sdk"
 
 export const createExportJson = (chainId: ChainId) => {
   /**
@@ -14,24 +15,79 @@ export const createExportJson = (chainId: ChainId) => {
     meta?: {
       name?: string
       description?: string
+      /** Set to true to include ABI information. This allows the Safe Transaction Builder to show the decoded call data. */
+      includeAbi?: string
     }
   ) {
     const transactions = calls.map((data) => ({
       to: address,
-      data,
       value: "0",
+      data,
+      ...(meta?.includeAbi ? getAbiInfo(data) : {}),
     }))
 
     return {
       version: "1.0",
       chainId: chainId.toString(10),
+      createdAt: Date.now(),
       meta: {
         name: meta?.name || "Update role permissions",
         description: meta?.description || "",
-        txBuilderVersion: "1.13.3",
+        txBuilderVersion: "1.16.2",
       },
-      createdAt: Date.now(),
       transactions,
     } as const
   }
+}
+
+const rolesInterface = new Interface(rolesAbi)
+
+const getAbiInfo = (data: string) => {
+  const selector = data.slice(0, 10)
+  const functionFragment = rolesInterface.getFunction(selector)
+
+  if (!functionFragment) {
+    throw new Error(`Could not find a Roles function with selector ${selector}`)
+  }
+
+  const contractMethod = rolesAbi.find(
+    (fragment) =>
+      fragment.type === "function" && fragment.name === functionFragment.name
+  )
+  if (!contractMethod) {
+    throw new Error(
+      `Could not find an ABI function fragment with name ${functionFragment.name}`
+    )
+  }
+
+  const contractInputsValues = asObject(
+    rolesInterface.decodeFunctionData(functionFragment, data)
+  )
+
+  return {
+    contractMethod,
+    contractInputsValues,
+  }
+}
+
+const asObject = (result: Result) => {
+  const object: Record<string, any> = {}
+  for (const key of Object.keys(result)) {
+    if (isNaN(Number(key))) continue // skip numeric keys (array indices)
+    object[key] = result[key]
+  }
+  return object
+}
+
+export interface ContractMethod {
+  inputs: ContractInput[]
+  name: string
+  payable: boolean
+}
+
+export interface ContractInput {
+  internalType: string
+  name: string
+  type: string
+  components?: ContractInput[]
 }
