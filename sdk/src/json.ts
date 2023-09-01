@@ -12,8 +12,8 @@ export const createExportJson = (chainId: ChainId) => {
     address: `0x${string}`,
     calls: string[],
     meta?: {
-      name: string
-      description: string
+      name?: string
+      description?: string
     }
   ) {
     const transactions = calls.map((data) => ({
