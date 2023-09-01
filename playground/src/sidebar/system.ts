@@ -1,9 +1,11 @@
 import * as defiKitCore from "defi-kit"
 import * as defiKitEth from "defi-kit/eth"
+import * as defiKitGor from "defi-kit/gor"
 
 const AVAILABLE: Record<string, any> = {
   "defi-kit": defiKitCore,
   "defi-kit/eth": defiKitEth,
+  "defi-kit/gor": defiKitGor,
 }
 
 type Exports = (name: string, value: any) => void
