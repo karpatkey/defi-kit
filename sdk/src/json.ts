@@ -16,7 +16,7 @@ export const createExportJson = (chainId: ChainId) => {
       name?: string
       description?: string
       /** Set to true to include ABI information. This allows the Safe Transaction Builder to show the decoded call data. */
-      includeAbi?: string
+      includeAbi?: boolean
     }
   ) {
     const transactions = calls.map((data) => ({
