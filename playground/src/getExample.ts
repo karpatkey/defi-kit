@@ -30,6 +30,6 @@ const calls = await apply(roleKey, permissions, {
 })
 
 // Log the JSON that can be uploaded to the Safe Transaction Builder app for execution
-console.log(exportJson(ROLES_MOD, calls))  
+console.log(exportJson(ROLES_MOD, calls))
 `
 }
