@@ -10,7 +10,7 @@ import { NotFoundError } from "./errors"
 
 type Options = (
   | {
-      /** Address of the roles mod */
+      /** Address of the Roles mod */
       address: string
     }
   | {
