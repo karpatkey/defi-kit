@@ -1,31 +1,26 @@
 import { Interface, Result } from "ethers/lib/utils"
-import { ChainId, rolesAbi } from "zodiac-roles-sdk"
+import { JsonFragment } from "@ethersproject/abi"
+import { ChainId, posterAbi, rolesAbi } from "zodiac-roles-sdk"
+import { POSTER_ADDRESS } from "./apply"
 
-export const createExportJson = (chainId: ChainId) => {
+export const createExportToSafeTransactionBuilder = (chainId: ChainId) => {
   /**
    * Exports calls as a JSON object that can be imported into the Safe Transaction Builder app.
-   * @param address The address of the Roles mod that shall be configured
-   * @param calls The call data to the Roles mod
+   * @param transactions The transactions to export
    * @param meta Meta info to set on the JSON file
    * @returns The Safe Transaction Builder compatible JSON object
    */
-  return function exportJson(
-    address: `0x${string}`,
-    calls: string[],
+  return function exportToSafeTransactionBuilder(
+    transactions: {
+      to: `0x${string}`
+      data: `0x${string}`
+      value: bigint
+    }[],
     meta?: {
       name?: string
       description?: string
-      /** Set to true to include ABI information. This allows the Safe Transaction Builder to show the decoded call data. */
-      includeAbi?: boolean
     }
   ) {
-    const transactions = calls.map((data) => ({
-      to: address,
-      value: "0",
-      data,
-      ...(meta?.includeAbi ? getAbiInfo(data) : {}),
-    }))
-
     return {
       version: "1.0",
       chainId: chainId.toString(10),
@@ -35,22 +30,32 @@ export const createExportJson = (chainId: ChainId) => {
         description: meta?.description || "",
         txBuilderVersion: "1.16.2",
       },
-      transactions,
+      transactions: transactions.map((tx) => ({
+        ...tx,
+        value: tx.value.toString(10),
+        ...getAbiInfo(tx),
+      })),
     } as const
   }
 }
 
-const rolesInterface = new Interface(rolesAbi)
+const getAbiInfo = (transaction: {
+  to: `0x${string}`
+  data: `0x${string}`
+  value: bigint
+}) => {
+  const abi: readonly JsonFragment[] =
+    transaction.to === POSTER_ADDRESS ? posterAbi : rolesAbi
+  const iface = new Interface(abi)
 
-const getAbiInfo = (data: string) => {
-  const selector = data.slice(0, 10)
-  const functionFragment = rolesInterface.getFunction(selector)
+  const selector = transaction.data.slice(0, 10)
+  const functionFragment = iface.getFunction(selector)
 
   if (!functionFragment) {
-    throw new Error(`Could not find a Roles function with selector ${selector}`)
+    throw new Error(`Could not find a function with selector ${selector}`)
   }
 
-  const contractMethod = rolesAbi.find(
+  const contractMethod = abi.find(
     (fragment) =>
       fragment.type === "function" && fragment.name === functionFragment.name
   )
@@ -61,7 +66,7 @@ const getAbiInfo = (data: string) => {
   }
 
   const contractInputsValues = asObject(
-    rolesInterface.decodeFunctionData(functionFragment, data)
+    iface.decodeFunctionData(functionFragment, transaction.data)
   )
 
   return {
