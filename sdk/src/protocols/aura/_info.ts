@@ -1169,4 +1169,48 @@ export default [
     ],
     rewarder: "0x646E272dA2766Bdfd8079643Ffbb30830Fb87303",
   },
+  {
+    name: "GHO/USDT/USDC",
+    id: "157",
+    bpt: "0x8353157092ED8Be69a9DF8F95af097bbF33Cb2aF",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+      },
+      {
+        address: "0x8353157092ED8Be69a9DF8F95af097bbF33Cb2aF",
+        symbol: "GHO/USDT/USDC",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+      {
+        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        symbol: "USDT",
+      },
+    ],
+    rewarder: "0xBDD6984C3179B099E9D383ee2F44F3A57764BF7d",
+  },
+  {
+    name: "50KNC-25WETH-25USDC-BPT",
+    id: "158",
+    bpt: "0x6f0ed6f346007563D3266DE350d174a831bDE0ca",
+    tokens: [
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+      {
+        address: "0xdeFA4e8a7bcBA345F687a2f1456F5Edd9CE97202",
+        symbol: "KNC",
+      },
+    ],
+    rewarder: "0xDC71AFe0F4B04d8780bFdf048378C0c6DfD3a19A",
+  },
 ] as const
