@@ -1,11 +1,35 @@
-import { NotFoundError, ProtocolActions, decodeBytes32String } from "defi-kit"
+import { decodeBytes32String } from "defi-kit"
 import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
-import { ChainPrefix, sdks } from "../sdk"
-import { docParams, queryBase, transactionsJson } from "../schema"
-import { ActionHandler } from "../handle"
-import { parseQuery } from "../parse"
+import { ChainPrefix, queryPermissionSet, sdks } from "../sdk"
+import { docParams, transactionsJson, transactionsQueryBase } from "../schema"
+import { TransactionsHandler } from "../handle"
 
-export const registerSwap = (
+export const allowSwap: TransactionsHandler = async (query) => {
+  const {
+    mod: { address, chain },
+    role,
+    protocol,
+  } = transactionsQueryBase.parse(query)
+  const permissions = queryPermissionSet({
+    action: "stake",
+    chain,
+    protocol,
+    query,
+  })
+
+  const { apply, exportToSafeTransactionBuilder } = sdks[chain]
+  const calls = await apply(role, permissions, {
+    address,
+    mode: "extend",
+  })
+
+  return exportToSafeTransactionBuilder(calls, {
+    name: `Extend permissions of "${decodeBytes32String(role)}" role`,
+    description: `Allow making swaps on ${protocol}`,
+  })
+}
+
+export const registerAllowSwap = (
   registry: OpenAPIRegistry,
   chainPrefix: ChainPrefix,
   protocol: string
@@ -33,42 +57,5 @@ export const registerSwap = (
         },
       },
     },
-  })
-}
-
-export const swap: ActionHandler = async (query) => {
-  const {
-    mod: { chain, address },
-    role,
-    protocol,
-  } = queryBase.parse(query)
-
-  const sdk = sdks[chain]
-  const { allow, schema } = sdk
-
-  if (!(protocol in schema) || !(protocol in allow)) {
-    throw new NotFoundError(`${protocol} is not supported on ${chain}`)
-  }
-
-  const allowSwap = (allow as any)[protocol].swap as
-    | ProtocolActions["swap"]
-    | undefined
-  const swapParams = (schema as any)[protocol].swap as any
-
-  if (!allowSwap || !swapParams) {
-    throw new NotFoundError(`${protocol} is not supported on ${chain}`)
-  }
-
-  const permissions = allowSwap(parseQuery(query, swapParams))
-
-  const calls = await sdk.apply(role, permissions, {
-    address,
-    mode: "extend",
-  })
-
-  return sdk.exportJson(address, calls, {
-    name: `Extend permissions of "${decodeBytes32String(role)}" role`,
-    description: `Allow making swaps on ${protocol}`,
-    includeAbi: true,
   })
 }

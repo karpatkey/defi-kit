@@ -36,8 +36,8 @@ export const createApply = (chainId: ChainId) => {
     const { targets, annotations } = processPermissions(permissions)
     checkIntegrity(targets)
 
-    let rolesModCalls: string[] = []
-    let posterCalls: string[] = []
+    let rolesModCalls: `0x${string}`[] = []
+    let posterCalls: `0x${string}`[] = []
     try {
       rolesModCalls = await applyTargets(roleKey, targets, {
         ...options,

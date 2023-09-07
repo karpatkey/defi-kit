@@ -6,12 +6,15 @@ import {
 } from "@asteasolutions/zod-to-openapi"
 
 import { sdks } from "./sdk"
-import { registerBorrow } from "./actions/borrow"
-import { registerDeposit } from "./actions/deposit"
-import { registerSwap } from "./actions/swap"
-import { registerStake } from "./actions/stake"
-import { registerLock } from "./actions/lock"
-import { registerDelegate } from "./actions/delegate"
+import {
+  registerAllowBorrow,
+  registerBorrowPermissions,
+} from "./actions/borrow"
+import { registerAllowDeposit } from "./actions/deposit"
+import { registerAllowSwap } from "./actions/swap"
+import { registerAllowStake } from "./actions/stake"
+import { registerAllowLock } from "./actions/lock"
+import { registerAllowDelegate } from "./actions/delegate"
 
 extendZodWithOpenApi(zod)
 
@@ -25,22 +28,28 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
     Object.keys(protocolActions).forEach((action) => {
       switch (action) {
         case "borrow":
-          registerBorrow(registry, chainPrefix, protocol)
+          registerAllowBorrow(registry, chainPrefix, protocol)
+          registerBorrowPermissions(registry, chainPrefix, protocol)
           return
         case "deposit":
-          registerDeposit(registry, chainPrefix, protocol)
+          registerAllowDeposit(registry, chainPrefix, protocol)
+          registerDepositPermissions(registry, chainPrefix, protocol)
           return
         case "swap":
-          registerSwap(registry, chainPrefix, protocol)
+          registerAllowSwap(registry, chainPrefix, protocol)
+          registerSwapPermissions(registry, chainPrefix, protocol)
           return
         case "stake":
-          registerStake(registry, chainPrefix, protocol)
+          registerAllowStake(registry, chainPrefix, protocol)
+          registerStakePermissions(registry, chainPrefix, protocol)
           return
         case "lock":
-          registerLock(registry, chainPrefix, protocol)
+          registerAllowLock(registry, chainPrefix, protocol)
+          registerLockPermissions(registry, chainPrefix, protocol)
           return
         case "delegate":
-          registerDelegate(registry, chainPrefix, protocol)
+          registerAllowDelegate(registry, chainPrefix, protocol)
+          registerDelegatePermissions(registry, chainPrefix, protocol)
           return
         default:
           throw new Error(`Unknown action: ${action}`)
