@@ -13,6 +13,7 @@ const B_80BAL_20WETH_PID =
 const bb_a_USD_v1 = "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2"
 const bb_a_USD_v2 = "0xA13a9247ea42D743238089903570127DdA72fE44"
 const bb_a_USD_v3 = "0xfeBb0bbf162E64fb9D0dfe186E517d84C395f016"
+const USDC = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
 
 export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   const tokenAddresses = pool.tokens
@@ -161,13 +162,14 @@ export const lock = (): Permission[] => {
     allow.mainnet.balancer.vebal.withdraw(),
     allow.mainnet.balancer.fee_distributor.claimToken(
       c.avatar,
-      c.or(BAL, bb_a_USD_v1, bb_a_USD_v2, bb_a_USD_v3)
+      c.or(BAL, bb_a_USD_v1, bb_a_USD_v2, bb_a_USD_v3, USDC)
     ),
     allow.mainnet.balancer.fee_distributor.claimTokens(c.avatar, [
       BAL,
       bb_a_USD_v1,
       bb_a_USD_v2,
       bb_a_USD_v3,
+      USDC,
     ]),
   ]
 }
