@@ -2,8 +2,7 @@ import { NotFoundError } from "../../../errors"
 import tokens from "./_info"
 import { Token, DelegateToken } from "./types"
 import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
-import { findDelegateToken } from "../v2/index"
-import { stake, governance } from "../v2/actions"
+import { stake, delegate } from "../v2/actions"
 
 const findToken = (symbolOrAddress: string): Token => {
   const nameOrAddressLower = symbolOrAddress.toLowerCase()
@@ -43,7 +42,7 @@ export const eth = {
     return stake()
   },
 
-  // governance: ({
+  // delegate: ({
   //   targets,
   //   delegatee,
   // }: {
@@ -51,7 +50,7 @@ export const eth = {
   //   delegatee: string
   // }) => {
   //   return targets.flatMap((target) =>
-  //     governance(findDelegateToken(target), delegatee)
+  //     delegate(findDelegateToken(target), delegatee)
   //   )
   // },
 }
