@@ -102,9 +102,31 @@ type Condition = z.infer<typeof baseCondition> & {
   children?: Condition[]
 }
 
-const condition: z.ZodType<Condition> = baseCondition.extend({
-  children: z.lazy(() => condition.array()).optional(),
-})
+export const condition: z.ZodType<Condition> = baseCondition
+  .extend({
+    children: z.lazy(() => condition.array()).optional(),
+  })
+  .openapi({
+    type: "object",
+    properties: {
+      paramType: {
+        type: "number",
+      },
+      operator: {
+        type: "number",
+      },
+      compValue: {
+        type: "string",
+      },
+      children: {
+        type: "array",
+        items: {
+          $ref: "#/components/schemas/Condition", // we're registering the schema as a component in openapi.ts
+        },
+      },
+    },
+    required: ["paramType", "operator"],
+  })
 
 export const permission = z.object({
   targetAddress: z.string(), // we don't use zx.address() here because PermissionSet.targetAddress is typed as string
