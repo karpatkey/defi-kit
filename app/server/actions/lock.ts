@@ -1,8 +1,15 @@
 import { decodeBytes32String } from "defi-kit"
 import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
+import { coercePermission } from "zodiac-roles-sdk"
 import { ChainPrefix, queryPermissionSet, sdks } from "../sdk"
-import { docParams, transactionsJson, transactionsQueryBase } from "../schema"
-import { TransactionsHandler } from "../handle"
+import {
+  docParams,
+  permission,
+  permissionsQueryBase,
+  transactionsJson,
+  transactionsQueryBase,
+} from "../schema"
+import { PermissionsHandler, TransactionsHandler } from "../handle"
 
 export const allowLock: TransactionsHandler = async (query) => {
   const {
@@ -40,8 +47,8 @@ export const registerAllowLock = (
   registry.registerPath({
     method: "get",
     path: `/${chainPrefix}:{mod}/{role}/allow/${protocol}/lock`,
-    summary: `Allow locking to the specified targets`,
-    tags: [protocol],
+    summary: `Allow locking to the specified ${protocol} targets`,
+    tags: [`${protocol} allow`],
     request: {
       params: docParams,
       query: querySchema,
@@ -53,6 +60,46 @@ export const registerAllowLock = (
         content: {
           "application/json": {
             schema: transactionsJson,
+          },
+        },
+      },
+    },
+  })
+}
+
+export const lockPermissions: PermissionsHandler = async (query) => {
+  const permissions = queryPermissionSet({
+    action: "lock",
+    ...permissionsQueryBase.parse(query),
+    query,
+  })
+  return permissions.map(coercePermission)
+}
+
+export const registerLockPermissions = (
+  registry: OpenAPIRegistry,
+  chainPrefix: ChainPrefix,
+  protocol: string
+) => {
+  const { schema } = sdks[chainPrefix] as any
+  const querySchema = schema[protocol].lock
+
+  registry.registerPath({
+    method: "get",
+    path: `/permissions/${chainPrefix}/${protocol}/lock`,
+    summary: `Permissions for locking to the specified ${protocol} \`targets\``,
+    tags: [`${protocol} permissions`],
+    request: {
+      params: docParams,
+      query: querySchema,
+    },
+
+    responses: {
+      200: {
+        description: `Permissions for locking to the ${protocol} targets`,
+        content: {
+          "application/json": {
+            schema: permission.array(),
           },
         },
       },

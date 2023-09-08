@@ -1,8 +1,15 @@
 import { decodeBytes32String } from "defi-kit"
 import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
+import { coercePermission } from "zodiac-roles-sdk"
 import { ChainPrefix, queryPermissionSet, sdks } from "../sdk"
-import { docParams, transactionsJson, transactionsQueryBase } from "../schema"
-import { TransactionsHandler } from "../handle"
+import {
+  docParams,
+  permission,
+  permissionsQueryBase,
+  transactionsJson,
+  transactionsQueryBase,
+} from "../schema"
+import { PermissionsHandler, TransactionsHandler } from "../handle"
 
 export const allowDelegate: TransactionsHandler = async (query) => {
   const {
@@ -41,7 +48,7 @@ export const registerAllowDelegate = (
     method: "get",
     path: `/${chainPrefix}:{mod}/{role}/allow/${protocol}/delegate`,
     summary: `Allow delegation of the specified targets`,
-    tags: [protocol],
+    tags: [`${protocol} allow`],
     request: {
       params: docParams,
       query: querySchema,
@@ -53,6 +60,46 @@ export const registerAllowDelegate = (
         content: {
           "application/json": {
             schema: transactionsJson,
+          },
+        },
+      },
+    },
+  })
+}
+
+export const delegatePermissions: PermissionsHandler = async (query) => {
+  const permissions = queryPermissionSet({
+    action: "delegate",
+    ...permissionsQueryBase.parse(query),
+    query,
+  })
+  return permissions.map(coercePermission)
+}
+
+export const registerDelegatePermissions = (
+  registry: OpenAPIRegistry,
+  chainPrefix: ChainPrefix,
+  protocol: string
+) => {
+  const { schema } = sdks[chainPrefix] as any
+  const querySchema = schema[protocol].delegate
+
+  registry.registerPath({
+    method: "get",
+    path: `/permissions/${chainPrefix}/${protocol}/delegate`,
+    summary: `Permissions for delegation of the ${protocol} \`targets\``,
+    tags: [`${protocol} permissions`],
+    request: {
+      params: docParams,
+      query: querySchema,
+    },
+
+    responses: {
+      200: {
+        description: `Permissions for delegation of the ${protocol} \`targets\``,
+        content: {
+          "application/json": {
+            schema: permission.array(),
           },
         },
       },

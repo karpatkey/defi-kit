@@ -10,11 +10,17 @@ import {
   registerAllowBorrow,
   registerBorrowPermissions,
 } from "./actions/borrow"
-import { registerAllowDeposit } from "./actions/deposit"
-import { registerAllowSwap } from "./actions/swap"
-import { registerAllowStake } from "./actions/stake"
-import { registerAllowLock } from "./actions/lock"
-import { registerAllowDelegate } from "./actions/delegate"
+import {
+  registerAllowDeposit,
+  registerDepositPermissions,
+} from "./actions/deposit"
+import { registerAllowSwap, registerSwapPermissions } from "./actions/swap"
+import { registerAllowStake, registerStakePermissions } from "./actions/stake"
+import { registerAllowLock, registerLockPermissions } from "./actions/lock"
+import {
+  registerAllowDelegate,
+  registerDelegatePermissions,
+} from "./actions/delegate"
 import { permission, condition, transactionsJson } from "./schema"
 
 extendZodWithOpenApi(zod)
@@ -38,23 +44,23 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
           return
         case "deposit":
           registerAllowDeposit(registry, chainPrefix, protocol)
-          // registerDepositPermissions(registry, chainPrefix, protocol)
+          registerDepositPermissions(registry, chainPrefix, protocol)
           return
         case "swap":
           registerAllowSwap(registry, chainPrefix, protocol)
-          // registerSwapPermissions(registry, chainPrefix, protocol)
+          registerSwapPermissions(registry, chainPrefix, protocol)
           return
         case "stake":
           registerAllowStake(registry, chainPrefix, protocol)
-          // registerStakePermissions(registry, chainPrefix, protocol)
+          registerStakePermissions(registry, chainPrefix, protocol)
           return
         case "lock":
           registerAllowLock(registry, chainPrefix, protocol)
-          // registerLockPermissions(registry, chainPrefix, protocol)
+          registerLockPermissions(registry, chainPrefix, protocol)
           return
         case "delegate":
           registerAllowDelegate(registry, chainPrefix, protocol)
-          // registerDelegatePermissions(registry, chainPrefix, protocol)
+          registerDelegatePermissions(registry, chainPrefix, protocol)
           return
         default:
           throw new Error(`Unknown action: ${action}`)
