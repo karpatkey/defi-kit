@@ -35,7 +35,7 @@ export const createApply = (chainId: ChainId) => {
   ) {
     const { targets, annotations } = processPermissions(permissions)
     checkIntegrity(targets)
-
+    console.log({ targets, annotations })
     let rolesModCalls: `0x${string}`[] = []
     let posterCalls: `0x${string}`[] = []
     try {
@@ -57,7 +57,7 @@ export const createApply = (chainId: ChainId) => {
       throw e
     }
 
-    const value = 0n as const
+    const value = "0" as const
     return [
       ...rolesModCalls.map((data) => ({
         to: options.address,

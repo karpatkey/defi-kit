@@ -14,7 +14,7 @@ export const createExportToSafeTransactionBuilder = (chainId: ChainId) => {
     transactions: {
       to: `0x${string}`
       data: `0x${string}`
-      value: bigint
+      value: "0"
     }[],
     meta?: {
       name?: string
@@ -30,19 +30,15 @@ export const createExportToSafeTransactionBuilder = (chainId: ChainId) => {
         description: meta?.description || "",
         txBuilderVersion: "1.16.2",
       },
-      transactions: transactions.map((tx) => ({
-        ...tx,
-        value: tx.value.toString(10),
-        ...getAbiInfo(tx),
-      })),
+      transactions: transactions.map(decode),
     } as const
   }
 }
 
-const getAbiInfo = (transaction: {
+const decode = (transaction: {
   to: `0x${string}`
   data: `0x${string}`
-  value: bigint
+  value: "0"
 }) => {
   const abi: readonly JsonFragment[] =
     transaction.to === POSTER_ADDRESS ? posterAbi : rolesAbi
@@ -70,6 +66,8 @@ const getAbiInfo = (transaction: {
   )
 
   return {
+    to: transaction.to,
+    value: transaction.value,
     contractMethod,
     contractInputsValues,
   }
@@ -78,8 +76,10 @@ const getAbiInfo = (transaction: {
 const asObject = (result: Result) => {
   const object: Record<string, any> = {}
   for (const key of Object.keys(result)) {
-    if (isNaN(Number(key))) continue // skip numeric keys (array indices)
-    object[key] = result[key]
+    // skip numeric keys (array indices)
+    if (isNaN(Number(key))) {
+      object[key] = result[key]
+    }
   }
   return object
 }

@@ -15,8 +15,7 @@ export const testRoleKey = encodeBytes32String("TEST-ROLE")
 export const applyPermissions = async (permissions: Permission[]) => {
   const apply = createApply(1) // chainId here won't matter since we pass currentTargets
   const calls = await apply(testRoleKey, permissions, {
-    address: rolesMod.address,
-    currentTargets: [],
+    address: rolesMod.address as `0x${string}`,
     mode: "replace",
     log: console.debug,
   })
@@ -26,8 +25,7 @@ export const applyPermissions = async (permissions: Permission[]) => {
   await Promise.all(
     calls.map((call) =>
       owner.sendTransaction({
-        to: rolesMod.address,
-        data: call,
+        ...call,
         nonce: nonce++,
       })
     )
