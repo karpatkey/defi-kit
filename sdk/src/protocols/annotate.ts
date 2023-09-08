@@ -1,9 +1,15 @@
+import { PermissionSet } from "zodiac-roles-sdk"
 import { ProtocolActions, ActionFunction } from "../types"
+import { eth } from "."
+
+type Annotated<F extends ActionFunction> = (
+  params: Parameters<F>[0]
+) => PermissionSet
 
 const annotate = <F extends ActionFunction>(
   actionFunction: F,
   path: string[]
-): F => {
+): Annotated<F> => {
   const annotated = (params: any) => {
     const result = actionFunction(params)
 
@@ -19,13 +25,23 @@ const annotate = <F extends ActionFunction>(
     return result
   }
 
-  return annotated as F
+  return annotated as (params: Parameters<F>[0]) => PermissionSet
 }
 
-export const annotateAll = <A extends Record<string, ProtocolActions>>(
-  actions: A,
+type AllAnnotated<R extends Record<string, ProtocolActions>> = {
+  [P in keyof R]: R[P] extends ProtocolActions
+    ? {
+        [Key in keyof R[P]]: R[P][Key] extends ActionFunction
+          ? Annotated<R[P][Key]>
+          : undefined
+      }
+    : undefined
+}
+
+export const annotateAll = <R extends Record<string, ProtocolActions>>(
+  actions: R,
   chainPrefix: string
-): A => {
+): AllAnnotated<R> => {
   const annotated: any = {}
   for (const [protocolKey, protocolActions] of Object.entries(actions)) {
     annotated[protocolKey] = {}
