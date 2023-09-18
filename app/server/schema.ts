@@ -84,8 +84,10 @@ export const transactionsJson = z.object({
   transactions: z.array(
     z.object({
       to: z.string(),
-      data: z.string(),
+      data: z.string().optional(),
       value: z.string(),
+      contractMethod: z.any().optional(),
+      contractInputsValues: z.record(z.string()).optional(),
     })
   ),
 })
