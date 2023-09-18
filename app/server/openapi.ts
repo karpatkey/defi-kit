@@ -6,16 +6,30 @@ import {
 } from "@asteasolutions/zod-to-openapi"
 
 import { sdks } from "./sdk"
-import { registerBorrow } from "./actions/borrow"
-import { registerDeposit } from "./actions/deposit"
-import { registerSwap } from "./actions/swap"
-import { registerStake } from "./actions/stake"
-import { registerLock } from "./actions/lock"
-import { registerDelegate } from "./actions/delegate"
+import {
+  registerAllowBorrow,
+  registerBorrowPermissions,
+} from "./actions/borrow"
+import {
+  registerAllowDeposit,
+  registerDepositPermissions,
+} from "./actions/deposit"
+import { registerAllowSwap, registerSwapPermissions } from "./actions/swap"
+import { registerAllowStake, registerStakePermissions } from "./actions/stake"
+import { registerAllowLock, registerLockPermissions } from "./actions/lock"
+import {
+  registerAllowDelegate,
+  registerDelegatePermissions,
+} from "./actions/delegate"
+import { permission, condition, transactionsJson } from "./schema"
 
 extendZodWithOpenApi(zod)
 
 export const registry = new OpenAPIRegistry()
+
+registry.register("Condition", condition)
+registry.register("Permission", permission)
+registry.register("TransactionsJson", transactionsJson)
 
 // traverse through the sdk structure and register all API endpoints
 Object.entries(sdks).forEach(([chain, sdk]) => {
@@ -25,22 +39,28 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
     Object.keys(protocolActions).forEach((action) => {
       switch (action) {
         case "borrow":
-          registerBorrow(registry, chainPrefix, protocol)
+          registerAllowBorrow(registry, chainPrefix, protocol)
+          registerBorrowPermissions(registry, chainPrefix, protocol)
           return
         case "deposit":
-          registerDeposit(registry, chainPrefix, protocol)
+          registerAllowDeposit(registry, chainPrefix, protocol)
+          registerDepositPermissions(registry, chainPrefix, protocol)
           return
         case "swap":
-          registerSwap(registry, chainPrefix, protocol)
+          registerAllowSwap(registry, chainPrefix, protocol)
+          registerSwapPermissions(registry, chainPrefix, protocol)
           return
         case "stake":
-          registerStake(registry, chainPrefix, protocol)
+          registerAllowStake(registry, chainPrefix, protocol)
+          registerStakePermissions(registry, chainPrefix, protocol)
           return
         case "lock":
-          registerLock(registry, chainPrefix, protocol)
+          registerAllowLock(registry, chainPrefix, protocol)
+          registerLockPermissions(registry, chainPrefix, protocol)
           return
         case "delegate":
-          registerDelegate(registry, chainPrefix, protocol)
+          registerAllowDelegate(registry, chainPrefix, protocol)
+          registerDelegatePermissions(registry, chainPrefix, protocol)
           return
         default:
           throw new Error(`Unknown action: ${action}`)

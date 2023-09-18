@@ -1,11 +1,42 @@
-import { NotFoundError, ProtocolActions, decodeBytes32String } from "defi-kit"
+import { decodeBytes32String } from "defi-kit"
 import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
-import { ChainPrefix, sdks } from "../sdk"
-import { docParams, queryBase, transactionsJson } from "../schema"
-import { ActionHandler } from "../handle"
-import { parseQuery } from "../parse"
+import { coercePermission } from "zodiac-roles-sdk"
+import { ChainPrefix, queryPermissionSet, sdks } from "../sdk"
+import {
+  docParams,
+  permission,
+  permissionsQueryBase,
+  transactionsJson,
+  transactionsQueryBase,
+} from "../schema"
+import { PermissionsHandler, TransactionsHandler } from "../handle"
 
-export const registerLock = (
+export const allowLock: TransactionsHandler = async (query) => {
+  const {
+    mod: { address, chain },
+    role,
+    protocol,
+  } = transactionsQueryBase.parse(query)
+  const permissions = queryPermissionSet({
+    action: "lock",
+    chain,
+    protocol,
+    query,
+  })
+
+  const { apply, exportToSafeTransactionBuilder } = sdks[chain]
+  const calls = await apply(role, permissions, {
+    address,
+    mode: "extend",
+  })
+
+  return exportToSafeTransactionBuilder(calls, {
+    name: `Extend permissions of "${decodeBytes32String(role)}" role`,
+    description: `Allow locking to the ${protocol} \`targets\``,
+  })
+}
+
+export const registerAllowLock = (
   registry: OpenAPIRegistry,
   chainPrefix: ChainPrefix,
   protocol: string
@@ -16,8 +47,8 @@ export const registerLock = (
   registry.registerPath({
     method: "get",
     path: `/${chainPrefix}:{mod}/{role}/allow/${protocol}/lock`,
-    summary: `Allow locking to the specified targets`,
-    tags: [protocol],
+    summary: `Allow locking to the specified ${protocol} targets`,
+    tags: [`${protocol} allow`],
     request: {
       params: docParams,
       query: querySchema,
@@ -36,39 +67,42 @@ export const registerLock = (
   })
 }
 
-export const lock: ActionHandler = async (query) => {
-  const {
-    mod: { chain, address },
-    role,
-    protocol,
-  } = queryBase.parse(query)
-
-  const sdk = sdks[chain]
-  const { allow, schema } = sdk
-
-  if (!(protocol in schema) || !(protocol in allow)) {
-    throw new NotFoundError(`${protocol} is not supported on ${chain}`)
-  }
-
-  const allowLock = (allow as any)[protocol].lock as
-    | ProtocolActions["lock"]
-    | undefined
-  const lockParamsSchema = (schema as any)[protocol].lock as any
-
-  if (!allowLock || !lockParamsSchema) {
-    throw new NotFoundError(`${protocol} is not supported on ${chain}`)
-  }
-
-  const permissions = allowLock(parseQuery(query, lockParamsSchema))
-
-  const calls = await sdk.apply(role, permissions, {
-    address,
-    mode: "extend",
+export const lockPermissions: PermissionsHandler = async (query) => {
+  const permissions = queryPermissionSet({
+    action: "lock",
+    ...permissionsQueryBase.parse(query),
+    query,
   })
+  return permissions.map(coercePermission)
+}
 
-  return sdk.exportJson(address, calls, {
-    name: `Extend permissions of "${decodeBytes32String(role)}" role`,
-    description: `Allow locking to the ${protocol} \`targets\``,
-    includeAbi: true,
+export const registerLockPermissions = (
+  registry: OpenAPIRegistry,
+  chainPrefix: ChainPrefix,
+  protocol: string
+) => {
+  const { schema } = sdks[chainPrefix] as any
+  const querySchema = schema[protocol].lock
+
+  registry.registerPath({
+    method: "get",
+    path: `/permissions/${chainPrefix}/${protocol}/lock`,
+    summary: `Permissions for locking to the specified ${protocol} \`targets\``,
+    tags: [`${protocol} permissions`],
+    request: {
+      params: docParams,
+      query: querySchema,
+    },
+
+    responses: {
+      200: {
+        description: `Permissions for locking to the ${protocol} targets`,
+        content: {
+          "application/json": {
+            schema: permission.array(),
+          },
+        },
+      },
+    },
   })
 }

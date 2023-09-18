@@ -3,22 +3,26 @@ import { NotFoundError } from "defi-kit"
 import { fromZodError } from "zod-validation-error"
 import { ZodError } from "zod"
 
-import { TransactionsJson } from "./schema"
+import { Permission, ResponseJson, TransactionsJson } from "./schema"
 
-export type ActionHandler = (
+export type PermissionsHandler = (
+  query: NextApiRequest["query"]
+) => Promise<Permission[]>
+
+export type TransactionsHandler = (
   query: NextApiRequest["query"]
 ) => Promise<TransactionsJson>
 
 export const handle =
-  (handler: ActionHandler) =>
+  (handler: TransactionsHandler | PermissionsHandler) =>
   async (
     req: NextApiRequest,
-    res: NextApiResponse<TransactionsJson | ErrorJson>
+    res: NextApiResponse<ResponseJson | ErrorJson>
   ) => {
     console.log(req.query)
     try {
       const result = await handler(req.query)
-      res.status(200).json(result)
+      res.status(200).json(result as any)
     } catch (e) {
       console.error(e)
 

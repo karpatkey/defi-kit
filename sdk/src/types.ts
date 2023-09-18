@@ -1,5 +1,5 @@
 import { SomeZodObject } from "zod"
-import { Permission } from "zodiac-roles-sdk"
+import { PermissionSet } from "zodiac-roles-sdk"
 
 export enum Chain {
   eth = "eth",
@@ -52,22 +52,23 @@ type SwapOptions =
 
 // These types define the common interface for actions across all protocols
 export type ProtocolActions = {
-  deposit?: (options: DepositOptions) => Permission[]
+  deposit?: (options: DepositOptions) => PermissionSet
 
-  borrow?: (options: BorrowOptions) => Permission[]
+  borrow?: (options: BorrowOptions) => PermissionSet
 
-  stake?: (options: StakeOptions) => Permission[]
+  stake?: (options: StakeOptions) => PermissionSet
 
-  claim?: (options: ClaimOptions) => Permission[]
+  claim?: (options: ClaimOptions) => PermissionSet
 
-  swap?: (options: SwapOptions) => Permission[]
+  swap?: (options: SwapOptions) => PermissionSet
 
-  lock?: (options: LockOptions) => Permission[]
+  lock?: (options: LockOptions) => PermissionSet
 
-  delegate?: (options: DelegateOptions) => Permission[]
+  delegate?: (options: DelegateOptions) => PermissionSet
 }
 
 export type ActionName = keyof ProtocolActions
+export type ActionFunction = NonNullable<ProtocolActions[ActionName]>
 
 // For registering protocols in the REST API we need zod schemas for the specific parameters of each action
 export type ProtocolSchemas = { [key in ActionName]?: SomeZodObject }

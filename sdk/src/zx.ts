@@ -6,8 +6,6 @@ import { extendZodWithOpenApi } from "@asteasolutions/zod-to-openapi"
 
 extendZodWithOpenApi(z)
 
-const ADDRESS = /^0x[0-9a-fA-F]{40}$/
-
 export const zx = {
   address: () =>
     z.string().transform((val, ctx) => {

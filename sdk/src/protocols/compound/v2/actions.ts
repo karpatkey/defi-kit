@@ -1,11 +1,10 @@
 import { MintPaused } from "../../../errors"
 import { allow } from "zodiac-roles-sdk/kit"
-import { c } from "zodiac-roles-sdk"
+import { c, Permission } from "zodiac-roles-sdk"
 import { Token, cToken } from "./types"
 import { allowErc20Approve } from "../../../erc20"
-import { PresetFunction } from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types"
 
-// const _mint = (ctoken: cToken): PresetFunction => {
+// const _mint = (ctoken: cToken): Permission => {
 //   return {
 //     targetAddress: ctoken,
 //     signature: "mint(uint256)",
@@ -13,7 +12,7 @@ import { PresetFunction } from "zodiac-roles-sdk/build/cjs/sdk/src/presets/types
 //   }
 // }
 
-const _mint = (ctoken: cToken): PresetFunction => {
+const _mint = (ctoken: cToken): Permission => {
   return {
     ...allow.mainnet.compoundV2.cToken.mint(undefined, { send: true }),
     targetAddress: ctoken,
@@ -21,7 +20,7 @@ const _mint = (ctoken: cToken): PresetFunction => {
 }
 
 // it is called when MAX underlying amount is withdrawn
-const _redeem = (ctoken: cToken): PresetFunction => {
+const _redeem = (ctoken: cToken): Permission => {
   return {
     ...allow.mainnet.compoundV2.cToken.redeem(),
     targetAddress: ctoken,
@@ -29,21 +28,21 @@ const _redeem = (ctoken: cToken): PresetFunction => {
 }
 
 // it is called when MAX underlying amount is NOT withdrawn
-const _redeemUnderlying = (ctoken: cToken): PresetFunction => {
+const _redeemUnderlying = (ctoken: cToken): Permission => {
   return {
     ...allow.mainnet.compoundV2.cToken.redeemUnderlying(),
     targetAddress: ctoken,
   }
 }
 
-const _borrow = (ctoken: cToken): PresetFunction => {
+const _borrow = (ctoken: cToken): Permission => {
   return {
     ...allow.mainnet.compoundV2.cToken.borrow(),
     targetAddress: ctoken,
   }
 }
 
-const _repay = (ctoken: cToken): PresetFunction => {
+const _repay = (ctoken: cToken): Permission => {
   return {
     ...allow.mainnet.compoundV2.cToken.repayBorrow(),
     targetAddress: ctoken,

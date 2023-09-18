@@ -1,11 +1,42 @@
-import { NotFoundError, ProtocolActions, decodeBytes32String } from "defi-kit"
+import { decodeBytes32String } from "defi-kit"
 import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
-import { ChainPrefix, sdks } from "../sdk"
-import { docParams, queryBase, transactionsJson } from "../schema"
-import { ActionHandler } from "../handle"
-import { parseQuery } from "../parse"
+import { coercePermission } from "zodiac-roles-sdk"
+import { ChainPrefix, queryPermissionSet, sdks } from "../sdk"
+import {
+  docParams,
+  permission,
+  permissionsQueryBase,
+  transactionsJson,
+  transactionsQueryBase,
+} from "../schema"
+import { PermissionsHandler, TransactionsHandler } from "../handle"
 
-export const registerDelegate = (
+export const allowDelegate: TransactionsHandler = async (query) => {
+  const {
+    mod: { address, chain },
+    role,
+    protocol,
+  } = transactionsQueryBase.parse(query)
+  const permissions = queryPermissionSet({
+    action: "delegate",
+    chain,
+    protocol,
+    query,
+  })
+
+  const { apply, exportToSafeTransactionBuilder } = sdks[chain]
+  const calls = await apply(role, permissions, {
+    address,
+    mode: "extend",
+  })
+
+  return exportToSafeTransactionBuilder(calls, {
+    name: `Extend permissions of "${decodeBytes32String(role)}" role`,
+    description: `Allow delegation of the ${protocol} \`targets\``,
+  })
+}
+
+export const registerAllowDelegate = (
   registry: OpenAPIRegistry,
   chainPrefix: ChainPrefix,
   protocol: string
@@ -17,7 +48,7 @@ export const registerDelegate = (
     method: "get",
     path: `/${chainPrefix}:{mod}/{role}/allow/${protocol}/delegate`,
     summary: `Allow delegation of the specified targets`,
-    tags: [protocol],
+    tags: [`${protocol} allow`],
     request: {
       params: docParams,
       query: querySchema,
@@ -36,39 +67,42 @@ export const registerDelegate = (
   })
 }
 
-export const delegate: ActionHandler = async (query) => {
-  const {
-    mod: { chain, address },
-    role,
-    protocol,
-  } = queryBase.parse(query)
-
-  const sdk = sdks[chain]
-  const { allow, schema } = sdk
-
-  if (!(protocol in schema) || !(protocol in allow)) {
-    throw new NotFoundError(`${protocol} is not supported on ${chain}`)
-  }
-
-  const allowDelegate = (allow as any)[protocol].delegate as
-    | ProtocolActions["delegate"]
-    | undefined
-  const delegateParamsSchema = (schema as any)[protocol].delegate as any
-
-  if (!allowDelegate || !delegateParamsSchema) {
-    throw new NotFoundError(`${protocol} is not supported on ${chain}`)
-  }
-
-  const permissions = allowDelegate(parseQuery(query, delegateParamsSchema))
-
-  const calls = await sdk.apply(role, permissions, {
-    address,
-    mode: "extend",
+export const delegatePermissions: PermissionsHandler = async (query) => {
+  const permissions = queryPermissionSet({
+    action: "delegate",
+    ...permissionsQueryBase.parse(query),
+    query,
   })
+  return permissions.map(coercePermission)
+}
 
-  return sdk.exportJson(address, calls, {
-    name: `Extend permissions of "${decodeBytes32String(role)}" role`,
-    description: `Allow delegation of the ${protocol} \`targets\``,
-    includeAbi: true,
+export const registerDelegatePermissions = (
+  registry: OpenAPIRegistry,
+  chainPrefix: ChainPrefix,
+  protocol: string
+) => {
+  const { schema } = sdks[chainPrefix] as any
+  const querySchema = schema[protocol].delegate
+
+  registry.registerPath({
+    method: "get",
+    path: `/permissions/${chainPrefix}/${protocol}/delegate`,
+    summary: `Permissions for delegation of the ${protocol} \`targets\``,
+    tags: [`${protocol} permissions`],
+    request: {
+      params: docParams,
+      query: querySchema,
+    },
+
+    responses: {
+      200: {
+        description: `Permissions for delegation of the ${protocol} \`targets\``,
+        content: {
+          "application/json": {
+            schema: permission.array(),
+          },
+        },
+      },
+    },
   })
 }
