@@ -17,7 +17,7 @@ const annotate = <F extends ActionFunction>(
     const joinedPath = path.join("/")
     Object.assign(result, {
       annotation: {
-        uri: `https://kit.karpatkey.com/permissions/${joinedPath}?${queryString}`,
+        uri: `https://kit.karpatkey.com/api/v1/permissions/${joinedPath}?${queryString}`,
         schema: "https://kit.karpatkey.com/api/v1/openapi.json",
       },
     })
