@@ -7,7 +7,7 @@ import { OpenAPIObject } from "openapi3-ts/oas31"
 // Respond with our OpenAPI schema
 const handler = (req: NextApiRequest, res: NextApiResponse) => {
   const generator = new OpenApiGeneratorV31(registry.definitions)
-  const document = dontExplodedArrayParams(
+  const document = dontExplodeArrayParams(
     generator.generateDocument({
       openapi: "3.0.0",
       info: {
@@ -25,7 +25,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
 
 export default handler
 
-function dontExplodedArrayParams(doc: OpenAPIObject): OpenAPIObject {
+function dontExplodeArrayParams(doc: OpenAPIObject): OpenAPIObject {
   if (!doc.paths) return doc
 
   for (let [, item] of Object.entries(doc.paths)) {
