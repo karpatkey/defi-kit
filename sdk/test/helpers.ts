@@ -13,11 +13,13 @@ export const rolesMod = Roles__factory.connect(ROLES_ADDRESS, owner)
 export const testRoleKey = encodeBytes32String("TEST-ROLE")
 
 export const applyPermissions = async (permissions: Permission[]) => {
-  const apply = createApply(1) // chainId here won't matter since we pass currentTargets
+  const apply = createApply(1) // chainId here won't matter (since we pass currentTargets and currentAnnotations no subgraph queries will be made)
   const calls = await apply(testRoleKey, permissions, {
     address: rolesMod.address as `0x${string}`,
     mode: "replace",
     log: console.debug,
+    currentTargets: [],
+    currentAnnotations: [],
   })
 
   console.log(`Applying permissions with ${calls.length} calls`)

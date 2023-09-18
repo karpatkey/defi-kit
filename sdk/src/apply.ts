@@ -6,6 +6,8 @@ import {
   applyAnnotations,
   ChainId,
   PermissionSet,
+  Target,
+  Annotation,
 } from "zodiac-roles-sdk"
 import { NotFoundError } from "./errors"
 
@@ -19,6 +21,9 @@ type Options = {
    */
   mode: "replace" | "extend" | "remove"
   log?: boolean | ((message: string) => void)
+
+  currentTargets?: Target[]
+  currentAnnotations?: Annotation[]
 }
 
 export const createApply = (chainId: ChainId) => {
