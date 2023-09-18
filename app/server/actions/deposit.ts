@@ -3,7 +3,7 @@ import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
 import { coercePermission } from "zodiac-roles-sdk"
 import { ChainPrefix, queryPermissionSet, sdks } from "../sdk"
 import {
-  docParams,
+  transactionsDocParams,
   permission,
   permissionsQueryBase,
   transactionsJson,
@@ -50,7 +50,7 @@ export const registerAllowDeposit = (
     summary: `Allow managing deposits to the target ${protocol} pools`,
     tags: [`${protocol} allow`],
     request: {
-      params: docParams,
+      params: transactionsDocParams,
       query: querySchema,
     },
 
@@ -90,7 +90,6 @@ export const registerDepositPermissions = (
     summary: `Permissions for depositing to the \`target\` ${protocol} pool`,
     tags: [`${protocol} permissions`],
     request: {
-      params: docParams,
       query: querySchema,
     },
 

@@ -3,9 +3,9 @@ import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
 import { coercePermission } from "zodiac-roles-sdk"
 import { ChainPrefix, queryPermissionSet, sdks } from "../sdk"
 import {
-  docParams,
   permission,
   permissionsQueryBase,
+  transactionsDocParams,
   transactionsJson,
   transactionsQueryBase,
 } from "../schema"
@@ -50,7 +50,7 @@ export const registerAllowBorrow = (
     summary: `Transactions for granting permissions to borrow the specified tokens`,
     tags: [`${protocol} allow`],
     request: {
-      params: docParams,
+      params: transactionsDocParams,
       query: querySchema,
     },
 
@@ -90,7 +90,6 @@ export const registerBorrowPermissions = (
     summary: `Permissions to borrow the specified tokens`,
     tags: [`${protocol} permissions`],
     request: {
-      params: docParams,
       query: querySchema,
     },
 

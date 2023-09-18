@@ -1,6 +1,9 @@
 import { Chain, encodeBytes32String, zx } from "defi-kit"
 import { arrayify } from "ethers/lib/utils"
 import z from "zod"
+import { extendZodWithOpenApi } from "@asteasolutions/zod-to-openapi"
+
+extendZodWithOpenApi(z)
 
 export const roleKey = z.string().transform((val, ctx) => {
   try {
@@ -66,8 +69,8 @@ export const transactionsQueryBase = z.object({
   protocol: z.string(),
 })
 
-// request params used by all endpoints, used for generating API docs
-export const docParams = z.object({
+// request params used by all transactions endpoints, used for generating API docs
+export const transactionsDocParams = z.object({
   mod: zx.address(), // in the OpenAPI routes, we hardcode the chain prefix in the path, so the `mod` param is just an address
   role: roleKey,
 })

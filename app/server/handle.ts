@@ -19,7 +19,6 @@ export const handle =
     req: NextApiRequest,
     res: NextApiResponse<ResponseJson | ErrorJson>
   ) => {
-    console.log(req.query)
     try {
       const result = await handler(req.query)
       res.status(200).json(result as any)

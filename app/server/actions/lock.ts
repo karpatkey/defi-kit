@@ -3,7 +3,7 @@ import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
 import { coercePermission } from "zodiac-roles-sdk"
 import { ChainPrefix, queryPermissionSet, sdks } from "../sdk"
 import {
-  docParams,
+  transactionsDocParams,
   permission,
   permissionsQueryBase,
   transactionsJson,
@@ -50,7 +50,7 @@ export const registerAllowLock = (
     summary: `Allow locking to the specified ${protocol} targets`,
     tags: [`${protocol} allow`],
     request: {
-      params: docParams,
+      params: transactionsDocParams,
       query: querySchema,
     },
 
@@ -90,7 +90,6 @@ export const registerLockPermissions = (
     summary: `Permissions for locking to the specified ${protocol} \`targets\``,
     tags: [`${protocol} permissions`],
     request: {
-      params: docParams,
       query: querySchema,
     },
 
