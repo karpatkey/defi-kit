@@ -87,7 +87,7 @@ export const registerDepositPermissions = (
   registry.registerPath({
     method: "get",
     path: `/permissions/${chainPrefix}/${protocol}/deposit`,
-    summary: `Permissions for depositing to the \`target\` ${protocol} pool`,
+    summary: `Manage deposits to the ${protocol} \`targets\``,
     tags: [`${protocol} permissions`],
     request: {
       query: querySchema,
@@ -95,7 +95,7 @@ export const registerDepositPermissions = (
 
     responses: {
       200: {
-        description: `Permissions for depositing to the \`target\` ${protocol} pool`,
+        description: `Permissions for managing deposits to the ${protocol} \`targets\``,
         content: {
           "application/json": {
             schema: permission.array(),

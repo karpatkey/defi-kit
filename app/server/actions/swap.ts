@@ -87,7 +87,7 @@ export const registerSwapPermissions = (
   registry.registerPath({
     method: "get",
     path: `/permissions/${chainPrefix}/${protocol}/swap`,
-    summary: `Permissions for making swaps on ${protocol}`,
+    summary: `Make swaps on ${protocol}`,
     tags: [`${protocol} permissions`],
     request: {
       query: querySchema,

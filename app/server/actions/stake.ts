@@ -87,7 +87,7 @@ export const registerStakePermissions = (
   registry.registerPath({
     method: "get",
     path: `/permissions/${chainPrefix}/${protocol}/stake`,
-    summary: `Permissions for staking to the specified ${protocol} \`targets\``,
+    summary: `Stake to the specified ${protocol} \`targets\``,
     tags: [`${protocol} permissions`],
     request: {
       query: querySchema,

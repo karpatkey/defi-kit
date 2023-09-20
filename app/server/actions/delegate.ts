@@ -87,7 +87,7 @@ export const registerDelegatePermissions = (
   registry.registerPath({
     method: "get",
     path: `/permissions/${chainPrefix}/${protocol}/delegate`,
-    summary: `Permissions for delegation of the ${protocol} \`targets\``,
+    summary: `Manage delegates for the ${protocol} \`targets\``,
     tags: [`${protocol} permissions`],
     request: {
       query: querySchema,
@@ -95,7 +95,7 @@ export const registerDelegatePermissions = (
 
     responses: {
       200: {
-        description: `Permissions for delegation of the ${protocol} \`targets\``,
+        description: `Permissions for managing delegates for the ${protocol} \`targets\``,
         content: {
           "application/json": {
             schema: permission.array(),

@@ -87,7 +87,7 @@ export const registerBorrowPermissions = (
   registry.registerPath({
     method: "get",
     path: `/permissions/${chainPrefix}/${protocol}/borrow`,
-    summary: `Permissions to borrow the specified tokens`,
+    summary: `Borrow the specified tokens on ${protocol}`,
     tags: [`${protocol} permissions`],
     request: {
       query: querySchema,

@@ -87,7 +87,7 @@ export const registerLockPermissions = (
   registry.registerPath({
     method: "get",
     path: `/permissions/${chainPrefix}/${protocol}/lock`,
-    summary: `Permissions for locking to the specified ${protocol} \`targets\``,
+    summary: `Lock to the specified ${protocol} \`targets\``,
     tags: [`${protocol} permissions`],
     request: {
       query: querySchema,
