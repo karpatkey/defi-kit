@@ -75,6 +75,40 @@ export const transactionsDocParams = z.object({
   role: roleKey,
 })
 
+const baseContractInput = z.object({
+  internalType: z.string(),
+  name: z.string(),
+  type: z.string(),
+})
+type ContractInput = z.infer<typeof baseContractInput> & {
+  components?: ContractInput[]
+}
+export const contractInput: z.ZodType<ContractInput> = baseContractInput
+  .extend({
+    children: z.lazy(() => condition.array()).optional(),
+  })
+  .openapi({
+    type: "object",
+    properties: {
+      internalType: {
+        type: "string",
+      },
+      name: {
+        type: "string",
+      },
+      type: {
+        type: "string",
+      },
+      components: {
+        type: "array",
+        items: {
+          $ref: "#/components/schemas/ContractInput", // we're registering the schema as a component in openapi.ts
+        },
+      },
+    },
+    required: ["internalType", "name", "type"],
+  })
+
 export const transactionsJson = z.object({
   version: z.string(),
   chainId: z.string(),
@@ -89,7 +123,13 @@ export const transactionsJson = z.object({
       to: z.string(),
       data: z.string().optional(),
       value: z.string(),
-      contractMethod: z.any().optional(),
+      contractMethod: z.array(
+        z.object({
+          name: z.string(),
+          payable: z.boolean(),
+          inputs: z.array(contractInput),
+        })
+      ),
       contractInputsValues: z.record(z.string()).optional(),
     })
   ),

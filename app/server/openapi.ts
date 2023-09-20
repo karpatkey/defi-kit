@@ -21,7 +21,12 @@ import {
   registerAllowDelegate,
   registerDelegatePermissions,
 } from "./actions/delegate"
-import { permission, condition, transactionsJson } from "./schema"
+import {
+  permission,
+  condition,
+  transactionsJson,
+  contractInput,
+} from "./schema"
 
 extendZodWithOpenApi(zod)
 
@@ -30,6 +35,7 @@ export const registry = new OpenAPIRegistry()
 registry.register("Condition", condition)
 registry.register("Permission", permission)
 registry.register("TransactionsJson", transactionsJson)
+registry.register("ContractInput", contractInput)
 
 // traverse through the sdk structure and register all API endpoints
 Object.entries(sdks).forEach(([chain, sdk]) => {
