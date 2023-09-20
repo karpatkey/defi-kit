@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import { OpenApiGeneratorV31 } from "@asteasolutions/zod-to-openapi"
+import { OpenAPIObject } from "openapi3-ts/oas31"
 
 import { registry } from "@/server/openapi"
-import { OpenAPIObject } from "openapi3-ts/oas31"
 
 // Respond with our OpenAPI schema
 const handler = (req: NextApiRequest, res: NextApiResponse) => {
@@ -15,6 +15,10 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
         title: "DeFi Kit",
         description:
           "Permissions for Zodiac Roles covering interactions with DeFi protocols",
+        contact: {
+          name: "Karpatkey",
+          url: "https://kit.karpatkey.com",
+        },
       },
       servers: [{ url: "/api/v1" }],
     })
