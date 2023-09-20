@@ -123,13 +123,13 @@ export const transactionsJson = z.object({
       to: z.string(),
       data: z.string().optional(),
       value: z.string(),
-      contractMethod: z.array(
-        z.object({
+      contractMethod: z
+        .object({
           name: z.string(),
           payable: z.boolean(),
           inputs: z.array(contractInput),
         })
-      ),
+        .optional(),
       contractInputsValues: z.record(z.string()).optional(),
     })
   ),

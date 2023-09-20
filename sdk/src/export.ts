@@ -1,5 +1,5 @@
 import { Interface, Result } from "ethers/lib/utils"
-import { JsonFragment } from "@ethersproject/abi"
+import { JsonFragment, JsonFragmentType } from "@ethersproject/abi"
 import { ChainId, posterAbi, rolesAbi } from "zodiac-roles-sdk"
 import { POSTER_ADDRESS } from "./apply"
 
@@ -68,13 +68,28 @@ const decode = (transaction: {
   return {
     to: transaction.to,
     value: transaction.value,
-    contractMethod,
+    contractMethod: {
+      inputs: mapInputs(contractMethod.inputs) || [],
+      name: contractMethod.name || "",
+      payable: !!contractMethod.payable,
+    },
     contractInputsValues,
   }
 }
 
+const mapInputs = (
+  inputs: readonly JsonFragmentType[] | undefined
+): ContractInput[] | undefined => {
+  return inputs?.map((input) => ({
+    internalType: input.internalType || "",
+    name: input.name || "",
+    type: input.type || "",
+    components: mapInputs(input.components),
+  }))
+}
+
 const asObject = (result: Result) => {
-  const object: Record<string, any> = {}
+  const object: Record<string, string> = {}
   for (const key of Object.keys(result)) {
     // skip numeric keys (array indices)
     if (isNaN(Number(key))) {
@@ -82,12 +97,6 @@ const asObject = (result: Result) => {
     }
   }
   return object
-}
-
-export interface ContractMethod {
-  inputs: ContractInput[]
-  name: string
-  payable: boolean
 }
 
 export interface ContractInput {
