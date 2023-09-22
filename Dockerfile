@@ -17,7 +17,6 @@ COPY --from=builder /application/yarn.lock ./
 COPY --from=builder /application/node_modules ./node_modules
 COPY --from=builder /application/app ./app
 COPY --from=builder /application/playground ./playground
-COPY --from=builder /application/scripts ./scripts
 COPY --from=builder /application/sdk ./sdk
 
 EXPOSE 3000
