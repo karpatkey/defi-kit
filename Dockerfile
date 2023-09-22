@@ -2,8 +2,8 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY ./app/.next ./.next
 COPY ./app/package.production.json ./package.json
+COPY ./app/.next ./.next
 
 RUN yarn install --production
 
