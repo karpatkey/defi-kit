@@ -15,4 +15,4 @@ COPY ./app/.next ./.next
 
 EXPOSE 3000
 
-CMD yarn next start
+CMD yarn start
