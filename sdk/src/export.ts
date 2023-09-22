@@ -1,7 +1,14 @@
-import { Interface, Result } from "ethers/lib/utils"
+import {
+  Interface,
+  Result,
+  hexlify,
+  isBytes,
+  isBytesLike,
+} from "ethers/lib/utils"
 import { JsonFragment, JsonFragmentType } from "@ethersproject/abi"
 import { ChainId, posterAbi, rolesAbi } from "zodiac-roles-sdk"
 import { POSTER_ADDRESS } from "./apply"
+import { BigNumber } from "ethers"
 
 export const createExportToSafeTransactionBuilder = (chainId: ChainId) => {
   /**
@@ -61,7 +68,7 @@ const decode = (transaction: {
     )
   }
 
-  const contractInputsValues = asObject(
+  const contractInputsValues = asTxBuilderInputValues(
     iface.decodeFunctionData(functionFragment, transaction.data)
   )
 
@@ -88,12 +95,24 @@ const mapInputs = (
   }))
 }
 
-const asObject = (result: Result) => {
+const asTxBuilderInputValues = (result: Result) => {
   const object: Record<string, string> = {}
   for (const key of Object.keys(result)) {
     // skip numeric keys (array indices)
     if (isNaN(Number(key))) {
-      object[key] = result[key]
+      const value = result[key]
+      let serialized = value
+      if (typeof value === "string") {
+        serialized = value
+      } else if (BigNumber.isBigNumber(value)) {
+        serialized = value.toString()
+      } else if (isBytesLike(value)) {
+        serialized = hexlify(value)
+      } else {
+        serialized = JSON.stringify(value)
+      }
+
+      object[key] = serialized
     }
   }
   return object

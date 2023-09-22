@@ -23,7 +23,9 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   const tokenPoolIds = (pool.tokens as readonly Token[])
     .filter(
       (token) =>
-        tokens.some((t) => token.address === t.address) && token.id !== null
+        tokens.some((t) => token.address === t.address) &&
+        token.id !== null &&
+        token.id !== "0x"
     )
     .map((token) => token.id)
 
