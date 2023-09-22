@@ -6,15 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "make-package-production-json": "jq 'del(.devDependencies)' ./package.json > ./package.production.json"
+    "lint": "next lint"
   },
   "dependencies": {
-    "next": "^13.4.19",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
     "@asteasolutions/zod-to-openapi": "^5.5.0",
     "@carbon/icons-react": "^11.20.0",
     "@ethersproject/strings": "^5.7.0",
@@ -34,6 +28,8 @@
     "nextra-theme-docs": "2.10.0",
     "playground": "workspace:*",
     "postcss": "^8.4.28",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "swagger-ui-react": "^4.19.0",
     "typescript": "^5.2.2",
     "zod": "^3.22.2",

@@ -38,12 +38,6 @@ jobs:
       - name: Build everything
         run: yarn build
 
-      # This step is required since `yarn install --production` chokes on `workspace:*` in devDependencies
-      - name: Prepare app production bundle
-        run: |
-          cd sdk
-          yarn make-package-production-json
-
       - name: Docker meta
         id: docker_meta
         uses: docker/metadata-action@v3
