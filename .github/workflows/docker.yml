@@ -14,6 +14,32 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+            .yarn/cache
+            .yarn/install-state.gz
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+
+      - name: Install dependencies & setup
+        run: |
+          yarn -v
+          yarn
+          yarn setup
+
+      - name: Build everything
+        run: yarn build
+
+      # This step is required since `yarn install --production` chokes on `workspace:*` in devDependencies
+      - name: Prepare app production bundle
+        run: |
+          cd sdk
+          yarn make-package-production-json
+
       - name: Docker meta
         id: docker_meta
         uses: docker/metadata-action@v3
@@ -34,7 +60,7 @@ jobs:
       - name: Setup Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: build and Push image
+      - name: Build and Push image
         uses: docker/build-push-action@v2
         with:
           push: true

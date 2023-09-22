@@ -1,24 +1,12 @@
-FROM node:lts-alpine as builder
+FROM node:18-alpine 
 
-WORKDIR /application
+WORKDIR /app
 
-COPY . .
+COPY ./app/.next ./.next
+COPY ./app/package.production.json ./package.json
 
-RUN yarn install && \
-    yarn setup && \
-    yarn build
-
-FROM node:lts-alpine as runner
-
-WORKDIR /application
-
-COPY --from=builder /application/package.json ./
-COPY --from=builder /application/yarn.lock ./
-COPY --from=builder /application/node_modules ./node_modules
-COPY --from=builder /application/app ./app
-COPY --from=builder /application/playground ./playground
-COPY --from=builder /application/sdk ./sdk
+RUN yarn install --production
 
 EXPOSE 3000
 
-CMD yarn start
+CMD yarn next start
