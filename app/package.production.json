@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "next start",
+    "start": "next start"
   },
   "dependencies": {
     "next": "^13.4.19",
