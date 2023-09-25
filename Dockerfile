@@ -6,7 +6,7 @@ COPY ./app/package.production.json ./package.json
 
 RUN yarn install --production
 
-FROM node:20.2-alpine as runner
+FROM deps as runner
 
 WORKDIR /app
 
