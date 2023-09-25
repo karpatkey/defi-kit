@@ -1,19 +1,24 @@
-FROM node:20.2-alpine as builder
-
-WORKDIR /app
-
-COPY ./app/package.production.json ./package.json
-
-RUN yarn install --production
-
 FROM node:20.2-alpine as runner
 
 WORKDIR /app
 
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./
-COPY ./app/.next ./.next
+ENV NODE_ENV production
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+COPY ./app/public ./public
+
+RUN mkdir .next
+RUN chown nextjs:nodejs .next
+
+COPY --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
 
 EXPOSE 3000
+# set hostname to localhost
+ENV HOSTNAME "0.0.0.0"
 
-CMD yarn start
+CMD ["node", "server.js"]

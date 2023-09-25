@@ -7,6 +7,7 @@ const withNextra = nextra({
 
 export default withNextra({
   reactStrictMode: false,
+  output: "standalone",
   productionBrowserSourceMaps: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.externals.push({
