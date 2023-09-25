@@ -12,7 +12,7 @@ COPY ./app/public ./public
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
 
-COPY --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --chown=nextjs:nodejs /app/.next/standalone/app ./
 COPY --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
