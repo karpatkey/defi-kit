@@ -30,6 +30,7 @@
     "postcss": "^8.4.28",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sharp": "^0.32.6",
     "swagger-ui-react": "^4.19.0",
     "typescript": "^5.2.2",
     "zod": "^3.22.2",
