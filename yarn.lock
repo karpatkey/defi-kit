@@ -4644,7 +4644,7 @@ __metadata:
     eslint: ^8.41.0
     eslint-config-next: ^13.4.4
     ethers: ^5.7.2
-    next: ^13.4.19
+    next: 13.4.19
     nextra: ^2.12.3
     nextra-theme-docs: 2.10.0
     playground: "workspace:*"
@@ -9400,7 +9400,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^13.4.19":
+"next@npm:13.4.19":
   version: 13.4.19
   resolution: "next@npm:13.4.19"
   dependencies:
