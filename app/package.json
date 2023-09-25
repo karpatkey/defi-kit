@@ -23,7 +23,7 @@
     "eslint": "^8.41.0",
     "eslint-config-next": "^13.4.4",
     "ethers": "^5.7.2",
-    "next": "^13.4.19",
+    "next": "13.4.19",
     "nextra": "^2.12.3",
     "nextra-theme-docs": "2.10.0",
     "playground": "workspace:*",
