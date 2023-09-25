@@ -1,8 +1,17 @@
-FROM node:20.2-alpine as runner
+FROM node:20.2-alpine as deps
+
+WORKDIR /app
+
+COPY ./app/package.production.json ./package.json
+
+RUN yarn install --production
+
+FROM deps as runner
 
 WORKDIR /app
 
 ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
