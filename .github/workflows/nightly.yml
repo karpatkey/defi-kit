@@ -34,12 +34,18 @@ jobs:
 
       - name: Run aave_v2.py
         run: python scripts/aave_v2.py
+      - name: Run aura.py
+        run: python scripts/aura.py
       - name: Run aave_v3.py
         run: python scripts/aave_v3.py
       - name: Run balancer.py
         run: python scripts/balancer.py
-      - name: Run aura.py
-        run: python scripts/aura.py
+      - name: Run compound_v2
+        run: python scripts/compound_v2.py
+      - name: Run compound_v3
+        run: python scripts/compound_v3.py
+      - name: Run convex
+        run: python scripts/convex.py
 
       - uses: actions/setup-node@v3
         with:

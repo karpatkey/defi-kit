@@ -1,5 +1,6 @@
-from defi_protocols.functions import get_contract, get_symbol, get_node
-from defi_protocols.constants import ETHEREUM, E_ADDRESS
+from defyes.functions import get_contract, get_symbol
+from defyes.node import get_node
+from defyes.constants import Chain, Address
 from lib.dump import dump
 
 COMETS = [
@@ -35,7 +36,7 @@ def markets_data_v3(blockchain):
         
         if base_token_symbol == 'WETH':
             comet_data['borrowToken'] = {
-                'address': E_ADDRESS,
+                'address': Address.E,
                 'symbol': 'ETH'
             }
         else:
@@ -48,7 +49,6 @@ def markets_data_v3(blockchain):
 
         markets_len = comet_contract.functions.numAssets().call()
 
-        print(markets_len)
         for i in range(markets_len):
             market = {}
 
@@ -56,16 +56,13 @@ def markets_data_v3(blockchain):
             market['symbol'] = get_symbol(market['address'], blockchain, web3=web3)
 
             if market['symbol'] == 'WETH':
-                market['address'] = E_ADDRESS
+                market['address'] = Address.E
                 market['symbol'] = 'ETH'
 
             comet_data['collateralTokens'].append(market)
-
-            print(i)
-            i+=1
         
         result.append(comet_data)
 
     dump(result, 'compound/v3')
 
-markets_data_v3(ETHEREUM)
+markets_data_v3(Chain.ETHEREUM)
