@@ -1,19 +1,36 @@
-from defi_protocols.functions import get_contract, get_symbol, get_node, get_decimals
-from defi_protocols.constants import ETHEREUM, ZERO_ADDRESS
-from defi_protocols.Balancer import (VAULT, ABI_VAULT, get_gauge_addresses) 
+from defyes.functions import get_contract, get_decimals, get_symbol
+from defyes.node import get_node
+from defyes.constants import Address, Chain
+from defyes.protocols.balancer import get_gauge_addresses
 # thegraph queries
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
 import eth_abi
 from lib.dump import dump
 
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# BALANCER VAULT
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Balancer Vault Contract Address
+VAULT = "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# BALANCER QUERIES
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 BALANCER_QUERIES = '0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5'
 
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ABIs
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ABI Balancer Queries - queryExit, queryJoin
 ABI_BALANCER_QUERIES = '[{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"components":[{"internalType":"contract IAsset[]","name":"assets","type":"address[]"},{"internalType":"uint256[]","name":"minAmountsOut","type":"uint256[]"},{"internalType":"bytes","name":"userData","type":"bytes"},{"internalType":"bool","name":"toInternalBalance","type":"bool"}],"internalType":"struct IVault.ExitPoolRequest","name":"request","type":"tuple"}],"name":"queryExit","outputs":[{"internalType":"uint256","name":"bptIn","type":"uint256"},{"internalType":"uint256[]","name":"amountsOut","type":"uint256[]"}],"stateMutability":"nonpayable","type":"function"}, {"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"},{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"components":[{"internalType":"contract IAsset[]","name":"assets","type":"address[]"},{"internalType":"uint256[]","name":"maxAmountsIn","type":"uint256[]"},{"internalType":"bytes","name":"userData","type":"bytes"},{"internalType":"bool","name":"fromInternalBalance","type":"bool"}],"internalType":"struct IVault.JoinPoolRequest","name":"request","type":"tuple"}],"name":"queryJoin","outputs":[{"internalType":"uint256","name":"bptOut","type":"uint256"},{"internalType":"uint256[]","name":"amountsIn","type":"uint256[]"}],"stateMutability":"nonpayable","type":"function"}]'
 
-# LP Token ABI - getPoolId, POOL_ID, decimals, getMainToken, version, name
-ABI_LPTOKEN = '[{"inputs":[],"name":"getPoolId","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"POOL_ID","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"getMainToken","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"version","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"}]'
+# Balancer Vault ABI - getPoolTokens, getPool
+ABI_VAULT = '[{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"}],"name":"getPoolTokens","outputs":[{"internalType":"contract IERC20[]","name":"tokens","type":"address[]"},{"internalType":"uint256[]","name":"balances","type":"uint256[]"},{"internalType":"uint256","name":"lastChangeBlock","type":"uint256"}],"stateMutability":"view","type":"function"}, {"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes32"}],"name":"getPool","outputs":[{"internalType":"address","name":"","type":"address"},{"internalType":"enum IVault.PoolSpecialization","name":"","type":"uint8"}],"stateMutability":"view","type":"function"}]'
+
+# BPT ABI - getPoolId, POOL_ID, decimals, getMainToken, version, name
+ABI_BPT = '[{"inputs":[],"name":"getPoolId","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"POOL_ID","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"getMainToken","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"version","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"}]'
+
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # subgraph_query_pools
@@ -99,12 +116,12 @@ def is_deprecated(pool_id, lptoken_address, pool_tokens, blockchain, web3):
     data = [join_kind, amounts, minimum_bpt]
     user_data = '0x' + eth_abi.encode(abi, data).hex()
 
-    balancer_queries = get_contract(BALANCER_QUERIES, ETHEREUM, abi=ABI_BALANCER_QUERIES)
+    balancer_queries = get_contract(BALANCER_QUERIES, Chain.ETHEREUM, abi=ABI_BALANCER_QUERIES)
 
     try:
-        join_pool = balancer_queries.functions.queryJoin(pool_id, ZERO_ADDRESS, ZERO_ADDRESS, [pool_tokens, amounts, user_data, False]).call()
+        join_pool = balancer_queries.functions.queryJoin(pool_id, Address.ZERO, Address.ZERO, [pool_tokens, amounts, user_data, False]).call()
     except Exception as e:
-        print(str(e) + ': ' + pool_id)
+        # print(str(e) + ': ' + pool_id)
         return True
     
     if join_pool[0] == 0:
@@ -129,7 +146,7 @@ def add_pool_tokens(vault_contract, pool_id, lptoken_address, pool_tokens_array,
         pool_token_address = pool_tokens[i]
         pool_token_symbol = get_symbol(pool_token_address, blockchain)
 
-        pool_token_contract = get_contract(pool_token_address, blockchain, web3=web3, abi=ABI_LPTOKEN)
+        pool_token_contract = get_contract(pool_token_address, blockchain, web3=web3, abi=ABI_BPT)
         try:
             token_pool_id = '0x' + pool_token_contract.functions.getPoolId().call().hex()
         except:
@@ -160,7 +177,7 @@ def add_pool_tokens(vault_contract, pool_id, lptoken_address, pool_tokens_array,
             else:
                 try:
                     underlying_token = pool_token_contract.functions.getMainToken().call()
-                    underlying_token_contract = get_contract(underlying_token, blockchain, web3=web3, abi=ABI_LPTOKEN)
+                    underlying_token_contract = get_contract(underlying_token, blockchain, web3=web3, abi=ABI_BPT)
                     try:
                         underlying_token_pool_id = '0x' + underlying_token_contract.functions.getPoolId().call().hex()
                     except:
@@ -195,9 +212,7 @@ def transactions_data(blockchain):
 
     vault_contract = get_contract(VAULT, blockchain, web3=web3, abi=ABI_VAULT)
     
-    j = 0
     deprecated = 0
-    print(len(pools))
     for pool in pools:
         lptoken_address = vault_contract.functions.getPool(pool['id']).call()[0]
 
@@ -209,7 +224,7 @@ def transactions_data(blockchain):
             continue
 
         try:
-            gauge_address = get_gauge_addresses(blockchain, 'latest', web3, lptoken_address)[0]
+            gauge_address = get_gauge_addresses(blockchain, 'latest', lptoken_address)[0]
         except:
             gauge_address = None
         
@@ -226,13 +241,8 @@ def transactions_data(blockchain):
             'gauge': gauge_address,
             'tokens': pool_tokens_array
         })
-
-        print(j)
-        j += 1
-    
-    print(deprecated)
     
     dump(result, 'balancer')
 
 
-transactions_data(ETHEREUM)
+transactions_data(Chain.ETHEREUM)
