@@ -3525,25 +3525,6 @@ export default [
     ],
   },
   {
-    bpt: "0xe340EBfcAA544da8bB1Ee9005F1a346D50Ec422e",
-    id: "0xe340ebfcaa544da8bb1ee9005f1a346d50ec422e000200000000000000000396",
-    name: "50BADGER-50rETH",
-    type: "Weighted",
-    gauge: "0xb32Ae42524d38be7E7eD9E02b5F9330fCEf07f3F",
-    tokens: [
-      {
-        address: "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
-        symbol: "BADGER",
-        id: "0x",
-      },
-      {
-        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
-        symbol: "rETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xE4010EF5E37dc23154680f23c4A0d48BFca91687",
     id: "0xe4010ef5e37dc23154680f23c4a0d48bfca91687000200000000000000000432",
     name: "80SD-20WETH",
