@@ -25,6 +25,11 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
       ...allow.mainnet.aura.rewarder["getReward()"](),
       targetAddress: pool.rewarder,
     },
+    // Now the UI is using this function to claim rewards
+    {
+      ...allow.mainnet.aura.rewarder["getReward(address,bool)"](c.avatar),
+      targetAddress: pool.rewarder,
+    },
   ]
 
   if (tokenAddresses.length > 0) {
