@@ -100,6 +100,7 @@ export const stake = () => {
     ),
     allow.mainnet.aaveV2.stkaave.stake(c.avatar),
     allow.mainnet.aaveV2.stkabpt.stake(c.avatar),
+    allow.mainnet.aaveV2.stkaave.claimRewardsAndStake(c.avatar),
     allow.mainnet.aaveV2.stkaave.redeem(c.avatar),
     allow.mainnet.aaveV2.stkabpt.redeem(c.avatar),
     allow.mainnet.aaveV2.stkaave.cooldown(),
