@@ -1353,4 +1353,40 @@ export default [
     ],
     rewarder: "0xC59347ebefc4056f96810f51F0395CF02d242b74",
   },
+  {
+    name: "50STG-503POOL-BPT",
+    id: "167",
+    bpt: "0xdB02F620a59F1B16146EDD0e8dBEb27D94e9C25c",
+    tokens: [
+      {
+        address: "0x79c58f70905F734641735BC61e45c19dD9Ad60bC",
+        symbol: "USDC-DAI-USDT",
+      },
+      {
+        address: "0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6",
+        symbol: "STG",
+      },
+    ],
+    rewarder: "0xaBfB97acbE80739b82679FC3048d1c3A95BAb84b",
+  },
+  {
+    name: "qETH/WETH",
+    id: "168",
+    bpt: "0x40C806394d03d350420d13CD7d1DE1C806f34956",
+    tokens: [
+      {
+        address: "0x40C806394d03d350420d13CD7d1DE1C806f34956",
+        symbol: "qETH/WETH",
+      },
+      {
+        address: "0x93ef1Ea305D11A9b2a3EbB9bB4FCc34695292E7d",
+        symbol: "qETH",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0x8a7FCc2DE6d0de7D1b7cCc4B2B7941810aff7696",
+  },
 ] as const
