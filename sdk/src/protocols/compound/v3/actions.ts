@@ -82,6 +82,10 @@ export const deposit = (
     )
   }
 
+  permissions.push(
+    allow.mainnet.compoundV3.CometRewards.claim(comet.address, c.avatar)
+  )
+
   return permissions
 }
 
@@ -108,6 +112,6 @@ export const borrow = (comet: Comet) => {
   return permissions
 }
 
-export const claim = (comet: Comet) => {
-  return [allow.mainnet.compoundV3.CometRewards.claim(comet.address, c.avatar)]
-}
+// export const claim = (comet: Comet) => {
+//   return [allow.mainnet.compoundV3.CometRewards.claim(comet.address, c.avatar)]
+// }
