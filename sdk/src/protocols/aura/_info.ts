@@ -1389,4 +1389,96 @@ export default [
     ],
     rewarder: "0x8a7FCc2DE6d0de7D1b7cCc4B2B7941810aff7696",
   },
+  {
+    name: "e-cs-kp-usd",
+    id: "169",
+    bpt: "0x01536b22ea06e4A315E3DAAF05a12683Ed4dc14c",
+    tokens: [
+      {
+        address: "0x01536b22ea06e4A315E3DAAF05a12683Ed4dc14c",
+        symbol: "e-cs-kp-usd",
+      },
+      {
+        address: "0x571f54D23cDf2211C83E9A0CbD92AcA36c48Fa02",
+        symbol: "paUSD",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+      {
+        address: "0xaF4ce7CD4F8891ecf1799878c3e9A35b8BE57E09",
+        symbol: "wUSK",
+      },
+    ],
+    rewarder: "0x4D9Af78F548Bb6BE5EaD3dF8314705BF61D72A21",
+  },
+  {
+    name: "ECLP-mevETH-wETH",
+    id: "170",
+    bpt: "0xb3b675a9A3CB0DF8F66Caf08549371BfB76A9867",
+    tokens: [
+      {
+        address: "0x24Ae2dA0f361AA4BE46b48EB19C91e02c5e4f27E",
+        symbol: "mevETH",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0xF9b6BdC7fbf3B760542ae24cB939872705108399",
+  },
+  {
+    name: "RDNT-WETH",
+    id: "171",
+    bpt: "0xcF7b51ce5755513d4bE016b0e28D6EDEffa1d52a",
+    tokens: [
+      {
+        address: "0x137dDB47Ee24EaA998a535Ab00378d6BFa84F893",
+        symbol: "RDNT",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0x61F205f1236c4E6D3f73618BB6250d5A9cC5B8bb",
+  },
+  {
+    name: "80psdnOCEAN-20OCEAN",
+    id: "172",
+    bpt: "0xf8C4CD95c7496cB7c8d97202Cf7e5b8DA2204C2b",
+    tokens: [
+      {
+        address: "0x51Fa2efd62ee56a493f24AE963eAce7D0051929E",
+        symbol: "psdnOCEAN",
+      },
+      {
+        address: "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
+        symbol: "OCEAN",
+      },
+    ],
+    rewarder: "0x8355B93489437c6eb0590d7a8EE7b3caf1BA0652",
+  },
+  {
+    name: "DUSD/sDAI",
+    id: "173",
+    bpt: "0x35c5C8C7B77942f9D44B535Fa590D8b503B2b00C",
+    tokens: [
+      {
+        address: "0x35c5C8C7B77942f9D44B535Fa590D8b503B2b00C",
+        symbol: "DUSD/sDAI",
+      },
+      {
+        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+        symbol: "sDAI",
+      },
+      {
+        address: "0xa48F322F8b3edff967629Af79E027628b9Dd1298",
+        symbol: "DUSD",
+      },
+    ],
+    rewarder: "0x9703aBC2665d2e3b1b1F105f546850052cB708Cf",
+  },
 ] as const
