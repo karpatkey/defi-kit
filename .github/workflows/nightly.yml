@@ -46,6 +46,8 @@ jobs:
         run: python scripts/compound_v3.py
       - name: Run convex
         run: python scripts/convex.py
+      - name: Run maker
+        run: python scripts/maker.py
 
       - uses: actions/setup-node@v3
         with:
