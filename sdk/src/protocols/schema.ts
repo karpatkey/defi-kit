@@ -27,6 +27,10 @@ export const eth = {
   spark: spark.eth,
 } satisfies Record<string, ProtocolSchemas>
 
+export const gno = {
+  aura: aura.gno,
+} satisfies Record<string, ProtocolSchemas>
+
 export const gor = {
   cowswap: cowswap.gor,
 } satisfies Record<string, ProtocolSchemas>

@@ -18,11 +18,11 @@
     "fix:prettier": "prettier '**/*.{js,ts,tsx,json,md}' --write",
     "run-script": "cd scripts && env-cmd python"
   },
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@3.7.0",
   "devDependencies": {
     "env-cmd": "^10.1.0",
     "prettier": "^2.8.8",
     "rimraf": "^3.0.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   }
 }
