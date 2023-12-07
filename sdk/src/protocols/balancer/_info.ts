@@ -1195,6 +1195,25 @@ export default [
     ],
   },
   {
+    bpt: "0x470581ca95C071728e85a6E28a5b1754cD489bE2",
+    id: "0x470581ca95c071728e85a6e28a5b1754cd489be200020000000000000000063c",
+    name: "50OCEAN-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
+        symbol: "OCEAN",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x472AFe4C35dC218A41736D4aceEaB650db43C584",
     id: "0x472afe4c35dc218a41736d4aceeab650db43c58400020000000000000000034f",
     name: "80PHONON-20WETH",
@@ -1394,7 +1413,7 @@ export default [
     id: "0x577a7f7ee659aa14dc16fd384b3f8078e23f1920000200000000000000000633",
     name: "BAL-20WETH-80VCX",
     type: "Weighted",
-    gauge: null,
+    gauge: "0xf593c50A3a3e1294b6E3c089cEC44021BdD43Fa7",
     tokens: [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -1924,6 +1943,25 @@ export default [
       {
         address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
         symbol: "DAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x771fBbfcBD8BA252f7f1ee47c1A486BDB0b5bC62",
+    id: "0x771fbbfcbd8ba252f7f1ee47c1a486bdb0b5bc6200020000000000000000063d",
+    name: "50RSR-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x320623b8E4fF03373931769A31Fc52A4E78B5d70",
+        symbol: "RSR",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
         id: "0x",
       },
     ],
