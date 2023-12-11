@@ -73,6 +73,13 @@ export const contracts = {
       wsteth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       unsteth: "0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1",
     },
+    maker: {
+      DsProxy: "0xD758500ddEc05172aaA035911387C8E0e789CF6a", // GnosisDAO DSProxy
+      ProxyActions: "0x82ecd135dce65fbc6dbdd0e4237e0af93ffd5038",
+      CdpManager: "0x5ef30b9986345249bc32d8928B7ee64DE9435E39",
+      Jug: "0x19c0976f590D67707E62397C87829d896Dc0f1F1",
+      DaiJoin: "0x9759A6Ac90977b93B58547b4A71c78317f391A28",
+    },
     spark: {
       sparkLendingPoolV3: "0xC13e21B648A5Ee794902342038FF3aDAB66BE987",
       wrappedTokenGatewayV3: "0xBD7D6a9ad7865463DE44B05F04559f65e3B11704",

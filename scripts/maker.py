@@ -27,6 +27,7 @@ def transactions_data():
                 {
                     'address': gem_address,
                     'symbol': get_symbol(gem_address, Chain.ETHEREUM, web3=web3),
+                    'gemJoin': gem_join_contract.address,
                     'ilkDescription': item[9:len(item)],
                     'ilk': '0x' + gem_join_contract.functions.ilk().call().hex()
                 }

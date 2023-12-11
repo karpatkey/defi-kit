@@ -5,9 +5,8 @@ import * as balancer from "./balancer"
 import * as compound_v2 from "./compound/v2"
 import * as compound_v3 from "./compound/v3"
 import * as convex from "./convex"
-import * as cowswap from "./cowswap"
-import * as curve from "./curve"
 import * as lido from "./lido"
+import * as maker from "./maker"
 import * as spark from "./spark"
 
 import { annotateAll } from "./annotate"
@@ -23,16 +22,11 @@ export const eth = annotateAll(
     compound_v2: compound_v2.eth,
     compound_v3: compound_v3.eth,
     convex: convex.eth,
-    curve: curve.eth,
     lido: lido.eth,
+    maker: maker.eth,
     spark: spark.eth,
   },
   "eth"
 )
 
-export const gor = annotateAll(
-  {
-    cowswap: cowswap.gor,
-  },
-  "gor"
-)
+export const gor = annotateAll({}, "gor")
