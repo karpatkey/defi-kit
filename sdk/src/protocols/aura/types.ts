@@ -1,5 +1,5 @@
-import ethPools from "./_info"
-import gnoPools from "./gno/_info"
+import ethPools from "./_ethPools"
+import gnoPools from "./_gnoPools"
 import stakeTokens from "./stakeTokens"
 
 export type EthPool = (typeof ethPools)[number]

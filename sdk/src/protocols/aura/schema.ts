@@ -1,6 +1,6 @@
 import { z } from "zod"
-import ethPools from "./_info"
-import gnoPools from "./gno/_info"
+import ethPools from "./_ethPools"
+import gnoPools from "./_gnoPools"
 import ethStakeTokens from "./stakeTokens"
 import { EthToken, GnoToken } from "./types"
 

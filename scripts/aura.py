@@ -88,9 +88,9 @@ def transactions_data(blockchain = Chain.ETHEREUM):
                 result.append(pool_data)
 
     if blockchain == Chain.ETHEREUM:
-        dump(result, 'aura')
+        dump(result, 'aura', '_ethPools.ts')
     elif blockchain == Chain.GNOSIS:
-        dump(result, 'aura/gno')
+        dump(result, 'aura', '_gnoPools.ts')
 
 transactions_data()
 transactions_data(Chain.GNOSIS)

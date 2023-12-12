@@ -1481,4 +1481,72 @@ export default [
     ],
     rewarder: "0x9703aBC2665d2e3b1b1F105f546850052cB708Cf",
   },
+  {
+    name: "weETH-WETH-BPT",
+    id: "174",
+    bpt: "0xb9dEbDDF1d894c79D2B2d09f819FF9B856FCa552",
+    tokens: [
+      {
+        address: "0xb9dEbDDF1d894c79D2B2d09f819FF9B856FCa552",
+        symbol: "weETH-WETH-BPT",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+      {
+        address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+        symbol: "weETH",
+      },
+    ],
+    rewarder: "0x5DbbE4998D5524BD2990241B2f43584ed0172c5a",
+  },
+  {
+    name: "ECLP-GYD-USDC",
+    id: "175",
+    bpt: "0xC2AA60465BfFa1A88f5bA471a59cA0435c3ec5c1",
+    tokens: [
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+      },
+    ],
+    rewarder: "0xE9096FDB508C0160318c11425Ba75924ecFA1D82",
+  },
+  {
+    name: "ECLP-GYD-sDAI",
+    id: "176",
+    bpt: "0x1CCE5169bDe03f3d5aD0206f6BD057953539DAE6",
+    tokens: [
+      {
+        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+        symbol: "sDAI",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+      },
+    ],
+    rewarder: "0x2C0D60f986cDe7eE59489055aa22A8E49b6825aD",
+  },
+  {
+    name: "ECLP-GYD-USDT",
+    id: "177",
+    bpt: "0xfbfaD5fa9E99081da6461F36f229B5cC88A64c63",
+    tokens: [
+      {
+        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        symbol: "USDT",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+      },
+    ],
+    rewarder: "0x4313428170c09ca81117a95f0418aefE3446d935",
+  },
 ] as const

@@ -1,6 +1,6 @@
 import { NotFoundError } from "../../errors"
-import ethPools from "./_info"
-import gnoPools from "./gno/_info"
+import ethPools from "./_ethPools"
+import gnoPools from "./_gnoPools"
 import { EthPool, StakeToken, EthToken, GnoToken, GnoPool, Pool } from "./types"
 import { deposit, stake, compound, lock } from "./actions"
 import stakeTokens from "./stakeTokens"
