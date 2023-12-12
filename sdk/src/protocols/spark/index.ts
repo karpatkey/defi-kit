@@ -34,7 +34,7 @@ export const eth = {
   },
 
   borrow: ({
-    tokens,
+    tokens = allTokenSymbols,
   }: {
     tokens: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
@@ -48,3 +48,8 @@ export const eth = {
   //   return sDAI()
   // },
 }
+
+const allTokenSymbols = [...tokens.map((token) => token.symbol), "ETH"] as (
+  | "ETH"
+  | Token["symbol"]
+)[]
