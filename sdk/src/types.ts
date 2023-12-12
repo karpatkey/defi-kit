@@ -7,16 +7,18 @@ export enum Chain {
 }
 
 interface DepositOptions {
-  /** The deposit target, an AMM pool, specific money market identified by either name or address */
+  /** The deposit target, an AMM pool, specific money market, or vault identified by either name or address */
   targets: any[]
 
-  /** A list of tokens that can be deposited, identified by symbol or address. If not set all tokens of the pool are allowed. */
+  /** A list of tokens that can be deposited, identified by symbol or address. If not set all tokens supported by the `targets` are allowed. */
   tokens?: any[]
 }
 
 interface BorrowOptions {
-  /** The tokens that can be borrowed */
-  tokens: any[]
+  /** The specific vaults from which borrowing is allowed. If not set any accessible vault is allowed. */
+  targets?: any[]
+  /** The tokens that can be borrowed, identified by symbol or address. If not set all tokens available through the `targets` are allowed. */
+  tokens?: any[]
 }
 
 interface StakeOptions {
