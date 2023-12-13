@@ -1,11 +1,14 @@
 import { z } from "zod"
-import gems from "./_info"
-import { Gem, Cdp } from "./types"
-
+import { zx } from "../../zx"
 
 export const eth = {
   deposit: z.object({
-    proxy: z.string(),
-    cdps: 
+    targets: z.string().array().optional(),
+    avatar: zx.address(),
+  }),
+
+  borrow: z.object({
+    targets: z.string().array().optional(),
+    avatar: zx.address(),
   }),
 }

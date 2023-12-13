@@ -23,7 +23,7 @@ const findToken = (symbolOrAddress: string): Token => {
 }
 
 export const eth = {
-  deposit: ({
+  deposit: async ({
     targets,
   }: {
     targets: ("ETH" | Token["symbol"] | Token["token"])[]
@@ -33,7 +33,7 @@ export const eth = {
     )
   },
 
-  borrow: ({
+  borrow: async ({
     tokens = allTokenSymbols,
   }: {
     tokens: ("ETH" | Token["symbol"] | Token["token"])[]
@@ -44,7 +44,7 @@ export const eth = {
   },
 
   // TODO move to client-configs
-  // sDAI: () => {
+  // sDAI: async () => {
   //   return sDAI()
   // },
 }

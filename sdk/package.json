@@ -14,11 +14,6 @@
       "require": "./dist/eth.js",
       "import": "./dist/eth.mjs",
       "types": "./dist/eth.d.ts"
-    },
-    "./gor": {
-      "require": "./dist/gor.js",
-      "import": "./dist/gor.mjs",
-      "types": "./dist/gor.d.ts"
     }
   },
   "typesVersions": {

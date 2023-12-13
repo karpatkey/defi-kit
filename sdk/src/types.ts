@@ -18,7 +18,7 @@ interface BorrowOptions {
   /** The specific vaults from which borrowing is allowed. If not set any accessible vault is allowed. */
   targets?: any[]
   /** The tokens that can be borrowed, identified by symbol or address. If not set all tokens available through the `targets` are allowed. */
-  tokens?: any[]
+  tokens: any[]
 }
 
 interface StakeOptions {
@@ -54,19 +54,19 @@ type SwapOptions =
 
 // These types define the common interface for actions across all protocols
 export type ProtocolActions = {
-  deposit?: (options: DepositOptions) => PermissionSet
+  deposit?: (options: DepositOptions) => Promise<PermissionSet>
 
-  borrow?: (options: BorrowOptions) => PermissionSet
+  borrow?: (options: BorrowOptions) => Promise<PermissionSet>
 
-  stake?: (options: StakeOptions) => PermissionSet
+  stake?: (options: StakeOptions) => Promise<PermissionSet>
 
-  claim?: (options: ClaimOptions) => PermissionSet
+  claim?: (options: ClaimOptions) => Promise<PermissionSet>
 
-  swap?: (options: SwapOptions) => PermissionSet
+  swap?: (options: SwapOptions) => Promise<PermissionSet>
 
-  lock?: (options: LockOptions) => PermissionSet
+  lock?: (options: LockOptions) => Promise<PermissionSet>
 
-  delegate?: (options: DelegateOptions) => PermissionSet
+  delegate?: (options: DelegateOptions) => Promise<PermissionSet>
 }
 
 export type ActionName = keyof ProtocolActions

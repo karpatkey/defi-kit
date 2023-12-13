@@ -1,15 +1,19 @@
 import { NotFoundError } from "../../errors"
-import gems from "./_info"
-import { Gem } from "./types"
+import ilks from "./_info"
+import { Ilk } from "./types"
 import { deposit, borrow } from "./actions"
 
-const queryGem = async (cdp: string) => {
-  const ilkDescription = await queryIlkOfCdp(cdp)
-  const gem = gems.find((gem) => gem.ilkDescription === ilkDescription)
-  if (!gem) {
-    throw new NotFoundError(`No Gem found with Ilk: ${ilkDescription}`)
+const queryProxy = async (avatar: string) => {
+  return "0x123" as `0x${string}`
+}
+
+const queryIlk = async (cdp: string) => {
+  const ilkDescription = ""
+  const ilk = ilks.find((ilk) => ilk.ilkDescription === ilkDescription)
+  if (!ilk) {
+    throw new NotFoundError(`No Ilk found with description: ${ilkDescription}`)
   }
-  return gem
+  return ilk
 }
 
 export const eth = {
@@ -18,22 +22,22 @@ export const eth = {
     avatar,
   }: {
     /** vault/cdp IDs */
-    targets: string[]
+    targets?: string[]
     avatar: string
   }) => {
     // query proxy address for avatar
     const proxy = await queryProxy(avatar)
 
     // query the gem address for each target
-    const gems = await Promise.all(targets.map(queryGem))
+    // const ilks = await Promise.all(targets.map(queryIlk))
 
     // compile set of tokens (multiple gems might use the same token)
-    const gemTokens = [...new Set(gems.map((gem) => gem.address))]
+    // const tokens = [...new Set(gems.map((gem) => gem.address))]
 
     return await Promise.all(
       targets.flatMap(async (cdp) => {
-        const gem = await queryGem(cdp)
-        deposit({ proxy, cdp, gem })
+        const ilk = await queryIlk(cdp)
+        deposit({ proxy, cdp, ilk })
       })
     )
   },
@@ -48,8 +52,13 @@ export const eth = {
   }) => {
     // query proxy address for avatar
     const proxy = await queryProxy(avatar)
+    const cdps = await queryAllCdpIds(proxy)
 
-    let finalTargets = targets || (await queryAllCdpIds(proxy))
+    let finalTargets = targets || cdps
+    finalTargets.forEach((cdp) => {
+      if (!cdps.includes(cdp))
+        throw new NotFoundError(`No CDP found with ID: ${cdp}`)
+    })
 
     return finalTargets.flatMap((cdp) => borrow({ proxy, cdp }))
   },

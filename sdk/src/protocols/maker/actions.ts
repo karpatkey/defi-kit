@@ -1,20 +1,20 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { Permission, c } from "zodiac-roles-sdk"
-import { Gem } from "./types"
+import { Ilk } from "./types"
 import { allowErc20Approve } from "../../erc20"
 import { contracts } from "../../../eth-sdk/config"
 
 export const deposit = ({
   proxy,
   cdp,
-  gem,
+  ilk,
 }: {
   proxy: `0x${string}`
   cdp: string
-  gem: Gem
+  ilk: Ilk
 }): Permission[] => {
   const permissions: Permission[] = [
-    ...allowErc20Approve([gem.address], [proxy]),
+    ...allowErc20Approve([ilk.address], [proxy]),
     // lockGem
     {
       ...allow.mainnet.maker.DsProxy["execute(address,bytes)"](
@@ -22,7 +22,7 @@ export const deposit = ({
         c.calldataMatches(
           allow.mainnet.maker.ProxyActions.lockGem(
             contracts.mainnet.maker.CdpManager,
-            gem.gemJoin,
+            ilk.gemJoin,
             cdp
           )
         )
@@ -36,7 +36,7 @@ export const deposit = ({
         c.calldataMatches(
           allow.mainnet.maker.ProxyActions.freeGem(
             contracts.mainnet.maker.CdpManager,
-            gem.gemJoin,
+            ilk.gemJoin,
             cdp
           )
         )
@@ -45,8 +45,8 @@ export const deposit = ({
     },
   ]
 
-  // if the gem is WETH, we also allow ETH
-  if (gem.symbol === "WETH") {
+  // if the ilk is WETH, we also allow ETH
+  if (ilk.symbol === "WETH") {
     permissions.push(
       // lockETH
       {
@@ -55,7 +55,7 @@ export const deposit = ({
           c.calldataMatches(
             allow.mainnet.maker.ProxyActions.lockETH(
               contracts.mainnet.maker.CdpManager,
-              gem.gemJoin,
+              ilk.gemJoin,
               cdp,
               {
                 send: true,
@@ -72,7 +72,7 @@ export const deposit = ({
           c.calldataMatches(
             allow.mainnet.maker.ProxyActions.freeETH(
               contracts.mainnet.maker.CdpManager,
-              gem.gemJoin,
+              ilk.gemJoin,
               cdp
             )
           )

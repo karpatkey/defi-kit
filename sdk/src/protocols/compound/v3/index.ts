@@ -47,7 +47,7 @@ const findToken = (symbolOrAddress: string) => {
 }
 
 export const eth = {
-  deposit: ({
+  deposit: async ({
     targets,
     tokens,
   }: {
@@ -59,7 +59,7 @@ export const eth = {
     )
   },
 
-  borrow: ({
+  borrow: async ({
     tokens,
   }: {
     tokens: (BorrowToken["symbol"] | BorrowToken["address"])[]

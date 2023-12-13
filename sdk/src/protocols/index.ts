@@ -28,5 +28,3 @@ export const eth = annotateAll(
   },
   "eth"
 )
-
-export const gor = annotateAll({}, "gor")

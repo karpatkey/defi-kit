@@ -38,7 +38,7 @@ export const findDelegateToken = (nameOrAddress: string): DelegateToken => {
 }
 
 export const eth = {
-  deposit: ({
+  deposit: async ({
     targets,
   }: {
     targets: ("ETH" | Token["symbol"] | Token["token"])[]
@@ -48,7 +48,7 @@ export const eth = {
     )
   },
 
-  borrow: ({
+  borrow: async ({
     tokens,
   }: {
     tokens: ("ETH" | Token["symbol"] | Token["token"])[]
@@ -58,11 +58,11 @@ export const eth = {
     )
   },
 
-  stake: () => {
+  stake: async () => {
     return stake()
   },
 
-  delegate: ({
+  delegate: async ({
     targets,
     delegatee,
   }: {

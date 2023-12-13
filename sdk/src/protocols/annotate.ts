@@ -1,17 +1,16 @@
 import { PermissionSet } from "zodiac-roles-sdk"
 import { ProtocolActions, ActionFunction } from "../types"
-import { eth } from "."
 
 type Annotated<F extends ActionFunction> = (
   params: Parameters<F>[0]
-) => PermissionSet
+) => Promise<PermissionSet>
 
 const annotate = <F extends ActionFunction>(
   actionFunction: F,
   path: string[]
 ): Annotated<F> => {
-  const annotated = (params: any) => {
-    const result = actionFunction(params)
+  const annotated = async (params: any) => {
+    const result = await actionFunction(params)
 
     const queryString = new URLSearchParams(params).toString()
     const joinedPath = path.join("/")
@@ -25,7 +24,7 @@ const annotate = <F extends ActionFunction>(
     return result
   }
 
-  return annotated as (params: Parameters<F>[0]) => PermissionSet
+  return annotated as (params: Parameters<F>[0]) => Promise<PermissionSet>
 }
 
 type AllAnnotated<R extends Record<string, ProtocolActions>> = {
