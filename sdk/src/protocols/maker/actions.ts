@@ -1,5 +1,6 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { Permission, c } from "zodiac-roles-sdk"
+import { BigNumber } from "ethers"
 import { Ilk } from "./types"
 import { allowErc20Approve } from "../../erc20"
 import { contracts } from "../../../eth-sdk/config"
@@ -9,12 +10,12 @@ export const deposit = ({
   cdp,
   ilk,
 }: {
-  proxy: `0x${string}`
-  cdp: string
+  proxy: string
+  cdp: BigNumber
   ilk: Ilk
 }): Permission[] => {
   const permissions: Permission[] = [
-    ...allowErc20Approve([ilk.address], [proxy]),
+    ...allowErc20Approve([ilk.address], [proxy as `0x${string}`]),
     // lockGem
     {
       ...allow.mainnet.maker.DsProxy["execute(address,bytes)"](
@@ -89,8 +90,8 @@ export const borrow = ({
   proxy,
   cdp,
 }: {
-  proxy: `0x${string}`
-  cdp: string
+  proxy: string
+  cdp: BigNumber
 }): Permission[] => {
   return [
     // Draw

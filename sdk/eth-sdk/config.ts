@@ -76,6 +76,7 @@ export const contracts = {
     maker: {
       DsProxy: "0xD758500ddEc05172aaA035911387C8E0e789CF6a", // GnosisDAO DSProxy
       ProxyActions: "0x82ecd135dce65fbc6dbdd0e4237e0af93ffd5038",
+      ProxyRegistry: "0x4678f0a6958e4D2Bc4F1BAF7Bc52E8F3564f3fE4",
       CdpManager: "0x5ef30b9986345249bc32d8928B7ee64DE9435E39",
       Jug: "0x19c0976f590D67707E62397C87829d896Dc0f1F1",
       DaiJoin: "0x9759A6Ac90977b93B58547b4A71c78317f391A28",

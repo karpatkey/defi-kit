@@ -1,20 +1,53 @@
+import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { NotFoundError } from "../../errors"
 import ilks from "./_info"
 import { Ilk } from "./types"
 import { deposit, borrow } from "./actions"
+import { ethProvider } from "../../provider"
+import { BigNumber } from "ethers"
+
+const sdk = getMainnetSdk(ethProvider)
 
 const queryProxy = async (avatar: string) => {
-  return "0x123" as `0x${string}`
+  return await sdk.maker.ProxyRegistry.proxies(avatar)
 }
 
-const queryIlk = async (cdp: string) => {
-  const ilkDescription = ""
-  const ilk = ilks.find((ilk) => ilk.ilkDescription === ilkDescription)
+const queryCdps = async (proxy: string, targets?: string[]) => {
+  // fetch all cdps
+  const cdps: BigNumber[] = []
+  let cdp = await sdk.maker.CdpManager.first(proxy)
+  while (!cdp.isZero()) {
+    cdps.push(cdp)
+    cdp = (await sdk.maker.CdpManager.list(cdp)).next
+  }
+
+  const targetCdps = targets?.map((target) => {
+    try {
+      return BigNumber.from(target)
+    } catch (e) {
+      // could not be parsed as BigNumber
+      throw new NotFoundError(`Cdp not found: ${target}`)
+    }
+  })
+  targetCdps?.forEach((target) => {
+    if (!cdps.some((cdp) => cdp.eq(target))) {
+      throw new NotFoundError(`Cdp not found: ${target}`)
+    }
+  })
+
+  return targetCdps || cdps
+}
+
+const queryIlk = async (cdp: BigNumber) => {
+  const ilkId = await sdk.maker.CdpManager.ilks(cdp)
+  const ilk = ilks.find((ilk) => ilk.ilk === ilkId)
   if (!ilk) {
-    throw new NotFoundError(`No Ilk found with description: ${ilkDescription}`)
+    throw new Error(`Unexpected ilk ${ilkId} of cdp ${cdp.toNumber()}`)
   }
   return ilk
 }
+
+const queryAllCdpIds = async (proxy: string) => {}
 
 export const eth = {
   deposit: async ({
@@ -25,21 +58,12 @@ export const eth = {
     targets?: string[]
     avatar: string
   }) => {
-    // query proxy address for avatar
     const proxy = await queryProxy(avatar)
-
-    // query the gem address for each target
-    // const ilks = await Promise.all(targets.map(queryIlk))
-
-    // compile set of tokens (multiple gems might use the same token)
-    // const tokens = [...new Set(gems.map((gem) => gem.address))]
-
-    const cdps = (await queryAllCdpIds(proxy)) as string[]
-    let finalTargets = targets || cdps
+    const cdps = await queryCdps(proxy, targets)
 
     return (
       await Promise.all(
-        finalTargets.map(async (cdp) => {
+        cdps.map(async (cdp) => {
           const ilk = await queryIlk(cdp)
           return deposit({ proxy, cdp, ilk })
         })
@@ -55,16 +79,9 @@ export const eth = {
     targets?: string[]
     avatar: string
   }) => {
-    // query proxy address for avatar
     const proxy = await queryProxy(avatar)
-    const cdps = await queryAllCdpIds(proxy)
+    const cdps = await queryCdps(proxy, targets)
 
-    let finalTargets = targets || cdps
-    finalTargets.forEach((cdp) => {
-      if (!cdps.includes(cdp))
-        throw new NotFoundError(`No CDP found with ID: ${cdp}`)
-    })
-
-    return finalTargets.flatMap((cdp) => borrow({ proxy, cdp }))
+    return cdps.flatMap((cdp) => borrow({ proxy, cdp }))
   },
 }
