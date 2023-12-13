@@ -7,7 +7,7 @@ import { Status } from "../../../test/types"
 describe("lido", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await applyPermissions(eth.deposit())
+      await applyPermissions(await eth.deposit())
     })
 
     it("allows submitting ETH", async () => {
