@@ -2,7 +2,7 @@ import { PermissionSet } from "zodiac-roles-sdk"
 import { ProtocolActions, ActionFunction } from "../types"
 
 type Annotated<F extends ActionFunction> = (
-  params: Parameters<F>[0]
+  ...args: Parameters<F>
 ) => Promise<PermissionSet>
 
 const annotate = <F extends ActionFunction>(

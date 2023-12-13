@@ -88,7 +88,7 @@ export const eth = {
 }
 
 export const gno = {
-  deposit: ({
+  deposit: async ({
     targets,
     tokens,
   }: {

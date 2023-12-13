@@ -34,12 +34,17 @@ export const eth = {
     // compile set of tokens (multiple gems might use the same token)
     // const tokens = [...new Set(gems.map((gem) => gem.address))]
 
-    return await Promise.all(
-      targets.flatMap(async (cdp) => {
-        const ilk = await queryIlk(cdp)
-        deposit({ proxy, cdp, ilk })
-      })
-    )
+    const cdps = (await queryAllCdpIds(proxy)) as string[]
+    let finalTargets = targets || cdps
+
+    return (
+      await Promise.all(
+        finalTargets.map(async (cdp) => {
+          const ilk = await queryIlk(cdp)
+          return deposit({ proxy, cdp, ilk })
+        })
+      )
+    ).flat()
   },
 
   borrow: async ({
