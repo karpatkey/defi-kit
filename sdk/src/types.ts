@@ -1,6 +1,11 @@
 import { SomeZodObject } from "zod"
 import { Permission } from "zodiac-roles-sdk"
 
+export enum Chain {
+  eth = "eth",
+  gno = "gno",
+}
+
 export type ActionFunction = (options: any) => Promise<Permission[]>
 
 export type ProtocolActions = {

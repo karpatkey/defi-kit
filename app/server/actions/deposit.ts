@@ -17,7 +17,7 @@ export const allowDeposit: TransactionsHandler = async (query) => {
     role,
     protocol,
   } = transactionsQueryBase.parse(query)
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "deposit",
     chain,
     protocol,
@@ -68,7 +68,7 @@ export const registerAllowDeposit = (
 }
 
 export const depositPermissions: PermissionsHandler = async (query) => {
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "deposit",
     ...permissionsQueryBase.parse(query),
     query,

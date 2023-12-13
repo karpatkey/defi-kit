@@ -17,7 +17,7 @@ export const allowSwap: TransactionsHandler = async (query) => {
     role,
     protocol,
   } = transactionsQueryBase.parse(query)
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "swap",
     chain,
     protocol,
@@ -68,7 +68,7 @@ export const registerAllowSwap = (
 }
 
 export const swapPermissions: PermissionsHandler = async (query) => {
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "swap",
     ...permissionsQueryBase.parse(query),
     query,

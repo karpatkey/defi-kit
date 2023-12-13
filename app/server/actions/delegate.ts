@@ -17,7 +17,7 @@ export const allowDelegate: TransactionsHandler = async (query) => {
     role,
     protocol,
   } = transactionsQueryBase.parse(query)
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "delegate",
     chain,
     protocol,
@@ -68,7 +68,7 @@ export const registerAllowDelegate = (
 }
 
 export const delegatePermissions: PermissionsHandler = async (query) => {
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "delegate",
     ...permissionsQueryBase.parse(query),
     query,

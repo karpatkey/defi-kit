@@ -1,13 +1,11 @@
 import * as eth from "defi-kit/eth"
 import * as gno from "defi-kit/gno"
-import * as gor from "defi-kit/gor"
 import { ActionName, Chain, NotFoundError, ProtocolActions } from "defi-kit"
 import { parseQuery } from "./parse"
 
 export const sdks = {
   eth,
   gno,
-  gor,
   // bnb: 56,
   // matic: 137,
   // arb1: 42161,
