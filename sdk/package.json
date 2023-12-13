@@ -14,6 +14,11 @@
       "require": "./dist/eth.js",
       "import": "./dist/eth.mjs",
       "types": "./dist/eth.d.ts"
+    },
+    "./gno": {
+      "require": "./dist/gno.js",
+      "import": "./dist/gno.mjs",
+      "types": "./dist/gno.d.ts"
     }
   },
   "typesVersions": {
@@ -24,8 +29,8 @@
       "eth": [
         "./dist/eth.d.ts"
       ],
-      "gor": [
-        "./dist/gor.d.ts"
+      "gno": [
+        "./dist/gno.d.ts"
       ]
     }
   },
@@ -38,7 +43,8 @@
     "build": "rimraf dist && tsup --format esm,cjs",
     "dev": "tsup --format esm --watch",
     "test": "concurrently \"anvil\" \"jest --runInBand\" --kill-others --success first",
-    "test:watch": "anvil & jest --runInBand --watchAll"
+    "test:watch": "anvil & jest --runInBand --watchAll",
+    "check:types": "tsc --noEmit"
   },
   "dependencies": {
     "@asteasolutions/zod-to-openapi": "^5.5.0",
@@ -58,8 +64,8 @@
     "jest": "^29.6.0",
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
-    "tsup": "^6.7.0",
-    "typescript": "^5.2.2",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
     "wait-on": "^7.0.1"
   },
   "installConfig": {

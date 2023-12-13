@@ -28,3 +28,10 @@ export const eth = annotateAll(
   },
   "eth"
 )
+
+export const gno = annotateAll(
+  {
+    aura: aura.gno,
+  },
+  "gno"
+)

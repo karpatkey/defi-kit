@@ -189,7 +189,7 @@ To run a script locally you need to first go through some setup steps:
   pip install -r requirements.txt
   ```
 
-- Ask your colleges for the config.json file for the [defi-protocols](https://github.com/KarpatkeyDAO/defi-protocols) package. Store it in _scripts/config.json_.
+- Ask your colleagues for the config.json file for the [defi-protocols](https://github.com/KarpatkeyDAO/defi-protocols) package. Store it in _scripts/config.json_.
 - Create a file scripts/.env with the following content:
   ```
   CONFIG_PATH=<ABSOLUTE_PATH_TO_CONFIG.JSON>

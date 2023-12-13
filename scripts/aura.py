@@ -9,6 +9,8 @@ from lib.dump import dump
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Aura Booster (Main Deposit Contract) Address
 BOOSTER = "0xA57b8d98dAE62B26Ec3bcC4a365338157060B234"
+# Booster Lite for side-chains
+BOOSTER_LITE = "0x98Ef32edd24e2c92525E59afc4475C1242a30184"
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # BALANCER VAULT
@@ -32,13 +34,16 @@ ABI_BPT = '[{"inputs":[],"name":"getPoolId","outputs":[{"internalType":"bytes32"
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # transactions_data
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def transactions_data():
+def transactions_data(blockchain = Chain.ETHEREUM):
 
     result = []
 
-    web3 = get_node(Chain.ETHEREUM)
+    web3 = get_node(blockchain)
 
-    booster = get_contract(BOOSTER, Chain.ETHEREUM, web3=web3)
+    if blockchain == Chain.ETHEREUM:
+        booster = get_contract(BOOSTER, blockchain, web3=web3)
+    else:
+        booster = get_contract(BOOSTER_LITE, blockchain, web3=web3)
 
     for i in range(booster.functions.poolLength().call()):
         
@@ -47,9 +52,9 @@ def transactions_data():
         # pool_info[5] = shutdown
         if pool_info[5] == False:
 
-            lptoken_symbol = get_symbol(pool_info[0], Chain.ETHEREUM, web3=web3)
+            lptoken_symbol = get_symbol(pool_info[0], blockchain, web3=web3)
 
-            lptoken_contract = get_contract(pool_info[0], Chain.ETHEREUM, web3=web3, abi=ABI_BPT)
+            lptoken_contract = get_contract(pool_info[0], blockchain, web3=web3, abi=ABI_BPT)
 
             try:
                 pool_id = lptoken_contract.functions.getPoolId().call()
@@ -60,7 +65,7 @@ def transactions_data():
                     pool_id = None
             
             if pool_id is not None:
-                vault_contract = get_contract(VAULT, Chain.ETHEREUM, web3=web3, abi=ABI_VAULT)
+                vault_contract = get_contract(VAULT, blockchain, web3=web3, abi=ABI_VAULT)
                 pool_tokens = vault_contract.functions.getPoolTokens(pool_id).call()[0]
 
                 tokens = []
@@ -68,7 +73,7 @@ def transactions_data():
                     tokens.append(
                         {
                             'address': pool_token,
-                            'symbol': get_symbol(pool_token, Chain.ETHEREUM, web3=web3)
+                            'symbol': get_symbol(pool_token, blockchain, web3=web3)
                         }
                     )
                 
@@ -82,6 +87,10 @@ def transactions_data():
 
                 result.append(pool_data)
 
-    dump(result, 'aura')
+    if blockchain == Chain.ETHEREUM:
+        dump(result, 'aura', '_ethPools.ts')
+    elif blockchain == Chain.GNOSIS:
+        dump(result, 'aura', '_gnoPools.ts')
 
 transactions_data()
+transactions_data(Chain.GNOSIS)

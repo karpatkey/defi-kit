@@ -1,10 +1,11 @@
 import { NotFoundError } from "../../errors"
-import pools from "./_info"
-import { Pool, StakeToken, Token } from "./types"
+import ethPools from "./_ethPools"
+import gnoPools from "./_gnoPools"
+import { EthPool, StakeToken, EthToken, GnoToken, GnoPool, Pool } from "./types"
 import { deposit, stake, compound, lock } from "./actions"
 import stakeTokens from "./stakeTokens"
 
-const findPool = (nameOrAddressOrId: string): Pool => {
+const findPool = (pools: readonly Pool[], nameOrAddressOrId: string) => {
   const symbolAddressLower = nameOrAddressOrId.toLowerCase()
   const pool = pools.find(
     (pool) =>
@@ -18,7 +19,7 @@ const findPool = (nameOrAddressOrId: string): Pool => {
   return pool
 }
 
-const findToken = (symbolOrAddress: string): Token => {
+const findToken = (pools: readonly Pool[], symbolOrAddress: string) => {
   const symbolAddressLower = symbolOrAddress.toLowerCase()
   const tokens = pools.flatMap((pool) => [...pool.tokens])
   const token = tokens.find(
@@ -40,7 +41,7 @@ const findStakeToken = (nameOrAddress: string): StakeToken => {
       stakeToken.symbol.toLowerCase() === symbolAddressLower
   )
   if (!stakeToken) {
-    throw new NotFoundError(`Token not found: ${nameOrAddress}`)
+    throw new NotFoundError(`Token not found on eth: ${nameOrAddress}`)
   }
   return stakeToken
 }
@@ -51,13 +52,16 @@ export const eth = {
     tokens,
   }: {
     // "targets" is a mandatory parameter
-    targets: (Pool["name"] | Pool["bpt"] | Pool["id"])[]
+    targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
     // "tokens" is an optional parameter since the user might want to allow (or not) the depositSingle() function
     // If "tokens" is not specified then we allow all the pool.tokens[]
-    tokens?: (Token["address"] | Token["symbol"])[]
+    tokens?: (EthToken["address"] | EthToken["symbol"])[]
   }) => {
     return targets.flatMap((target) =>
-      deposit(findPool(target), tokens?.map(findToken))
+      deposit(
+        findPool(ethPools, target),
+        tokens?.map((addressOrSymbol) => findToken(ethPools, addressOrSymbol))
+      )
     )
   },
 
@@ -80,5 +84,25 @@ export const eth = {
 
   lock: async () => {
     return lock()
+  },
+}
+
+export const gno = {
+  deposit: ({
+    targets,
+    tokens,
+  }: {
+    // "targets" is a mandatory parameter
+    targets: (GnoPool["name"] | GnoPool["bpt"] | GnoPool["id"])[]
+    // "tokens" is an optional parameter since the user might want to allow (or not) the depositSingle() function
+    // If "tokens" is not specified then we allow all the pool.tokens[]
+    tokens?: (GnoToken["address"] | GnoToken["symbol"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      deposit(
+        findPool(gnoPools, target),
+        tokens?.map((addressOrSymbol) => findToken(gnoPools, addressOrSymbol))
+      )
+    )
   },
 }
