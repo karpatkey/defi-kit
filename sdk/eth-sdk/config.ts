@@ -51,6 +51,8 @@ export const contracts = {
       cToken: "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643",
     },
     compoundV3: {
+      cUSDCv3: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+      cWETHv3: "0xA17581A9E3356d9A858b789D68B4d866e593aE94",
       comet: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
       MainnetBulker: "0xa397a8C2086C554B531c02E29f3291c9704B00c7",
       CometRewards: "0x1b0e765f6224c21223aea2af16c1c46e38885a40",
