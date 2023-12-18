@@ -35,21 +35,20 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
     allow.mainnet.balancer.vault.joinPool(
       pool.id,
       c.avatar,
-      c.avatar
-      // No need to scope assets since they are given by the pool id
-      // {
-      // assets: tokens.map((token) => token.address.toLowerCase()).sort(),
-      // }
+      c.avatar,
+      undefined,
+      // Independently if one of the tokens added is ETH or not we must
+      // add the send: true because Roles mod does not support scoping 
+      // the same function with different option values.
+      {
+        send: true
+      }
     ),
 
     allow.mainnet.balancer.vault.exitPool(
       pool.id,
       c.avatar,
       c.avatar
-      // No need to scope assets since they are given by the pool id
-      // {
-      //   assets: tokens.map((token) => token.address.toLowerCase()).sort(),
-      // }
     ),
   ]
 
@@ -74,15 +73,9 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
                 undefined,
                 c.avatar,
                 c.avatar
-                // No need to scope assets since they are given by the pool id
-                // {
-                //   assets: pool.tokens
-                //     .map((token) => token.address.toLowerCase())
-                //     .sort(),
-                // }
               )
+              // Ask Jan?? Should we add the send: true? (it's a different join and the send is outside in the multicall)
             ),
-
             c.calldataMatches(
               // TODO update to next function
               allow.mainnet.balancer.relayerLibrary.exitPool(
@@ -90,15 +83,8 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
                 undefined,
                 c.avatar,
                 c.avatar
-                // No need to scope assets since they are given by the pool id
-                // {
-                //   assets: pool.tokens
-                //     .map((token) => token.address.toLowerCase())
-                //     .sort(),
-                // }
               )
             ),
-
             c.calldataMatches(
               // TODO update to next function
               allow.mainnet.balancer.relayerLibrary.swap(
@@ -111,7 +97,8 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
               )
             )
           )
-        )
+        ),
+        { send: true }
       )
     )
   }
