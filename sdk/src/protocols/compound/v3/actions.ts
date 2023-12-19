@@ -23,7 +23,11 @@ const ACTION_CLAIM_REWARD =
 
 const _allow = (token: Comet): Permission => {
   return {
-    // IMPORTANT: the allow() function was added to the comet abi, using the cUSDCv3 Ext (0x285617313887d43256F852cAE0Ee4de4b68D45B0) abi
+    // IMPORTANT: the Comet implementation does not have the allow function, but if you take a look to the fallback() function
+    // https://etherscan.io/address/0x7a1316220a46dce22fd5c6d55a39513367e6c967#code#F1#L1314
+    // function extensionDelegate() virtual external view returns (address) -> Read function
+    // The extensionDelegate() function retrieves the CometExt address = 0xe2C1F54aFF6b38fD9DF7a69F22cB5fd3ba09F030
+    // which has the allow() function in it. Or using the cUSDCv3 Ext (0x285617313887d43256F852cAE0Ee4de4b68D45B0) abi
     ...allow.mainnet.compoundV3.comet.allow(
       contracts.mainnet.compoundV3.MainnetBulker
     ),
@@ -69,26 +73,23 @@ export const deposit = (
       ),
       c.every(
         c.or(
-          c.matches([
-            c.abiEncodedMatches(
-              [
-                comet.address,
-                c.avatar,
-                c.or(...(erc20TokenAddresses as [string, string, ...string[]]))
-              ],
-              ["address", "address", "address", "uint256"]
-            ),
-          ]),
-          c.matches([
-            c.abiEncodedMatches(
-              [
-                comet.address,
-                contracts.mainnet.compoundV3.CometRewards,
-                c.avatar,
-              ],
-              ["address", "address", "address", "bool"]
-            ),
-          ])
+          c.abiEncodedMatches(
+            [
+              comet.address,
+              c.avatar,
+              c.or(...(erc20TokenAddresses as [string, string, ...string[]]))
+            ],
+            ["address", "address", "address", "uint256"]
+          ),
+
+          c.abiEncodedMatches(
+            [
+              comet.address,
+              contracts.mainnet.compoundV3.CometRewards,
+              c.avatar,
+            ],
+            ["address", "address", "address", "bool"]
+          ),
         )
       ),
       // Roles mod does not support scoping the same function with different option values.
@@ -99,31 +100,6 @@ export const deposit = (
   if (tokens.some((token) => token.symbol === "ETH")) {
     // allow supply and withdraw of ETH through the bulker contract
     permissions.push(
-      // allow.mainnet.compoundV3.MainnetBulker.invoke(
-      //   [ACTION_SUPPLY_NATIVE_TOKEN],
-      //   c.matches([
-      //     c.abiEncodedMatches(
-      //       [comet.address, c.avatar],
-      //       ["address", "address", "uint256"]
-      //     ),
-      //   ]),
-      //   { send: true }
-      // ),
-
-      // allow.mainnet.compoundV3.MainnetBulker.invoke(
-      //   [ACTION_WITHDRAW_NATIVE_TOKEN],
-      //   c.matches([
-      //     c.abiEncodedMatches(
-      //       [comet.address, c.avatar],
-      //       ["address", "address", "uint256"]
-      //     ),
-      //   ]),
-      //   // Roles mod does not support scoping the same function with different option values.
-      //   // So we must also allow send here. This is not a problem because the MainnetBulker contract
-      //   // will refund any sent but unused ETH.
-      //   { send: true }
-      // ),
-
       allow.mainnet.compoundV3.MainnetBulker.invoke(
         c.every(
           c.or(
@@ -134,25 +110,23 @@ export const deposit = (
         ),
         c.every(
           c.or(
-            c.matches([
-              c.abiEncodedMatches(
-                [comet.address, c.avatar],
-                ["address", "address", "uint256"]
-              ),
-            ]),
-            c.matches([
-              c.abiEncodedMatches(
-                [
-                  comet.address,
-                  contracts.mainnet.compoundV3.CometRewards,
-                  c.avatar,
-                ],
-                ["address", "address", "address", "bool"]
-              ),
-            ])
+            c.abiEncodedMatches(
+              [comet.address, c.avatar],
+              ["address", "address", "uint256"]
+            ),
+            c.abiEncodedMatches(
+              [
+                comet.address,
+                contracts.mainnet.compoundV3.CometRewards,
+                c.avatar,
+              ],
+              ["address", "address", "address", "bool"]
+            ),
           )
         ),
         // Roles mod does not support scoping the same function with different option values.
+        // So we must also allow send here. This is not a problem because the MainnetBulker contract
+        // will refund any sent but unused ETH.
         { send: true }
       )
     )
@@ -193,16 +167,14 @@ export const borrow = (comet: Comet) => {
           )
         ),
         c.every(
-          c.matches([
-            c.abiEncodedMatches(
-              [
-                comet.address,
-                c.avatar,
-                comet.borrowToken.address
-              ],
-              ["address", "address", "address", "uint256"]
-            ),
-          ]),
+          c.abiEncodedMatches(
+            [
+              comet.address,
+              c.avatar,
+              comet.borrowToken.address
+            ],
+            ["address", "address", "address", "uint256"]
+          ),
         ),
         // Roles mod does not support scoping the same function with different option values.
         { send: true }
@@ -218,12 +190,10 @@ export const borrow = (comet: Comet) => {
           )
         ),
         c.every(
-          c.matches([
-            c.abiEncodedMatches(
-              [comet.address, c.avatar],
-              ["address", "address", "uint256"]
-            ),
-          ])
+          c.abiEncodedMatches(
+            [comet.address, c.avatar],
+            ["address", "address", "uint256"]
+          ),
         ),
         // Roles mod does not support scoping the same function with different option values.
         { send: true }

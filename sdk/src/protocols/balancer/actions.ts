@@ -74,7 +74,6 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
                 c.avatar,
                 c.avatar
               )
-              // Ask Jan?? Should we add the send: true? (it's a different join and the send is outside in the multicall)
             ),
             c.calldataMatches(
               // TODO update to next function
