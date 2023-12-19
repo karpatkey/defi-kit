@@ -54,10 +54,12 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
 
   if (tokenPoolIds.length > 0) {
     permissions.push(
-      allow.mainnet.balancer.vault.swap(
-        { poolId: c.or(...(tokenPoolIds as [string, string, ...string[]])) },
-        { recipient: c.avatar, sender: c.avatar }
-      ),
+      // With the latest changes that Balancer made, there's no need to swap
+      // tokens in order to join or exit pools
+      // allow.mainnet.balancer.vault.swap(
+      //   { poolId: c.or(...(tokenPoolIds as [string, string, ...string[]])) },
+      //   { recipient: c.avatar, sender: c.avatar }
+      // ),
 
       allow.mainnet.balancer.vault.setRelayerApproval(
         c.avatar,
@@ -84,17 +86,19 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
                 c.avatar
               )
             ),
-            c.calldataMatches(
-              // TODO update to next function
-              allow.mainnet.balancer.relayerLibrary.swap(
-                {
-                  poolId: c.or(
-                    ...(tokenPoolIds as [string, string, ...string[]])
-                  ),
-                },
-                { recipient: c.avatar, sender: c.avatar }
-              )
-            )
+            // With the latest changes that Balancer made, there's no need to swap
+            // tokens in order to join or exit pools
+            // c.calldataMatches(
+            //   // TODO update to next function
+            //   allow.mainnet.balancer.relayerLibrary.swap(
+            //     {
+            //       poolId: c.or(
+            //         ...(tokenPoolIds as [string, string, ...string[]])
+            //       ),
+            //     },
+            //     { recipient: c.avatar, sender: c.avatar }
+            //   )
+            // )
           )
         ),
         { send: true }
