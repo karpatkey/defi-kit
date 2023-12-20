@@ -64,6 +64,9 @@ export const contracts = {
       cvxRewardPool: "0xCF50b810E57Ac33B91dCF525C6ddd9881B139332",
       vlCVX: "0x72a19342e8F1838460eBFCCEf09F6585e32db86E",
     },
+    cowswap: {
+      orderSigner: "0xdEb83d81d4a9758A7bAec5749DA863C409ea6C6B",
+    },
     curve: {
       regularPool: "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7",
       metaPool: "0x4f062658eaaf2c1ccf8c8e36d6824cdf41167956",
@@ -88,11 +91,7 @@ export const contracts = {
       stableDebtWETH: "0x3c6b93D38ffA15ea995D1BC950d5D0Fa6b22bD05",
       sDAI: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
     },
-  },
-  goerli: {
-    cowswap: {
-      orderSigner: "0xdEb83d81d4a9758A7bAec5749DA863C409ea6C6B",
-    },
+    weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
   },
 } satisfies EthSdkConfig["contracts"]
 

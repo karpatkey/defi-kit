@@ -1,21 +1,16 @@
 import { Permission } from "zodiac-roles-sdk"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-import { BaseContract } from "ethers"
-import { Roles__factory } from "./rolesModTypechain"
-import { ROLES_ADDRESS, getMemberWallet, getOwnerWallet } from "./accounts"
-import { encodeBytes32String } from "../src"
+import { BigNumberish, Contract, Overrides } from "ethers"
+import { avatar, owner, member } from "./wallets"
 import { getProvider } from "./provider"
 import { createApply } from "../src/apply"
-
-const owner = getOwnerWallet()
-
-export const rolesMod = Roles__factory.connect(ROLES_ADDRESS, owner)
-export const testRoleKey = encodeBytes32String("TEST-ROLE")
+import { Interface } from "ethers/lib/utils"
+import { getRolesMod, testRoleKey } from "./rolesMod"
 
 export const applyPermissions = async (permissions: Permission[]) => {
   const apply = createApply(1) // chainId here won't matter (since we pass currentTargets and currentAnnotations no subgraph queries will be made)
   const calls = await apply(testRoleKey, permissions, {
-    address: rolesMod.address as `0x${string}`,
+    address: getRolesMod().address as `0x${string}`,
     mode: "replace",
     log: console.debug,
     currentTargets: [],
@@ -35,63 +30,81 @@ export const applyPermissions = async (permissions: Permission[]) => {
   console.log("Permissions applied")
 }
 
-type EthSdk = {
-  [key: string]: EthSdk | BaseContract
+export const execThroughRole = async (
+  {
+    to,
+    data,
+    value,
+    operation = 0,
+  }: {
+    to: `0x${string}`
+    data?: `0x${string}`
+    value?: `0x${string}`
+    operation?: 0 | 1
+  },
+  overrides?: Overrides
+) =>
+  await getRolesMod()
+    .connect(member)
+    .execTransactionWithRole(
+      to,
+      value || 0,
+      data || "0x",
+      operation,
+      testRoleKey,
+      true,
+      overrides
+    )
+
+export const callThroughRole = async ({
+  to,
+  data,
+  value,
+  operation = 0,
+}: {
+  to: `0x${string}`
+  data?: `0x${string}`
+  value?: `0x${string}`
+  operation?: 0 | 1
+}) =>
+  await getRolesMod()
+    .connect(member)
+    .callStatic.execTransactionWithRole(
+      to,
+      value || 0,
+      data || "0x",
+      operation,
+      testRoleKey,
+      false
+    )
+
+const erc20Interface = new Interface([
+  "function transfer(address to, uint amount) returns (bool)",
+])
+
+export const wrapEth = async (value: BigNumberish) => {
+  await getMainnetSdk(avatar).weth.deposit({ value })
 }
 
-type TestKit<S extends EthSdk> = {
-  [Key in keyof S]: S[Key] extends BaseContract
-    ? S[Key]["functions"]
-    : S[Key] extends EthSdk // somehow it cannot infer that it cannot be a BaseContract here, so we use an extra conditional
-    ? TestKit<S[Key]>
-    : never
-}
+export const stealErc20 = async (
+  token: `0x${string}`,
+  amount: BigNumberish,
+  from: `0x${string}`
+) => {
+  // Impersonate the token holder
+  const provider = getProvider()
+  await provider.send("anvil_impersonateAccount", [from])
 
-const mapSdk = <S extends EthSdk>(sdk: S): TestKit<S> => {
-  return Object.keys(sdk).reduce((acc, key) => {
-    // for this check to work reliably, make sure ethers node_modules is not duplicated
-    if (sdk[key] instanceof BaseContract) {
-      acc[key] = makeTestFunctions(sdk[key] as BaseContract)
-    } else {
-      acc[key] = mapSdk(sdk[key] as EthSdk)
-    }
-    return acc
-  }, {} as any)
-}
-
-const makeTestFunctions = (contract: BaseContract) => {
-  const execThroughRole = rolesMod.connect(getMemberWallet()).callStatic
-    .execTransactionWithRole
-
-  return Object.fromEntries(
-    Object.keys(contract.functions).map((name) => [
-      name,
-      async function testCallThroughRolesMod(...args: any[]) {
-        const res = Object.entries(contract.interface.functions).find(
-          ([signature, fragment]) =>
-            signature === name || signature.startsWith(name + "(")
-        )
-        if (!res) throw new Error(`Function ${name} not found`)
-        const fragment = res[1]
-
-        const options = args[fragment.inputs.length] || {}
-        const data = contract.interface.encodeFunctionData(
-          name,
-          args.slice(0, fragment.inputs.length)
-        )
-        return await execThroughRole(
-          contract.address,
-          options.value || 0,
-          data,
-          0,
-          testRoleKey,
-          false
-        )
-      },
-    ])
+  // Get the token contract with impersonated signer
+  const contract = new Contract(
+    token,
+    erc20Interface,
+    await provider.getSigner(from)
   )
-}
 
-export const test = {
-  eth: mapSdk(getMainnetSdk(getProvider())),
+  // Transfer the requested amount to the avatar
+  await contract.transfer(await avatar.getAddress(), amount)
+
+  // Stop impersonating
+  await provider.send("anvil_stopImpersonatingAccount", [from])
 }

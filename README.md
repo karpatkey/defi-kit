@@ -111,7 +111,7 @@ yarn test:watch
 
 Note: For the new protocol functions to become available in the SDK playground, the changes must first be published to npm as a new version of the _defi-kit_ package.
 
-#### Implement an allow function using the typed kit
+#### Implement an action function using the allow kit
 
 1. Add entries for the contracts you want to allow calling to sdk/eth-sdk/config.ts. If there are multiple instances of the same contract, such as different pool instances, only add a single entry using any exemplary contract address, e.g.:
    ```typescript
@@ -133,6 +133,47 @@ Note: For the new protocol functions to become available in the SDK playground, 
    In case VSCode IntelliSense does not reflect the newly added contract entries, restart the TypeScript server by pressing cmd+shift+p and selecting "TypeScript: Restart TS Server".
 
 Note that you don't _have_ to use typed allow kits but you can always also author permissions manually.
+
+#### Test an action function using the test kit
+
+All action functions should be covered with tests to make sure the returned permissions actually allow the desired protocol action and that the protocol action actually leads to the desired state.
+
+1. Use the `applyPermissions` helper function to apply the action's permission to a test role that is prepared as part of the global test setup:
+
+   ```typescript
+   import { applyPermissions } from "../../../test/helpers"
+   import { eth } from "."
+
+   await applyPermissions(await eth.deposit({ targets: ["ETH", "USDC"] }))
+   ```
+
+2. Use test kit to execute calls to any contract in eth-sdk/config.ts through the test role:
+
+   ```typescript
+   import { testKit } from "../../../test/kit"
+
+   testKit.eth.maker.DSProxy.attach(proxyAddress).execute(...args)
+   ```
+
+3. Use the [custom jest matchers](sdk/test/setup-after-env.ts) to check on the transaction outcome:
+
+   ```typescript
+   import { testKit } from "../../../test/kit"
+
+   await expect(
+     testKit.eth.maker.DSProxy.attach(proxyAddress).execute(...args)
+   ).not.toRevert()
+   ```
+
+#### Run specific tests
+
+The `test:watch` script allows you to target specific test files rather than running the entire test suite:
+
+```bash
+yarn test:watch maker/deposit
+```
+
+You can pass any substring of the file paths to the targeted test files. Then you can also use the jest watch cli to control which tests shall be run whenever saving changes.
 
 #### Add a new protocol to the API
 

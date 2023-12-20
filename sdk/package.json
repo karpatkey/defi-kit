@@ -42,8 +42,8 @@
     "setup": "eth-sdk",
     "build": "rimraf dist && tsup --format esm,cjs",
     "dev": "tsup --format esm --watch",
-    "test": "concurrently \"anvil\" \"jest --runInBand\" --kill-others --success first",
-    "test:watch": "anvil & jest --runInBand --watchAll",
+    "test": "concurrently --raw --kill-others --success last \"anvil --silent --fork-url https://rpc.mevblocker.io\" \"jest --runInBand\"",
+    "test:watch": "concurrently --raw --kill-others --handle-input --passthrough-arguments \"anvil --silent --fork-url https://rpc.mevblocker.io\" \"jest --runInBand --watch {@}\" --",
     "check:types": "tsc --noEmit"
   },
   "dependencies": {
@@ -57,7 +57,7 @@
   "devDependencies": {
     "@dethcrypto/eth-sdk": "^0.3.4",
     "@dethcrypto/eth-sdk-client": "^0.1.6",
-    "@gnosis.pm/zodiac": "^3.3.2",
+    "@gnosis.pm/zodiac": "^3.5.0",
     "@types/jest": "^29.5.2",
     "@types/wait-on": "^5.3.1",
     "concurrently": "^8.2.1",
