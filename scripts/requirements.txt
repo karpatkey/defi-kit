@@ -1,4 +1,4 @@
-git+https://github.com/KarpatkeyDAO/defyes.git
+git+https://github.com/karpatkey/defyes.git
 
 gql>=3.4.0
 web3>=5.29.0
