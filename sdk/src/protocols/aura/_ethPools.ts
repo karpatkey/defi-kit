@@ -1549,4 +1549,40 @@ export default [
     ],
     rewarder: "0x4313428170c09ca81117a95f0418aefE3446d935",
   },
+  {
+    name: "50WETH-50FOLD",
+    id: "178",
+    bpt: "0x99A14324Cfd525A34BBc93ac7e348929909D57fD",
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+      {
+        address: "0xd084944d3c05CD115C09d072B9F44bA3E0E45921",
+        symbol: "FOLD",
+      },
+    ],
+    rewarder: "0x6f804C713F5b8331c101Da4c732ebFe7cCA1Ea7f",
+  },
+  {
+    name: "osETH/wETH-BPT",
+    id: "179",
+    bpt: "0xDACf5Fa19b1f720111609043ac67A9818262850c",
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+      {
+        address: "0xDACf5Fa19b1f720111609043ac67A9818262850c",
+        symbol: "osETH/wETH-BPT",
+      },
+      {
+        address: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
+        symbol: "osETH",
+      },
+    ],
+    rewarder: "0x5F032f15B4e910252EDaDdB899f7201E89C8cD6b",
+  },
 ] as const
