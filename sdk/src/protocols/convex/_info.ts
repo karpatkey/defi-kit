@@ -1681,4 +1681,25 @@ export default [
     cvxDepositToken: "0x844705455a199e8F897251097E0f1C6eDE9990ae",
     rewarder: "0xBf7b90683fD7E64dBF624809d49bdcB20f09e560",
   },
+  {
+    name: "sdai-usdm",
+    id: "267",
+    crvLPToken: "0x425BfB93370F14fF525aDb6EaEAcfE1f4e3b5802",
+    cvxDepositToken: "0xC86D9D4Ce5A563AF89e12Ef19A08985B56F5Bff7",
+    rewarder: "0x80fb39bf2b1aeEcdB1b3E7829aB6eCcae02Caa0D",
+  },
+  {
+    name: "osETH-rETH",
+    id: "268",
+    crvLPToken: "0xe080027Bd47353b5D1639772b4a75E9Ed3658A0d",
+    cvxDepositToken: "0xE3eA98BD863bEF37D951973743aAC2e56edd99BC",
+    rewarder: "0xBA7eBDEF7723e55c909Ac44226FB87a93625c44e",
+  },
+  {
+    name: "crvDBRINV",
+    id: "269",
+    crvLPToken: "0xC7DE47b9Ca2Fc753D6a2F167D8b3e19c6D18b19a",
+    cvxDepositToken: "0x64416C823a5102EF813296Bc00a7578180C2B28f",
+    rewarder: "0x9a2d1b49b7c8783E37780AcE4ffA3416Eea64357",
+  },
 ] as const

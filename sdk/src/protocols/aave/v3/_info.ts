@@ -137,7 +137,7 @@ export default [
     symbol: "CRV",
     token: "0xD533a949740bb3306d119CC777fa900bA034cd52",
     usageAsCollateralEnabled: true,
-    borrowingEnabled: false,
+    borrowingEnabled: true,
     stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,
