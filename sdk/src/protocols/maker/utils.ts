@@ -4,8 +4,9 @@ import { NotFoundError } from "../../errors"
 import ilks from "./_info"
 import { Ilk } from "./types"
 import { ethProvider } from "../../provider"
+import { getProvider } from "../../../test/provider"
 
-const sdk = getMainnetSdk(ethProvider)
+const sdk = getMainnetSdk(process.env.NODE_ENV === 'test' ? getProvider() : ethProvider)
 
 export const queryProxy = async (avatar: `0x${string}`) => {
   return (await sdk.maker.ProxyRegistry.proxies(avatar)) as `0x${string}`
@@ -15,6 +16,7 @@ export const queryCdps = async (proxy: `0x${string}`, targets?: string[]) => {
   // fetch all cdps
   const cdps: BigNumber[] = []
   let cdp = await sdk.maker.CdpManager.first(proxy)
+  console.log({ first: cdp, proxy })
   while (!cdp.isZero()) {
     cdps.push(cdp)
     cdp = (await sdk.maker.CdpManager.list(cdp)).next
