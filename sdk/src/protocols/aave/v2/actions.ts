@@ -102,7 +102,7 @@ export const stake = (token: StakeToken): Permission[] => {
         allow.mainnet.aaveV2.stkaave.claimRewardsAndStake(c.avatar),
         allow.mainnet.aaveV2.stkaave.redeem(c.avatar),
         allow.mainnet.aaveV2.stkaave.cooldown(),
-        allow.mainnet.aaveV2.stkaave.claimRewards(c.avatar),
+        allow.mainnet.aaveV2.stkaave.claimRewards(c.avatar)
       )
       break
     case "ABPT":
@@ -114,7 +114,7 @@ export const stake = (token: StakeToken): Permission[] => {
         allow.mainnet.aaveV2.stkabpt.stake(c.avatar),
         allow.mainnet.aaveV2.stkabpt.redeem(c.avatar),
         allow.mainnet.aaveV2.stkabpt.cooldown(),
-        allow.mainnet.aaveV2.stkabpt.claimRewards(c.avatar),
+        allow.mainnet.aaveV2.stkabpt.claimRewards(c.avatar)
       )
       break
   }
