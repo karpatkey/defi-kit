@@ -1076,25 +1076,6 @@ export default [
     ],
   },
   {
-    bpt: "0x3f725ED5791b72554E9BEDf461eb76fC72dB8834",
-    id: "0x3f725ed5791b72554e9bedf461eb76fc72db883400020000000000000000017a",
-    name: "50QUA-50USDT",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x4dAeb4a06F70f4b1A5C329115731fE4b89C0B227",
-        symbol: "QUA",
-        id: "0x",
-      },
-      {
-        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        symbol: "USDT",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x3F7C10701b14197E2695dEC6428a2Ca4Cf7FC3B8",
     id: "0x3f7c10701b14197e2695dec6428a2ca4cf7fc3b800020000000000000000023c",
     name: "50DFX-50WETH",
@@ -1399,6 +1380,25 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x517390b2B806cb62f20ad340DE6d98B2A8F17F2B",
+    id: "0x517390b2b806cb62f20ad340de6d98b2a8f17f2b0002000000000000000001ba",
+    name: "20WETH-80ELIMU",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xe29797910D413281d2821D5d9a989262c8121CC2",
+        symbol: "ELIMU",
         id: "0x",
       },
     ],
