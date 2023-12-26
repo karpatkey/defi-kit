@@ -1,7 +1,8 @@
 import { NotFoundError } from "../../../errors"
 import tokens from "./_info"
 import delegateTokens from "./delegateTokens"
-import { Token, DelegateToken } from "./types"
+import stakeTokens from "./stakeTokens"
+import { Token, DelegateToken, StakeToken } from "./types"
 import {
   depositEther,
   depositToken,
@@ -37,8 +38,21 @@ export const findDelegateToken = (nameOrAddress: string): DelegateToken => {
   return delegateToken
 }
 
+const findStakeToken = (nameOrAddress: string): StakeToken => {
+  const symbolAddressLower = nameOrAddress.toLowerCase()
+  const stakeToken = stakeTokens.find(
+    (stakeToken) =>
+      stakeToken.address.toLowerCase() === symbolAddressLower ||
+      stakeToken.symbol.toLowerCase() === symbolAddressLower
+  )
+  if (!stakeToken) {
+    throw new NotFoundError(`Token not found: ${nameOrAddress}`)
+  }
+  return stakeToken
+}
+
 export const eth = {
-  deposit: ({
+  deposit: async ({
     targets,
   }: {
     targets: ("ETH" | Token["symbol"] | Token["token"])[]
@@ -48,7 +62,7 @@ export const eth = {
     )
   },
 
-  borrow: ({
+  borrow: async ({
     tokens,
   }: {
     tokens: ("ETH" | Token["symbol"] | Token["token"])[]
@@ -58,11 +72,15 @@ export const eth = {
     )
   },
 
-  stake: () => {
-    return stake()
+  stake: async ({
+    targets,
+  }: {
+    targets: (StakeToken["address"] | StakeToken["symbol"])[]
+  }) => {
+    return targets.flatMap((token) => stake(findStakeToken(token)))
   },
 
-  delegate: ({
+  delegate: async ({
     targets,
     delegatee,
   }: {

@@ -1,6 +1,6 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { c } from "zodiac-roles-sdk"
-import { Token, DelegateToken } from "./types"
+import { Permission, c } from "zodiac-roles-sdk"
+import { Token, DelegateToken, StakeToken } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
 
@@ -88,26 +88,38 @@ export const borrowEther = () => {
   ]
 }
 
-export const stake = () => {
-  return [
-    ...allowErc20Approve(
-      [contracts.mainnet.aaveV2.aave],
-      [contracts.mainnet.aaveV2.stkaave]
-    ),
-    ...allowErc20Approve(
-      [contracts.mainnet.aaveV2.abpt],
-      [contracts.mainnet.aaveV2.stkabpt]
-    ),
-    allow.mainnet.aaveV2.stkaave.stake(c.avatar),
-    allow.mainnet.aaveV2.stkabpt.stake(c.avatar),
-    allow.mainnet.aaveV2.stkaave.claimRewardsAndStake(c.avatar),
-    allow.mainnet.aaveV2.stkaave.redeem(c.avatar),
-    allow.mainnet.aaveV2.stkabpt.redeem(c.avatar),
-    allow.mainnet.aaveV2.stkaave.cooldown(),
-    allow.mainnet.aaveV2.stkabpt.cooldown(),
-    allow.mainnet.aaveV2.stkaave.claimRewards(c.avatar),
-    allow.mainnet.aaveV2.stkabpt.claimRewards(c.avatar),
-  ]
+export const stake = (token: StakeToken): Permission[] => {
+  const permissions: Permission[] = []
+
+  switch (token.symbol) {
+    case "AAVE":
+      permissions.push(
+        ...allowErc20Approve(
+          [contracts.mainnet.aaveV2.aave],
+          [contracts.mainnet.aaveV2.stkaave]
+        ),
+        allow.mainnet.aaveV2.stkaave.stake(c.avatar),
+        allow.mainnet.aaveV2.stkaave.claimRewardsAndStake(c.avatar),
+        allow.mainnet.aaveV2.stkaave.redeem(c.avatar),
+        allow.mainnet.aaveV2.stkaave.cooldown(),
+        allow.mainnet.aaveV2.stkaave.claimRewards(c.avatar),
+      )
+      break
+    case "ABPT":
+      permissions.push(
+        ...allowErc20Approve(
+          [contracts.mainnet.aaveV2.abpt],
+          [contracts.mainnet.aaveV2.stkabpt]
+        ),
+        allow.mainnet.aaveV2.stkabpt.stake(c.avatar),
+        allow.mainnet.aaveV2.stkabpt.redeem(c.avatar),
+        allow.mainnet.aaveV2.stkabpt.cooldown(),
+        allow.mainnet.aaveV2.stkabpt.claimRewards(c.avatar),
+      )
+      break
+  }
+
+  return permissions
 }
 
 export const delegate = (token: DelegateToken, delegatee: string) => {
