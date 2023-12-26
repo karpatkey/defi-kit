@@ -2,6 +2,25 @@
 
 export default [
   {
+    bpt: "0x00612Eb4F312eB6ace7aCC8781196601078aE339",
+    id: "0x00612eb4f312eb6ace7acc8781196601078ae3390002000000000000000005a2",
+    name: "20GHO-80PSP",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+        id: "0x",
+      },
+      {
+        address: "0xcAfE001067cDEF266AfB7Eb5A286dCFD277f3dE5",
+        symbol: "PSP",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x01536b22ea06e4A315E3DAAF05a12683Ed4dc14c",
     id: "0x01536b22ea06e4a315e3daaf05a12683ed4dc14c0000000000000000000005fc",
     name: "e-cs-kp-usd",
@@ -1366,6 +1385,25 @@ export default [
     ],
   },
   {
+    bpt: "0x517390b2B806cb62f20ad340DE6d98B2A8F17F2B",
+    id: "0x517390b2b806cb62f20ad340de6d98b2a8f17f2b0002000000000000000001ba",
+    name: "20WETH-80ELIMU",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xe29797910D413281d2821D5d9a989262c8121CC2",
+        symbol: "ELIMU",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x54ca50EE86616379420Cc56718E12566aa75Abbe",
     id: "0x54ca50ee86616379420cc56718e12566aa75abbe000200000000000000000610",
     name: "50wUSDM-50wstETH",
@@ -1805,6 +1843,30 @@ export default [
       {
         address: "0xC4cafEFBc3dfeA629c589728d648CB6111DB3136",
         symbol: "TBY-feb1924",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x6f0ed6f346007563D3266DE350d174a831bDE0ca",
+    id: "0x6f0ed6f346007563d3266de350d174a831bde0ca0001000000000000000005db",
+    name: "50KNC-25WETH-25USDC-BPT",
+    type: "Weighted",
+    gauge: "0x02ea1C2702eCD478082D4b3AE902B6d10d26b920",
+    tokens: [
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xdeFA4e8a7bcBA345F687a2f1456F5Edd9CE97202",
+        symbol: "KNC",
         id: "0x",
       },
     ],
@@ -3171,6 +3233,25 @@ export default [
     ],
   },
   {
+    bpt: "0xbB41e62BA1A743376119Fa83EC6dd575EA796613",
+    id: "0xbb41e62ba1a743376119fa83ec6dd575ea796613000200000000000000000649",
+    name: "50dETH-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x3d1E5Cf16077F349e999d6b21A4f646e83Cd90c5",
+        symbol: "dETH",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xbc5F4f9332d8415AAf31180Ab4661c9141CC84E4",
     id: "0xbc5f4f9332d8415aaf31180ab4661c9141cc84e4000200000000000000000262",
     name: "98TXJP-2WETH",
@@ -3185,40 +3266,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xbE19d87Ea6cd5b05bBC34B564291c371dAe96747",
-    id: "0xbe19d87ea6cd5b05bbc34b564291c371dae967470000000000000000000005c4",
-    name: "GHO-3POOL-BPT",
-    type: "ComposableStable",
-    gauge: "0x414Eae9a827f4174A63Fe4f10E975678Ca28C898",
-    tokens: [
-      {
-        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
-        symbol: "GHO",
-        id: "0x",
-      },
-      {
-        address: "0x79c58f70905F734641735BC61e45c19dD9Ad60bC",
-        symbol: "USDC-DAI-USDT",
-        id: "0x79c58f70905f734641735bc61e45c19dd9ad60bc0000000000000000000004e7",
-      },
-      {
-        address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-        symbol: "DAI",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        symbol: "USDT",
         id: "0x",
       },
     ],
