@@ -1,12 +1,17 @@
 import { z } from "zod"
 import ethTokens from "./_info"
-import ethDelegateTokens from "./delegateTokens"
 import ethStakeTokens from "./stakeTokens"
+import ethDelegateTokens from "./delegateTokens"
 import { zx } from "../../../zx"
 
 const zToken = z.enum([
   ...ethTokens.map((token) => token.token),
   ...ethTokens.map((token) => token.symbol),
+] as [string, string, ...string[]])
+
+const zStakeToken = z.enum([
+  ...ethStakeTokens.map((token) => token.address),
+  ...ethStakeTokens.map((token) => token.symbol),
 ] as [string, string, ...string[]])
 
 const zDelegateToken = z.enum([
@@ -15,11 +20,6 @@ const zDelegateToken = z.enum([
 ] as [string, string, ...string[]])
 
 const zDelegatee = zx.address()
-
-const zStakeToken = z.enum([
-  ...ethStakeTokens.map((token) => token.address),
-  ...ethStakeTokens.map((token) => token.symbol),
-] as [string, string, ...string[]])
 
 export const eth = {
   deposit: z.object({

@@ -38,7 +38,7 @@ export const findDelegateToken = (nameOrAddress: string): DelegateToken => {
   return delegateToken
 }
 
-const findStakeToken = (nameOrAddress: string): StakeToken => {
+export const findStakeToken = (nameOrAddress: string): StakeToken => {
   const symbolAddressLower = nameOrAddress.toLowerCase()
   const stakeToken = stakeTokens.find(
     (stakeToken) =>
@@ -52,7 +52,7 @@ const findStakeToken = (nameOrAddress: string): StakeToken => {
 }
 
 export const eth = {
-  deposit: async ({
+  deposit: ({
     targets,
   }: {
     targets: ("ETH" | Token["symbol"] | Token["token"])[]
@@ -62,7 +62,7 @@ export const eth = {
     )
   },
 
-  borrow: async ({
+  borrow: ({
     tokens,
   }: {
     tokens: ("ETH" | Token["symbol"] | Token["token"])[]
@@ -72,7 +72,7 @@ export const eth = {
     )
   },
 
-  stake: async ({
+  stake: ({
     targets,
   }: {
     targets: (StakeToken["address"] | StakeToken["symbol"])[]
@@ -80,7 +80,7 @@ export const eth = {
     return targets.flatMap((token) => stake(findStakeToken(token)))
   },
 
-  delegate: async ({
+  delegate: ({
     targets,
     delegatee,
   }: {
