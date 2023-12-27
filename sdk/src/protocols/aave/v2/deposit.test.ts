@@ -1,5 +1,5 @@
 import { eth } from "."
-import { getAvatarWallet, getMemberWallet } from "../../../../test/wallets"
+import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { Status } from "../../../../test/types"
@@ -19,13 +19,13 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.depositETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          getAvatarWallet().address,
+          avatar._address,
           0,
           { value: 1000 }
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
-      const anotherAddress = getMemberWallet().address
+      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.depositETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
@@ -41,11 +41,11 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           1000,
-          getAvatarWallet().address
+          avatar._address
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
-      const anotherAddress = getMemberWallet().address
+      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
@@ -61,7 +61,7 @@ describe("aave_v2", () => {
           WETH,
           true
         )
-      ).toBeAllowed()
+      ).not.toRevert()
     })
 
     // Text with USDC
@@ -70,12 +70,12 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
           USDC,
           1000,
-          getAvatarWallet().address,
+          avatar._address,
           0
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
-      const anotherAddress = getMemberWallet().address
+      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
           USDC,
@@ -91,11 +91,11 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
           USDC,
           1000,
-          getAvatarWallet().address
+          avatar._address
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
-      const anotherAddress = getMemberWallet().address
+      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
           USDC,
@@ -111,7 +111,7 @@ describe("aave_v2", () => {
           USDC,
           true
         )
-      ).toBeAllowed()
+      ).not.toRevert()
     })
   })
 })

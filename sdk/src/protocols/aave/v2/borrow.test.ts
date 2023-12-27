@@ -1,5 +1,5 @@
 import { eth } from "."
-import { getAvatarWallet, getMemberWallet } from "../../../../test/wallets"
+import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { Status } from "../../../../test/types"
@@ -21,7 +21,7 @@ describe("aave_v2", () => {
           contracts.mainnet.aaveV2.wrappedTokenGatewayV2,
           1000
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.borrowETH(
@@ -30,7 +30,7 @@ describe("aave_v2", () => {
           2,
           0
         )
-      ).toBeAllowed()
+      ).not.toRevert()
     })
 
     it("only allows repaying ETH from avatar", async () => {
@@ -39,11 +39,11 @@ describe("aave_v2", () => {
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           1000,
           2,
-          getAvatarWallet().address
+          avatar._address
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
-      const anotherAddress = getMemberWallet().address
+      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.repayETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
@@ -57,7 +57,7 @@ describe("aave_v2", () => {
     it("allows swapping the ETH borrow rate mode", async () => {
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(WETH, 1)
-      ).toBeAllowed()
+      ).not.toRevert()
     })
 
     // Test with USDC
@@ -68,11 +68,11 @@ describe("aave_v2", () => {
           1000,
           2,
           0,
-          getAvatarWallet().address
+          avatar._address
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
-      const anotherAddress = getMemberWallet().address
+      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.borrow(
           USDC,
@@ -90,11 +90,11 @@ describe("aave_v2", () => {
           USDC,
           1000,
           2,
-          getAvatarWallet().address
+          avatar._address
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
-      const anotherAddress = getMemberWallet().address
+      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.repay(
           USDC,
@@ -108,7 +108,7 @@ describe("aave_v2", () => {
     it("allows swapping the USDC borrow rate mode", async () => {
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(USDC, 1)
-      ).toBeAllowed()
+      ).not.toRevert()
     })
   })
 })
