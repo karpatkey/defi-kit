@@ -1,6 +1,8 @@
 import { NotFoundError } from "../../../errors"
 import tokens from "./_info"
-import { Token, DelegateToken } from "./types"
+import { Token } from "./types"
+import { DelegateToken, StakeToken } from "../v2/types"
+import { findDelegateToken, findStakeToken } from "../v2/index"
 import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
 import { stake, delegate } from "../v2/actions"
 
@@ -38,19 +40,23 @@ export const eth = {
     )
   },
 
-  stake: async () => {
-    return stake()
+  stake: async ({
+    targets,
+  }: {
+    targets: (StakeToken["address"] | StakeToken["symbol"])[]
+  }) => {
+    return targets.flatMap((token) => stake(findStakeToken(token)))
   },
 
-  // delegate: async({
-  //   targets,
-  //   delegatee,
-  // }: {
-  //   targets: (DelegateToken["address"] | DelegateToken["symbol"])[]
-  //   delegatee: string
-  // }) => {
-  //   return targets.flatMap((target) =>
-  //     delegate(findDelegateToken(target), delegatee)
-  //   )
-  // },
+  delegate: async({
+    targets,
+    delegatee,
+  }: {
+    targets: (DelegateToken["address"] | DelegateToken["symbol"])[]
+    delegatee: string
+  }) => {
+    return targets.flatMap((target) =>
+      delegate(findDelegateToken(target), delegatee)
+    )
+  },
 }
