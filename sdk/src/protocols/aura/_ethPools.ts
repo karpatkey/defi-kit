@@ -1585,4 +1585,56 @@ export default [
     ],
     rewarder: "0x5F032f15B4e910252EDaDdB899f7201E89C8cD6b",
   },
+  {
+    name: "80MIMO-20WETH",
+    id: "180",
+    bpt: "0xee3959FD00a0B996d801fc34B7CE566bD037f5f5",
+    tokens: [
+      {
+        address: "0x90B831fa3Bebf58E9744A14D638E25B4eE06f9Bc",
+        symbol: "MIMO",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0x098DCC73cd97C2BE5eAC5bD59c50cc034b60C06E",
+  },
+  {
+    name: "BAL-20WETH-80VCX",
+    id: "181",
+    bpt: "0x577A7f7EE659Aa14Dc16FD384B3F8078E23F1920",
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+      {
+        address: "0xcE246eEa10988C495B4A90a905Ee9237a0f91543",
+        symbol: "VCX",
+      },
+    ],
+    rewarder: "0x0D00848440D2E2B3C6f288128c1a19C483e78F45",
+  },
+  {
+    name: "weETH/rETH",
+    id: "182",
+    bpt: "0x05ff47AFADa98a98982113758878F9A8B9FddA0a",
+    tokens: [
+      {
+        address: "0x05ff47AFADa98a98982113758878F9A8B9FddA0a",
+        symbol: "weETH/rETH",
+      },
+      {
+        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
+        symbol: "rETH",
+      },
+      {
+        address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+        symbol: "weETH",
+      },
+    ],
+    rewarder: "0x07A319A023859BbD49CC9C38ee891c3EA9283Cc5",
+  },
 ] as const

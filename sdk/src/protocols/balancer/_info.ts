@@ -107,6 +107,25 @@ export default [
     ],
   },
   {
+    bpt: "0x05ff47AFADa98a98982113758878F9A8B9FddA0a",
+    id: "0x05ff47afada98a98982113758878f9a8b9fdda0a000000000000000000000645",
+    name: "weETH/rETH",
+    type: "ComposableStable",
+    gauge: "0xC859BF9d7B8C557bBd229565124c2C09269F3aEF",
+    tokens: [
+      {
+        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
+        symbol: "rETH",
+        id: "0x",
+      },
+      {
+        address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+        symbol: "weETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x065F5B35D4077334379847fe26f58B1029e51161",
     id: "0x065f5b35d4077334379847fe26f58b1029e511610001000000000000000004b1",
     name: "80SGT-10DAI-10WETH",
