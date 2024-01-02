@@ -4,7 +4,7 @@ import { BigNumberish, Contract, Overrides } from "ethers"
 import { avatar, owner, member } from "./wallets"
 import { getProvider } from "./provider"
 import { createApply } from "../src/apply"
-import { Interface } from "ethers/lib/utils"
+import { Interface, parseEther } from "ethers/lib/utils"
 import { getRolesMod, testRoleKey } from "./rolesMod"
 
 export const applyPermissions = async (permissions: Permission[]) => {
@@ -82,18 +82,12 @@ const erc20Interface = new Interface([
   "function transfer(address to, uint amount) returns (bool)",
 ])
 
-export const wrapEth = async (value: BigNumberish) => {
-  await getMainnetSdk(avatar).weth.deposit({ value })
-}
-
 export const stealErc20 = async (
   token: `0x${string}`,
   amount: BigNumberish,
   from: `0x${string}`
 ) => {
-  // Impersonate the token holder
   const provider = getProvider()
-  await provider.send("anvil_impersonateAccount", [from])
 
   // Get the token contract with impersonated signer
   const contract = new Contract(
@@ -101,6 +95,10 @@ export const stealErc20 = async (
     erc20Interface,
     await provider.getSigner(from)
   )
+
+  // Impersonate the token holder and give a little gas stipend
+  await provider.send("anvil_impersonateAccount", [from])
+  await provider.send("anvil_setBalance", [from, parseEther('1').toHexString()])
 
   // Transfer the requested amount to the avatar
   await contract.transfer(await avatar.getAddress(), amount)

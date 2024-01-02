@@ -3,6 +3,7 @@ import { Permission, c } from "zodiac-roles-sdk"
 import { Token, DelegateToken, StakeToken } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
+import { ContractAbis } from "@gnosis.pm/zodiac"
 
 const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
 
@@ -34,6 +35,10 @@ export const depositEther = () => [
     c.avatar,
     undefined,
     { send: true }
+  ),
+  ...allowErc20Approve(
+    [contracts.mainnet.aaveV2.aWETH],
+    [contracts.mainnet.aaveV2.wrappedTokenGatewayV2]
   ),
   allow.mainnet.aaveV2.wrappedTokenGatewayV2.withdrawETH(
     contracts.mainnet.aaveV2.aaveLendingPoolV2,

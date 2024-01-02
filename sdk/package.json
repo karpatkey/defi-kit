@@ -42,8 +42,10 @@
     "setup": "eth-sdk",
     "build": "rimraf dist && tsup --format esm,cjs",
     "dev": "tsup --format esm --watch",
-    "test": "concurrently --raw --kill-others --success last \"anvil --silent --fork-url https://rpc.mevblocker.io\" \"jest --runInBand\"",
-    "test:watch": "concurrently --raw --kill-others --handle-input --passthrough-arguments \"anvil --silent --fork-url https://rpc.mevblocker.io\" \"jest --runInBand --watch {@}\" --",
+    "anvil": "anvil --silent --fork-url https://rpc.mevblocker.io",
+    "test:watch-only": "jest --runInBand --watch",
+    "test": "concurrently --raw --kill-others --success last \"yarn anvil\" \"jest --runInBand\"",
+    "test:watch": "concurrently --raw --kill-others --handle-input --passthrough-arguments \"yarn anvil\" \"jest --runInBand --watch {@}\" --",
     "check:types": "tsc --noEmit"
   },
   "dependencies": {

@@ -6,6 +6,7 @@ export const contracts = {
       aaveLendingPoolV2: "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9",
       paraSwapRepayAdapter: "0x80Aca0C645fEdABaa20fd2Bf0Daf57885A309FE6",
       wrappedTokenGatewayV2: "0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31",
+      aWETH: "0x030bA81f1c18d280636F32af80b9AAd02Cf0854e",
       variableDebtWETH: "0xF63B34710400CAd3e044cFfDcAb00a0f32E33eCf",
       stableDebtWETH: "0x4e977830ba4bd783C0BB7F15d3e243f73FF57121",
       aave: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
@@ -95,8 +96,9 @@ export const contracts = {
       sDAI: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
     },
     weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    usdc: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
   },
-} satisfies EthSdkConfig["contracts"]
+} as const satisfies EthSdkConfig["contracts"]
 
 export default defineConfig({
   contracts,
