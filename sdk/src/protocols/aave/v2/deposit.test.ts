@@ -20,7 +20,7 @@ describe("aave_v2", () => {
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           avatar._address,
           0,
-          { value: 1000 }
+          { value: 1000 },
         )
       ).not.toRevert()
 
@@ -30,7 +30,7 @@ describe("aave_v2", () => {
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           anotherAddress,
           0,
-          { value: 1000 }
+          { value: 1000 },
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -39,7 +39,7 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.aaveV2.aWETH.approve(
           contracts.mainnet.aaveV2.wrappedTokenGatewayV2,
-          1000
+          1000,
         )
       ).not.toRevert()
 
@@ -52,7 +52,7 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           1000,
-          avatar._address
+          avatar._address,
         )
       ).not.toRevert()
 
@@ -61,7 +61,7 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           1000,
-          anotherAddress
+          anotherAddress,
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -70,7 +70,7 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
           contracts.mainnet.weth,
-          true
+          true,
         )
       ).not.toRevert()
     })
@@ -82,7 +82,7 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.usdc.approve(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          1000
+          1000,
         )
       ).not.toRevert()
 
@@ -91,7 +91,7 @@ describe("aave_v2", () => {
           contracts.mainnet.usdc,
           1000,
           avatar._address,
-          0
+          0,
         )
       ).not.toRevert()
 
@@ -101,7 +101,7 @@ describe("aave_v2", () => {
           contracts.mainnet.usdc,
           1000,
           anotherAddress,
-          0
+          0,
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -111,7 +111,7 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
           contracts.mainnet.usdc,
           100,
-          avatar._address
+          avatar._address,
         )
       ).not.toRevert()
 
@@ -120,7 +120,7 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
           contracts.mainnet.usdc,
           1000,
-          anotherAddress
+          anotherAddress,
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -129,7 +129,7 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
           contracts.mainnet.usdc,
-          true
+          true,
         )
       ).not.toRevert()
     })

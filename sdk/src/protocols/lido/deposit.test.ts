@@ -25,7 +25,7 @@ describe("lido", () => {
         testKit.eth.lido.steth.approve(contracts.mainnet.lido.wsteth, 1000)
       ).not.toRevert()
       await expect(testKit.eth.lido.wsteth.wrap(1000)).not.toRevert()
-      await expect(testKit.eth.lido.wsteth.unwrap(1000)).not.toRevert()
+      await expect(testKit.eth.lido.wsteth.unwrap(500)).not.toRevert()
     })
 
     it("only allows requesting withdrawals from avatar's positions", async () => {
@@ -34,7 +34,7 @@ describe("lido", () => {
         testKit.eth.lido.steth.approve(contracts.mainnet.lido.unsteth, 1000)
       )
       await expect(
-        testKit.eth.lido.unsteth.requestWithdrawals([1000], avatarAddress)
+        testKit.eth.lido.unsteth.requestWithdrawals([500], avatarAddress)
       ).not.toRevert()
 
       const anotherAddress = member._address
