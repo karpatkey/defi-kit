@@ -3,16 +3,28 @@ import { Permission, c } from "zodiac-roles-sdk"
 import { Token, DelegateToken, StakeToken } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
-import { ContractAbis } from "@gnosis.pm/zodiac"
 
-const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
 
 export const depositToken = (token: Token) => {
-  return [
-    ...allowErc20Approve(
-      [token.token],
-      [contracts.mainnet.aaveV2.aaveLendingPoolV2]
-    ),
+  const permissions: Permission[] = []
+
+  if (token.symbol === 'WETH') {
+    permissions.push(
+      ...allowErc20Approve(
+        [contracts.mainnet.aaveV2.aWETH],
+        [contracts.mainnet.aaveV2.wrappedTokenGatewayV2]
+      ),
+    )
+  } else {
+    permissions.push(
+      ...allowErc20Approve(
+        [token.token],
+        [contracts.mainnet.aaveV2.aaveLendingPoolV2]
+      ),
+    )
+  }
+
+  permissions.push(
     allow.mainnet.aaveV2.aaveLendingPoolV2.deposit(
       token.token,
       undefined,
@@ -26,7 +38,9 @@ export const depositToken = (token: Token) => {
     allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
       token.token
     ),
-  ]
+  )
+
+  return permissions
 }
 
 export const depositEther = () => [
@@ -45,7 +59,9 @@ export const depositEther = () => [
     undefined,
     c.avatar
   ),
-  allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(WETH),
+  allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
+    contracts.mainnet.weth
+  ),
 ]
 
 export const borrowToken = (token: Token) => {
@@ -89,7 +105,9 @@ export const borrowEther = () => {
       c.avatar,
       { send: true }
     ),
-    allow.mainnet.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(WETH),
+    allow.mainnet.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(
+      contracts.mainnet.weth
+    ),
   ]
 }
 

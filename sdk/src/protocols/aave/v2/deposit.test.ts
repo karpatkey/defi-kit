@@ -6,8 +6,6 @@ import { Status } from "../../../../test/types"
 import { testKit } from "../../../../test/kit"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 
-const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
-const USDC = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
 
 describe("aave_v2", () => {
   describe("deposit", () => {
@@ -71,7 +69,7 @@ describe("aave_v2", () => {
     it("allow setting the deposited ETH as collateral", async () => {
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
-          WETH,
+          contracts.mainnet.weth,
           true
         )
       ).not.toRevert()
@@ -79,7 +77,7 @@ describe("aave_v2", () => {
 
     // Test with USDC
     it("only allows depositing USDC on behalf of avatar", async () => {
-      await stealErc20(USDC, 1000, contracts.mainnet.balancer.vault)
+      await stealErc20(contracts.mainnet.usdc, 1000, contracts.mainnet.balancer.vault)
 
       await expect(
         testKit.eth.usdc.approve(
@@ -90,7 +88,7 @@ describe("aave_v2", () => {
 
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
-          USDC,
+          contracts.mainnet.usdc,
           1000,
           avatar._address,
           0
@@ -100,7 +98,7 @@ describe("aave_v2", () => {
       const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
-          USDC,
+          contracts.mainnet.usdc,
           1000,
           anotherAddress,
           0
@@ -111,7 +109,7 @@ describe("aave_v2", () => {
     it("only allows withdrawing USDC from avatars' position", async () => {
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
-          USDC,
+          contracts.mainnet.usdc,
           100,
           avatar._address
         )
@@ -120,7 +118,7 @@ describe("aave_v2", () => {
       const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
-          USDC,
+          contracts.mainnet.usdc,
           1000,
           anotherAddress
         )
@@ -130,7 +128,7 @@ describe("aave_v2", () => {
     it("allow setting the deposited USDC as collateral", async () => {
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
-          USDC,
+          contracts.mainnet.usdc,
           true
         )
       ).not.toRevert()
