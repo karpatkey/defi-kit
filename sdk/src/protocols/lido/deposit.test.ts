@@ -37,7 +37,7 @@ describe("lido", () => {
         testKit.eth.lido.steth.approve(contracts.mainnet.lido.unsteth, parseEther('2'))
       )
       await expect(
-        testKit.eth.lido.unsteth.requestWithdrawals([parseEther('0.5')], avatarAddress)
+        testKit.eth.lido.unsteth.requestWithdrawals([parseEther('1')], avatarAddress)
       ).not.toRevert()
 
       const anotherAddress = member._address
