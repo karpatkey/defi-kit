@@ -17,24 +17,24 @@ describe("lido", () => {
     it("allows submitting ETH", async () => {
       await expect(
         testKit.eth.lido.steth.submit(avatar._address, {
-          value: parseEther('1'),
+          value: parseEther('2'),
         })
       ).not.toRevert()
     })
 
     it("allows wrapping and unwrapping stETH", async () => {
-      await stealErc20(contracts.mainnet.lido.steth, parseEther('1'), steCRV_pool)
+      await stealErc20(contracts.mainnet.lido.steth, parseEther('2'), steCRV_pool)
       await expect(
-        testKit.eth.lido.steth.approve(contracts.mainnet.lido.wsteth, parseEther('1'))
+        testKit.eth.lido.steth.approve(contracts.mainnet.lido.wsteth, parseEther('2'))
       ).not.toRevert()
-      await expect(testKit.eth.lido.wsteth.wrap(parseEther('1'))).not.toRevert()
+      await expect(testKit.eth.lido.wsteth.wrap(parseEther('2'))).not.toRevert()
       await expect(testKit.eth.lido.wsteth.unwrap(parseEther('1'))).not.toRevert()
     })
 
     it("only allows requesting withdrawals from avatar's positions", async () => {
       const avatarAddress = avatar._address
       await expect(
-        testKit.eth.lido.steth.approve(contracts.mainnet.lido.unsteth, parseEther('1'))
+        testKit.eth.lido.steth.approve(contracts.mainnet.lido.unsteth, parseEther('2'))
       )
       await expect(
         testKit.eth.lido.unsteth.requestWithdrawals([parseEther('0.5')], avatarAddress)
