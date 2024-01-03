@@ -25,11 +25,10 @@ describe("aave_v2", () => {
         )
       ).not.toRevert()
 
-      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.depositETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          anotherAddress,
+          member._address,
           0,
           { value: parseEther('1') },
         )
@@ -44,11 +43,6 @@ describe("aave_v2", () => {
         )
       ).not.toRevert()
 
-      // If you need to understand the underlying cause of a ModuleTransactionFailed() error, you can do the same call using the SDK directly (without routing it through the Roles mod):
-      // await getMainnetSdk(avatar).aaveV2.wrappedTokenGatewayV2.withdrawETH(contracts.mainnet.aaveV2.aaveLendingPoolV2,
-      //   1000,
-      //   avatar._address)
-
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
@@ -57,12 +51,11 @@ describe("aave_v2", () => {
         )
       ).not.toRevert()
 
-      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           parseEther('1'),
-          anotherAddress,
+          member._address,
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -95,12 +88,11 @@ describe("aave_v2", () => {
         )
       ).not.toRevert()
 
-      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
           contracts.mainnet.usdc,
           parseUnits('1000', 6),
-          anotherAddress,
+          member._address,
           0,
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -115,12 +107,11 @@ describe("aave_v2", () => {
         )
       ).not.toRevert()
 
-      const anotherAddress = member._address
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
           contracts.mainnet.usdc,
           parseUnits('1000', 6),
-          anotherAddress,
+          member._address,
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })

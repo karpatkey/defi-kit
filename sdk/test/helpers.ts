@@ -106,3 +106,9 @@ export const stealErc20 = async (
   // Stop impersonating
   await provider.send("anvil_stopImpersonatingAccount", [from])
 }
+
+export async function delay(ms: number) {
+  return new Promise(resolve => {
+    setTimeout(resolve, ms);
+  });
+}

@@ -1,18 +1,12 @@
 import { eth } from "."
 import { avatar, member } from "../../../test/wallets"
-import { applyPermissions, stealErc20 } from "../../../test/helpers"
+import { applyPermissions, delay } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
 import { parseEther } from "ethers/lib/utils"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 
-
-async function delay(ms: number) {
-  return new Promise(resolve => {
-    setTimeout(resolve, ms);
-  });
-}
 
 const sdk = getMainnetSdk(avatar)
 

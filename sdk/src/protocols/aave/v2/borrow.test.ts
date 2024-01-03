@@ -1,5 +1,4 @@
 import { eth } from "."
-
 import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
@@ -15,16 +14,14 @@ describe("aave_v2", () => {
       await applyPermissions(await eth.borrow({ tokens: ["ETH", "USDC"] }))
     })
 
-    it("deposit USDC, borrow ETH and repay", async () => {
+    it("deposit USDC", async () => {
       await stealErc20(contracts.mainnet.usdc, parseUnits('10000', 6), contracts.mainnet.balancer.vault)
-
       await expect(
         testKit.eth.usdc.approve(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           parseUnits('10000', 6),
         )
       ).not.toRevert()
-
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
           contracts.mainnet.usdc,
@@ -33,7 +30,9 @@ describe("aave_v2", () => {
           0,
         )
       ).not.toRevert()
+    }, 30000) // Added 30 seconds of timeout because the deposit takes too long and the test fails.
 
+    it("borrow ETH and repay", async () => {
       await expect(
         testKit.eth.aaveV2.variableDebtWETH.approveDelegation(
           contracts.mainnet.aaveV2.wrappedTokenGatewayV2,
@@ -176,12 +175,12 @@ describe("aave_v2", () => {
     })
 
     it("only allows repaying USDC from avatar", async () => {
-      await stealErc20(contracts.mainnet.usdc, 1000, contracts.mainnet.balancer.vault)
+      await stealErc20(contracts.mainnet.usdc, parseUnits('10000', 6), contracts.mainnet.balancer.vault)
 
       await expect(
         testKit.eth.usdc.approve(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          1000,
+          parseUnits('10000', 6),
         )
       ).toBeAllowed()
 
