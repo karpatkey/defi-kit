@@ -10,12 +10,12 @@ export const deposit = ({
   cdp,
   ilk,
 }: {
-  proxy: string
+  proxy: `0x${string}`
   cdp: BigNumber
   ilk: Ilk
 }): Permission[] => {
   const permissions: Permission[] = [
-    ...allowErc20Approve([ilk.address], [proxy as `0x${string}`]),
+    ...allowErc20Approve([ilk.address], [proxy]),
     // lockGem
     {
       ...allow.mainnet.maker.DsProxy["execute(address,bytes)"](
@@ -90,7 +90,7 @@ export const borrow = ({
   proxy,
   cdp,
 }: {
-  proxy: string
+  proxy: `0x${string}`
   cdp: BigNumber
 }): Permission[] => {
   return [
