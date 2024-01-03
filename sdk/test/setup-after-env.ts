@@ -67,6 +67,7 @@ expect.extend({
     }
   },
 
+  /** Checks that the call passes the permission checks for the test role. Does not care whether or not the call reverts. */
   async toBeAllowed(received: Promise<any>) {
     try {
       await received
@@ -79,16 +80,12 @@ expect.extend({
         throw error
       }
 
-      if (!error.errorSignature) {
+      if (!error.errorSignature || error.errorSignature !== "ConditionViolation(uint8,bytes32)") {
         // if we get here, it's not a permission error
         return {
           message: () => `Expected transaction to not be allowed, but it is`,
           pass: true,
         }
-      }
-
-      if (error.errorSignature !== "ConditionViolation(uint8,bytes32)") {
-        throw error
       }
 
       const receivedStatus = error.errorArgs.status
@@ -103,6 +100,7 @@ expect.extend({
     }
   },
 
+  /** Checks that the call does not pass the permission checks for the test role. Does not care whether or not the call reverts. */
   async toBeForbidden(received: Promise<any>, status?: Status, info?: string) {
     try {
       await received
@@ -115,16 +113,12 @@ expect.extend({
         throw error
       }
 
-      if (!error.errorSignature) {
+      if (!error.errorSignature || error.errorSignature !== "ConditionViolation(uint8,bytes32)") {
         // if we get here, it's not a permission error
         return {
-          message: () => "Expected transaction to be forbidden but it passed",
+          message: () => "Expected transaction to be forbidden but it is allowed",
           pass: false,
         }
-      }
-
-      if (error.errorSignature !== "ConditionViolation(uint8,bytes32)") {
-        throw error
       }
 
       const receivedStatus = error.errorArgs.status

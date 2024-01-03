@@ -11,6 +11,8 @@ import { ethers } from 'ethers'
 import { encodeBytes32String } from "../../encode"
 
 
+const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
+
 const getProxy = async () => {
   const proxyAddress = await queryProxy(avatar._address as `0x${string}`)
   console.log({ proxyAddress, avatar: avatar._address })
@@ -21,7 +23,10 @@ const getProxy = async () => {
 const openMakerCdp = async ({ ilk }: { ilk: string }) => {
   const sdk = getMainnetSdk(avatar)
 
-  await sdk.maker.ProxyRegistry["build()"]()
+  // build proxy if it doesn't exist yet
+  if (await queryProxy(avatar._address as `0x${string}`) === ZERO_ADDRESS) {
+    await sdk.maker.ProxyRegistry["build()"]()
+  }
 
   const proxyAddress = await queryProxy(avatar._address as `0x${string}`)
   const proxy = sdk.maker.DsProxy.attach(proxyAddress)
@@ -57,6 +62,7 @@ describe("maker", () => {
       })
 
       console.log("cdpID: ", cdp)
+      console.log('applied permissions', await eth.deposit({ avatar: avatar._address as `0x${string}` }))
       await applyPermissions(
         await eth.deposit({ avatar: avatar._address as `0x${string}` })
       )
@@ -65,7 +71,7 @@ describe("maker", () => {
     it("allows depositing ETH to an existing cdp", async () => {
       const sdk = getMainnetSdk(avatar)
       const proxy = await getProxy()
-
+      console.log('proxy address', proxy.address)
       // eth-sdk config powers different "kits":
       // sdk - doing stuff directly in the name of whatever wallet you init it with
       // testKit - doing stuff through the test roles in the name of the avatar

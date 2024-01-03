@@ -10,10 +10,10 @@ type EthSdk = {
 
 type TestKit<S extends EthSdk> = {
   [Key in keyof S]: S[Key] extends BaseContract
-    ? TestContract<S[Key]>
-    : S[Key] extends EthSdk // somehow it cannot infer that it cannot be a BaseContract here, so we use an extra conditional
-    ? TestKit<S[Key]>
-    : never
+  ? TestContract<S[Key]>
+  : S[Key] extends EthSdk // somehow it cannot infer that it cannot be a BaseContract here, so we use an extra conditional
+  ? TestKit<S[Key]>
+  : never
 }
 
 type TestContract<C extends BaseContract> = {
@@ -50,7 +50,7 @@ const makeTestContract = (contract: BaseContract) => {
     callStatic: contract.callStatic,
     address: contract.address,
     attach(address: `0x${string}`) {
-      return { ...testContract, address }
+      return makeTestContract(contract.attach(address))
     },
   } as TestContract<BaseContract>
 
@@ -59,74 +59,74 @@ const makeTestContract = (contract: BaseContract) => {
     if (!contract.interface.getFunction(name).constant) {
       const throughRoles =
         (operation: 1 | 0 = 0) =>
-        async (...args: any[]) => {
-          let overrides = undefined
-          if (
-            args.length > contract.interface.getFunction(name).inputs.length
-          ) {
-            overrides = args.pop()
-          }
-          const { value, ...overridesRest } = overrides || {}
-
-          const data = contract.interface.encodeFunctionData(
-            name,
-            args
-          ) as `0x${string}`
-          try {
-            return await execThroughRole(
-              {
-                to: contract.address as `0x${string}`,
-                data,
-                value: value && BigNumber.from(value).toHexString(),
-                operation: operation,
-              },
-              overridesRest
-            )
-          } catch (error: any) {
-            if (typeof error !== "object") {
-              throw error
-            }
-
-            // find the root cause error with errorSignature revert data in the ethers error stack
-            let rootError = error
-            while (
-              rootError.error &&
-              !rootError.data &&
-              !rootError.errorSignature
-            ) {
-              rootError = rootError.error
-            }
-            // re-throw if the error is not a revert
+          async (...args: any[]) => {
+            let overrides = undefined
             if (
-              rootError.message !== "execution reverted" &&
-              rootError.reason !== "execution reverted" &&
-              rootError.message !== "call revert exception"
+              args.length > contract.interface.getFunction(name).inputs.length
             ) {
+              overrides = args.pop()
+            }
+            const { value, ...overridesRest } = overrides || {}
+
+            const data = contract.interface.encodeFunctionData(
+              name,
+              args
+            ) as `0x${string}`
+            try {
+              return await execThroughRole(
+                {
+                  to: contract.address as `0x${string}`,
+                  data,
+                  value: value && BigNumber.from(value).toHexString(),
+                  operation: operation,
+                },
+                overridesRest
+              )
+            } catch (error: any) {
+              if (typeof error !== "object") {
+                throw error
+              }
+
+              // find the root cause error with errorSignature revert data in the ethers error stack
+              let rootError = error
+              while (
+                rootError.error &&
+                !rootError.data &&
+                !rootError.errorSignature
+              ) {
+                rootError = rootError.error
+              }
+              // re-throw if the error is not a revert
+              if (
+                rootError.message !== "execution reverted" &&
+                rootError.reason !== "execution reverted" &&
+                rootError.message !== "call revert exception"
+              ) {
+                throw error
+              }
+
+              if (!rootError.errorSignature) {
+                // Check if the error is a roles error
+                const selector = rootError.data.slice(0, 10)
+                let rolesError = undefined
+                try {
+                  rolesError = rolesInterface.getError(selector)
+                } catch (e) { }
+                if (rolesError)
+                  rolesInterface.decodeFunctionResult(
+                    "execTransactionWithRole",
+                    rootError.data
+                  )
+
+                // Otherwise, try decoding the call return data, this will decode the revert reason using the target contract's ABI and throw a better error
+                contract.interface.decodeFunctionResult(name, rootError.data)
+                // we should never get here
+                throw new Error("invariant violation")
+              }
+
               throw error
             }
-
-            if (!rootError.errorSignature) {
-              // Check if the error is a roles error
-              const selector = rootError.data.slice(0, 10)
-              let rolesError = undefined
-              try {
-                rolesError = rolesInterface.getError(selector)
-              } catch (e) {}
-              if (rolesError)
-                rolesInterface.decodeFunctionResult(
-                  "execTransactionWithRole",
-                  rootError.data
-                )
-
-              // Otherwise, try decoding the call return data, this will decode the revert reason using the target contract's ABI and throw a better error
-              contract.interface.decodeFunctionResult(name, rootError.data)
-              // we should never get here
-              throw new Error("invariant violation")
-            }
-
-            throw error
           }
-        }
 
       // call contract functions through roles mod
       testContract[name] = throughRoles(0)

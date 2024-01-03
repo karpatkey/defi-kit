@@ -29,6 +29,7 @@ export const deposit = ({
         )
       ),
       targetAddress: proxy,
+      send: true,
     },
     // freeGem
     {
@@ -43,6 +44,7 @@ export const deposit = ({
         )
       ),
       targetAddress: proxy,
+      send: true,
     },
   ]
 
@@ -58,13 +60,11 @@ export const deposit = ({
               contracts.mainnet.maker.CdpManager,
               ilk.gemJoin,
               cdp,
-              {
-                send: true,
-              }
             )
           )
         ),
         targetAddress: proxy,
+        send: true,
       },
       // freeETH
       {
@@ -79,6 +79,7 @@ export const deposit = ({
           )
         ),
         targetAddress: proxy,
+        send: true,
       }
     )
   }
@@ -108,6 +109,7 @@ export const borrow = ({
         )
       ),
       targetAddress: proxy,
+      send: true,
     },
     // Wipe
     {
@@ -122,6 +124,7 @@ export const borrow = ({
         )
       ),
       targetAddress: proxy,
+      send: true,
     },
   ]
 }
