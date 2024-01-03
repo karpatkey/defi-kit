@@ -32,7 +32,7 @@ const findStakeToken = (nameOrAddress: string): StakeToken => {
 }
 
 export const eth = {
-  deposit: ({
+  deposit: async ({
     targets,
   }: {
     // "targets" is a mandatory parameter
@@ -41,7 +41,7 @@ export const eth = {
     return targets.flatMap((target) => deposit(findPool(target)))
   },
 
-  stake: ({
+  stake: async ({
     targets,
   }: {
     targets: (StakeToken["address"] | StakeToken["symbol"])[]
@@ -49,7 +49,7 @@ export const eth = {
     return targets.flatMap((token) => stake(findStakeToken(token)))
   },
 
-  lock: () => {
+  lock: async () => {
     return lock()
   },
 }

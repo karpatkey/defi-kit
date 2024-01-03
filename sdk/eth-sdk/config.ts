@@ -6,6 +6,7 @@ export const contracts = {
       aaveLendingPoolV2: "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9",
       paraSwapRepayAdapter: "0x80Aca0C645fEdABaa20fd2Bf0Daf57885A309FE6",
       wrappedTokenGatewayV2: "0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31",
+      aWETH: "0x030bA81f1c18d280636F32af80b9AAd02Cf0854e",
       variableDebtWETH: "0xF63B34710400CAd3e044cFfDcAb00a0f32E33eCf",
       stableDebtWETH: "0x4e977830ba4bd783C0BB7F15d3e243f73FF57121",
       aave: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
@@ -51,6 +52,8 @@ export const contracts = {
       cToken: "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643",
     },
     compoundV3: {
+      cUSDCv3: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+      cWETHv3: "0xA17581A9E3356d9A858b789D68B4d866e593aE94",
       comet: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
       MainnetBulker: "0xa397a8C2086C554B531c02E29f3291c9704B00c7",
       CometRewards: "0x1b0e765f6224c21223aea2af16c1c46e38885a40",
@@ -64,6 +67,9 @@ export const contracts = {
       cvxRewardPool: "0xCF50b810E57Ac33B91dCF525C6ddd9881B139332",
       vlCVX: "0x72a19342e8F1838460eBFCCEf09F6585e32db86E",
     },
+    cowswap: {
+      orderSigner: "0xdEb83d81d4a9758A7bAec5749DA863C409ea6C6B",
+    },
     curve: {
       regularPool: "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7",
       metaPool: "0x4f062658eaaf2c1ccf8c8e36d6824cdf41167956",
@@ -73,6 +79,15 @@ export const contracts = {
       wsteth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       unsteth: "0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1",
     },
+    maker: {
+      DsProxy: "0xD758500ddEc05172aaA035911387C8E0e789CF6a", // GnosisDAO DSProxy
+      ProxyActions: "0x82ecd135dce65fbc6dbdd0e4237e0af93ffd5038",
+      ProxyRegistry: "0x4678f0a6958e4D2Bc4F1BAF7Bc52E8F3564f3fE4",
+      CdpManager: "0x5ef30b9986345249bc32d8928B7ee64DE9435E39",
+      Jug: "0x19c0976f590D67707E62397C87829d896Dc0f1F1",
+      DaiJoin: "0x9759A6Ac90977b93B58547b4A71c78317f391A28",
+      GemJoin: "0x2F0b23f53734252Bda2277357e97e1517d6B042A"
+    },
     spark: {
       sparkLendingPoolV3: "0xC13e21B648A5Ee794902342038FF3aDAB66BE987",
       wrappedTokenGatewayV3: "0xBD7D6a9ad7865463DE44B05F04559f65e3B11704",
@@ -80,13 +95,10 @@ export const contracts = {
       stableDebtWETH: "0x3c6b93D38ffA15ea995D1BC950d5D0Fa6b22bD05",
       sDAI: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
     },
+    usdc: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
   },
-  goerli: {
-    cowswap: {
-      orderSigner: "0xdEb83d81d4a9758A7bAec5749DA863C409ea6C6B",
-    },
-  },
-} satisfies EthSdkConfig["contracts"]
+} as const satisfies EthSdkConfig["contracts"]
 
 export default defineConfig({
   contracts,

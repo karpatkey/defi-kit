@@ -35,10 +35,11 @@ export const createApply = (chainId: ChainId) => {
    */
   return async function apply(
     roleKey: `0x${string}`,
-    permissions: (Permission | PermissionSet)[],
+    permissions: (Permission | PermissionSet | Promise<PermissionSet>)[],
     options: Options
   ) {
-    const { targets, annotations } = processPermissions(permissions)
+    const awaitedPermissions = await Promise.all(permissions)
+    const { targets, annotations } = processPermissions(awaitedPermissions)
     checkIntegrity(targets)
 
     let rolesModCalls: `0x${string}`[] = []

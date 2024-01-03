@@ -17,7 +17,7 @@ export const allowBorrow: TransactionsHandler = async (query) => {
     role,
     protocol,
   } = transactionsQueryBase.parse(query)
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "borrow",
     chain,
     protocol,
@@ -68,7 +68,7 @@ export const registerAllowBorrow = (
 }
 
 export const borrowPermissions: PermissionsHandler = async (query) => {
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "borrow",
     ...permissionsQueryBase.parse(query),
     query,

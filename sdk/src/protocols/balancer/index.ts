@@ -57,7 +57,7 @@ const findToken = (symbolOrAddress: string): EthToken => {
 }
 
 export const eth = {
-  deposit: (options: {
+  deposit: async (options: {
     targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
     tokens?: (EthToken["address"] | EthToken["symbol"])[]
   }) =>
@@ -65,15 +65,15 @@ export const eth = {
       deposit(findPool(ethPools, target), options.tokens?.map(findToken))
     ),
 
-  stake: (options: {
+  stake: async (options: {
     targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
   }) => options.targets.flatMap((target) => stake(findPool(ethPools, target))),
 
-  lock: () => {
+  lock: async () => {
     return lock()
   },
 
-  swap: (options: {
+  swap: async (options: {
     sell?: (EthToken["address"] | EthToken["symbol"])[]
     buy?: (EthToken["address"] | EthToken["symbol"])[]
     pools?: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]

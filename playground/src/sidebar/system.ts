@@ -1,11 +1,11 @@
 import * as defiKitCore from "defi-kit"
 import * as defiKitEth from "defi-kit/eth"
-import * as defiKitGor from "defi-kit/gor"
+// import * as defiKitGor from "defi-kit/gor"
 
 const AVAILABLE: Record<string, any> = {
   "defi-kit": defiKitCore,
   "defi-kit/eth": defiKitEth,
-  "defi-kit/gor": defiKitGor,
+  //  "defi-kit/gor": defiKitGor,
 }
 
 type Exports = (name: string, value: any) => void
@@ -16,7 +16,7 @@ export const System = {
     deps: string[],
     callback: (exports: Exports) => { setters: Setter[]; execute: () => void }
   ) {
-    const { setters, execute } = callback(() => {})
+    const { setters, execute } = callback(() => { })
 
     deps.forEach((dep, i) => {
       if (!(dep in AVAILABLE)) {

@@ -1,30 +1,19 @@
 import waitOn from "wait-on"
-import {
-  Integrity__factory,
-  Packer__factory,
-  Roles__factory,
-} from "./rolesModTypechain"
-import {
-  ROLES_ADDRESS,
-  getAvatarWallet,
-  getDeployerWallet,
-  getMemberWallet,
-  getOwnerWallet,
-} from "./accounts"
+import { avatar, createWallets } from "./wallets"
 import { baseSnapshot } from "./snapshot"
-import { encodeBytes32String } from "../src"
 import { getProvider } from "./provider"
-import { parseEther } from "ethers/lib/utils"
+import { deployRolesMod, setupRole } from "./rolesMod"
 
 export default async () => {
   await waitForNetwork()
 
-  if ((await getProvider().getCode(ROLES_ADDRESS)) !== "0x") {
-    console.log("Roles mod already deployed, skipping global setup.")
+  if (await isAlreadySetup()) {
+    console.log("Test setup already present")
     return
   }
 
-  await deployERC2470SingletonFactory()
+  await createWallets()
+  await setupAvatar()
   await deployRolesMod()
   await setupRole()
   await baseSnapshot()
@@ -34,7 +23,7 @@ async function waitForNetwork() {
   console.log("\nWaiting for network to be ready...")
   await waitOn({
     interval: 100,
-    timeout: 2000,
+    timeout: 10000,
     resources: ["http://127.0.0.1:8545/"],
     validateStatus(status: number) {
       return status === 405
@@ -43,64 +32,21 @@ async function waitForNetwork() {
   console.log("Network is ready!")
 }
 
-const ERC2470_SINGLETON_FACTORY_ADDRESS =
-  "0xce0042b868300000d44a59004da54a005ffdcf9f"
-
-export const deployERC2470SingletonFactory = async () => {
-  console.log("\nDeploying ERC2470 singleton factory...")
-  const deployer = getDeployerWallet()
-  await deployer.sendTransaction({
-    to: "0xBb6e024b9cFFACB947A71991E386681B1Cd1477D",
-    value: parseEther("0.0247"),
-  })
-
+/** sets the bytecode at the avatar address to allow executing transactions via the Roles mod */
+async function setupAvatar() {
+  // bytecode for TestAvatar contract: https://github.com/gnosis/zodiac-modifier-roles/blob/main/packages/evm/contracts/test/TestAvatar.sol
+  const testAvatarDeployedBytecode =
+    "0x608060405260043610610036575f3560e01c8063468721a7146100415780635229073f14610075578063c55cbe89146100a2575f80fd5b3661003d57005b5f80fd5b34801561004c575f80fd5b5061006061005b366004610383565b6100c3565b60405190151581526020015b60405180910390f35b348015610080575f80fd5b5061009461008f36600461042f565b61019a565b60405161006c929190610528565b3480156100ad575f80fd5b506100c16100bc366004610383565b610270565b005b5f8160ff1660010361013157856001600160a01b031684846040516100e9929190610563565b5f60405180830381855af49150503d805f8114610121576040519150601f19603f3d011682016040523d82523d5f602084013e610126565b606091505b505080915050610191565b856001600160a01b031685858560405161014c929190610563565b5f6040518083038185875af1925050503d805f8114610186576040519150601f19603f3d011682016040523d82523d5f602084013e61018b565b606091505b50909150505b95945050505050565b5f60608260ff1660010361020857856001600160a01b0316846040516101c09190610572565b5f60405180830381855af49150503d805f81146101f8576040519150601f19603f3d011682016040523d82523d5f602084013e6101fd565b606091505b505080925050610267565b856001600160a01b031685856040516102219190610572565b5f6040518083038185875af1925050503d805f811461025b576040519150601f19603f3d011682016040523d82523d5f602084013e610260565b606091505b5090925090505b94509492505050565b5f60608260ff166001036102e057866001600160a01b03168585604051610298929190610563565b5f60405180830381855af49150503d805f81146102d0576040519150601f19603f3d011682016040523d82523d5f602084013e6102d5565b606091505b505080925050610341565b866001600160a01b03168686866040516102fb929190610563565b5f6040518083038185875af1925050503d805f8114610335576040519150601f19603f3d011682016040523d82523d5f602084013e61033a565b606091505b5090925090505b8161034e57805160208201fd5b50505050505050565b6001600160a01b038116811461036b575f80fd5b50565b803560ff8116811461037e575f80fd5b919050565b5f805f805f60808688031215610397575f80fd5b85356103a281610357565b945060208601359350604086013567ffffffffffffffff808211156103c5575f80fd5b818801915088601f8301126103d8575f80fd5b8135818111156103e6575f80fd5b8960208285010111156103f7575f80fd5b60208301955080945050505061040f6060870161036e565b90509295509295909350565b634e487b7160e01b5f52604160045260245ffd5b5f805f8060808587031215610442575f80fd5b843561044d81610357565b935060208501359250604085013567ffffffffffffffff80821115610470575f80fd5b818701915087601f830112610483575f80fd5b8135818111156104955761049561041b565b604051601f8201601f19908116603f011681019083821181831017156104bd576104bd61041b565b816040528281528a60208487010111156104d5575f80fd5b826020860160208301375f6020848301015280965050505050506104fb6060860161036e565b905092959194509250565b5f5b83811015610520578181015183820152602001610508565b50505f910152565b8215158152604060208201525f825180604084015261054e816060850160208701610506565b601f01601f1916919091016060019392505050565b818382375f9101908152919050565b5f8251610583818460208701610506565b919091019291505056fea2646970667358221220f7fa93e870069255e4379b0c8b48991326a11d431c7f43bcab2c693743e5a60164736f6c63430008150033"
   const provider = getProvider()
-  await provider.sendTransaction(
-    "0xf9016c8085174876e8008303c4d88080b90154608060405234801561001057600080fd5b50610134806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80634af63f0214602d575b600080fd5b60cf60048036036040811015604157600080fd5b810190602081018135640100000000811115605b57600080fd5b820183602082011115606c57600080fd5b80359060200191846001830284011164010000000083111715608d57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550509135925060eb915050565b604080516001600160a01b039092168252519081900360200190f35b6000818351602085016000f5939250505056fea26469706673582212206b44f8a82cb6b156bfcc3dc6aadd6df4eefd204bc928a4397fd15dacf6d5320564736f6c634300060200331b83247000822470"
-  )
 
-  if ((await provider.getCode(ERC2470_SINGLETON_FACTORY_ADDRESS)) === "0x") {
-    throw new Error("ERC2470 singleton factory was not deployed")
-  }
-  console.log(
-    "ERC2470 singleton factory deployed at:",
-    ERC2470_SINGLETON_FACTORY_ADDRESS
-  )
+  await provider.send("anvil_setCode", [
+    avatar._address,
+    testAvatarDeployedBytecode,
+  ])
+  console.log(`Successfully initilized avatar at ${avatar._address}`)
 }
 
-async function deployRolesMod() {
-  const deployer = getDeployerWallet()
-  const avatar = getAvatarWallet()
-  const owner = getOwnerWallet()
-
-  console.log("\nDeploying Integrity...")
-  const integrity = await new Integrity__factory(deployer).deploy()
-  console.log("Integrity deployed at:", integrity.address)
-
-  console.log("\nDeploying Packer...")
-  const packer = await new Packer__factory(deployer).deploy()
-  console.log("Packer deployed at:", packer.address)
-
-  console.log("\nDeploying Roles...")
-  const roles = await new Roles__factory(
-    {
-      "contracts/Integrity.sol:Integrity": integrity.address,
-      "contracts/packers/Packer.sol:Packer": packer.address,
-    },
-    deployer
-  ).deploy(owner.address, avatar.address, avatar.address)
-  console.log("Roles deployed at:", roles.address)
-
-  if (roles.address !== ROLES_ADDRESS) {
-    throw new Error(
-      "Roles mod was not deployed at the expected address. Something must have changed in the setup, please update the ROLES_ADDRESS constant"
-    )
-  }
-}
-
-async function setupRole() {
-  const member = getMemberWallet().address
-  const rolesMod = Roles__factory.connect(ROLES_ADDRESS, getOwnerWallet())
-  await rolesMod.assignRoles(member, [encodeBytes32String("TEST-ROLE")], [true])
-  console.log("Created TEST-ROLE role with member:", member)
+async function isAlreadySetup() {
+  const provider = getProvider()
+  return (await provider.getCode(avatar._address)) !== "0x"
 }

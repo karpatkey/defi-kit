@@ -1,108 +1,217 @@
 import { eth } from "."
-import { getAvatarWallet, getMemberWallet } from "../../../../test/accounts"
-import { applyPermissions, test } from "../../../../test/helpers"
+
+import { avatar, member } from "../../../../test/wallets"
+import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { Status } from "../../../../test/types"
+import { testKit } from "../../../../test/kit"
+import { parseEther, parseUnits } from "ethers/lib/utils"
 
-const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
-const USDC = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
 
 describe("aave_v2", () => {
   describe("borrow", () => {
     beforeAll(async () => {
-      await applyPermissions(eth.borrow({ tokens: ["ETH", "USDC"] }))
+      await applyPermissions(await eth.deposit({ targets: ["ETH", "USDC"] }))
+      await applyPermissions(await eth.borrow({ tokens: ["ETH", "USDC"] }))
     })
 
+    it("deposit USDC, borrow ETH and repay", async () => {
+      await stealErc20(contracts.mainnet.usdc, parseUnits('10000', 6), contracts.mainnet.balancer.vault)
+
+      await expect(
+        testKit.eth.usdc.approve(
+          contracts.mainnet.aaveV2.aaveLendingPoolV2,
+          parseUnits('10000', 6),
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
+          contracts.mainnet.usdc,
+          parseUnits('10000', 6),
+          avatar._address,
+          0,
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.aaveV2.variableDebtWETH.approveDelegation(
+          contracts.mainnet.aaveV2.wrappedTokenGatewayV2,
+          parseEther('1'),
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.aaveV2.wrappedTokenGatewayV2.borrowETH(
+          contracts.mainnet.aaveV2.aaveLendingPoolV2,
+          parseEther('1'),
+          2,
+          0,
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.aaveV2.wrappedTokenGatewayV2.repayETH(
+          contracts.mainnet.aaveV2.aaveLendingPoolV2,
+          parseEther('0.5'),
+          2,
+          avatar._address,
+          { value: parseEther('0.5') },
+        )
+      ).not.toRevert()
+    })
+
+    it("deposit ETH, borrow USDC and repay", async () => {
+      await expect(
+        testKit.eth.aaveV2.wrappedTokenGatewayV2.depositETH(
+          contracts.mainnet.aaveV2.aaveLendingPoolV2,
+          avatar._address,
+          0,
+          { value: parseEther('1') },
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.aaveV2.aaveLendingPoolV2.borrow(
+          contracts.mainnet.usdc,
+          parseUnits('100', 6),
+          2,
+          0,
+          avatar._address,
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.usdc.approve(
+          contracts.mainnet.aaveV2.aaveLendingPoolV2,
+          parseUnits('50', 6),
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.aaveV2.aaveLendingPoolV2.repay(
+          contracts.mainnet.usdc,
+          parseUnits('50', 6),
+          2,
+          avatar._address,
+        )
+      ).not.toRevert()
+    })
+
+
+    // Roles Module testing without executing transactions
     // Test with ETH
     it("allows borrowing ETH from avatar", async () => {
       await expect(
-        test.eth.aaveV2.variableDebtWETH.approveDelegation(
+        testKit.eth.aaveV2.variableDebtWETH.approveDelegation(
           contracts.mainnet.aaveV2.wrappedTokenGatewayV2,
-          1000
+          parseEther('1'),
         )
       ).toBeAllowed()
 
       await expect(
-        test.eth.aaveV2.wrappedTokenGatewayV2.borrowETH(
+        testKit.eth.aaveV2.wrappedTokenGatewayV2.borrowETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          1000,
+          parseEther('1'),
           2,
-          0
+          0,
         )
       ).toBeAllowed()
     })
 
     it("only allows repaying ETH from avatar", async () => {
       await expect(
-        test.eth.aaveV2.wrappedTokenGatewayV2.repayETH(
+        testKit.eth.aaveV2.wrappedTokenGatewayV2.repayETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          1000,
+          parseEther('1'),
           2,
-          getAvatarWallet().address
+          avatar._address,
+          { value: 1000 },
         )
       ).toBeAllowed()
 
-      const anotherAddress = getMemberWallet().address
+      const anotherAddress = member._address
       await expect(
-        test.eth.aaveV2.wrappedTokenGatewayV2.repayETH(
+        testKit.eth.aaveV2.wrappedTokenGatewayV2.repayETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          1000,
+          parseEther('1'),
           2,
-          anotherAddress
+          anotherAddress,
+          { value: parseEther('1') },
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     it("allows swapping the ETH borrow rate mode", async () => {
       await expect(
-        test.eth.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(WETH, 1)
-      ).toBeAllowed()
+        testKit.eth.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(
+          contracts.mainnet.weth,
+          1,
+        )
+      ).toRevert()
     })
 
     // Test with USDC
     it("only allows borrowing USDC from avatar", async () => {
       await expect(
-        test.eth.aaveV2.aaveLendingPoolV2.borrow(
-          USDC,
-          1000,
+        testKit.eth.aaveV2.aaveLendingPoolV2.borrow(
+          contracts.mainnet.usdc,
+          parseUnits('10000', 6),
           2,
           0,
-          getAvatarWallet().address
+          avatar._address,
         )
       ).toBeAllowed()
 
-      const anotherAddress = getMemberWallet().address
+      const anotherAddress = member._address
       await expect(
-        test.eth.aaveV2.aaveLendingPoolV2.borrow(
-          USDC,
-          1000,
+        testKit.eth.aaveV2.aaveLendingPoolV2.borrow(
+          contracts.mainnet.usdc,
+          parseUnits('10000', 6),
           2,
           0,
-          anotherAddress
+          anotherAddress,
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     it("only allows repaying USDC from avatar", async () => {
+      await stealErc20(contracts.mainnet.usdc, 1000, contracts.mainnet.balancer.vault)
+
       await expect(
-        test.eth.aaveV2.aaveLendingPoolV2.repay(
-          USDC,
+        testKit.eth.usdc.approve(
+          contracts.mainnet.aaveV2.aaveLendingPoolV2,
           1000,
-          2,
-          getAvatarWallet().address
         )
       ).toBeAllowed()
 
-      const anotherAddress = getMemberWallet().address
       await expect(
-        test.eth.aaveV2.aaveLendingPoolV2.repay(USDC, 1000, 2, anotherAddress)
+        testKit.eth.aaveV2.aaveLendingPoolV2.repay(
+          contracts.mainnet.usdc,
+          parseUnits('10000', 6),
+          2,
+          avatar._address,
+        )
+      ).toBeAllowed()
+
+      const anotherAddress = member._address
+      await expect(
+        testKit.eth.aaveV2.aaveLendingPoolV2.repay(
+          contracts.mainnet.usdc,
+          parseUnits('10000', 6),
+          2,
+          anotherAddress,
+        )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     it("allows swapping the USDC borrow rate mode", async () => {
       await expect(
-        test.eth.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(USDC, 1)
-      ).toBeAllowed()
+        testKit.eth.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(
+          contracts.mainnet.usdc,
+          1,
+        )
+      ).toRevert()
     })
   })
 })

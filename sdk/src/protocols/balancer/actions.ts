@@ -35,30 +35,31 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
     allow.mainnet.balancer.vault.joinPool(
       pool.id,
       c.avatar,
-      c.avatar
-      // No need to scope assets since they are given by the pool id
-      // {
-      // assets: tokens.map((token) => token.address.toLowerCase()).sort(),
-      // }
+      c.avatar,
+      undefined,
+      // Independently if one of the tokens added is ETH or not we must
+      // add the send: true because Roles mod does not support scoping 
+      // the same function with different option values.
+      {
+        send: true
+      }
     ),
 
     allow.mainnet.balancer.vault.exitPool(
       pool.id,
       c.avatar,
       c.avatar
-      // No need to scope assets since they are given by the pool id
-      // {
-      //   assets: tokens.map((token) => token.address.toLowerCase()).sort(),
-      // }
     ),
   ]
 
   if (tokenPoolIds.length > 0) {
     permissions.push(
-      allow.mainnet.balancer.vault.swap(
-        { poolId: c.or(...(tokenPoolIds as [string, string, ...string[]])) },
-        { recipient: c.avatar, sender: c.avatar }
-      ),
+      // With the latest changes that Balancer made, there's no need to swap
+      // tokens in order to join or exit pools
+      // allow.mainnet.balancer.vault.swap(
+      //   { poolId: c.or(...(tokenPoolIds as [string, string, ...string[]])) },
+      //   { recipient: c.avatar, sender: c.avatar }
+      // ),
 
       allow.mainnet.balancer.vault.setRelayerApproval(
         c.avatar,
@@ -74,15 +75,8 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
                 undefined,
                 c.avatar,
                 c.avatar
-                // No need to scope assets since they are given by the pool id
-                // {
-                //   assets: pool.tokens
-                //     .map((token) => token.address.toLowerCase())
-                //     .sort(),
-                // }
               )
             ),
-
             c.calldataMatches(
               // TODO update to next function
               allow.mainnet.balancer.relayerLibrary.exitPool(
@@ -90,28 +84,24 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
                 undefined,
                 c.avatar,
                 c.avatar
-                // No need to scope assets since they are given by the pool id
-                // {
-                //   assets: pool.tokens
-                //     .map((token) => token.address.toLowerCase())
-                //     .sort(),
-                // }
               )
             ),
-
-            c.calldataMatches(
-              // TODO update to next function
-              allow.mainnet.balancer.relayerLibrary.swap(
-                {
-                  poolId: c.or(
-                    ...(tokenPoolIds as [string, string, ...string[]])
-                  ),
-                },
-                { recipient: c.avatar, sender: c.avatar }
-              )
-            )
+            // With the latest changes that Balancer made, there's no need to swap
+            // tokens in order to join or exit pools
+            // c.calldataMatches(
+            //   // TODO update to next function
+            //   allow.mainnet.balancer.relayerLibrary.swap(
+            //     {
+            //       poolId: c.or(
+            //         ...(tokenPoolIds as [string, string, ...string[]])
+            //       ),
+            //     },
+            //     { recipient: c.avatar, sender: c.avatar }
+            //   )
+            // )
           )
-        )
+        ),
+        { send: true }
       )
     )
   }

@@ -47,7 +47,7 @@ const findStakeToken = (nameOrAddress: string): StakeToken => {
 }
 
 export const eth = {
-  deposit: ({
+  deposit: async ({
     targets,
     tokens,
   }: {
@@ -65,7 +65,7 @@ export const eth = {
     )
   },
 
-  stake: ({
+  stake: async ({
     targets,
   }: {
     targets: (StakeToken["address"] | StakeToken["symbol"])[]
@@ -74,7 +74,7 @@ export const eth = {
   },
 
   // TODO standard action? include in stake action? or move to client-configs?
-  // compound: ({
+  // compound: async({
   //   targets,
   // }: {
   //   targets: (StakeToken["address"] | StakeToken["symbol"])[]
@@ -82,13 +82,13 @@ export const eth = {
   //   return targets.flatMap((target) => compound(findStakeToken(target)))
   // },
 
-  lock: () => {
+  lock: async () => {
     return lock()
   },
 }
 
 export const gno = {
-  deposit: ({
+  deposit: async ({
     targets,
     tokens,
   }: {

@@ -17,7 +17,7 @@ export const allowLock: TransactionsHandler = async (query) => {
     role,
     protocol,
   } = transactionsQueryBase.parse(query)
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "lock",
     chain,
     protocol,
@@ -68,7 +68,7 @@ export const registerAllowLock = (
 }
 
 export const lockPermissions: PermissionsHandler = async (query) => {
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "lock",
     ...permissionsQueryBase.parse(query),
     query,

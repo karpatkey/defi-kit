@@ -17,7 +17,7 @@ export const allowStake: TransactionsHandler = async (query) => {
     role,
     protocol,
   } = transactionsQueryBase.parse(query)
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "stake",
     chain,
     protocol,
@@ -68,7 +68,7 @@ export const registerAllowStake = (
 }
 
 export const stakePermissions: PermissionsHandler = async (query) => {
-  const permissions = queryPermissionSet({
+  const permissions = await queryPermissionSet({
     action: "stake",
     ...permissionsQueryBase.parse(query),
     query,

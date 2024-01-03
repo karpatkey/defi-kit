@@ -17,11 +17,19 @@ const findToken = (symbolOrAddress: string): Token => {
 }
 
 export const eth = {
-  deposit: ({ targets }: { targets: (Token["symbol"] | Token["token"])[] }) => {
+  deposit: async ({
+    targets,
+  }: {
+    targets: (Token["symbol"] | Token["token"])[]
+  }) => {
     return targets.flatMap((target) => deposit(findToken(target)))
   },
 
-  borrow: ({ tokens }: { tokens: (Token["symbol"] | Token["token"])[] }) => {
+  borrow: async ({
+    tokens,
+  }: {
+    tokens: (Token["symbol"] | Token["token"])[]
+  }) => {
     return tokens.flatMap((token) => borrow(findToken(token)))
   },
 }

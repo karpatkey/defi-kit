@@ -19,11 +19,6 @@
       "require": "./dist/gno.js",
       "import": "./dist/gno.mjs",
       "types": "./dist/gno.d.ts"
-    },
-    "./gor": {
-      "require": "./dist/gor.js",
-      "import": "./dist/gor.mjs",
-      "types": "./dist/gor.d.ts"
     }
   },
   "typesVersions": {
@@ -36,9 +31,6 @@
       ],
       "gno": [
         "./dist/gno.d.ts"
-      ],
-      "gor": [
-        "./dist/gor.d.ts"
       ]
     }
   },
@@ -50,8 +42,10 @@
     "setup": "eth-sdk",
     "build": "rimraf dist && tsup --format esm,cjs",
     "dev": "tsup --format esm --watch",
-    "test": "concurrently \"anvil\" \"jest --runInBand\" --kill-others --success first",
-    "test:watch": "anvil & jest --runInBand --watchAll",
+    "anvil": "anvil --silent --fork-url https://rpc.mevblocker.io",
+    "test:watch-only": "jest --runInBand --watch",
+    "test": "concurrently --raw --kill-others --success last \"yarn anvil\" \"jest --runInBand\"",
+    "test:watch": "concurrently --raw --kill-others --handle-input --passthrough-arguments \"yarn anvil\" \"jest --runInBand --watch {@}\" --",
     "check:types": "tsc --noEmit"
   },
   "dependencies": {
@@ -60,12 +54,12 @@
     "ethers": "^5.7.2",
     "ts-jest": "^29.1.1",
     "zod": "^3.22.2",
-    "zodiac-roles-sdk": "^2.2.15"
+    "zodiac-roles-sdk": "^2.2.19"
   },
   "devDependencies": {
     "@dethcrypto/eth-sdk": "^0.3.4",
     "@dethcrypto/eth-sdk-client": "^0.1.6",
-    "@gnosis.pm/zodiac": "^3.3.2",
+    "@gnosis.pm/zodiac": "^3.5.0",
     "@types/jest": "^29.5.2",
     "@types/wait-on": "^5.3.1",
     "concurrently": "^8.2.1",
