@@ -1,10 +1,10 @@
 import { eth } from "."
 import { avatar, member } from "../../../test/wallets"
-import { applyPermissions, delay } from "../../../test/helpers"
+import { applyPermissions, advanceTime } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import { formatEther, parseEther } from "ethers/lib/utils"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 
 const sdk = getMainnetSdk(avatar)
@@ -37,15 +37,22 @@ describe("lido", () => {
     })
 
     it("only allows requesting withdrawals from avatar's positions", async () => {
-      var amount = await sdk.lido.steth.balanceOf(avatar._address)
-      console.log("Amount of stETH: ", amount.toBigInt())
+      const amount1 = await sdk.lido.steth.balanceOf(avatar._address)
+      console.log("Amount of stETH: ", formatEther(amount1))
       await expect(
         testKit.eth.lido.steth.approve(
           contracts.mainnet.lido.unsteth,
           parseEther("1")
         )
       )
-      await delay(2000)
+      await advanceTime(2000)
+      const amount2 = await sdk.lido.wsteth.balanceOf(avatar._address)
+
+      console.log("Amount of wstETH: ", formatEther(amount2))
+      await sdk.lido.unsteth.requestWithdrawals(
+        [parseEther("1")],
+        avatar._address
+      )
       await expect(
         testKit.eth.lido.unsteth.requestWithdrawals(
           [parseEther("1")],
@@ -53,15 +60,14 @@ describe("lido", () => {
         )
       ).not.toRevert()
 
-      var amount = await sdk.lido.wsteth.balanceOf(avatar._address)
-      console.log("Amount of wstETH: ", amount.toBigInt())
       await expect(
         testKit.eth.lido.wsteth.approve(
           contracts.mainnet.lido.unsteth,
           parseEther("1")
         )
-      )
-      await delay(2000)
+      ).not.toRevert()
+
+      await advanceTime(2)
       await expect(
         testKit.eth.lido.unsteth.requestWithdrawalsWstETH(
           [parseEther("1")],

@@ -1,6 +1,6 @@
 import { Permission } from "zodiac-roles-sdk"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-import { BigNumberish, Contract, Overrides } from "ethers"
+import { BigNumber, BigNumberish, Contract, Overrides } from "ethers"
 import { avatar, owner, member } from "./wallets"
 import { getProvider } from "./provider"
 import { createApply } from "../src/apply"
@@ -107,8 +107,10 @@ export const stealErc20 = async (
   await provider.send("anvil_stopImpersonatingAccount", [from])
 }
 
-export async function delay(ms: number) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms)
-  })
+export async function advanceTime(seconds: number) {
+  const provider = getProvider()
+  await provider.send("evm_increaseTime", [
+    BigNumber.from(seconds).toHexString(),
+  ])
+  await provider.send("evm_mine", [])
 }
