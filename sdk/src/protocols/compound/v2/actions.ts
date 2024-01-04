@@ -9,20 +9,15 @@ const _mint = (token: Token): Permission[] => {
 
   if (token.symbol === "ETH") {
     permissions.push(
-      allow.mainnet.compoundV2.cETH.mint(
-        {
-          send: true
-        }
-      )
+      allow.mainnet.compoundV2.cETH.mint({
+        send: true,
+      })
     )
-  }
-  else {
-    permissions.push(
-      {
-        ...allow.mainnet.compoundV2.cToken.mint(undefined),
-        targetAddress: token.cToken,
-      }
-    )
+  } else {
+    permissions.push({
+      ...allow.mainnet.compoundV2.cToken.mint(undefined),
+      targetAddress: token.cToken,
+    })
   }
 
   return permissions
@@ -56,20 +51,15 @@ const _repay = (token: Token): Permission[] => {
 
   if (token.symbol === "ETH") {
     permissions.push(
-      allow.mainnet.compoundV2.cETH.repayBorrow(
-        {
-          send: true
-        }
-      )
+      allow.mainnet.compoundV2.cETH.repayBorrow({
+        send: true,
+      })
     )
-  }
-  else {
-    permissions.push(
-      {
-        ...allow.mainnet.compoundV2.cToken.repayBorrow(),
-        targetAddress: token.cToken,
-      }
-    )
+  } else {
+    permissions.push({
+      ...allow.mainnet.compoundV2.cToken.repayBorrow(),
+      targetAddress: token.cToken,
+    })
   }
 
   return permissions
@@ -109,12 +99,9 @@ export const borrow = (token: Token) => {
     permissions.push(..._repay(token))
   } else {
     permissions.push(
-      allow.mainnet.compoundV2.maximillion.repayBehalf(
-        c.avatar,
-        {
-          send: true
-        }
-      )
+      allow.mainnet.compoundV2.maximillion.repayBehalf(c.avatar, {
+        send: true,
+      })
     )
   }
   permissions.push(_borrow(token.cToken))

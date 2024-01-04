@@ -16,9 +16,7 @@ describe("compound_v2", () => {
     // Test with ETH
     it("allows depositing ETH on behalf of avatar", async () => {
       await expect(
-        testKit.eth.compoundV2.cETH.mint(
-          { value: parseEther("1") },
-        )
+        testKit.eth.compoundV2.cETH.mint({ value: parseEther("1") })
       ).not.toRevert()
 
       // await expect(
@@ -33,9 +31,7 @@ describe("compound_v2", () => {
 
     it("allows withdrawing ETH from avatars' position", async () => {
       await expect(
-        testKit.eth.compoundV2.cETH.redeemUnderlying(
-          parseEther("0.5")
-        )
+        testKit.eth.compoundV2.cETH.redeemUnderlying(parseEther("0.5"))
       ).not.toRevert()
 
       // await expect(
@@ -50,9 +46,9 @@ describe("compound_v2", () => {
 
     it("allow setting/removing the deposited ETH as collateral", async () => {
       await expect(
-        testKit.eth.compoundV2.comptroller.enterMarkets(
-          [contracts.mainnet.compoundV2.cETH]
-        )
+        testKit.eth.compoundV2.comptroller.enterMarkets([
+          contracts.mainnet.compoundV2.cETH,
+        ])
       ).not.toRevert()
       await expect(
         testKit.eth.compoundV2.comptroller.exitMarket(
@@ -78,25 +74,21 @@ describe("compound_v2", () => {
 
       await expect(
         // The cToken in the config file corresponds to cUSDC
-        testKit.eth.compoundV2.cToken.mint(
-          parseUnits("1000", 6)
-        )
+        testKit.eth.compoundV2.cToken.mint(parseUnits("1000", 6))
       ).not.toRevert()
     })
 
     it("allows withdrawing USDC from avatars' position", async () => {
       await expect(
-        testKit.eth.compoundV2.cToken.redeemUnderlying(
-          parseUnits("1000", 6)
-        )
+        testKit.eth.compoundV2.cToken.redeemUnderlying(parseUnits("1000", 6))
       ).not.toRevert()
     })
 
     it("allow setting/removing the deposited USDC as collateral", async () => {
       await expect(
-        testKit.eth.compoundV2.comptroller.enterMarkets(
-          [contracts.mainnet.compoundV2.cToken]
-        )
+        testKit.eth.compoundV2.comptroller.enterMarkets([
+          contracts.mainnet.compoundV2.cToken,
+        ])
       ).not.toRevert()
       await expect(
         testKit.eth.compoundV2.comptroller.exitMarket(
@@ -112,7 +104,7 @@ describe("compound_v2", () => {
           [
             contracts.mainnet.compoundV2.cETH,
             // The cToken in the config file corresponds to cUSDC
-            contracts.mainnet.compoundV2.cToken
+            contracts.mainnet.compoundV2.cToken,
           ]
         )
       ).not.toRevert()
@@ -121,7 +113,7 @@ describe("compound_v2", () => {
           member._address,
           [
             contracts.mainnet.compoundV2.cETH,
-            contracts.mainnet.compoundV2.cToken
+            contracts.mainnet.compoundV2.cToken,
           ]
         )
       ).toBeForbidden()
