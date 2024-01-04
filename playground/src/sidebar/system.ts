@@ -16,7 +16,7 @@ export const System = {
     deps: string[],
     callback: (exports: Exports) => { setters: Setter[]; execute: () => void }
   ) {
-    const { setters, execute } = callback(() => { })
+    const { setters, execute } = callback(() => {})
 
     deps.forEach((dep, i) => {
       if (!(dep in AVAILABLE)) {

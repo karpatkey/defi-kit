@@ -4,23 +4,22 @@ import { Token, DelegateToken, StakeToken } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
 
-
 export const depositToken = (token: Token) => {
   const permissions: Permission[] = []
 
-  if (token.symbol === 'WETH') {
+  if (token.symbol === "WETH") {
     permissions.push(
       ...allowErc20Approve(
         [contracts.mainnet.aaveV2.aWETH],
         [contracts.mainnet.aaveV2.wrappedTokenGatewayV2]
-      ),
+      )
     )
   } else {
     permissions.push(
       ...allowErc20Approve(
         [token.token],
         [contracts.mainnet.aaveV2.aaveLendingPoolV2]
-      ),
+      )
     )
   }
 
@@ -37,7 +36,7 @@ export const depositToken = (token: Token) => {
     ),
     allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
       token.token
-    ),
+    )
   )
 
   return permissions

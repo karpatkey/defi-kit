@@ -6,7 +6,9 @@ import { Ilk } from "./types"
 import { ethProvider } from "../../provider"
 import { getProvider } from "../../../test/provider"
 
-const sdk = getMainnetSdk(process.env.NODE_ENV === 'test' ? getProvider() : ethProvider)
+const sdk = getMainnetSdk(
+  process.env.NODE_ENV === "test" ? getProvider() : ethProvider
+)
 
 export const queryProxy = async (avatar: `0x${string}`) => {
   return (await sdk.maker.ProxyRegistry.proxies(avatar)) as `0x${string}`

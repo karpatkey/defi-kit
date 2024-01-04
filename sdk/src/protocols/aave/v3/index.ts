@@ -48,7 +48,7 @@ export const eth = {
     return targets.flatMap((token) => stake(findStakeToken(token)))
   },
 
-  delegate: async({
+  delegate: async ({
     targets,
     delegatee,
   }: {

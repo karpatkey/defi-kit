@@ -1,6 +1,6 @@
 import { providers } from "ethers"
 
-console.log('node env', process.env.NODE_ENV)
+console.log("node env", process.env.NODE_ENV)
 
 export const ethProvider = new providers.JsonRpcProvider(
   "https://rpc.eth.gateway.fm",

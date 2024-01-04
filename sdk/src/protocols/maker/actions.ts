@@ -59,7 +59,7 @@ export const deposit = ({
             allow.mainnet.maker.ProxyActions.lockETH(
               contracts.mainnet.maker.CdpManager,
               ilk.gemJoin,
-              cdp,
+              cdp
             )
           )
         ),

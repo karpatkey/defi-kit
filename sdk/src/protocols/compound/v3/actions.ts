@@ -77,7 +77,7 @@ export const deposit = (
             [
               comet.address,
               c.avatar,
-              c.or(...(erc20TokenAddresses as [string, string, ...string[]]))
+              c.or(...(erc20TokenAddresses as [string, string, ...string[]])),
             ],
             ["address", "address", "address", "uint256"]
           ),
@@ -89,12 +89,12 @@ export const deposit = (
               c.avatar,
             ],
             ["address", "address", "address", "bool"]
-          ),
+          )
         )
       ),
       // Roles mod does not support scoping the same function with different option values.
       { send: true }
-    )
+    ),
   ]
 
   if (tokens.some((token) => token.symbol === "ETH")) {
@@ -121,7 +121,7 @@ export const deposit = (
                 c.avatar,
               ],
               ["address", "address", "address", "bool"]
-            ),
+            )
           )
         ),
         // Roles mod does not support scoping the same function with different option values.
@@ -160,21 +160,12 @@ export const borrow = (comet: Comet) => {
       },
 
       allow.mainnet.compoundV3.MainnetBulker.invoke(
-        c.every(
-          c.or(
-            c.eq(ACTION_SUPPLY_ASSET),
-            c.eq(ACTION_WITHDRAW_ASSET)
-          )
-        ),
+        c.every(c.or(c.eq(ACTION_SUPPLY_ASSET), c.eq(ACTION_WITHDRAW_ASSET))),
         c.every(
           c.abiEncodedMatches(
-            [
-              comet.address,
-              c.avatar,
-              comet.borrowToken.address
-            ],
+            [comet.address, c.avatar, comet.borrowToken.address],
             ["address", "address", "address", "uint256"]
-          ),
+          )
         ),
         // Roles mod does not support scoping the same function with different option values.
         { send: true }
@@ -193,11 +184,11 @@ export const borrow = (comet: Comet) => {
           c.abiEncodedMatches(
             [comet.address, c.avatar],
             ["address", "address", "uint256"]
-          ),
+          )
         ),
         // Roles mod does not support scoping the same function with different option values.
         { send: true }
-      ),
+      )
     )
   }
 
