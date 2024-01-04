@@ -4,8 +4,6 @@ import { Token } from "./types"
 import { allowErc20Approve } from "../../../erc20"
 import { contracts } from "../../../../eth-sdk/config"
 
-const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
-
 export const depositToken = (token: Token) => {
   const permissions = [
     ...allowErc20Approve(
@@ -55,7 +53,9 @@ export const depositEther = () => [
     undefined,
     c.avatar
   ),
-  allow.mainnet.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(WETH),
+  allow.mainnet.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(
+    contracts.mainnet.weth
+  ),
 ]
 
 export const borrowToken = (token: Token) => {
@@ -99,6 +99,8 @@ export const borrowEther = () => {
       c.avatar,
       { send: true }
     ),
-    allow.mainnet.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(WETH),
+    allow.mainnet.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(
+      contracts.mainnet.weth
+    ),
   ]
 }
