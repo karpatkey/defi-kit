@@ -18,7 +18,10 @@ export const createWallets = async () => {
     Object.values(addresses).map(async (address) => {
       const provider = getProvider()
       await provider.send("anvil_impersonateAccount", [address])
-      await provider.send("anvil_setBalance", [address, "0x21E19E0C9BAB2400000"])
+      await provider.send("anvil_setBalance", [
+        address,
+        "0x21E19E0C9BAB2400000",
+      ])
     })
   )
 }

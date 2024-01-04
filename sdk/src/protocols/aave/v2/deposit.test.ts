@@ -7,7 +7,6 @@ import { testKit } from "../../../../test/kit"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { parseEther, parseUnits } from "ethers/lib/utils"
 
-
 describe("aave_v2", () => {
   describe("deposit", () => {
     beforeAll(async () => {
@@ -21,7 +20,7 @@ describe("aave_v2", () => {
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           avatar._address,
           0,
-          { value: parseEther('1') },
+          { value: parseEther("1") }
         )
       ).not.toRevert()
 
@@ -30,7 +29,7 @@ describe("aave_v2", () => {
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           member._address,
           0,
-          { value: parseEther('1') },
+          { value: parseEther("1") }
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -39,23 +38,23 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.aaveV2.aWETH.approve(
           contracts.mainnet.aaveV2.wrappedTokenGatewayV2,
-          parseEther('1'),
+          parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          parseEther('1'),
-          avatar._address,
+          parseEther("1"),
+          avatar._address
         )
       ).not.toRevert()
 
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          parseEther('1'),
-          member._address,
+          parseEther("1"),
+          member._address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -64,36 +63,40 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
           contracts.mainnet.weth,
-          true,
+          true
         )
       ).not.toRevert()
     })
 
     // Test with USDC
     it("only allows depositing USDC on behalf of avatar", async () => {
-      await stealErc20(contracts.mainnet.usdc, parseUnits('1000', 6), contracts.mainnet.balancer.vault)
+      await stealErc20(
+        contracts.mainnet.usdc,
+        parseUnits("1000", 6),
+        contracts.mainnet.balancer.vault
+      )
       await expect(
         testKit.eth.usdc.approve(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          parseUnits('1000', 6),
+          parseUnits("1000", 6)
         )
       ).not.toRevert()
 
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
           contracts.mainnet.usdc,
-          parseUnits('1000', 6),
+          parseUnits("1000", 6),
           avatar._address,
-          0,
+          0
         )
       ).not.toRevert()
 
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
           contracts.mainnet.usdc,
-          parseUnits('1000', 6),
+          parseUnits("1000", 6),
           member._address,
-          0,
+          0
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -102,16 +105,16 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
           contracts.mainnet.usdc,
-          parseUnits('1000', 6),
-          avatar._address,
+          parseUnits("1000", 6),
+          avatar._address
         )
       ).not.toRevert()
 
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
           contracts.mainnet.usdc,
-          parseUnits('1000', 6),
-          member._address,
+          parseUnits("1000", 6),
+          member._address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -120,7 +123,7 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
           contracts.mainnet.usdc,
-          true,
+          true
         )
       ).not.toRevert()
     })

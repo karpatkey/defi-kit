@@ -7,11 +7,10 @@ import { BigNumber } from "ethers"
 import { LogDescription, arrayify, parseEther } from "ethers/lib/utils"
 import { testKit } from "../../../test/kit"
 import { getProvider } from "../../../test/provider"
-import { ethers } from 'ethers'
+import { ethers } from "ethers"
 import { encodeBytes32String } from "../../encode"
 
-
-const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
+const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 
 const getProxy = async () => {
   const proxyAddress = await queryProxy(avatar._address as `0x${string}`)
@@ -24,19 +23,24 @@ const openMakerCdp = async ({ ilk }: { ilk: string }) => {
   const sdk = getMainnetSdk(avatar)
 
   // build proxy if it doesn't exist yet
-  if (await queryProxy(avatar._address as `0x${string}`) === ZERO_ADDRESS) {
+  if ((await queryProxy(avatar._address as `0x${string}`)) === ZERO_ADDRESS) {
     await sdk.maker.ProxyRegistry["build()"]()
   }
 
   const proxyAddress = await queryProxy(avatar._address as `0x${string}`)
   const proxy = sdk.maker.DsProxy.attach(proxyAddress)
-  console.log('ILK from gemjoin', await sdk.maker.GemJoin.ilk())
+  console.log("ILK from gemjoin", await sdk.maker.GemJoin.ilk())
 
   console.log("encoding", encodeBytes32String("ETH-A"))
 
-  console.log("Open data: ", sdk.maker.ProxyActions.address, sdk.maker.CdpManager.address, ilk, proxy.address, proxyAddress)
-
-
+  console.log(
+    "Open data: ",
+    sdk.maker.ProxyActions.address,
+    sdk.maker.CdpManager.address,
+    ilk,
+    proxy.address,
+    proxyAddress
+  )
 
   const tx = await proxy["execute(address,bytes)"](
     sdk.maker.ProxyActions.address,
@@ -62,7 +66,10 @@ describe("maker", () => {
       })
 
       console.log("cdpID: ", cdp)
-      console.log('applied permissions', await eth.deposit({ avatar: avatar._address as `0x${string}` }))
+      console.log(
+        "applied permissions",
+        await eth.deposit({ avatar: avatar._address as `0x${string}` })
+      )
       await applyPermissions(
         await eth.deposit({ avatar: avatar._address as `0x${string}` })
       )
@@ -71,14 +78,14 @@ describe("maker", () => {
     it("allows depositing ETH to an existing cdp", async () => {
       const sdk = getMainnetSdk(avatar)
       const proxy = await getProxy()
-      console.log('proxy address', proxy.address)
+      console.log("proxy address", proxy.address)
       // eth-sdk config powers different "kits":
       // sdk - doing stuff directly in the name of whatever wallet you init it with
       // testKit - doing stuff through the test roles in the name of the avatar
       // allow - returning permissions to do that call through the test role (allowing the respective testKit... call)
 
       const ilk = await queryIlk(cdp)
-      console.log("Data", sdk.maker.CdpManager.address, ilk.gemJoin, cdp);
+      console.log("Data", sdk.maker.CdpManager.address, ilk.gemJoin, cdp)
       await expect(
         proxy["execute(address,bytes)"](
           sdk.maker.ProxyActions.address,

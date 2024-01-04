@@ -38,18 +38,14 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
       c.avatar,
       undefined,
       // Independently if one of the tokens added is ETH or not we must
-      // add the send: true because Roles mod does not support scoping 
+      // add the send: true because Roles mod does not support scoping
       // the same function with different option values.
       {
-        send: true
+        send: true,
       }
     ),
 
-    allow.mainnet.balancer.vault.exitPool(
-      pool.id,
-      c.avatar,
-      c.avatar
-    ),
+    allow.mainnet.balancer.vault.exitPool(pool.id, c.avatar, c.avatar),
   ]
 
   if (tokenPoolIds.length > 0) {
@@ -85,7 +81,7 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
                 c.avatar,
                 c.avatar
               )
-            ),
+            )
             // With the latest changes that Balancer made, there's no need to swap
             // tokens in order to join or exit pools
             // c.calldataMatches(

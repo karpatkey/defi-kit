@@ -80,7 +80,10 @@ expect.extend({
         throw error
       }
 
-      if (!error.errorSignature || error.errorSignature !== "ConditionViolation(uint8,bytes32)") {
+      if (
+        !error.errorSignature ||
+        error.errorSignature !== "ConditionViolation(uint8,bytes32)"
+      ) {
         // if we get here, it's not a permission error
         return {
           message: () => `Expected transaction to not be allowed, but it is`,
@@ -113,10 +116,14 @@ expect.extend({
         throw error
       }
 
-      if (!error.errorSignature || error.errorSignature !== "ConditionViolation(uint8,bytes32)") {
+      if (
+        !error.errorSignature ||
+        error.errorSignature !== "ConditionViolation(uint8,bytes32)"
+      ) {
         // if we get here, it's not a permission error
         return {
-          message: () => "Expected transaction to be forbidden but it is allowed",
+          message: () =>
+            "Expected transaction to be forbidden but it is allowed",
           pass: false,
         }
       }
