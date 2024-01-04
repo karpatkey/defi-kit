@@ -19,7 +19,7 @@ yarn add defi-kit
 ```typescript
 import { apply, allow } from "defi-kit"
 
-const calls = await apply(roleKey, [...allow.cowswap.swap(tokenIn, tokenOut)], {
+const calls = await apply(roleKey, [allow.cowswap.swap(tokenIn, tokenOut)], {
   address: rolesModAddress,
   mode: "extend",
 })
