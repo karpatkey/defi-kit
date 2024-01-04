@@ -83,11 +83,11 @@ yarn test:watch
 
    ```typescript
    export const eth = {
-     deposit: () => [],
+     deposit: async () => [],
    }
 
    export const gno = {
-     deposit: () => [],
+     deposit: async () => [],
    }
    ```
 
@@ -152,7 +152,7 @@ All action functions should be covered with tests to make sure the returned perm
    ```typescript
    import { testKit } from "../../../test/kit"
 
-   testKit.eth.maker.DSProxy.attach(proxyAddress).execute(...args)
+   await testKit.eth.maker.DSProxy.attach(proxyAddress).execute(...args)
    ```
 
 3. Use the [custom jest matchers](sdk/test/setup-after-env.ts) to check on the transaction outcome:
