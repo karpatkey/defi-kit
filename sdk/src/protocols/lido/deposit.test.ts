@@ -4,7 +4,7 @@ import { applyPermissions, advanceTime } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
-import { formatEther, parseEther } from "ethers/lib/utils"
+import { parseEther } from "ethers/lib/utils"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 
 const sdk = getMainnetSdk(avatar)
@@ -37,22 +37,13 @@ describe("lido", () => {
     })
 
     it("only allows requesting withdrawals from avatar's positions", async () => {
-      const amount1 = await sdk.lido.steth.balanceOf(avatar._address)
-      console.log("Amount of stETH: ", formatEther(amount1))
       await expect(
         testKit.eth.lido.steth.approve(
           contracts.mainnet.lido.unsteth,
           parseEther("1")
         )
-      )
-      await advanceTime(2000)
-      const amount2 = await sdk.lido.wsteth.balanceOf(avatar._address)
-
-      console.log("Amount of wstETH: ", formatEther(amount2))
-      await sdk.lido.unsteth.requestWithdrawals(
-        [parseEther("1")],
-        avatar._address
-      )
+      ).not.toRevert()
+      await advanceTime(2)
       await expect(
         testKit.eth.lido.unsteth.requestWithdrawals(
           [parseEther("1")],
@@ -66,7 +57,6 @@ describe("lido", () => {
           parseEther("1")
         )
       ).not.toRevert()
-
       await advanceTime(2)
       await expect(
         testKit.eth.lido.unsteth.requestWithdrawalsWstETH(
