@@ -98,7 +98,7 @@ export const stealErc20 = async (
 
   // Impersonate the token holder and give a little gas stipend
   await provider.send("anvil_impersonateAccount", [from])
-  await provider.send("anvil_setBalance", [from, parseEther('1').toHexString()])
+  await provider.send("anvil_setBalance", [from, parseEther("1").toHexString()])
 
   // Transfer the requested amount to the avatar
   await contract.transfer(await avatar.getAddress(), amount)
@@ -108,7 +108,7 @@ export const stealErc20 = async (
 }
 
 export async function delay(ms: number) {
-  return new Promise(resolve => {
-    setTimeout(resolve, ms);
-  });
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms)
+  })
 }
