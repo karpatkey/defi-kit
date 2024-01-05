@@ -2,7 +2,7 @@ import { allow } from "zodiac-roles-sdk/kit"
 import { c } from "zodiac-roles-sdk"
 import { Permission } from "zodiac-roles-sdk"
 import { Comet, Token } from "./types"
-import { allowErc20Approve } from "../../../erc20"
+import { allowErc20Approve } from "../../../conditions"
 import { contracts } from "../../../../eth-sdk/config"
 
 // abi = (address comet, address to, uint amount)

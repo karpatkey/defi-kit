@@ -2,7 +2,7 @@ import { MintPaused } from "../../../errors"
 import { allow } from "zodiac-roles-sdk/kit"
 import { c, Permission } from "zodiac-roles-sdk"
 import { Token, cToken } from "./types"
-import { allowErc20Approve } from "../../../erc20"
+import { allowErc20Approve } from "../../../conditions"
 
 // const _mint = (ctoken: cToken): Permission => {
 //   return {

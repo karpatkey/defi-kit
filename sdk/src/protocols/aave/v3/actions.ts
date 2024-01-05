@@ -1,7 +1,7 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { c } from "zodiac-roles-sdk"
 import { Token } from "./types"
-import { allowErc20Approve } from "../../../erc20"
+import { allowErc20Approve } from "../../../conditions"
 import { contracts } from "../../../../eth-sdk/config"
 
 export const depositToken = (token: Token) => {

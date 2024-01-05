@@ -1,7 +1,7 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { c } from "zodiac-roles-sdk"
 import { Token } from "./types"
-import { allowErc20Approve } from "../../erc20"
+import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 
 const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"

@@ -2,7 +2,7 @@ import { Permission, c } from "zodiac-roles-sdk"
 import { allow } from "zodiac-roles-sdk/kit"
 
 import { Pool, Token } from "./types"
-import { allowErc20Approve } from "../../erc20"
+import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 
 const BAL = "0xba100000625a3754423978a60c9317c58a424e3D"
