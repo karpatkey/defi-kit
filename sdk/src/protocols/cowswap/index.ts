@@ -16,18 +16,26 @@ const swap = async (options: {
       "`buy` must not be an empty array. Pass `undefined` if you want to allow buying any token."
     )
   }
+
+  const orderStructScoping =
+    sell || buy
+      ? ({
+          sellToken: sell && oneOf(sell),
+          buyToken: buy && oneOf(buy),
+        } as any) // StructScoping requires at least one field scoping to be defined. We make sure of that, but TS doesn't know that. So we cast to `any` to make TS happy.
+      : undefined
+
   return [
     allow.mainnet.cowswap.orderSigner.signOrder(
-      sell || buy
-        ? ({
-            sellToken: sell && oneOf(sell),
-            buyToken: buy && oneOf(buy),
-          } as any) // StructScoping requires at least one field scoping to be defined. We make sure of that, but TS doesn't know that. So we cast to `any` to make TS happy.
-        : undefined,
+      orderStructScoping,
       undefined,
       undefined,
       { delegatecall: true }
     ),
+
+    allow.mainnet.cowswap.orderSigner.unsignOrder(orderStructScoping, {
+      delegatecall: true,
+    }),
   ]
 }
 
