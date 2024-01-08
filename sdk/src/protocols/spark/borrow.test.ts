@@ -1,6 +1,10 @@
 import { eth } from "."
 import { avatar, member } from "../../../test/wallets"
-import { applyPermissions, stealErc20, advanceTime } from "../../../test/helpers"
+import {
+  applyPermissions,
+  stealErc20,
+  advanceTime,
+} from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
@@ -12,8 +16,12 @@ const sdk = getMainnetSdk(avatar)
 describe("spark", () => {
   describe("borrow", () => {
     beforeAll(async () => {
-      await applyPermissions(await eth.deposit({ targets: ["DAI", "ETH", "sDAI"] }))
-      await applyPermissions(await eth.borrow({ tokens: ["DAI", "ETH", "sDAI"] }))
+      await applyPermissions(
+        await eth.deposit({ targets: ["DAI", "ETH", "sDAI"] })
+      )
+      await applyPermissions(
+        await eth.borrow({ tokens: ["DAI", "ETH", "sDAI"] })
+      )
     })
 
     it("deposit sDAI", async () => {
@@ -22,7 +30,6 @@ describe("spark", () => {
         parseEther("10000"),
         contracts.mainnet.balancer.vault
       )
-      console.log((await sdk.spark.sDAI.balanceOf(avatar._address)).toBigInt())
       await expect(
         testKit.eth.spark.sDAI.approve(
           contracts.mainnet.spark.sparkLendingPoolV3,

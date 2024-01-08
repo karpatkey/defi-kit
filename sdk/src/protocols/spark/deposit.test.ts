@@ -63,9 +63,10 @@ describe("spark", () => {
     })
 
     it("allow setting the deposited ETH as collateral", async () => {
-      let reserve_config: Array<any> = await sdk.spark.data_provider.getReserveConfigurationData(
-        contracts.mainnet.weth
-      )
+      let reserve_config: Array<any> =
+        await sdk.spark.data_provider.getReserveConfigurationData(
+          contracts.mainnet.weth
+        )
       const collateralizable: boolean = reserve_config[5]
       if (collateralizable) {
         await expect(
@@ -136,9 +137,10 @@ describe("spark", () => {
     })
 
     it("allow setting the deposited USDC as collateral", async () => {
-      let reserve_config: Array<any> = await sdk.spark.data_provider.getReserveConfigurationData(
-        contracts.mainnet.usdc
-      )
+      let reserve_config: Array<any> =
+        await sdk.spark.data_provider.getReserveConfigurationData(
+          contracts.mainnet.usdc
+        )
       const collateralizable: boolean = reserve_config[5]
       if (collateralizable) {
         await expect(
@@ -170,13 +172,12 @@ describe("spark", () => {
         )
       ).not.toRevert()
       await expect(
-        testKit.eth.spark.sDAI.deposit(
-          parseEther("1000"),
-          avatar._address
-        )
+        testKit.eth.spark.sDAI.deposit(parseEther("1000"), avatar._address)
       ).not.toRevert()
       const sdai_balance_bn = await sdk.spark.sDAI.balanceOf(avatar._address)
-      const sdai_balance = ethers.utils.formatUnits(sdai_balance_bn, 18).toString()
+      const sdai_balance = ethers.utils
+        .formatUnits(sdai_balance_bn, 18)
+        .toString()
       await expect(
         testKit.eth.spark.sDAI.redeem(
           parseEther(sdai_balance),
@@ -186,10 +187,7 @@ describe("spark", () => {
       ).not.toRevert()
 
       await expect(
-        testKit.eth.spark.sDAI.deposit(
-          parseEther("1000"),
-          member._address
-        )
+        testKit.eth.spark.sDAI.deposit(parseEther("1000"), member._address)
       ).toBeForbidden(Status.ParameterNotAllowed)
       await expect(
         testKit.eth.spark.sDAI.redeem(

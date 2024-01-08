@@ -6,7 +6,10 @@ import { contracts } from "../../../eth-sdk/config"
 
 const _sDAI = (): Permission[] => {
   return [
-    ...allowErc20Approve([contracts.mainnet.dai], [contracts.mainnet.spark.sDAI]),
+    ...allowErc20Approve(
+      [contracts.mainnet.dai],
+      [contracts.mainnet.spark.sDAI]
+    ),
     allow.mainnet.spark.sDAI.deposit(undefined, c.avatar),
     allow.mainnet.spark.sDAI.redeem(undefined, c.avatar, c.avatar),
   ]
@@ -69,7 +72,7 @@ export const depositEther = () => [
   ),
 
   // sDAI permissions
-  ..._sDAI()
+  ..._sDAI(),
 ]
 
 export const borrowToken = (token: Token) => {
@@ -106,7 +109,7 @@ export const borrowEther = () => {
     //   contracts.mainnet.spark.wrappedTokenGatewayV3
     // ),
     allow.mainnet.spark.wrappedTokenGatewayV3.borrowETH(
-      contracts.mainnet.spark.sparkLendingPoolV3,
+      contracts.mainnet.spark.sparkLendingPoolV3
     ),
     allow.mainnet.spark.wrappedTokenGatewayV3.repayETH(
       contracts.mainnet.spark.sparkLendingPoolV3,

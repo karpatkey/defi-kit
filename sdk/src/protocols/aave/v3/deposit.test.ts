@@ -62,9 +62,10 @@ describe("aave_v3", () => {
     })
 
     it("allow setting the deposited ETH as collateral", async () => {
-      let reserve_config: Array<any> = await sdk.aaveV3.data_provider.getReserveConfigurationData(
-        contracts.mainnet.weth
-      )
+      let reserve_config: Array<any> =
+        await sdk.aaveV3.data_provider.getReserveConfigurationData(
+          contracts.mainnet.weth
+        )
       const collateralizable: boolean = reserve_config[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
@@ -136,9 +137,10 @@ describe("aave_v3", () => {
     })
 
     it("allow setting the deposited USDC as collateral", async () => {
-      let reserve_config: Array<any> = await sdk.aaveV3.data_provider.getReserveConfigurationData(
-        contracts.mainnet.usdc
-      )
+      let reserve_config: Array<any> =
+        await sdk.aaveV3.data_provider.getReserveConfigurationData(
+          contracts.mainnet.usdc
+        )
       const collateralizable: boolean = reserve_config[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
