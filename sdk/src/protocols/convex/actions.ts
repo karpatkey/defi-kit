@@ -1,7 +1,7 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { Permission, c } from "zodiac-roles-sdk"
 import { Pool, StakeToken } from "./types"
-import { allowErc20Approve } from "../../erc20"
+import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 
 const CRV = "0xD533a949740bb3306d119CC777fa900bA034cd52"

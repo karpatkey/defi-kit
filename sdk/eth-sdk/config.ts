@@ -68,7 +68,7 @@ export const contracts = {
       vlCVX: "0x72a19342e8F1838460eBFCCEf09F6585e32db86E",
     },
     cowswap: {
-      orderSigner: "0xdEb83d81d4a9758A7bAec5749DA863C409ea6C6B",
+      orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
     },
     curve: {
       regularPool: "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7",
