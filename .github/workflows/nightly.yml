@@ -34,10 +34,10 @@ jobs:
 
       - name: Run aave_v2.py
         run: python scripts/aave_v2.py
-      - name: Run aura.py
-        run: python scripts/aura.py
       - name: Run aave_v3.py
         run: python scripts/aave_v3.py
+      - name: Run aura.py
+        run: python scripts/aura.py
       - name: Run balancer.py
         run: python scripts/balancer.py
       - name: Run compound_v2
@@ -48,6 +48,8 @@ jobs:
         run: python scripts/convex.py
       - name: Run maker
         run: python scripts/maker.py
+      - name: Run spark
+        run: python scripts/spark.py
 
       - uses: actions/setup-node@v3
         with:

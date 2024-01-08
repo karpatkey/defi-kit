@@ -5,8 +5,7 @@ import {
   depositEther,
   depositToken,
   borrowEther,
-  borrowToken,
-  sDAI,
+  borrowToken
 } from "./actions"
 
 const findToken = (symbolOrAddress: string): Token => {
@@ -42,11 +41,6 @@ export const eth = {
       token === "ETH" ? borrowEther() : borrowToken(findToken(token))
     )
   },
-
-  // TODO move to client-configs
-  // sDAI: async () => {
-  //   return sDAI()
-  // },
 }
 
 const allTokenSymbols = [...tokens.map((token) => token.symbol), "ETH"] as (

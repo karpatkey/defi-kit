@@ -127,7 +127,7 @@ describe("aave_v3", () => {
           parseEther("1"),
           2,
           avatar._address,
-          { value: 1000 }
+          { value: parseEther("1") }
         )
       ).toBeAllowed()
 

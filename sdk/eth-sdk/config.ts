@@ -3,6 +3,7 @@ import { EthSdkConfig, defineConfig } from "@dethcrypto/eth-sdk"
 export const contracts = {
   mainnet: {
     aaveV2: {
+      data_provider: "0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d",
       aaveLendingPoolV2: "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9",
       paraSwapRepayAdapter: "0x80Aca0C645fEdABaa20fd2Bf0Daf57885A309FE6",
       wrappedTokenGatewayV2: "0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31",
@@ -17,6 +18,7 @@ export const contracts = {
       governanceV2Helper: "0xBb7baf0534423e3108E1D03c259104cDba2C1cB7",
     },
     aaveV3: {
+      data_provider: "0x7B4EB56E7CD4b454BA8ff71E4518426369a138a3",
       aaveLendingPoolV3: "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
       wrappedTokenGatewayV3: "0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C",
       aEthWETH: "0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8",
@@ -89,12 +91,15 @@ export const contracts = {
       GemJoin: "0x2F0b23f53734252Bda2277357e97e1517d6B042A",
     },
     spark: {
+      data_provider: "0xFc21d6d146E6086B8359705C8b28512a983db0cb",
       sparkLendingPoolV3: "0xC13e21B648A5Ee794902342038FF3aDAB66BE987",
       wrappedTokenGatewayV3: "0xBD7D6a9ad7865463DE44B05F04559f65e3B11704",
       variableDebtWETH: "0x2e7576042566f8D6990e07A1B61Ad1efd86Ae70d",
       stableDebtWETH: "0x3c6b93D38ffA15ea995D1BC950d5D0Fa6b22bD05",
+      spWETH: "0x59cD1C87501baa753d0B5B5Ab5D8416A45cD71DB",
       sDAI: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
     },
+    dai: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
     usdc: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
     weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
   },
