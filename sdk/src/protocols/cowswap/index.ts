@@ -23,7 +23,7 @@ const swap = async (options: {
   }
 
   return [
-    allowErc20Approve(sell, [GPv2VaultRelayer]),
+    ...allowErc20Approve(sell, [GPv2VaultRelayer]),
 
     allow.mainnet.cowswap.orderSigner.signOrder(
       orderStructScoping,
