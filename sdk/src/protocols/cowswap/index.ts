@@ -1,15 +1,15 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { oneOf } from "../../conditions"
+import { allowErc20Approve, oneOf } from "../../conditions"
+
+const GPv2VaultRelayer = "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
 
 const swap = async (options: {
-  sell?: `0x${string}`[]
+  sell: `0x${string}`[]
   buy?: `0x${string}`[]
 }) => {
   const { sell, buy } = options
-  if (sell && sell.length === 0) {
-    throw new Error(
-      "`sell` must not be an empty array. Pass `undefined` if you want to allow selling any token."
-    )
+  if (sell.length === 0) {
+    throw new Error("`sell` must not be an empty array.")
   }
   if (buy && buy.length === 0) {
     throw new Error(
@@ -17,15 +17,14 @@ const swap = async (options: {
     )
   }
 
-  const orderStructScoping =
-    sell || buy
-      ? ({
-          sellToken: sell && oneOf(sell),
-          buyToken: buy && oneOf(buy),
-        } as any) // StructScoping requires at least one field scoping to be defined. We make sure of that, but TS doesn't know that. So we cast to `any` to make TS happy.
-      : undefined
+  const orderStructScoping = {
+    sellToken: oneOf(sell),
+    buyToken: buy && oneOf(buy),
+  }
 
   return [
+    allowErc20Approve(sell, [GPv2VaultRelayer]),
+
     allow.mainnet.cowswap.orderSigner.signOrder(
       orderStructScoping,
       undefined,
