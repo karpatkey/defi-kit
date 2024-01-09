@@ -1637,4 +1637,80 @@ export default [
     ],
     rewarder: "0x07A319A023859BbD49CC9C38ee891c3EA9283Cc5",
   },
+  {
+    name: "50wstETH/50sDAI",
+    id: "183",
+    bpt: "0x6Aa6d7542310cDC75D1179B8729E1E6ec8d42BF1",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+        symbol: "sDAI",
+      },
+    ],
+    rewarder: "0xe771592D172a91fB30b9E80Cf0C2f17697CA60e0",
+  },
+  {
+    name: "pxETH/frxETH",
+    id: "184",
+    bpt: "0xB06bFBD7b50F80c8d9dA57Fc4cF5CBD5B3E2f148",
+    tokens: [
+      {
+        address: "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
+        symbol: "pxETH",
+      },
+      {
+        address: "0x5E8422345238F34275888049021821E8E08CAa1f",
+        symbol: "frxETH",
+      },
+      {
+        address: "0xB06bFBD7b50F80c8d9dA57Fc4cF5CBD5B3E2f148",
+        symbol: "pxETH/frxETH",
+      },
+    ],
+    rewarder: "0xE557658e3D13d074961265756dC2eFB6c903A763",
+  },
+  {
+    name: "pxETH/wETH",
+    id: "185",
+    bpt: "0x88794C65550DeB6b4087B7552eCf295113794410",
+    tokens: [
+      {
+        address: "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
+        symbol: "pxETH",
+      },
+      {
+        address: "0x88794C65550DeB6b4087B7552eCf295113794410",
+        symbol: "pxETH/wETH",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0x570eA5C8A528E3495EE9883910012BeD598E8814",
+  },
+  {
+    name: "sDAI/3Pool",
+    id: "186",
+    bpt: "0x49cbD67651fbabCE12d1df18499896ec87BEf46f",
+    tokens: [
+      {
+        address: "0x49cbD67651fbabCE12d1df18499896ec87BEf46f",
+        symbol: "sDAI/3Pool",
+      },
+      {
+        address: "0x79c58f70905F734641735BC61e45c19dD9Ad60bC",
+        symbol: "USDC-DAI-USDT",
+      },
+      {
+        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+        symbol: "sDAI",
+      },
+    ],
+    rewarder: "0x9360F473A533D7f8855C768437dd0c8cAEcCB9e6",
+  },
 ] as const
