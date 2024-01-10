@@ -1,27 +1,18 @@
 import { eth } from "."
 import { avatar, member } from "../../../test/wallets"
-import {
-  applyPermissions,
-  stealErc20,
-  advanceTime,
-} from "../../../test/helpers"
+import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
 import { parseEther } from "ethers/lib/utils"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-
-const sdk = getMainnetSdk(avatar)
 
 describe("spark", () => {
   describe("borrow", () => {
     beforeAll(async () => {
-      await applyPermissions(
-        await eth.deposit({ targets: ["DAI", "ETH", "sDAI"] })
-      )
-      await applyPermissions(
-        await eth.borrow({ tokens: ["DAI", "ETH", "sDAI"] })
-      )
+      await applyPermissions([
+        eth.deposit({ targets: ["DAI", "ETH", "sDAI"] }),
+        eth.borrow({ tokens: ["DAI", "ETH", "sDAI"] }),
+      ])
     })
 
     it("deposit sDAI", async () => {
@@ -182,7 +173,7 @@ describe("spark", () => {
           0,
           member._address
         )
-      ).toBeForbidden()
+      ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     it("only allows repaying DAI from avatar", async () => {
@@ -215,7 +206,7 @@ describe("spark", () => {
           2,
           member._address
         )
-      ).toBeForbidden()
+      ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     it("allows swapping the DAI borrow rate mode", async () => {

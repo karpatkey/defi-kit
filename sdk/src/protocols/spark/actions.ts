@@ -1,7 +1,7 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { c, Permission } from "zodiac-roles-sdk"
 import { Token } from "./types"
-import { allowErc20Approve } from "../../conditions"
+import { allowErc20Approve, oneOf } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 
 const _sDAI = (): Permission[] => {
@@ -75,21 +75,21 @@ export const depositEther = () => [
   ..._sDAI(),
 ]
 
-export const borrowToken = (token: Token) => {
+export const borrowTokens = (tokens: Token[]) => {
   return [
     ...allowErc20Approve(
-      [token.token],
+      tokens.map((token) => token.token),
       [contracts.mainnet.spark.sparkLendingPoolV3]
     ),
     allow.mainnet.spark.sparkLendingPoolV3.borrow(
-      token.token,
+      oneOf(tokens.map((token) => token.token)),
       undefined,
       undefined,
       undefined,
       c.avatar
     ),
     allow.mainnet.spark.sparkLendingPoolV3.repay(
-      token.token,
+      oneOf(tokens.map((token) => token.token)),
       undefined,
       undefined,
       c.avatar

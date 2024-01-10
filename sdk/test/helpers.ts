@@ -1,4 +1,4 @@
-import { Permission } from "zodiac-roles-sdk"
+import { Permission, PermissionSet } from "zodiac-roles-sdk"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { BigNumber, BigNumberish, Contract, Overrides } from "ethers"
 import { avatar, owner, member } from "./wallets"
@@ -7,7 +7,9 @@ import { createApply } from "../src/apply"
 import { Interface, parseEther } from "ethers/lib/utils"
 import { getRolesMod, testRoleKey } from "./rolesMod"
 
-export const applyPermissions = async (permissions: Permission[]) => {
+export const applyPermissions = async (
+  permissions: (Permission | PermissionSet | Promise<PermissionSet>)[]
+) => {
   const apply = createApply(1) // chainId here won't matter (since we pass currentTargets and currentAnnotations no subgraph queries will be made)
   const calls = await apply(testRoleKey, permissions, {
     address: getRolesMod().address as `0x${string}`,
