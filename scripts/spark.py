@@ -1,5 +1,5 @@
-from defi_protocols.functions import get_node, get_contract
-from defi_protocols.constants import ETHEREUM
+from defyes.functions import get_contract, get_node
+from defyes.constants import Chain
 from lib.dump import dump
 
 # Protocol Data Provider ABI - getAllReservesTokens, getUserReserveData, getReserveConfigurationData, getReserveTokensAddresses
@@ -10,17 +10,11 @@ SPARK_PDP = '0xFc21d6d146E6086B8359705C8b28512a983db0cb'
 # reserves_tokens_data
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def reserves_tokens_data():
-
-    # try:
-    #     with open(str(Path(os.path.abspath(__file__)).resolve().parents[0])+'/reserves_tokens_data.json', 'r') as reserves_tokens_file:
-    #         # Reading from json file
-    #         reserves_tokens_data = json.load(reserves_tokens_file)
-    # except:
     reserves_tokens_data = []
     
-    web3 = get_node(ETHEREUM)
+    web3 = get_node(Chain.ETHEREUM)
 
-    pdp_contract = get_contract(SPARK_PDP, ETHEREUM, web3=web3, abi=ABI_PDP)
+    pdp_contract = get_contract(SPARK_PDP, Chain.ETHEREUM, web3=web3, abi=ABI_PDP)
 
     reserves_tokens = pdp_contract.functions.getAllReservesTokens().call()
     

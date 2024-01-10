@@ -1,13 +1,7 @@
 import { NotFoundError } from "../../errors"
 import tokens from "./_info"
 import { Token } from "./types"
-import {
-  depositEther,
-  depositToken,
-  borrowEther,
-  borrowToken,
-  sDAI,
-} from "./actions"
+import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
 
 const findToken = (symbolOrAddress: string): Token => {
   const nameOrAddressLower = symbolOrAddress.toLowerCase()
@@ -42,11 +36,6 @@ export const eth = {
       token === "ETH" ? borrowEther() : borrowToken(findToken(token))
     )
   },
-
-  // TODO move to client-configs
-  // sDAI: async () => {
-  //   return sDAI()
-  // },
 }
 
 const allTokenSymbols = [...tokens.map((token) => token.symbol), "ETH"] as (

@@ -1,14 +1,22 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { c } from "zodiac-roles-sdk"
+import { c, Permission } from "zodiac-roles-sdk"
 import { Token } from "./types"
 import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 
-const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
-const DAI = "0x6b175474e89094c44da98b954eedeac495271d0f"
+const _sDAI = (): Permission[] => {
+  return [
+    ...allowErc20Approve(
+      [contracts.mainnet.dai],
+      [contracts.mainnet.spark.sDAI]
+    ),
+    allow.mainnet.spark.sDAI.deposit(undefined, c.avatar),
+    allow.mainnet.spark.sDAI.redeem(undefined, c.avatar, c.avatar),
+  ]
+}
 
 export const depositToken = (token: Token) => {
-  return [
+  const permissions = [
     ...allowErc20Approve(
       [token.token],
       [contracts.mainnet.spark.sparkLendingPoolV3]
@@ -16,8 +24,7 @@ export const depositToken = (token: Token) => {
     allow.mainnet.spark.sparkLendingPoolV3.supply(
       token.token,
       undefined,
-      c.avatar,
-      "0x"
+      c.avatar
     ),
     allow.mainnet.spark.sparkLendingPoolV3.withdraw(
       token.token,
@@ -28,13 +35,31 @@ export const depositToken = (token: Token) => {
       token.token
     ),
   ]
+
+  if (token.symbol === "WETH") {
+    permissions.push(
+      ...allowErc20Approve(
+        [contracts.mainnet.spark.spWETH],
+        [contracts.mainnet.spark.wrappedTokenGatewayV3]
+      )
+    )
+  }
+
+  // sDAI permissions
+  permissions.push(..._sDAI())
+
+  return permissions
 }
 
 export const depositEther = () => [
+  ...allowErc20Approve(
+    [contracts.mainnet.spark.spWETH],
+    [contracts.mainnet.spark.wrappedTokenGatewayV3]
+  ),
   allow.mainnet.spark.wrappedTokenGatewayV3.depositETH(
     contracts.mainnet.spark.sparkLendingPoolV3,
     c.avatar,
-    "0x",
+    undefined,
     { send: true }
   ),
   allow.mainnet.spark.wrappedTokenGatewayV3.withdrawETH(
@@ -42,7 +67,12 @@ export const depositEther = () => [
     undefined,
     c.avatar
   ),
-  allow.mainnet.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(WETH),
+  allow.mainnet.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
+    contracts.mainnet.weth
+  ),
+
+  // sDAI permissions
+  ..._sDAI(),
 ]
 
 export const borrowToken = (token: Token) => {
@@ -55,7 +85,7 @@ export const borrowToken = (token: Token) => {
       token.token,
       undefined,
       undefined,
-      "0x",
+      undefined,
       c.avatar
     ),
     allow.mainnet.spark.sparkLendingPoolV3.repay(
@@ -79,27 +109,16 @@ export const borrowEther = () => {
     //   contracts.mainnet.spark.wrappedTokenGatewayV3
     // ),
     allow.mainnet.spark.wrappedTokenGatewayV3.borrowETH(
-      contracts.mainnet.spark.sparkLendingPoolV3,
-      undefined,
-      undefined,
-      "0x"
+      contracts.mainnet.spark.sparkLendingPoolV3
     ),
     allow.mainnet.spark.wrappedTokenGatewayV3.repayETH(
       contracts.mainnet.spark.sparkLendingPoolV3,
       undefined,
       undefined,
-      "0x",
+      c.avatar,
       { send: true }
     ),
     // Spark has only made available the borrow action with interestRateModel = 2 (Variable Debt)
     // allow.mainnet.spark.sparkLendingPoolV3.swapBorrowRateMode(WETH),
-  ]
-}
-
-export const sDAI = () => {
-  return [
-    ...allowErc20Approve([DAI], [contracts.mainnet.spark.sDAI]),
-    allow.mainnet.spark.sDAI.deposit(undefined, c.avatar),
-    allow.mainnet.spark.sDAI.redeem(undefined, c.avatar, c.avatar),
   ]
 }

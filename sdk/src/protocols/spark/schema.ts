@@ -14,6 +14,4 @@ export const eth = {
   borrow: z.object({
     targets: zToken.array(),
   }),
-
-  sDAI: z.object({}),
 }

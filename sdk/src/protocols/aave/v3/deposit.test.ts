@@ -7,6 +7,8 @@ import { testKit } from "../../../../test/kit"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { parseEther, parseUnits } from "ethers/lib/utils"
 
+const sdk = getMainnetSdk(avatar)
+
 describe("aave_v3", () => {
   describe("deposit", () => {
     beforeAll(async () => {
@@ -60,12 +62,27 @@ describe("aave_v3", () => {
     })
 
     it("allow setting the deposited ETH as collateral", async () => {
-      await expect(
-        testKit.eth.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(
-          contracts.mainnet.weth,
-          true
+      let reserve_config: Array<any> =
+        await sdk.aaveV3.data_provider.getReserveConfigurationData(
+          contracts.mainnet.weth
         )
-      ).not.toRevert()
+      const collateralizable: boolean = reserve_config[5]
+      console.log("is collateralizable: ", collateralizable)
+      if (collateralizable) {
+        await expect(
+          testKit.eth.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(
+            contracts.mainnet.weth,
+            true
+          )
+        ).not.toRevert()
+      } else {
+        await expect(
+          testKit.eth.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(
+            contracts.mainnet.weth,
+            true
+          )
+        ).toRevert()
+      }
     })
 
     // Test with USDC
@@ -120,12 +137,27 @@ describe("aave_v3", () => {
     })
 
     it("allow setting the deposited USDC as collateral", async () => {
-      await expect(
-        testKit.eth.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(
-          contracts.mainnet.usdc,
-          true
+      let reserve_config: Array<any> =
+        await sdk.aaveV3.data_provider.getReserveConfigurationData(
+          contracts.mainnet.usdc
         )
-      ).not.toRevert()
+      const collateralizable: boolean = reserve_config[5]
+      console.log("is collateralizable: ", collateralizable)
+      if (collateralizable) {
+        await expect(
+          testKit.eth.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(
+            contracts.mainnet.usdc,
+            true
+          )
+        ).not.toRevert()
+      } else {
+        await expect(
+          testKit.eth.aaveV3.aaveLendingPoolV3.setUserUseReserveAsCollateral(
+            contracts.mainnet.usdc,
+            true
+          )
+        ).toRevert()
+      }
     })
   })
 })
