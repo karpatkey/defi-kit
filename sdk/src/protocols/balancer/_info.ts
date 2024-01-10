@@ -1114,25 +1114,6 @@ export default [
     ],
   },
   {
-    bpt: "0x3FA8C89704e5d07565444009e5d9e624B40Be813",
-    id: "0x3fa8c89704e5d07565444009e5d9e624b40be813000000000000000000000599",
-    name: "GHO/LUSD",
-    type: "ComposableStable",
-    gauge: "0x70892E4355d0E04A3d19264E93c64C401520f3A4",
-    tokens: [
-      {
-        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
-        symbol: "GHO",
-        id: "0x",
-      },
-      {
-        address: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
-        symbol: "LUSD",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x3ff3a210e57cFe679D9AD1e9bA6453A716C56a2e",
     id: "0x3ff3a210e57cfe679d9ad1e9ba6453a716c56a2e0002000000000000000005d5",
     name: "STG/USDC",
@@ -1399,25 +1380,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x517390b2B806cb62f20ad340DE6d98B2A8F17F2B",
-    id: "0x517390b2b806cb62f20ad340de6d98b2a8f17f2b0002000000000000000001ba",
-    name: "20WETH-80ELIMU",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xe29797910D413281d2821D5d9a989262c8121CC2",
-        symbol: "ELIMU",
         id: "0x",
       },
     ],
@@ -2257,25 +2219,6 @@ export default [
       {
         address: "0xd084944d3c05CD115C09d072B9F44bA3E0E45921",
         symbol: "FOLD",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x8334215586e93EE85E3f1a281eAF66e52015754D",
-    id: "0x8334215586e93ee85e3f1a281eaf66e52015754d00020000000000000000057e",
-    name: "50WETH-50FIEF",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xeA068Fba19CE95f12d252aD8Cb2939225C4Ea02D",
-        symbol: "FIEF",
         id: "0x",
       },
     ],
@@ -4116,6 +4059,25 @@ export default [
       {
         address: "0x408e41876cCCDC0F92210600ef50372656052a38",
         symbol: "REN",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xee3959FD00a0B996d801fc34B7CE566bD037f5f5",
+    id: "0xee3959fd00a0b996d801fc34b7ce566bd037f5f500020000000000000000063e",
+    name: "80MIMO-20WETH",
+    type: "Weighted",
+    gauge: "0x6be156504Cda8ee38169BE96Bcf53AEAB4377c1a",
+    tokens: [
+      {
+        address: "0x90B831fa3Bebf58E9744A14D638E25B4eE06f9Bc",
+        symbol: "MIMO",
         id: "0x",
       },
       {
