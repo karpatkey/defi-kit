@@ -4,19 +4,23 @@ import { c, Permission } from "zodiac-roles-sdk"
 import { Token, cToken } from "./types"
 import { allowErc20Approve } from "../../../conditions"
 
-// const _mint = (ctoken: cToken): Permission => {
-//   return {
-//     targetAddress: ctoken,
-//     signature: "mint(uint256)",
-//     send: true,
-//   }
-// }
+const _mint = (token: Token): Permission[] => {
+  const permissions = []
 
-const _mint = (ctoken: cToken): Permission => {
-  return {
-    ...allow.mainnet.compoundV2.cToken.mint(undefined, { send: true }),
-    targetAddress: ctoken,
+  if (token.symbol === "ETH") {
+    permissions.push(
+      allow.mainnet.compoundV2.cETH.mint({
+        send: true,
+      })
+    )
+  } else {
+    permissions.push({
+      ...allow.mainnet.compoundV2.cToken.mint(undefined),
+      targetAddress: token.cToken,
+    })
   }
+
+  return permissions
 }
 
 // it is called when MAX underlying amount is withdrawn
@@ -42,22 +46,34 @@ const _borrow = (ctoken: cToken): Permission => {
   }
 }
 
-const _repay = (ctoken: cToken): Permission => {
-  return {
-    ...allow.mainnet.compoundV2.cToken.repayBorrow(),
-    targetAddress: ctoken,
+const _repay = (token: Token): Permission[] => {
+  const permissions = []
+
+  if (token.symbol === "ETH") {
+    permissions.push(
+      allow.mainnet.compoundV2.cETH.repayBorrow({
+        send: true,
+      })
+    )
+  } else {
+    permissions.push({
+      ...allow.mainnet.compoundV2.cToken.repayBorrow(),
+      targetAddress: token.cToken,
+    })
   }
+
+  return permissions
 }
 
 export const deposit = (token: Token) => {
-  const permissions = []
+  const permissions: Permission[] = []
   if (token.mint_paused) {
     throw new MintPaused(`Error: c${token.symbol} paused for minting`)
   } else {
     if (token.symbol != "ETH") {
       permissions.push(...allowErc20Approve([token.token], [token.cToken]))
     }
-    permissions.push(_mint(token.cToken))
+    permissions.push(..._mint(token))
     permissions.push(_redeem(token.cToken))
     permissions.push(_redeemUnderlying(token.cToken))
     permissions.push(
@@ -68,8 +84,7 @@ export const deposit = (token: Token) => {
     )
     permissions.push(
       allow.mainnet.compoundV2.comptroller["claimComp(address,address[])"](
-        c.avatar,
-        [token.cToken]
+        c.avatar
       )
     )
 
@@ -78,12 +93,16 @@ export const deposit = (token: Token) => {
 }
 
 export const borrow = (token: Token) => {
-  const permissions = []
+  const permissions: Permission[] = []
   if (token.symbol != "ETH") {
     permissions.push(...allowErc20Approve([token.token], [token.cToken]))
-    permissions.push(_repay(token.cToken))
+    permissions.push(..._repay(token))
   } else {
-    permissions.push(allow.mainnet.compoundV2.maximillion.repayBehalf(c.avatar))
+    permissions.push(
+      allow.mainnet.compoundV2.maximillion.repayBehalf(c.avatar, {
+        send: true,
+      })
+    )
   }
   permissions.push(_borrow(token.cToken))
 

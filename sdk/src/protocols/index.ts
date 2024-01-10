@@ -3,7 +3,7 @@ import * as aave_v3 from "./aave/v3"
 import * as aura from "./aura"
 import * as balancer from "./balancer"
 import * as compound_v2 from "./compound/v2"
-import * as compound_v3 from "./compound/v3"
+// import * as compound_v3 from "./compound/v3"
 import * as convex from "./convex"
 import * as cowswap from "./cowswap"
 import * as lido from "./lido"
@@ -21,7 +21,7 @@ export const eth = annotateAll(
     aura: aura.eth,
     balancer: balancer.eth,
     compound_v2: compound_v2.eth,
-    compound_v3: compound_v3.eth,
+    // compound_v3: compound_v3.eth,
     convex: convex.eth,
     cowswap: cowswap.eth,
     lido: lido.eth,

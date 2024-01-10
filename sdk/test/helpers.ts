@@ -19,14 +19,145 @@ export const applyPermissions = async (permissions: Permission[]) => {
 
   console.log(`Applying permissions with ${calls.length} calls`)
   let nonce = await owner.getTransactionCount()
+
   await Promise.all(
-    calls.map((call) =>
-      owner.sendTransaction({
-        ...call,
-        nonce: nonce++,
-      })
-    )
+    calls.map(async (call, i) => {
+      try {
+        return await owner.sendTransaction({
+          ...call,
+          nonce: nonce++,
+        })
+      } catch (e: any) {
+        console.error(`Error applying permissions in call #${i}:`, call)
+        if (e.error?.error?.data) {
+          const iface = new Interface([
+            {
+              inputs: [],
+              name: "NotBFS",
+              type: "error",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "index",
+                  type: "uint256",
+                },
+              ],
+              name: "UnsuitableChildCount",
+              type: "error",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "index",
+                  type: "uint256",
+                },
+              ],
+              name: "UnsuitableChildTypeTree",
+              type: "error",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "index",
+                  type: "uint256",
+                },
+              ],
+              name: "UnsuitableCompValue",
+              type: "error",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "index",
+                  type: "uint256",
+                },
+              ],
+              name: "UnsuitableParameterType",
+              type: "error",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "index",
+                  type: "uint256",
+                },
+              ],
+              name: "UnsuitableParent",
+              type: "error",
+            },
+            {
+              inputs: [],
+              name: "UnsuitableRootNode",
+              type: "error",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "index",
+                  type: "uint256",
+                },
+              ],
+              name: "UnsupportedOperator",
+              type: "error",
+            },
+            {
+              inputs: [
+                {
+                  components: [
+                    {
+                      internalType: "uint8",
+                      name: "parent",
+                      type: "uint8",
+                    },
+                    {
+                      internalType: "enum ParameterType",
+                      name: "paramType",
+                      type: "ParameterType",
+                    },
+                    {
+                      internalType: "enum Operator",
+                      name: "operator",
+                      type: "Operator",
+                    },
+                    {
+                      internalType: "bytes",
+                      name: "compValue",
+                      type: "bytes",
+                    },
+                  ],
+                  internalType: "struct ConditionFlat[]",
+                  name: "conditions",
+                  type: "tuple[]",
+                },
+              ],
+              name: "enforce",
+              outputs: [],
+              stateMutability: "pure",
+              type: "function",
+            },
+          ])
+          const error = iface.getError(e.error.error.data.slice(0, 10))
+          if (error) {
+            console.error(
+              "Integrity check failed with:",
+              error.name,
+              iface.decodeErrorResult(error, e.error.error.data)
+            )
+            throw new Error(`Integrity check failed with: ${error.name}`)
+          }
+        }
+        throw e
+      }
+    })
   )
+
   console.log("Permissions applied")
 }
 

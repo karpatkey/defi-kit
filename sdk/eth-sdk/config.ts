@@ -51,7 +51,8 @@ export const contracts = {
     compoundV2: {
       comptroller: "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
       maximillion: "0xf859A1AD94BcF445A406B892eF0d3082f4174088",
-      cToken: "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643",
+      cETH: "0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5",
+      cToken: "0x39AA39c021dfbaE8faC545936693aC917d5E7563",
     },
     compoundV3: {
       cUSDCv3: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",

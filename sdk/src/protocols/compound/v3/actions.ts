@@ -174,6 +174,7 @@ export const borrow = (comet: Comet) => {
   } else {
     permissions.push(
       allow.mainnet.compoundV3.MainnetBulker.invoke(
+        // TODO this does not work, since the type trees are different (Roles mod will raise an integrity check error when applying)
         c.every(
           c.or(
             c.eq(ACTION_SUPPLY_NATIVE_TOKEN),
