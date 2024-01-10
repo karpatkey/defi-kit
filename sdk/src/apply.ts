@@ -8,6 +8,7 @@ import {
   PermissionSet,
   Target,
   Annotation,
+  fetchRole,
 } from "zodiac-roles-sdk"
 import { NotFoundError } from "./errors"
 
@@ -42,26 +43,24 @@ export const createApply = (chainId: ChainId) => {
     const { targets, annotations } = processPermissions(awaitedPermissions)
     checkIntegrity(targets)
 
-    let rolesModCalls: `0x${string}`[] = []
-    let posterCalls: `0x${string}`[] = []
-    try {
-      rolesModCalls = await applyTargets(roleKey, targets, {
-        ...options,
-        chainId,
-      })
-
-      posterCalls = await applyAnnotations(roleKey, annotations, {
-        ...options,
-        chainId,
-      })
-    } catch (e) {
-      // make role not found error to NotFoundError so the API will respond with 404
-      if (e instanceof Error && e.message.indexOf("not found") !== -1) {
-        throw new NotFoundError(e.message)
-      }
-
-      throw e
+    const role = await fetchRole({ address: options.address, roleKey, chainId })
+    if (!role && options.mode === "remove") {
+      throw new NotFoundError(
+        `Role ${roleKey} not found on mod at address ${options.address}`
+      )
     }
+
+    const rolesModCalls = await applyTargets(roleKey, targets, {
+      ...options,
+      chainId,
+      currentTargets: options.currentTargets || role?.targets || [],
+    })
+
+    const posterCalls = await applyAnnotations(roleKey, annotations, {
+      ...options,
+      chainId,
+      currentAnnotations: options.currentAnnotations || role?.annotations || [],
+    })
 
     const value = "0" as const
     return [
