@@ -1,12 +1,7 @@
 import { NotFoundError } from "../../errors"
 import tokens from "./_info"
 import { Token } from "./types"
-import {
-  depositEther,
-  depositToken,
-  borrowEther,
-  borrowTokens,
-} from "./actions"
+import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
 
 const findToken = (symbolOrAddress: string): Token => {
   const nameOrAddressLower = symbolOrAddress.toLowerCase()
@@ -37,17 +32,9 @@ export const eth = {
   }: {
     tokens: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
-    const result = []
-    if (tokens.includes("ETH")) {
-      result.push(...borrowEther())
-    }
-
-    const erc20Tokens = tokens.filter((token) => token !== "ETH").map(findToken)
-    if (erc20Tokens.length) {
-      result.push(...borrowTokens(erc20Tokens))
-    }
-
-    return result
+    return tokens.flatMap((token) =>
+      token === "ETH" ? borrowEther() : borrowToken(findToken(token))
+    )
   },
 }
 
