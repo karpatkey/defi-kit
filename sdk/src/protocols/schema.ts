@@ -3,7 +3,7 @@ import * as aave_v3 from "./aave/v3/schema"
 import * as aura from "./aura/schema"
 import * as balancer from "./balancer/schema"
 import * as compound_v2 from "./compound/v2/schema"
-import * as compound_v3 from "./compound/v3/schema"
+// import * as compound_v3 from "./compound/v3/schema"
 import * as convex from "./convex/schema"
 import * as lido from "./lido/schema"
 import * as maker from "./maker/schema"
@@ -18,7 +18,7 @@ export const eth = {
   aura: aura.eth,
   balancer: balancer.eth,
   compound_v2: compound_v2.eth,
-  compound_v3: compound_v3.eth,
+  // compound_v3: compound_v3.eth,
   convex: convex.eth,
   lido: lido.eth,
   maker: maker.eth,
