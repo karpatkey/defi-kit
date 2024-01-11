@@ -1,6 +1,5 @@
-from defyes.functions import get_contract, get_decimals, get_symbol
-from defyes.node import get_node
-from defyes.constants import Address, Chain
+from defyes.functions import get_contract, get_decimals, get_symbol, get_node
+from karpatkit.constants import Address, Chain
 from defyes.protocols.balancer import get_gauge_addresses
 # thegraph queries
 from gql import gql, Client

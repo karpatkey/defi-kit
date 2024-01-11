@@ -1,7 +1,6 @@
 from defyes.protocols.compound import ABI_CTOKEN
-from defyes.functions import get_contract, get_symbol
-from defyes.node import get_node
-from defyes.constants import Chain, Address
+from defyes.functions import get_contract, get_symbol, get_node
+from karpatkit.constants import Chain, Address
 from web3.exceptions import BadFunctionCallOutput
 from lib.dump import dump
 
