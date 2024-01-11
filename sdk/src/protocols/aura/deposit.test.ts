@@ -10,7 +10,8 @@ import { parseEther } from "ethers/lib/utils"
 
 const sdk = getMainnetSdk(avatar)
 const b_50WETH_50AURA = "0xCfCA23cA9CA720B6E98E3Eb9B6aa0fFC4a5C08B9"
-const b_50WETH_50AURA_pid = "0xcfca23ca9ca720b6e98e3eb9b6aa0ffc4a5c08b9000200000000000000000274"
+const b_50WETH_50AURA_pid =
+  "0xcfca23ca9ca720b6e98e3eb9b6aa0ffc4a5c08b9000200000000000000000274"
 const aura_50WETH_50AURA_rewarder = "0x1204f5060bE8b716F5A62b4Df4cE32acD01a69f5"
 
 describe("aura", () => {
@@ -26,45 +27,33 @@ describe("aura", () => {
         contracts.mainnet.aura.booster
       )
       await expect(
-        testKit.eth.usdc.attach(b_50WETH_50AURA).approve(
-          contracts.mainnet.aura.booster,
-          parseEther("1")
-        )
+        testKit.eth.usdc
+          .attach(b_50WETH_50AURA)
+          .approve(contracts.mainnet.aura.booster, parseEther("1"))
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aura.booster.deposit(
-          100,
-          parseEther("1"),
-          true
-        )
+        testKit.eth.aura.booster.deposit(100, parseEther("1"), true)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.booster.deposit(
-          99,
-          parseEther("1"),
-          true
-        )
+        testKit.eth.aura.booster.deposit(99, parseEther("1"), true)
       ).toBeForbidden(Status.ParameterNotAllowed)
 
       await expect(
-        testKit.eth.aura.rewarder.attach(aura_50WETH_50AURA_rewarder).withdrawAndUnwrap(
-          parseEther("1"),
-          false
-        )
+        testKit.eth.aura.rewarder
+          .attach(aura_50WETH_50AURA_rewarder)
+          .withdrawAndUnwrap(parseEther("1"), false)
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aura.rewarder.attach(aura_50WETH_50AURA_rewarder)["getReward(address,bool)"](
-          avatar._address,
-          true
-        )
+        testKit.eth.aura.rewarder
+          .attach(aura_50WETH_50AURA_rewarder)
+          ["getReward(address,bool)"](avatar._address, true)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.rewarder.attach(aura_50WETH_50AURA_rewarder)["getReward(address,bool)"](
-          member._address,
-          true
-        )
+        testKit.eth.aura.rewarder
+          .attach(aura_50WETH_50AURA_rewarder)
+          ["getReward(address,bool)"](member._address, true)
       ).toBeForbidden(Status.ParameterNotAllowed)
     }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
 
@@ -86,8 +75,9 @@ describe("aura", () => {
           {
             assets: [contracts.mainnet.weth, AURA],
             maxAmountsIn: [parseEther("1"), 0],
-            userData: "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000000000000000000",
-            fromInternalBalance: false
+            userData:
+              "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000000000000000000",
+            fromInternalBalance: false,
           }
         )
       ).not.toRevert()
@@ -101,8 +91,9 @@ describe("aura", () => {
           {
             assets: [contracts.mainnet.weth, AURA],
             maxAmountsIn: [parseEther("1"), 0],
-            userData: "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000000000000000000",
-            fromInternalBalance: false
+            userData:
+              "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000000000000000000",
+            fromInternalBalance: false,
           }
         )
       ).toBeForbidden()
