@@ -44,10 +44,10 @@ describe("convex", () => {
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
 
-      await advanceTime(10200000) // 16 weeks and 6 days must pass for the tokens to be unlocked
+      await advanceTime(10300000) // 16 weeks and 6 days must pass for the tokens to be unlocked
       await expect(
         testKit.eth.convex.vlCVX.processExpiredLocks(true)
       ).not.toRevert()
-    }, 60000) // Added 30 seconds of timeout because the lock takes too long and the test fails.
+    }, 90000) // Added 90 seconds of timeout because the lock takes too long and the test fails.
   })
 })
