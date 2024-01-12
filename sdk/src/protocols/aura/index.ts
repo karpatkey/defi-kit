@@ -2,7 +2,7 @@ import { NotFoundError } from "../../errors"
 import ethPools from "./_ethPools"
 import gnoPools from "./_gnoPools"
 import { EthPool, StakeToken, EthToken, GnoToken, GnoPool, Pool } from "./types"
-import { deposit, stake, compound, lock } from "./actions"
+import { deposit, stake, lock } from "./actions"
 import stakeTokens from "./stakeTokens"
 
 const findPool = (pools: readonly Pool[], nameOrAddressOrId: string) => {
@@ -73,7 +73,7 @@ export const eth = {
     return targets.flatMap((token) => stake(findStakeToken(token)))
   },
 
-  // TODO standard action? include in stake action? or move to client-configs?
+  // Included in stake() action
   // compound: async({
   //   targets,
   // }: {

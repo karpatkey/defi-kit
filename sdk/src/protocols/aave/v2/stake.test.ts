@@ -1,6 +1,10 @@
 import { eth } from "."
 import { avatar, member } from "../../../../test/wallets"
-import { applyPermissions, stealErc20 } from "../../../../test/helpers"
+import {
+  applyPermissions,
+  stealErc20,
+  advanceTime,
+} from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { Status } from "../../../../test/types"
 import { testKit } from "../../../../test/kit"
@@ -40,18 +44,28 @@ describe("aave_v2", () => {
 
       await expect(testKit.eth.aaveV2.stkaave.cooldown()).not.toRevert()
 
-      // The redeem() is only tested to go through the roles because
-      // the cooldown period should pass in order to withdraw the AAVE.
+      // The 20 days cooldown period must pass in order to withdraw the AAVE.
+      await advanceTime(1730000)
       await expect(
         testKit.eth.aaveV2.stkaave.redeem(avatar._address, 1)
-      ).toBeAllowed()
+      ).not.toRevert()
+      await expect(
+        testKit.eth.aaveV2.stkaave.claimRewardsAndStake(avatar._address, 1)
+      ).not.toRevert()
+      await expect(
+        testKit.eth.aaveV2.stkaave.claimRewards(avatar._address, 1)
+      ).not.toRevert()
     })
 
-    it("only allows staking AAVE from avatar", async () => {
-      const anotherAddress = member._address
-
+    it("only allows staking and claiming AAVE from avatar", async () => {
       await expect(
-        testKit.eth.aaveV2.stkaave.stake(anotherAddress, parseEther("1"))
+        testKit.eth.aaveV2.stkaave.stake(member._address, parseEther("1"))
+      ).toBeForbidden(Status.ParameterNotAllowed)
+      await expect(
+        testKit.eth.aaveV2.stkaave.claimRewardsAndStake(member._address, 1)
+      ).toBeForbidden(Status.ParameterNotAllowed)
+      await expect(
+        testKit.eth.aaveV2.stkaave.claimRewards(member._address, 1)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
   })

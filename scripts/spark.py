@@ -1,5 +1,5 @@
 from defyes.functions import get_contract, get_node
-from defyes.constants import Chain
+from karpatkit.constants import Chain
 from lib.dump import dump
 
 # Protocol Data Provider ABI - getAllReservesTokens, getUserReserveData, getReserveConfigurationData, getReserveTokensAddresses
