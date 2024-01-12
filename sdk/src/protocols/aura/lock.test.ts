@@ -42,10 +42,11 @@ describe("aura", () => {
         testKit.eth.aura.aura_locker["getReward(address)"](member._address)
       ).toBeForbidden(Status.ParameterNotAllowed)
 
-      // const provider = getProvider()
-      // console.log(await provider.getBlockNumber())
-      // advanceTime(170000)
-      // console.log(await provider.getBlockNumber())
+      const provider = getProvider()
+      console.log(await provider.getBlock("latest"))
+      await advanceTime(170000)
+      console.log(await provider.getBlock("latest"))
+
       await expect(
         testKit.eth.aura.aura_locker.processExpiredLocks(true)
       ).toBeAllowed()

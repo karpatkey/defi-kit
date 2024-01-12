@@ -241,4 +241,5 @@ export const stealErc20 = async (
 export async function advanceTime(seconds: number) {
   const provider = getProvider()
   await provider.send("evm_increaseTime", [seconds])
+  await provider.send("evm_mine", [])
 }
