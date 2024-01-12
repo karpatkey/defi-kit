@@ -4,8 +4,8 @@ import { Pool, StakeToken } from "./types"
 import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 
-const CRV = "0xD533a949740bb3306d119CC777fa900bA034cd52"
-const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
+export const CRV = "0xD533a949740bb3306d119CC777fa900bA034cd52"
+export const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 export const CVX = "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b"
 
 export const deposit = (pool: Pool) => {

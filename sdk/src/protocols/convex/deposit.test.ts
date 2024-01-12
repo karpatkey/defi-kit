@@ -1,14 +1,11 @@
 import { eth } from "."
-import { CVX } from "./actions"
 import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { parseEther } from "ethers/lib/utils"
 
-const sdk = getMainnetSdk(avatar)
 const steCRV = "0x06325440D014e39736583c165C2963BA99fAf14E"
 const cvxsteCRV = "0x9518c9063eB0262D791f38d8d6Eb0aca33c63ed0"
 const cvxsteCRV_rewarder = "0x0A760466E1B4621579a82a39CB56Dda2F4E70f03"
