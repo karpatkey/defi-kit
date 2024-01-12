@@ -6,12 +6,12 @@ import { contracts } from "../../../eth-sdk/config"
 
 const CRV = "0xD533a949740bb3306d119CC777fa900bA034cd52"
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
-const CVX = "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b"
+export const CVX = "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b"
 
 export const deposit = (pool: Pool) => {
   const permissions: Permission[] = [
     ...allowErc20Approve([pool.crvLPToken], [contracts.mainnet.convex.booster]),
-    ...allowErc20Approve([pool.crvLPToken], [pool.rewarder]),
+    ...allowErc20Approve([pool.cvxDepositToken], [pool.rewarder]),
 
     allow.mainnet.convex.booster.deposit(pool.id),
     allow.mainnet.convex.booster.depositAll(pool.id),
