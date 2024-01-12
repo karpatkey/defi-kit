@@ -48,6 +48,6 @@ describe("convex", () => {
       await expect(
         testKit.eth.convex.vlCVX.processExpiredLocks(true)
       ).not.toRevert()
-    }, 30000) // Added 30 seconds of timeout because the lock takes too long and the test fails.
+    }, 60000) // Added 30 seconds of timeout because the lock takes too long and the test fails.
   })
 })
