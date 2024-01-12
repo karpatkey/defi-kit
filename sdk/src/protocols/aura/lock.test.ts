@@ -9,11 +9,7 @@ import {
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { parseEther } from "ethers/lib/utils"
-import { getProvider } from "../../../test/provider"
-
-const sdk = getMainnetSdk(avatar)
 
 describe("aura", () => {
   describe("stake", () => {
@@ -42,14 +38,10 @@ describe("aura", () => {
         testKit.eth.aura.aura_locker["getReward(address)"](member._address)
       ).toBeForbidden(Status.ParameterNotAllowed)
 
-      const provider = getProvider()
-      console.log(await provider.getBlock("latest"))
-      await advanceTime(170000)
-      console.log(await provider.getBlock("latest"))
-
+      await advanceTime(10200000) // 16 weeks and 5 days must pass for the tokens to be unlocked
       await expect(
         testKit.eth.aura.aura_locker.processExpiredLocks(true)
-      ).toBeAllowed()
+      ).not.toRevert()
     })
   })
 })
