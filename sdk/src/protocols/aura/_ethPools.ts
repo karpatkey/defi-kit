@@ -1713,4 +1713,20 @@ export default [
     ],
     rewarder: "0x9360F473A533D7f8855C768437dd0c8cAEcCB9e6",
   },
+  {
+    name: "ECLP-swETH-wstETH",
+    id: "187",
+    bpt: "0x127ECc2318d002664cc4515C9f2B22B09b6aea85",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xf951E335afb289353dc249e82926178EaC7DEd78",
+        symbol: "swETH",
+      },
+    ],
+    rewarder: "0x52D97Fa3481BbFa95Cb48d8af4B1e31756EE1DB8",
+  },
 ] as const
