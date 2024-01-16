@@ -80,7 +80,7 @@ export default [
     borrowingEnabled: false,
     stableBorrowRateEnabled: false,
     isActive: true,
-    isFrozen: false,
+    isFrozen: true,
     aTokenAddress: "0x7b481aCC9fDADDc9af2cBEA1Ff2342CB1733E50F",
     stableDebtTokenAddress: "0xbf13910620722D4D4F8A03962894EB3335Bf4FaE",
     variableDebtTokenAddress: "0x57a2957651DA467fCD4104D749f2F3684784c25a",
