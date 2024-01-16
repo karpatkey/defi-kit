@@ -146,6 +146,9 @@ export const lock = (): Permission[] => {
       c.avatar,
       c.avatar
     ),
+    // As Safes are smart contracts they are not allowed to lock veBAL
+    // if the they are not whitelisted previously by Balancer:
+    // https://forum.balancer.fi/t/allow-for-gnosis-safe-to-be-used-for-vebal-locking/2698
     allow.mainnet.balancer.vebal.create_lock(),
     allow.mainnet.balancer.vebal.increase_amount(),
     allow.mainnet.balancer.vebal.increase_unlock_time(),
