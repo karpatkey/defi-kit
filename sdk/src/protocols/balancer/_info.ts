@@ -2853,6 +2853,25 @@ export default [
     ],
   },
   {
+    bpt: "0xA2E9242163d54b536583368a01b5D232C95aA884",
+    id: "0xa2e9242163d54b536583368a01b5d232c95aa884000000000000000000000653",
+    name: "ePENDLE/PENDLE",
+    type: "ComposableStable",
+    gauge: "0xc40F4ABc616Ab3136A002A667A7830F3F7dEC5FA",
+    tokens: [
+      {
+        address: "0x22Fc5A29bd3d6CCe19a06f844019fd506fCe4455",
+        symbol: "ePendle",
+        id: "0x",
+      },
+      {
+        address: "0x808507121B80c02388fAd14726482e061B8da827",
+        symbol: "PENDLE",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xa3C500969accb3D8DF08CBa313C120818fE0ed9D",
     id: "0xa3c500969accb3d8df08cba313c120818fe0ed9d000200000000000000000471",
     name: "50SYN-50WETH",
