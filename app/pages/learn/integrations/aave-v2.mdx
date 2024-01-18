@@ -9,7 +9,7 @@
 | `stkAAVE`               | [0x4da27a545c0c5b758a6ba100e3a049001de870f5](https://etherscan.io/address/0x4da27a545c0c5b758a6ba100e3a049001de870f5) |
 | `ABPT`                  | [0x41A08648C3766F9F9d85598fF102a08f4ef84F84](https://etherscan.io/address/0x41A08648C3766F9F9d85598fF102a08f4ef84F84) |
 | `stkABPT`               | [0xa1116930326D21fB917d5A27F1E9943A9595fb47](https://etherscan.io/address/0xa1116930326D21fB917d5A27F1E9943A9595fb47) |
-| `AaveGovernanceV2`      | [0xEC568fffba86c094cf06b22134B23074DFE2252c](https://etherscan.io/address/0xEC568fffba86c094cf06b22134B23074DFE2252c) |
+| `aEthAAVE`              | [0xA700b4eB416Be35b2911fd5Dee80678ff64fF6C9](https://etherscan.io/address/0xA700b4eB416Be35b2911fd5Dee80678ff64fF6C9) |
 
 ## Actions
 
@@ -23,7 +23,7 @@
 
 #### Allowed functions
 
-##### - `Token` is not ETH:
+##### - `Token` is not ETH
 
 1. `approve` `Token` (spender: `AaveLendingPoolV2`)
 
@@ -88,7 +88,7 @@
      | `amount` | `undefined` |
      | `to`     | `AVATAR`    |
 
-##### - `Token` is ETH:
+##### - `Token` is ETH
 
 1. `approve` `aWETH` (spender: `WrappedTokenGatewayV2`)
 
@@ -151,7 +151,7 @@
 
 #### Allowed functions
 
-##### - `Token` is not ETH:
+##### - `Token` is not ETH
 
 1. `approve` `Token` (spender: `AaveLendingPoolV2`)
 
@@ -206,7 +206,7 @@
      | `rateMode`   | `undefined` |
      | `onBehalfOf` | `AVATAR`    |
 
-##### - `Token` is ETH:
+##### - `Token` is ETH
 
 1. `approveDelegation` (target: `variableDebtWETH`)
 
@@ -283,7 +283,7 @@
 
 #### Allowed functions
 
-##### - `StakeToken` is `AAVE`:
+##### - `StakeToken` is `AAVE`
 
 1. `approve` `AAVE` (spender: `stkAAVE`)
 
@@ -352,7 +352,7 @@
      | `to`     | `AVATAR`    |
      | `amount` | `undefined` |
 
-##### - `StakeToken` is `ABPT`:
+##### - `StakeToken` is `ABPT`
 
 1. `approve` `ABPT` (spender: `stkABPT`)
 
@@ -420,7 +420,7 @@
 
 #### Allowed functions
 
-##### - `DelegateToken` is `AAVE`:
+##### - `DelegateToken` is `AAVE`
 
 1. `delegate` `AAVE`
 
@@ -445,19 +445,7 @@
      | `delegatee`      | `delegatee` |
      | `delegationType` | `undefined` |
 
-1. `submitVote`
-
-   - Description: submit vote for an specific snapshot
-   - Target Address: `AaveGovernanceV2`
-   - Function signature: `submitVote(uint256,bool)`
-   - Parameters:
-
-     | Name         | Description |
-     | :----------- | :---------- |
-     | `proposalId` | `undefined` |
-     | `support`    | `undefined` |
-
-##### - `DelegateToken` is `AAVE`:
+##### - `DelegateToken` is `stkAAVE`
 
 1. `delegate` `stkAAVE`
 
@@ -482,14 +470,27 @@
      | `delegatee`      | `delegatee` |
      | `delegationType` | `undefined` |
 
-1. `submitVote`
+##### - `DelegateToken` is `aEthAAVE`
 
-   - Description: submit vote for an specific snapshot
-   - Target Address: `AaveGovernanceV2`
-   - Function signature: `submitVote(uint256,bool)`
+1. `delegate` `aEthAAVE`
+
+   - Description: delegate the `aEthAAVE` voting power for all type of actions (Voting and Proposition)
+   - Target Address: `aEthAAVE`
+   - Function signature: `delegate(address)`
    - Parameters:
 
-     | Name         | Description |
-     | :----------- | :---------- |
-     | `proposalId` | `undefined` |
-     | `support`    | `undefined` |
+     | Name        | Description |
+     | :---------- | :---------- |
+     | `delegatee` | `delegatee` |
+
+1. `delegateByType` `aEthAAVE`
+
+   - Description: delegate the `aEthAAVE` voting power by type of action
+   - Target Address: `aEthAAVE`
+   - Function signature: `delegateByType(address,uint8)`
+   - Parameters:
+
+     | Name             | Description |
+     | :--------------- | :---------- |
+     | `delegatee`      | `delegatee` |
+     | `delegationType` | `undefined` |
