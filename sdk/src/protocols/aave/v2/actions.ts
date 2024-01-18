@@ -162,7 +162,7 @@ export const delegate = (token: DelegateToken, delegatee: string) => {
       break
   }
 
-  allow.mainnet.aaveV2.governanceV2.submitVote()
+  permissions.push(allow.mainnet.aaveV2.governanceV2.submitVote())
 
   return permissions
 }

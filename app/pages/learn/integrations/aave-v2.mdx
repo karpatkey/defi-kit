@@ -1,0 +1,495 @@
+## Deployments
+
+| Name                    | Address                                                                                                               |
+| :---------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| `AaveLendingPoolV2`     | [0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9](https://etherscan.io/address/0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9) |
+| `WrappedTokenGatewayV2` | [0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31](https://etherscan.io/address/0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31) |
+| `aWETH`                 | [0x030bA81f1c18d280636F32af80b9AAd02Cf0854e](https://etherscan.io/address/0x030bA81f1c18d280636F32af80b9AAd02Cf0854e) |
+| `AAVE`                  | [0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9](https://etherscan.io/address/0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9) |
+| `stkAAVE`               | [0x4da27a545c0c5b758a6ba100e3a049001de870f5](https://etherscan.io/address/0x4da27a545c0c5b758a6ba100e3a049001de870f5) |
+| `ABPT`                  | [0x41A08648C3766F9F9d85598fF102a08f4ef84F84](https://etherscan.io/address/0x41A08648C3766F9F9d85598fF102a08f4ef84F84) |
+| `stkABPT`               | [0xa1116930326D21fB917d5A27F1E9943A9595fb47](https://etherscan.io/address/0xa1116930326D21fB917d5A27F1E9943A9595fb47) |
+| `AaveGovernanceV2`      | [0xEC568fffba86c094cf06b22134B23074DFE2252c](https://etherscan.io/address/0xEC568fffba86c094cf06b22134B23074DFE2252c) |
+
+## Actions
+
+### `deposit`
+
+#### Parameters
+
+| Name      | Type                  | Description                                 |
+| :-------- | :-------------------- | :------------------------------------------ |
+| `targets` | _string[] (required)_ | ETH \| `Token` symbols \| `Token` addresses |
+
+#### Allowed functions
+
+##### - `Token` is not ETH:
+
+1. `approve` `Token` (spender: `AaveLendingPoolV2`)
+
+   - Description: approve `Token` with `AaveLendingPoolV2` as spender
+   - Target Address: `Token`
+   - Function signature: `approve(address,uint256)`
+   - Parameters:
+
+     | Name      | Description         |
+     | :-------- | :------------------ |
+     | `spender` | `AaveLendingPoolV2` |
+     | `amount`  | `undefined`         |
+
+1. `approve` `aWETH` (spender: `WrappedTokenGatewayV2`)
+
+   - Description: approve `aWETH` with `WrappedTokenGatewayV2` as spender
+   - Target Address: `aWETH`
+   - Function signature: `approve(address,uint256)`
+   - Parameters:
+
+     | Name      | Description             |
+     | :-------- | :---------------------- |
+     | `spender` | `WrappedTokenGatewayV2` |
+     | `amount`  | `undefined`             |
+
+1. `deposit`
+
+   - Description: sender deposits `Token` and receives `aToken` in exchange
+   - Target Address: `AaveLendingPoolV2`
+   - Function signature: `deposit(address,uint256,address,uint16)`
+   - Parameters:
+
+     | Name           | Description |
+     | :------------- | :---------- |
+     | `asset`        | `Token`     |
+     | `amount`       | `undefined` |
+     | `onBehalfOf`   | `AVATAR`    |
+     | `referralCode` | `undefined` |
+
+1. `setUserUseReserveAsCollateral`
+
+   - Description: set/unset deposited asset as collateral
+   - Target Address: `AaveLendingPoolV2`
+   - Function signature: `setUserUseReserveAsCollateral(address,bool)`
+   - Parameters:
+
+     | Name              | Description |
+     | :---------------- | :---------- |
+     | `asset`           | `Token`     |
+     | `useAsCollateral` | `undefined` |
+
+1. `withdraw`
+
+   - Description: sender redeems `aToken` and withdraws `Token`
+   - Target Address: `AaveLendingPoolV2`
+   - Function signature: `withdraw(address,uint256,address)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `asset`  | `Token`     |
+     | `amount` | `undefined` |
+     | `to`     | `AVATAR`    |
+
+##### - `Token` is ETH:
+
+1. `approve` `aWETH` (spender: `WrappedTokenGatewayV2`)
+
+   - Description: approve `aWETH` with `WrappedTokenGatewayV2` as spender
+   - Target Address: `aWETH`
+   - Function signature: `approve(address,uint256)`
+   - Parameters:
+
+     | Name      | Description             |
+     | :-------- | :---------------------- |
+     | `spender` | `WrappedTokenGatewayV2` |
+     | `amount`  | `undefined`             |
+
+1. `depositETH`
+
+   - Description: sender deposits ETH and receives `aWETH` in exchange
+   - Target Address: `WrappedTokenGatewayV2`
+   - Function signature: `depositETH(address,address,uint16)`
+   - Parameters:
+
+     | Name           | Description         |
+     | :------------- | :------------------ |
+     | `address`      | `AaveLendingPoolV2` |
+     | `onBehalfOf`   | `AVATAR`            |
+     | `referralCode` | `undefined`         |
+     | `send`         | `true`              |
+
+1. `setUserUseReserveAsCollateral`
+
+   - Description: set/unset deposited asset as collateral
+   - Target Address: `AaveLendingPoolV2`
+   - Function signature: `setUserUseReserveAsCollateral(address,bool)`
+   - Parameters:
+
+     | Name              | Description |
+     | :---------------- | :---------- |
+     | `asset`           | `Token`     |
+     | `useAsCollateral` | `undefined` |
+
+1. `withdrawETH`
+
+   - Description: sender redeems `aWETH` and withdraws ETH
+   - Target Address: `WrappedTokenGatewayV2`
+   - Function signature: `withdrawETH(address,uint256,address)`
+   - Parameters:
+
+     | Name      | Description         |
+     | :-------- | :------------------ |
+     | `address` | `AaveLendingPoolV2` |
+     | `amount`  | `undefined`         |
+     | `to`      | `AVATAR`            |
+
+### `borrow`
+
+#### Parameters
+
+| Name      | Type                  | Description                                 |
+| :-------- | :-------------------- | :------------------------------------------ |
+| `targets` | _string[] (required)_ | ETH \| `Token` symbols \| `Token` addresses |
+
+#### Allowed functions
+
+##### - `Token` is not ETH:
+
+1. `approve` `Token` (spender: `AaveLendingPoolV2`)
+
+   - Description: approve `Token` with `AaveLendingPoolV2` as spender
+   - Target Address: `Token`
+   - Function signature: `approve(address,uint256)`
+   - Parameters:
+
+     | Name      | Description         |
+     | :-------- | :------------------ |
+     | `spender` | `AaveLendingPoolV2` |
+     | `amount`  | `undefined`         |
+
+1. `borrow`
+
+   - Description: sender receives `Token` and receives `debtToken` (stable or variable debt)
+   - Target Address: `AaveLendingPoolV2`
+   - Function signature: `borrow(address,uint256,uint256,uint16,address)`
+   - Parameters:
+
+     | Name               | Description |
+     | :----------------- | :---------- |
+     | `asset`            | `Token`     |
+     | `amount`           | `undefined` |
+     | `interestRateMode` | `undefined` |
+     | `referralCode`     | `undefined` |
+     | `onBehalfOf`       | `AVATAR`    |
+
+1. `swapBorrowRateMode`
+
+   - Description: swaps the borrow rate mode
+   - Target Address: `AaveLendingPoolV2`
+   - Function signature: `swapBorrowRateMode(address,unit256)`
+   - Parameters:
+
+     | Name       | Description |
+     | :--------- | :---------- |
+     | `asset`    | `Token`     |
+     | `rateMode` | `undefined` |
+
+1. `repay`
+
+   - Description: repay borrowed `Token`
+   - Target Address: `AaveLendingPoolV2`
+   - Function signature: `repay(address,uint256,uint256,address)`
+   - Parameters:
+
+     | Name         | Description |
+     | :----------- | :---------- |
+     | `asset`      | `Token`     |
+     | `amount`     | `undefined` |
+     | `rateMode`   | `undefined` |
+     | `onBehalfOf` | `AVATAR`    |
+
+##### - `Token` is ETH:
+
+1. `approveDelegation` (target: `variableDebtWETH`)
+
+   - Description: sets the amount of allowance for `WrappedTokenGatewayV2` to borrow of `variableDebtWETH`
+   - Target Address: `variableDebtWETH`
+   - Function signature: `approveDelegation(address,uint256)`
+   - Parameters:
+
+     | Name        | Description             |
+     | :---------- | :---------------------- |
+     | `delegatee` | `WrappedTokenGatewayV2` |
+     | `amount`    | `undefined`             |
+
+1. `approveDelegation` (target: `stableDebtWETH`)
+
+   - Description: sets the amount of allowance for `WrappedTokenGatewayV2` to borrow of `stableDebtWETH`
+   - Target Address: `stableDebtWETH`
+   - Function signature: `approveDelegation(address,uint256)`
+   - Parameters:
+
+     | Name        | Description             |
+     | :---------- | :---------------------- |
+     | `delegatee` | `WrappedTokenGatewayV2` |
+     | `amount`    | `undefined`             |
+
+1. `borrowETH`
+
+   - Description: sender receives ETH and `debtETH` (stable or variable debt) token
+   - Target Address: `WrappedTokenGatewayV2`
+   - Function signature: `borrowETH(address,uint256,uint256,uint16)`
+   - Parameters:
+
+     | Name               | Description         |
+     | :----------------- | :------------------ |
+     | `address`          | `AaveLendingPoolV2` |
+     | `amount`           | `undefined`         |
+     | `interestRateMode` | `undefined`         |
+     | `referralCode`     | `undefined`         |
+
+1. `swapBorrowRateMode`
+
+   - Description: swaps the borrow rate mode
+   - Target Address: `AaveLendingPoolV2`
+   - Function signature: `swapBorrowRateMode(address,unit256)`
+   - Parameters:
+
+     | Name       | Description |
+     | :--------- | :---------- |
+     | `asset`    | `Token`     |
+     | `rateMode` | `undefined` |
+
+1. `repayETH`
+
+   - Description: repay borrowed ETH
+   - Target Address: `WrappedTokenGatewayV2`
+   - Function signature: `repayETH(address,uint256,uint256,address)`
+   - Parameters:
+
+     | Name               | Description         |
+     | :----------------- | :------------------ |
+     | `address`          | `AaveLendingPoolV2` |
+     | `amount`           | `undefined`         |
+     | `interestRateMode` | `undefined`         |
+     | `onBehalfOf`       | `AVATAR`            |
+     | `send`             | `true`              |
+
+### `stake`
+
+#### Parameters
+
+| Name      | Type                  | Description                                    |
+| :-------- | :-------------------- | :--------------------------------------------- |
+| `targets` | _string[] (required)_ | `StakeToken` symbols \| `StakeToken` addresses |
+
+#### Allowed functions
+
+##### - `StakeToken` is `AAVE`:
+
+1. `approve` `AAVE` (spender: `stkAAVE`)
+
+   - Description: approve `AAVE` with `stkAAVE` as spender
+   - Target Address: `AAVE`
+   - Function signature: `approve(address,uint256)`
+   - Parameters:
+
+     | Name      | Description |
+     | :-------- | :---------- |
+     | `spender` | `stkAAVE`   |
+     | `amount`  | `undefined` |
+
+1. `stake` `AAVE`
+
+   - Description: stake `AAVE` in Aave's safety module
+   - Target Address: `stkAAVE`
+   - Function signature: `stake(address,uint256)`
+   - Parameters:
+
+     | Name         | Description |
+     | :----------- | :---------- |
+     | `onBehalfOf` | `AVATAR`    |
+     | `amount`     | `undefined` |
+
+1. `claimRewardsAndStake` `AAVE`
+
+   - Description: claim `AAVE` rewards accrued from staking `AAVE` and restake
+   - Target Address: `stkAAVE`
+   - Function signature: `claimRewardsAndStake(address,uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `to`     | `AVATAR`    |
+     | `amount` | `undefined` |
+
+1. `claimRewards` `AAVE`
+
+   - Description: claim `AAVE` rewards accrued from staking `AAVE`
+   - Target Address: `stkAAVE`
+   - Function signature: `claimRewards(address,uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `to`     | `AVATAR`    |
+     | `amount` | `undefined` |
+
+1. `cooldown`
+
+   - Description: initiates a 10 days cooldown period, once this is over the 2 days unstaking window opens
+   - Target Address: `stkAAVE`
+   - Function signature: `cooldown()`
+   - Parameters: N/A
+
+1. `unstake` `AAVE`
+
+   - Description: unstake `AAVE` can only be called during the 2 days unstaking window after the 10 days cooldown period
+   - Target Address: `stkAAVE`
+   - Function signature: `redeem(address,uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `to`     | `AVATAR`    |
+     | `amount` | `undefined` |
+
+##### - `StakeToken` is `ABPT`:
+
+1. `approve` `ABPT` (spender: `stkABPT`)
+
+   - Description: approve `ABPT` with `stkABPT` as spender
+   - Target Address: `ABPT`
+   - Function signature: `approve(address,uint256)`
+   - Parameters:
+
+     | Name      | Description |
+     | :-------- | :---------- |
+     | `spender` | `stkABPT`   |
+     | `amount`  | `undefined` |
+
+1. `stake` `ABPT`
+
+   - Description: stake `ABPT` in Aave's safety module
+   - Target Address: `stkABPT`
+   - Function signature: `stake(address,uint256)`
+   - Parameters:
+
+     | Name         | Description |
+     | :----------- | :---------- |
+     | `onBehalfOf` | `AVATAR`    |
+     | `amount`     | `undefined` |
+
+1. `claimRewards` `ABPT`
+
+   - Description: claim `ABPT` rewards accrued from staking `ABPT`
+   - Target Address: `stkABPT`
+   - Function signature: `claimRewards(address,uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `to`     | `AVATAR`    |
+     | `amount` | `undefined` |
+
+1. `cooldown`
+
+   - Description: initiates a 10 days cooldown period, once this is over the 2 days unstaking window opens
+   - Target Address: `stkABPT`
+   - Function signature: `cooldown()`
+   - Parameters: N/A
+
+1. `unstake` `ABPT`
+
+   - Description: unstake `ABPT` can only be called during the 2 days unstaking window after the 10 days cooldown period
+   - Target Address: `stkABPT`
+   - Function signature: `redeem(address,uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `to`     | `AVATAR`    |
+     | `amount` | `undefined` |
+
+### `delegate`
+
+#### Parameters
+
+| Name        | Type                  | Description                                          |
+| :---------- | :-------------------- | :--------------------------------------------------- |
+| `targets`   | _string[] (required)_ | `DelegateToken` symbols \| `DelegateToken` addresses |
+| `delegatee` | _string (required)_   | `delegatee` address                                  |
+
+#### Allowed functions
+
+##### - `DelegateToken` is `AAVE`:
+
+1. `delegate` `AAVE`
+
+   - Description: delegate the `AAVE` voting power for all type of actions (Voting and Proposition)
+   - Target Address: `AAVE`
+   - Function signature: `delegate(address)`
+   - Parameters:
+
+     | Name        | Description |
+     | :---------- | :---------- |
+     | `delegatee` | `delegatee` |
+
+1. `delegateByType` `AAVE`
+
+   - Description: delegate the `AAVE` voting power by type of action
+   - Target Address: `AAVE`
+   - Function signature: `delegateByType(address,uint8)`
+   - Parameters:
+
+     | Name             | Description |
+     | :--------------- | :---------- |
+     | `delegatee`      | `delegatee` |
+     | `delegationType` | `undefined` |
+
+1. `submitVote`
+
+   - Description: submit vote for an specific snapshot
+   - Target Address: `AaveGovernanceV2`
+   - Function signature: `submitVote(uint256,bool)`
+   - Parameters:
+
+     | Name         | Description |
+     | :----------- | :---------- |
+     | `proposalId` | `undefined` |
+     | `support`    | `undefined` |
+
+##### - `DelegateToken` is `AAVE`:
+
+1. `delegate` `stkAAVE`
+
+   - Description: delegate the `stkAAVE` voting power for all type of actions (Voting and Proposition)
+   - Target Address: `stkAAVE`
+   - Function signature: `delegate(address)`
+   - Parameters:
+
+     | Name        | Description |
+     | :---------- | :---------- |
+     | `delegatee` | `delegatee` |
+
+1. `delegateByType` `stkAAVE`
+
+   - Description: delegate the `stkAAVE` voting power by type of action
+   - Target Address: `stkAAVE`
+   - Function signature: `delegateByType(address,uint8)`
+   - Parameters:
+
+     | Name             | Description |
+     | :--------------- | :---------- |
+     | `delegatee`      | `delegatee` |
+     | `delegationType` | `undefined` |
+
+1. `submitVote`
+
+   - Description: submit vote for an specific snapshot
+   - Target Address: `AaveGovernanceV2`
+   - Function signature: `submitVote(uint256,bool)`
+   - Parameters:
+
+     | Name         | Description |
+     | :----------- | :---------- |
+     | `proposalId` | `undefined` |
+     | `support`    | `undefined` |
