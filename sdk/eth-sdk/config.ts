@@ -15,7 +15,7 @@ export const contracts = {
       stkaave: "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
       stkabpt: "0xa1116930326D21fB917d5A27F1E9943A9595fb47",
       governanceV2: "0xEC568fffba86c094cf06b22134B23074DFE2252c",
-      governanceV2Helper: "0xBb7baf0534423e3108E1D03c259104cDba2C1cB7",
+      aEthAAVE: "0xA700b4eB416Be35b2911fd5Dee80678ff64fF6C9",
     },
     aaveV3: {
       data_provider: "0x7B4EB56E7CD4b454BA8ff71E4518426369a138a3",
