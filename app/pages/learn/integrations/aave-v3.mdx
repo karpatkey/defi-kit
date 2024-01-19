@@ -2,14 +2,13 @@
 
 | Name                    | Address                                                                                                               |
 | :---------------------- | :-------------------------------------------------------------------------------------------------------------------- |
-| `AaveLendingPoolV2`     | [0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9](https://etherscan.io/address/0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9) |
-| `WrappedTokenGatewayV2` | [0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31](https://etherscan.io/address/0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31) |
-| `aWETH`                 | [0x030bA81f1c18d280636F32af80b9AAd02Cf0854e](https://etherscan.io/address/0x030bA81f1c18d280636F32af80b9AAd02Cf0854e) |
+| `AaveLendingPoolV3`     | [0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2](https://etherscan.io/address/0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2) |
+| `WrappedTokenGatewayV3` | [0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C](https://etherscan.io/address/0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C) |
+| `aEthWETH`              | [0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8](https://etherscan.io/address/0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8) |
 | `AAVE`                  | [0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9](https://etherscan.io/address/0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9) |
 | `stkAAVE`               | [0x4da27a545c0c5b758a6ba100e3a049001de870f5](https://etherscan.io/address/0x4da27a545c0c5b758a6ba100e3a049001de870f5) |
 | `ABPT`                  | [0x41A08648C3766F9F9d85598fF102a08f4ef84F84](https://etherscan.io/address/0x41A08648C3766F9F9d85598fF102a08f4ef84F84) |
 | `stkABPT`               | [0xa1116930326D21fB917d5A27F1E9943A9595fb47](https://etherscan.io/address/0xa1116930326D21fB917d5A27F1E9943A9595fb47) |
-| `aEthAAVE`              | [0xA700b4eB416Be35b2911fd5Dee80678ff64fF6C9](https://etherscan.io/address/0xA700b4eB416Be35b2911fd5Dee80678ff64fF6C9) |
 
 ## Actions
 
@@ -25,35 +24,35 @@
 
 ##### - `Token` is not ETH
 
-1. `approve` `Token` (spender: `AaveLendingPoolV2`)
+1. `approve` `Token` (spender: `AaveLendingPoolV3`)
 
-   - Description: approve `Token` with `AaveLendingPoolV2` as spender
+   - Description: approve `Token` with `AaveLendingPoolV3` as spender
    - Target Address: `Token`
    - Function signature: `approve(address,uint256)`
    - Parameters:
 
      | Name      | Description         |
      | :-------- | :------------------ |
-     | `spender` | `AaveLendingPoolV2` |
+     | `spender` | `AaveLendingPoolV3` |
      | `amount`  | `undefined`         |
 
-1. `approve` `aWETH` (spender: `WrappedTokenGatewayV2`)
+1. `approve` `aEthWETH` (spender: `WrappedTokenGatewayV3`)
 
-   - Description: approve `aWETH` with `WrappedTokenGatewayV2` as spender
-   - Target Address: `aWETH`
+   - Description: approve `aEthWETH` with `WrappedTokenGatewayV3` as spender
+   - Target Address: `aEthWETH`
    - Function signature: `approve(address,uint256)`
    - Parameters:
 
      | Name      | Description             |
      | :-------- | :---------------------- |
-     | `spender` | `WrappedTokenGatewayV2` |
+     | `spender` | `WrappedTokenGatewayV3` |
      | `amount`  | `undefined`             |
 
-1. `deposit`
+1. `supply`
 
    - Description: sender deposits `Token` and receives `aToken` in exchange
-   - Target Address: `AaveLendingPoolV2`
-   - Function signature: `deposit(address,uint256,address,uint16)`
+   - Target Address: `AaveLendingPoolV3`
+   - Function signature: `supply(address,uint256,address,uint16)`
    - Parameters:
 
      | Name           | Description |
@@ -66,7 +65,7 @@
 1. `setUserUseReserveAsCollateral`
 
    - Description: set/unset deposited asset as collateral
-   - Target Address: `AaveLendingPoolV2`
+   - Target Address: `AaveLendingPoolV3`
    - Function signature: `setUserUseReserveAsCollateral(address,bool)`
    - Parameters:
 
@@ -78,7 +77,7 @@
 1. `withdraw`
 
    - Description: sender redeems `aToken` and withdraws `Token`
-   - Target Address: `AaveLendingPoolV2`
+   - Target Address: `AaveLendingPoolV3`
    - Function signature: `withdraw(address,uint256,address)`
    - Parameters:
 
@@ -90,28 +89,28 @@
 
 ##### - `Token` is ETH
 
-1. `approve` `aWETH` (spender: `WrappedTokenGatewayV2`)
+1. `approve` `aEthWETH` (spender: `WrappedTokenGatewayV3`)
 
-   - Description: approve `aWETH` with `WrappedTokenGatewayV2` as spender
-   - Target Address: `aWETH`
+   - Description: approve `aEthWETH` with `WrappedTokenGatewayV3` as spender
+   - Target Address: `aEthWETH`
    - Function signature: `approve(address,uint256)`
    - Parameters:
 
      | Name      | Description             |
      | :-------- | :---------------------- |
-     | `spender` | `WrappedTokenGatewayV2` |
+     | `spender` | `WrappedTokenGatewayV3` |
      | `amount`  | `undefined`             |
 
 1. `depositETH`
 
-   - Description: sender deposits ETH and receives `aWETH` in exchange
-   - Target Address: `WrappedTokenGatewayV2`
+   - Description: sender deposits ETH and receives `aEthWETH` in exchange
+   - Target Address: `WrappedTokenGatewayV3`
    - Function signature: `depositETH(address,address,uint16)`
    - Parameters:
 
      | Name           | Description         |
      | :------------- | :------------------ |
-     | `address`      | `AaveLendingPoolV2` |
+     | `address`      | `AaveLendingPoolV3` |
      | `onBehalfOf`   | `AVATAR`            |
      | `referralCode` | `undefined`         |
      | `send`         | `true`              |
@@ -119,7 +118,7 @@
 1. `setUserUseReserveAsCollateral`
 
    - Description: set/unset deposited asset as collateral
-   - Target Address: `AaveLendingPoolV2`
+   - Target Address: `AaveLendingPoolV3`
    - Function signature: `setUserUseReserveAsCollateral(address,bool)`
    - Parameters:
 
@@ -130,14 +129,14 @@
 
 1. `withdrawETH`
 
-   - Description: sender redeems `aWETH` and withdraws ETH
-   - Target Address: `WrappedTokenGatewayV2`
+   - Description: sender redeems `aEthWETH` and withdraws ETH
+   - Target Address: `WrappedTokenGatewayV3`
    - Function signature: `withdrawETH(address,uint256,address)`
    - Parameters:
 
      | Name      | Description         |
      | :-------- | :------------------ |
-     | `address` | `AaveLendingPoolV2` |
+     | `address` | `AaveLendingPoolV3` |
      | `amount`  | `undefined`         |
      | `to`      | `AVATAR`            |
 
@@ -153,22 +152,22 @@
 
 ##### - `Token` is not ETH
 
-1. `approve` `Token` (spender: `AaveLendingPoolV2`)
+1. `approve` `Token` (spender: `AaveLendingPoolV3`)
 
-   - Description: approve `Token` with `AaveLendingPoolV2` as spender
+   - Description: approve `Token` with `AaveLendingPoolV3` as spender
    - Target Address: `Token`
    - Function signature: `approve(address,uint256)`
    - Parameters:
 
      | Name      | Description         |
      | :-------- | :------------------ |
-     | `spender` | `AaveLendingPoolV2` |
+     | `spender` | `AaveLendingPoolV3` |
      | `amount`  | `undefined`         |
 
 1. `borrow`
 
    - Description: sender receives `Token` and receives `debtToken` (stable or variable debt)
-   - Target Address: `AaveLendingPoolV2`
+   - Target Address: `AaveLendingPoolV3`
    - Function signature: `borrow(address,uint256,uint256,uint16,address)`
    - Parameters:
 
@@ -183,7 +182,7 @@
 1. `swapBorrowRateMode`
 
    - Description: swaps the borrow rate mode
-   - Target Address: `AaveLendingPoolV2`
+   - Target Address: `AaveLendingPoolV3`
    - Function signature: `swapBorrowRateMode(address,unit256)`
    - Parameters:
 
@@ -195,7 +194,7 @@
 1. `repay`
 
    - Description: repay borrowed `Token`
-   - Target Address: `AaveLendingPoolV2`
+   - Target Address: `AaveLendingPoolV3`
    - Function signature: `repay(address,uint256,uint256,address)`
    - Parameters:
 
@@ -210,38 +209,38 @@
 
 1. `approveDelegation` (target: `variableDebtWETH`)
 
-   - Description: sets the amount of allowance for `WrappedTokenGatewayV2` to borrow of `variableDebtWETH`
+   - Description: sets the amount of allowance for `WrappedTokenGatewayV3` to borrow of `variableDebtWETH`
    - Target Address: `variableDebtWETH`
    - Function signature: `approveDelegation(address,uint256)`
    - Parameters:
 
      | Name        | Description             |
      | :---------- | :---------------------- |
-     | `delegatee` | `WrappedTokenGatewayV2` |
+     | `delegatee` | `WrappedTokenGatewayV3` |
      | `amount`    | `undefined`             |
 
 1. `approveDelegation` (target: `stableDebtWETH`)
 
-   - Description: sets the amount of allowance for `WrappedTokenGatewayV2` to borrow of `stableDebtWETH`
+   - Description: sets the amount of allowance for `WrappedTokenGatewayV3` to borrow of `stableDebtWETH`
    - Target Address: `stableDebtWETH`
    - Function signature: `approveDelegation(address,uint256)`
    - Parameters:
 
      | Name        | Description             |
      | :---------- | :---------------------- |
-     | `delegatee` | `WrappedTokenGatewayV2` |
+     | `delegatee` | `WrappedTokenGatewayV3` |
      | `amount`    | `undefined`             |
 
 1. `borrowETH`
 
    - Description: sender receives ETH and `debtETH` (stable or variable debt) token
-   - Target Address: `WrappedTokenGatewayV2`
+   - Target Address: `WrappedTokenGatewayV3`
    - Function signature: `borrowETH(address,uint256,uint256,uint16)`
    - Parameters:
 
      | Name               | Description         |
      | :----------------- | :------------------ |
-     | `address`          | `AaveLendingPoolV2` |
+     | `address`          | `AaveLendingPoolV3` |
      | `amount`           | `undefined`         |
      | `interestRateMode` | `undefined`         |
      | `referralCode`     | `undefined`         |
@@ -249,7 +248,7 @@
 1. `swapBorrowRateMode`
 
    - Description: swaps the borrow rate mode
-   - Target Address: `AaveLendingPoolV2`
+   - Target Address: `AaveLendingPoolV3`
    - Function signature: `swapBorrowRateMode(address,unit256)`
    - Parameters:
 
@@ -261,13 +260,13 @@
 1. `repayETH`
 
    - Description: repay borrowed ETH
-   - Target Address: `WrappedTokenGatewayV2`
+   - Target Address: `WrappedTokenGatewayV3`
    - Function signature: `repayETH(address,uint256,uint256,address)`
    - Parameters:
 
      | Name         | Description         |
      | :----------- | :------------------ |
-     | `address`    | `AaveLendingPoolV2` |
+     | `address`    | `AaveLendingPoolV3` |
      | `amount`     | `undefined`         |
      | `rateMode`   | `undefined`         |
      | `onBehalfOf` | `AVATAR`            |
