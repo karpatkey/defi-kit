@@ -1466,7 +1466,7 @@ export default [
     id: "0x596192bb6e41802428ac943d2f1476c1af25cc0e000000000000000000000659",
     name: "ezETH-WETH-BPT",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xa8B309a75f0D64ED632d45A003c68A30e59A1D8b",
     tokens: [
       {
         address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
