@@ -1,0 +1,240 @@
+## Deployments
+
+| Name          | Address                                                                                                               |
+| :------------ | :-------------------------------------------------------------------------------------------------------------------- |
+| `Comptroller` | [0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B](https://etherscan.io/address/0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B) |
+| `Maximillion` | [0xf859A1AD94BcF445A406B892eF0d3082f4174088](https://etherscan.io/address/0xf859A1AD94BcF445A406B892eF0d3082f4174088) |
+
+## Actions
+
+### `deposit`
+
+#### Parameters
+
+| Name      | Type                  | Description                          |
+| :-------- | :-------------------- | :----------------------------------- |
+| `targets` | _string[] (required)_ | `Token` symbols \| `Token` addresses |
+
+#### Allowed functions
+
+##### - `Token` is not ETH
+
+1. `approve` `Token` (spender: `cToken`)
+
+   - Description: approve `Token` with `cToken` as spender
+   - Target Address: `Token`
+   - Function signature: `approve(address,uint256)`
+   - Parameters:
+
+     | Name      | Description |
+     | :-------- | :---------- |
+     | `spender` | `cToken`    |
+     | `amount`  | `undefined` |
+
+1. `deposit`
+
+   - Description: sender deposits `Token` and receives `cToken` in exchange
+   - Target Address: `cToken`
+   - Function signature: `mint(uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `amount` | `undefined` |
+
+1. `enterMarkets`
+
+   - Description: set deposited asset as collateral
+   - Target Address: `Comptroller`
+   - Function signature: `enterMarkets(address[])`
+   - Parameters:
+
+     | Name       | Description |
+     | :--------- | :---------- |
+     | `cToken[]` | `cToken[]`  |
+
+1. `exitMarket`
+
+   - Description: unset deposited asset as collateral
+   - Target Address: `Comptroller`
+   - Function signature: `exitMarket(address)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `cToken` | `cToken`    |
+
+1. `redeem`
+
+   - Description: sender redeems `cToken` and withdraws `Token` (it is called when MAX underlying amount is withdrawn)
+   - Target Address: `cToken`
+   - Function signature: `redeem(uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `amount` | `undefined` |
+
+1. `redeemUnderlying`
+
+   - Description: sender redeems `cToken` and withdraws `Token`
+   - Target Address: `cToken`
+   - Function signature: `redeemUnderlying(uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `amount` | `undefined` |
+
+1. `claimComp`
+
+   - Description: claim `COMP` rewards
+   - Target Address: `Comptroller`
+   - Function signature: `claimComp(address,address[])`
+   - Parameters:
+
+     | Name       | Description |
+     | :--------- | :---------- |
+     | `holder`   | `AVATAR`    |
+     | `cToken[]` | `cToken[]`  |
+
+##### - `Token` is ETH
+
+1. `deposit`
+
+   - Description: sender deposits `Token` and receives `cToken` in exchange
+   - Target Address: `cToken`
+   - Function signature: `mint(uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `amount` | `undefined` |
+     | `send`   | `true`      |
+
+1. `enterMarkets`
+
+   - Description: set deposited asset as collateral
+   - Target Address: `Comptroller`
+   - Function signature: `enterMarkets(address[])`
+   - Parameters:
+
+     | Name       | Description |
+     | :--------- | :---------- |
+     | `cToken[]` | `cToken[]`  |
+
+1. `exitMarket`
+
+   - Description: unset deposited asset as collateral
+   - Target Address: `Comptroller`
+   - Function signature: `exitMarket(address)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `cToken` | `cToken`    |
+
+1. `redeem`
+
+   - Description: sender redeems `cToken` and withdraws `Token` (it is called when MAX underlying amount is withdrawn)
+   - Target Address: `cToken`
+   - Function signature: `redeem(uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `amount` | `undefined` |
+
+1. `redeemUnderlying`
+
+   - Description: sender redeems `cToken` and withdraws `Token`
+   - Target Address: `cToken`
+   - Function signature: `redeemUnderlying(uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `amount` | `undefined` |
+
+1. `claimComp`
+
+   - Description: claim `COMP` rewards
+   - Target Address: `Comptroller`
+   - Function signature: `claimComp(address,address[])`
+   - Parameters:
+
+     | Name       | Description |
+     | :--------- | :---------- |
+     | `holder`   | `AVATAR`    |
+     | `cToken[]` | `cToken[]`  |
+
+### `borrow`
+
+#### Parameters
+
+| Name      | Type                  | Description                          |
+| :-------- | :-------------------- | :----------------------------------- |
+| `targets` | _string[] (required)_ | `Token` symbols \| `Token` addresses |
+
+#### Allowed functions
+
+##### - `Token` is not ETH
+
+1. `approve` `Token` (spender: `cToken`)
+
+   - Description: approve `Token` with `cToken` as spender
+   - Target Address: `Token`
+   - Function signature: `approve(address,uint256)`
+   - Parameters:
+
+     | Name      | Description |
+     | :-------- | :---------- |
+     | `spender` | `cToken`    |
+     | `amount`  | `undefined` |
+
+1. `borrow`
+
+   - Description: sender receives `Token`
+   - Target Address: `cToken`
+   - Function signature: `borrow(uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `amount` | `undefined` |
+
+1. `repay`
+
+   - Description: repay borrowed `Token`
+   - Target Address: `cToken`
+   - Function signature: `repayBorrow(uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `amount` | `undefined` |
+
+##### - `Token` is ETH
+
+1. `borrow`
+
+   - Description: sender receives `Token`
+   - Target Address: `cToken`
+   - Function signature: `borrow(uint256)`
+   - Parameters:
+
+     | Name     | Description |
+     | :------- | :---------- |
+     | `amount` | `undefined` |
+
+1. `repay`
+
+   - Description: repay borrowed `Token`
+   - Target Address: `cToken`
+   - Function signature: `repayBehalf(address)`
+   - Parameters:
+
+     | Name       | Description |
+     | :--------- | :---------- |
+     | `borrower` | `AVATAR`    |
+     | `send`     | `true`      |
