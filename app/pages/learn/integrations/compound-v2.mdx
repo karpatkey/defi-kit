@@ -31,7 +31,7 @@
      | `spender` | `cToken`    |
      | `amount`  | `undefined` |
 
-1. `deposit`
+1. `mint`
 
    - Description: sender deposits `Token` and receives `cToken` in exchange
    - Target Address: `cToken`
@@ -100,11 +100,11 @@
 
 ##### - `Token` is ETH
 
-1. `deposit`
+1. `mint`
 
    - Description: sender deposits `Token` and receives `cToken` in exchange
    - Target Address: `cToken`
-   - Function signature: `mint(uint256)`
+   - Function signature: `mint()`
    - Parameters:
 
      | Name     | Description |
@@ -203,7 +203,7 @@
      | :------- | :---------- |
      | `amount` | `undefined` |
 
-1. `repay`
+1. `repayBorrow`
 
    - Description: repay borrowed `Token`
    - Target Address: `cToken`
@@ -218,8 +218,8 @@
 
 1. `borrow`
 
-   - Description: sender receives `Token`
-   - Target Address: `cToken`
+   - Description: sender receives ETH
+   - Target Address: `cETH`
    - Function signature: `borrow(uint256)`
    - Parameters:
 
@@ -227,10 +227,10 @@
      | :------- | :---------- |
      | `amount` | `undefined` |
 
-1. `repay`
+1. `repayBehalf`
 
-   - Description: repay borrowed `Token`
-   - Target Address: `cToken`
+   - Description: repay borrowed ETH
+   - Target Address: `Maximillion`
    - Function signature: `repayBehalf(address)`
    - Parameters:
 
