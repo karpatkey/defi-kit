@@ -1419,6 +1419,25 @@ export default [
     ],
   },
   {
+    bpt: "0x517390b2B806cb62f20ad340DE6d98B2A8F17F2B",
+    id: "0x517390b2b806cb62f20ad340de6d98b2a8f17f2b0002000000000000000001ba",
+    name: "20WETH-80ELIMU",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xe29797910D413281d2821D5d9a989262c8121CC2",
+        symbol: "ELIMU",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x5512A4bbe7B3051f92324bAcF25C02b9000c4a50",
     id: "0x5512a4bbe7b3051f92324bacf25c02b9000c4a500001000000000000000003d7",
     name: "33LUSD-33LQTY-33WETH",
@@ -2196,6 +2215,30 @@ export default [
       {
         address: "0x7945b0A6674b175695e5d1D08aE1e6F13744Abb0",
         symbol: "BaoUSD",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x7fd800d3ECD9E83322CfCb8D416EB93F56eDB781",
+    id: "0x7fd800d3ecd9e83322cfcb8d416eb93f56edb78100010000000000000000065b",
+    name: "50PAXG-25USDC-25WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
+        symbol: "PAXG",
+        id: "0x",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
         id: "0x",
       },
     ],
