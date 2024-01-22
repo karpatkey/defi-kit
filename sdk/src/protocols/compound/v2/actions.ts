@@ -51,7 +51,7 @@ const _repay = (token: Token): Permission[] => {
 
   if (token.symbol === "ETH") {
     permissions.push(
-      allow.mainnet.compoundV2.cETH.repayBorrow({
+      allow.mainnet.compoundV2.maximillion.repayBehalf(c.avatar, {
         send: true,
       })
     )
@@ -96,14 +96,9 @@ export const borrow = (token: Token) => {
   const permissions: Permission[] = []
   if (token.symbol != "ETH") {
     permissions.push(...allowErc20Approve([token.token], [token.cToken]))
-    permissions.push(..._repay(token))
-  } else {
-    permissions.push(
-      allow.mainnet.compoundV2.maximillion.repayBehalf(c.avatar, {
-        send: true,
-      })
-    )
   }
+
+  permissions.push(..._repay(token))
   permissions.push(_borrow(token.cToken))
 
   return permissions
