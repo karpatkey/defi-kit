@@ -6,6 +6,7 @@ import { zx } from "../../../zx"
 
 const zToken = z.enum([
   ...ethTokens.map((token) => token.token),
+  "ETH",
   ...ethTokens.map((token) => token.symbol),
 ] as [string, string, ...string[]])
 

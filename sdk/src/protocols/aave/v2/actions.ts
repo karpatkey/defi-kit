@@ -160,16 +160,13 @@ export const delegate = (token: DelegateToken, delegatee: string) => {
         allow.mainnet.aaveV2.stkaave.delegateByType(delegatee)
       )
       break
+    case "aEthAAVE":
+      permissions.push(
+        allow.mainnet.aaveV2.aEthAAVE.delegate(delegatee),
+        allow.mainnet.aaveV2.aEthAAVE.delegateByType(delegatee)
+      )
+      break
   }
-
-  allow.mainnet.aaveV2.governanceV2.submitVote()
 
   return permissions
 }
-
-// allow.mainnet.aaveV2.governanceV2Helper.delegateTokensBySig(
-//   c.every(c.or(AAVE, stkAAVE)),
-//   c.every({
-//     delegatee: c.avatar
-//   })
-// )
