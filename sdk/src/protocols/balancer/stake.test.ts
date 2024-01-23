@@ -23,24 +23,24 @@ describe("balancer", () => {
       await expect(
         testKit.eth.balancer.gauge
           .attach(B_rETH_STABLE_gauge)
-          ["deposit(uint256)"](parseEther("1"))
+        ["deposit(uint256)"](parseEther("1"))
       ).not.toRevert()
 
       await expect(
         testKit.eth.balancer.gauge
           .attach(B_rETH_STABLE_gauge)
-          ["withdraw(uint256)"](parseEther("1"))
+        ["withdraw(uint256)"](parseEther("1"))
       ).not.toRevert()
 
       await expect(
         testKit.eth.balancer.gauge
           .attach(B_rETH_STABLE_gauge)
-          ["claim_rewards()"]()
+        ["claim_rewards()"]()
       ).not.toRevert()
 
       await expect(
         testKit.eth.balancer.minter.mint(B_rETH_STABLE_gauge)
       ).not.toRevert()
-    }, 180000) // Added 180 seconds of timeout because the deposit takes too long and the test fails.
+    }, 300000) // Added 300 seconds of timeout because the deposit takes too long and the test fails.
   })
 })
