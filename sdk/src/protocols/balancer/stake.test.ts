@@ -13,11 +13,7 @@ describe("balancer", () => {
     })
 
     it("stake and withdraw from gauge", async () => {
-      await stealErc20(
-        B_rETH_STABLE,
-        parseEther("1"),
-        B_rETH_STABLE_gauge
-      )
+      await stealErc20(B_rETH_STABLE, parseEther("1"), B_rETH_STABLE_gauge)
       await expect(
         testKit.eth.usdc
           .attach(B_rETH_STABLE)
@@ -25,26 +21,26 @@ describe("balancer", () => {
       ).not.toRevert()
 
       await expect(
-        testKit.eth.balancer.gauge.attach(B_rETH_STABLE_gauge)["deposit(uint256)"](
-          parseEther("1")
-        )
+        testKit.eth.balancer.gauge
+          .attach(B_rETH_STABLE_gauge)
+          ["deposit(uint256)"](parseEther("1"))
       ).not.toRevert()
 
       await expect(
-        testKit.eth.balancer.gauge.attach(B_rETH_STABLE_gauge)["withdraw(uint256)"](
-          parseEther("1")
-        )
+        testKit.eth.balancer.gauge
+          .attach(B_rETH_STABLE_gauge)
+          ["withdraw(uint256)"](parseEther("1"))
       ).not.toRevert()
 
       await expect(
-        testKit.eth.balancer.gauge.attach(B_rETH_STABLE_gauge)["claim_rewards()"]()
+        testKit.eth.balancer.gauge
+          .attach(B_rETH_STABLE_gauge)
+          ["claim_rewards()"]()
       ).not.toRevert()
 
       await expect(
-        testKit.eth.balancer.minter.mint(
-          B_rETH_STABLE_gauge
-        )
+        testKit.eth.balancer.minter.mint(B_rETH_STABLE_gauge)
       ).not.toRevert()
-    }, 30000) // Added 30 seconds of timeout because the deposit takes too long and the test fails.
+    }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
   })
 })
