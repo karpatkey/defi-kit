@@ -41,6 +41,6 @@ describe("balancer", () => {
       await expect(
         testKit.eth.balancer.minter.mint(B_rETH_STABLE_gauge)
       ).not.toRevert()
-    }, 90000) // Added 90 seconds of timeout because the deposit takes too long and the test fails.
+    }, 120000) // Added 120 seconds of timeout because the deposit takes too long and the test fails.
   })
 })
