@@ -81,7 +81,7 @@ describe("aura", () => {
           member._address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
-    }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
+    }, 90000) // Added 90 seconds of timeout because the deposit takes too long and the test fails.
 
     it("mint auraBAL using B-80BAL-20WETH, stake and compound", async () => {
       await stealErc20(
