@@ -20,7 +20,7 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
     .map((token) => token.address)
     .filter((address) => tokens.some((token) => token.address === address))
 
-  const tokenPoolIds = (pool.tokens as readonly Token[])
+  const tokenPoolIds = pool.tokens
     .filter(
       (token) =>
         tokens.some((t) => token.address === t.address) &&
@@ -67,16 +67,21 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
           c.or(
             c.calldataMatches(
               allow.mainnet.balancer.relayerLibrary.joinPool(
-                pool.id,
+                c.or(
+                  pool.id,
+                  ...(tokenPoolIds as [string, string, ...string[]])
+                ),
                 undefined,
                 c.or(c.avatar, contracts.mainnet.balancer.relayer),
                 c.or(c.avatar, contracts.mainnet.balancer.relayer)
               )
             ),
             c.calldataMatches(
-              // TODO update to next function
               allow.mainnet.balancer.relayerLibrary.exitPool(
-                pool.id,
+                c.or(
+                  pool.id,
+                  ...(tokenPoolIds as [string, string, ...string[]])
+                ),
                 undefined,
                 c.avatar,
                 c.avatar
@@ -85,7 +90,6 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
             // With the latest changes that Balancer made, there's no need to swap
             // tokens in order to join or exit pools
             // c.calldataMatches(
-            //   // TODO update to next function
             //   allow.mainnet.balancer.relayerLibrary.swap(
             //     {
             //       poolId: c.or(
@@ -159,23 +163,17 @@ export const lock = (): Permission[] => {
     ),
     allow.mainnet.balancer.fee_distributor.claimTokens(
       c.avatar,
-      c.subset([
-        bb_a_USD_v1,
-        bb_a_USD_v2,
-        bb_a_USD_v3,
-        BAL,
-        USDC
-      ]),
-    )
+      c.subset([bb_a_USD_v1, bb_a_USD_v2, bb_a_USD_v3, BAL, USDC])
+    ),
   ]
 }
 
-export const swap = (
-  pool: Pool,
-  sell: Token[] | undefined,
-  buy: Token[] | undefined
-) => {
-  const result: Permission[] = []
+// export const swap = (
+//   pool: Pool,
+//   sell: Token[] | undefined,
+//   buy: Token[] | undefined
+// ) => {
+//   const result: Permission[] = []
 
-  return result
-}
+//   return result
+// }

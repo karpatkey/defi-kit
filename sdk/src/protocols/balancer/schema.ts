@@ -30,9 +30,9 @@ export const eth = {
 
   lock: z.object({}),
 
-  swap: z.object({
-    sell: zToken.array().optional(),
-    buy: zToken.array().optional(),
-    pools: zPool.array().optional(),
-  }),
+  // swap: z.object({
+  //   sell: zToken.array().optional(),
+  //   buy: zToken.array().optional(),
+  //   pools: zPool.array().optional(),
+  // }),
 }
