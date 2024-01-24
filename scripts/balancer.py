@@ -55,6 +55,7 @@ def subgraph_query_pools():
             address
             poolTypeVersion
             poolType
+            isInRecoveryMode
         }}
         }}
         '''
@@ -171,7 +172,7 @@ def add_pool_tokens(vault_contract, pool_id, lptoken_address, pool_tokens_array,
             pool_token_name = pool_token_contract.functions.name().call()
 
             # pool_token_version != None filters out old bb-a-USD pools and 'bao' not in pool_token_name.lower() filters out bao pools
-            if any(pool_token_type in itype for itype in ['ComposableStable', 'GearboxLinear']) and pool_token_version != None and 'bao' not in pool_token_name.lower():
+            if pool_token_type == 'ComposableStable' and pool_token_version != None and 'bao' not in pool_token_name.lower():
                 add_pool_tokens(vault_contract, token_pool_id, pool_token_address, pool_tokens_array, blockchain, web3)
             else:
                 try:
@@ -213,6 +214,10 @@ def transactions_data(blockchain):
     
     deprecated = 0
     for pool in pools:
+        # Skip pools in recovery mode
+        if pool['isInRecoveryMode']:
+            continue
+        
         lptoken_address = vault_contract.functions.getPool(pool['id']).call()[0]
 
         pool_tokens_data = vault_contract.functions.getPoolTokens(pool['id']).call()

@@ -4807,7 +4807,7 @@ __metadata:
     typescript: ^5.3.3
     wait-on: ^7.0.1
     zod: ^3.22.2
-    zodiac-roles-sdk: ^2.2.19
+    zodiac-roles-sdk: ^2.2.22
   languageName: unknown
   linkType: soft
 
@@ -12506,6 +12506,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"type-fest@npm:^4.9.0":
+  version: 4.9.0
+  resolution: "type-fest@npm:4.9.0"
+  checksum: 73383de23237b399a70397a53101152548846d919aebcc7d8733000c6c354dc2632fe37c4a70b8571b79fdbfa099e2d8304c5ac56b3254780acff93e4c7a797f
+  languageName: node
+  linkType: hard
+
 "typechain@npm:8.0.0":
   version: 8.0.0
   resolution: "typechain@npm:8.0.0"
@@ -13386,19 +13393,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zodiac-roles-sdk@npm:^2.2.19":
-  version: 2.2.19
-  resolution: "zodiac-roles-sdk@npm:2.2.19"
+"zodiac-roles-sdk@npm:^2.2.22":
+  version: 2.2.22
+  resolution: "zodiac-roles-sdk@npm:2.2.22"
   dependencies:
     ethers: ^5.7.2
-    type-fest: ^3.7.1
+    type-fest: ^4.9.0
     zod: ^3.22.1
   peerDependencies:
     "@dethcrypto/eth-sdk-client": ^0.1.6
   peerDependenciesMeta:
     "@dethcrypto/eth-sdk-client":
       optional: true
-  checksum: b3633090da0c55f57e22fee938fbfafcd5649e9af146698e76c240650777c31120879cdcdca25451cd54b6c253822cf48b4d4f5f85787e8a144915e575da36bc
+  checksum: ea28060a6e73cb0ee6a10aa75057ed9626829f0bf4e74c3833c180a56d1898b58cdedb97ab8e0bff4446024eefb57eab552514dbe65868f8b5444ae53d710061
   languageName: node
   linkType: hard
 
