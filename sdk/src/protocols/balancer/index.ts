@@ -1,7 +1,7 @@
 import { EthPool, EthToken, Pool } from "./types"
 import ethPools from "./_info"
 import { NotFoundError } from "../../errors"
-import { deposit, swap, stake, lock } from "./actions"
+import { deposit, stake, lock } from "./actions"
 
 export const findPool = (pools: readonly Pool[], nameIdOrBpt: string) => {
   const nameIdOrBptLower = nameIdOrBpt.toLowerCase()
@@ -73,20 +73,20 @@ export const eth = {
     return lock()
   },
 
-  swap: async (options: {
-    sell?: (EthToken["address"] | EthToken["symbol"])[]
-    buy?: (EthToken["address"] | EthToken["symbol"])[]
-    pools?: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
-  }) =>
-    filterPoolsByTokens(
-      options.sell?.map(findToken),
-      options.buy?.map(findToken),
-      options.pools
-        ? options.pools.map((addressOrName) =>
-            findPool(ethPools, addressOrName)
-          )
-        : ethPools
-    ).flatMap((pool) =>
-      swap(pool, options.sell?.map(findToken), options.buy?.map(findToken))
-    ),
+  // swap: async (options: {
+  //   sell?: (EthToken["address"] | EthToken["symbol"])[]
+  //   buy?: (EthToken["address"] | EthToken["symbol"])[]
+  //   pools?: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
+  // }) =>
+  //   filterPoolsByTokens(
+  //     options.sell?.map(findToken),
+  //     options.buy?.map(findToken),
+  //     options.pools
+  //       ? options.pools.map((addressOrName) =>
+  //           findPool(ethPools, addressOrName)
+  //         )
+  //       : ethPools
+  //   ).flatMap((pool) =>
+  //     swap(pool, options.sell?.map(findToken), options.buy?.map(findToken))
+  //   ),
 }
