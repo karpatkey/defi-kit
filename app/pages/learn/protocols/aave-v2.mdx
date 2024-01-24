@@ -99,6 +99,8 @@ Redeem `aToken` and withdraw `TARGET`
 
 ### Target: ETH
 
+For `"ETH"` as an element of `targets`, the following functions are allowed:
+
 #### `aWETH · approve`
 
 Approve `WrappedTokenGatewayV2` to spend `aWETH` tokens on behalf of the avatar
@@ -160,6 +162,8 @@ Redeem `aWETH` and withdraw ETH
 
 ### Target: ERC-20
 
+For targets that are ERC-20 tokens, the following functions are allowed:
+
 <Callout type="info">
   `TARGET` below refers to the ERC-20 token address of each element given in
   `targets`.
@@ -219,6 +223,8 @@ Repay borrowed `TARGET` tokens
   | `onBehalfOf` | equal to `AVATAR` |
 
 ### Target: ETH
+
+For `"ETH"` as an element of `targets`, the following functions are allowed:
 
 #### `variableDebtWETH · approveDelegation`
 
@@ -295,7 +301,7 @@ Repay borrowed ETH
 
 ### Target: `AAVE`
 
-If the `AAVE` token is given as an element of `targets`, the following functions are allowed:
+If the `AAVE` token is given as an element of `targets`, the following functions will be allowed:
 
 #### `AAVE · approve`
 
@@ -366,7 +372,7 @@ Unstake `AAVE` can only be called during the 2 days unstaking window after the 1
 
 ### Target: `ABPT`
 
-If the `ABPT` token is given as an element of `targets`, the following functions are allowed:
+If the `ABPT` token is given as an element of `targets`, the following functions will be allowed:
 
 #### `ABPT · approve`
 
@@ -439,7 +445,7 @@ Unstake `ABPT` can only be called during the 2 days unstaking window after the 1
 
 ### Target: `AAVE`
 
-If the `AAVE` token is given as an element of `targets`, the following functions are allowed:
+If the `AAVE` token is given as an element of `targets`, the following functions will be allowed:
 
 #### `AAVE · delegate`
 
@@ -466,7 +472,7 @@ Delegate the `AAVE` voting power by type of action
 
 ### Target: `stkAAVE`
 
-If the `stkAAVE` token is given as an element of `targets`, the following functions are allowed:
+If the `stkAAVE` token is given as an element of `targets`, the following functions will be allowed:
 
 #### `stkAAVE · delegate`
 
@@ -493,7 +499,7 @@ Delegate the `stkAAVE` voting power by type of action
 
 ### Target: `aEthAAVE`
 
-If the `aEthAAVE` token is given as an element of `targets`, the following functions are allowed:
+If the `aEthAAVE` token is given as an element of `targets`, the following functions will be allowed:
 
 #### `aEthAAVE · delegate`
 
