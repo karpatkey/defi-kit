@@ -7,8 +7,7 @@ const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/KarpatkeyDAO/defi-kit",
   },
-  docsRepositoryBase:
-    "https://github.com/KarpatkeyDAO/defi-kit/tree/main/app/pages/learn",
+  docsRepositoryBase: "https://github.com/KarpatkeyDAO/defi-kit/tree/main/app",
   logo: <span className="text-mono">DeFi Kit</span>,
   useNextSeoProps() {
     const { asPath } = useRouter()
