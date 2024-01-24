@@ -1729,4 +1729,20 @@ export default [
     ],
     rewarder: "0x52D97Fa3481BbFa95Cb48d8af4B1e31756EE1DB8",
   },
+  {
+    name: "80T-20TBTC",
+    id: "188",
+    bpt: "0x6228f64D5BA8376652Bfe7E36569D595347cF6Fb",
+    tokens: [
+      {
+        address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
+        symbol: "tBTC",
+      },
+      {
+        address: "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5",
+        symbol: "T",
+      },
+    ],
+    rewarder: "0x8660F02Ca94970C45add17CEDdCC81DD4D90ffED",
+  },
 ] as const

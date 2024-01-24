@@ -709,25 +709,6 @@ export default [
     ],
   },
   {
-    bpt: "0x271d57cE059780462F89800141A089008Ca78D4a",
-    id: "0x271d57ce059780462f89800141a089008ca78d4a000200000000000000000616",
-    name: "80PRTC-20WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0xb9098D3669A78e9AfE8b94a97290407400D9dA31",
-        symbol: "PRTC",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x27C9f71cC31464B906E0006d4FcBC8900F48f15f",
     id: "0x27c9f71cc31464b906e0006d4fcbc8900f48f15f00020000000000000000010f",
     name: "80D2D-20USDC",
