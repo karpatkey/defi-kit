@@ -2,7 +2,7 @@
 
 https://lido.fi
 
-## Deployments
+**Deployments**
 
 | Name      | Address                                                                                                               |
 | :-------- | :-------------------------------------------------------------------------------------------------------------------- |
@@ -10,163 +10,161 @@ https://lido.fi
 | `unstETH` | [0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1](https://etherscan.io/address/0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1) |
 | `wstETH`  | [0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0](https://etherscan.io/address/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0) |
 
-## Actions
+## Action: `deposit`
 
-### `deposit`
-
-#### Parameters
+**Parameters**
 
 N/A
 
-#### Allowed functions
+### Allowed functions
 
-1. `approve` `stETH` (spender: `wstETH`)
+#### `stETH · approve (spender: `wstETH`)`
 
-   - Description: approve `stETH` with `wstETH` as spender
-   - Target Address: `stETH`
-   - Function signature: `approve(address,uint256)`
-   - Parameters:
+Approve `wstETH` to spend `stETH` tokens on behalf of the avatar
 
-     | Name      | Description |
-     | :-------- | :---------- |
-     | `spender` | `wstETH`    |
-     | `amount`  | `undefined` |
+- **Contract:** `stETH`
+- **Function:** `approve(address,uint256)`
 
-1. `approve` `stETH` (spender: `unstETH`)
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `spender` | equal to `wstETH` |
+  | `amount`  | -                 |
 
-   - Description: approve `stETH` with `unstETH` as spender
-   - Target Address: `stETH`
-   - Function signature: `approve(address,uint256)`
-   - Parameters:
+#### `stETH · approve (spender: `unstETH`)`
 
-     | Name      | Description |
-     | :-------- | :---------- |
-     | `spender` | `unstETH`   |
-     | `amount`  | `undefined` |
+Approve `unstETH` to spend `stETH` tokens on behalf of the avatar
 
-1. `approve` `wstETH` (spender: `unstETH`)
+- **Contract:** `stETH`
+- **Function:** `approve(address,uint256)`
 
-   - Description: approve `wstETH` with `unstETH` as spender
-   - Target Address: `wstETH`
-   - Function signature: `approve(address,uint256)`
-   - Parameters:
+  | Parameter | Constraint         |
+  | :-------- | :----------------- |
+  | `spender` | equal to `unstETH` |
+  | `amount`  | -                  |
 
-     | Name      | Description |
-     | :-------- | :---------- |
-     | `spender` | `unstETH`   |
-     | `amount`  | `undefined` |
+#### `wstETH · approve`
 
-1. `submit`
+Approve `unstETH` to spend `wstETH` tokens on behalf of the avatar
 
-   - Description: sender deposits ETH and receives `stETH`
-   - Target Address: `stETH`
-   - Function signature: `submit(address)`
-   - Parameters:
+- **Contract:** `wstETH`
+- **Function:** `approve(address,uint256)`
 
-     | Name        | Description |
-     | :---------- | :---------- |
-     | `_referral` | `0x`        |
-     | `send`      | `true`      |
+  | Parameter | Constraint         |
+  | :-------- | :----------------- |
+  | `spender` | equal to `unstETH` |
+  | `amount`  | -                  |
 
-1. `wrap`
+#### `stETH · submit`
 
-   - Description: sender deposits `stETH` and receives `wstETH`
-   - Target Address: `wstETH`
-   - Function signature: `wrap(uint256)`
-   - Parameters:
+Deposit ETH and receive `stETH`
 
-     | Name     | Description |
-     | :------- | :---------- |
-     | `amount` | `undefined` |
+- **Contract:** `stETH`
+- **Function:** `submit(address)`
 
-1. `unwrap`
+  | Parameter   | Constraint      |
+  | :---------- | :-------------- |
+  | `_referral` | equal to `0x`   |
+  | `send`      | equal to `true` |
 
-   - Description: sender redeems `wstETH` and receives `stETH`
-   - Target Address: `wstETH`
-   - Function signature: `unwrap(uint256)`
-   - Parameters:
+#### `wstETH · wrap`
 
-     | Name     | Description |
-     | :------- | :---------- |
-     | `amount` | `undefined` |
+Deposit `stETH` and receive `wstETH`
 
-1. `requestWithdrawals`
+- **Contract:** `wstETH`
+- **Function:** `wrap(uint256)`
 
-   - Description: locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
-   - Target Address: `unstETH`
-   - Function signature: `requestWithdrawals(uint256[],address)`
-   - Parameters:
+  | Parameter | Constraint |
+  | :-------- | :--------- |
+  | `amount`  | -          |
 
-     | Name      | Description |
-     | :-------- | :---------- |
-     | `amounts` | `undefined` |
-     | `owner`   | `AVATAR`    |
+#### `wstETH · unwrap`
 
-1. `requestWithdrawalsWithPermit`
+Redeem `wstETH` and receive `stETH`
 
-   - Description: when the `unstETH` has no allowance over the owner's `stETH` locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
-   - Target Address: `unstETH`
-   - Function signature: `requestWithdrawalsWithPermit(uint256[],address,(uint256,uint256,uint8,bytes32,bytes32))`
-   - Parameters:
+- **Contract:** `wstETH`
+- **Function:** `unwrap(uint256)`
 
-     | Name              | Description |
-     | :---------------- | :---------- |
-     | `amounts`         | `undefined` |
-     | `owner`           | `AVATAR`    |
-     | `permit.value`    | `undefined` |
-     | `permit.deadline` | `undefined` |
-     | `permit.v`        | `undefined` |
-     | `permit.r`        | `undefined` |
-     | `permit.s`        | `undefined` |
+  | Parameter | Constraint |
+  | :-------- | :--------- |
+  | `amount`  | -          |
 
-1. `requestWithdrawalsWstETH`
+#### `unstETH · requestWithdrawals`
 
-   - Description: transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Then it locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
-   - Target Address: `unstETH`
-   - Function signature: `requestWithdrawalsWstETH(uint256[],address)`
-   - Parameters:
+Locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
 
-     | Name      | Description |
-     | :-------- | :---------- |
-     | `amounts` | `undefined` |
-     | `owner`   | `AVATAR`    |
+- **Contract:** `unstETH`
+- **Function:** `requestWithdrawals(uint256[],address)`
 
-1. `requestWithdrawalsWithPermitWstETH`
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `amounts` | -                 |
+  | `owner`   | equal to `AVATAR` |
 
-   - Description: when the `unstETH` has no allowance over the owner's `wstETH` transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Then it locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
-   - Target Address: `unstETH`
-   - Function signature: `requestWithdrawalsWithPermitWstETH(uint256[],address,(uint256,uint256,uint8,bytes32,bytes32))`
-   - Parameters:
+#### `unstETH · requestWithdrawalsWithPermit`
 
-     | Name              | Description |
-     | :---------------- | :---------- |
-     | `amounts`         | `undefined` |
-     | `owner`           | `AVATAR`    |
-     | `permit.value`    | `undefined` |
-     | `permit.deadline` | `undefined` |
-     | `permit.v`        | `undefined` |
-     | `permit.r`        | `undefined` |
-     | `permit.s`        | `undefined` |
+When the `unstETH` has no allowance over the owner's `stETH`, locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
 
-1. `claimWithdrawal`
+- **Contract:** `unstETH`
+- **Function:** `requestWithdrawalsWithPermit(uint256[],address,(uint256,uint256,uint8,bytes32,bytes32))`
 
-   - Description: once the request is finalized by the oracle report and becomes claimable, this function claims your ether and burns the NFT
-   - Target Address: `unstETH`
-   - Function signature: `claimWithdrawal(uint256)`
-   - Parameters:
+  | Parameter         | Constraint        |
+  | :---------------- | :---------------- |
+  | `amounts`         | -                 |
+  | `owner`           | equal to `AVATAR` |
+  | `permit.value`    | -                 |
+  | `permit.deadline` | -                 |
+  | `permit.v`        | -                 |
+  | `permit.r`        | -                 |
+  | `permit.s`        | -                 |
 
-     | Name        | Description |
-     | :---------- | :---------- |
-     | `requestId` | `undefined` |
+#### `unstETH · requestWithdrawalsWstETH`
 
-1. `claimWithdrawals`
+Transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Then it locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
 
-   - Description: if you want to claim multiple withdrawals in batches or optimize on hint search
-   - Target Address: `unstETH`
-   - Function signature: `claimWithdrawals(uint256[],uint256[])`
-   - Parameters:
+- **Contract:** `unstETH`
+- **Function:** `requestWithdrawalsWstETH(uint256[],address)`
 
-     | Name         | Description |
-     | :----------- | :---------- |
-     | `requestIds` | `undefined` |
-     | `hints`      | `undefined` |
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `amounts` | -                 |
+  | `owner`   | equal to `AVATAR` |
+
+#### `unstETH · requestWithdrawalsWithPermitWstETH`
+
+When the `unstETH` has no allowance over the owner's `wstETH`, transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Then it locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
+
+- **Contract:** `unstETH`
+- **Function:** `requestWithdrawalsWithPermitWstETH(uint256[],address,(uint256,uint256,uint8,bytes32,bytes32))`
+
+  | Parameter         | Constraint        |
+  | :---------------- | :---------------- |
+  | `amounts`         | -                 |
+  | `owner`           | equal to `AVATAR` |
+  | `permit.value`    | -                 |
+  | `permit.deadline` | -                 |
+  | `permit.v`        | -                 |
+  | `permit.r`        | -                 |
+  | `permit.s`        | -                 |
+
+#### `unstETH · claimWithdrawal`
+
+Once the request is finalized by the oracle report and becomes claimable, this function claims your ether and burns the NFT
+
+- **Contract:** `unstETH`
+- **Function:** `claimWithdrawal(uint256)`
+
+  | Parameter   | Constraint |
+  | :---------- | :--------- |
+  | `requestId` | -          |
+
+#### `unstETH · claimWithdrawal`
+
+Claim multiple withdrawals in batches or optimize on hint search
+
+- **Contract:** `unstETH`
+- **Function:** `claimWithdrawals(uint256[],uint256[])`
+
+  | Parameter    | Constraint |
+  | :----------- | :--------- |
+  | `requestIds` | -          |
+  | `hints`      | -          |
