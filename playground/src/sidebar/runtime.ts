@@ -14,11 +14,14 @@ declare global {
   }
 }
 
+let base64Encode: (str: string) => string
+
 export const runPlugin: PluginFactory = (i, utils) => {
   const plugin: PlaygroundPlugin = {
     id: "logs",
     displayName: "Logs",
     willMount: (sandbox, container) => {
+      base64Encode = sandbox.lzstring.compressToBase64
       const ui = createUI()
 
       const clearLogsAction = {
@@ -236,15 +239,17 @@ function rewireLoggingToElement(
       const prefix = nameWithoutObject ? `${nameWithoutObject}: ` : ""
 
       // JSON.stringify omits any keys with a value of undefined. To get around this, we replace undefined with the text __undefined__ and then do a global replace using regex back to keyword undefined
-      textRep =
-        prefix +
-        JSON.stringify(
-          arg,
-          (_, value) => (value === undefined ? "__undefined__" : value),
-          2
-        ).replace(/"__undefined__"/g, "undefined")
+      const json = JSON.stringify(
+        arg,
+        (_, value) => (value === undefined ? "__undefined__" : value),
+        2
+      ).replace(/"__undefined__"/g, "undefined")
 
-      textRep = htmlEscape(textRep)
+      textRep =
+        htmlEscape(prefix + json) +
+        "<br/><a href='data:application/json," +
+        encodeURI(JSON.stringify(arg)) +
+        "' download='safeTransactionBuilder.json' class='download'>download json file</a>"
     } else {
       textRep = htmlEscape(String(arg))
     }
