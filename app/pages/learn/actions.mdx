@@ -2,51 +2,51 @@
 
 One of the main goals of the project is systematizing the DeFi ecosystem using a set of standard actions.
 
-#### `deposit`
+## `deposit`
 
 Deposit to and withdraw funds from a money market or AMM pool.
 
-##### Parameters
+#### Parameters
 
 | Name      | Type                  | Description                                                                                          |
 | :-------- | :-------------------- | :--------------------------------------------------------------------------------------------------- |
 | `targets` | _string[] (required)_ | The set of money markets or AMM pools for depositing funds, can be contract addresses or pool labels |
 
-#### `borrow`
+## `borrow`
 
 Borrow assets against collateral deposited on money markets.
 
-##### Parameters
+#### Parameters
 
 | Name     | Type                  | Description                                                                        |
 | :------- | :-------------------- | :--------------------------------------------------------------------------------- |
 | `tokens` | _string[] (required)_ | The set of tokens that can be borrowed, can be contract addresses or token symbols |
 
-#### `stake`
+## `stake`
 
 Stake and unstake LP tokens into a vault or gauge.
 
-##### Parameters
+#### Parameters
 
 | Name      | Type                  | Description                                                                        |
 | :-------- | :-------------------- | :--------------------------------------------------------------------------------- |
 | `targets` | _string[] (required)_ | The set of vaults for staking LP tokens, can be contract addresses or vault labels |
 
-#### `claim`
+## `claim`
 
 Claim rewards from staking and farming.
 
-##### Parameters
+#### Parameters
 
 | Name      | Type                  | Description                                                  |
 | :-------- | :-------------------- | :----------------------------------------------------------- |
 | `targets` | _string[] (required)_ | The set of rewards contract addresses to allow claiming from |
 
-#### `swap`
+## `swap`
 
 Swap tokens on a DEX.
 
-##### Parameters
+#### Parameters
 
 | Name    | Type       | Description                                                                              |
 | :------ | :--------- | :--------------------------------------------------------------------------------------- |
