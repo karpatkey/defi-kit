@@ -34,8 +34,8 @@ const zEthToken = z.enum(ethTokens as [string, string, ...string[]])
 const zGnoToken = z.enum(gnoTokens as [string, string, ...string[]])
 
 const zStakeToken = z.enum([
-  ...ethStakeTokens.map((token) => token.address),
   ...ethStakeTokens.map((token) => token.symbol),
+  ...ethStakeTokens.map((token) => token.address),
 ] as [string, string, ...string[]])
 
 export const eth = {

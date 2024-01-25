@@ -13,15 +13,15 @@ const ethCollateralTokens = [
 const ethBorrowTokens = [
   ...new Set(
     ethComets.flatMap((comet) => [
-      comet.borrowToken.address,
       comet.borrowToken.symbol,
+      comet.borrowToken.address,
     ])
   ),
 ]
 
 const zComet = z.enum([
-  ...ethComets.map((comet) => comet.address),
   ...ethComets.map((comet) => comet.symbol),
+  ...ethComets.map((comet) => comet.address),
 ] as [string, string, ...string[]])
 
 const zToken = z.enum([...ethCollateralTokens, ...ethBorrowTokens] as [

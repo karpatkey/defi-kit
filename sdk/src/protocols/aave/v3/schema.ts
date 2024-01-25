@@ -5,19 +5,19 @@ import ethDelegateTokens from "../v2/delegateTokens"
 import { zx } from "../../../zx"
 
 const zToken = z.enum([
-  ...ethTokens.map((token) => token.token),
   "ETH",
   ...ethTokens.map((token) => token.symbol),
+  ...ethTokens.map((token) => token.token),
 ] as [string, string, ...string[]])
 
 const zStakeToken = z.enum([
-  ...ethStakeTokens.map((token) => token.address),
   ...ethStakeTokens.map((token) => token.symbol),
+  ...ethStakeTokens.map((token) => token.address),
 ] as [string, string, ...string[]])
 
 const zDelegateToken = z.enum([
-  ...ethDelegateTokens.map((token) => token.address),
   ...ethDelegateTokens.map((token) => token.symbol),
+  ...ethDelegateTokens.map((token) => token.address),
 ] as [string, string, ...string[]])
 
 const zDelegatee = zx.address()

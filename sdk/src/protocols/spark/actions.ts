@@ -4,7 +4,7 @@ import { Token } from "./types"
 import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 
-const _sDAI = (): Permission[] => {
+export const depositDsr = (): Permission[] => {
   return [
     ...allowErc20Approve(
       [contracts.mainnet.dai],
@@ -45,9 +45,6 @@ export const depositToken = (token: Token) => {
     )
   }
 
-  // sDAI permissions
-  permissions.push(..._sDAI())
-
   return permissions
 }
 
@@ -70,9 +67,6 @@ export const depositEther = () => [
   allow.mainnet.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
     contracts.mainnet.weth
   ),
-
-  // sDAI permissions
-  ..._sDAI(),
 ]
 
 export const borrowToken = (token: Token) => {
