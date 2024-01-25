@@ -1,7 +1,13 @@
 import { NotFoundError } from "../../errors"
 import tokens from "./_info"
 import { Token } from "./types"
-import { depositEther, depositToken, depositDsr, borrowEther, borrowToken } from "./actions"
+import {
+  depositEther,
+  depositToken,
+  depositDsr,
+  borrowEther,
+  borrowToken,
+} from "./actions"
 
 const findToken = (symbolOrAddress: string): Token => {
   const nameOrAddressLower = symbolOrAddress.toLowerCase()
@@ -23,7 +29,11 @@ export const eth = {
     targets: ("DSR - sDAI" | "ETH" | Token["symbol"] | Token["token"])[]
   }) => {
     return targets.flatMap((target) =>
-      target === "DSR - sDAI" ? depositDsr() : target === "ETH" ? depositEther() : depositToken(findToken(target))
+      target === "DSR - sDAI"
+        ? depositDsr()
+        : target === "ETH"
+        ? depositEther()
+        : depositToken(findToken(target))
     )
   },
 
