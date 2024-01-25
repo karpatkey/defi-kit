@@ -581,6 +581,11 @@ button.examples-close {
 .playground-plugin-container #log-container .comma {
   color: #777;
 }
+.playground-plugin-container #log-container .download {
+  color: dodgerblue;
+  cursor: pointer;
+  text-decoration: underline;
+}
 .playground-plugin-container div.ast {
   font-family: var(--font-mono);
   font-size: 0.8rem;
