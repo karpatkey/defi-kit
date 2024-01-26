@@ -26,10 +26,10 @@ export const eth = {
   deposit: async ({
     targets,
   }: {
-    targets: ("DSR - sDAI" | "ETH" | Token["symbol"] | Token["token"])[]
+    targets: ("DSR_sDAI" | "ETH" | Token["symbol"] | Token["token"])[]
   }) => {
     return targets.flatMap((target) =>
-      target === "DSR - sDAI"
+      target === "DSR_sDAI"
         ? depositDsr()
         : target === "ETH"
         ? depositEther()

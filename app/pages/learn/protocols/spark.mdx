@@ -18,48 +18,9 @@ https://spark.fi/
 
 **Parameters**
 
-| Name      | Type                  | Description                                               |
-| :-------- | :-------------------- | :-------------------------------------------------------- |
-| `targets` | _string[] (required)_ | DSR - sDAI \| ETH \| `Token` symbols \| `Token` addresses |
-
-### Target: DSR - sDAI
-
-#### `DAI · approve`
-
-Approve `sDAI` to spend `DAI` tokens on behalf of the avatar
-
-- **Contract:** `DAI`
-- **Function:** `approve(address,uint256)`
-
-  | Parameter | Constraint      |
-  | :-------- | :-------------- |
-  | `spender` | equal to `sDAI` |
-  | `amount`  | -               |
-
-#### `sDAI · deposit`
-
-Deposit `DAI` tokens `sDAI` tokens in exchange
-
-- **Contract:** `sDAI`
-- **Function:** `deposit(uint256,address)`
-
-  | Parameter  | Constraint        |
-  | :--------- | :---------------- |
-  | `assets`   | -                 |
-  | `receiver` | equal to `AVATAR` |
-
-#### `sDAI · redeem`
-
-Redeem `sDAI` and withdraw `DAI`
-
-- **Contract:** `sDAI`
-- **Function:** `redeem(uint256,address,address)`
-
-  | Parameter  | Constraint        |
-  | :--------- | :---------------- |
-  | `shares`   | -                 |
-  | `receiver` | equal to `AVATAR` |
-  | `owner`    | equal to `AVATAR` |
+| Name      | Type                  | Description                                             |
+| :-------- | :-------------------- | :------------------------------------------------------ |
+| `targets` | _string[] (required)_ | ETH \| `Token` symbols \| DSR_sDAI \| `Token` addresses |
 
 ### Target: ERC-20
 
@@ -187,6 +148,45 @@ Redeem `spWETH` and withdraw ETH
   | `address` | equal to `SparkLendingPoolV3` |
   | `amount`  | -                             |
   | `to`      | equal to `AVATAR`             |
+
+### Target: DSR_sDAI
+
+#### `DAI · approve`
+
+Approve `sDAI` to spend `DAI` tokens on behalf of the avatar
+
+- **Contract:** `DAI`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint      |
+  | :-------- | :-------------- |
+  | `spender` | equal to `sDAI` |
+  | `amount`  | -               |
+
+#### `sDAI · deposit`
+
+Deposit `DAI` tokens `sDAI` tokens in exchange
+
+- **Contract:** `sDAI`
+- **Function:** `deposit(uint256,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `assets`   | -                 |
+  | `receiver` | equal to `AVATAR` |
+
+#### `sDAI · redeem`
+
+Redeem `sDAI` and withdraw `DAI`
+
+- **Contract:** `sDAI`
+- **Function:** `redeem(uint256,address,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `shares`   | -                 |
+  | `receiver` | equal to `AVATAR` |
+  | `owner`    | equal to `AVATAR` |
 
 ## Action: `borrow`
 

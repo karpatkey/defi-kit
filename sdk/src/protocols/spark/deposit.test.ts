@@ -14,7 +14,7 @@ describe("spark", () => {
   describe("deposit", () => {
     beforeAll(async () => {
       await applyPermissions(
-        await eth.deposit({ targets: ["DSR - sDAI", "ETH", "USDC"] })
+        await eth.deposit({ targets: ["DSR_sDAI", "ETH", "USDC"] })
       )
     })
 
