@@ -9,8 +9,8 @@ const zPool = z.enum([
 ] as [string, string, ...string[]])
 
 const zStakeToken = z.enum([
-  ...ethStakeTokens.map((token) => token.address),
   ...ethStakeTokens.map((token) => token.symbol),
+  ...ethStakeTokens.map((token) => token.address),
 ] as [string, string, ...string[]])
 
 export const eth = {
