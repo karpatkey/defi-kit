@@ -24,7 +24,7 @@
   "typesVersions": {
     "*": {
       ".": [
-        "./dist/eth.d.ts"
+        "./dist/index.d.ts"
       ],
       "eth": [
         "./dist/eth.d.ts"
