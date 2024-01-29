@@ -546,25 +546,6 @@ export default [
     ],
   },
   {
-    bpt: "0x20a61B948E33879ce7F23e535CC7BAA3BC66c5a9",
-    id: "0x20a61b948e33879ce7f23e535cc7baa3bc66c5a9000000000000000000000555",
-    name: "R-DAI-BLP",
-    type: "ComposableStable",
-    gauge: "0x6F3b31296FD2457eba6Dca3BED65ec79e06c1295",
-    tokens: [
-      {
-        address: "0x183015a9bA6fF60230fdEaDc3F43b3D788b13e21",
-        symbol: "R",
-        id: "0x",
-      },
-      {
-        address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-        symbol: "DAI",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x20FacEcaa68E9b7c92d2d0ec9136D864Df805233",
     id: "0x20facecaa68e9b7c92d2d0ec9136d864df805233000100000000000000000190",
     name: "WILDFIRE",
@@ -1906,6 +1887,25 @@ export default [
     ],
   },
   {
+    bpt: "0x7761b6E0Daa04E70637D81f1Da7d186C205C2aDE",
+    id: "0x7761b6e0daa04e70637d81f1da7d186c205c2ade00000000000000000000065d",
+    name: "rsETH / ETHx",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+        symbol: "rsETH",
+        id: "0x",
+      },
+      {
+        address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+        symbol: "ETHx",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x77952E11E1ba727FfceA95a0f38Ed7DA586EeBc7",
     id: "0x77952e11e1ba727ffcea95a0f38ed7da586eebc7000200000000000000000116",
     name: "MTRL-ETH Liquidity Pool",
@@ -2020,30 +2020,6 @@ export default [
       {
         address: "0x7945b0A6674b175695e5d1D08aE1e6F13744Abb0",
         symbol: "BaoUSD",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x7fd800d3ECD9E83322CfCb8D416EB93F56eDB781",
-    id: "0x7fd800d3ecd9e83322cfcb8d416eb93f56edb78100010000000000000000065b",
-    name: "50PAXG-25USDC-25WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
-        symbol: "PAXG",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
         id: "0x",
       },
     ],
