@@ -1745,4 +1745,24 @@ export default [
     ],
     rewarder: "0x8660F02Ca94970C45add17CEDdCC81DD4D90ffED",
   },
+  {
+    name: "ezETH-WETH-BPT",
+    id: "189",
+    bpt: "0x596192bB6e41802428Ac943D2f1476C1Af25CC0E",
+    tokens: [
+      {
+        address: "0x596192bB6e41802428Ac943D2f1476C1Af25CC0E",
+        symbol: "ezETH-WETH-BPT",
+      },
+      {
+        address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+        symbol: "ezETH",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0x95eC73Baa0eCF8159b4EE897D973E41f51978E50",
+  },
 ] as const
