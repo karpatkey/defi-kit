@@ -1891,7 +1891,7 @@ export default [
     id: "0x7761b6e0daa04e70637d81f1da7d186c205c2ade00000000000000000000065d",
     name: "rsETH / ETHx",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0x0BcDb6d9b27Bd62d3De605393902C7d1a2c71Aab",
     tokens: [
       {
         address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
@@ -2515,6 +2515,25 @@ export default [
       {
         address: "0xaA7a9CA87d3694B5755f213B5D04094b8d0F0A6F",
         symbol: "TRAC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x98b76Fb35387142f97d601A297276bB152Ae8ab0",
+    id: "0x98b76fb35387142f97d601a297276bb152ae8ab0000200000000000000000662",
+    name: "20WETH-80ONDO",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
+        symbol: "ONDO",
         id: "0x",
       },
     ],
@@ -3329,6 +3348,25 @@ export default [
       {
         address: "0xE60779CC1b2c1d0580611c526a8DF0E3f870EC48",
         symbol: "USH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xD3F8AB9C5928FDf53153e7757131aD7815fe3146",
+    id: "0xd3f8ab9c5928fdf53153e7757131ad7815fe3146000000000000000000000661",
+    name: "vETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0x3ca33F22893a51A80Ed4ed8afebc900Ae813cA02",
+    tokens: [
+      {
+        address: "0x38D64ce1Bdf1A9f24E0Ec469C9cAde61236fB4a0",
+        symbol: "vETH",
+        id: "0x",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
         id: "0x",
       },
     ],
