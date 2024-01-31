@@ -31,14 +31,14 @@ https://aura.finance/
 
 Each Aura pool is connected to exactly one Balancer pool token (BPT) and we allow specifying the deposit targets using any of the following identifiers:
 
-- Aura pool ID
-- BPT address
-- BPT symbol
+- BPT symbol (`Pool` name)
+- BPT address (`Pool` bpt)
+- Aura pool ID (`Pool` id)
 
-<Callout type="info">`TARGET_ID` below refers to the Aura pool ID.</Callout>
 <Callout type="info">
   `TARGET_BPT` below refers to the address of Aura pool's BPT token.
 </Callout>
+<Callout type="info">`TARGET_ID` below refers to the Aura pool ID.</Callout>
 <Callout type="info">
   `TARGET_REWARDER` below refers to the `auraBaseRewardPool` contract address
   for the target Aura pool.
