@@ -33,7 +33,7 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 
 #### `TARGET · approve`
 
-Approve `SparkLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar
+Approve `SparkLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar.
 
 - **Contract:** `TARGET`
 - **Function:** `approve(address,uint256)`
@@ -45,7 +45,7 @@ Approve `SparkLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar
 
 #### `spWETH · approve`
 
-Approve `WrappedTokenGatewayV3` to spend `spWETH` tokens on behalf of the avatar
+Approve `WrappedTokenGatewayV3` to spend `spWETH` tokens on behalf of the avatar.
 
 - **Contract:** `spWETH`
 - **Function:** `approve(address,uint256)`
@@ -57,7 +57,7 @@ Approve `WrappedTokenGatewayV3` to spend `spWETH` tokens on behalf of the avatar
 
 #### `SparkLendingPoolV3 · supply`
 
-Deposit `TARGET` tokens to the Spark lending pool and receive `spToken` tokens in exchange
+Deposit `TARGET` tokens to the Spark lending pool and receive `spToken` tokens in exchange.
 
 - **Contract:** `SparkLendingPoolV3`
 - **Function:** `supply(address,uint256,address,uint16)`
@@ -71,7 +71,7 @@ Deposit `TARGET` tokens to the Spark lending pool and receive `spToken` tokens i
 
 #### `SparkLendingPoolV3 · setUserUseReserveAsCollateral`
 
-Set/unset deposited asset as collateral
+Set/unset deposited asset as collateral.
 
 - **Contract:** `SparkLendingPoolV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
@@ -83,7 +83,7 @@ Set/unset deposited asset as collateral
 
 #### `SparkLendingPoolV3 · withdraw`
 
-Redeem `spToken` and withdraw `TARGET`
+Redeem `spToken` and withdraw `TARGET`.
 
 - **Contract:** `SparkLendingPoolV3`
 - **Function:** `withdraw(address,uint256,address)`
@@ -100,7 +100,7 @@ For `"ETH"` as an element of `targets`, the following functions are allowed:
 
 #### `spWETH · approve`
 
-Approve `WrappedTokenGatewayV3` to spend `spWETH` tokens on behalf of the avatar
+Approve `WrappedTokenGatewayV3` to spend `spWETH` tokens on behalf of the avatar.
 
 - **Contract:** `spWETH`
 - **Function:** `approve(address,uint256)`
@@ -112,7 +112,7 @@ Approve `WrappedTokenGatewayV3` to spend `spWETH` tokens on behalf of the avatar
 
 #### `WrappedTokenGatewayV3 · depositETH`
 
-Deposit ETH and receive `spWETH` in exchange
+Deposit ETH and receive `spWETH` in exchange.
 
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `depositETH(address,address,uint16)`
@@ -126,7 +126,7 @@ Deposit ETH and receive `spWETH` in exchange
 
 #### `SparkLendingPoolV3 · setUserUseReserveAsCollateral`
 
-Set/unset deposited asset as collateral
+Set/unset deposited asset as collateral.
 
 - **Contract:** `SparkLendingPoolV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
@@ -138,7 +138,7 @@ Set/unset deposited asset as collateral
 
 #### `WrappedTokenGatewayV3 · withdrawETH`
 
-Redeem `spWETH` and withdraw ETH
+Redeem `spWETH` and withdraw ETH.
 
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `withdrawETH(address,uint256,address)`
@@ -153,7 +153,7 @@ Redeem `spWETH` and withdraw ETH
 
 #### `DAI · approve`
 
-Approve `sDAI` to spend `DAI` tokens on behalf of the avatar
+Approve `sDAI` to spend `DAI` tokens on behalf of the avatar.
 
 - **Contract:** `DAI`
 - **Function:** `approve(address,uint256)`
@@ -165,7 +165,7 @@ Approve `sDAI` to spend `DAI` tokens on behalf of the avatar
 
 #### `sDAI · deposit`
 
-Deposit `DAI` tokens `sDAI` tokens in exchange
+Deposit `DAI` tokens `sDAI` tokens in exchange.
 
 - **Contract:** `sDAI`
 - **Function:** `deposit(uint256,address)`
@@ -177,7 +177,7 @@ Deposit `DAI` tokens `sDAI` tokens in exchange
 
 #### `sDAI · redeem`
 
-Redeem `sDAI` and withdraw `DAI`
+Redeem `sDAI` and withdraw `DAI`.
 
 - **Contract:** `sDAI`
 - **Function:** `redeem(uint256,address,address)`
@@ -207,7 +207,7 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 
 #### `TARGET · approve`
 
-Approve `SparkLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar
+Approve `SparkLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar.
 
 - **Contract:** `TARGET`
 - **Function:** `approve(address,uint256)`
@@ -219,7 +219,7 @@ Approve `SparkLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar
 
 #### `SparkLendingPoolV3 · borrow`
 
-Receive `TARGET` tokens and receive `debtToken`
+Receive `TARGET` tokens and receive `debtToken`.
 
 - **Contract:** `SparkLendingPoolV3`
 - **Function:** `borrow(address,uint256,uint256,uint16,address)`
@@ -234,7 +234,7 @@ Receive `TARGET` tokens and receive `debtToken`
 
 #### `SparkLendingPoolV3 · repay`
 
-Repay borrowed `TARGET` tokens
+Repay borrowed `TARGET` tokens.
 
 - **Contract:** `SparkLendingPoolV3`
 - **Function:** `repay(address,uint256,uint256,address)`
@@ -252,7 +252,7 @@ For `"ETH"` as an element of `targets`, the following functions are allowed:
 
 #### `variableDebtWETH · approveDelegation`
 
-Set the amount of allowance for `WrappedTokenGatewayV3` to borrow of `variableDebtWETH`
+Set the amount of allowance for `WrappedTokenGatewayV3` to borrow of `variableDebtWETH`.
 
 - **Contract:** `variableDebtWETH`
 - **Function:** `approveDelegation(address,uint256)`
@@ -264,7 +264,7 @@ Set the amount of allowance for `WrappedTokenGatewayV3` to borrow of `variableDe
 
 #### `WrappedTokenGatewayV3 · borrowETH`
 
-Receive ETH and `variableDebtWETH` token
+Receive ETH and `variableDebtWETH` token.
 
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `borrowETH(address,uint256,uint256,uint16)`
@@ -278,7 +278,7 @@ Receive ETH and `variableDebtWETH` token
 
 #### `WrappedTokenGatewayV3 · repayETH`
 
-Repay borrowed ETH
+Repay borrowed ETH.
 
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `repayETH(address,uint256,uint256,address)`

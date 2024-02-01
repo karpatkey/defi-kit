@@ -14,11 +14,11 @@ https://lido.fi
 
 **Parameters**
 
-N/A
+N/A.
 
 ### `stETH · approve (spender: wstETH)`
 
-Approve `wstETH` to spend `stETH` tokens on behalf of the avatar
+Approve `wstETH` to spend `stETH` tokens on behalf of the avatar.
 
 - **Contract:** `stETH`
 - **Function:** `approve(address,uint256)`
@@ -30,7 +30,7 @@ Approve `wstETH` to spend `stETH` tokens on behalf of the avatar
 
 ### `stETH · approve (spender: unstETH)`
 
-Approve `unstETH` to spend `stETH` tokens on behalf of the avatar
+Approve `unstETH` to spend `stETH` tokens on behalf of the avatar.
 
 - **Contract:** `stETH`
 - **Function:** `approve(address,uint256)`
@@ -42,7 +42,7 @@ Approve `unstETH` to spend `stETH` tokens on behalf of the avatar
 
 ### `wstETH · approve`
 
-Approve `unstETH` to spend `wstETH` tokens on behalf of the avatar
+Approve `unstETH` to spend `wstETH` tokens on behalf of the avatar.
 
 - **Contract:** `wstETH`
 - **Function:** `approve(address,uint256)`
@@ -54,7 +54,7 @@ Approve `unstETH` to spend `wstETH` tokens on behalf of the avatar
 
 ### `stETH · submit`
 
-Deposit ETH and receive `stETH`
+Deposit ETH and receive `stETH`.
 
 - **Contract:** `stETH`
 - **Function:** `submit(address)`
@@ -66,7 +66,7 @@ Deposit ETH and receive `stETH`
 
 ### `wstETH · wrap`
 
-Deposit `stETH` and receive `wstETH`
+Deposit `stETH` and receive `wstETH`.
 
 - **Contract:** `wstETH`
 - **Function:** `wrap(uint256)`
@@ -77,7 +77,7 @@ Deposit `stETH` and receive `wstETH`
 
 ### `wstETH · unwrap`
 
-Redeem `wstETH` and receive `stETH`
+Redeem `wstETH` and receive `stETH`.
 
 - **Contract:** `wstETH`
 - **Function:** `unwrap(uint256)`
@@ -88,7 +88,7 @@ Redeem `wstETH` and receive `stETH`
 
 ### `unstETH · requestWithdrawals`
 
-Locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
+Locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue.
 
 - **Contract:** `unstETH`
 - **Function:** `requestWithdrawals(uint256[],address)`
@@ -100,7 +100,7 @@ Locks your `stETH` in the queue. In exchange you receive an NFT, that represents
 
 ### `unstETH · requestWithdrawalsWithPermit`
 
-When the `unstETH` has no allowance over the owner's `stETH`, locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
+When the `unstETH` has no allowance over the owner's `stETH`, locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue.
 
 - **Contract:** `unstETH`
 - **Function:** `requestWithdrawalsWithPermit(uint256[],address,(uint256,uint256,uint8,bytes32,bytes32))`
@@ -117,7 +117,7 @@ When the `unstETH` has no allowance over the owner's `stETH`, locks your `stETH`
 
 ### `unstETH · requestWithdrawalsWstETH`
 
-Transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Then it locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
+Transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Then it locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue.
 
 - **Contract:** `unstETH`
 - **Function:** `requestWithdrawalsWstETH(uint256[],address)`
@@ -129,7 +129,7 @@ Transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Th
 
 ### `unstETH · requestWithdrawalsWithPermitWstETH`
 
-When the `unstETH` has no allowance over the owner's `wstETH`, transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Then it locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue
+When the `unstETH` has no allowance over the owner's `wstETH`, transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Then it locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue.
 
 - **Contract:** `unstETH`
 - **Function:** `requestWithdrawalsWithPermitWstETH(uint256[],address,(uint256,uint256,uint8,bytes32,bytes32))`
@@ -146,7 +146,7 @@ When the `unstETH` has no allowance over the owner's `wstETH`, transfers the `ws
 
 ### `unstETH · claimWithdrawal`
 
-Once the request is finalized by the oracle report and becomes claimable, this function claims your ether and burns the NFT
+Once the request is finalized by the oracle report and becomes claimable, this function claims your ether and burns the NFT.
 
 - **Contract:** `unstETH`
 - **Function:** `claimWithdrawal(uint256)`
@@ -157,7 +157,7 @@ Once the request is finalized by the oracle report and becomes claimable, this f
 
 ### `unstETH · claimWithdrawal`
 
-Claim multiple withdrawals in batches or optimize on hint search
+Claim multiple withdrawals in batches or optimize on hint search.
 
 - **Contract:** `unstETH`
 - **Function:** `claimWithdrawals(uint256[],uint256[])`
