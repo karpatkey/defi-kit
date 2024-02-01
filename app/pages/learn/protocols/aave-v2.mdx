@@ -36,7 +36,7 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 
 #### `TARGET · approve`
 
-Approve `AaveLendingPoolV2` to spend `TARGET` tokens on behalf of the avatar
+Approve `AaveLendingPoolV2` to spend `TARGET` tokens on behalf of the avatar.
 
 - **Contract:** `TARGET`
 - **Function:** `approve(address,uint256)`
@@ -48,7 +48,7 @@ Approve `AaveLendingPoolV2` to spend `TARGET` tokens on behalf of the avatar
 
 #### `aWETH · approve`
 
-Approve `WrappedTokenGatewayV2` to spend `aWETH` tokens on behalf of the avatar
+Approve `WrappedTokenGatewayV2` to spend `aWETH` tokens on behalf of the avatar.
 
 - **Contract:** `aWETH`
 - **Function:** `approve(address,uint256)`
@@ -60,7 +60,7 @@ Approve `WrappedTokenGatewayV2` to spend `aWETH` tokens on behalf of the avatar
 
 #### `AaveLendingPoolV2 · deposit`
 
-Deposit `TARGET` tokens to the Aave lending pool and receive `aToken` tokens in exchange
+Deposit `TARGET` tokens to the Aave lending pool and receive `aToken` tokens in exchange.
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `deposit(address,uint256,address,uint16)`
@@ -74,7 +74,7 @@ Deposit `TARGET` tokens to the Aave lending pool and receive `aToken` tokens in 
 
 #### `AaveLendingPoolV2 · setUserUseReserveAsCollateral`
 
-Set/unset deposited asset as collateral
+Set/unset deposited asset as collateral.
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
@@ -86,7 +86,7 @@ Set/unset deposited asset as collateral
 
 #### `AaveLendingPoolV2 · withdraw`
 
-Redeem `aToken` and withdraw `TARGET`
+Redeem `aToken` and withdraw `TARGET`.
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `withdraw(address,uint256,address)`
@@ -103,7 +103,7 @@ For `"ETH"` as an element of `targets`, the following functions are allowed:
 
 #### `aWETH · approve`
 
-Approve `WrappedTokenGatewayV2` to spend `aWETH` tokens on behalf of the avatar
+Approve `WrappedTokenGatewayV2` to spend `aWETH` tokens on behalf of the avatar.
 
 - **Contract:** `aWETH`
 - **Function:** `approve(address,uint256)`
@@ -115,7 +115,7 @@ Approve `WrappedTokenGatewayV2` to spend `aWETH` tokens on behalf of the avatar
 
 #### `WrappedTokenGatewayV2 · depositETH`
 
-Deposit ETH and receive `aWETH` in exchange
+Deposit ETH and receive `aWETH` in exchange.
 
 - **Contract:** `WrappedTokenGatewayV2`
 - **Function:** `depositETH(address,address,uint16)`
@@ -129,7 +129,7 @@ Deposit ETH and receive `aWETH` in exchange
 
 #### `AaveLendingPoolV2 · setUserUseReserveAsCollateral`
 
-Set/unset deposited asset as collateral
+Set/unset deposited asset as collateral.
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
@@ -141,7 +141,7 @@ Set/unset deposited asset as collateral
 
 #### `WrappedTokenGatewayV2 · withdrawETH`
 
-Redeem `aWETH` and withdraw ETH
+Redeem `aWETH` and withdraw ETH.
 
 - **Contract:** `WrappedTokenGatewayV2`
 - **Function:** `withdrawETH(address,uint256,address)`
@@ -171,7 +171,7 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 
 #### `TARGET · approve`
 
-Approve `AaveLendingPoolV2` to spend `TARGET` tokens on behalf of the avatar
+Approve `AaveLendingPoolV2` to spend `TARGET` tokens on behalf of the avatar.
 
 - **Contract:** `TARGET`
 - **Function:** `approve(address,uint256)`
@@ -183,7 +183,7 @@ Approve `AaveLendingPoolV2` to spend `TARGET` tokens on behalf of the avatar
 
 #### `AaveLendingPoolV2 · borrow`
 
-Receive `TARGET` tokens and receive `debtToken` (stable or variable debt)
+Receive `TARGET` tokens and receive `debtToken` (stable or variable debt).
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `borrow(address,uint256,uint256,uint16,address)`
@@ -198,7 +198,7 @@ Receive `TARGET` tokens and receive `debtToken` (stable or variable debt)
 
 #### `AaveLendingPoolV2 · swapBorrowRateMode`
 
-Swap the borrow rate mode
+Swap the borrow rate mode.
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `swapBorrowRateMode(address,unit256)`
@@ -210,7 +210,7 @@ Swap the borrow rate mode
 
 #### `AaveLendingPoolV2 · repay`
 
-Repay borrowed `TARGET` tokens
+Repay borrowed `TARGET` tokens.
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `repay(address,uint256,uint256,address)`
@@ -228,7 +228,7 @@ For `"ETH"` as an element of `targets`, the following functions are allowed:
 
 #### `variableDebtWETH · approveDelegation`
 
-Set the amount of allowance for `WrappedTokenGatewayV2` to borrow of `variableDebtWETH`
+Set the amount of allowance for `WrappedTokenGatewayV2` to borrow of `variableDebtWETH`.
 
 - **Contract:** `variableDebtWETH`
 - **Function:** `approveDelegation(address,uint256)`
@@ -240,7 +240,7 @@ Set the amount of allowance for `WrappedTokenGatewayV2` to borrow of `variableDe
 
 #### `stableDebtWETH · approveDelegation`
 
-Set the amount of allowance for `WrappedTokenGatewayV2` to borrow of `stableDebtWETH`
+Set the amount of allowance for `WrappedTokenGatewayV2` to borrow of `stableDebtWETH`.
 
 - **Contract:** `stableDebtWETH`
 - **Function:** `approveDelegation(address,uint256)`
@@ -252,7 +252,7 @@ Set the amount of allowance for `WrappedTokenGatewayV2` to borrow of `stableDebt
 
 #### `WrappedTokenGatewayV2 · borrowETH`
 
-Receive ETH and `debtETH` (stable or variable debt) token
+Receive ETH and `debtETH` (stable or variable debt) token.
 
 - **Contract:** `WrappedTokenGatewayV2`
 - **Function:** `borrowETH(address,uint256,uint256,uint16)`
@@ -266,7 +266,7 @@ Receive ETH and `debtETH` (stable or variable debt) token
 
 #### `AaveLendingPoolV2 · swapBorrowRateMode`
 
-Swap the borrow rate mode
+Swap the borrow rate mode.
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `swapBorrowRateMode(address,unit256)`
@@ -278,7 +278,7 @@ Swap the borrow rate mode
 
 #### `WrappedTokenGatewayV2 · repayETH`
 
-Repay borrowed ETH
+Repay borrowed ETH.
 
 - **Contract:** `WrappedTokenGatewayV2`
 - **Function:** `repayETH(address,uint256,uint256,address)`
@@ -305,7 +305,7 @@ If the `AAVE` token is given as an element of `targets`, the following functions
 
 #### `AAVE · approve`
 
-Approve `stkAAVE` to spend `AAVE` tokens on behalf of avatar
+Approve `stkAAVE` to spend `AAVE` tokens on behalf of avatar.
 
 - **Contract:** `AAVE`
 - **Function:** `approve(address,uint256)`
@@ -317,7 +317,7 @@ Approve `stkAAVE` to spend `AAVE` tokens on behalf of avatar
 
 #### `stkAAVE · stake`
 
-Stake `AAVE` tokens in Aave's safety module
+Stake `AAVE` tokens in Aave's safety module.
 
 - **Contract:** `stkAAVE`
 - **Function:** `stake(address,uint256)`
@@ -329,7 +329,7 @@ Stake `AAVE` tokens in Aave's safety module
 
 #### `stkAAVE · claimRewardsAndStake`
 
-Claim `AAVE` rewards accrued from staking `AAVE` and restake
+Claim `AAVE` rewards accrued from staking `AAVE` and restake.
 
 - **Contract:** `stkAAVE`
 - **Function:** `claimRewardsAndStake(address,uint256)`
@@ -341,7 +341,7 @@ Claim `AAVE` rewards accrued from staking `AAVE` and restake
 
 #### `stkAAVE · claimRewards`
 
-Claim `AAVE` rewards accrued from staking `AAVE`
+Claim `AAVE` rewards accrued from staking `AAVE`.
 
 - **Contract:** `stkAAVE`
 - **Function:** `claimRewards(address,uint256)`
@@ -353,14 +353,14 @@ Claim `AAVE` rewards accrued from staking `AAVE`
 
 #### `stkAAVE · cooldown`
 
-Initiates a 10 days cooldown period. Ince this is over, the 2 days unstaking window opens
+Initiates a 10 days cooldown period. Ince this is over, the 2 days unstaking window opens.
 
 - **Contract:** `stkAAVE`
 - **Function:** `cooldown()`
 
 #### `stkAAVE · unstake`
 
-Unstake `AAVE` can only be called during the 2 days unstaking window after the 10 days cooldown period
+Unstake `AAVE` can only be called during the 2 days unstaking window after the 10 days cooldown period.
 
 - **Contract:** `stkAAVE`
 - **Function:** `redeem(address,uint256)`
@@ -376,7 +376,7 @@ If the `ABPT` token is given as an element of `targets`, the following functions
 
 #### `ABPT · approve`
 
-Approve `stkABPT` to spend `ABPT` tokens on behalf of the avatar
+Approve `stkABPT` to spend `ABPT` tokens on behalf of the avatar.
 
 - **Contract:** `ABPT`
 - **Function:** `approve(address,uint256)`
@@ -388,7 +388,7 @@ Approve `stkABPT` to spend `ABPT` tokens on behalf of the avatar
 
 #### `stkABPT · stake`
 
-Stake `ABPT` in Aave's safety module
+Stake `ABPT` in Aave's safety module.
 
 - **Contract:** `stkABPT`
 - **Function:** `stake(address,uint256)`
@@ -400,7 +400,7 @@ Stake `ABPT` in Aave's safety module
 
 #### `stkABPT · claimRewards`
 
-Claim `ABPT` rewards accrued from staking `ABPT`
+Claim `ABPT` rewards accrued from staking `ABPT`.
 
 - **Contract:** `stkABPT`
 - **Function:** `claimRewards(address,uint256)`
@@ -412,14 +412,14 @@ Claim `ABPT` rewards accrued from staking `ABPT`
 
 #### `stkABPT · cooldown`
 
-Initiates a 10 days cooldown period. Once this is over, the 2 days unstaking window opens
+Initiates a 10 days cooldown period. Once this is over, the 2 days unstaking window opens.
 
 - **Contract:** `stkABPT`
 - **Function:** `cooldown()`
 
 #### `stkABPT · unstake`
 
-Unstake `ABPT` can only be called during the 2 days unstaking window after the 10 days cooldown period
+Unstake `ABPT` can only be called during the 2 days unstaking window after the 10 days cooldown period.
 
 - **Contract:** `stkABPT`
 - **Function:** `redeem(address,uint256)`
@@ -449,7 +449,7 @@ If the `AAVE` token is given as an element of `targets`, the following functions
 
 #### `AAVE · delegate`
 
-Delegate the `AAVE` voting power for all type of actions (voting and proposition)
+Delegate the `AAVE` voting power for all type of actions (voting and proposition).
 
 - **Contract:** `AAVE`
 - **Function:** `delegate(address)`
@@ -460,7 +460,7 @@ Delegate the `AAVE` voting power for all type of actions (voting and proposition
 
 #### `AAVE · delegateByType`
 
-Delegate the `AAVE` voting power by type of action
+Delegate the `AAVE` voting power by type of action.
 
 - **Contract:** `AAVE`
 - **Function:** `delegateByType(address,uint8)`
@@ -476,7 +476,7 @@ If the `stkAAVE` token is given as an element of `targets`, the following functi
 
 #### `stkAAVE · delegate`
 
-Delegate the `stkAAVE` voting power for all type of actions (voting and proposition)
+Delegate the `stkAAVE` voting power for all type of actions (voting and proposition).
 
 - **Contract:** `stkAAVE`
 - **Function:** `delegate(address)`
@@ -487,7 +487,7 @@ Delegate the `stkAAVE` voting power for all type of actions (voting and proposit
 
 #### `stkAAVE · delegateByType`
 
-Delegate the `stkAAVE` voting power by type of action
+Delegate the `stkAAVE` voting power by type of action.
 
 - **Contract:** `stkAAVE`
 - **Function:** `delegateByType(address,uint8)`
@@ -503,7 +503,7 @@ If the `aEthAAVE` token is given as an element of `targets`, the following funct
 
 #### `aEthAAVE · delegate`
 
-Delegate the `aEthAAVE` voting power for all type of actions (voting and proposition)
+Delegate the `aEthAAVE` voting power for all type of actions (voting and proposition).
 
 - **Contract:** `aEthAAVE`
 - **Function:** `delegate(address)`
@@ -514,7 +514,7 @@ Delegate the `aEthAAVE` voting power for all type of actions (voting and proposi
 
 #### `aEthAAVE · delegateByType`
 
-Delegate the `aEthAAVE` voting power by type of action
+Delegate the `aEthAAVE` voting power by type of action.
 
 - **Contract:** `aEthAAVE`
 - **Function:** `delegateByType(address,uint8)`

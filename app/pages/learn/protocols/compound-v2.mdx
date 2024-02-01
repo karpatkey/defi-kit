@@ -31,7 +31,7 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 
 #### `TARGET · approve`
 
-Approve `cToken` to spend `TARGET` tokens on behalf of the avatar
+Approve `cToken` to spend `TARGET` tokens on behalf of the avatar.
 
 - **Contract:** `TARGET`
 - **Function:** `approve(address,uint256)`
@@ -43,7 +43,7 @@ Approve `cToken` to spend `TARGET` tokens on behalf of the avatar
 
 #### `cToken · mint`
 
-Deposit `TARGET` tokens and receive `cToken` tokens in exchange
+Deposit `TARGET` tokens and receive `cToken` tokens in exchange.
 
 - **Contract:** `cToken`
 - **Function:** `mint(uint256)`
@@ -54,7 +54,7 @@ Deposit `TARGET` tokens and receive `cToken` tokens in exchange
 
 #### `Comptroller · enterMarkets`
 
-Set deposited asset as collateral
+Set deposited asset as collateral.
 
 - **Contract:** `Comptroller`
 - **Function:** `enterMarkets(address[])`
@@ -65,7 +65,7 @@ Set deposited asset as collateral
 
 #### `Comptroller · exitMarket`
 
-Unset deposited asset as collateral
+Unset deposited asset as collateral.
 
 - **Contract:** `Comptroller`
 - **Function:** `exitMarket(address)`
@@ -76,7 +76,7 @@ Unset deposited asset as collateral
 
 #### `cToken · redeem`
 
-Redeem `cToken` and withdraw `TARGET` (it is called when MAX underlying amount is withdrawn)
+Redeem `cToken` and withdraw `TARGET` (it is called when MAX underlying amount is withdrawn).
 
 - **Contract:** `cToken`
 - **Function:** `redeem(uint256)`
@@ -87,7 +87,7 @@ Redeem `cToken` and withdraw `TARGET` (it is called when MAX underlying amount i
 
 #### `cToken · redeemUnderlying`
 
-Redeem `cToken` and withdraw `TARGET`
+Redeem `cToken` and withdraw `TARGET`.
 
 - **Contract:** `cToken`
 - **Function:** `redeemUnderlying(uint256)`
@@ -98,7 +98,7 @@ Redeem `cToken` and withdraw `TARGET`
 
 #### `Comptroller · claimComp`
 
-Claim `COMP` rewards
+Claim `COMP` rewards.
 
 - **Contract:** `Comptroller`
 - **Function:** `claimComp(address,address[])`
@@ -114,7 +114,7 @@ For `"ETH"` as an element of `targets`, the following functions are allowed:
 
 #### `cETH · mint`
 
-Deposit ETH and receive `cETH` tokens in exchange
+Deposit ETH and receive `cETH` tokens in exchange.
 
 - **Contract:** `cETH`
 - **Function:** `mint()`
@@ -125,7 +125,7 @@ Deposit ETH and receive `cETH` tokens in exchange
 
 #### `Comptroller · enterMarkets`
 
-Set deposited asset as collateral
+Set deposited asset as collateral.
 
 - **Contract:** `Comptroller`
 - **Function:** `enterMarkets(address[])`
@@ -136,7 +136,7 @@ Set deposited asset as collateral
 
 #### `Comptroller · exitMarket`
 
-Unset deposited asset as collateral
+Unset deposited asset as collateral.
 
 - **Contract:** `Comptroller`
 - **Function:** `exitMarket(address)`
@@ -147,7 +147,7 @@ Unset deposited asset as collateral
 
 #### `cETH · redeem`
 
-Redeem `cETH` and withdraw ETH (it is called when MAX underlying amount is withdrawn)
+Redeem `cETH` and withdraw ETH (it is called when MAX underlying amount is withdrawn).
 
 - **Contract:** `cETH`
 - **Function:** `redeem(uint256)`
@@ -158,7 +158,7 @@ Redeem `cETH` and withdraw ETH (it is called when MAX underlying amount is withd
 
 #### `cETH · redeemUnderlying`
 
-Redeem `cETH` and withdraw ETH
+Redeem `cETH` and withdraw ETH.
 
 - **Contract:** `cETH`
 - **Function:** `redeemUnderlying(uint256)`
@@ -169,7 +169,7 @@ Redeem `cETH` and withdraw ETH
 
 #### `Comptroller · claimComp`
 
-Claim `COMP` rewards
+Claim `COMP` rewards.
 
 - **Contract:** `Comptroller`
 - **Function:** `claimComp(address,address[])`
@@ -198,7 +198,7 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 
 #### `TARGET · approve`
 
-Approve `cToken` to spend `TARGET` tokens on behalf of the avatar
+Approve `cToken` to spend `TARGET` tokens on behalf of the avatar.
 
 - **Contract:** `TARGET`
 - **Function:** `approve(address,uint256)`
@@ -210,7 +210,7 @@ Approve `cToken` to spend `TARGET` tokens on behalf of the avatar
 
 #### `cToken · borrow`
 
-Receive `TARGET` tokens
+Receive `TARGET` tokens.
 
 - **Contract:** `cToken`
 - **Function:** `borrow(uint256)`
@@ -221,7 +221,7 @@ Receive `TARGET` tokens
 
 #### `cToken · repayBorrow`
 
-Repay borrowed `TARGET` tokens
+Repay borrowed `TARGET` tokens.
 
 - **Contract:** `cToken`
 - **Function:** `repayBorrow(uint256)`
@@ -236,7 +236,7 @@ For `"ETH"` as an element of `targets`, the following functions are allowed:
 
 #### `cETH · borrow`
 
-Receive ETH
+Receive ETH.
 
 - **Contract:** `cETH`
 - **Function:** `borrow(uint256)`
@@ -247,7 +247,7 @@ Receive ETH
 
 #### `Maximillion · repayBehalf`
 
-Repay borrowed ETH
+Repay borrowed ETH.
 
 - **Contract:** `Maximillion`
 - **Function:** `repayBehalf(address)`
