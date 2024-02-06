@@ -1749,25 +1749,6 @@ export default [
     ],
   },
   {
-    bpt: "0x7056C8DFa8182859eD0d4Fb0eF0886fdf3d2edCF",
-    id: "0x7056c8dfa8182859ed0d4fb0ef0886fdf3d2edcf000200000000000000000623",
-    name: "80OETH/20WETH",
-    type: "Weighted",
-    gauge: "0x1c9E55ae29541F2D29cDf83a38F53e1143Db278E",
-    tokens: [
-      {
-        address: "0x856c4Efb76C1D1AE02e20CEB03A2A6a08b0b8dC3",
-        symbol: "OETH",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x70d5E3234F6329c1D5a26796dcf4e109d69A3488",
     id: "0x70d5e3234f6329c1d5a26796dcf4e109d69a34880000000000000000000005e7",
     name: "uniETH/wstETH/rETH",
