@@ -3611,6 +3611,25 @@ export default [
     ],
   },
   {
+    bpt: "0xdEdb11A6a23263469567C2881A9b9F8629eE0041",
+    id: "0xdedb11a6a23263469567c2881a9b9f8629ee0041000000000000000000000669",
+    name: "svETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0xD98ed0426D18B115d6388923803e33ad8aaF11F8",
+    tokens: [
+      {
+        address: "0x6733F0283711F225A447e759D859a70b0c0Fd2bC",
+        symbol: "svETH",
+        id: "0x",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xDf2c03c12442c7A0895455A48569B889079cA52A",
     id: "0xdf2c03c12442c7a0895455a48569b889079ca52a000200000000000000000538",
     name: "80ARCH-20WETH",
