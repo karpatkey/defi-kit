@@ -886,6 +886,25 @@ export default [
     ],
   },
   {
+    bpt: "0x383e7859271B2D0589B013b6d944572a0a8bE3cB",
+    id: "0x383e7859271b2d0589b013b6d944572a0a8be3cb000000000000000000000657",
+    name: "DOLA-mkUSD BSP",
+    type: "ComposableStable",
+    gauge: "0x6D560CbE3Cc25Eca8c930835Ec3d296a6C16B210",
+    tokens: [
+      {
+        address: "0x4591DBfF62656E7859Afe5e45f6f47D3669fBB28",
+        symbol: "mkUSD",
+        id: "0x",
+      },
+      {
+        address: "0x865377367054516e17014CcdED1e7d814EDC9ce4",
+        symbol: "DOLA",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x39eB558131E5eBeb9f76a6cbf6898f6E6DCe5e4E",
     id: "0x39eb558131e5ebeb9f76a6cbf6898f6e6dce5e4e0002000000000000000005c8",
     name: "QI BPT",
