@@ -1856,4 +1856,18 @@ export default [
     cvxDepositToken: "0x6C366B4A0b59b3403C8ccEc948fa7b6804551b72",
     rewarder: "0x9798e88f495Ed494a52F5D4615C5D53C16139A5e",
   },
+  {
+    name: "eUSDmkUSD",
+    id: "292",
+    crvLPToken: "0xc37c0E88551Ed383c1aBEDc6628a5579071BF56f",
+    cvxDepositToken: "0xa41c422B418eE4e18b13F40c246D05C3013aC4c5",
+    rewarder: "0xBdeb10ed4FE95a2f79A9D60F9C16206BfcBA6Ef7",
+  },
+  {
+    name: "eUSDcrvUSD",
+    id: "293",
+    crvLPToken: "0x91285c4fC766ffF6F3acAfeEC7a0423275257faE",
+    cvxDepositToken: "0x16e21804A962F098F5C02Bd8E18Cb7cD26d90c2A",
+    rewarder: "0x01099Fe2c82C6F5Dc7485697fBC234f034E3329A",
+  },
 ] as const

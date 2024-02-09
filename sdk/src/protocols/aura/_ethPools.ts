@@ -1765,4 +1765,64 @@ export default [
     ],
     rewarder: "0x95eC73Baa0eCF8159b4EE897D973E41f51978E50",
   },
+  {
+    name: "DOLA-mkUSD BSP",
+    id: "190",
+    bpt: "0x383e7859271B2D0589B013b6d944572a0a8bE3cB",
+    tokens: [
+      {
+        address: "0x383e7859271B2D0589B013b6d944572a0a8bE3cB",
+        symbol: "DOLA-mkUSD BSP",
+      },
+      {
+        address: "0x4591DBfF62656E7859Afe5e45f6f47D3669fBB28",
+        symbol: "mkUSD",
+      },
+      {
+        address: "0x865377367054516e17014CcdED1e7d814EDC9ce4",
+        symbol: "DOLA",
+      },
+    ],
+    rewarder: "0x34211820D0Ab85E051214e60fea88Ba944c9BA57",
+  },
+  {
+    name: "rsETH / ETHx",
+    id: "191",
+    bpt: "0x7761b6E0Daa04E70637D81f1Da7d186C205C2aDE",
+    tokens: [
+      {
+        address: "0x7761b6E0Daa04E70637D81f1Da7d186C205C2aDE",
+        symbol: "rsETH / ETHx",
+      },
+      {
+        address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+        symbol: "rsETH",
+      },
+      {
+        address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+        symbol: "ETHx",
+      },
+    ],
+    rewarder: "0xf618102462Ff3cf7edbA4c067316F1C3AbdbA193",
+  },
+  {
+    name: "vETH/wstETH",
+    id: "192",
+    bpt: "0xD3F8AB9C5928FDf53153e7757131aD7815fe3146",
+    tokens: [
+      {
+        address: "0x38D64ce1Bdf1A9f24E0Ec469C9cAde61236fB4a0",
+        symbol: "vETH",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xD3F8AB9C5928FDf53153e7757131aD7815fe3146",
+        symbol: "vETH/wstETH",
+      },
+    ],
+    rewarder: "0x7633d0bBDe67553C582BF241BF8cb22895610B94",
+  },
 ] as const
