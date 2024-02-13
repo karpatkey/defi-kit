@@ -43,6 +43,7 @@ async function setupAvatar() {
     avatar._address,
     testAvatarDeployedBytecode,
   ])
+
   console.log(`Successfully initilized avatar at ${avatar._address}`)
 }
 
