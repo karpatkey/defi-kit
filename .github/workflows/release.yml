@@ -1,4 +1,4 @@
-name: Release defi-kit SDK to npm
+name: Release SDK package to npm
 
 on:
   push:
@@ -16,4 +16,4 @@ jobs:
       - uses: google-github-actions/release-please-action@v4
         with:
           release-type: node
-          path: ./sdk
+          path: sdk
