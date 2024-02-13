@@ -1,4 +1,4 @@
-name: Run continuous integration checks
+name: Continuous integration checks
 
 on: [push]
 
