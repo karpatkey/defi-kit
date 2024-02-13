@@ -1,7 +1,13 @@
+name: Release defi-kit SDK to npm
+
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   release:
