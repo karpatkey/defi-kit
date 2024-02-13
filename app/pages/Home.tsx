@@ -77,7 +77,7 @@ const Home = () => (
       </a>
 
       <a
-        href="https://github.com/KarpatkeyDAO/defi-kit"
+        href="https://github.com/karpatkey/defi-kit"
         className={styles.card}
         target="_blank"
         rel="noopener noreferrer"
