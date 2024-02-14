@@ -1870,4 +1870,32 @@ export default [
     cvxDepositToken: "0x16e21804A962F098F5C02Bd8E18Cb7cD26d90c2A",
     rewarder: "0x01099Fe2c82C6F5Dc7485697fBC234f034E3329A",
   },
+  {
+    name: "weeTH/rswE",
+    id: "294",
+    crvLPToken: "0x278cfB6f06B1EFc09d34fC7127d6060C61d629Db",
+    cvxDepositToken: "0x99b6FD0C3C0311b237D12806b3d067Eb7D053311",
+    rewarder: "0xc72dA58342e6bE07858B12c0AFE3Db9aF098b849",
+  },
+  {
+    name: "rswETH/ETH",
+    id: "295",
+    crvLPToken: "0xeE04382c4cA6c450213923fE0f0daB19b0ff3939",
+    cvxDepositToken: "0x459D0282D40d2EE20BEBd4213bff77B3F5a5824c",
+    rewarder: "0x5FBA4b8417d239AF93ce194c6F25A1D29020A799",
+  },
+  {
+    name: "BobrCRV",
+    id: "296",
+    crvLPToken: "0x9FeE65D5A627e73212989c8BbEdC5Fa5Cae3821F",
+    cvxDepositToken: "0x55E77245bE7AD7680E991CD6Aec3953744e35a09",
+    rewarder: "0xbf93ffB9C681052b810E300B38F59676a78f16b3",
+  },
+  {
+    name: "GHOBTCwstE",
+    id: "297",
+    crvLPToken: "0x8Cd52ee292313C4D851e71A7064F096504aB3eE9",
+    cvxDepositToken: "0xE2f351EE66e83A41bad79E45bEDFE451ffBf7199",
+    rewarder: "0x923D3C32f870E7953dd4020D0585D6419C44e4Ca",
+  },
 ] as const
