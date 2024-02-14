@@ -51,7 +51,7 @@ jobs:
       - name: Run spark
         run: python scripts/spark.py
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
       - uses: actions/cache@v3
@@ -71,7 +71,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3.10.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: protocol updates
+          commit-message: "fix: protocol updates"
           title: "[nightly] Protocol updates"
           body: >
             The nightly job detected updates to the protocol configs
