@@ -115,14 +115,13 @@ Approve `WrappedTokenGatewayV3` to spend `spWETH` tokens on behalf of the avatar
 Deposit ETH and receive `spWETH` in exchange.
 
 - **Contract:** `WrappedTokenGatewayV3`
-- **Function:** `depositETH(address,address,uint16)`
+- **Function:** `depositETH(address,address,uint16)` Ξ _allow sending ETH_
 
   | Parameter      | Constraint                    |
   | :------------- | :---------------------------- |
   | `address`      | equal to `SparkLendingPoolV3` |
   | `onBehalfOf`   | equal to `AVATAR`             |
   | `referralCode` | -                             |
-  | `send`         | equal to `true`               |
 
 #### `SparkLendingPoolV3 · setUserUseReserveAsCollateral`
 
@@ -281,7 +280,7 @@ Receive ETH and `variableDebtWETH` token.
 Repay borrowed ETH.
 
 - **Contract:** `WrappedTokenGatewayV3`
-- **Function:** `repayETH(address,uint256,uint256,address)`
+- **Function:** `repayETH(address,uint256,uint256,address)` Ξ _allow sending ETH_
 
   | Parameter    | Constraint                   |
   | :----------- | :--------------------------- |
@@ -289,4 +288,3 @@ Repay borrowed ETH.
   | `amount`     | -                            |
   | `rateMode`   | -                            |
   | `onBehalfOf` | equal to `AVATAR`            |
-  | `send`       | equal to `true`              |

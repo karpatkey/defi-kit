@@ -117,11 +117,11 @@ For `"ETH"` as an element of `targets`, the following functions are allowed:
 Deposit ETH and receive `cETH` tokens in exchange.
 
 - **Contract:** `cETH`
-- **Function:** `mint()`
+- **Function:** `mint()` Ξ _allow sending ETH_
 
   | Parameter | Constraint |
   | :-------- | :--------- |
-  | `send`    | `true`     |
+  | N/A       | N/A        |
 
 #### `Comptroller · enterMarkets`
 
@@ -250,9 +250,8 @@ Receive ETH.
 Repay borrowed ETH.
 
 - **Contract:** `Maximillion`
-- **Function:** `repayBehalf(address)`
+- **Function:** `repayBehalf(address)` Ξ _allow sending ETH_
 
   | Parameter  | Constraint        |
   | :--------- | :---------------- |
   | `borrower` | equal to `AVATAR` |
-  | `send`     | `true`            |
