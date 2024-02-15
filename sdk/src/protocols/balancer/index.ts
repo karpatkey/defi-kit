@@ -1,5 +1,6 @@
-import { EthPool, EthToken, Pool } from "./types"
-import ethPools from "./_info"
+import { EthPool, EthToken, GnoToken, GnoPool, Pool } from "./types"
+import ethPools from "./_ethPools"
+import gnoPools from "./_gnoPools"
 import { NotFoundError } from "../../errors"
 import { deposit, stake, lock } from "./actions"
 
@@ -42,13 +43,13 @@ const filterPoolsByTokens = (
   })
 }
 
-const findToken = (symbolOrAddress: string): EthToken => {
-  const symbolAddressLower = symbolOrAddress.toLowerCase()
-  const tokens = ethPools.flatMap((pool) => [...pool.tokens])
+const findToken = (pools: readonly Pool[], symbolOrAddress: string) => {
+  const nameOrAddressOrIdLower = symbolOrAddress.toLowerCase()
+  const tokens = pools.flatMap((pool) => [...pool.tokens])
   const token = tokens.find(
     (token) =>
-      token.symbol.toLowerCase() === symbolAddressLower ||
-      token.address.toLowerCase() === symbolAddressLower
+      token.symbol.toLowerCase() === nameOrAddressOrIdLower ||
+      token.address.toLowerCase() === nameOrAddressOrIdLower
   )
   if (!token) {
     throw new NotFoundError(`Token not found: ${symbolOrAddress}`)
@@ -57,13 +58,23 @@ const findToken = (symbolOrAddress: string): EthToken => {
 }
 
 export const eth = {
-  deposit: async (options: {
+  deposit: async ({
+    targets,
+    tokens,
+  }: {
+    // "targets" is a mandatory parameter
     targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
+    // "tokens" is an optional parameter since the user might want to allow (or not) the depositSingle() function
+    // If "tokens" is not specified then we allow all the pool.tokens[]
     tokens?: (EthToken["address"] | EthToken["symbol"])[]
-  }) =>
-    options.targets.flatMap((target) =>
-      deposit(findPool(ethPools, target), options.tokens?.map(findToken))
-    ),
+  }) => {
+    return targets.flatMap((target) =>
+      deposit(
+        findPool(ethPools, target),
+        tokens?.map((addressOrSymbol) => findToken(ethPools, addressOrSymbol))
+      )
+    )
+  },
 
   stake: async (options: {
     targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
