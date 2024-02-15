@@ -18,7 +18,6 @@ jobs:
         with:
           release-type: node
           path: sdk
-
       - uses: actions/checkout@v4
         # ensure that a publication only occurs when a new release is created:
         if: ${{ steps.release.outputs.release_created }}

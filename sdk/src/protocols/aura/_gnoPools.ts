@@ -38,26 +38,6 @@ export default [
     rewarder: "0x8B59F9d4F24A266630756131fE62C3476886e496",
   },
   {
-    name: "bb-agEUR-EURe",
-    id: "6",
-    bpt: "0x5C78d05b8ECF97507d1cf70646082c54FaA4dA95",
-    tokens: [
-      {
-        address: "0x4b1E2c2762667331Bc91648052F646d1b0d35984",
-        symbol: "agEUR",
-      },
-      {
-        address: "0x5C78d05b8ECF97507d1cf70646082c54FaA4dA95",
-        symbol: "bb-agEUR-EURe",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
-      },
-    ],
-    rewarder: "0x1A57f9b77F6d5342181Eb8B6ad0eF5a921172fdf",
-  },
-  {
     name: "staBAL3",
     id: "10",
     bpt: "0x2086f52651837600180dE173B09470F54EF74910",
