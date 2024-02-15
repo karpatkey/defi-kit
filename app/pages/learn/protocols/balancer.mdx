@@ -49,13 +49,13 @@ For each Balancer pool we allow specifying the deposit targets using any of the 
   are considered.
 </Callout>
 
-### Target: "Not Composable Pools"
+### Target: "Non-Composable Pools"
 
 <Callout type="info">
-  "Not Composable Pools" have no BPTs in their `Pool` tokens.
+  "Non-Composable Pools" have no BPTs in their `Pool` tokens.
 </Callout>
 
-For targets that are "Not Composable Pools", the following functions are allowed:
+For targets that are "Non-Composable Pools", the following functions are allowed:
 
 #### `TOKEN · approve`
 
@@ -74,7 +74,7 @@ Approve `Vault` to spend `TOKEN` tokens on behalf of the avatar.
 Deposit `TOKEN` tokens to the corresponding Balancer pool and receive `TARGET_BPT` tokens in exchange.
 
 - **Contract:** `Vault`
-- **Function:** `joinPool(bytes32,address,address,(address[],uint256[],bytes,bool))`
+- **Function:** `joinPool(bytes32,address,address,(address[],uint256[],bytes,bool))` Ξ _allow sending ETH_
 
   | Parameter                     | Constraint           |
   | :---------------------------- | :------------------- |
@@ -85,7 +85,6 @@ Deposit `TOKEN` tokens to the corresponding Balancer pool and receive `TARGET_BP
   | `request.maxAmountsIn`        | -                    |
   | `request.userData`            | -                    |
   | `request.fromInternalBalance` | -                    |
-  | `send`                        | equal to `true`      |
 
 #### `Vault · exitPool`
 
@@ -128,7 +127,7 @@ Approve `Vault` to spend `TOKEN` tokens on behalf of the avatar.
 
 Deposit `TOKEN` tokens to the corresponding Balancer pool and receive `TARGET_BPT` tokens in exchange.
 
-- **Contract:** `Vault`
+- **Contract:** `Vault` Ξ _allow sending ETH_
 - **Function:** `joinPool(bytes32,address,address,(address[],uint256[],bytes,bool))`
 
   | Parameter                     | Constraint           |
@@ -140,7 +139,6 @@ Deposit `TOKEN` tokens to the corresponding Balancer pool and receive `TARGET_BP
   | `request.maxAmountsIn`        | -                    |
   | `request.userData`            | -                    |
   | `request.fromInternalBalance` | -                    |
-  | `send`                        | equal to `true`      |
 
 #### `Vault · exitPool`
 
@@ -177,14 +175,15 @@ One-time (and persistent) approval of the Relayer as single-point of entry.
 When using the `Relayer` as a single point of entry, all individual function calls to it must be wrapped within the metafunction `multicall(bytes[])`.
 
 - **Contract:** `Relayer`
-- **Function:** `multicall(bytes[])`
+- **Function:** `multicall(bytes[])` Ξ _allow sending ETH_
 
   | Parameter | Constraint                                                                   |
   | :-------- | :--------------------------------------------------------------------------- |
   | `data`    | every element of `data` must be equal to `Relayer`(`joinPool` or `exitPool`) |
-  | `send`    | equal to `true`                                                              |
 
-Constraints over the `Relayer` `joinPool` function:
+##### `Relayer · joinPool` (internal)
+
+This function is internal and can only be called through the `multicall` entry point. Thus, permissions are applied to the encoded calldata bytes items passed to `multicall`.
 
 - **Contract:** `Relayer`
 - **Function:** `joinPool(bytes32,uint8,address,address,(address[],uint256[],bytes,bool),uint256,uint256)`
@@ -202,7 +201,9 @@ Constraints over the `Relayer` `joinPool` function:
   | `value`                       | -                    |
   | `outputReference`             | -                    |
 
-Constraints over the `Relayer` `exitPool` function:
+##### `Relayer · exitPool` (internal)
+
+This function is internal and can only be called through the `multicall` entry point. Thus, permissions are applied to the encoded calldata bytes items passed to `multicall`.
 
 - **Contract:** `Relayer`
 - **Function:** `exitPool(bytes32,uint8,address,address,(address[],uint256[],bytes,bool),uint256,uint256)`
@@ -343,7 +344,7 @@ Approve `veBAL` to spend `B-80BAL-20WETH` tokens on behalf of the avatar.
 Deposit `TOKEN` tokens to the corresponding Balancer pool and receive `B-80BAL-20WETH` tokens in exchange.
 
 - **Contract:** `Vault`
-- **Function:** `joinPool(bytes32,address,address,(address[],uint256[],bytes,bool))`
+- **Function:** `joinPool(bytes32,address,address,(address[],uint256[],bytes,bool))` Ξ _allow sending ETH_
 
   | Parameter                     | Constraint                    |
   | :---------------------------- | :---------------------------- |
@@ -354,7 +355,6 @@ Deposit `TOKEN` tokens to the corresponding Balancer pool and receive `B-80BAL-2
   | `request.maxAmountsIn`        | -                             |
   | `request.userData`            | -                             |
   | `request.fromInternalBalance` | -                             |
-  | `send`                        | equal to `true`               |
 
 ### `Vault · exitPool`
 

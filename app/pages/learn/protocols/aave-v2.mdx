@@ -118,14 +118,13 @@ Approve `WrappedTokenGatewayV2` to spend `aWETH` tokens on behalf of the avatar.
 Deposit ETH and receive `aWETH` in exchange.
 
 - **Contract:** `WrappedTokenGatewayV2`
-- **Function:** `depositETH(address,address,uint16)`
+- **Function:** `depositETH(address,address,uint16)` Ξ _allow sending ETH_
 
   | Parameter      | Constraint                   |
   | :------------- | :--------------------------- |
   | `address`      | equal to `AaveLendingPoolV2` |
   | `onBehalfOf`   | equal to `AVATAR`            |
   | `referralCode` | -                            |
-  | `send`         | equal to `true`              |
 
 #### `AaveLendingPoolV2 · setUserUseReserveAsCollateral`
 
@@ -281,7 +280,7 @@ Swap the borrow rate mode.
 Repay borrowed ETH.
 
 - **Contract:** `WrappedTokenGatewayV2`
-- **Function:** `repayETH(address,uint256,uint256,address)`
+- **Function:** `repayETH(address,uint256,uint256,address)` Ξ _allow sending ETH_
 
   | Parameter    | Constraint                   |
   | :----------- | :--------------------------- |
@@ -289,7 +288,6 @@ Repay borrowed ETH.
   | `amount`     | -                            |
   | `rateMode`   | -                            |
   | `onBehalfOf` | equal to `AVATAR`            |
-  | `send`       | equal to `true`              |
 
 ## Action: `stake`
 
