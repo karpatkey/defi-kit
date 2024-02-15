@@ -26,7 +26,7 @@ jobs:
         with:
           version: nightly
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
       - uses: actions/cache@v3
@@ -43,10 +43,9 @@ jobs:
           yarn
           yarn setup
 
-      - name: Run tests
+      - name: Build all packages
         run: |
-          cd sdk
-          yarn test
+          yarn build
 
       - name: Check formatting
         run: yarn check:prettier

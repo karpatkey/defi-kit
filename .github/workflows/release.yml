@@ -14,6 +14,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v4
+        id: release
         with:
           release-type: node
           path: sdk
+      - uses: actions/checkout@v4
+        # ensure that a publication only occurs when a new release is created:
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: "https://registry.npmjs.org"
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+            .yarn/cache
+            .yarn/install-state.gz
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Install dependencies & setup
+        run: |
+          yarn -v
+          yarn
+          yarn setup
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Build SDK
+        run: |
+          cd sdk
+          yarn build
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Publish defi-kit package to npm
+        run: |
+          cd sdk
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        if: ${{ steps.release.outputs.release_created }}
