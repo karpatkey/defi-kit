@@ -2,21 +2,45 @@ import { allow } from "zodiac-roles-sdk/kit"
 import { Permission, c } from "zodiac-roles-sdk"
 import { Pool, StakeToken, Token } from "./types"
 import { allowErc20Approve } from "../../conditions"
-import { contracts } from "../../../eth-sdk/config"
-import balancerEthPools from "../balancer/_info"
+import { contracts, contractAddressOverrides } from "../../../eth-sdk/config"
+import balancerEthPools from "../balancer/_ethPools"
+import balancerGnoPools from "../balancer/_gnoPools"
 import { findPool as findBalancerPool } from "../balancer/index"
+import { Chain } from "../../types"
 
 export const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 export const AURA = "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF"
 
-export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
+export const deposit = (chain: Chain, pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   const tokenAddresses = pool.tokens
     .map((token) => token.address)
     .filter((address) => tokens.some((token) => token.address === address))
 
+  let booster: `0x${string}`
+  let reward_pool_deposit_wrapper: `0x${string}`
+  let balancer_pools
+  switch (chain) {
+    case Chain.eth:
+      booster = contracts.mainnet.aura.booster as `0x${string}`
+      reward_pool_deposit_wrapper = contracts.mainnet.aura.reward_pool_deposit_wrapper as `0x${string}`
+      balancer_pools = balancerEthPools
+
+      break
+
+    case Chain.gno:
+      booster = contractAddressOverrides.gnosis.aura.booster as `0x${string}`
+      reward_pool_deposit_wrapper = contractAddressOverrides.gnosis.aura.reward_pool_deposit_wrapper as `0x${string}`
+      balancer_pools = balancerGnoPools
+
+      break
+  }
+
   const permissions: Permission[] = [
-    ...allowErc20Approve([pool.bpt], [contracts.mainnet.aura.booster]),
-    allow.mainnet.aura.booster.deposit(pool.id),
+    ...allowErc20Approve([pool.bpt], [booster]),
+    {
+      ...allow.mainnet.aura.booster.deposit(pool.id),
+      targetAddress: booster,
+    },
     {
       ...allow.mainnet.aura.rewarder.withdrawAndUnwrap(),
       targetAddress: pool.rewarder,
@@ -35,14 +59,17 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   if (tokenAddresses.length > 0) {
     permissions.push(
       ...allowErc20Approve(tokenAddresses, [
-        contracts.mainnet.aura.reward_pool_deposit_wrapper,
+        reward_pool_deposit_wrapper,
       ]),
-      allow.mainnet.aura.reward_pool_deposit_wrapper.depositSingle(
-        pool.rewarder,
-        c.or(...(tokenAddresses as [string, string, ...string[]])),
-        undefined,
-        findBalancerPool(balancerEthPools, pool.bpt).id
-      )
+      {
+        ...allow.mainnet.aura.reward_pool_deposit_wrapper.depositSingle(
+          pool.rewarder,
+          c.or(...(tokenAddresses as [string, string, ...string[]])),
+          undefined,
+          findBalancerPool(balancer_pools, pool.bpt).id
+        ),
+        targetAddress: reward_pool_deposit_wrapper
+      }
     )
   }
 

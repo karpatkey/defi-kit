@@ -1,5 +1,5 @@
 import { z } from "zod"
-import ethPools from "./_info"
+import ethPools from "./_ethPools"
 import { Token } from "./types"
 
 const ethTokens = [

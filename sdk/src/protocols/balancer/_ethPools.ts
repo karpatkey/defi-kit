@@ -527,6 +527,25 @@ export default [
     ],
   },
   {
+    bpt: "0x20a61B948E33879ce7F23e535CC7BAA3BC66c5a9",
+    id: "0x20a61b948e33879ce7f23e535cc7baa3bc66c5a9000000000000000000000555",
+    name: "R-DAI-BLP",
+    type: "ComposableStable",
+    gauge: "0x6F3b31296FD2457eba6Dca3BED65ec79e06c1295",
+    tokens: [
+      {
+        address: "0x183015a9bA6fF60230fdEaDc3F43b3D788b13e21",
+        symbol: "R",
+        id: "0x",
+      },
+      {
+        address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        symbol: "DAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x20FacEcaa68E9b7c92d2d0ec9136D864Df805233",
     id: "0x20facecaa68e9b7c92d2d0ec9136d864df805233000100000000000000000190",
     name: "WILDFIRE",
@@ -2553,30 +2572,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x988f2B03Aea264378518B7235d08c6cB2583AAA4",
-    id: "0x988f2b03aea264378518b7235d08c6cb2583aaa40001000000000000000004b5",
-    name: "29WBTC-4wstETH-67TRAC",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-        symbol: "WBTC",
-        id: "0x",
-      },
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
-        id: "0x",
-      },
-      {
-        address: "0xaA7a9CA87d3694B5755f213B5D04094b8d0F0A6F",
-        symbol: "TRAC",
         id: "0x",
       },
     ],

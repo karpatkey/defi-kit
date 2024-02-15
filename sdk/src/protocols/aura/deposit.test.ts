@@ -1,4 +1,4 @@
-import { eth } from "."
+import { eth, gno } from "."
 import { AURA } from "./actions"
 import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
@@ -48,12 +48,12 @@ describe("aura", () => {
       await expect(
         testKit.eth.aura.rewarder
           .attach(aura_50WETH_50AURA_rewarder)
-          ["getReward(address,bool)"](avatar._address, true)
+        ["getReward(address,bool)"](avatar._address, true)
       ).not.toRevert()
       await expect(
         testKit.eth.aura.rewarder
           .attach(aura_50WETH_50AURA_rewarder)
-          ["getReward(address,bool)"](member._address, true)
+        ["getReward(address,bool)"](member._address, true)
       ).toBeForbidden(Status.ParameterNotAllowed)
     }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
 
@@ -98,5 +98,9 @@ describe("aura", () => {
         )
       ).toBeForbidden()
     })
+  })
+
+  it("gno pool search", async () => {
+    await gno.deposit({ targets: ["15"] })
   })
 })

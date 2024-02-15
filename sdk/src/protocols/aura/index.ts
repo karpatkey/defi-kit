@@ -2,16 +2,17 @@ import { NotFoundError } from "../../errors"
 import ethPools from "./_ethPools"
 import gnoPools from "./_gnoPools"
 import { EthPool, StakeToken, EthToken, GnoToken, GnoPool, Pool } from "./types"
+import { Chain } from "../../types"
 import { deposit, stake, lock } from "./actions"
 import stakeTokens from "./stakeTokens"
 
 const findPool = (pools: readonly Pool[], nameOrAddressOrId: string) => {
-  const symbolAddressLower = nameOrAddressOrId.toLowerCase()
+  const nameOrAddressOrIdLower = nameOrAddressOrId.toLowerCase()
   const pool = pools.find(
     (pool) =>
-      pool.name.toLowerCase() === symbolAddressLower ||
-      pool.bpt.toLowerCase() === symbolAddressLower ||
-      pool.id.toLowerCase() === symbolAddressLower
+      pool.name.toLowerCase() === nameOrAddressOrIdLower ||
+      pool.bpt.toLowerCase() === nameOrAddressOrIdLower ||
+      pool.id.toLowerCase() === nameOrAddressOrIdLower
   )
   if (!pool) {
     throw new NotFoundError(`Pool not found: ${nameOrAddressOrId}`)
@@ -20,12 +21,12 @@ const findPool = (pools: readonly Pool[], nameOrAddressOrId: string) => {
 }
 
 const findToken = (pools: readonly Pool[], symbolOrAddress: string) => {
-  const symbolAddressLower = symbolOrAddress.toLowerCase()
+  const nameOrAddressOrIdLower = symbolOrAddress.toLowerCase()
   const tokens = pools.flatMap((pool) => [...pool.tokens])
   const token = tokens.find(
     (token) =>
-      token.symbol.toLowerCase() === symbolAddressLower ||
-      token.address.toLowerCase() === symbolAddressLower
+      token.symbol.toLowerCase() === nameOrAddressOrIdLower ||
+      token.address.toLowerCase() === nameOrAddressOrIdLower
   )
   if (!token) {
     throw new NotFoundError(`Token not found: ${symbolOrAddress}`)
@@ -34,11 +35,11 @@ const findToken = (pools: readonly Pool[], symbolOrAddress: string) => {
 }
 
 const findStakeToken = (nameOrAddress: string): StakeToken => {
-  const symbolAddressLower = nameOrAddress.toLowerCase()
+  const nameOrAddressOrIdLower = nameOrAddress.toLowerCase()
   const stakeToken = stakeTokens.find(
     (stakeToken) =>
-      stakeToken.address.toLowerCase() === symbolAddressLower ||
-      stakeToken.symbol.toLowerCase() === symbolAddressLower
+      stakeToken.address.toLowerCase() === nameOrAddressOrIdLower ||
+      stakeToken.symbol.toLowerCase() === nameOrAddressOrIdLower
   )
   if (!stakeToken) {
     throw new NotFoundError(`Token not found on eth: ${nameOrAddress}`)
@@ -59,6 +60,7 @@ export const eth = {
   }) => {
     return targets.flatMap((target) =>
       deposit(
+        Chain.eth,
         findPool(ethPools, target),
         tokens?.map((addressOrSymbol) => findToken(ethPools, addressOrSymbol))
       )
@@ -100,6 +102,7 @@ export const gno = {
   }) => {
     return targets.flatMap((target) =>
       deposit(
+        Chain.gno,
         findPool(gnoPools, target),
         tokens?.map((addressOrSymbol) => findToken(gnoPools, addressOrSymbol))
       )

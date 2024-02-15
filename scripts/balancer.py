@@ -16,7 +16,10 @@ VAULT = "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # BALANCER QUERIES
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-BALANCER_QUERIES = '0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5'
+BALANCER_QUERIES = {
+    Chain.ETHEREUM: "0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5",
+    Chain.GNOSIS: "0x0F3e0c4218b7b0108a3643cFe9D3ec0d4F57c54e"
+}
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ABIs
@@ -34,13 +37,18 @@ ABI_BPT = '[{"inputs":[],"name":"getPoolId","outputs":[{"internalType":"bytes32"
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # subgraph_query_pools
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def subgraph_query_pools():
+def subgraph_query_pools(blockchain):
 
     result = []
     skip = 0
+
+    if blockchain == Chain.ETHEREUM:
+        subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
+    elif blockchain == Chain.GNOSIS:
+        subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
+
     while True:
     # Initialize subgraph
-        subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
         balancer_transport=RequestsHTTPTransport(
             url=subgraph_url,
             verify=True,
@@ -75,10 +83,14 @@ def subgraph_query_pools():
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # subgraph_query_pool_type
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def subgraph_query_pool_type(pool_id):
+def subgraph_query_pool_type(blockchain, pool_id):
+    
+    if blockchain == Chain.ETHEREUM:
+        subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
+    elif blockchain == Chain.GNOSIS:
+        subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
 
     # Initialize subgraph
-    subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
     balancer_transport=RequestsHTTPTransport(
         url=subgraph_url,
         verify=True,
@@ -116,7 +128,7 @@ def is_deprecated(pool_id, lptoken_address, pool_tokens, blockchain, web3):
     data = [join_kind, amounts, minimum_bpt]
     user_data = '0x' + eth_abi.encode(abi, data).hex()
 
-    balancer_queries = get_contract(BALANCER_QUERIES, Chain.ETHEREUM, abi=ABI_BALANCER_QUERIES)
+    balancer_queries = get_contract(BALANCER_QUERIES[blockchain], blockchain, abi=ABI_BALANCER_QUERIES)
 
     try:
         join_pool = balancer_queries.functions.queryJoin(pool_id, Address.ZERO, Address.ZERO, [pool_tokens, amounts, user_data, False]).call()
@@ -162,7 +174,7 @@ def add_pool_tokens(vault_contract, pool_id, lptoken_address, pool_tokens_array,
                 'id': token_pool_id,
             })
 
-            pool_token_type = subgraph_query_pool_type(token_pool_id)
+            pool_token_type = subgraph_query_pool_type(blockchain, token_pool_id)
             
             try:
                 pool_token_version = pool_token_contract.functions.version().call()
@@ -208,7 +220,7 @@ def transactions_data(blockchain):
 
     web3 = get_node(blockchain)
 
-    pools = subgraph_query_pools()
+    pools = subgraph_query_pools(blockchain)
 
     vault_contract = get_contract(VAULT, blockchain, web3=web3, abi=ABI_VAULT)
     
@@ -246,7 +258,10 @@ def transactions_data(blockchain):
             'tokens': pool_tokens_array
         })
     
-    dump(result, 'balancer')
+    if blockchain == Chain.ETHEREUM:
+        dump(result, 'balancer', '_ethPools.ts')
+    elif blockchain == Chain.GNOSIS:
+        dump(result, 'balancer', '_gnoPools.ts')
 
-
+transactions_data(Chain.GNOSIS)
 transactions_data(Chain.ETHEREUM)
