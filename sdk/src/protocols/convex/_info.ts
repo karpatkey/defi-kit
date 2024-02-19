@@ -1905,4 +1905,32 @@ export default [
     cvxDepositToken: "0x8c97D911BF1f47B7d33334B9dcf197Bfe93c7104",
     rewarder: "0x4C204392a9E4d5f8390541971B59FC95B24782b5",
   },
+  {
+    name: "xETHpxETH",
+    id: "299",
+    crvLPToken: "0x3C91EAeac42DfaEad5F356167c52837e443b9f94",
+    cvxDepositToken: "0xCef9FA76c26747B341984633dac29E20E7B64aF8",
+    rewarder: "0xc30946E3c09D86c3546e11286BC2779b2a40A972",
+  },
+  {
+    name: "ETH+pxETH-f",
+    id: "300",
+    crvLPToken: "0x982bcd444C9445c15CCe3eca506ef01E8348Fe5D",
+    cvxDepositToken: "0x359589fb4fc290009c3a0B10a232610e9E0A310B",
+    rewarder: "0x29aB65DB26116249b0D30c2349C1C7Fa56648203",
+  },
+  {
+    name: "pxETHmkUSD-f",
+    id: "301",
+    crvLPToken: "0x6ade6971Ca3d90990C30d39c78b0534C7166e07b",
+    cvxDepositToken: "0x1C9427B79093Aacc5BEe197Bf32aB72403992371",
+    rewarder: "0x484A34B0154A97B09828736888b95bb298F3a8DF",
+  },
+  {
+    name: "mkUSDPay",
+    id: "302",
+    crvLPToken: "0x9e10f9Fb6F0D32B350CEe2618662243d4f24C64a",
+    cvxDepositToken: "0x66710eBFdeD4aAf3D6675Bdd7c9cE11F0914D71E",
+    rewarder: "0x09E18C6F03b5ee9D3F39c3865aa53A12E46E54B2",
+  },
 ] as const

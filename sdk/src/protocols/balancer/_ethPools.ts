@@ -1462,45 +1462,6 @@ export default [
     ],
   },
   {
-    bpt: "0x5b3b589B45531a2f0aE203d5044782bA46aEFC4c",
-    id: "0x5b3b589b45531a2f0ae203d5044782ba46aefc4c00010000000000000000061a",
-    name: "17DNT-17CVC-17OCEAN-17POLY-17USDC-17ENJ",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x0AbdAce70D3790235af448C88547603b945604ea",
-        symbol: "DNT",
-        id: "0x",
-      },
-      {
-        address: "0x41e5560054824eA6B0732E656E3Ad64E20e94E45",
-        symbol: "CVC",
-        id: "0x",
-      },
-      {
-        address: "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
-        symbol: "OCEAN",
-        id: "0x",
-      },
-      {
-        address: "0x9992eC3cF6A55b00978cdDF2b27BC6882d88D1eC",
-        symbol: "POLY",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xF629cBd94d3791C9250152BD8dfBDF380E2a3B9c",
-        symbol: "ENJ",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56",
     id: "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014",
     name: "B-80BAL-20WETH",
@@ -2058,25 +2019,6 @@ export default [
       {
         address: "0x7945b0A6674b175695e5d1D08aE1e6F13744Abb0",
         symbol: "BaoUSD",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x80bE0c303D8Ad2A280878b50a39B1ee8E54DBD22",
-    id: "0x80be0c303d8ad2a280878b50a39b1ee8e54dbd2200020000000000000000000f",
-    name: "B-50LPT-50WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x58b6A8A3302369DAEc383334672404Ee733aB239",
-        symbol: "LPT",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
         id: "0x",
       },
     ],

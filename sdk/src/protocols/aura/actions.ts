@@ -11,7 +11,11 @@ import { Chain } from "../../types"
 export const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 export const AURA = "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF"
 
-export const deposit = (chain: Chain, pool: Pool, tokens: readonly Token[] = pool.tokens) => {
+export const deposit = (
+  chain: Chain,
+  pool: Pool,
+  tokens: readonly Token[] = pool.tokens
+) => {
   const tokenAddresses = pool.tokens
     .map((token) => token.address)
     .filter((address) => tokens.some((token) => token.address === address))
@@ -22,14 +26,16 @@ export const deposit = (chain: Chain, pool: Pool, tokens: readonly Token[] = poo
   switch (chain) {
     case Chain.eth:
       booster = contracts.mainnet.aura.booster as `0x${string}`
-      reward_pool_deposit_wrapper = contracts.mainnet.aura.reward_pool_deposit_wrapper as `0x${string}`
+      reward_pool_deposit_wrapper = contracts.mainnet.aura
+        .reward_pool_deposit_wrapper as `0x${string}`
       balancer_pools = balancerEthPools
 
       break
 
     case Chain.gno:
       booster = contractAddressOverrides.gnosis.aura.booster as `0x${string}`
-      reward_pool_deposit_wrapper = contractAddressOverrides.gnosis.aura.reward_pool_deposit_wrapper as `0x${string}`
+      reward_pool_deposit_wrapper = contractAddressOverrides.gnosis.aura
+        .reward_pool_deposit_wrapper as `0x${string}`
       balancer_pools = balancerGnoPools
 
       break
@@ -58,9 +64,7 @@ export const deposit = (chain: Chain, pool: Pool, tokens: readonly Token[] = poo
 
   if (tokenAddresses.length > 0) {
     permissions.push(
-      ...allowErc20Approve(tokenAddresses, [
-        reward_pool_deposit_wrapper,
-      ]),
+      ...allowErc20Approve(tokenAddresses, [reward_pool_deposit_wrapper]),
       {
         ...allow.mainnet.aura.reward_pool_deposit_wrapper.depositSingle(
           pool.rewarder,
@@ -68,7 +72,7 @@ export const deposit = (chain: Chain, pool: Pool, tokens: readonly Token[] = poo
           undefined,
           findBalancerPool(balancer_pools, pool.bpt).id
         ),
-        targetAddress: reward_pool_deposit_wrapper
+        targetAddress: reward_pool_deposit_wrapper,
       }
     )
   }
