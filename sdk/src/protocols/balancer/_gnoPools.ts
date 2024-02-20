@@ -168,7 +168,7 @@ export default [
     id: "0x5c78d05b8ecf97507d1cf70646082c54faa4da95000000000000000000000030",
     name: "bb-agEUR-EURe",
     type: "ComposableStable",
-    gauge: "0x210ABdFD989f3eE5C08614a8f4e096Cf8408f5DF",
+    gauge: null,
     tokens: [
       {
         address: "0x4b1E2c2762667331Bc91648052F646d1b0d35984",
@@ -298,7 +298,7 @@ export default [
     id: "0xb8bb1ce9c6e5401d66fe2126db6e7387e1e24ffe00020000000000000000003d",
     name: "50WETH-50GNO",
     type: "Weighted",
-    gauge: "0xd264f4d4Ad98FEf4b198547059C07a8E8bBF2F0E",
+    gauge: null,
     tokens: [
       {
         address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
