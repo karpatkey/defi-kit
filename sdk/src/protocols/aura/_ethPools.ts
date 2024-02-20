@@ -1517,4 +1517,52 @@ export default [
     ],
     rewarder: "0x7633d0bBDe67553C582BF241BF8cb22895610B94",
   },
+  {
+    name: "ECLP-GHO-GYD",
+    id: "193",
+    bpt: "0xaA7a70070E7495fe86c67225329DbD39BAa2F63b",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+      },
+    ],
+    rewarder: "0x0d117d31E72b340bCfD39058859313F9d54b2095",
+  },
+  {
+    name: "ECLP-GHO-USDC",
+    id: "194",
+    bpt: "0x99e7b15df044e1b62e2e1774fD4469d54D9409aC",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+    ],
+    rewarder: "0x89B8cB0d4259cA2B48b4938fd2b13D5274549Bb9",
+  },
+  {
+    name: "ECLP-GHO-USDC-2",
+    id: "195",
+    bpt: "0x3932b187f440cE7703653b3908EDc5bB7676C283",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+    ],
+    rewarder: "0x6b89Ab92499bF872e53AA92106B8Fb7989496A40",
+  },
 ] as const
