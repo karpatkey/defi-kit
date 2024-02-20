@@ -91,6 +91,12 @@ export const contracts = {
       DaiJoin: "0x9759A6Ac90977b93B58547b4A71c78317f391A28",
       GemJoin: "0x2F0b23f53734252Bda2277357e97e1517d6B042A",
     },
+    rocket_pool: {
+      storage: "0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46",
+      rETH: "0xae78736Cd615f374D3085123A210448E74Fc6393",
+      deposit_pool: "0xDD3f50F8A6CafbE9b31a427582963f465E745AF8", // This address might due to Rocket Pool's Architecture
+      swap_router: "0x16D5A408e807db8eF7c578279BEeEe6b228f1c1C",
+    },
     spark: {
       data_provider: "0xFc21d6d146E6086B8359705C8b28512a983db0cb",
       sparkLendingPoolV3: "0xC13e21B648A5Ee794902342038FF3aDAB66BE987",
