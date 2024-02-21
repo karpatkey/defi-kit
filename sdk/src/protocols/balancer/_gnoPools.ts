@@ -269,7 +269,7 @@ export default [
     id: "0xa99fd9950b5d5dceeaf4939e221dca8ca9b938ab000100000000000000000025",
     name: "25WETH-25BAL-25GNO-25wxDAI",
     type: "Weighted",
-    gauge: "0xC092E0a4f5a2AdF3CF91E27cf4B7d7917D12CA2B",
+    gauge: null,
     tokens: [
       {
         address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
