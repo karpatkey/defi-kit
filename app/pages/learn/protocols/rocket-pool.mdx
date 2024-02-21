@@ -69,7 +69,7 @@ When there is not enough `rETH` in the `DepositPool` in exchange for the ETH you
 When there is not enough ETH in the `DepositPool` in exchange for the `rETH` you are redeeming, the `SwapRouter` swaps the `rETH`for ETH in secondary markets (Balancer and Uniswap).
 
 - **Contract:** `SwapRouter`
-- **Function:** `swapTo(uint256,uint256,uint256,uint256)` Ξ _allow sending ETH_
+- **Function:** `swapFrom(uint256,uint256,uint256,uint256,uint256)`
 
   | Parameter         | Constraint |
   | :---------------- | :--------- |
@@ -77,3 +77,4 @@ When there is not enough ETH in the `DepositPool` in exchange for the `rETH` you
   | `balancerPortion` | -          |
   | `minTokensOut`    | -          |
   | `idealTokensOut`  | -          |
+  | `tokensIn`        | -          |
