@@ -1517,4 +1517,136 @@ export default [
     ],
     rewarder: "0x7633d0bBDe67553C582BF241BF8cb22895610B94",
   },
+  {
+    name: "ECLP-GHO-GYD",
+    id: "193",
+    bpt: "0xaA7a70070E7495fe86c67225329DbD39BAa2F63b",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+      },
+    ],
+    rewarder: "0x0d117d31E72b340bCfD39058859313F9d54b2095",
+  },
+  {
+    name: "ECLP-GHO-USDC",
+    id: "194",
+    bpt: "0x99e7b15df044e1b62e2e1774fD4469d54D9409aC",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+    ],
+    rewarder: "0x89B8cB0d4259cA2B48b4938fd2b13D5274549Bb9",
+  },
+  {
+    name: "ECLP-GHO-USDC-2",
+    id: "195",
+    bpt: "0x3932b187f440cE7703653b3908EDc5bB7676C283",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+    ],
+    rewarder: "0x6b89Ab92499bF872e53AA92106B8Fb7989496A40",
+  },
+  {
+    name: "svETH/wstETH",
+    id: "196",
+    bpt: "0xdEdb11A6a23263469567C2881A9b9F8629eE0041",
+    tokens: [
+      {
+        address: "0x6733F0283711F225A447e759D859a70b0c0Fd2bC",
+        symbol: "svETH",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xdEdb11A6a23263469567C2881A9b9F8629eE0041",
+        symbol: "svETH/wstETH",
+      },
+    ],
+    rewarder: "0xAf7Abaa64dCb57A477f61B09102d2570A38C6Df3",
+  },
+  {
+    name: "ePENDLE/PENDLE",
+    id: "197",
+    bpt: "0xA2E9242163d54b536583368a01b5D232C95aA884",
+    tokens: [
+      {
+        address: "0x22Fc5A29bd3d6CCe19a06f844019fd506fCe4455",
+        symbol: "ePendle",
+      },
+      {
+        address: "0x808507121B80c02388fAd14726482e061B8da827",
+        symbol: "PENDLE",
+      },
+      {
+        address: "0xA2E9242163d54b536583368a01b5D232C95aA884",
+        symbol: "ePENDLE/PENDLE",
+      },
+    ],
+    rewarder: "0x4631B77382e4Efde3E5808d6b30A330B91B2376B",
+  },
+  {
+    name: "weETH/ezETH/rswETH",
+    id: "198",
+    bpt: "0x848a5564158d84b8A8fb68ab5D004Fae11619A54",
+    tokens: [
+      {
+        address: "0x848a5564158d84b8A8fb68ab5D004Fae11619A54",
+        symbol: "weETH/ezETH/rswETH",
+      },
+      {
+        address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+        symbol: "ezETH",
+      },
+      {
+        address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+        symbol: "weETH",
+      },
+      {
+        address: "0xFAe103DC9cf190eD75350761e95403b7b8aFa6c0",
+        symbol: "rswETH",
+      },
+    ],
+    rewarder: "0xce98eb8b2Fb98049b3F2dB0A212Ba7ca3Efd63b0",
+  },
+  {
+    name: "sDOLA-DOLA BSP",
+    id: "199",
+    bpt: "0x264062CA46A1322c2E6464471764089E01F22F19",
+    tokens: [
+      {
+        address: "0x264062CA46A1322c2E6464471764089E01F22F19",
+        symbol: "sDOLA-DOLA BSP",
+      },
+      {
+        address: "0x865377367054516e17014CcdED1e7d814EDC9ce4",
+        symbol: "DOLA",
+      },
+      {
+        address: "0xb45ad160634c528Cc3D2926d9807104FA3157305",
+        symbol: "sDOLA",
+      },
+    ],
+    rewarder: "0xA36d3799eA28f4B75653EBF9D91DDA4519578086",
+  },
 ] as const
