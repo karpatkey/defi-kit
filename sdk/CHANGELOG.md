@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/karpatkey/defi-kit/compare/v1.1.0...v1.2.0) (2024-02-21)
+
+
+### Features
+
+* add Ankr ([#100](https://github.com/karpatkey/defi-kit/issues/100)) ([5417f6a](https://github.com/karpatkey/defi-kit/commit/5417f6ac0c9027857a244ab4579ae25e31b22ad3))
+
 ## [1.1.0](https://github.com/karpatkey/defi-kit/compare/v1.0.2...v1.1.0) (2024-02-21)
 
 
