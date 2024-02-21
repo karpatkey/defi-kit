@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/karpatkey/defi-kit/compare/v1.0.2...v1.1.0) (2024-02-21)
+
+
+### Features
+
+* add rocket pool ([#98](https://github.com/karpatkey/defi-kit/issues/98)) ([ae7ef49](https://github.com/karpatkey/defi-kit/commit/ae7ef49846377a126bd4ff80029d526be2ed5db8))
+
 ## [1.0.2](https://github.com/karpatkey/defi-kit/compare/v1.0.1...v1.0.2) (2024-02-15)
 
 
