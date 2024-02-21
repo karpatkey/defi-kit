@@ -6,7 +6,6 @@ import { queryDepositPool } from "./utils"
 
 export const eth = {
   deposit: async () => {
-
     const deposit_pool = await queryDepositPool()
 
     const permissions: Permission[] = [

@@ -1,6 +1,4 @@
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-import { BigNumber } from "ethers"
-import { NotFoundError } from "../../errors"
 import { ethProvider } from "../../provider"
 import { getProvider } from "../../../test/provider"
 import { utils } from 'ethers';

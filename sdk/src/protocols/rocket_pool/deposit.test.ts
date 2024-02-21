@@ -1,12 +1,10 @@
 import { eth } from "."
 import { queryDepositPool } from "./utils"
-import { applyPermissions, stealErc20 } from "../../../test/helpers"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+import { applyPermissions } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { testKit } from "../../../test/kit"
 import { parseEther } from "ethers/lib/utils"
 
-const address_with_rETH = "0x1BeE69b7dFFfA4E2d53C2a2Df135C388AD25dCD2"
 
 describe("rocket_pool", () => {
   describe("deposit", () => {

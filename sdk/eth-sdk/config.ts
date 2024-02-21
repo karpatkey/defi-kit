@@ -25,6 +25,11 @@ export const contracts = {
       variableDebtWETH: "0xeA51d7853EEFb32b6ee06b1C12E6dcCA88Be0fFE",
       stableDebtWETH: "0x102633152313C81cD80419b6EcF66d14Ad68949A",
     },
+    ankr: {
+      ETH2_Staking: "0x84db6ee82b7cf3b47e8f19270abde5718b936670",
+      flashUnstake: "0xf047f23ACFdB1315cF63Ad8aB5146d5fDa4267Af",
+      ankrETH: "0xE95A203B1a91a908F9B9CE46459d101078c2c3cb",
+    },
     aura: {
       booster: "0xA57b8d98dAE62B26Ec3bcC4a365338157060B234",
       reward_pool_deposit_wrapper: "0xB188b1CB84Fb0bA13cb9ee1292769F903A9feC59",
