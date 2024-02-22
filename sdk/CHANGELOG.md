@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/karpatkey/defi-kit/compare/v1.2.0...v1.3.0) (2024-02-22)
+
+
+### Features
+
+* add Stader ([#103](https://github.com/karpatkey/defi-kit/issues/103)) ([e7999ab](https://github.com/karpatkey/defi-kit/commit/e7999abe4d93d345959da1d0b643ea2de6d0ae6e))
+
 ## [1.2.0](https://github.com/karpatkey/defi-kit/compare/v1.1.0...v1.2.0) (2024-02-21)
 
 
