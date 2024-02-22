@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/karpatkey/defi-kit/compare/v1.4.0...v1.5.0) (2024-02-22)
+
+
+### Features
+
+* new protocols ([1ce7b54](https://github.com/karpatkey/defi-kit/commit/1ce7b54280fdf2607a62c64155ad74c42cfeef88))
+
 ## [1.4.0](https://github.com/karpatkey/defi-kit/compare/v1.3.0...v1.4.0) (2024-02-22)
 
 
