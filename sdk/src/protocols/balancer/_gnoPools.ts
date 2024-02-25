@@ -317,7 +317,7 @@ export default [
     id: "0xbad20c15a773bf03ab973302f61fabcea5101f0a000000000000000000000034",
     name: "bb-WETH-wstETH",
     type: "ComposableStable",
-    gauge: "0x27519F69b2Ac912aeb6fE066180FB25a17c71755",
+    gauge: null,
     tokens: [
       {
         address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",

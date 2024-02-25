@@ -6,7 +6,6 @@ import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
 import { parseEther } from "ethers/lib/utils"
 
-
 describe("stader", () => {
   describe("deposit", () => {
     beforeAll(async () => {
@@ -18,7 +17,7 @@ describe("stader", () => {
         testKit.eth.stader.staking_pool_manager["deposit(address)"](
           avatar._address,
           {
-            value: parseEther("5")
+            value: parseEther("5"),
           }
         )
       ).not.toRevert()
@@ -26,7 +25,7 @@ describe("stader", () => {
         testKit.eth.stader.staking_pool_manager["deposit(address)"](
           member._address,
           {
-            value: parseEther("5")
+            value: parseEther("5"),
           }
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -36,20 +35,18 @@ describe("stader", () => {
       await expect(
         testKit.eth.stader.ETHx.approve(
           contracts.mainnet.stader.user_withdraw_manager,
-          parseEther("1"),
+          parseEther("1")
         )
       ).not.toRevert()
       await expect(
-        testKit.eth.stader.user_withdraw_manager["requestWithdraw(uint256,address)"](
-          parseEther("1"),
-          avatar._address
-        )
+        testKit.eth.stader.user_withdraw_manager[
+          "requestWithdraw(uint256,address)"
+        ](parseEther("1"), avatar._address)
       ).not.toRevert()
       await expect(
-        testKit.eth.stader.user_withdraw_manager["requestWithdraw(uint256,address)"](
-          parseEther("1"),
-          member._address
-        )
+        testKit.eth.stader.user_withdraw_manager[
+          "requestWithdraw(uint256,address)"
+        ](parseEther("1"), member._address)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
