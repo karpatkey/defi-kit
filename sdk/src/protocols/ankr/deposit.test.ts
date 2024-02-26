@@ -6,7 +6,6 @@ import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
 import { parseEther } from "ethers/lib/utils"
 
-
 describe("ankr", () => {
   describe("deposit", () => {
     beforeAll(async () => {
@@ -15,11 +14,9 @@ describe("ankr", () => {
 
     it("deposit ETH", async () => {
       await expect(
-        testKit.eth.ankr.ETH2_Staking.stakeAndClaimAethC(
-          {
-            value: parseEther("5")
-          }
-        )
+        testKit.eth.ankr.ETH2_Staking.stakeAndClaimAethC({
+          value: parseEther("5"),
+        })
       ).not.toRevert()
     })
 
@@ -27,7 +24,7 @@ describe("ankr", () => {
       await expect(
         testKit.eth.ankr.ankrETH.approve(
           contracts.mainnet.ankr.flashUnstake,
-          parseEther("1"),
+          parseEther("1")
         )
       ).toBeAllowed()
       await expect(
@@ -46,9 +43,7 @@ describe("ankr", () => {
 
     it("withdraw with standard unstake", async () => {
       await expect(
-        testKit.eth.ankr.ETH2_Staking.unstakeAETH(
-          parseEther("1")
-        )
+        testKit.eth.ankr.ETH2_Staking.unstakeAETH(parseEther("1"))
       ).not.toRevert()
     })
   })

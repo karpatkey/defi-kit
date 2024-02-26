@@ -5,7 +5,6 @@ import { contracts } from "../../../eth-sdk/config"
 import { testKit } from "../../../test/kit"
 import { parseEther } from "ethers/lib/utils"
 
-
 describe("rocket_pool", () => {
   describe("deposit", () => {
     beforeAll(async () => {
@@ -19,11 +18,9 @@ describe("rocket_pool", () => {
 
     it("deposit and withdraw through deposit pool", async () => {
       await expect(
-        testKit.eth.rocket_pool.deposit_pool.deposit(
-          {
-            value: parseEther("1")
-          }
-        )
+        testKit.eth.rocket_pool.deposit_pool.deposit({
+          value: parseEther("1"),
+        })
       ).not.toRevert()
 
       await expect(
@@ -39,7 +36,7 @@ describe("rocket_pool", () => {
           parseEther("400"),
           parseEther("450"),
           {
-            value: parseEther("500")
+            value: parseEther("500"),
           }
         )
       ).toBeAllowed()
@@ -47,7 +44,7 @@ describe("rocket_pool", () => {
       await expect(
         testKit.eth.rocket_pool.rETH.approve(
           contracts.mainnet.rocket_pool.swap_router,
-          parseEther("50000"),
+          parseEther("50000")
         )
       ).toBeAllowed()
 
@@ -58,7 +55,7 @@ describe("rocket_pool", () => {
           10,
           parseEther("14000"),
           parseEther("15000"),
-          parseEther("50000"),
+          parseEther("50000")
         )
       ).toBeAllowed()
     })

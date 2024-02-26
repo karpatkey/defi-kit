@@ -1933,4 +1933,25 @@ export default [
     cvxDepositToken: "0x66710eBFdeD4aAf3D6675Bdd7c9cE11F0914D71E",
     rewarder: "0x09E18C6F03b5ee9D3F39c3865aa53A12E46E54B2",
   },
+  {
+    name: "rsETHsfrx",
+    id: "303",
+    crvLPToken: "0x3772ba91B46f456AE487CB0974040c861c045810",
+    cvxDepositToken: "0x55AB2644A9C2e12a3eE4d21b52f7887b143327C7",
+    rewarder: "0xe6615Ea24fE001BCDAB18FD37Dd8331A573b4EF3",
+  },
+  {
+    name: "crvPufETH",
+    id: "304",
+    crvLPToken: "0xB3c8Ce1eE157b0DCAa96897C9170aEe6281706c9",
+    cvxDepositToken: "0xc1683201Ac71E95Ec9fDf7E5978c29F17377247f",
+    rewarder: "0x5C87E2baf2B5E62874ACe511360F36dBc7f17449",
+  },
+  {
+    name: "BSGGUSDT-f",
+    id: "305",
+    crvLPToken: "0xd0Fb39E59037fC6Ae8aF5cb495CeA690ED501fDd",
+    cvxDepositToken: "0x04B32a27C4a7b602546eCEffEEEF561AFE63BDCd",
+    rewarder: "0x1053ec04658fB611b441c17425D07f6E9fF8Ec37",
+  },
 ] as const

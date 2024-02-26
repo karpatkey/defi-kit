@@ -614,6 +614,25 @@ export default [
     ],
   },
   {
+    bpt: "0x264062CA46A1322c2E6464471764089E01F22F19",
+    id: "0x264062ca46a1322c2e6464471764089e01f22f1900000000000000000000066b",
+    name: "sDOLA-DOLA BSP",
+    type: "ComposableStable",
+    gauge: "0xCD19892916929F013930ed628547Cc1F439b230e",
+    tokens: [
+      {
+        address: "0x865377367054516e17014CcdED1e7d814EDC9ce4",
+        symbol: "DOLA",
+        id: "0x",
+      },
+      {
+        address: "0xb45ad160634c528Cc3D2926d9807104FA3157305",
+        symbol: "sDOLA",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x26Cc136e9b8FD65466F193a8e5710661Ed9A9827",
     id: "0x26cc136e9b8fd65466f193a8e5710661ed9a98270002000000000000000005ad",
     name: "80BETS/20wstETH",
@@ -780,25 +799,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x35c5C8C7B77942f9D44B535Fa590D8b503B2b00C",
-    id: "0x35c5c8c7b77942f9d44b535fa590d8b503b2b00c00000000000000000000060d",
-    name: "DUSD/sDAI",
-    type: "ComposableStable",
-    gauge: "0x08e179Cf6F2Ca5dff67E93CdfBE2a29B2d8A27F7",
-    tokens: [
-      {
-        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
-        symbol: "sDAI",
-        id: "0x",
-      },
-      {
-        address: "0xa48F322F8b3edff967629Af79E027628b9Dd1298",
-        symbol: "DUSD",
         id: "0x",
       },
     ],
@@ -1700,25 +1700,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x6Ae5a7857aAd26722cB02CC168e38c52E0e4e45d",
-    id: "0x6ae5a7857aad26722cb02cc168e38c52e0e4e45d0000000000000000000005dd",
-    name: "TBY-feb1924-USDC-BPT",
-    type: "ComposableStable",
-    gauge: "0x276Df166BC23bC6A84Aac1EA48E1acC32264b652",
-    tokens: [
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xC4cafEFBc3dfeA629c589728d648CB6111DB3136",
-        symbol: "TBY-feb1924",
         id: "0x",
       },
     ],
@@ -4019,25 +4000,6 @@ export default [
       {
         address: "0xD533a949740bb3306d119CC777fa900bA034cd52",
         symbol: "CRV",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xf3AeB3aBbA741f0EEcE8a1B1D2F11b85899951CB",
-    id: "0xf3aeb3abba741f0eece8a1b1d2f11b85899951cb000200000000000000000351",
-    name: "MAI-USDC-SP",
-    type: "Stable",
-    gauge: "0x91A75880b07d36672f5C8DFE0F2334f086e29D47",
-    tokens: [
-      {
-        address: "0x8D6CeBD76f18E1558D4DB88138e2DeFB3909fAD6",
-        symbol: "MAI",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
         id: "0x",
       },
     ],

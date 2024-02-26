@@ -9,12 +9,15 @@ export const eth = {
     const deposit_pool = await queryDepositPool()
 
     const permissions: Permission[] = [
-      ...allowErc20Approve([contracts.mainnet.rocket_pool.rETH], [contracts.mainnet.rocket_pool.swap_router]),
+      ...allowErc20Approve(
+        [contracts.mainnet.rocket_pool.rETH],
+        [contracts.mainnet.rocket_pool.swap_router]
+      ),
       {
         ...allow.mainnet.rocket_pool.deposit_pool.deposit(),
         send: true,
         // The Deposit Pool address can change so it's replaced dynamically
-        targetAddress: deposit_pool
+        targetAddress: deposit_pool,
       },
       allow.mainnet.rocket_pool.rETH.burn(),
       {
@@ -25,5 +28,5 @@ export const eth = {
     ]
 
     return permissions
-  }
+  },
 }
