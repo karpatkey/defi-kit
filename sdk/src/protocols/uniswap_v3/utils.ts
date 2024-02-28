@@ -15,10 +15,6 @@ export const queryNftIds = async (avatar: `0x${string}`, targets?: string[]) => 
 
   const nftIndexes = await sdk.uniswap_v3.positions_nft.balanceOf(avatar)
 
-  if (!nftIndexes) {
-    throw new NotFoundError(`No NFT Ids found for avatar: ${avatar}`)
-  }
-
   for (let i = 0; i < nftIndexes.toNumber(); i++) {
     nftIds.push(await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(avatar, i))
   }
