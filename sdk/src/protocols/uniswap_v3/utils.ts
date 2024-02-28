@@ -11,25 +11,21 @@ const sdk = getMainnetSdk(
 )
 
 export const queryNftIds = async (avatar: `0x${string}`, targets?: string[]) => {
-  const nftIds: BigNumber[] = []
-
-  const nftIndexes = await sdk.uniswap_v3.positions_nft.balanceOf(avatar)
-
-  for (let i = 0; i < nftIndexes.toNumber(); i++) {
-    nftIds.push(await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(avatar, i))
-  }
+  const positionCount = await sdk.uniswap_v3.positions_nft.balanceOf(avatar)
+  const nftIds = await Promise.all(new Array(positionCount.toNumber()).map((_, i) => sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(avatar, i)))
 
   const targetNftIds = targets?.map((target) => {
     try {
       return BigNumber.from(target)
     } catch (e) {
       // could not be parsed as BigNumber
-      throw new NotFoundError(`NFT Id not found: ${target}`)
+      throw new NotFoundError(`Invalid NFT ID: ${target}`)
     }
   })
+  
   targetNftIds?.forEach((target) => {
     if (!nftIds.some((nftId) => nftId.eq(target))) {
-      throw new NotFoundError(`NFT Id not found: ${target}`)
+      throw new NotFoundError(`NFT ID not owned by avatar: ${target}`)
     }
   })
 
