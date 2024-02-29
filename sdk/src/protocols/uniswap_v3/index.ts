@@ -47,21 +47,8 @@ export const eth = {
           }
         )
       },
-      {
-        ...allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(
-          {
-            tokenId: c.or(...(nftIds as [BigNumber, BigNumber, ...BigNumber[]]))
-          }
-        )
-      },
-      {
-        ...allow.mainnet.uniswap_v3.positions_nft.collect(
-          {
-            tokenId: c.or(...(nftIds as [BigNumber, BigNumber, ...BigNumber[]])),
-            recipient: c.avatar
-          }
-        )
-      }
+      allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(),
+      allow.mainnet.uniswap_v3.positions_nft.collect()
     ]
 
     if (contracts.mainnet.weth in tokenAddresses) {
@@ -70,7 +57,6 @@ export const eth = {
         allow.mainnet.uniswap_v3.positions_nft.unwrapWETH9(undefined, c.avatar),
         allow.mainnet.uniswap_v3.positions_nft.collect(
           {
-            tokenId: c.or(...(nftIds as [BigNumber, BigNumber, ...BigNumber[]])),
             recipient: ZERO_ADDRESS
           }
         ),
