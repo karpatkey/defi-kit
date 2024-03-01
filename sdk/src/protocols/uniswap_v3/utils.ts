@@ -10,37 +10,39 @@ const sdk = getMainnetSdk(
   process.env.NODE_ENV === "test" ? getProvider() : ethProvider
 )
 
-export const queryNftIds = async (avatar: `0x${string}`, targets?: string[]) => {
-  const nftIds: BigNumber[] = []
-
-  const nftIndexes = await sdk.uniswap_v3.positions_nft.balanceOf(avatar)
-
-  if (!nftIndexes) {
-    throw new NotFoundError(`No NFT Ids found for avatar: ${avatar}`)
-  }
-
-  for (let i = 0; i < nftIndexes.toNumber(); i++) {
-    nftIds.push(await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(avatar, i))
-  }
-
-  const targetNftIds = targets?.map((target) => {
+/** Validates that the given `targets` are valid IDs of Uniswap v3 positions owned by the given `avatar` */
+export const validateNftIds = async (
+  avatar: `0x${string}`,
+  targets: string[]
+) => {
+  const targetNftIds = targets.map((target) => {
     try {
       return BigNumber.from(target)
     } catch (e) {
       // could not be parsed as BigNumber
-      throw new NotFoundError(`NFT Id not found: ${target}`)
-    }
-  })
-  targetNftIds?.forEach((target) => {
-    if (!nftIds.some((nftId) => nftId.eq(target))) {
-      throw new NotFoundError(`NFT Id not found: ${target}`)
+      throw new NotFoundError(`Invalid NFT ID: ${target}`)
     }
   })
 
-  return targetNftIds || nftIds
+  const owners = await Promise.all(
+    targetNftIds.map((nftId) => sdk.uniswap_v3.positions_nft.ownerOf(nftId))
+  )
+  const wrongOwnerAtIndex = owners.findIndex(
+    (owner) => owner.toLowerCase() !== avatar.toLowerCase()
+  )
+  if (wrongOwnerAtIndex !== -1) {
+    throw new NotFoundError(
+      `NFT ID not owned by avatar: ${targetNftIds[wrongOwnerAtIndex]}`
+    )
+  }
+
+  return targetNftIds
 }
 
-const findToken = (tokens: readonly EthToken[], symbolOrAddress: string) => {
+export const findToken = (
+  tokens: readonly EthToken[],
+  symbolOrAddress: string
+) => {
   const symbolOrAddressLower = symbolOrAddress.toLowerCase()
   const token = tokens.find(
     (token) =>
@@ -53,14 +55,15 @@ const findToken = (tokens: readonly EthToken[], symbolOrAddress: string) => {
   return token.address
 }
 
-export const queryTokens = async (nftIds: BigNumber[], tokens?: (EthToken["address"] | EthToken["symbol"])[]) => {
-  const tokenAddresses = tokens?.map((addressOrSymbol) => findToken(ethInfo, addressOrSymbol)) || []
-
-  for (const nftId of nftIds) {
-    const position = await sdk.uniswap_v3.positions_nft.positions(nftId)
-    tokenAddresses.push(findToken(ethInfo, position[2])) // token0
-    tokenAddresses.push(findToken(ethInfo, position[3])) // token1
+export const queryTokens = async (nftIds: BigNumber[]) => {
+  const positions = await Promise.all(
+    nftIds.map((nftId) => sdk.uniswap_v3.positions_nft.positions(nftId))
+  )
+  const result = new Set<`0x${string}`>()
+  for (const position of positions) {
+    result.add(findToken(ethInfo, position[2])) // token0
+    result.add(findToken(ethInfo, position[3])) // token1
   }
 
-  return tokenAddresses
+  return [...result]
 }

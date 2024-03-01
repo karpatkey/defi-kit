@@ -16,29 +16,47 @@ https://app.uniswap.org/
 
 | Name      | Type                  | Description                       |
 | :-------- | :-------------------- | :-------------------------------- |
-| `targets` | _string[] (optional)_ | `NftId` nft_id                    |
+| `targets` | _string[] (optional)_ | `NftId` position NFT Id           |
 | `tokens`  | _string[] (optional)_ | `Token` symbol \| `Token` address |
 | `avatar`  | _address (required)_  | `Address` avatar                  |
 
+<Callout type="warning">
+  Positions can be minted for any pair of the specified `tokens`. If
+  unspecified, minting of new positions won't be allowed.
+</Callout>
+
+<Callout type="warning">
+  If the avatar has approved the Uniswap v3 Positions NFT contract to spend
+  tokens other than the ones specified in `tokens`, the role will be able to
+  increase any existing positions' liquidity in these tokens as well.
+</Callout>
+
 <Callout type="info">
   `TARGET` below refers to the ERC-721 token id (NFT Id) of each element given
-  in `targets`. If `targets` is not specified then the NFT Ids owned by the
-  `avatar` will be queried on-chain.
+  in `targets`.
+</Callout>
+
+<Callout type="info">
+  `TARGET_TOKEN` below refers to the ERC-20 token address of each element given
+  in `targets`.
 </Callout>
 
 <Callout type="info">
   `TOKEN` below refers to the ERC-20 token address of each element given in
-  `tokens`. If `tokens` is not specified then the pool tokens of each `TARGET`
-  are considered.
+  `tokens`.
 </Callout>
 
-<Callout type="warning">
-  If `targets` is not specified and the `avatar` does not own any ERC-721 tokens
-  it's highly recommended to specify `tokens` to get the proper permissions to
-  mint new positions. Be aware that if `targets` is void then the
-  `increaseLiquidity` function won't be constrained by NftId which could incur
-  in funds loss.
-</Callout>
+### `TARGET_TOKEN · approve`
+
+Approve `PositionsNFT` to spend `TARGET_TOKEN` tokens on behalf of the avatar.
+
+- **Contract:** `TARGET_TOKEN`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint              |
+  | :-------- | :---------------------- |
+  | `spender` | equal to `PositionsNFT` |
+  | `amount`  | -                       |
 
 ### `TOKEN · approve`
 
@@ -59,18 +77,18 @@ Deposit `TOKEN` tokens to the corresponding Uniswap v3 pool and receive an ERC-7
 - **Contract:** `PositionsNFT`
 - **Function:** `mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))` Ξ _allow sending ETH_
 
-  | Parameter                | Constraint       |
-  | :----------------------- | :--------------- |
-  | `params.token0`          | equal to `TOKEN` |
-  | `params.token1`          | equal to `TOKEN` |
-  | `params.fee`             | -                |
-  | `params.tick_lower`      | -                |
-  | `params.tick_upper`      | -                |
-  | `params.amount0_desired` | -                |
-  | `params.amount1_desired` | -                |
-  | `params.amount0_min`     | -                |
-  | `params.amount1_min`     | -                |
-  | `params.deadline`        | -                |
+  | Parameter               | Constraint       |
+  | :---------------------- | :--------------- |
+  | `params.token0`         | equal to `TOKEN` |
+  | `params.token1`         | equal to `TOKEN` |
+  | `params.fee`            | -                |
+  | `params.tickLower`      | -                |
+  | `params.tickUpper`      | -                |
+  | `params.amount0Desired` | -                |
+  | `params.amount1Desired` | -                |
+  | `params.amount0Min`     | -                |
+  | `params.amount1Min`     | -                |
+  | `params.deadline`       | -                |
 
 ### `increaseLiquidity · PositionsNFT`
 
@@ -79,14 +97,22 @@ Increase the liquidity in a NFT position by adding the desired amounts of `token
 - **Contract:** `PositionsNFT`
 - **Function:** `increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))` Ξ _allow sending ETH_
 
-  | Parameter                | Constraint        |
-  | :----------------------- | :---------------- |
-  | `params.tokenId`         | equal to `TARGET` |
-  | `params.amount0_desired` | -                 |
-  | `params.amount1_desired` | -                 |
-  | `params.amount0_min`     | -                 |
-  | `params.amount1_min`     | -                 |
-  | `params.deadline`        | -                 |
+  | Parameter               | Constraint        |
+  | :---------------------- | :---------------- |
+  | `params.tokenId`        | equal to `TARGET` |
+  | `params.amount0Desired` | -                 |
+  | `params.amount1Desired` | -                 |
+  | `params.amount0Min`     | -                 |
+  | `params.amount1Min`     | -                 |
+  | `params.deadline`       | -                 |
+
+<Callout type="info">
+  If `targets` is not specified then all positions owned by the `avatar` will be
+  considered. Ownership is checked dynamically at condition evaluation time
+  through the
+  [AvatarIsOwnerOfERC721](https://github.com/gnosisguild/zodiac-modifier-roles/blob/main/packages/evm/contracts/adapters/AvatarIsOwnerOfERC721.sol)
+  custom condition applied to `params.tokenId`.
+</Callout>
 
 ### `decreaseLiquidity · PositionsNFT`
 
@@ -95,10 +121,76 @@ Decrease the liquidity in a NFT position by removing the the desired liquidity a
 - **Contract:** `PositionsNFT`
 - **Function:** `decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))`
 
-  | Parameter            | Constraint |
-  | :------------------- | :--------- |
-  | `params.tokenId`     | -          |
-  | `params.liquidity`   | -          |
-  | `params.amount0_min` | -          |
-  | `params.amount1_min` | -          |
-  | `params.deadline`    | -          |
+  | Parameter           | Constraint |
+  | :------------------ | :--------- |
+  | `params.tokenId`    | -          |
+  | `params.liquidity`  | -          |
+  | `params.amount0Min` | -          |
+  | `params.amount1Min` | -          |
+  | `params.deadline`   | -          |
+
+### `collect · PositionsNFT`
+
+Collect accumulated fees from a specific NFT position.
+
+- **Contract:** `PositionsNFT`
+- **Function:** `collect((uint256,address,uint128,uint128))`
+
+  | Parameter           | Constraint        |
+  | :------------------ | :---------------- |
+  | `params.tokenId`    | -                 |
+  | `params.recipient`  | equal to `AVATAR` |
+  | `params.amount0Max` | -                 |
+  | `params.amount1Max` | -                 |
+
+### If WETH is involved
+
+#### `collect · PositionsNFT`
+
+Collect accumulated fees from a specific NFT position.
+
+- **Contract:** `PositionsNFT`
+- **Function:** `collect((uint256,address,uint128,uint128))`
+
+  | Parameter           | Constraint                                            |
+  | :------------------ | :---------------------------------------------------- |
+  | `params.tokenId`    | -                                                     |
+  | `params.recipient`  | equal to `0x0000000000000000000000000000000000000000` |
+  | `params.amount0Max` | -                                                     |
+  | `params.amount1Max` | -                                                     |
+
+#### `refundETH · PositionsNFT`
+
+Refunds the unused ETH to the sender address.
+
+- **Contract:** `PositionsNFT`
+- **Function:** `refundETH()`
+
+  | Parameter | Constraint |
+  | :-------- | :--------- |
+  | N/A       | N/A        |
+
+#### `unwrapWETH9 · PositionsNFT`
+
+Unwraps a specified amount of `WETH` and transfers the corresponding ETH to the designated recipient address.
+
+- **Contract:** `PositionsNFT`
+- **Function:** `unwrapWETH9(uint256,address)`
+
+  | Parameter       | Constraint        |
+  | :-------------- | :---------------- |
+  | `amountMinimum` | -                 |
+  | `recipient`     | equal to `AVATAR` |
+
+#### `sweepToken · PositionsNFT`
+
+Transfers the specified `token` amount from the `PositionsNFT` contract balance to the provided recipient address.
+
+- **Contract:** `PositionsNFT`
+- **Function:** `sweepToken(address,uint256,address)`
+
+  | Parameter       | Constraint        |
+  | :-------------- | :---------------- |
+  | `token`         | -                 |
+  | `amountMinimum` | -                 |
+  | `recipient`     | equal to `AVATAR` |

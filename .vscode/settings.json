@@ -8,7 +8,7 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "editor.indentSize": 2,
-  "editor.defaultFormatter": "ms-python.black-formatter",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[mdx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }

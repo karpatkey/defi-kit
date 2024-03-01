@@ -1,13 +1,12 @@
-import { queryNftIds, queryTokens } from "../uniswap_v3/utils"
+import { validateNftIds, queryTokens, findToken } from "./utils"
 import { EthToken } from "./types"
-import { allowErc20Approve } from "../../conditions"
+import { allowErc20Approve, oneOf } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 import { allow } from "zodiac-roles-sdk/kit"
 import { c, Permission } from "zodiac-roles-sdk"
-import { BigNumber } from "ethers"
+import ethInfo from "./_ethInfo"
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
-
 
 export const eth = {
   deposit: async ({
@@ -15,48 +14,79 @@ export const eth = {
     tokens,
     avatar,
   }: {
-    // nft ids
+    /** Position NFT token IDs to allow depositing into. If unspecified, all positions owned by avatar can be managed that are in any pair of the specified `tokens`.
+     *
+     * **Attention:** If the avatar has approved the Uniswap NFT Position contract to spend tokens other than the ones specified in `tokens`, the role will be able to increase and decrease any existing positions' liquidity in these tokens as well.
+     */
     targets?: string[]
+    /** Positions can be minted for any pair of the specified `tokens`. If unspecified, minting of new positions won't be allowed. */
     tokens?: (EthToken["address"] | EthToken["symbol"])[]
     avatar: `0x${string}`
   }) => {
-    const nftIds = await queryNftIds(avatar, targets)
-    const tokenAddresses = await queryTokens(nftIds, tokens)
+    if (!targets && !tokens) {
+      throw new Error("Either `targets` or `tokens` must be specified.")
+    }
+
+    const nftIds = targets && (await validateNftIds(avatar, targets))
+    const tokensForTargets = nftIds && (await queryTokens(nftIds))
+
+    const mintTokenAddresses =
+      tokens?.map((addressOrSymbol) => findToken(ethInfo, addressOrSymbol)) ||
+      []
 
     const permissions: Permission[] = [
-      ...allowErc20Approve(tokenAddresses, [contracts.mainnet.uniswap_v3.positions_nft]),
+      ...allowErc20Approve(tokensForTargets || [], [
+        contracts.mainnet.uniswap_v3.positions_nft,
+      ]),
+      ...allowErc20Approve(mintTokenAddresses, [
+        contracts.mainnet.uniswap_v3.positions_nft,
+      ]),
       {
         ...allow.mainnet.uniswap_v3.positions_nft.mint(
           {
             recipient: avatar,
-            token0: c.or(...(tokenAddresses as [string, string, ...string[]])),
-            token1: c.or(...(tokenAddresses as [string, string, ...string[]])),
+            token0: oneOf(mintTokenAddresses),
+            token1: oneOf(mintTokenAddresses),
           },
           {
-            send: true
+            send: true,
           }
-        )
+        ),
       },
       {
         ...allow.mainnet.uniswap_v3.positions_nft.increaseLiquidity(
           {
-            tokenId: c.or(...(nftIds as [BigNumber, BigNumber, ...BigNumber[]]))
+            tokenId: nftIds ? oneOf(nftIds) : c.avatarIsOwnerOfErc721,
           },
           {
-            send: true
+            send: true,
           }
-        )
+        ),
       },
-      allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(),
-      allow.mainnet.uniswap_v3.positions_nft.collect()
+      allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(
+        nftIds ? {
+          tokenId: oneOf(nftIds)
+        } : undefined,
+      ),
+
+      allow.mainnet.uniswap_v3.positions_nft.collect(
+        {
+          tokenId: nftIds ? oneOf(nftIds) : undefined,
+          recipient: c.avatar
+        }
+      )
     ]
 
-    if (contracts.mainnet.weth in tokenAddresses) {
+    if (
+      mintTokenAddresses.includes(contracts.mainnet.weth) ||
+      tokensForTargets?.includes(contracts.mainnet.weth)
+    ) {
       permissions.push(
         allow.mainnet.uniswap_v3.positions_nft.refundETH(),
         allow.mainnet.uniswap_v3.positions_nft.unwrapWETH9(undefined, c.avatar),
         allow.mainnet.uniswap_v3.positions_nft.collect(
           {
+            tokenId: nftIds ? oneOf(nftIds) : undefined,
             recipient: ZERO_ADDRESS
           }
         ),
@@ -67,5 +97,7 @@ export const eth = {
         )
       )
     }
-  }
+
+    return permissions
+  },
 }
