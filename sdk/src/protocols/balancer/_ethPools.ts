@@ -4181,6 +4181,25 @@ export default [
     ],
   },
   {
+    bpt: "0xFf42A9AF956617e4C3532eF2fC7567465EFE4909",
+    id: "0xff42a9af956617e4c3532ef2fc7567465efe4909000200000000000000000672",
+    name: "50KEP/50rsETH",
+    type: "Weighted",
+    gauge: "0xc6b65bc6bF4a5fF4D90fDf7f568cBF8C99419DA1",
+    tokens: [
+      {
+        address: "0x8E3A59427B1D87Db234Dd4ff63B25E4BF94672f4",
+        symbol: "KEP",
+        id: "0x",
+      },
+      {
+        address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+        symbol: "rsETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xFf4ce5AAAb5a627bf82f4A571AB1cE94Aa365eA6",
     id: "0xff4ce5aaab5a627bf82f4a571ab1ce94aa365ea6000200000000000000000426",
     name: "DOLA-USDC BSP",
