@@ -1,14 +1,16 @@
 import { eth } from "."
-import { avatar } from "../../../test/wallets"
+import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-import { parseEther, parseUnits } from "ethers/lib/utils"
+import { parseUnits } from "ethers/lib/utils"
 import { testKit } from "../../../test/kit"
 import { BigNumber, ContractTransaction } from "ethers"
 
+const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 const STEAL_ADDRESS = "0x8eb8a3b98659cce290402893d0123abb75e3ab28"
+const COLLECT_MAX_AMOUNT = 340282366920938463463374607431768211455n
 
 const sdk = getMainnetSdk(avatar)
 
@@ -211,7 +213,7 @@ describe("uniswap_v3", () => {
       console.log("Initial NFT Id: ", nftId?.toNumber() || 0)
       await applyPermissions(
         await eth.deposit({
-          tokens: [contracts.mainnet.usdc, contracts.mainnet.dai],
+          tokens: [contracts.mainnet.dai, contracts.mainnet.usdc, contracts.mainnet.weth],
           avatar: avatar._address as `0x${string}`
         })
       )
@@ -267,7 +269,7 @@ describe("uniswap_v3", () => {
       await expect(
         testKit.eth.uniswap_v3.positions_nft.increaseLiquidity(
           {
-            tokenId: nftId.add(1), // invalid nftId
+            tokenId: 1, // invalid nftId
             amount0Desired: amount0Desired,
             amount1Desired: amount1Desired,
             amount0Min: amount0Min,
@@ -277,6 +279,83 @@ describe("uniswap_v3", () => {
           { value: amount1Desired }
         )
       ).toBeForbidden()
+    })
+
+    it("decrease liquidity and collect using WETH", async () => {
+      const nftId = await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(avatar._address, 0)
+      const position = await getPosition(nftId)
+      console.log(Math.floor(position[7].div(2).toNumber()))
+      await expect(
+        testKit.eth.uniswap_v3.positions_nft.decreaseLiquidity(
+          {
+            tokenId: nftId,
+            liquidity: Math.floor(position[7].div(2).toNumber()),
+            amount0Min: 0,
+            amount1Min: 0,
+            deadline: Math.floor(new Date().getTime() / 1000) + 1800
+          }
+        )
+      ).not.toRevert()
+      await expect(
+        testKit.eth.uniswap_v3.positions_nft.collect(
+          {
+            tokenId: nftId,
+            amount0Max: COLLECT_MAX_AMOUNT,
+            amount1Max: COLLECT_MAX_AMOUNT,
+            recipient: avatar._address
+          }
+        )
+      ).not.toRevert()
+      await expect(
+        testKit.eth.uniswap_v3.positions_nft.collect(
+          {
+            tokenId: nftId,
+            amount0Max: COLLECT_MAX_AMOUNT,
+            amount1Max: COLLECT_MAX_AMOUNT,
+            recipient: member._address
+          }
+        )
+      ).toBeForbidden()
+    })
+
+    it("decrease liquidity and collect using ETH", async () => {
+      const nftId = await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(avatar._address, 0)
+      const position = await getPosition(nftId)
+      console.log(position[7].toNumber())
+      await expect(
+        testKit.eth.uniswap_v3.positions_nft.decreaseLiquidity(
+          {
+            tokenId: nftId,
+            liquidity: position[7],
+            amount0Min: 0,
+            amount1Min: 0,
+            deadline: Math.floor(new Date().getTime() / 1000) + 1800
+          }
+        )
+      ).not.toRevert()
+      await expect(
+        testKit.eth.uniswap_v3.positions_nft.collect(
+          {
+            tokenId: nftId,
+            amount0Max: COLLECT_MAX_AMOUNT,
+            amount1Max: COLLECT_MAX_AMOUNT,
+            recipient: ZERO_ADDRESS
+          }
+        )
+      ).not.toRevert()
+      await expect(
+        testKit.eth.uniswap_v3.positions_nft.unwrapWETH9(
+          0,
+          avatar._address
+        )
+      ).not.toRevert()
+      await expect(
+        testKit.eth.uniswap_v3.positions_nft.sweepToken(
+          contracts.mainnet.usdc,
+          0,
+          avatar._address
+        )
+      ).not.toRevert()
     })
   })
 })

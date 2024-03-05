@@ -20,9 +20,14 @@ https://app.uniswap.org/
 | `tokens`  | _string[] (optional)_ | `Token` symbol \| `Token` address |
 | `avatar`  | _address (required)_  | `Address` avatar                  |
 
+<Callout type="info">
+  If `targets` is unspecified `tokens` must be passed. New positions in any pair
+  of these tokens can be minted. Existing positions in any pair of these tokens
+  can be managed.
+</Callout>
+
 <Callout type="warning">
-  Positions can be minted for any pair of the specified `tokens`. If
-  unspecified, minting of new positions won't be allowed.
+  If `tokens` is unspecified, minting of new positions won't be allowed.
 </Callout>
 
 <Callout type="warning">
@@ -121,13 +126,13 @@ Decrease the liquidity in a NFT position by removing the the desired liquidity a
 - **Contract:** `PositionsNFT`
 - **Function:** `decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))`
 
-  | Parameter           | Constraint |
-  | :------------------ | :--------- |
-  | `params.tokenId`    | -          |
-  | `params.liquidity`  | -          |
-  | `params.amount0Min` | -          |
-  | `params.amount1Min` | -          |
-  | `params.deadline`   | -          |
+  | Parameter           | Constraint        |
+  | :------------------ | :---------------- |
+  | `params.tokenId`    | equal to `TARGET` |
+  | `params.liquidity`  | -                 |
+  | `params.amount0Min` | -                 |
+  | `params.amount1Min` | -                 |
+  | `params.deadline`   | -                 |
 
 ### `collect · PositionsNFT`
 
@@ -138,7 +143,7 @@ Collect accumulated fees from a specific NFT position.
 
   | Parameter           | Constraint        |
   | :------------------ | :---------------- |
-  | `params.tokenId`    | -                 |
+  | `params.tokenId`    | equal to `TARGET` |
   | `params.recipient`  | equal to `AVATAR` |
   | `params.amount0Max` | -                 |
   | `params.amount1Max` | -                 |
@@ -154,7 +159,7 @@ Collect accumulated fees from a specific NFT position.
 
   | Parameter           | Constraint                                            |
   | :------------------ | :---------------------------------------------------- |
-  | `params.tokenId`    | -                                                     |
+  | `params.tokenId`    | equal to `TARGET`                                     |
   | `params.recipient`  | equal to `0x0000000000000000000000000000000000000000` |
   | `params.amount0Max` | -                                                     |
   | `params.amount1Max` | -                                                     |

@@ -68,7 +68,6 @@ export const eth = {
           tokenId: oneOf(nftIds)
         } : undefined,
       ),
-
       allow.mainnet.uniswap_v3.positions_nft.collect(
         {
           tokenId: nftIds ? oneOf(nftIds) : undefined,
@@ -77,7 +76,6 @@ export const eth = {
       )
     ]
 
-    console.log(tokensForTargets)
     if (
       mintTokenAddresses.includes(contracts.mainnet.weth) ||
       tokensForTargets?.includes(contracts.mainnet.weth)
