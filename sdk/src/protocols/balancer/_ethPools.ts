@@ -924,6 +924,25 @@ export default [
     ],
   },
   {
+    bpt: "0x3A2819B07981234F825E952f32Cf977db5EDBf7C",
+    id: "0x3a2819b07981234f825e952f32cf977db5edbf7c00020000000000000000066f",
+    name: "80UNION-20wstETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x5Dfe42eEA70a3e6f93EE54eD9C321aF07A85535C",
+        symbol: "UNION",
+        id: "0x",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x3B9Fb87F7d081CEDdb1289258FA5660d955317b6",
     id: "0x3b9fb87f7d081ceddb1289258fa5660d955317b6000200000000000000000544",
     name: "50B-baoETH-ETH-BPT-50BAO",
