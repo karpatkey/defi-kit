@@ -1,10 +1,12 @@
-import { validateNftIds, queryTokens, findToken } from "./utils"
+import { queryTokens, findToken } from "./utils"
 import { EthToken } from "./types"
 import { allowErc20Approve, oneOf } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 import { allow } from "zodiac-roles-sdk/kit"
 import { c, Permission } from "zodiac-roles-sdk"
 import ethInfo from "./_ethInfo"
+import { BigNumber } from "ethers"
+import { NotFoundError } from "../../errors"
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 
@@ -27,7 +29,17 @@ export const eth = {
       throw new Error("Either `targets` or `tokens` must be specified.")
     }
 
-    const nftIds = targets && (await validateNftIds(avatar, targets))
+    const nftIds =
+      targets &&
+      targets.map((target) => {
+        try {
+          return BigNumber.from(target)
+        } catch (e) {
+          // could not be parsed as BigNumber
+          throw new NotFoundError(`Invalid NFT ID: ${target}`)
+        }
+      })
+
     const tokensForTargets = nftIds && (await queryTokens(nftIds))
 
     const mintTokenAddresses =
