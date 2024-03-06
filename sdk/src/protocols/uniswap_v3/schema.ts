@@ -3,10 +3,7 @@ import { zx } from "../../zx"
 import EthInfo from "./_ethInfo"
 
 const ethTokens = [
-  ...new Set(
-    EthInfo
-      .flatMap((token) => [token.address, token.symbol])
-  ),
+  ...new Set(EthInfo.flatMap((token) => [token.address, token.symbol])),
 ]
 
 const zToken = z.enum(ethTokens as [string, string, ...string[]])
@@ -16,5 +13,5 @@ export const eth = {
     targets: z.string().array().optional(),
     tokens: zToken.array().optional(),
     avatar: zx.address(),
-  })
+  }),
 }

@@ -34,7 +34,7 @@ export const eth = annotateAll(
     rocket_pool: rocket_pool.eth,
     spark: spark.eth,
     stader: stader.eth,
-    uniswap_v3: uniswap_v3.eth
+    uniswap_v3: uniswap_v3.eth,
   },
   "eth"
 )

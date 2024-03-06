@@ -64,16 +64,16 @@ export const eth = {
         ),
       },
       allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(
-        nftIds ? {
-          tokenId: oneOf(nftIds)
-        } : undefined,
+        nftIds
+          ? {
+              tokenId: oneOf(nftIds),
+            }
+          : undefined
       ),
-      allow.mainnet.uniswap_v3.positions_nft.collect(
-        {
-          tokenId: nftIds ? oneOf(nftIds) : undefined,
-          recipient: c.avatar
-        }
-      )
+      allow.mainnet.uniswap_v3.positions_nft.collect({
+        tokenId: nftIds ? oneOf(nftIds) : undefined,
+        recipient: c.avatar,
+      }),
     ]
 
     if (
@@ -83,12 +83,10 @@ export const eth = {
       permissions.push(
         allow.mainnet.uniswap_v3.positions_nft.refundETH(),
         allow.mainnet.uniswap_v3.positions_nft.unwrapWETH9(undefined, c.avatar),
-        allow.mainnet.uniswap_v3.positions_nft.collect(
-          {
-            tokenId: nftIds ? oneOf(nftIds) : undefined,
-            recipient: ZERO_ADDRESS
-          }
-        ),
+        allow.mainnet.uniswap_v3.positions_nft.collect({
+          tokenId: nftIds ? oneOf(nftIds) : undefined,
+          recipient: ZERO_ADDRESS,
+        }),
         allow.mainnet.uniswap_v3.positions_nft.sweepToken(
           undefined,
           undefined,

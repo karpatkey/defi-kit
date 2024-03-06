@@ -32,7 +32,7 @@ export const eth = {
   rocket_pool: rocket_pool.eth,
   spark: spark.eth,
   stader: stader.eth,
-  uniswap_v3: uniswap_v3.eth
+  uniswap_v3: uniswap_v3.eth,
 } satisfies Record<string, ProtocolSchemas>
 
 export const gno = {
