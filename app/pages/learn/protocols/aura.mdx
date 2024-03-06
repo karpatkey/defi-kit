@@ -171,15 +171,15 @@ Mint and optionally stake `auraBAL` using `BAL`.
 - **Contract:** `BalDepositorWrapper`
 - **Function:** `deposit(uint256,uint256,bool,address)`
 
-  | Parameter      | Constraint                                                    |
-  | :------------- | :------------------------------------------------------------ |
-  | `amount`       | -                                                             |
-  | `minOut`       | -                                                             |
-  | `lock`         | -                                                             |
-  | `stakeAddress` | equal to (`0x` or `AuraBalBaseRewardPool` or `AuraBalStaker`) |
+  | Parameter      | Constraint                                                                                            |
+  | :------------- | :---------------------------------------------------------------------------------------------------- |
+  | `amount`       | -                                                                                                     |
+  | `minOut`       | -                                                                                                     |
+  | `lock`         | -                                                                                                     |
+  | `stakeAddress` | equal to (`0x0000000000000000000000000000000000000000` or `AuraBalBaseRewardPool` or `AuraBalStaker`) |
 
 - If the `stakeAddress` is:
-  - `0x`: mint `auraBAL`.
+  - `0x0000000000000000000000000000000000000000`: mint `auraBAL`.
   - `AuraBalBaseRewardPool`: mint `auraBAL`, stake it and receive `AuraBalBaseRewardPool` tokens in exchange.
   - `AuraBalStaker`: mint `auraBAL`, stake it and receive `stkauraBAL` tokens in exchange.
 
@@ -266,15 +266,15 @@ Mint and optionally stake `auraBAL` using `B-80BAL-20WETH`.
 - **Contract:** `AuraBalBptDepositor`
 - **Function:** `deposit(uint256,uint256,bool,address)`
 
-  | Parameter      | Constraint                                                    |
-  | :------------- | :------------------------------------------------------------ |
-  | `amount`       | -                                                             |
-  | `minOut`       | -                                                             |
-  | `lock`         | -                                                             |
-  | `stakeAddress` | equal to (`0x` or `AuraBalBaseRewardPool` or `AuraBalStaker`) |
+  | Parameter      | Constraint                                                                                            |
+  | :------------- | :---------------------------------------------------------------------------------------------------- |
+  | `amount`       | -                                                                                                     |
+  | `minOut`       | -                                                                                                     |
+  | `lock`         | -                                                                                                     |
+  | `stakeAddress` | equal to (`0x0000000000000000000000000000000000000000` or `AuraBalBaseRewardPool` or `AuraBalStaker`) |
 
 - If the `stakeAddress` is:
-  - `0x`: mint `auraBAL`.
+  - `0x0000000000000000000000000000000000000000`: mint `auraBAL`.
   - `AuraBalBaseRewardPool`: mint `auraBAL`, stake it and receive `AuraBalBaseRewardPool` tokens in exchange.
   - `AuraBalStaker`: mint `auraBAL`, stake it and receive `stkauraBAL` tokens in exchange.
 
