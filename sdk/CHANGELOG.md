@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/karpatkey/defi-kit/compare/v1.5.0...v1.6.0) (2024-03-07)
+
+
+### Features
+
+* add Uniswap v3 ([#109](https://github.com/karpatkey/defi-kit/issues/109)) ([76c1ee8](https://github.com/karpatkey/defi-kit/commit/76c1ee8a02dfadfd40638e1ea75c179fd59a38ea))
+
 ## [1.5.0](https://github.com/karpatkey/defi-kit/compare/v1.4.0...v1.5.0) (2024-02-22)
 
 
