@@ -185,14 +185,14 @@ Mint and optionally stake `cvxCRV` using `CRV`.
 - **Contract:** `CrvDepositor`
 - **Function:** `deposit(uint256,bool,address)`
 
-  | Parameter      | Constraint                     |
-  | :------------- | :----------------------------- |
-  | `amount`       | -                              |
-  | `lock`         | -                              |
-  | `stakeAddress` | equal to (`0x` or `stkCvxCrv`) |
+  | Parameter      | Constraint                                                             |
+  | :------------- | :--------------------------------------------------------------------- |
+  | `amount`       | -                                                                      |
+  | `lock`         | -                                                                      |
+  | `stakeAddress` | equal to (`0x0000000000000000000000000000000000000000` or `stkCvxCrv`) |
 
 - If the `stakeAddress` is:
-  - `0x`: mint `cvxCRV`.
+  - `0x0000000000000000000000000000000000000000`: mint `cvxCRV`.
   - `stkCvxCrv`: mint `cvxCRV`, stake it and receive `stkCvxCrv` tokens in exchange.
 
 #### `stkCvxCrv · stake`
