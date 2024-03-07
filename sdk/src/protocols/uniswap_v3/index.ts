@@ -14,7 +14,6 @@ export const eth = {
   deposit: async ({
     targets,
     tokens,
-    avatar,
   }: {
     /** Position NFT token IDs to allow depositing into. If unspecified, all positions owned by avatar can be managed that are in any pair of the specified `tokens`.
      *
@@ -23,7 +22,6 @@ export const eth = {
     targets?: string[]
     /** Positions can be minted for any pair of the specified `tokens`. If unspecified, minting of new positions won't be allowed. */
     tokens?: (EthToken["address"] | EthToken["symbol"])[]
-    avatar: `0x${string}`
   }) => {
     if (!targets && !tokens) {
       throw new Error("Either `targets` or `tokens` must be specified.")
@@ -56,7 +54,7 @@ export const eth = {
       {
         ...allow.mainnet.uniswap_v3.positions_nft.mint(
           {
-            recipient: avatar,
+            recipient: c.avatar,
             token0: oneOf(mintTokenAddresses),
             token1: oneOf(mintTokenAddresses),
           },

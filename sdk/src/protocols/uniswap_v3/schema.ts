@@ -1,5 +1,4 @@
 import { z } from "zod"
-import { zx } from "../../zx"
 import EthInfo from "./_ethInfo"
 
 const ethTokens = [
@@ -12,6 +11,5 @@ export const eth = {
   deposit: z.object({
     targets: z.string().array().optional(),
     tokens: zToken.array().optional(),
-    avatar: zx.address(),
   }),
 }
