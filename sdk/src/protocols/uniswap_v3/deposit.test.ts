@@ -120,15 +120,15 @@ const mintNFT = async (
   const tickLower =
     Math.ceil(
       (Math.log10(token0MinPrice) + (token1Decimals - token0Decimals)) /
-        Math.log10(1.0001) /
-        tickSpacing
+      Math.log10(1.0001) /
+      tickSpacing
     ) * tickSpacing
 
   const tickUpper =
     Math.floor(
       (Math.log10(token0MaxPrice) + (token1Decimals - token0Decimals)) /
-        Math.log10(1.0001) /
-        tickSpacing
+      Math.log10(1.0001) /
+      tickSpacing
     ) * tickSpacing
 
   const amounts = await calculateAmounts(
@@ -223,12 +223,12 @@ describe("uniswap_v3", () => {
             contracts.mainnet.usdc,
             contracts.mainnet.weth,
           ],
-          avatar: avatar._address as `0x${string}`,
+          fees: ["0.01%"]
         })
       )
     }, 30000)
 
-    it("mint new position only with `tokens`", async () => {
+    it("mint new position only with `tokens` and `fees`", async () => {
       await expect(
         mintNFT(
           contracts.mainnet.dai,
@@ -244,6 +244,16 @@ describe("uniswap_v3", () => {
           contracts.mainnet.dai,
           contracts.mainnet.usdt,
           100,
+          1000000000000000000000n,
+          0n,
+          true
+        )
+      ).toBeForbidden()
+      await expect(
+        mintNFT(
+          contracts.mainnet.dai,
+          contracts.mainnet.usdc,
+          500,
           1000000000000000000000n,
           0n,
           true
@@ -314,7 +324,6 @@ describe("uniswap_v3", () => {
         0
       )
       const position = await getPosition(nftId)
-      console.log(Math.floor(position[7].div(2).toNumber()))
       await expect(
         testKit.eth.uniswap_v3.positions_nft.decreaseLiquidity({
           tokenId: nftId,
@@ -348,7 +357,6 @@ describe("uniswap_v3", () => {
         0
       )
       const position = await getPosition(nftId)
-      console.log(position[7].toNumber())
       await expect(
         testKit.eth.uniswap_v3.positions_nft.decreaseLiquidity({
           tokenId: nftId,
