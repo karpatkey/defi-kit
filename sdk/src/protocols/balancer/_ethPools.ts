@@ -1557,6 +1557,25 @@ export default [
     ],
   },
   {
+    bpt: "0x6055689F452d2f9D86945F3597e1D47EE819254D",
+    id: "0x6055689f452d2f9d86945f3597e1d47ee819254d000200000000000000000640",
+    name: "50mkUSD-50PRISMA",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4591DBfF62656E7859Afe5e45f6f47D3669fBB28",
+        symbol: "mkUSD",
+        id: "0x",
+      },
+      {
+        address: "0xdA47862a83dac0c112BA89c6abC2159b95afd71C",
+        symbol: "PRISMA",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x60B4601cDdDc4467f31b1F770cb93c51dC7dC728",
     id: "0x60b4601cdddc4467f31b1f770cb93c51dc7dc728000200000000000000000042",
     name: "50PIXEL-50WETH",
@@ -3137,40 +3156,6 @@ export default [
       {
         address: "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
         symbol: "AURA",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xc4451498F950b8B3AbD9a815cF221a8e64791388",
-    id: "0xc4451498f950b8b3abd9a815cf221a8e647913880001000000000000000001ea",
-    name: "10LUSD-6LQTY-3rETH-26WETH-55RPL",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
-        symbol: "LUSD",
-        id: "0x",
-      },
-      {
-        address: "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
-        symbol: "LQTY",
-        id: "0x",
-      },
-      {
-        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
-        symbol: "rETH",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xD33526068D116cE69F19A9ee46F0bd304F21A51f",
-        symbol: "RPL",
         id: "0x",
       },
     ],
