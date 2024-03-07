@@ -1975,4 +1975,11 @@ export default [
     cvxDepositToken: "0xdf666a5370fB4b21672F9145b29a56d589cc91fd",
     rewarder: "0xDeCD2d71263757B49b5C38f78de63bA7760f09ae",
   },
+  {
+    name: "CRVZUNUSD",
+    id: "309",
+    crvLPToken: "0x8C24b3213FD851db80245FCCc42c40B94Ac9a745",
+    cvxDepositToken: "0xDB025419b9e8f1AD7eF3Eb732E143C1be64034A1",
+    rewarder: "0xB0408d1477554268Ece9b0a40290C345196fBf1B",
+  },
 ] as const
