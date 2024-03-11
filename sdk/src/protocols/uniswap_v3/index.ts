@@ -37,6 +37,8 @@ export const eth = {
     }
 
     const mintFees = fees?.map(fee => FeeMapping[fee]) || undefined
+    console.log("mintFees: ", mintFees)
+    console.log("tokens: ", tokens)
 
     const nftIds =
       targets &&
