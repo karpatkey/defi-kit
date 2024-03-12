@@ -226,7 +226,7 @@ export default [
     id: "0x7644fa5d0ea14fcf3e813fdf93ca9544f8567655000000000000000000000066",
     name: "sBAL3",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xDec0362b3229690fBe4f88c57472610588Bb9A2E",
     tokens: [
       {
         address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
@@ -269,7 +269,7 @@ export default [
     id: "0xa99fd9950b5d5dceeaf4939e221dca8ca9b938ab000100000000000000000025",
     name: "25WETH-25BAL-25GNO-25wxDAI",
     type: "Weighted",
-    gauge: null,
+    gauge: "0xC092E0a4f5a2AdF3CF91E27cf4B7d7917D12CA2B",
     tokens: [
       {
         address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
@@ -298,7 +298,7 @@ export default [
     id: "0xb8bb1ce9c6e5401d66fe2126db6e7387e1e24ffe00020000000000000000003d",
     name: "50WETH-50GNO",
     type: "Weighted",
-    gauge: null,
+    gauge: "0xd264f4d4Ad98FEf4b198547059C07a8E8bBF2F0E",
     tokens: [
       {
         address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
@@ -317,7 +317,7 @@ export default [
     id: "0xbad20c15a773bf03ab973302f61fabcea5101f0a000000000000000000000034",
     name: "bb-WETH-wstETH",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0x27519F69b2Ac912aeb6fE066180FB25a17c71755",
     tokens: [
       {
         address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
@@ -336,7 +336,7 @@ export default [
     id: "0xbc2acf5e821c5c9f8667a36bb1131dad26ed64f9000200000000000000000063",
     name: "B-50sDAI-50wstETH",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x4d13d387f372dbe5125B7d78E75094ac85B31eDc",
     tokens: [
       {
         address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
@@ -374,7 +374,7 @@ export default [
     id: "0xc9f00c3a713008ddf69b768d90d4978549bfdf9400000000000000000000006d",
     name: "crvUSD/sDAI",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xB079bD76dD9b5F9a8d3954E4250FC25BE0549Ac0",
     tokens: [
       {
         address: "0xaBEf652195F98A91E490f047A5006B71c85f058d",
@@ -393,7 +393,7 @@ export default [
     id: "0xdd439304a77f54b1f7854751ac1169b279591ef7000000000000000000000064",
     name: "EURe/sDAI",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xBB2598b89202596A743BE0b615001D7D5164f167",
     tokens: [
       {
         address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
@@ -431,7 +431,7 @@ export default [
     id: "0xeb30c85cc528537f5350cf5684ce6a4538e13394000200000000000000000059",
     name: "B-50USD-50wstETH",
     type: "Weighted",
-    gauge: null,
+    gauge: "0xef23C2Ec60A1ea3Ed6a44681Fb72356cB411177e",
     tokens: [
       {
         address: "0x2086f52651837600180dE173B09470F54EF74910",
