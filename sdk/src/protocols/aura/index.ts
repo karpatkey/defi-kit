@@ -21,12 +21,12 @@ const findPool = (pools: readonly Pool[], nameOrAddressOrId: string) => {
 }
 
 const findToken = (pools: readonly Pool[], symbolOrAddress: string) => {
-  const nameOrAddressOrIdLower = symbolOrAddress.toLowerCase()
+  const symbolOrAddressLower = symbolOrAddress.toLowerCase()
   const tokens = pools.flatMap((pool) => [...pool.tokens])
   const token = tokens.find(
     (token) =>
-      token.symbol.toLowerCase() === nameOrAddressOrIdLower ||
-      token.address.toLowerCase() === nameOrAddressOrIdLower
+      token.symbol.toLowerCase() === symbolOrAddressLower ||
+      token.address.toLowerCase() === symbolOrAddressLower
   )
   if (!token) {
     throw new NotFoundError(`Token not found: ${symbolOrAddress}`)

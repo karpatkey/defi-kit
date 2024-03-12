@@ -7,11 +7,11 @@ import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
 import { stake, delegate } from "../v2/actions"
 
 const findToken = (symbolOrAddress: string): Token => {
-  const nameOrAddressLower = symbolOrAddress.toLowerCase()
+  const symbolOrAddressLower = symbolOrAddress.toLowerCase()
   const token = tokens.find(
     (token) =>
-      token.symbol.toLowerCase() === nameOrAddressLower ||
-      token.token.toLowerCase() === nameOrAddressLower
+      token.symbol.toLowerCase() === symbolOrAddressLower ||
+      token.token.toLowerCase() === symbolOrAddressLower
   )
   if (!token) {
     throw new NotFoundError(`Token not found: ${symbolOrAddress}`)

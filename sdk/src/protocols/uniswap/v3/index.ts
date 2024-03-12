@@ -1,19 +1,27 @@
 import { queryTokens, findToken } from "./utils"
-import { EthToken } from "./types"
-import { allowErc20Approve, oneOf } from "../../conditions"
-import { contracts } from "../../../eth-sdk/config"
+import { EthToken, Fee } from "./types"
+import { allowErc20Approve, oneOf } from "../../../conditions"
+import { contracts } from "../../../../eth-sdk/config"
 import { allow } from "zodiac-roles-sdk/kit"
 import { c, Permission } from "zodiac-roles-sdk"
 import ethInfo from "./_ethInfo"
 import { BigNumber } from "ethers"
-import { NotFoundError } from "../../errors"
+import { NotFoundError } from "../../../errors"
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
+
+const FeeMapping: { [key: string]: number } = {
+  "0.01%": 100,
+  "0.05%": 500,
+  "0.3%": 3000,
+  "1%": 10000
+}
 
 export const eth = {
   deposit: async ({
     targets,
     tokens,
+    fees
   }: {
     /** Position NFT token IDs to allow depositing into. If unspecified, all positions owned by avatar can be managed that are in any pair of the specified `tokens`.
      *
@@ -21,11 +29,16 @@ export const eth = {
      */
     targets?: string[]
     /** Positions can be minted for any pair of the specified `tokens`. If unspecified, minting of new positions won't be allowed. */
-    tokens?: (EthToken["address"] | EthToken["symbol"])[]
+    tokens?: (EthToken["address"] | EthToken["symbol"])[],
+    fees?: Fee[]
   }) => {
     if (!targets && !tokens) {
       throw new Error("Either `targets` or `tokens` must be specified.")
     }
+
+    const mintFees = fees?.map(fee => FeeMapping[fee]) || undefined
+    console.log("mintFees: ", mintFees)
+    console.log("tokens: ", tokens)
 
     const nftIds =
       targets &&
@@ -57,6 +70,7 @@ export const eth = {
             recipient: c.avatar,
             token0: oneOf(mintTokenAddresses),
             token1: oneOf(mintTokenAddresses),
+            fee: mintFees ? oneOf(mintFees) : undefined
           },
           {
             send: true,
@@ -76,8 +90,8 @@ export const eth = {
       allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(
         nftIds
           ? {
-              tokenId: oneOf(nftIds),
-            }
+            tokenId: oneOf(nftIds),
+          }
           : undefined
       ),
       allow.mainnet.uniswap_v3.positions_nft.collect({

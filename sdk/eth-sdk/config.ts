@@ -116,6 +116,12 @@ export const contracts = {
       user_withdraw_manager: "0x9F0491B32DBce587c50c4C43AB303b06478193A7",
       ETHx: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
     },
+    stakewise_v2: {
+      merkle_distributor: "0xA3F21010e8b9a3930996C8849Df38f9Ca3647c20",
+      seth2: "0xFe2e637202056d30016725477c5da089Ab0A043A",
+      reth2: "0x20BC832ca081b91433ff6c17f85701B6e92486c5",
+      swise: "0x48C3399719B582dD63eB5AADf12A40B4C3f52FA2"
+    },
     uniswap_v3: {
       positions_nft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
       factory: "0x1F98431c8aD98523631AE4a59f267346ea31F984",

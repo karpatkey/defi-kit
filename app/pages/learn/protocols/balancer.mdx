@@ -426,7 +426,7 @@ Claim all reward tokens from `veBAL` incentives.
 - **Contract:** `FeeDistributor`
 - **Function:** `claimTokens(address,address[])`
 
-  | Parameter | Constraint                                                        |
-  | :-------- | :---------------------------------------------------------------- |
-  | `user`    | equal to `AVATAR`                                                 |
-  | `token`   | equal to (`BAL`,`bb-a-USD-v1`,`bb-a-USD-v2`,`bb-a-USD-v3`,`USDC`) |
+  | Parameter | Constraint                                                                    |
+  | :-------- | :---------------------------------------------------------------------------- |
+  | `user`    | equal to `AVATAR`                                                             |
+  | `token`   | equal to a subset of (`BAL`,`bb-a-USD-v1`,`bb-a-USD-v2`,`bb-a-USD-v3`,`USDC`) |
