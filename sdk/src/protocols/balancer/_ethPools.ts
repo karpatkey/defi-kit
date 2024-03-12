@@ -322,6 +322,25 @@ export default [
     ],
   },
   {
+    bpt: "0x0F9FdC4D883f6D85b68CE1B8b96AA706A3538e5B",
+    id: "0x0f9fdc4d883f6d85b68ce1b8b96aa706a3538e5b000200000000000000000675",
+    name: "80gVEC-20vETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x38D64ce1Bdf1A9f24E0Ec469C9cAde61236fB4a0",
+        symbol: "vETH",
+        id: "0x",
+      },
+      {
+        address: "0xb2D007293a421471586D6BC3FBfEB1990fdFa2e6",
+        symbol: "gVEC",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x100A6a9524541E92dd068a9cd3E5DEF16388Fec0",
     id: "0x100a6a9524541e92dd068a9cd3e5def16388fec0000200000000000000000213",
     name: "50COIN-50WETH",
@@ -1395,6 +1414,25 @@ export default [
       {
         address: "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
         symbol: "LQTY",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x57766212638c425e9CB0C6D6e1683dda369C0FFF",
+    id: "0x57766212638c425e9cb0c6d6e1683dda369c0fff000200000000000000000678",
+    name: "80GEM-20WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x0447D3454b25935eeD47F65b4Bd22b9b23bE326a",
+        symbol: "GEM",
         id: "0x",
       },
       {
