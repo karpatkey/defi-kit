@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/karpatkey/defi-kit/compare/v1.6.0...v1.7.0) (2024-03-12)
+
+
+### Features
+
+* add Stakewise v2 / tweak univ3 / minor fixes ([#115](https://github.com/karpatkey/defi-kit/issues/115)) ([a7b85e9](https://github.com/karpatkey/defi-kit/commit/a7b85e9dd90ffde674e0ce9d8213b20b2758f641))
+
 ## [1.6.0](https://github.com/karpatkey/defi-kit/compare/v1.5.0...v1.6.0) (2024-03-07)
 
 
