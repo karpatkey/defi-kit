@@ -13,7 +13,7 @@ import * as rocket_pool from "./rocket_pool/schema"
 import * as spark from "./spark/schema"
 import * as stader from "./stader/schema"
 import * as stakewise_v2 from "./stakewise/v2/schema"
-import * as uniswap_v3 from "./uniswap_v3/schema"
+import * as uniswap_v3 from "./uniswap/v3/schema"
 import { ProtocolSchemas } from "../types"
 
 // group all protocols schemas by chain

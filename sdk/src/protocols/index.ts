@@ -13,7 +13,7 @@ import * as rocket_pool from "./rocket_pool"
 import * as spark from "./spark"
 import * as stader from "./stader"
 import * as stakewise_v2 from "./stakewise/v2"
-import * as uniswap_v3 from "./uniswap_v3"
+import * as uniswap_v3 from "./uniswap/v3"
 
 import { annotateAll } from "./annotate"
 

@@ -1,8 +1,8 @@
 import { NotFoundError } from "../../../errors"
 import ethPools from "./_ethPools"
 import { EthPool } from "./types"
-import { eth as univ3_eth } from "../../uniswap_v3/index"
-import { EthToken } from "../../uniswap_v3/types"
+import { eth as univ3_eth } from "../../uniswap/v3/index"
+import { EthToken } from "../../uniswap/v3/types"
 import { allow } from "zodiac-roles-sdk/kit"
 import { c } from "zodiac-roles-sdk"
 import { contracts } from "../../../../eth-sdk/config"
@@ -27,7 +27,7 @@ export const eth = {
     targets: (EthPool["name"] | EthPool["address"])[]
   }) => {
     const univ3Permissions = await Promise.all(
-      targets.flatMap((target) =>
+      targets.map((target) =>
         univ3_eth.deposit({
           tokens: findPool(ethPools, target)?.tokens.map(token => token.symbol) as EthToken["symbol"][],
           fees: [findPool(ethPools, target)?.fee]

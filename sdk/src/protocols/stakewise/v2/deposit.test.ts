@@ -1,7 +1,7 @@
 import { eth } from "."
 import { applyPermissions } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
-import { mintNFT } from "../../uniswap_v3/test_utils"
+import { mintNFT } from "../../uniswap/v3/testUtils"
 
 const STEAL_ADDRESS = "0x56556075Ab3e2Bb83984E90C52850AFd38F20883"
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"

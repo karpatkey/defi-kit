@@ -25,6 +25,12 @@ https://v2.stakewise.io/
 | :-------- | :-------------------- | :---------------------------- |
 | `targets` | _string[] (required)_ | `Pool` name \| `Pool` address |
 
+<Callout type="warning">
+  If the avatar has approved the Uniswap v3 Positions NFT contract to spend
+  tokens other than the ones specified in `tokens`, the role will be able to
+  increase any existing positions' liquidity in these tokens as well.
+</Callout>
+
 For each StakeWise v2 pool we allow specifying the deposit targets using any of the following identifiers:
 
 - `Pool` name.
@@ -106,14 +112,6 @@ Decrease the liquidity in a NFT position by removing the the desired liquidity a
   | `params.amount1Min` | -          |
   | `params.deadline`   | -          |
 
-<Callout type="info">
-  In the Uniswap v3 PositionsNFT contract, the `decreaseLiquidity` function has
-  a special modifier called `isAuthorizedForToken`. This modifier acts like a
-  gatekeeper, ensuring that only authorized senders can perform this action.
-  Uniswap v3 has these checks built into its system, so there's no need for
-  additional constraints.
-</Callout>
-
 ### `collect · PositionsNFT`
 
 Collect accumulated fees from a specific NFT position.
@@ -127,14 +125,6 @@ Collect accumulated fees from a specific NFT position.
   | `params.recipient`  | equal to `AVATAR` |
   | `params.amount0Max` | -                 |
   | `params.amount1Max` | -                 |
-
-<Callout type="info">
-  In the Uniswap v3 PositionsNFT contract, the `collect` function has a special
-  modifier called `isAuthorizedForToken`. This modifier acts like a gatekeeper,
-  ensuring that only authorized senders can perform this action. Uniswap v3 has
-  these checks built into its system, so there's no need for additional
-  constraints.
-</Callout>
 
 ### `MerkleDistributor · claim`
 
@@ -151,7 +141,7 @@ Claim accrued rewards in `rETH2` and `SWISE` tokens.
   | `amounts`     | -                                      |
   | `merkleProof` | -                                      |
 
-### If WETH is involved, the following functions are also whitelisted:
+### If WETH is involved:
 
 #### `collect · PositionsNFT`
 
