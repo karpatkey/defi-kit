@@ -15,9 +15,6 @@ https://balancer.fi/
 | `B-80BAL-20WETH` | [0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56](https://etherscan.io/address/0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56) |
 | `veBAL`          | [0xC128a9954e6c874eA3d62ce62B468bA073093F25](https://etherscan.io/address/0xC128a9954e6c874eA3d62ce62B468bA073093F25) |
 | `FeeDistributor` | [0xD3cf852898b21fc233251427c2DC93d3d604F3BB](https://etherscan.io/address/0xD3cf852898b21fc233251427c2DC93d3d604F3BB) |
-| `bb-a-USD-v1`    | [0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2](https://etherscan.io/address/0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2) |
-| `bb-a-USD-v2`    | [0xA13a9247ea42D743238089903570127DdA72fE44](https://etherscan.io/address/0xA13a9247ea42D743238089903570127DdA72fE44) |
-| `bb-a-USD-v3`    | [0xfeBb0bbf162E64fb9D0dfe186E517d84C395f016](https://etherscan.io/address/0xfeBb0bbf162E64fb9D0dfe186E517d84C395f016) |
 
 ## Action: `deposit`
 
@@ -414,10 +411,10 @@ Claim a specific reward token from `veBAL` incentives.
 - **Contract:** `FeeDistributor`
 - **Function:** `claimToken(address,address)`
 
-  | Parameter | Constraint                                                                    |
-  | :-------- | :---------------------------------------------------------------------------- |
-  | `user`    | equal to `AVATAR`                                                             |
-  | `token`   | equal to (`BAL` or `bb-a-USD-v1` or `bb-a-USD-v2` or `bb-a-USD-v3` or `USDC`) |
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `user`    | equal to `AVATAR` |
+  | `token`   | -                 |
 
 ### `FeeDistributor · claimTokens`
 
@@ -426,7 +423,7 @@ Claim all reward tokens from `veBAL` incentives.
 - **Contract:** `FeeDistributor`
 - **Function:** `claimTokens(address,address[])`
 
-  | Parameter | Constraint                                                                    |
-  | :-------- | :---------------------------------------------------------------------------- |
-  | `user`    | equal to `AVATAR`                                                             |
-  | `token`   | equal to a subset of (`BAL`,`bb-a-USD-v1`,`bb-a-USD-v2`,`bb-a-USD-v3`,`USDC`) |
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `user`    | equal to `AVATAR` |
+  | `token`   | -                 |
