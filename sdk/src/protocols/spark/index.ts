@@ -32,8 +32,8 @@ export const eth = {
       target === "DSR_sDAI"
         ? depositDsr()
         : target === "ETH"
-          ? depositEther()
-          : depositToken(findToken(target))
+        ? depositEther()
+        : depositToken(findToken(target))
     )
   },
 

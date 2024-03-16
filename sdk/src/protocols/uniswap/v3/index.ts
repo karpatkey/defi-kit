@@ -14,14 +14,14 @@ const FeeMapping: { [key: string]: number } = {
   "0.01%": 100,
   "0.05%": 500,
   "0.3%": 3000,
-  "1%": 10000
+  "1%": 10000,
 }
 
 export const eth = {
   deposit: async ({
     targets,
     tokens,
-    fees
+    fees,
   }: {
     /** Position NFT token IDs to allow depositing into. If unspecified, all positions owned by avatar can be managed that are in any pair of the specified `tokens`.
      *
@@ -29,14 +29,14 @@ export const eth = {
      */
     targets?: string[]
     /** Positions can be minted for any pair of the specified `tokens`. If unspecified, minting of new positions won't be allowed. */
-    tokens?: (EthToken["address"] | EthToken["symbol"])[],
+    tokens?: (EthToken["address"] | EthToken["symbol"])[]
     fees?: Fee[]
   }) => {
     if (!targets && !tokens) {
       throw new Error("Either `targets` or `tokens` must be specified.")
     }
 
-    const mintFees = fees?.map(fee => FeeMapping[fee]) || undefined
+    const mintFees = fees?.map((fee) => FeeMapping[fee]) || undefined
     console.log("mintFees: ", mintFees)
     console.log("tokens: ", tokens)
 
@@ -70,7 +70,7 @@ export const eth = {
             recipient: c.avatar,
             token0: oneOf(mintTokenAddresses),
             token1: oneOf(mintTokenAddresses),
-            fee: mintFees ? oneOf(mintFees) : undefined
+            fee: mintFees ? oneOf(mintFees) : undefined,
           },
           {
             send: true,
@@ -90,8 +90,8 @@ export const eth = {
       allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(
         nftIds
           ? {
-            tokenId: oneOf(nftIds),
-          }
+              tokenId: oneOf(nftIds),
+            }
           : undefined
       ),
       allow.mainnet.uniswap_v3.positions_nft.collect({

@@ -32,7 +32,7 @@ describe("uniswap_v3", () => {
             contracts.mainnet.usdc,
             contracts.mainnet.weth,
           ],
-          fees: ["0.01%"]
+          fees: ["0.01%"],
         })
       )
     }, 30000)

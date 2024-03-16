@@ -9,9 +9,7 @@ const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 describe("stakewise_v2", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await applyPermissions(
-        await eth.deposit({ targets: ["ETH-sETH2 0.3%"] })
-      )
+      await applyPermissions(await eth.deposit({ targets: ["ETH-sETH2 0.3%"] }))
     })
 
     it("mint new position with permitted stakewise pool features", async () => {

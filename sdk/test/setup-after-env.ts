@@ -88,7 +88,8 @@ expect.extend({
 
         // if we get here, it's not a permission error
         return {
-          message: () => `Expected transaction to not be allowed, but it is failing with an unexpected error (see up)`,
+          message: () =>
+            `Expected transaction to not be allowed, but it is failing with an unexpected error (see up)`,
           pass: true,
         }
       }

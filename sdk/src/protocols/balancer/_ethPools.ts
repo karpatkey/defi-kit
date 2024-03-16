@@ -2633,6 +2633,25 @@ export default [
     ],
   },
   {
+    bpt: "0x9c6d47Ff73e0F5E51BE5FD53236e3F595C5793F2",
+    id: "0x9c6d47ff73e0f5e51be5fd53236e3f595c5793f200020000000000000000042c",
+    name: "B-cbETH-wstETH-Stable",
+    type: "MetaStable",
+    gauge: "0x01A9502C11f411b494c62746D37e89d6f7078657",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
+        symbol: "cbETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x9CC64EE4CB672Bc04C54B00a37E1Ed75b2Cc19Dd",
     id: "0x9cc64ee4cb672bc04c54b00a37e1ed75b2cc19dd0002000000000000000004c1",
     name: "80Silo-20WETH",
@@ -3609,6 +3628,25 @@ export default [
       {
         address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xdD59f89B5B07B7844d72996fC9d83D81acC82196",
+    id: "0xdd59f89b5b07b7844d72996fc9d83d81acc8219600000000000000000000059e",
+    name: "uniETH-WETH",
+    type: "ComposableStable",
+    gauge: "0xe77D45b5dE97aC7717E4EdE6bE16E3D805fF02A5",
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4",
+        symbol: "uniETH",
         id: "0x",
       },
     ],

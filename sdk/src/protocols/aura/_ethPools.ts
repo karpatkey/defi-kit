@@ -1649,4 +1649,20 @@ export default [
     ],
     rewarder: "0xA36d3799eA28f4B75653EBF9D91DDA4519578086",
   },
+  {
+    name: "ECLP-pxETH-frxETH",
+    id: "200",
+    bpt: "0x767CB26E38beBddfd857d4Ad426d8ff5Bc0fAc2f",
+    tokens: [
+      {
+        address: "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
+        symbol: "pxETH",
+      },
+      {
+        address: "0x5E8422345238F34275888049021821E8E08CAa1f",
+        symbol: "frxETH",
+      },
+    ],
+    rewarder: "0xD9CBC979Ea7d94A8DC65e90fcDb4E2C7aa4f37De",
+  },
 ] as const

@@ -153,12 +153,8 @@ export const lock = (): Permission[] => {
     allow.mainnet.balancer.vebal.increase_amount(),
     allow.mainnet.balancer.vebal.increase_unlock_time(),
     allow.mainnet.balancer.vebal.withdraw(),
-    allow.mainnet.balancer.fee_distributor.claimToken(
-      c.avatar
-    ),
-    allow.mainnet.balancer.fee_distributor.claimTokens(
-      c.avatar
-    ),
+    allow.mainnet.balancer.fee_distributor.claimToken(c.avatar),
+    allow.mainnet.balancer.fee_distributor.claimTokens(c.avatar),
   ]
 }
 

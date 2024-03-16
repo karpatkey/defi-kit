@@ -21,26 +21,25 @@ const findPool = (pools: readonly EthPool[], nameOrAddress: string) => {
 
 export const eth = {
   deposit: async ({
-    targets
+    targets,
   }: {
     targets: (EthPool["name"] | EthPool["address"])[]
   }) => {
     const univ3Permissions = await Promise.all(
       targets.map((target) =>
         univ3_eth.deposit({
-          tokens: findPool(ethPools, target)?.tokens.map(token => token.symbol) as EthToken["symbol"][],
-          fees: [findPool(ethPools, target)?.fee]
+          tokens: findPool(ethPools, target)?.tokens.map(
+            (token) => token.symbol
+          ) as EthToken["symbol"][],
+          fees: [findPool(ethPools, target)?.fee],
         })
       )
     )
     const permissions = univ3Permissions.flat()
     permissions.push(
-      allow.mainnet.stakewise_v2.merkle_distributor.claim(
-        undefined,
-        c.avatar
-      )
+      allow.mainnet.stakewise_v2.merkle_distributor.claim(undefined, c.avatar)
     )
 
     return permissions
-  }
+  },
 }
