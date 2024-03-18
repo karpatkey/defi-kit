@@ -1,5 +1,6 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { allowErc20Approve, oneOf } from "../../conditions"
+import { c } from "zodiac-roles-sdk"
 
 const GPv2VaultRelayer = "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
 
@@ -20,6 +21,7 @@ const swap = async (options: {
   const orderStructScoping = {
     sellToken: oneOf(sell),
     buyToken: buy && oneOf(buy),
+    receiver: c.avatar
   }
 
   return [
