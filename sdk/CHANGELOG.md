@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/karpatkey/defi-kit/compare/v1.7.0...v1.7.1) (2024-03-13)
+
+
+### Bug Fixes
+
+* remove tokens in rewards claiming ([059aa8a](https://github.com/karpatkey/defi-kit/commit/059aa8abcac888b1838c2a17d34878f4868bfe02))
+
 ## [1.7.0](https://github.com/karpatkey/defi-kit/compare/v1.6.0...v1.7.0) (2024-03-12)
 
 
