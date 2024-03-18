@@ -2,8 +2,8 @@ import { z } from "zod"
 import { zx } from "../../zx"
 
 const swap = z.object({
-  sell: zx.address().array(),
-  buy: zx.address().array().optional(),
+  sell: zx.address().or(z.literal("ETH")).array(),
+  buy: zx.address().or(z.literal("ETH")).array(),
 })
 
 export const eth = {

@@ -15,10 +15,10 @@ https://swap.cow.fi/
 
 **Parameters**
 
-| Name   | Type                  | Description     |
-| :----- | :-------------------- | :-------------- |
-| `sell` | _string[] (required)_ | `Token` address |
-| `buy`  | _string[] (optional)_ | `Token` address |
+| Name   | Type                  | Description            |
+| :----- | :-------------------- | :--------------------- |
+| `sell` | _string[] (required)_ | ETH \| `Token` address |
+| `buy`  | _string[] (optional)_ | ETH \| `Token` address |
 
 <Callout type="info">
   When using the Pilot Extension, all swaps will be routed through a delegate
@@ -27,8 +27,13 @@ https://swap.cow.fi/
 </Callout>
 
 <Callout type="info">
-  If `buy` is left `undefined`, there would be no restriction on swapping `sell`
-  tokens.
+  To allow ETH as `sell` or `buy` token, either the "ETH" literal or the
+  `0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE` address can be used.
+</Callout>
+
+<Callout type="info">
+  If `buy` is left `undefined`, there would be no restriction on the buy side of
+  the swap.
 </Callout>
 
 <Callout type="info">
@@ -55,7 +60,7 @@ Approve `GPv2VaultRelayer` to spend `SELL_TOKEN` tokens on behalf of the avatar.
 
 ### `OrderSigner · signOrder`
 
-Sign order to swap `SELL_TOKEN` by `BUY_TOKEN`.
+Sign order to swap `SELL_TOKEN` to `BUY_TOKEN`.
 
 - **Contract:** `OrderSigner`
 - **Function:** `signOrder((address,address,address,uint256,uint256,uint32,bytes32,uint256,bytes32,bool,bytes32,bytes32),uint32,uint256)` → delegatecall
@@ -82,11 +87,6 @@ Sign order to swap `SELL_TOKEN` by `BUY_TOKEN`.
   wrapped in order to be sent as a sell token.
 </Callout>
 
-<Callout type="info">
-  To allow ETH as buy token, the `0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE`
-  address must be used.
-</Callout>
-
 ### `OrderSigner · unsignOrder`
 
 Unsign and cancel order.
@@ -94,17 +94,30 @@ Unsign and cancel order.
 - **Contract:** `OrderSigner`
 - **Function:** `unsignOrder((address,address,address,uint256,uint256,uint32,bytes32,uint256,bytes32,bool,bytes32,bytes32))` → delegatecall
 
-  | Parameter                 | Constraint |
-  | :------------------------ | :--------- |
-  | `order.sellToken`         | -          |
-  | `order.buyToken`          | -          |
-  | `order.receiver`          | -          |
-  | `order.sellAmount`        | -          |
-  | `order.buyAmount`         | -          |
-  | `order.validTo`           | -          |
-  | `order.appData`           | -          |
-  | `order.feeAmount`         | -          |
-  | `order.kind`              | -          |
-  | `order.partiallyFillable` | -          |
-  | `order.sellTokenBalance`  | -          |
-  | `order.buyTokenBalance`   | -          |
+  | Parameter                 | Constraint            |
+  | :------------------------ | :-------------------- |
+  | `order.sellToken`         | equal to `SELL_TOKEN` |
+  | `order.buyToken`          | equal to `BUY_TOKEN`  |
+  | `order.receiver`          | equal to `AVATAR`     |
+  | `order.sellAmount`        | -                     |
+  | `order.buyAmount`         | -                     |
+  | `order.validTo`           | -                     |
+  | `order.appData`           | -                     |
+  | `order.feeAmount`         | -                     |
+  | `order.kind`              | -                     |
+  | `order.partiallyFillable` | -                     |
+  | `order.sellTokenBalance`  | -                     |
+  | `order.buyTokenBalance`   | -                     |
+
+### If ETH is `SELL_TOKEN`:
+
+#### `WETH · deposit`
+
+Deposit ETH and receive `WETH`.
+
+- **Contract:** `WETH`
+- **Function:** `deposit()` Ξ _allow sending ETH_
+
+  | Parameter | Constraint |
+  | :-------- | :--------- |
+  | N/A       | N/A        |
