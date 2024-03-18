@@ -16,11 +16,7 @@ export const getPosition = async (nftId: BigNumber) => {
 }
 
 const getPoolAddress = async (token0: string, token1: string, fee: number) => {
-  return (await sdk.uniswap_v3.factory.getPool(
-    token0,
-    token1,
-    fee
-  )) as Address
+  return (await sdk.uniswap_v3.factory.getPool(token0, token1, fee)) as Address
 }
 
 const getPoolSlot0 = async (poolAddress: Address) => {
@@ -80,7 +76,7 @@ export const mintNFT = async (
   amount0Desired: bigint = 0n,
   amount1Desired: bigint = 0n,
   throughRoles: boolean = false,
-  stealAddress: Address = "0x8eb8a3b98659cce290402893d0123abb75e3ab28",
+  stealAddress: Address = "0x8eb8a3b98659cce290402893d0123abb75e3ab28"
 ) => {
   const kit = throughRoles ? testKit.eth : sdk
 
@@ -118,15 +114,15 @@ export const mintNFT = async (
   const tickLower =
     Math.ceil(
       (Math.log10(token0MinPrice) + (token1Decimals - token0Decimals)) /
-      Math.log10(1.0001) /
-      tickSpacing
+        Math.log10(1.0001) /
+        tickSpacing
     ) * tickSpacing
 
   const tickUpper =
     Math.floor(
       (Math.log10(token0MaxPrice) + (token1Decimals - token0Decimals)) /
-      Math.log10(1.0001) /
-      tickSpacing
+        Math.log10(1.0001) /
+        tickSpacing
     ) * tickSpacing
 
   const amounts = await calculateAmounts(

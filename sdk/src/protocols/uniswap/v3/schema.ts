@@ -14,6 +14,6 @@ export const eth = {
   deposit: z.object({
     targets: z.string().array().optional(),
     tokens: zToken.array().optional(),
-    fees: zFee.array().optional()
+    fees: zFee.array().optional(),
   }),
 }

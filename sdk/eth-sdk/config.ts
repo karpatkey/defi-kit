@@ -120,7 +120,7 @@ export const contracts = {
       merkle_distributor: "0xA3F21010e8b9a3930996C8849Df38f9Ca3647c20",
       seth2: "0xFe2e637202056d30016725477c5da089Ab0A043A",
       reth2: "0x20BC832ca081b91433ff6c17f85701B6e92486c5",
-      swise: "0x48C3399719B582dD63eB5AADf12A40B4C3f52FA2"
+      swise: "0x48C3399719B582dD63eB5AADf12A40B4C3f52FA2",
     },
     uniswap_v3: {
       positions_nft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
