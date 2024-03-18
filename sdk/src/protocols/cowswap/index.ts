@@ -10,6 +10,7 @@ const swap = async (options: {
   buy?: (`0x${string}` | "ETH")[]
 }) => {
   const { sell, buy } = options
+  const permissions: Permission[] = []
 
   if (sell.length === 0) {
     throw new Error("`sell` must not be an empty array.")
@@ -20,7 +21,15 @@ const swap = async (options: {
     )
   }
 
-  const updatedSell = sell && sell.map(item => item === "ETH" ? E_ADDRESS : item)
+  if ("ETH" in sell) {
+    permissions.push(
+      allow.mainnet.weth.deposit(
+        { send: true }
+      )
+    )
+  }
+
+  const updatedSell = sell.filter(item => item !== "ETH")
   const updatedBuy = buy && buy.map(item => item === "ETH" ? E_ADDRESS : item)
 
   const orderStructScoping = {
@@ -29,8 +38,8 @@ const swap = async (options: {
     receiver: c.avatar
   }
 
-  const permissions: Permission[] = [
-    ...allowErc20Approve(updatedSell, [GPv2VaultRelayer]),
+  permissions.push(
+    ...allowErc20Approve(updatedSell as `0x${string}`[], [GPv2VaultRelayer]),
 
     allow.mainnet.cowswap.orderSigner.signOrder(
       orderStructScoping,
@@ -42,15 +51,7 @@ const swap = async (options: {
     allow.mainnet.cowswap.orderSigner.unsignOrder(orderStructScoping, {
       delegatecall: true,
     }),
-  ]
-
-  if (E_ADDRESS in updatedSell) {
-    permissions.push(
-      allow.mainnet.weth.deposit(
-        { send: true }
-      )
-    )
-  }
+  )
 
   return permissions
 }
