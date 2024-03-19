@@ -111,6 +111,18 @@ Unsign and cancel order.
 
 ### If ETH is `SELL_TOKEN`:
 
+### `WETH · approve`
+
+Approve `GPv2VaultRelayer` to spend `WETH` tokens on behalf of the avatar.
+
+- **Contract:** `WETH`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint                  |
+  | :-------- | :-------------------------- |
+  | `spender` | equal to `GPv2VaultRelayer` |
+  | `amount`  | -                           |
+
 #### `WETH · deposit`
 
 Deposit ETH and receive `WETH`.

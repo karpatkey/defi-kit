@@ -1,6 +1,7 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { allowErc20Approve, oneOf } from "../../conditions"
 import { c, Permission } from "zodiac-roles-sdk"
+import { contracts } from "../../../eth-sdk/config"
 
 const GPv2VaultRelayer = "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
@@ -29,7 +30,7 @@ const swap = async (options: {
     )
   }
 
-  const updatedSell = sell.filter(item => item !== "ETH")
+  const updatedSell = sell.map(item => item === "ETH" ? contracts.mainnet.weth : item)
   const updatedBuy = buy && buy.map(item => item === "ETH" ? E_ADDRESS : item)
 
   const orderStructScoping = {
