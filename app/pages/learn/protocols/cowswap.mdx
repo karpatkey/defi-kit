@@ -1,0 +1,123 @@
+import { Callout } from "nextra/components"
+
+# CowSwap
+
+https://swap.cow.fi/
+
+**Deployments**
+
+| Name               | Address                                                                                                               |
+| :----------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| `GPv2VaultRelayer` | [0xC92E8bdf79f0507f65a392b0ab4667716BFE0110](https://etherscan.io/address/0xC92E8bdf79f0507f65a392b0ab4667716BFE0110) |
+| `OrderSigner`      | [0x23dA9AdE38E4477b23770DeD512fD37b12381FAB](https://etherscan.io/address/0x23dA9AdE38E4477b23770DeD512fD37b12381FAB) |
+
+## Action: `swap`
+
+**Parameters**
+
+| Name   | Type                  | Description            |
+| :----- | :-------------------- | :--------------------- |
+| `sell` | _string[] (required)_ | ETH \| `Token` address |
+| `buy`  | _string[] (optional)_ | ETH \| `Token` address |
+
+<Callout type="info">
+  When using the Pilot Extension, all swaps will be routed through a delegate
+  call to the [`OrderSigner`](https://github.com/gnosisguild/cow-order-signer)
+  in order to facilitate parameter scoping and minimize risks.
+</Callout>
+
+<Callout type="info">
+  To allow ETH as `sell` or `buy` token, either the "ETH" literal or the
+  `0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE` address can be used.
+</Callout>
+
+<Callout type="info">
+  If `buy` is left `undefined`, there would be no restriction on the buy side of
+  the swap.
+</Callout>
+
+<Callout type="info">
+  `SELL_TOKEN` below refers to the ERC-20 token address of each element given in
+  `sell`.
+</Callout>
+
+<Callout type="info">
+  `BUY_TOKEN` below refers to the ERC-20 token address of each element given in
+  `buy`.
+</Callout>
+
+### `SELL_TOKEN · approve`
+
+Approve `GPv2VaultRelayer` to spend `SELL_TOKEN` tokens on behalf of the avatar.
+
+- **Contract:** `SELL_TOKEN`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint                  |
+  | :-------- | :-------------------------- |
+  | `spender` | equal to `GPv2VaultRelayer` |
+  | `amount`  | -                           |
+
+### `OrderSigner · signOrder`
+
+Sign order to swap `SELL_TOKEN` to `BUY_TOKEN`.
+
+- **Contract:** `OrderSigner`
+- **Function:** `signOrder((address,address,address,uint256,uint256,uint32,bytes32,uint256,bytes32,bool,bytes32,bytes32),uint32,uint256)` → delegatecall
+
+  | Parameter                 | Constraint            |
+  | :------------------------ | :-------------------- |
+  | `order.sellToken`         | equal to `SELL_TOKEN` |
+  | `order.buyToken`          | equal to `BUY_TOKEN`  |
+  | `order.receiver`          | equal to `AVATAR`     |
+  | `order.sellAmount`        | -                     |
+  | `order.buyAmount`         | -                     |
+  | `order.validTo`           | -                     |
+  | `order.appData`           | -                     |
+  | `order.feeAmount`         | -                     |
+  | `order.kind`              | -                     |
+  | `order.partiallyFillable` | -                     |
+  | `order.sellTokenBalance`  | -                     |
+  | `order.buyTokenBalance`   | -                     |
+  | `validDuration`           | -                     |
+  | `feeAmountBP`             | -                     |
+
+<Callout type="info">
+  The `signOrder` function does not allow sending ETH. Therefore, ETH must be
+  wrapped in order to be sent as a sell token.
+</Callout>
+
+### `OrderSigner · unsignOrder`
+
+Unsign and cancel order.
+
+- **Contract:** `OrderSigner`
+- **Function:** `unsignOrder((address,address,address,uint256,uint256,uint32,bytes32,uint256,bytes32,bool,bytes32,bytes32))` → delegatecall
+
+  | Parameter                 | Constraint            |
+  | :------------------------ | :-------------------- |
+  | `order.sellToken`         | equal to `SELL_TOKEN` |
+  | `order.buyToken`          | equal to `BUY_TOKEN`  |
+  | `order.receiver`          | equal to `AVATAR`     |
+  | `order.sellAmount`        | -                     |
+  | `order.buyAmount`         | -                     |
+  | `order.validTo`           | -                     |
+  | `order.appData`           | -                     |
+  | `order.feeAmount`         | -                     |
+  | `order.kind`              | -                     |
+  | `order.partiallyFillable` | -                     |
+  | `order.sellTokenBalance`  | -                     |
+  | `order.buyTokenBalance`   | -                     |
+
+### If ETH is `SELL_TOKEN`:
+
+#### `WETH · deposit`
+
+Deposit ETH and receive `WETH`.
+
+- **Contract:** `WETH`
+- **Function:** `deposit()` Ξ _allow sending ETH_
+
+  | Parameter | Constraint |
+  | :-------- | :--------- |
+  | N/A       | N/A        |
