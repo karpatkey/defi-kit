@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/karpatkey/defi-kit/compare/v1.8.0...v1.8.1) (2024-03-19)
+
+
+### Bug Fixes
+
+* CowSwap ETH ([#124](https://github.com/karpatkey/defi-kit/issues/124)) ([5c2fdf1](https://github.com/karpatkey/defi-kit/commit/5c2fdf17265636b4b4b54c94884ba3b219ce2050))
+
 ## [1.8.0](https://github.com/karpatkey/defi-kit/compare/v1.7.1...v1.8.0) (2024-03-19)
 
 
