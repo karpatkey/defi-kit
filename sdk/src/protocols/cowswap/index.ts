@@ -23,20 +23,19 @@ const swap = async (options: {
   }
 
   if ("ETH" in sell) {
-    permissions.push(
-      allow.mainnet.weth.deposit(
-        { send: true }
-      )
-    )
+    permissions.push(allow.mainnet.weth.deposit({ send: true }))
   }
 
-  const updatedSell = sell.map(item => item === "ETH" ? contracts.mainnet.weth : item)
-  const updatedBuy = buy && buy.map(item => item === "ETH" ? E_ADDRESS : item)
+  const updatedSell = sell.map((item) =>
+    item === "ETH" ? contracts.mainnet.weth : item
+  )
+  const updatedBuy =
+    buy && buy.map((item) => (item === "ETH" ? E_ADDRESS : item))
 
   const orderStructScoping = {
     sellToken: oneOf(updatedSell),
     buyToken: updatedBuy && oneOf(updatedBuy),
-    receiver: c.avatar
+    receiver: c.avatar,
   }
 
   permissions.push(
@@ -51,7 +50,7 @@ const swap = async (options: {
 
     allow.mainnet.cowswap.orderSigner.unsignOrder(orderStructScoping, {
       delegatecall: true,
-    }),
+    })
   )
 
   return permissions
