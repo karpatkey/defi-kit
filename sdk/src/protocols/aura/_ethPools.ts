@@ -1665,4 +1665,44 @@ export default [
     ],
     rewarder: "0xD9CBC979Ea7d94A8DC65e90fcDb4E2C7aa4f37De",
   },
+  {
+    name: "InstETH/wstETH",
+    id: "201",
+    bpt: "0xE3E0022d25194431a98e8bf5034D2617C96e1D44",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0x7FA768E035F956c41d6aeaa3Bd857e7E5141CAd5",
+        symbol: "InstETH",
+      },
+      {
+        address: "0xE3E0022d25194431a98e8bf5034D2617C96e1D44",
+        symbol: "InstETH/wstETH",
+      },
+    ],
+    rewarder: "0x8353839f58B9f44efACBEEdB822157f7C204EFED",
+  },
+  {
+    name: "pyUSD/sDOLA BSP",
+    id: "202",
+    bpt: "0x09B03b7cBB19b3daE94F884cF60dBc3c99a3947b",
+    tokens: [
+      {
+        address: "0x09B03b7cBB19b3daE94F884cF60dBc3c99a3947b",
+        symbol: "pyUSD/sDOLA BSP",
+      },
+      {
+        address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+        symbol: "PYUSD",
+      },
+      {
+        address: "0xb45ad160634c528Cc3D2926d9807104FA3157305",
+        symbol: "sDOLA",
+      },
+    ],
+    rewarder: "0xcC1C7aaF8ADA3A8c66a3e1C554A1b5ED21691bcF",
+  },
 ] as const

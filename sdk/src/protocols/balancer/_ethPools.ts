@@ -154,7 +154,7 @@ export default [
     id: "0x06df3b2bbb68adc8b0e302443692037ed9f91b42000000000000000000000063",
     name: "staBAL3",
     type: "Stable",
-    gauge: "0x34f33CDaED8ba0E1CEECE80e5f4a73bcf234cfac",
+    gauge: null,
     tokens: [
       {
         address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
@@ -250,7 +250,7 @@ export default [
     id: "0x0947592314bf2bd0f86a74299bc8e534e3c7313f000200000000000000000312",
     name: "20WETH-80JELLY",
     type: "Weighted",
-    gauge: "0x6BcdC06bdECa203f84409dAe4692eE2b9619f399",
+    gauge: null,
     tokens: [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -260,6 +260,25 @@ export default [
       {
         address: "0xf5f06fFa53Ad7F5914F493F16E57B56C8dd2eA80",
         symbol: "JELLY",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x09B03b7cBB19b3daE94F884cF60dBc3c99a3947b",
+    id: "0x09b03b7cbb19b3dae94f884cf60dbc3c99a3947b00000000000000000000066c",
+    name: "pyUSD/sDOLA BSP",
+    type: "ComposableStable",
+    gauge: "0xF849D20a927C892Ad2C476a5cc7E2cDbD9BbC18f",
+    tokens: [
+      {
+        address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+        symbol: "PYUSD",
+        id: "0x",
+      },
+      {
+        address: "0xb45ad160634c528Cc3D2926d9807104FA3157305",
+        symbol: "sDOLA",
         id: "0x",
       },
     ],
@@ -393,7 +412,7 @@ export default [
     id: "0x158e0fbc2271e1dcebadd365a22e2b4dd173c0db0002000000000000000005a5",
     name: "80IDLE-20USDC",
     type: "Weighted",
-    gauge: "0x9aaAf6757BE9e115895429EF6B81e05dCB951646",
+    gauge: null,
     tokens: [
       {
         address: "0x875773784Af8135eA0ef43b5a374AaD105c5D39e",
@@ -455,7 +474,7 @@ export default [
     id: "0x1a44e35d5451e0b78621a1b3e7a53dfaa306b1d000000000000000000000051b",
     name: "B-baoETH-ETH-BPT",
     type: "ComposableStable",
-    gauge: "0xD449Efa0A587f2cb6BE3AE577Bc167a774525810",
+    gauge: null,
     tokens: [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -713,7 +732,7 @@ export default [
     id: "0x2d011adf89f0576c9b722c28269fcb5d50c2d17900020000000000000000024d",
     name: "B-sdBAL-STABLE",
     type: "Stable",
-    gauge: null,
+    gauge: "0xDc2Df969EE5E66236B950F5c4c5f8aBe62035df2",
     tokens: [
       {
         address: "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56",
@@ -751,7 +770,7 @@ export default [
     id: "0x2e848426aec6dbf2260535a5bea048ed94d9ff3d000000000000000000000536",
     name: "wbETH-wstETH",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xd1c070eBc7Ec77f2134b3Ef75283b6C1fb31a157",
     tokens: [
       {
         address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
@@ -789,7 +808,7 @@ export default [
     id: "0x32296969ef14eb0c6d29669c550d4a0449130230000200000000000000000080",
     name: "B-stETH-STABLE",
     type: "MetaStable",
-    gauge: "0xcD4722B7c24C29e0413BDCd9e51404B4539D14aE",
+    gauge: null,
     tokens: [
       {
         address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
@@ -808,7 +827,7 @@ export default [
     id: "0x350196326aeaa9b98f1903fb5e8fc2686f85318c000200000000000000000084",
     name: "VBPT",
     type: "Weighted",
-    gauge: "0xc2D343E2C9498E905F53C818B88eB8064B42D036",
+    gauge: null,
     tokens: [
       {
         address: "0x81f8f0bb1cB2A06649E51913A151F0E7Ef6FA321",
@@ -909,7 +928,7 @@ export default [
     id: "0x383e7859271b2d0589b013b6d944572a0a8be3cb000000000000000000000657",
     name: "DOLA-mkUSD BSP",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0x6D560CbE3Cc25Eca8c930835Ec3d296a6C16B210",
     tokens: [
       {
         address: "0x4591DBfF62656E7859Afe5e45f6f47D3669fBB28",
@@ -985,7 +1004,7 @@ export default [
     id: "0x3dd0843a028c86e0b760b1a76929d1c5ef93a2dd000200000000000000000249",
     name: "B-auraBAL-STABLE",
     type: "Stable",
-    gauge: "0x0312AA8D0BA4a1969Fddb382235870bF55f7f242",
+    gauge: null,
     tokens: [
       {
         address: "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56",
@@ -1080,7 +1099,7 @@ export default [
     id: "0x3f7c10701b14197e2695dec6428a2ca4cf7fc3b800020000000000000000023c",
     name: "50DFX-50WETH",
     type: "Weighted",
-    gauge: "0x27Fd581E9D0b2690C2f808cd40f7fe667714b575",
+    gauge: null,
     tokens: [
       {
         address: "0x888888435FDe8e7d4c54cAb67f206e4199454c60",
@@ -1161,7 +1180,7 @@ export default [
     id: "0x42fbd9f666aacc0026ca1b88c94259519e03dd67000200000000000000000507",
     name: "50COIL-50USDC",
     type: "Weighted",
-    gauge: null,
+    gauge: "0xB5E2dcFBEb62AbEA603a0c585cA8f880eb709A9C",
     tokens: [
       {
         address: "0x823E1B82cE1Dc147Bbdb25a203f046aFab1CE918",
@@ -1180,7 +1199,7 @@ export default [
     id: "0x441b8a1980f2f2e43a9397099d15cc2fe6d3625000020000000000000000035f",
     name: "50INV-50DOLA",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x46804462f147fF96e9CAFB20cA35A3B2600656DF",
     tokens: [
       {
         address: "0x41D5D79431A913C4aE7d69a668ecdfE5fF9DFB68",
@@ -1256,7 +1275,7 @@ export default [
     id: "0x48607651416a943bf5ac71c41be1420538e78f87000200000000000000000327",
     name: "50Silo-50WETH",
     type: "Weighted",
-    gauge: "0x75cAceBb5b4a73a530EdcdFdE7cFfbfea44c026E",
+    gauge: null,
     tokens: [
       {
         address: "0x6f80310CA7F2C654691D1383149Fa1A57d8AB1f8",
@@ -1294,7 +1313,7 @@ export default [
     id: "0x49cbd67651fbabce12d1df18499896ec87bef46f00000000000000000000064a",
     name: "sDAI/3Pool",
     type: "ComposableStable",
-    gauge: "0xF6A7ad46b00300344C7d4739C0518db70e722DC4",
+    gauge: null,
     tokens: [
       {
         address: "0x79c58f70905F734641735BC61e45c19dD9Ad60bC",
@@ -1328,7 +1347,7 @@ export default [
     id: "0x5122e01d819e58bb2e22528c0d68d310f0aa6fd7000200000000000000000163",
     name: "sNOTE-BPT",
     type: "Weighted",
-    gauge: "0x09AFEc27F5A6201617aAd014CeEa8deb572B0608",
+    gauge: null,
     tokens: [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -1366,7 +1385,7 @@ export default [
     id: "0x51735bdfbfe3fc13dea8dc6502e2e958989429610002000000000000000000a0",
     name: "B-80UNN-20WETH",
     type: "Weighted",
-    gauge: "0x8F4a5C19A74D7111bC0e1486640F0aAB537dE5A1",
+    gauge: null,
     tokens: [
       {
         address: "0x226f7b842E0F0120b7E194D05432b3fd14773a9D",
@@ -1457,6 +1476,25 @@ export default [
       {
         address: "0xcE246eEa10988C495B4A90a905Ee9237a0f91543",
         symbol: "VCX",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x58AAdFB1Afac0ad7fca1148f3cdE6aEDF5236B6D",
+    id: "0x58aadfb1afac0ad7fca1148f3cde6aedf5236b6d00000000000000000000067f",
+    name: "rsETH / WETH",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+        symbol: "rsETH",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
         id: "0x",
       },
     ],
@@ -1561,7 +1599,7 @@ export default [
     id: "0x5f1f4e50ba51d723f12385a8a9606afc3a0555f5000200000000000000000465",
     name: "50wstETH-50LDO",
     type: "Weighted",
-    gauge: "0x95201B61EF19C867dA0D093DF20021e1a559452c",
+    gauge: null,
     tokens: [
       {
         address: "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
@@ -1637,7 +1675,7 @@ export default [
     id: "0x616d4d131f1147ac3b3c3cc752bab8613395b2bb000200000000000000000584",
     name: "B-yBAL-STABLE",
     type: "Stable",
-    gauge: "0x5E23599eBE87A5A140f295C2fC6aAedb10955497",
+    gauge: null,
     tokens: [
       {
         address: "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56",
@@ -1781,6 +1819,25 @@ export default [
     ],
   },
   {
+    bpt: "0x6AA5a6b9257CA6e18b2da94e1a5FbE57ce2947cA",
+    id: "0x6aa5a6b9257ca6e18b2da94e1a5fbe57ce2947ca00000000000000000000067b",
+    name: "genETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0x7d631e72eb15285Da57eeaf40a971724A94ced05",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
+        symbol: "genETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x6f0ed6f346007563D3266DE350d174a831bDE0ca",
     id: "0x6f0ed6f346007563d3266de350d174a831bde0ca0001000000000000000005db",
     name: "50KNC-25WETH-25USDC-BPT",
@@ -1809,7 +1866,7 @@ export default [
     id: "0x702605f43471183158938c1a3e5f5a359d7b31ba00020000000000000000009f",
     name: "B-80BAL-20WETH",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x7A89f34E976285b7b885b32b2dE566389C2436a0",
     tokens: [
       {
         address: "0x3Ec8798B81485A254928B70CDA1cf0A2BB0B74D7",
@@ -1828,7 +1885,7 @@ export default [
     id: "0x70d5e3234f6329c1d5a26796dcf4e109d69a34880000000000000000000005e7",
     name: "uniETH/wstETH/rETH",
     type: "ComposableStable",
-    gauge: "0xe6281Fc01607366794597d7fA6b32931fF986969",
+    gauge: null,
     tokens: [
       {
         address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
@@ -1909,7 +1966,7 @@ export default [
     id: "0x76fcf0e8c7ff37a47a799fa2cd4c13cde0d981c90002000000000000000003d2",
     name: "50OHM-50DAI",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x107A2209883621aFe2968da31C03190e0B2782C2",
     tokens: [
       {
         address: "0x64aa3364F17a4D01c6f1751Fd97C2BD3D7e7f1D5",
@@ -2047,7 +2104,7 @@ export default [
     id: "0x7d98f308db99fdd04bbf4217a4be8809f38faa6400020000000000000000059b",
     name: "80wstETH/20GHO",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x6EE63656BbF5BE3fdF9Be4982BF9466F6a921b83",
     tokens: [
       {
         address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
@@ -2066,7 +2123,7 @@ export default [
     id: "0x7e9afd25f5ec0eb24d7d4b089ae7ecb9651c8b1f000000000000000000000511",
     name: "B-baoUSD-LUSD-BPT",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0x5aF3B93Fb82ab8691b82a09CBBae7b8D3eB5Ac11",
     tokens: [
       {
         address: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
@@ -2161,7 +2218,7 @@ export default [
     id: "0x8353157092ed8be69a9df8f95af097bbf33cb2af0000000000000000000005d9",
     name: "GHO/USDT/USDC",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xf720e9137baa9C7612e6CA59149a5057ab320cFa",
     tokens: [
       {
         address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
@@ -2228,7 +2285,7 @@ export default [
     id: "0x851523a36690bf267bbfec389c823072d82921a90002000000000000000001ed",
     name: "B-wstETH-STABLE-C",
     type: "MetaStable",
-    gauge: null,
+    gauge: "0x506501C3f21656187Af8Fe247e8Eb113976C4969",
     tokens: [
       {
         address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
@@ -2276,6 +2333,25 @@ export default [
       {
         address: "0xc00e94Cb662C3520282E6f5717214004A7f26888",
         symbol: "COMP",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x88794C65550DeB6b4087B7552eCf295113794410",
+    id: "0x88794c65550deb6b4087b7552ecf295113794410000000000000000000000648",
+    name: "pxETH/wETH",
+    type: "ComposableStable",
+    gauge: "0xdee29b7b6dF3576280bFBbC088ee9eBAA767C0Bd",
+    tokens: [
+      {
+        address: "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
+        symbol: "pxETH",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
         id: "0x",
       },
     ],
@@ -2361,7 +2437,7 @@ export default [
     id: "0x8eb6c82c3081bbbd45dcac5afa631aac53478b7c000100000000000000000270",
     name: "40WBTC-40DIGG-20graviAURA",
     type: "Weighted",
-    gauge: null,
+    gauge: "0xE5f24cD43f77fadF4dB33Dab44EB25774159AC66",
     tokens: [
       {
         address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
@@ -2409,7 +2485,7 @@ export default [
     id: "0x8f4205e1604133d1875a3e771ae7e4f2b086563900020000000000000000010e",
     name: "50N/A-50N/A",
     type: "Weighted",
-    gauge: "0xf46FD013Acc2c6988BB2f773bd879101eB5d4573",
+    gauge: null,
     tokens: [
       {
         address: "0x43D4A3cd90ddD2F8f4f693170C9c8098163502ad",
@@ -2599,7 +2675,7 @@ export default [
     id: "0x99a14324cfd525a34bbc93ac7e348929909d57fd00020000000000000000030e",
     name: "50WETH-50FOLD",
     type: "Weighted",
-    gauge: "0xAf3c3dab54ca15068D09C67D128344916e177cA9",
+    gauge: null,
     tokens: [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -2732,7 +2808,7 @@ export default [
     id: "0x9f9d900462492d4c21e9523ca95a7cd86142f298000200000000000000000462",
     name: "50rETH-50RPL",
     type: "Weighted",
-    gauge: "0x2C2179abce3413E27BDA6917f60ae37F96D01826",
+    gauge: null,
     tokens: [
       {
         address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
@@ -2751,7 +2827,7 @@ export default [
     id: "0xa02e4b3d18d4e6b8d18ac421fbc3dfff8933c40a00020000000000000000004b",
     name: "B-50MATIC-50WETH",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x4e311e207CEAaaed421F17E909DA16527565Daef",
     tokens: [
       {
         address: "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0",
@@ -2789,7 +2865,7 @@ export default [
     id: "0xa3c500969accb3d8df08cba313c120818fe0ed9d000200000000000000000471",
     name: "50SYN-50WETH",
     type: "Weighted",
-    gauge: "0x4532fBa326D853A03644758B8B7438374F6780dC",
+    gauge: null,
     tokens: [
       {
         address: "0x0f2D719407FdBeFF09D87557AbB7232601FD9F29",
@@ -2846,7 +2922,7 @@ export default [
     id: "0xa6f548df93de924d73be7d25dc02554c6bd66db500020000000000000000000e",
     name: "B-50WBTC-50WETH",
     type: "Weighted",
-    gauge: "0x4E3c048BE671852277Ad6ce29Fd5207aA12fabff",
+    gauge: null,
     tokens: [
       {
         address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
@@ -2941,7 +3017,7 @@ export default [
     id: "0xb08885e6026bab4333a80024ec25a1a3e1ff2b8a000200000000000000000445",
     name: "B-staFiETH-WETH-Stable",
     type: "MetaStable",
-    gauge: null,
+    gauge: "0x10a361766e64D7983a97202ac3a0F4cee06Eb717",
     tokens: [
       {
         address: "0x9559Aaa82d9649C7A7b220E7c461d2E74c9a3593",
@@ -2979,7 +3055,7 @@ export default [
     id: "0xb460daa847c45f1c4a41cb05bfb3b51c92e41b36000200000000000000000194",
     name: "20WBTC-80BADGER",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x3F29e69955E5202759208DD0C5E0BA55ff934814",
     tokens: [
       {
         address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
@@ -3108,7 +3184,7 @@ export default [
     id: "0xb9debddf1d894c79d2b2d09f819ff9b856fca55200000000000000000000062a",
     name: "weETH-WETH-BPT",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0x5D7C0521DB5a6F37aD839d0eEfbaF8205389adD8",
     tokens: [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -3322,7 +3398,7 @@ export default [
     id: "0xcf7b51ce5755513d4be016b0e28d6edeffa1d52a000200000000000000000617",
     name: "RDNT-WETH",
     type: "Weighted",
-    gauge: null,
+    gauge: "0xF22BbdAd6B3Dd9314BdF97724DF32b09Ff95C216",
     tokens: [
       {
         address: "0x137dDB47Ee24EaA998a535Ab00378d6BFa84F893",
@@ -3379,7 +3455,7 @@ export default [
     id: "0xd278166dabaf26707362f7cfdd204b277fd2a4600002000000000000000004f6",
     name: "50USH-50WETH",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x6B29de6b961F60A494416164B651eeeA71b7aED7",
     tokens: [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -3441,7 +3517,7 @@ export default [
     id: "0xd4f79ca0ac83192693bce4699d0c10c66aa6cf0f00020000000000000000047e",
     name: "OHM-wstETH",
     type: "Weighted",
-    gauge: "0xE879f17910E77c01952b97E4A098B0ED15B6295c",
+    gauge: null,
     tokens: [
       {
         address: "0x64aa3364F17a4D01c6f1751Fd97C2BD3D7e7f1D5",
@@ -3460,7 +3536,7 @@ export default [
     id: "0xd590931466cdd6d488a25da1e89dd0539723800c00020000000000000000042b",
     name: "50RBN-50USDC",
     type: "Weighted",
-    gauge: "0x81C452E84B103555C2Dd2DEc0bFABC0c4d6B3065",
+    gauge: null,
     tokens: [
       {
         address: "0x6123B0049F904d730dB3C36a31167D9d4121fA6B",
@@ -3479,7 +3555,7 @@ export default [
     id: "0xd5d99b7e9697ba8bb1da48f07ba81900c7572cea0000000000000000000005cc",
     name: "DUSD-3POOL-BPT",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0x05266A0d5aC04E44D394B8A8A2d0935d8809692b",
     tokens: [
       {
         address: "0x79c58f70905F734641735BC61e45c19dD9Ad60bC",
@@ -3637,7 +3713,7 @@ export default [
     id: "0xdd59f89b5b07b7844d72996fc9d83d81acc8219600000000000000000000059e",
     name: "uniETH-WETH",
     type: "ComposableStable",
-    gauge: "0xe77D45b5dE97aC7717E4EdE6bE16E3D805fF02A5",
+    gauge: null,
     tokens: [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -3694,7 +3770,7 @@ export default [
     id: "0xdedb11a6a23263469567c2881a9b9f8629ee0041000000000000000000000669",
     name: "svETH/wstETH",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xD98ed0426D18B115d6388923803e33ad8aaF11F8",
     tokens: [
       {
         address: "0x6733F0283711F225A447e759D859a70b0c0Fd2bC",
@@ -3713,7 +3789,7 @@ export default [
     id: "0xdf2c03c12442c7a0895455a48569b889079ca52a000200000000000000000538",
     name: "80ARCH-20WETH",
     type: "Weighted",
-    gauge: "0x69F1077AeCE23D5b0344330B5eB13f05d5e410a1",
+    gauge: null,
     tokens: [
       {
         address: "0x73C69d24ad28e2d43D03CBf35F79fE26EBDE1011",
@@ -3732,7 +3808,7 @@ export default [
     id: "0xdfe6e7e18f6cc65fa13c8d8966013d4fda74b6ba000000000000000000000558",
     name: "ankrETH/wstETH",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xbf65b3fA6c208762eD74e82d4AEfCDDfd0323648",
     tokens: [
       {
         address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
@@ -3770,7 +3846,7 @@ export default [
     id: "0xe2469f47ab58cf9cf59f9822e3c5de4950a41c49000200000000000000000089",
     name: "mBPT",
     type: "Weighted",
-    gauge: "0xbeC2d02008Dc64A6AD519471048CF3D3aF5ca0C5",
+    gauge: null,
     tokens: [
       {
         address: "0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2",
@@ -3785,11 +3861,30 @@ export default [
     ],
   },
   {
+    bpt: "0xE3E0022d25194431a98e8bf5034D2617C96e1D44",
+    id: "0xe3e0022d25194431a98e8bf5034d2617c96e1d44000000000000000000000670",
+    name: "InstETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0xCDA1B6704B108dF230d2a36da4C088C6afd6f335",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0x7FA768E035F956c41d6aeaa3Bd857e7E5141CAd5",
+        symbol: "InstETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xE4010EF5E37dc23154680f23c4A0d48BFca91687",
     id: "0xe4010ef5e37dc23154680f23c4a0d48bfca91687000200000000000000000432",
     name: "80SD-20WETH",
     type: "Weighted",
-    gauge: "0x37eCa8DaaB052E722e3bf8ca861aa4e1C047143b",
+    gauge: null,
     tokens: [
       {
         address: "0x30D20208d987713f46DFD34EF128Bb16C404D10f",
@@ -3861,7 +3956,7 @@ export default [
     id: "0xe7e2c68d3b13d905bbb636709cf4dfd21076b9d20000000000000000000005ca",
     name: "swETH-WETH-BPT",
     type: "ComposableStable",
-    gauge: "0xee01c0d9c0439c94D314a6ecAE0490989750746C",
+    gauge: null,
     tokens: [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -3918,7 +4013,7 @@ export default [
     id: "0xe99481dc77691d8e2456e5f3f61c1810adfc1503000200000000000000000018",
     name: "B-50LINK-50WETH",
     type: "Weighted",
-    gauge: "0x31e7F53D27BFB324656FACAa69Fe440169522E1C",
+    gauge: null,
     tokens: [
       {
         address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
@@ -3956,7 +4051,7 @@ export default [
     id: "0xec60a5fef79a92c741cb74fdd6bfc340c0279b01000200000000000000000015",
     name: "B-50REN-50WETH",
     type: "Weighted",
-    gauge: "0xD6E4d70bdA78FBa018c2429e1b84153b9284298e",
+    gauge: null,
     tokens: [
       {
         address: "0x408e41876cCCDC0F92210600ef50372656052a38",
@@ -3975,7 +4070,7 @@ export default [
     id: "0xee3959fd00a0b996d801fc34b7ce566bd037f5f500020000000000000000063e",
     name: "80MIMO-20WETH",
     type: "Weighted",
-    gauge: "0x6be156504Cda8ee38169BE96Bcf53AEAB4377c1a",
+    gauge: null,
     tokens: [
       {
         address: "0x90B831fa3Bebf58E9744A14D638E25B4eE06f9Bc",
@@ -3994,7 +4089,7 @@ export default [
     id: "0xefaa1604e82e1b3af8430b90192c1b9e8197e377000200000000000000000021",
     name: "B-50COMP-50WETH",
     type: "Weighted",
-    gauge: "0xAFc28B2412B343574E8673D4fb6b220473677602",
+    gauge: null,
     tokens: [
       {
         address: "0xc00e94Cb662C3520282E6f5717214004A7f26888",
@@ -4108,7 +4203,7 @@ export default [
     id: "0xf5aaf7ee8c39b651cebf5f1f50c10631e78e0ef9000200000000000000000069",
     name: "BPTUMAUSDC",
     type: "Weighted",
-    gauge: "0xf4339872Ad09B34a29Be76EE81D4F30BCf7dbf9F",
+    gauge: null,
     tokens: [
       {
         address: "0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828",
@@ -4146,7 +4241,7 @@ export default [
     id: "0xf8c4cd95c7496cb7c8d97202cf7e5b8da2204c2b00020000000000000000039e",
     name: "80psdnOCEAN-20OCEAN",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x53Fa0546f307317dAA82371e94E8Dcd5CAd3345F",
     tokens: [
       {
         address: "0x51Fa2efd62ee56a493f24AE963eAce7D0051929E",
@@ -4203,7 +4298,7 @@ export default [
     id: "0xfeadd389a5c427952d8fdb8057d6c8ba1156cc56000000000000000000000066",
     name: "staBAL3-BTC",
     type: "Stable",
-    gauge: null,
+    gauge: "0x57d40FF4cF7441A04A05628911F57bb940B6C238",
     tokens: [
       {
         address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
