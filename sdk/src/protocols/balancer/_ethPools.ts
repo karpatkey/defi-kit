@@ -427,25 +427,6 @@ export default [
     ],
   },
   {
-    bpt: "0x158e0fBC2271E1dCEbadD365a22E2B4dD173C0DB",
-    id: "0x158e0fbc2271e1dcebadd365a22e2b4dd173c0db0002000000000000000005a5",
-    name: "80IDLE-20USDC",
-    type: "Weighted",
-    gauge: "0x9aaAf6757BE9e115895429EF6B81e05dCB951646",
-    tokens: [
-      {
-        address: "0x875773784Af8135eA0ef43b5a374AaD105c5D39e",
-        symbol: "IDLE",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x178E029173417b1F9C8bC16DCeC6f697bC323746",
     id: "0x178e029173417b1f9c8bc16dcec6f697bc32374600000000000000000000025d",
     name: "FUD",
@@ -2471,30 +2452,6 @@ export default [
       {
         address: "0xBA485b556399123261a5F9c95d413B4f93107407",
         symbol: "graviAURA",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x8ED9e70BfA17A1E2C4F8e561c8d0c2d1acc092fA",
-    id: "0x8ed9e70bfa17a1e2c4f8e561c8d0c2d1acc092fa0001000000000000000005ce",
-    name: "33LCNY-33LUSD-33WETH",
-    type: "Weighted",
-    gauge: "0x2efCc89a1D534a8ee0e8dD469fa05cb20ccF5C19",
-    tokens: [
-      {
-        address: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
-        symbol: "LUSD",
-        id: "0x",
-      },
-      {
-        address: "0x7635B612792e4bFB7F2FA12a3E5d5A3f2e3C34BC",
-        symbol: "LCNY",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
         id: "0x",
       },
     ],
