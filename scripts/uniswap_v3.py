@@ -146,7 +146,7 @@ def protocol_data(blockchain, min_tvl_usd=0, min_volume_usd=0):
                 tokens.append(token1)
                       
     if blockchain == Chain.ETHEREUM:
-        dump(tokens, 'uniswap_v3', '_ethInfo.ts')
+        dump(tokens, 'uniswap/v3', '_ethInfo.ts')
 
 
 protocol_data("ethereum", min_tvl_usd=1000000, min_volume_usd=1000000)
