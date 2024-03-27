@@ -50,6 +50,8 @@ jobs:
         run: python scripts/maker.py
       - name: Run spark
         run: python scripts/spark.py
+      - name: Run uniswap_v3
+        run: python scripts/uniswap_v3.py
 
       - uses: actions/setup-node@v4
         with:
