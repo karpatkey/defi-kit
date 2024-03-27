@@ -1214,25 +1214,6 @@ export default [
     ],
   },
   {
-    bpt: "0x470581ca95C071728e85a6E28a5b1754cD489bE2",
-    id: "0x470581ca95c071728e85a6e28a5b1754cd489be200020000000000000000063c",
-    name: "50OCEAN-50WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
-        symbol: "OCEAN",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x472AFe4C35dC218A41736D4aceEaB650db43C584",
     id: "0x472afe4c35dc218a41736d4aceeab650db43c58400020000000000000000034f",
     name: "80PHONON-20WETH",
@@ -2984,6 +2965,25 @@ export default [
       {
         address: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
         symbol: "AAVE",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xB06bFBD7b50F80c8d9dA57Fc4cF5CBD5B3E2f148",
+    id: "0xb06bfbd7b50f80c8d9da57fc4cf5cbd5b3e2f14800000000000000000000064d",
+    name: "pxETH/frxETH",
+    type: "ComposableStable",
+    gauge: "0xA1D5B81d0024809FAA278Ab72fe3D2FB467Dd28b",
+    tokens: [
+      {
+        address: "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
+        symbol: "pxETH",
+        id: "0x",
+      },
+      {
+        address: "0x5E8422345238F34275888049021821E8E08CAa1f",
+        symbol: "frxETH",
         id: "0x",
       },
     ],
