@@ -3704,25 +3704,6 @@ export default [
     ],
   },
   {
-    bpt: "0xdE148e6cC3F6047EeD6E97238D341A2b8589e19E",
-    id: "0xde148e6cc3f6047eed6e97238d341a2b8589e19e000200000000000000000017",
-    name: "B-60WETH-40BAT",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x0D8775F648430679A709E98d2b0Cb6250d2887EF",
-        symbol: "BAT",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xde8C195Aa41C11a0c4787372deFBbDdAa31306D2",
     id: "0xde8c195aa41c11a0c4787372defbbddaa31306d2000200000000000000000181",
     name: "50COW-50WETH",
