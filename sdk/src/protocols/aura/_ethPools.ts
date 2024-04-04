@@ -1705,4 +1705,40 @@ export default [
     ],
     rewarder: "0xcC1C7aaF8ADA3A8c66a3e1C554A1b5ED21691bcF",
   },
+  {
+    name: "50KEP/50rsETH",
+    id: "203",
+    bpt: "0xFf42A9AF956617e4C3532eF2fC7567465EFE4909",
+    tokens: [
+      {
+        address: "0x8E3A59427B1D87Db234Dd4ff63B25E4BF94672f4",
+        symbol: "KEP",
+      },
+      {
+        address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+        symbol: "rsETH",
+      },
+    ],
+    rewarder: "0xb26C62b1152D20C3f348a63FCc7927b45DF9c121",
+  },
+  {
+    name: "genETH/wstETH",
+    id: "204",
+    bpt: "0x6AA5a6b9257CA6e18b2da94e1a5FbE57ce2947cA",
+    tokens: [
+      {
+        address: "0x6AA5a6b9257CA6e18b2da94e1a5FbE57ce2947cA",
+        symbol: "genETH/wstETH",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
+        symbol: "genETH",
+      },
+    ],
+    rewarder: "0x772359B46FaA01cbe08fB0d34907A72F593D0fcE",
+  },
 ] as const

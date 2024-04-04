@@ -1714,6 +1714,25 @@ export default [
     ],
   },
   {
+    bpt: "0x63E0d47A6964aD1565345Da9bfA66659F4983F02",
+    id: "0x63e0d47a6964ad1565345da9bfa66659f4983f02000000000000000000000681",
+    name: "pufETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0x0B9Ea598757c7D03FB1937cc16bdD2C9D416ff80",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xD9A442856C234a39a81a089C06451EBAa4306a72",
+        symbol: "pufETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x67b532d47A31CE1eD0800E6913dbf5F6e9C48a18",
     id: "0x67b532d47a31ce1ed0800e6913dbf5f6e9c48a180002000000000000000000c5",
     name: "\u2697\ufe0f_WEIGHTED",
@@ -3704,25 +3723,6 @@ export default [
     ],
   },
   {
-    bpt: "0xdE148e6cC3F6047EeD6E97238D341A2b8589e19E",
-    id: "0xde148e6cc3f6047eed6e97238d341a2b8589e19e000200000000000000000017",
-    name: "B-60WETH-40BAT",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x0D8775F648430679A709E98d2b0Cb6250d2887EF",
-        symbol: "BAT",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xde8C195Aa41C11a0c4787372deFBbDdAa31306D2",
     id: "0xde8c195aa41c11a0c4787372defbbddaa31306d2000200000000000000000181",
     name: "50COW-50WETH",
@@ -4037,6 +4037,25 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xEd0DF9Cd16D806E8A523805e53cf0c56E6dB4D1d",
+    id: "0xed0df9cd16d806e8a523805e53cf0c56e6db4d1d000000000000000000000687",
+    name: "ShezUSD/sDAI",
+    type: "ComposableStable",
+    gauge: "0xA71Adac76A2e34f8F988Fa6992E3bDAd08D92C01",
+    tokens: [
+      {
+        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+        symbol: "sDAI",
+        id: "0x",
+      },
+      {
+        address: "0xD60EeA80C83779a8A5BFCDAc1F3323548e6BB62d",
+        symbol: "ShezUSD",
         id: "0x",
       },
     ],
