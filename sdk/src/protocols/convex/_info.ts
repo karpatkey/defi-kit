@@ -2143,4 +2143,25 @@ export default [
     cvxDepositToken: "0x6EC17da52FDDA0Acad5F3AF845334c8A13f6d9e1",
     rewarder: "0x720154D25092804244D1638Eca532536631cE461",
   },
+  {
+    name: "revPool",
+    id: "333",
+    crvLPToken: "0xdf9015472Ea23e3BeA6fbD6092915F9Ed6980a99",
+    cvxDepositToken: "0xdDfB678E7941864EEa7A93aB7E932Ce0439Ae660",
+    rewarder: "0x0585A9c5BF0AF8F34CBd4A61A74D4Df309C00395",
+  },
+  {
+    name: "cvcrvUSD",
+    id: "334",
+    crvLPToken: "0x52096539ed1391CB50C6b9e4Fd18aFd2438ED23b",
+    cvxDepositToken: "0xbE1A4d6A2703CAB220109C67425C3f28907630cb",
+    rewarder: "0x9daD26722EF4e2855418b5d76E8325B5005e1AbB",
+  },
+  {
+    name: "GHOcrvUSD",
+    id: "335",
+    crvLPToken: "0x635EF0056A597D13863B73825CcA297236578595",
+    cvxDepositToken: "0x53f4474c06c699307514bd55FB1607005F46a889",
+    rewarder: "0x5eC758f79b96AE74e7F1Ba9583009aFB3fc8eACB",
+  },
 ] as const

@@ -2100,25 +2100,6 @@ export default [
     ],
   },
   {
-    bpt: "0x7D98f308Db99FDD04BbF4217a4be8809F38fAa64",
-    id: "0x7d98f308db99fdd04bbf4217a4be8809f38faa6400020000000000000000059b",
-    name: "80wstETH/20GHO",
-    type: "Weighted",
-    gauge: "0x6EE63656BbF5BE3fdF9Be4982BF9466F6a921b83",
-    tokens: [
-      {
-        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
-        symbol: "GHO",
-        id: "0x",
-      },
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x7E9AfD25F5Ec0eb24d7d4b089Ae7EcB9651c8b1F",
     id: "0x7e9afd25f5ec0eb24d7d4b089ae7ecb9651c8b1f000000000000000000000511",
     name: "B-baoUSD-LUSD-BPT",
@@ -2685,25 +2666,6 @@ export default [
     ],
   },
   {
-    bpt: "0x9c6d47Ff73e0F5E51BE5FD53236e3F595C5793F2",
-    id: "0x9c6d47ff73e0f5e51be5fd53236e3f595c5793f200020000000000000000042c",
-    name: "B-cbETH-wstETH-Stable",
-    type: "MetaStable",
-    gauge: "0x01A9502C11f411b494c62746D37e89d6f7078657",
-    tokens: [
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
-        id: "0x",
-      },
-      {
-        address: "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
-        symbol: "cbETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x9CC64EE4CB672Bc04C54B00a37E1Ed75b2Cc19Dd",
     id: "0x9cc64ee4cb672bc04c54b00a37e1ed75b2cc19dd0002000000000000000004c1",
     name: "80Silo-20WETH",
@@ -2965,25 +2927,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xae7bFd6fA54259fC477879712Eebe34164d3A84F",
-    id: "0xae7bfd6fa54259fc477879712eebe34164d3a84f000200000000000000000376",
-    name: "80palStkAAVE-20AAVE",
-    type: "Weighted",
-    gauge: "0x39a9E78c3b9b5B47f1f6632BD74890E2430215Cf",
-    tokens: [
-      {
-        address: "0x24E79e946dEa5482212c38aaB2D0782F04cdB0E0",
-        symbol: "palStkAAVE",
-        id: "0x",
-      },
-      {
-        address: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
-        symbol: "AAVE",
         id: "0x",
       },
     ],
