@@ -19,12 +19,12 @@ const gnoTokens = [
   ),
 ]
 
-const zEthPool = z.enum([
+export const zEthPool = z.enum([
   ...ethPools.map((pool) => pool.name),
   ...ethPools.map((pool) => pool.bpt),
   ...ethPools.map((pool) => pool.id),
 ] as [string, string, ...string[]])
-const zGnoPool = z.enum([
+export const zGnoPool = z.enum([
   ...gnoPools.map((pool) => pool.name),
   ...gnoPools.map((pool) => pool.bpt),
   ...gnoPools.map((pool) => pool.id),

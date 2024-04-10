@@ -6,25 +6,26 @@ export enum Chain {
   gno = "gno",
 }
 
-export type ActionFunction = (options: any) => Promise<Permission[]>
+export type AllowFunction = (options: any) => Promise<Permission[]>
 
 export type ProtocolActions = {
-  deposit?: ActionFunction
+  deposit?: AllowFunction
+  borrow?: AllowFunction
+  stake?: AllowFunction
+  claim?: AllowFunction
+  swap?: AllowFunction
+  lock?: AllowFunction
+  delegate?: AllowFunction
+}
 
-  borrow?: ActionFunction
-
-  stake?: ActionFunction
-
-  claim?: ActionFunction
-
-  swap?: ActionFunction
-
-  lock?: ActionFunction
-
-  delegate?: ActionFunction
+export type Strategies = {
+  disassemble: { [name: string]: AllowFunction }
 }
 
 export type ActionName = keyof ProtocolActions
 
 // For registering protocols in the REST API we need zod schemas for the specific parameters of each action
 export type ProtocolSchemas = { [key in ActionName]?: SomeZodObject }
+
+// ... same for strategies
+export type StrategySchemas = { [name: string]: SomeZodObject }
