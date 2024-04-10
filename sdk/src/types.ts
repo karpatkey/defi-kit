@@ -19,7 +19,9 @@ export type ProtocolActions = {
 }
 
 export type Strategies = {
-  disassemble: { [name: string]: AllowFunction }
+  exit: {
+    [category: string]: { [name: string]: AllowFunction }
+  }
 }
 
 export type ActionName = keyof ProtocolActions

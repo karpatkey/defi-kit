@@ -1,5 +1,5 @@
 import { StrategySchemas } from "../types"
-import * as disassemble from "./disassemble/schema"
+import * as disassemble from "./exit/schema"
 
 // group all strategy schemas by chain
 
