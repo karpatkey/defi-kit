@@ -2164,4 +2164,18 @@ export default [
     cvxDepositToken: "0x53f4474c06c699307514bd55FB1607005F46a889",
     rewarder: "0x5eC758f79b96AE74e7F1Ba9583009aFB3fc8eACB",
   },
+  {
+    name: "frxafETH",
+    id: "336",
+    crvLPToken: "0x55Faa4a58f6510f78c1466C71C63200D62a197D2",
+    cvxDepositToken: "0xc1312a64c38909b13241E0a99001b0fb9C304d4a",
+    rewarder: "0x195B73357C2954Ed1a5a8F3BbDC8d8e7F5337519",
+  },
+  {
+    name: "CDCETH/ETH",
+    id: "337",
+    crvLPToken: "0x86EA1191a219989d2dA3a85c949a12A92f8ED3Db",
+    cvxDepositToken: "0x91C0f0403eDC057f40e47A6b6Ee226bC489Ac343",
+    rewarder: "0x7ED2C45cb650B5174E089CCE183E510A79eEdb02",
+  },
 ] as const
