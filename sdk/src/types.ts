@@ -18,6 +18,8 @@ export type ProtocolActions = {
   delegate?: AllowFunction
 }
 
+export type ActionName = keyof ProtocolActions
+
 export type Strategies = {
   exit: {
     [category: string]: {
@@ -26,7 +28,7 @@ export type Strategies = {
   }
 }
 
-export type ActionName = keyof ProtocolActions
+export type StrategyType = keyof Strategies
 
 // For registering protocols in the REST API we need zod schemas for the specific parameters of each action
 export type ProtocolSchemas = {
