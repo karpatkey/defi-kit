@@ -36,15 +36,13 @@ jobs:
           yarn
           yarn setup
 
-      
-
-          - name: Check formatting
-          run: yarn check:prettier
+      - name: Check formatting
+        run: yarn check:prettier
 
       - name: Build all packages
         run: |
           yarn build
 
-     - name: Build all packages
+      - name: Build all packages
         run: |
           yarn build
