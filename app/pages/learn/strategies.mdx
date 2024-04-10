@@ -1,0 +1,16 @@
+import { Callout } from "nextra/components"
+
+# Strategies
+
+Strategies are advanced interactions with DeFi protocols supporting pre-defined treasury management workflows potentially involving multiple actions with different protocols.
+An example strategy would be an emergency withdrawal strategy that unstakes and proportionally withdraws funds from a protocol in case of a black swan market event.
+
+<Callout type="info">
+  While DeFi Kit actions are designed for general purpose use, strategies might
+  be more tailored to specific operational needs of Karpatkey.
+</Callout>
+
+Strategy execution scripts are implemented in [TODO](TODO).
+They can be triggered through the [Agile Execution](TODO) app.
+For every Defeyes strategy, DeFi Kit includes a corresponding strategy permission set.
+Applying a strategy permission set to a roles allows role members to trigger that strategy on behalf of the treasury.
