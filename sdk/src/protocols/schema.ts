@@ -35,9 +35,9 @@ export const eth = {
   stader: stader.eth,
   stakewise_v2: stakewise_v2.eth,
   uniswap_v3: uniswap_v3.eth,
-} satisfies Record<string, ProtocolSchemas>
+} satisfies ProtocolSchemas
 
 export const gno = {
   aura: aura.gno,
   cowswap: cowswap.gno,
-} satisfies Record<string, ProtocolSchemas>
+} satisfies ProtocolSchemas

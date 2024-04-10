@@ -28,8 +28,10 @@ const annotate = <F extends AllowFunction>(
 }
 
 type AllAnnotated<S extends Strategies> = {
-  disassemble: {
-    [K in keyof S["disassemble"]]: Annotated<S["disassemble"][K]>
+  exit: {
+    [C in keyof S["exit"]]: {
+      [K in keyof S["exit"][C]]: Annotated<S["exit"][C][K]>
+    }
   }
 }
 
@@ -38,18 +40,22 @@ export const annotateAll = <S extends Strategies>(
   chainPrefix: string
 ): AllAnnotated<S> => {
   const annotated: any = {}
-  for (const [categoryName, strategiesInCategory] of Object.entries(
-    strategies
-  )) {
-    annotated[categoryName] = {}
-    for (const [strategyName, strategy] of Object.entries(
-      strategiesInCategory
+  for (const [type, strategiesOfType] of Object.entries(strategies)) {
+    annotated[type] = {}
+    for (const [category, strategiesInCategory] of Object.entries(
+      strategiesOfType
     )) {
-      annotated[categoryName][strategyName] = annotate(strategy, [
-        chainPrefix,
-        categoryName,
-        strategyName,
-      ])
+      annotated[type][category] = {}
+      for (const [strategyName, strategy] of Object.entries(
+        strategiesInCategory
+      )) {
+        annotated[type][category][strategyName] = annotate(strategy, [
+          chainPrefix,
+          type,
+          category,
+          strategyName,
+        ])
+      }
     }
   }
   return annotated

@@ -18,7 +18,7 @@ export const eth = {
     pools: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
   }) => pools.flatMap((pool) => bpt(findPool(ethPools, pool))),
 
-  underlying_single: ({
+  underlying_single: async ({
     pools,
   }: {
     pools: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
@@ -40,7 +40,7 @@ export const gno = {
     pools: (GnoPool["name"] | GnoPool["bpt"] | GnoPool["id"])[]
   }) => pools.flatMap((pool) => bpt(findPool(gnoPools, pool))),
 
-  underlying_single: ({
+  underlying_single: async ({
     pools,
   }: {
     pools: (GnoPool["name"] | GnoPool["bpt"] | GnoPool["id"])[]

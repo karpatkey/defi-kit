@@ -20,14 +20,26 @@ export type ProtocolActions = {
 
 export type Strategies = {
   exit: {
-    [category: string]: { [name: string]: AllowFunction }
+    [category: string]: {
+      [name: string]: AllowFunction
+    }
   }
 }
 
 export type ActionName = keyof ProtocolActions
 
 // For registering protocols in the REST API we need zod schemas for the specific parameters of each action
-export type ProtocolSchemas = { [key in ActionName]?: SomeZodObject }
+export type ProtocolSchemas = {
+  [protocol: string]: {
+    [key in ActionName]?: SomeZodObject
+  }
+}
 
 // ... same for strategies
-export type StrategySchemas = { [name: string]: SomeZodObject }
+export type StrategySchemas = {
+  exit: {
+    [category: string]: {
+      [name: string]: SomeZodObject
+    }
+  }
+}
