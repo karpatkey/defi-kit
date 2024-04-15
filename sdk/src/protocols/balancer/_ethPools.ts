@@ -2666,25 +2666,6 @@ export default [
     ],
   },
   {
-    bpt: "0x9CC64EE4CB672Bc04C54B00a37E1Ed75b2Cc19Dd",
-    id: "0x9cc64ee4cb672bc04c54b00a37e1ed75b2cc19dd0002000000000000000004c1",
-    name: "80Silo-20WETH",
-    type: "Weighted",
-    gauge: "0x6661136537dfDCA26EEA05c8500502d7D5796E5E",
-    tokens: [
-      {
-        address: "0x6f80310CA7F2C654691D1383149Fa1A57d8AB1f8",
-        symbol: "Silo",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x9e030b67a8384cbba09D5927533Aa98010C87d91",
     id: "0x9e030b67a8384cbba09d5927533aa98010c87d9100020000000000000000008f",
     name: "LPeYyvUSDC-28JAN22",
@@ -2889,25 +2870,6 @@ export default [
       {
         address: "0xAB846Fb6C81370327e784Ae7CbB6d6a6af6Ff4BF",
         symbol: "PAL",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xa9Dd57145ca13a2F05199d85e3f2739Af6478427",
-    id: "0xa9dd57145ca13a2f05199d85e3f2739af64784270002000000000000000005be",
-    name: "80TBTC-20WBTC",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
-        symbol: "tBTC",
-        id: "0x",
-      },
-      {
-        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-        symbol: "WBTC",
         id: "0x",
       },
     ],
