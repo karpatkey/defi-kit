@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/karpatkey/defi-kit/compare/v1.8.1...v1.8.2) (2024-04-16)
+
+
+### Bug Fixes
+
+* Uniswap v3 empty targets ([36029b7](https://github.com/karpatkey/defi-kit/commit/36029b7433bbb291c2e3057edcfec1db6204acad))
+
 ## [1.8.1](https://github.com/karpatkey/defi-kit/compare/v1.8.0...v1.8.1) (2024-03-19)
 
 
