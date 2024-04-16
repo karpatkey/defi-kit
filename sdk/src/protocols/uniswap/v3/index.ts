@@ -68,29 +68,25 @@ export const eth = {
       ...allowErc20Approve(mintTokenAddresses, [
         contracts.mainnet.uniswap_v3.positions_nft,
       ]),
-      {
-        ...allow.mainnet.uniswap_v3.positions_nft.mint(
-          {
-            recipient: c.avatar,
-            token0: oneOf(mintTokenAddresses),
-            token1: oneOf(mintTokenAddresses),
-            fee: mintFees ? oneOf(mintFees) : undefined,
-          },
-          {
-            send: true,
-          }
-        ),
-      },
-      {
-        ...allow.mainnet.uniswap_v3.positions_nft.increaseLiquidity(
-          {
-            tokenId: nftIds ? oneOf(nftIds) : c.avatarIsOwnerOfErc721,
-          },
-          {
-            send: true,
-          }
-        ),
-      },
+      allow.mainnet.uniswap_v3.positions_nft.mint(
+        {
+          recipient: c.avatar,
+          token0: oneOf(mintTokenAddresses),
+          token1: oneOf(mintTokenAddresses),
+          fee: mintFees ? oneOf(mintFees) : undefined,
+        },
+        {
+          send: true,
+        }
+      ),
+      allow.mainnet.uniswap_v3.positions_nft.increaseLiquidity(
+        {
+          tokenId: nftIds ? oneOf(nftIds) : c.avatarIsOwnerOfErc721,
+        },
+        {
+          send: true,
+        }
+      ),
       allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(
         nftIds
           ? {
