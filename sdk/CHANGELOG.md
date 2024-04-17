@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.4](https://github.com/karpatkey/defi-kit/compare/v1.8.3...v1.8.4) (2024-04-17)
+
+
+### Bug Fixes
+
+* Aave v3 Wrapped Token Gateway v3 new version ([#140](https://github.com/karpatkey/defi-kit/issues/140)) ([d2f2d01](https://github.com/karpatkey/defi-kit/commit/d2f2d01b5d7ae3166fb6efaaa6551c63ac62089b))
+
 ## [1.8.3](https://github.com/karpatkey/defi-kit/compare/v1.8.2...v1.8.3) (2024-04-16)
 
 
