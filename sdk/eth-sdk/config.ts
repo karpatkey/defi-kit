@@ -20,7 +20,7 @@ export const contracts = {
     aaveV3: {
       data_provider: "0x7B4EB56E7CD4b454BA8ff71E4518426369a138a3",
       aaveLendingPoolV3: "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
-      wrappedTokenGatewayV3: "0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C",
+      wrappedTokenGatewayV3: "0x893411580e590D62dDBca8a703d61Cc4A8c7b2b9",
       aEthWETH: "0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8",
       variableDebtWETH: "0xeA51d7853EEFb32b6ee06b1C12E6dcCA88Be0fFE",
       stableDebtWETH: "0x102633152313C81cD80419b6EcF66d14Ad68949A",
