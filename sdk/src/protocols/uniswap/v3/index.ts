@@ -36,7 +36,8 @@ export const eth = {
       throw new Error("Either `targets` or `tokens` must be specified.")
     }
 
-    if (targets && targets.length === 0) throw new Error('`targets` must not be empty')
+    if (targets && targets.length === 0)
+      throw new Error("`targets` must not be empty")
 
     const mintFees = fees?.map((fee) => FeeMapping[fee]) || undefined
     console.log("mintFees: ", mintFees)
@@ -52,8 +53,6 @@ export const eth = {
           throw new NotFoundError(`Invalid NFT ID: ${target}`)
         }
       })
-
-
 
     const tokensForTargets = nftIds && (await queryTokens(nftIds))
 
@@ -90,8 +89,8 @@ export const eth = {
       allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(
         nftIds
           ? {
-            tokenId: oneOf(nftIds),
-          }
+              tokenId: oneOf(nftIds),
+            }
           : undefined
       ),
       allow.mainnet.uniswap_v3.positions_nft.collect({

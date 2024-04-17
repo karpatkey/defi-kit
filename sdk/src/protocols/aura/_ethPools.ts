@@ -1741,4 +1741,64 @@ export default [
     ],
     rewarder: "0x772359B46FaA01cbe08fB0d34907A72F593D0fcE",
   },
+  {
+    name: "pufETH/wstETH",
+    id: "205",
+    bpt: "0x63E0d47A6964aD1565345Da9bfA66659F4983F02",
+    tokens: [
+      {
+        address: "0x63E0d47A6964aD1565345Da9bfA66659F4983F02",
+        symbol: "pufETH/wstETH",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xD9A442856C234a39a81a089C06451EBAa4306a72",
+        symbol: "pufETH",
+      },
+    ],
+    rewarder: "0x6Ea41486A8f21EED7B20AfDB681b90a5B6C6D029",
+  },
+  {
+    name: "ShezUSD/sDAI",
+    id: "206",
+    bpt: "0xEd0DF9Cd16D806E8A523805e53cf0c56E6dB4D1d",
+    tokens: [
+      {
+        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+        symbol: "sDAI",
+      },
+      {
+        address: "0xD60EeA80C83779a8A5BFCDAc1F3323548e6BB62d",
+        symbol: "ShezUSD",
+      },
+      {
+        address: "0xEd0DF9Cd16D806E8A523805e53cf0c56E6dB4D1d",
+        symbol: "ShezUSD/sDAI",
+      },
+    ],
+    rewarder: "0x5153DD9B05ac642e387c87a12C89E97Fe1bE6860",
+  },
+  {
+    name: "ETHx/wstETH",
+    id: "207",
+    bpt: "0xB91159aa527D4769CB9FAf3e4ADB760c7E8C8Ea7",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+        symbol: "ETHx",
+      },
+      {
+        address: "0xB91159aa527D4769CB9FAf3e4ADB760c7E8C8Ea7",
+        symbol: "ETHx/wstETH",
+      },
+    ],
+    rewarder: "0x571a20C14a7c3Ac6d30Ee7D1925940bb0C027696",
+  },
 ] as const
