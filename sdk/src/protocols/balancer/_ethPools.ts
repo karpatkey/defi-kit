@@ -2647,25 +2647,6 @@ export default [
     ],
   },
   {
-    bpt: "0x9c08C7a7a89cfD671c79eacdc6F07c1996277eD5",
-    id: "0x9c08c7a7a89cfd671c79eacdc6f07c1996277ed5000200000000000000000025",
-    name: "B-50BAL-50USDC",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xba100000625a3754423978a60c9317c58a424e3D",
-        symbol: "BAL",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x9e030b67a8384cbba09D5927533Aa98010C87d91",
     id: "0x9e030b67a8384cbba09d5927533aa98010c87d9100020000000000000000008f",
     name: "LPeYyvUSDC-28JAN22",

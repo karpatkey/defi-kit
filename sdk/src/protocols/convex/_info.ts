@@ -2178,4 +2178,32 @@ export default [
     cvxDepositToken: "0x91C0f0403eDC057f40e47A6b6Ee226bC489Ac343",
     rewarder: "0x7ED2C45cb650B5174E089CCE183E510A79eEdb02",
   },
+  {
+    name: "cvgSDTSDT",
+    id: "338",
+    crvLPToken: "0xC6628f00F29cc89a87BBeE7554C4725611200fD7",
+    cvxDepositToken: "0x0E3be609dEAf7c900276Ec2dC5B2b5bA08C8f17d",
+    rewarder: "0x41f57AbD96d7e98cCC2C14DF672Bb1750152065D",
+  },
+  {
+    name: "eUSDfxUSD",
+    id: "339",
+    crvLPToken: "0x16b54e3aC8e3ba088333985035b869847e36E770",
+    cvxDepositToken: "0x8Da7c985FC26A19DFB3774af9E529D0f133b0bF7",
+    rewarder: "0x056056063ba7cE97fB4a1bCAaeDEE6AB0DA2Ac6a",
+  },
+  {
+    name: "rev DOLA",
+    id: "340",
+    crvLPToken: "0x20BB4a325924917E3336753BA5350a84F70f392e",
+    cvxDepositToken: "0x3580ec4EAdAa0823a69bf221a63D7AFc26256a65",
+    rewarder: "0xaBe67e32Bd9d4c9575015Fc81C4f5ACdE12c6CD5",
+  },
+  {
+    name: "rev fxUSD",
+    id: "341",
+    crvLPToken: "0x6fC7eA6CA8Cd2759803eb78159C931a8FF5E0557",
+    cvxDepositToken: "0x0Df9c85B825161fE65D40dfd61917232B0f14e97",
+    rewarder: "0xd39D1F27C1a4b2aCd10C493D9639384bE024Dc2B",
+  },
 ] as const
