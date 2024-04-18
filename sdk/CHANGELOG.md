@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.6](https://github.com/karpatkey/defi-kit/compare/v1.8.5...v1.8.6) (2024-04-18)
+
+
+### Bug Fixes
+
+* Aave v3 unnecessary approval of aEthWeth ([#147](https://github.com/karpatkey/defi-kit/issues/147)) ([c9e3e8d](https://github.com/karpatkey/defi-kit/commit/c9e3e8de7046d6891ac239432b9e9e89a5247110))
+
 ## [1.8.5](https://github.com/karpatkey/defi-kit/compare/v1.8.4...v1.8.5) (2024-04-18)
 
 
