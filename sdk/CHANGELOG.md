@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.5](https://github.com/karpatkey/defi-kit/compare/v1.8.4...v1.8.5) (2024-04-18)
+
+
+### Bug Fixes
+
+* Aura python script ([#144](https://github.com/karpatkey/defi-kit/issues/144)) ([db8e9c8](https://github.com/karpatkey/defi-kit/commit/db8e9c8e13bc4288b99dda71647c27f48c4b19e5))
+
 ## [1.8.4](https://github.com/karpatkey/defi-kit/compare/v1.8.3...v1.8.4) (2024-04-17)
 
 
