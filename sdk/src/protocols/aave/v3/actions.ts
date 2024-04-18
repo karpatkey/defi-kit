@@ -5,7 +5,7 @@ import { allowErc20Approve } from "../../../conditions"
 import { contracts } from "../../../../eth-sdk/config"
 
 export const depositToken = (token: Token) => {
-  const permissions = [
+  return [
     ...allowErc20Approve(
       [token.token],
       [contracts.mainnet.aaveV3.aaveLendingPoolV3]
@@ -24,17 +24,6 @@ export const depositToken = (token: Token) => {
       token.token
     ),
   ]
-
-  if (token.symbol === "WETH") {
-    permissions.push(
-      ...allowErc20Approve(
-        [contracts.mainnet.aaveV3.aEthWETH],
-        [contracts.mainnet.aaveV3.wrappedTokenGatewayV3]
-      )
-    )
-  }
-
-  return permissions
 }
 
 export const depositEther = () => [
