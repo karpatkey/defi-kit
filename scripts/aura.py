@@ -69,12 +69,13 @@ def transactions_data(blockchain = Chain.ETHEREUM):
 
                 tokens = []
                 for pool_token in pool_tokens:
-                    tokens.append(
-                        {
-                            'address': pool_token,
-                            'symbol': get_symbol(pool_token, blockchain, web3=web3)
-                        }
-                    )
+                    if pool_token != pool_info[0]:
+                        tokens.append(
+                            {
+                                'address': pool_token,
+                                'symbol': get_symbol(pool_token, blockchain, web3=web3)
+                            }
+                        )
                 
                 pool_data = {
                     'name': lptoken_symbol,
