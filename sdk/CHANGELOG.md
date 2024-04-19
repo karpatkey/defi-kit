@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.7](https://github.com/karpatkey/defi-kit/compare/v1.8.6...v1.8.7) (2024-04-19)
+
+
+### Bug Fixes
+
+* Spark and Stader corrections ([#151](https://github.com/karpatkey/defi-kit/issues/151)) ([bc2a326](https://github.com/karpatkey/defi-kit/commit/bc2a3266153d90294405917a90c1f84d2f169d0f))
+
 ## [1.8.6](https://github.com/karpatkey/defi-kit/compare/v1.8.5...v1.8.6) (2024-04-18)
 
 
