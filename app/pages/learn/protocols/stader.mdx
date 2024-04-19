@@ -28,16 +28,28 @@ Approve `UserWithdrawManager` to spend `ETHx` tokens on behalf of the avatar.
   | `spender` | equal to `UserWithdrawManager` |
   | `amount`  | -                              |
 
-### `StakingPoolManager · deposit`
+### `StakingPoolManager · deposit(address)`
 
 Deposit ETH and receive `ETHx`.
 
 - **Contract:** `StakingPoolManager`
 - **Function:** `deposit(address)` Ξ _allow sending ETH_
 
-  | Parameter | Constraint |
-  | :-------- | :--------- |
-  | N/A       | N/A        |
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `receiver` | equal to `AVATAR` |
+
+### `StakingPoolManager · deposit(address,string)`
+
+Deposit ETH and receive `ETHx`.
+
+- **Contract:** `StakingPoolManager`
+- **Function:** `deposit(address,string)` Ξ _allow sending ETH_
+
+  | Parameter    | Constraint        |
+  | :----------- | :---------------- |
+  | `receiver`   | equal to `AVATAR` |
+  | `referralId` | -                 |
 
 ### `UserWithdrawManager · requestWithdraw`
 

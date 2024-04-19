@@ -12,6 +12,11 @@ export const eth = {
     allow.mainnet.stader.staking_pool_manager["deposit(address)"](c.avatar, {
       send: true,
     }),
+    allow.mainnet.stader.staking_pool_manager["deposit(address,string)"](
+      c.avatar,
+      undefined,
+      { send: true }
+    ),
     allow.mainnet.stader.user_withdraw_manager[
       "requestWithdraw(uint256,address)"
     ](undefined, c.avatar),
