@@ -122,6 +122,10 @@ export default [
     symbol: "GTC",
   },
   {
+    address: "0x6810e776880C02933D47DB1b9fc05908e5386b96",
+    symbol: "GNO",
+  },
+  {
     address: "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
     symbol: "LDO",
   },
@@ -690,6 +694,10 @@ export default [
     symbol: "OMNI",
   },
   {
+    address: "0x44ff8620b8cA30902395A7bD3F2407e1A091BF73",
+    symbol: "VIRTUAL",
+  },
+  {
     address: "0xEe7527841A932d2912224E20a405e1a1FF747084",
     symbol: "SHX",
   },
@@ -796,6 +804,10 @@ export default [
   {
     address: "0x5fAa989Af96Af85384b8a938c2EdE4A7378D9875",
     symbol: "GAL",
+  },
+  {
+    address: "0xc28eb2250d1AE32c7E74CFb6d6b86afC9BEb6509",
+    symbol: "OPN",
   },
   {
     address: "0x00000000e88649DD6AaB90088Ca25D772D4607d0",
@@ -994,10 +1006,6 @@ export default [
     symbol: "RARE",
   },
   {
-    address: "0x6810e776880C02933D47DB1b9fc05908e5386b96",
-    symbol: "GNO",
-  },
-  {
     address: "0x9D65fF81a3c488d585bBfb0Bfe3c7707c7917f54",
     symbol: "SSV",
   },
@@ -1130,6 +1138,10 @@ export default [
     symbol: "OLAS",
   },
   {
+    address: "0xf091867EC603A6628eD83D274E835539D82e9cc8",
+    symbol: "ZETA",
+  },
+  {
     address: "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
     symbol: "MAVIA",
   },
@@ -1146,8 +1158,16 @@ export default [
     symbol: "EEFI",
   },
   {
+    address: "0xbe9F61555F50DD6167f2772e9CF7519790d96624",
+    symbol: "SX",
+  },
+  {
     address: "0x069d89974f4edaBde69450f9cF5CF7D8Cbd2568D",
     symbol: "BVM",
+  },
+  {
+    address: "0xB60acD2057067DC9ed8c083f5aa227a244044fD6",
+    symbol: "stTAO",
   },
   {
     address: "0x255f1B39172f65dC6406b8bEE8b08155C45Fe1b6",
@@ -1176,6 +1196,10 @@ export default [
   {
     address: "0xe5018913F2fdf33971864804dDB5fcA25C539032",
     symbol: "OLM",
+  },
+  {
+    address: "0x2541A36BE4cD39286ED61a3E6AFC2307602489d6",
+    symbol: "DOGE20",
   },
   {
     address: "0x03ab458634910AaD20eF5f1C8ee96F1D6ac54919",
@@ -1268,6 +1292,10 @@ export default [
   {
     address: "0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
     symbol: "ZCHF",
+  },
+  {
+    address: "0x419D0d8BdD9aF5e606Ae2232ed285Aff190E711b",
+    symbol: "FUN",
   },
   {
     address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",

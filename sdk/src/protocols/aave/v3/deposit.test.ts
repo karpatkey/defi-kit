@@ -12,7 +12,9 @@ const sdk = getMainnetSdk(avatar)
 describe("aave_v3", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await applyPermissions(await eth.deposit({ targets: ["ETH", "USDC", "WETH"] }))
+      await applyPermissions(
+        await eth.deposit({ targets: ["ETH", "USDC", "WETH"] })
+      )
     })
 
     // Test with ETH
@@ -95,7 +97,7 @@ describe("aave_v3", () => {
       await expect(
         testKit.eth.weth.approve(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
-          parseEther("1"),
+          parseEther("1")
         )
       ).not.toRevert()
 
