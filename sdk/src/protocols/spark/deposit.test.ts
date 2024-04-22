@@ -97,7 +97,7 @@ describe("spark", () => {
       await expect(
         testKit.eth.weth.approve(
           contracts.mainnet.spark.sparkLendingPoolV3,
-          parseEther("1"),
+          parseEther("1")
         )
       ).not.toRevert()
 

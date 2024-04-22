@@ -386,6 +386,10 @@ export default [
     symbol: "XDEFI",
   },
   {
+    address: "0x7dE91B204C1C737bcEe6F000AAA6569Cf7061cb7",
+    symbol: "XRT",
+  },
+  {
     address: "0x4e4a47cAC6A28A62dcC20990ed2cdA9BC659469F",
     symbol: "SHIT",
   },
@@ -434,6 +438,10 @@ export default [
     symbol: "FET",
   },
   {
+    address: "0x88800092fF476844f74dC2FC427974BBee2794Ae",
+    symbol: "WALLET",
+  },
+  {
     address: "0x738865301A9b7Dd80Dc3666dD48cF034ec42bdDa",
     symbol: "AGRS",
   },
@@ -448,6 +456,10 @@ export default [
   {
     address: "0x5283D291DBCF85356A21bA090E6db59121208b44",
     symbol: "BLUR",
+  },
+  {
+    address: "0x3446Dd70B2D52A6Bf4a5a192D9b0A161295aB7F9",
+    symbol: "SUDO",
   },
   {
     address: "0x644192291cc835A93d6330b24EA5f5FEdD0eEF9e",
@@ -598,6 +610,10 @@ export default [
     symbol: "CAL",
   },
   {
+    address: "0x06F3C323f0238c72BF35011071f2b5B7F43A054c",
+    symbol: "MASQ",
+  },
+  {
     address: "0x470c8950C0c3aA4B09654bC73b004615119A44b5",
     symbol: "KIZUNA",
   },
@@ -690,10 +706,6 @@ export default [
     symbol: "1CAT",
   },
   {
-    address: "0x9e20461bc2c4c980f62f1B279D71734207a6A356",
-    symbol: "OMNI",
-  },
-  {
     address: "0x44ff8620b8cA30902395A7bD3F2407e1A091BF73",
     symbol: "VIRTUAL",
   },
@@ -716,6 +728,10 @@ export default [
   {
     address: "0x8CCD897ca6160ED76755383B201C1948394328c7",
     symbol: "wBAI",
+  },
+  {
+    address: "0x8457CA5040ad67fdebbCC8EdCE889A335Bc0fbFB",
+    symbol: "ALT",
   },
   {
     address: "0xb9f599ce614Feb2e1BBe58F180F370D05b39344E",
@@ -810,6 +826,10 @@ export default [
     symbol: "OPN",
   },
   {
+    address: "0x57e114B691Db790C35207b2e685D4A43181e6061",
+    symbol: "ENA",
+  },
+  {
     address: "0x00000000e88649DD6AaB90088Ca25D772D4607d0",
     symbol: "UDW",
   },
@@ -882,6 +902,10 @@ export default [
     symbol: "CEL",
   },
   {
+    address: "0xc7283b66Eb1EB5FB86327f08e1B5816b0720212B",
+    symbol: "TRIBE",
+  },
+  {
     address: "0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206",
     symbol: "NEXO",
   },
@@ -908,6 +932,10 @@ export default [
   {
     address: "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
     symbol: "ZRX",
+  },
+  {
+    address: "0x4691937a7508860F876c9c0a2a617E7d9E945D4B",
+    symbol: "WOO",
   },
   {
     address: "0x940a2dB1B7008B6C776d4faaCa729d6d4A4AA551",
@@ -968,6 +996,10 @@ export default [
   {
     address: "0xFe2e637202056d30016725477c5da089Ab0A043A",
     symbol: "sETH2",
+  },
+  {
+    address: "0xF5581dFeFD8Fb0e4aeC526bE659CFaB1f8c781dA",
+    symbol: "HOPR",
   },
   {
     address: "0xC581b735A1688071A1746c968e0798D642EDE491",
@@ -1134,6 +1166,10 @@ export default [
     symbol: "INS",
   },
   {
+    address: "0x1614F18Fc94f47967A3Fbe5FfcD46d4e7Da3D787",
+    symbol: "PAID",
+  },
+  {
     address: "0x0001A500A6B18995B03f44bb040A5fFc28E45CB0",
     symbol: "OLAS",
   },
@@ -1184,10 +1220,6 @@ export default [
   {
     address: "0x1495bc9e44Af1F8BCB62278D2bEC4540cF0C05ea",
     symbol: "DEAI",
-  },
-  {
-    address: "0x57e114B691Db790C35207b2e685D4A43181e6061",
-    symbol: "ENA",
   },
   {
     address: "0x2BE056e595110B30ddd5eaF674BdAC54615307d9",
