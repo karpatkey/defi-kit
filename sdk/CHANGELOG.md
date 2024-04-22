@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.8](https://github.com/karpatkey/defi-kit/compare/v1.8.7...v1.8.8) (2024-04-22)
+
+
+### Bug Fixes
+
+* Uniswap v3 mint function ([#155](https://github.com/karpatkey/defi-kit/issues/155)) ([384fcea](https://github.com/karpatkey/defi-kit/commit/384fcea6a00afa6e622be909e18fffc6dee052f3))
+
 ## [1.8.7](https://github.com/karpatkey/defi-kit/compare/v1.8.6...v1.8.7) (2024-04-19)
 
 
