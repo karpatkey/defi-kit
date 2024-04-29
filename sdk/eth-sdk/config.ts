@@ -110,6 +110,7 @@ export const contracts = {
       stableDebtWETH: "0x3c6b93D38ffA15ea995D1BC950d5D0Fa6b22bD05",
       spWETH: "0x59cD1C87501baa753d0B5B5Ab5D8416A45cD71DB",
       sDAI: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+      RewardsController: "0x4370D3b6C9588E02ce9D22e684387859c7Ff5b34",
     },
     stader: {
       staking_pool_manager: "0xcf5EA1b38380f6aF39068375516Daf40Ed70D299",

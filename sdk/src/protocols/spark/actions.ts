@@ -34,6 +34,11 @@ export const depositToken = (token: Token) => {
     allow.mainnet.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
       token.token
     ),
+    allow.mainnet.spark.RewardsController.claimRewards(
+      undefined,
+      undefined,
+      c.avatar
+    )
   ]
 }
 
@@ -56,6 +61,11 @@ export const depositEther = () => [
   allow.mainnet.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
     contracts.mainnet.weth
   ),
+  allow.mainnet.spark.RewardsController.claimRewards(
+    undefined,
+    undefined,
+    c.avatar
+  )
 ]
 
 export const borrowToken = (token: Token) => {
