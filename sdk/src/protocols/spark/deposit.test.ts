@@ -8,6 +8,8 @@ import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { parseEther, parseUnits } from "ethers/lib/utils"
 import { ethers } from "ethers"
 
+const MAX_AMOUNT = 115792089237316195423570985008687907853269984665640564039457584007913129639935n
+
 const sdk = getMainnetSdk(avatar)
 
 describe("spark", () => {
@@ -137,6 +139,28 @@ describe("spark", () => {
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
+
+    // Claim rewards to avatar
+    it("only claim rewards to avatar", async () => {
+      await expect(
+        testKit.eth.spark.RewardsController.claimRewards(
+          [contracts.mainnet.spark.spWETH],
+          MAX_AMOUNT,
+          avatar._address,
+          contracts.mainnet.lido.wsteth
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.spark.RewardsController.claimRewards(
+          [contracts.mainnet.spark.spWETH],
+          MAX_AMOUNT,
+          member._address,
+          contracts.mainnet.lido.wsteth
+        )
+      ).toBeForbidden(Status.ParameterNotAllowed)
+    })
+
 
     // Test with USDC
     it("only allows depositing USDC on behalf of avatar", async () => {
