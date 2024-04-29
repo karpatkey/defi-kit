@@ -51,7 +51,7 @@ export const eth = {
         }
       })
 
-    const tokensForTargets = nftIds && (await queryTokens(nftIds)) || []
+    const tokensForTargets = (nftIds && (await queryTokens(nftIds))) || []
 
     const mintTokenAddresses =
       tokens?.map((addressOrSymbol) => findToken(ethInfo, addressOrSymbol)) ||
@@ -75,8 +75,8 @@ export const eth = {
       allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(
         nftIds
           ? {
-            tokenId: oneOf(nftIds),
-          }
+              tokenId: oneOf(nftIds),
+            }
           : undefined
       ),
       allow.mainnet.uniswap_v3.positions_nft.collect({
@@ -86,17 +86,19 @@ export const eth = {
     ]
 
     if (mintTokenAddresses && mintTokenAddresses.length > 0) {
-      permissions.push(allow.mainnet.uniswap_v3.positions_nft.mint(
-        {
-          recipient: c.avatar,
-          token0: oneOf(mintTokenAddresses),
-          token1: oneOf(mintTokenAddresses),
-          fee: mintFees && mintFees.length > 0 ? oneOf(mintFees) : undefined,
-        },
-        {
-          send: true,
-        }
-      ))
+      permissions.push(
+        allow.mainnet.uniswap_v3.positions_nft.mint(
+          {
+            recipient: c.avatar,
+            token0: oneOf(mintTokenAddresses),
+            token1: oneOf(mintTokenAddresses),
+            fee: mintFees && mintFees.length > 0 ? oneOf(mintFees) : undefined,
+          },
+          {
+            send: true,
+          }
+        )
+      )
     }
 
     if (

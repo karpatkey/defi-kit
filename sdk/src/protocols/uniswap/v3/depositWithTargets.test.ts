@@ -29,11 +29,8 @@ describe("uniswap_v3", () => {
       await applyPermissions(
         await eth.deposit({
           targets: [nft_id.toString()],
-          tokens: [
-            contracts.mainnet.dai,
-            contracts.mainnet.usdc,
-          ],
-          fees: ["0.01%"]
+          tokens: [contracts.mainnet.dai, contracts.mainnet.usdc],
+          fees: ["0.01%"],
         })
       )
     }, 30000)
