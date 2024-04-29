@@ -294,6 +294,25 @@ export default [
     ],
   },
   {
+    bpt: "0xa9B2234773cc6A4F3A34A770C52c931CbA5C24B2",
+    id: "0xa9b2234773cc6a4f3a34a770c52c931cba5c24b2000200000000000000000087",
+    name: "50SAFE-50GNO",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4d18815D14fe5c3304e87B3FA18318baa5c23820",
+        symbol: "SAFE",
+        id: "0x",
+      },
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xB8bB1ce9C6E5401D66fE2126dB6E7387E1E24fFE",
     id: "0xb8bb1ce9c6e5401d66fe2126db6e7387e1e24ffe00020000000000000000003d",
     name: "50WETH-50GNO",

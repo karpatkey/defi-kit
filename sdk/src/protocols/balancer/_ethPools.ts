@@ -2119,6 +2119,25 @@ export default [
     ],
   },
   {
+    bpt: "0x80bE0c303D8Ad2A280878b50a39B1ee8E54DBD22",
+    id: "0x80be0c303d8ad2a280878b50a39b1ee8e54dbd2200020000000000000000000f",
+    name: "B-50LPT-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x58b6A8A3302369DAEc383334672404Ee733aB239",
+        symbol: "LPT",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x8167A1117691f39e05e9131cfA88F0e3A620E967",
     id: "0x8167a1117691f39e05e9131cfa88f0e3a620e96700020000000000000000038c",
     name: "20WETH-80T",
@@ -3056,6 +3075,25 @@ export default [
       {
         address: "0xD33526068D116cE69F19A9ee46F0bd304F21A51f",
         symbol: "RPL",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xB91159aa527D4769CB9FAf3e4ADB760c7E8C8Ea7",
+    id: "0xb91159aa527d4769cb9faf3e4adb760c7e8c8ea700000000000000000000067c",
+    name: "ETHx/wstETH",
+    type: "ComposableStable",
+    gauge: "0xAC08fde28aa2D123B61a5dB3074cAF72760FfeEB",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+        symbol: "ETHx",
         id: "0x",
       },
     ],
