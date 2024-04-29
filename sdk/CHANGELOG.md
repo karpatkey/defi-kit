@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.9](https://github.com/karpatkey/defi-kit/compare/v1.8.8...v1.8.9) (2024-04-29)
+
+
+### Bug Fixes
+
+* Spark incentives ([#159](https://github.com/karpatkey/defi-kit/issues/159)) ([2ec381d](https://github.com/karpatkey/defi-kit/commit/2ec381d9a0224138127f82603ac5d941cd062f1d))
+
 ## [1.8.8](https://github.com/karpatkey/defi-kit/compare/v1.8.7...v1.8.8) (2024-04-22)
 
 
