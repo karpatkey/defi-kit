@@ -127,16 +127,28 @@ export const stake = (token: StakeToken): Permission[] => {
         allow.mainnet.aaveV2.stkaave.claimRewards(c.avatar)
       )
       break
-    case "ABPT":
+    case "ABPTV2":
       permissions.push(
         ...allowErc20Approve(
-          [contracts.mainnet.aaveV2.abpt],
-          [contracts.mainnet.aaveV2.stkabpt]
+          [contracts.mainnet.aaveV2.abptV2],
+          [contracts.mainnet.aaveV2.stkabptV2]
         ),
-        allow.mainnet.aaveV2.stkabpt.stake(c.avatar),
-        allow.mainnet.aaveV2.stkabpt.redeem(c.avatar),
-        allow.mainnet.aaveV2.stkabpt.cooldown(),
-        allow.mainnet.aaveV2.stkabpt.claimRewards(c.avatar)
+        allow.mainnet.aaveV2.stkabptV2.stake(c.avatar),
+        allow.mainnet.aaveV2.stkabptV2.redeem(c.avatar),
+        allow.mainnet.aaveV2.stkabptV2.cooldown(),
+        allow.mainnet.aaveV2.stkabptV2.claimRewards(c.avatar)
+      )
+      break
+    case "GHO":
+      permissions.push(
+        ...allowErc20Approve(
+          [contracts.mainnet.aaveV2.gho],
+          [contracts.mainnet.aaveV2.stkgho]
+        ),
+        allow.mainnet.aaveV2.stkgho.stake(c.avatar),
+        allow.mainnet.aaveV2.stkgho.redeem(c.avatar),
+        allow.mainnet.aaveV2.stkgho.cooldown(),
+        allow.mainnet.aaveV2.stkgho.claimRewards(c.avatar)
       )
       break
   }
