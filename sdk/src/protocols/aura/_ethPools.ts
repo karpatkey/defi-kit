@@ -1653,4 +1653,36 @@ export default [
     ],
     rewarder: "0x571a20C14a7c3Ac6d30Ee7D1925940bb0C027696",
   },
+  {
+    name: "sUSDe/USDC",
+    id: "208",
+    bpt: "0xb819feeF8F0fcDC268AfE14162983A69f6BF179E",
+    tokens: [
+      {
+        address: "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+        symbol: "sUSDe",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+    ],
+    rewarder: "0x4B87DCFF2F45535775a9564229119dca5e697A10",
+  },
+  {
+    name: "ECLP-pxETH-WETH",
+    id: "209",
+    bpt: "0x048158D7c77518Bd72fDbE22D68719a9AAeC75e0",
+    tokens: [
+      {
+        address: "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
+        symbol: "pxETH",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0xeF10bD517448D35b14DE213bEF496422aD2468C4",
+  },
 ] as const

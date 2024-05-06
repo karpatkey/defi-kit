@@ -38,7 +38,7 @@ export const depositToken = (token: Token) => {
       undefined,
       undefined,
       c.avatar
-    )
+    ),
   ]
 }
 
@@ -65,7 +65,7 @@ export const depositEther = () => [
     undefined,
     undefined,
     c.avatar
-  )
+  ),
 ]
 
 export const borrowToken = (token: Token) => {

@@ -45,6 +45,25 @@ export default [
     ],
   },
   {
+    bpt: "0x17794DB163DD298bbA1FfA4d42918C6b8474D948",
+    id: "0x17794db163dd298bba1ffa4d42918c6b8474d94800020000000000000000008b",
+    name: "10REG-90USDC",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x0AA1e96D2a46Ec6beB2923dE1E61Addf5F5f1dce",
+        symbol: "REG",
+        id: "0x",
+      },
+      {
+        address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
+        symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x2086f52651837600180dE173B09470F54EF74910",
     id: "0x2086f52651837600180de173b09470f54ef7491000000000000000000000004f",
     name: "staBAL3",
@@ -83,6 +102,25 @@ export default [
       {
         address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
         symbol: "GNO",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x22D3f4E4Dada5d7a3007a58DD191897AD8578160",
+    id: "0x22d3f4e4dada5d7a3007a58dd191897ad8578160000200000000000000000089",
+    name: "50REG-50sDAI",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x0AA1e96D2a46Ec6beB2923dE1E61Addf5F5f1dce",
+        symbol: "REG",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
         id: "0x",
       },
     ],
