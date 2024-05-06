@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/karpatkey/defi-kit/compare/v1.8.9...v1.9.0) (2024-05-06)
+
+
+### Features
+
+* GHO stake / ABPTv2 stake ([#163](https://github.com/karpatkey/defi-kit/issues/163)) ([2c32fdb](https://github.com/karpatkey/defi-kit/commit/2c32fdbb61486ff183e1c12cd2cb2e1c1e51f115))
+
 ## [1.8.9](https://github.com/karpatkey/defi-kit/compare/v1.8.8...v1.8.9) (2024-04-29)
 
 
