@@ -1752,35 +1752,6 @@ export default [
     ],
   },
   {
-    bpt: "0x67f117350Eab45983374F4f83d275d8A5D62b1bf",
-    id: "0x67f117350eab45983374f4f83d275d8a5d62b1bf0001000000000000000004f2",
-    name: "OG",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x6F9C26Fa731C7Ea4139Fa669962Cf8F1CE6C8b0B",
-        symbol: "OATH",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xF88Baf18FAB7e330fa0C4F83949E23F52FECECce",
-        symbol: "GRAIN",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x68454578f7017bA0C0c5bD1091975d7a7F3001c8",
     id: "0x68454578f7017ba0c0c5bd1091975d7a7f3001c800020000000000000000025e",
     name: "33DAI-33USDC-33LEVEN",
@@ -2114,25 +2085,6 @@ export default [
       {
         address: "0x7945b0A6674b175695e5d1D08aE1e6F13744Abb0",
         symbol: "BaoUSD",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x80bE0c303D8Ad2A280878b50a39B1ee8E54DBD22",
-    id: "0x80be0c303d8ad2a280878b50a39b1ee8e54dbd2200020000000000000000000f",
-    name: "B-50LPT-50WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x58b6A8A3302369DAEc383334672404Ee733aB239",
-        symbol: "LPT",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
         id: "0x",
       },
     ],
@@ -3080,6 +3032,25 @@ export default [
     ],
   },
   {
+    bpt: "0xb819feeF8F0fcDC268AfE14162983A69f6BF179E",
+    id: "0xb819feef8f0fcdc268afe14162983a69f6bf179e000000000000000000000689",
+    name: "sUSDe/USDC",
+    type: "ComposableStable",
+    gauge: "0x84f7F5cD2218f31B750E7009Bb6fD34e0b945DaC",
+    tokens: [
+      {
+        address: "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+        symbol: "sUSDe",
+        id: "0x",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xB91159aa527D4769CB9FAf3e4ADB760c7E8C8Ea7",
     id: "0xb91159aa527d4769cb9faf3e4adb760c7e8c8ea700000000000000000000067c",
     name: "ETHx/wstETH",
@@ -3484,40 +3455,6 @@ export default [
       {
         address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         symbol: "USDC",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xD5D99B7e9697bA8bB1dA48f07BA81900c7572CeA",
-    id: "0xd5d99b7e9697ba8bb1da48f07ba81900c7572cea0000000000000000000005cc",
-    name: "DUSD-3POOL-BPT",
-    type: "ComposableStable",
-    gauge: "0x05266A0d5aC04E44D394B8A8A2d0935d8809692b",
-    tokens: [
-      {
-        address: "0x79c58f70905F734641735BC61e45c19dD9Ad60bC",
-        symbol: "USDC-DAI-USDT",
-        id: "0x79c58f70905f734641735bc61e45c19dd9ad60bc0000000000000000000004e7",
-      },
-      {
-        address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-        symbol: "DAI",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        symbol: "USDT",
-        id: "0x",
-      },
-      {
-        address: "0xa48F322F8b3edff967629Af79E027628b9Dd1298",
-        symbol: "DUSD",
         id: "0x",
       },
     ],

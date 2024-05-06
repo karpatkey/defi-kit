@@ -8,7 +8,8 @@ import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { parseEther, parseUnits } from "ethers/lib/utils"
 import { ethers } from "ethers"
 
-const MAX_AMOUNT = 115792089237316195423570985008687907853269984665640564039457584007913129639935n
+const MAX_AMOUNT =
+  115792089237316195423570985008687907853269984665640564039457584007913129639935n
 
 const sdk = getMainnetSdk(avatar)
 
@@ -160,7 +161,6 @@ describe("spark", () => {
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
-
 
     // Test with USDC
     it("only allows depositing USDC on behalf of avatar", async () => {
