@@ -1600,7 +1600,7 @@ export default [
       },
       {
         address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
-        symbol: "genETH",
+        symbol: "InETH",
       },
     ],
     rewarder: "0x772359B46FaA01cbe08fB0d34907A72F593D0fcE",

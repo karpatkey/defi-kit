@@ -10,11 +10,12 @@ import { Status } from "../../../../test/types"
 import { testKit } from "../../../../test/kit"
 import { parseEther } from "ethers/lib/utils"
 
-
 describe("aave_v2", () => {
   describe("stake", () => {
     beforeAll(async () => {
-      await applyPermissions(await eth.stake({ targets: ["AAVE", "ABPTV2", "GHO"] }))
+      await applyPermissions(
+        await eth.stake({ targets: ["AAVE", "ABPTV2", "GHO"] })
+      )
     })
 
     it("stake AAVE", async () => {

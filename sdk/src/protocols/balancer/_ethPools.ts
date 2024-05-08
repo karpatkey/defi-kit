@@ -265,25 +265,6 @@ export default [
     ],
   },
   {
-    bpt: "0x0947592314Bf2BD0f86A74299bc8e534e3c7313f",
-    id: "0x0947592314bf2bd0f86a74299bc8e534e3c7313f000200000000000000000312",
-    name: "20WETH-80JELLY",
-    type: "Weighted",
-    gauge: "0x6BcdC06bdECa203f84409dAe4692eE2b9619f399",
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xf5f06fFa53Ad7F5914F493F16E57B56C8dd2eA80",
-        symbol: "JELLY",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x09B03b7cBB19b3daE94F884cF60dBc3c99a3947b",
     id: "0x09b03b7cbb19b3dae94f884cf60dbc3c99a3947b00000000000000000000066c",
     name: "pyUSD/sDOLA BSP",
@@ -1424,6 +1405,25 @@ export default [
     ],
   },
   {
+    bpt: "0x56bc9d9987edeC2fC6e1990e27AF4A0987b53096",
+    id: "0x56bc9d9987edec2fc6e1990e27af4a0987b53096000200000000000000000686",
+    name: "99goldCOMP-1WETH",
+    type: "Weighted",
+    gauge: "0x50BE312DFe134a3076f913d8E085c4055421DE3D",
+    tokens: [
+      {
+        address: "0x939CED8875d1Cd75D8b9aca439e6526e9A822A48",
+        symbol: "goldCOMP",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x57766212638c425e9CB0C6D6e1683dda369C0FFF",
     id: "0x57766212638c425e9cb0c6d6e1683dda369c0fff000200000000000000000678",
     name: "80GEM-20WETH",
@@ -1803,7 +1803,7 @@ export default [
       },
       {
         address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
-        symbol: "genETH",
+        symbol: "InETH",
         id: "0x",
       },
     ],
