@@ -458,6 +458,10 @@ export default [
     symbol: "NXRA",
   },
   {
+    address: "0x6BF765C43030387a983f429c1438e9D2025B7E12",
+    symbol: "PEPES",
+  },
+  {
     address: "0xb23d80f5FefcDDaa212212F028021B41DEd428CF",
     symbol: "PRIME",
   },
@@ -568,10 +572,6 @@ export default [
   {
     address: "0xaaeE1A9723aaDB7afA2810263653A34bA2C21C7a",
     symbol: "Mog",
-  },
-  {
-    address: "0x0001A500A6B18995B03f44bb040A5fFc28E45CB0",
-    symbol: "OLAS",
   },
   {
     address: "0x163f8C2467924be0ae7B5347228CABF260318753",
@@ -754,10 +754,6 @@ export default [
     symbol: "STRDY",
   },
   {
-    address: "0xba0Dda8762C24dA9487f5FA026a9B64b695A07Ea",
-    symbol: "OX",
-  },
-  {
     address: "0x5cc5E64AB764A0f1E97F23984E20fD4528356a6a",
     symbol: "XRGB",
   },
@@ -856,6 +852,10 @@ export default [
   {
     address: "0xf21661D0D1d76d3ECb8e1B9F1c923DBfffAe4097",
     symbol: "RIO",
+  },
+  {
+    address: "0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828",
+    symbol: "UMA",
   },
   {
     address: "0x1494CA1F11D487c2bBe4543E90080AeBa4BA3C2b",
@@ -1146,6 +1146,10 @@ export default [
     symbol: "ONDO",
   },
   {
+    address: "0x0001A500A6B18995B03f44bb040A5fFc28E45CB0",
+    symbol: "OLAS",
+  },
+  {
     address: "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
     symbol: "MAVIA",
   },
@@ -1168,10 +1172,6 @@ export default [
   {
     address: "0x069d89974f4edaBde69450f9cF5CF7D8Cbd2568D",
     symbol: "BVM",
-  },
-  {
-    address: "0xB60acD2057067DC9ed8c083f5aa227a244044fD6",
-    symbol: "stTAO",
   },
   {
     address: "0x255f1B39172f65dC6406b8bEE8b08155C45Fe1b6",
@@ -1240,10 +1240,6 @@ export default [
   {
     address: "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
     symbol: "cbETH",
-  },
-  {
-    address: "0x504624040e0642921C2c266a9aC37CafBd8cDa4e",
-    symbol: "LOVE",
   },
   {
     address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
