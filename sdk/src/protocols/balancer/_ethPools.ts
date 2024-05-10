@@ -341,6 +341,30 @@ export default [
     ],
   },
   {
+    bpt: "0x0EC120Ed63212A4Cb018795b43c0B03c59190424",
+    id: "0x0ec120ed63212a4cb018795b43c0b03c5919042400010000000000000000068f",
+    name: "33GOLD-33USDC-33WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x9DeB0fc809955b79c85e82918E8586d3b7d2695a",
+        symbol: "GOLD",
+        id: "0x",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x0F9FdC4D883f6D85b68CE1B8b96AA706A3538e5B",
     id: "0x0f9fdc4d883f6d85b68ce1b8b96aa706a3538e5b000200000000000000000675",
     name: "80gVEC-20vETH",
@@ -1395,25 +1419,6 @@ export default [
       {
         address: "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
         symbol: "LQTY",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x56bc9d9987edeC2fC6e1990e27AF4A0987b53096",
-    id: "0x56bc9d9987edec2fc6e1990e27af4a0987b53096000200000000000000000686",
-    name: "99goldCOMP-1WETH",
-    type: "Weighted",
-    gauge: "0x50BE312DFe134a3076f913d8E085c4055421DE3D",
-    tokens: [
-      {
-        address: "0x939CED8875d1Cd75D8b9aca439e6526e9A822A48",
-        symbol: "goldCOMP",
         id: "0x",
       },
       {
