@@ -2,25 +2,6 @@
 
 export default [
   {
-    bpt: "0x00612Eb4F312eB6ace7aCC8781196601078aE339",
-    id: "0x00612eb4f312eb6ace7acc8781196601078ae3390002000000000000000005a2",
-    name: "20GHO-80PSP",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
-        symbol: "GHO",
-        id: "0x",
-      },
-      {
-        address: "0xcAfE001067cDEF266AfB7Eb5A286dCFD277f3dE5",
-        symbol: "PSP",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x01536b22ea06e4A315E3DAAF05a12683Ed4dc14c",
     id: "0x01536b22ea06e4a315e3daaf05a12683ed4dc14c0000000000000000000005fc",
     name: "e-cs-kp-usd",
