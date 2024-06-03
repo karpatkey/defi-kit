@@ -1685,4 +1685,36 @@ export default [
     ],
     rewarder: "0xeF10bD517448D35b14DE213bEF496422aD2468C4",
   },
+  {
+    name: "ECLP-paUSD-GYD",
+    id: "210",
+    bpt: "0xae2D97CbBc13B67988ECEd2abA0F6939655eD3De",
+    tokens: [
+      {
+        address: "0x571f54D23cDf2211C83E9A0CbD92AcA36c48Fa02",
+        symbol: "paUSD",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+      },
+    ],
+    rewarder: "0x01B8209e20B999eE3271A880fA0Ef17cd3eFB1F6",
+  },
+  {
+    name: "ECLP-PAR-EURA",
+    id: "211",
+    bpt: "0x2044aFEF1268100918F88De66a3532Eab3D8f3ef",
+    tokens: [
+      {
+        address: "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
+        symbol: "EURA",
+      },
+      {
+        address: "0x68037790A0229e9Ce6EaA8A99ea92964106C4703",
+        symbol: "PAR",
+      },
+    ],
+    rewarder: "0xdB745558A1b71E5C355aF79c2E54118e753F5c83",
+  },
 ] as const

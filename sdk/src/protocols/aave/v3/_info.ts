@@ -349,4 +349,16 @@ export default [
     stableDebtTokenAddress: "0xBad6eF8e76E26F39e985474aD0974FDcabF85d37",
     variableDebtTokenAddress: "0x77ad9BF13a52517AD698D65913e8D381300c8Bf3",
   },
+  {
+    symbol: "osETH",
+    token: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: true,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x927709711794F3De5DdBF1D176bEE2D55Ba13c21",
+    stableDebtTokenAddress: "0x48Fa27f511F40d16f9E7C913e9388d52d95bC6d2",
+    variableDebtTokenAddress: "0x8838eefF2af391863E1Bb8b1dF563F86743a8470",
+  },
 ] as const
