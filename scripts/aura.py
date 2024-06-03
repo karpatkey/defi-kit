@@ -1,5 +1,5 @@
 from defyes.functions import get_contract, get_symbol, get_node
-from karpatkit.constants import Chain
+from defabipedia import Chain
 from web3.exceptions import ContractLogicError
 from lib.dump import dump
 
