@@ -590,10 +590,6 @@ export default [
     symbol: "WLD",
   },
   {
-    address: "0x4b1D0b9F081468D780Ca1d5d79132b64301085d1",
-    symbol: "LMR",
-  },
-  {
     address: "0x423f4e6138E475D85CF7Ea071AC92097Ed631eea",
     symbol: "PNDC",
   },
@@ -848,6 +844,10 @@ export default [
   {
     address: "0xAcd2c239012D17BEB128B0944D49015104113650",
     symbol: "KARRAT",
+  },
+  {
+    address: "0x69420E3A3aa9E17Dea102Bb3a9b3B73dcDDB9528",
+    symbol: "ELON",
   },
   {
     address: "0x66D79B8f60ec93Bfce0b56F5Ac14A2714E509a99",
@@ -1124,6 +1124,10 @@ export default [
   {
     address: "0x3Ba925fdeAe6B46d0BB4d424D829982Cb2F7309e",
     symbol: "RBX",
+  },
+  {
+    address: "0x25722Cd432d02895d9BE45f5dEB60fc479c8781E",
+    symbol: "SPONGE",
   },
   {
     address: "0x9bf1D7D63dD7a4ce167CF4866388226EEefa702E",

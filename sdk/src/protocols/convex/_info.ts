@@ -2290,4 +2290,11 @@ export default [
     cvxDepositToken: "0x486D36C3Abd5b8EcfCA778358cc2537cdE4D1584",
     rewarder: "0x15D36E55f6e77aa8dbBba99B08DcD81CD7577D95",
   },
+  {
+    name: "pitchFXS-f",
+    id: "354",
+    crvLPToken: "0x0AD66FeC8dB84F8A3365ADA04aB23ce607ac6E24",
+    cvxDepositToken: "0x73Ec592eb69AD5fa01420066D919d480707a9Cc2",
+    rewarder: "0x394A62b52A863A588e90c0dB2C4d9D580Ba00AD4",
+  },
 ] as const
