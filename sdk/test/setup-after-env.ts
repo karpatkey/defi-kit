@@ -1,17 +1,24 @@
+import { utils } from "ethers"
 import { revertToBase } from "./snapshot"
 import { Status } from "./types"
+import { rolesAbi } from "zodiac-roles-sdk/."
 
 global.afterAll(revertToBase)
 
 declare global {
   namespace jest {
     interface Matchers<R> {
-      toRevert(expectedReason?: string | RegExp): CustomMatcherResult
-      toBeAllowed(): CustomMatcherResult
-      toBeForbidden(status?: Status, info?: string): CustomMatcherResult
+      toRevert(expectedReason?: string | RegExp): Promise<CustomMatcherResult>
+      toBeAllowed(): Promise<CustomMatcherResult>
+      toBeForbidden(
+        status?: Status,
+        info?: string
+      ): Promise<CustomMatcherResult>
     }
   }
 }
+
+const iface = new utils.Interface(rolesAbi)
 
 expect.extend({
   async toRevert(received: Promise<any>, expectedReason?: string | RegExp) {
@@ -21,27 +28,14 @@ expect.extend({
         message: () => `Expected call to revert, but it didn't`,
         pass: false,
       }
-    } catch (error: any) {
-      if (typeof error !== "object") {
-        throw error
+    } catch (e: any) {
+      if (!e.error?.error?.data) {
+        throw e
       }
-
-      // find the root cause error with errorSignature revert data in the ethers error stack
-      let rootError = error
-      while (rootError.error && !rootError.data && !rootError.errorSignature) {
-        rootError = rootError.error
-      }
-
-      // re-throw if the error is not a revert
-      const EXPECTED_CODES = ["CALL_EXCEPTION"]
-      if (!EXPECTED_CODES.includes(rootError.code)) {
-        throw error
-      }
+      const error = iface.parseError(e.error.error.data)
 
       // match reason against expectedReason
-      const reason = rootError.errorName
-        ? `${rootError.errorName}(${rootError.errorArgs.join(", ")})`
-        : rootError.data
+      const reason = `${error.name}(${error.args.join(", ")})`
       if (expectedReason !== undefined) {
         const isMatching =
           typeof expectedReason === "string"
@@ -75,15 +69,13 @@ expect.extend({
         message: () => `Expected transaction to not be allowed, but it is`,
         pass: true,
       }
-    } catch (error: any) {
-      if (typeof error !== "object" || error.code !== "CALL_EXCEPTION") {
-        throw error
+    } catch (e: any) {
+      if (!e.error?.error?.data) {
+        throw e
       }
+      const error = iface.parseError(e.error.error.data)
 
-      if (
-        !error.errorSignature ||
-        error.errorSignature !== "ConditionViolation(uint8,bytes32)"
-      ) {
+      if (error.signature !== "ConditionViolation(uint8,bytes32)") {
         console.warn(error)
 
         // if we get here, it's not a permission error
@@ -94,7 +86,7 @@ expect.extend({
         }
       }
 
-      const receivedStatus = error.errorArgs.status
+      const [receivedStatus] = error.args
 
       return {
         message: () =>
@@ -114,15 +106,13 @@ expect.extend({
         message: () => "Expected transaction to be forbidden but it passed",
         pass: false,
       }
-    } catch (error: any) {
-      if (typeof error !== "object" || error.code !== "CALL_EXCEPTION") {
-        throw error
+    } catch (e: any) {
+      if (!e.error?.error?.data) {
+        throw e
       }
+      const error = iface.parseError(e.error.error.data)
 
-      if (
-        !error.errorSignature ||
-        error.errorSignature !== "ConditionViolation(uint8,bytes32)"
-      ) {
+      if (error.signature !== "ConditionViolation(uint8,bytes32)") {
         // if we get here, it's not a permission error
         console.warn(error)
 
@@ -133,8 +123,7 @@ expect.extend({
         }
       }
 
-      const receivedStatus = error.errorArgs.status
-      const receivedInfo = error.errorArgs.info
+      const [receivedStatus, receivedInfo] = error.args
 
       if (status !== undefined) {
         if (receivedStatus !== status) {
@@ -184,12 +173,3 @@ expect.extend({
     }
   },
 })
-
-const getErrorSignature = (error: any) => {
-  if (error.errorSignature) {
-    return {
-      signature: error.errorSignature,
-      args: error.errorArgs,
-    }
-  }
-}
