@@ -21,7 +21,7 @@ const Home = () => (
           By{" "}
           <Image
             src="/karpatkey.png"
-            alt="Karpatkey Logo"
+            alt="karpatkay Logo"
             className={styles.logo}
             width={100}
             height={20}
