@@ -10,6 +10,9 @@ const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
 export const B_80BAL_20WETH = "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56"
 export const B_80BAL_20WETH_PID =
   "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014"
+export const bb_a_USD_v1 = "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2"
+export const bb_a_USD_v2 = "0xA13a9247ea42D743238089903570127DdA72fE44"
+export const bb_a_USD_v3 = "0xfeBb0bbf162E64fb9D0dfe186E517d84C395f016"
 
 export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   const tokenAddresses = pool.tokens
