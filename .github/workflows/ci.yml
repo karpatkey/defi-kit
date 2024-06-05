@@ -6,6 +6,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
+env:
+  FORK_RPC: ${{ secrets.FORK_RPC }}
+
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -36,15 +39,13 @@ jobs:
           yarn
           yarn setup
 
+      - name: Check formatting
+        run: yarn check:prettier
       
-
-          - name: Check formatting
-          run: yarn check:prettier
+      - name: Run tests
+        run: |
+          cd sdk
+          yarn test
 
       - name: Build all packages
-        run: |
-          yarn build
-
-     - name: Build all packages
-        run: |
-          yarn build
+        run: yarn build
