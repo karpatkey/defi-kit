@@ -278,6 +278,10 @@ export default [
     symbol: "PEOPLE",
   },
   {
+    address: "0x3E5D9D8a63CC8a88748f229999CF59487e90721e",
+    symbol: "XMT",
+  },
+  {
     address: "0x8355DBE8B0e275ABAd27eB843F3eaF3FC855e525",
     symbol: "WOOL",
   },
@@ -630,6 +634,10 @@ export default [
     symbol: "FLC",
   },
   {
+    address: "0xf21661D0D1d76d3ECb8e1B9F1c923DBfffAe4097",
+    symbol: "RIO",
+  },
+  {
     address: "0xF19308F923582A6f7c465e5CE7a9Dc1BEC6665B1",
     symbol: "TITANX",
   },
@@ -712,10 +720,6 @@ export default [
   {
     address: "0x4104b135DBC9609Fc1A9490E61369036497660c8",
     symbol: "APW",
-  },
-  {
-    address: "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
-    symbol: "ONDO",
   },
   {
     address: "0x15e6E0D4ebeAC120F9a97e71FaA6a0235b85ED12",
@@ -814,10 +818,6 @@ export default [
     symbol: "ETHFI",
   },
   {
-    address: "0xf94e7d0710709388bCe3161C32B4eEA56d3f91CC",
-    symbol: "DSync",
-  },
-  {
     address: "0x5fAa989Af96Af85384b8a938c2EdE4A7378D9875",
     symbol: "GAL",
   },
@@ -844,10 +844,6 @@ export default [
   {
     address: "0xAcd2c239012D17BEB128B0944D49015104113650",
     symbol: "KARRAT",
-  },
-  {
-    address: "0x69420E3A3aa9E17Dea102Bb3a9b3B73dcDDB9528",
-    symbol: "ELON",
   },
   {
     address: "0x66D79B8f60ec93Bfce0b56F5Ac14A2714E509a99",
@@ -900,10 +896,6 @@ export default [
   {
     address: "0x0F5D2fB29fb7d3CFeE444a200298f468908cC942",
     symbol: "MANA",
-  },
-  {
-    address: "0xf21661D0D1d76d3ECb8e1B9F1c923DBfffAe4097",
-    symbol: "RIO",
   },
   {
     address: "0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828",
@@ -1166,10 +1158,6 @@ export default [
     symbol: "SWISE",
   },
   {
-    address: "0xBAac2B4491727D78D2b78815144570b9f2Fe8899",
-    symbol: "DOG",
-  },
-  {
     address: "0x55C08ca52497e2f1534B59E2917BF524D4765257",
     symbol: "UwU",
   },
@@ -1194,12 +1182,12 @@ export default [
     symbol: "TREE",
   },
   {
-    address: "0x1614F18Fc94f47967A3Fbe5FfcD46d4e7Da3D787",
-    symbol: "PAID",
+    address: "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
+    symbol: "ONDO",
   },
   {
-    address: "0x0001A500A6B18995B03f44bb040A5fFc28E45CB0",
-    symbol: "OLAS",
+    address: "0x1614F18Fc94f47967A3Fbe5FfcD46d4e7Da3D787",
+    symbol: "PAID",
   },
   {
     address: "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
@@ -1266,6 +1254,10 @@ export default [
     symbol: "EAI",
   },
   {
+    address: "0xc555D625828c4527d477e595fF1Dd5801B4a600e",
+    symbol: "MON",
+  },
+  {
     address: "0xF4e21623496ad3Cf88a58B5e3A6b1FD22fDBe3E4",
     symbol: "BENCH",
   },
@@ -1314,10 +1306,6 @@ export default [
     symbol: "LsETH",
   },
   {
-    address: "0xf951E335afb289353dc249e82926178EaC7DEd78",
-    symbol: "swETH",
-  },
-  {
     address: "0x15f74458aE0bFdAA1a96CA1aa779D715Cc1Eefe4",
     symbol: "GRAI",
   },
@@ -1364,10 +1352,6 @@ export default [
   {
     address: "0x661c70333AA1850CcDBAe82776Bb436A0fCfeEfB",
     symbol: "EBTC",
-  },
-  {
-    address: "0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
-    symbol: "ZCHF",
   },
   {
     address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
