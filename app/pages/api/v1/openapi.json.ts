@@ -16,7 +16,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse) => {
         description:
           "Permissions for Zodiac Roles covering interactions with DeFi protocols",
         contact: {
-          name: "karpatkay",
+          name: "karpatkey",
           url: "https://kit.karpatkey.com",
         },
       },

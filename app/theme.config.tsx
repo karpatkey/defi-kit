@@ -78,7 +78,7 @@ const config: DocsThemeConfig = {
             By{" "}
             <Image
               src="/karpatkey.png"
-              alt="karpatkay Logo"
+              alt="karpatkey Logo"
               className="dark:invert"
               width={100}
               height={20}
