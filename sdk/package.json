@@ -42,10 +42,10 @@
     "setup": "eth-sdk",
     "build": "rimraf dist && tsup --format esm,cjs",
     "dev": "tsup --format esm --watch",
-    "anvil": "anvil --silent --fork-url $FORK_RPC",
+    "anvil": "anvil --fork-url ${FORK_RPC:-https://rpc.ankr.com/eth}",
     "test:watch-only": "jest --runInBand --watch",
-    "test": "concurrently --raw --kill-others --success first \"yarn anvil\" \"jest --runInBand\"",
-    "test:watch": "concurrently --raw --kill-others --handle-input --passthrough-arguments \"yarn anvil\" \"jest --runInBand --watch {@}\" --",
+    "test": "env-cmd concurrently --raw --kill-others --success first \"yarn anvil\" \"jest --runInBand\"",
+    "test:watch": "env-cmd concurrently --raw --kill-others --handle-input --passthrough-arguments \"yarn anvil\" \"jest --runInBand --watch {@}\" --",
     "check:types": "tsc --noEmit"
   },
   "dependencies": {
@@ -62,6 +62,7 @@
     "@types/jest": "^29.5.2",
     "@types/wait-on": "^5.3.1",
     "concurrently": "^8.2.1",
+    "env-cmd": "^10.1.0",
     "jest": "^29.7.0",
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
