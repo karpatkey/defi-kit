@@ -96,10 +96,11 @@ const makeTestContract = (contract: BaseContract) => {
             ) {
               rootError = rootError.error
             }
+
             // re-throw if the error is not a revert
             if (
               rootError.message !== "execution reverted" &&
-              rootError.reason !== "execution reverted" &&
+              !rootError.reason.startsWith("execution reverted") &&
               rootError.message !== "call revert exception"
             ) {
               throw error
@@ -112,11 +113,12 @@ const makeTestContract = (contract: BaseContract) => {
               try {
                 rolesError = rolesInterface.getError(selector)
               } catch (e) {}
-              if (rolesError)
+              if (rolesError) {
                 rolesInterface.decodeFunctionResult(
                   "execTransactionWithRole",
                   rootError.data
                 )
+              }
 
               // Otherwise, try decoding the call return data, this will decode the revert reason using the target contract's ABI and throw a better error
               contract.interface.decodeFunctionResult(name, rootError.data)
