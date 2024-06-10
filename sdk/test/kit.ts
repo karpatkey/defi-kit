@@ -83,11 +83,13 @@ const makeTestContract = (contract: BaseContract) => {
               overridesRest
             )
           } catch (error: any) {
+            console.error(error)
+            console.log("CAUGHTERR", { ...error })
             if (typeof error !== "object") {
               throw error
             }
 
-            // find the root cause error with errorSignature revert data in the ethers error stack
+            // find the root cause error with errorSignature or revert data in the ethers error stack
             let rootError = error
             while (
               rootError.error &&
@@ -96,12 +98,18 @@ const makeTestContract = (contract: BaseContract) => {
             ) {
               rootError = rootError.error
             }
-
+            console.log(
+              "ROOTERR",
+              { ...rootError },
+              rootError.message !== "execution reverted" &&
+                rootError.message !== "call revert exception" &&
+                !rootError.reason?.startsWith("execution reverted")
+            )
             // re-throw if the error is not a revert
             if (
               rootError.message !== "execution reverted" &&
-              !rootError.reason?.startsWith("execution reverted") &&
-              rootError.message !== "call revert exception"
+              rootError.message !== "call revert exception" &&
+              !rootError.reason?.startsWith("execution reverted")
             ) {
               throw error
             }
@@ -114,13 +122,14 @@ const makeTestContract = (contract: BaseContract) => {
                 rolesError = rolesInterface.getError(selector)
               } catch (e) {}
               if (rolesError) {
+                // Decode the revert data using Roles ABI. this will throw a better error
                 rolesInterface.decodeFunctionResult(
                   "execTransactionWithRole",
                   rootError.data
                 )
               }
 
-              // Otherwise, try decoding the call return data, this will decode the revert reason using the target contract's ABI and throw a better error
+              // Not a Roles error, try decoding the call return data, this will decode the revert reason using the target contract's ABI and throw a better error
               contract.interface.decodeFunctionResult(name, rootError.data)
               // we should never get here
               throw new Error("invariant violation")
