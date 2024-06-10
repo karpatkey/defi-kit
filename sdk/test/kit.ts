@@ -101,6 +101,7 @@ const makeTestContract = (contract: BaseContract) => {
             console.log(
               "ROOTERR",
               { ...rootError },
+              rootError.message,
               rootError.message !== "execution reverted" &&
                 rootError.message !== "call revert exception" &&
                 !rootError.reason?.startsWith("execution reverted")
