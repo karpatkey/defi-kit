@@ -83,8 +83,6 @@ const makeTestContract = (contract: BaseContract) => {
               overridesRest
             )
           } catch (error: any) {
-            console.error(error)
-            console.log("CAUGHTERR", { ...error })
             if (typeof error !== "object") {
               throw error
             }
@@ -98,18 +96,11 @@ const makeTestContract = (contract: BaseContract) => {
             ) {
               rootError = rootError.error
             }
-            console.log(
-              "ROOTERR",
-              { ...rootError },
-              rootError.message,
-              rootError.message !== "execution reverted" &&
-                rootError.message !== "call revert exception" &&
-                !rootError.reason?.startsWith("execution reverted")
-            )
+
             // re-throw if the error is not a revert
             if (
-              rootError.message !== "execution reverted" &&
-              rootError.message !== "call revert exception" &&
+              !rootError.message.startsWith("execution reverted") &&
+              !rootError.message.startsWith("call revert exception") &&
               !rootError.reason?.startsWith("execution reverted")
             ) {
               throw error
