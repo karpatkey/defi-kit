@@ -42,7 +42,7 @@
     "setup": "eth-sdk",
     "build": "rimraf dist && tsup --format esm,cjs",
     "dev": "tsup --format esm --watch",
-    "anvil": "anvil --fork-url ${FORK_RPC:-https://rpc.ankr.com/eth}",
+    "anvil": "anvil --silent --fork-url ${FORK_RPC:-https://rpc.ankr.com/eth}",
     "test:watch-only": "jest --runInBand --watch",
     "test": "env-cmd --silent concurrently --raw --kill-others --passthrough-arguments --success first \"yarn anvil\" \"jest --runInBand -t {@}\" --",
     "test:watch": "env-cmd --silent concurrently --raw --kill-others --handle-input --passthrough-arguments \"yarn anvil\" \"jest --runInBand --watch {@}\" --",
