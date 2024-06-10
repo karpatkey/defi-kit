@@ -183,8 +183,6 @@ export const mintNFT = async (
     { value: value }
   )
 
-  console.log(mint)
-
   const ownedNfts = await sdk.uniswap_v3.positions_nft.balanceOf(
     avatar._address
   )
