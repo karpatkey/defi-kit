@@ -44,7 +44,7 @@
     "dev": "tsup --format esm --watch",
     "anvil": "anvil --silent --fork-url ${FORK_RPC:-https://rpc.ankr.com/eth}",
     "test:watch-only": "jest --runInBand --watch",
-    "test": "env-cmd --silent concurrently --raw --kill-others --success first \"yarn anvil\" \"jest --runInBand aave/v2/delegate\"",
+    "test": "env-cmd --silent concurrently --raw --kill-others --success first \"yarn anvil\" \"jest --runInBand\"",
     "test:watch": "env-cmd --silent concurrently --raw --kill-others --handle-input --passthrough-arguments \"yarn anvil\" \"jest --runInBand --watch {@}\" --",
     "check:types": "tsc --noEmit"
   },
