@@ -2297,4 +2297,18 @@ export default [
     cvxDepositToken: "0x73Ec592eb69AD5fa01420066D919d480707a9Cc2",
     rewarder: "0x394A62b52A863A588e90c0dB2C4d9D580Ba00AD4",
   },
+  {
+    name: "weeth-ng",
+    id: "355",
+    crvLPToken: "0xDB74dfDD3BB46bE8Ce6C33dC9D82777BCFc3dEd5",
+    cvxDepositToken: "0x3f353d76Ae89dc2C89Dcd0426e7Fa9c96A332273",
+    rewarder: "0x5411CC583f0b51104fA523eEF9FC77A29DF80F58",
+  },
+  {
+    name: "thUSD3CRV",
+    id: "356",
+    crvLPToken: "0x91553BAD9Fbc8bD69Ff5d5678Cbf7D514d00De0b",
+    cvxDepositToken: "0x0cbFD287fb2c78D4864f2bE972e632d1869A21Ce",
+    rewarder: "0x7E44379FF8e35D9d0f81EE232e038Ca4a0968196",
+  },
 ] as const

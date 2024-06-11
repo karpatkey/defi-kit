@@ -360,35 +360,6 @@ export default [
     ],
   },
   {
-    bpt: "0x148CE9b50bE946a96e94A4f5479b771bAB9B1c59",
-    id: "0x148ce9b50be946a96e94a4f5479b771bab9b1c59000100000000000000000054",
-    name: "B-BGP",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x6810e776880C02933D47DB1b9fc05908e5386b96",
-        symbol: "GNO",
-        id: "0x",
-      },
-      {
-        address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-        symbol: "DAI",
-        id: "0x",
-      },
-      {
-        address: "0xba100000625a3754423978a60c9317c58a424e3D",
-        symbol: "BAL",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x178E029173417b1F9C8bC16DCeC6f697bC323746",
     id: "0x178e029173417b1f9c8bc16dcec6f697bc32374600000000000000000000025d",
     name: "FUD",
@@ -3431,25 +3402,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xD278166DAbaf26707362f7CfDd204b277FD2a460",
-    id: "0xd278166dabaf26707362f7cfdd204b277fd2a4600002000000000000000004f6",
-    name: "50USH-50WETH",
-    type: "Weighted",
-    gauge: "0x6B29de6b961F60A494416164B651eeeA71b7aED7",
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xE60779CC1b2c1d0580611c526a8DF0E3f870EC48",
-        symbol: "USH",
         id: "0x",
       },
     ],

@@ -322,6 +322,25 @@ export default [
     ],
   },
   {
+    bpt: "0x9D93F38b75B376AcDFe607cD1ECF4495E047dEfF",
+    id: "0x9d93f38b75b376acdfe607cd1ecf4495e047deff00000000000000000000009e",
+    name: "GBPe/sDAI",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
+        symbol: "GBPe",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xa99FD9950B5D5dCeEaf4939E221dcA8cA9B938aB",
     id: "0xa99fd9950b5d5dceeaf4939e221dca8ca9b938ab000100000000000000000025",
     name: "25WETH-25BAL-25GNO-25wxDAI",
