@@ -2,23 +2,17 @@ name: Continuous integration checks
 
 on: [push]
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
-  cancel-in-progress: true
+env:
+  FORK_RPC: ${{ secrets.FORK_RPC }}
 
 jobs:
-  ci:
+  checks:
     runs-on: ubuntu-latest
-    env:
-      CONFIG_PATH: ${{ github.workspace }}/scripts/config.json
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v3
-
-      - name: Install anvil
-        uses: foundry-rs/foundry-toolchain@v1
-        with:
-          version: nightly
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -29,22 +23,65 @@ jobs:
             .yarn/cache
             .yarn/install-state.gz
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
-
       - name: Install dependencies & setup
         run: |
           yarn -v
           yarn
           yarn setup
 
-      
-
-          - name: Check formatting
-          run: yarn check:prettier
-
+      - name: Check formatting
+        run: yarn check:prettier
       - name: Build all packages
-        run: |
-          yarn build
+        run: yarn build
 
-     - name: Build all packages
+  test:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}-${{ matrix.label }}
+      cancel-in-progress: true
+    strategy:
+      matrix:
+        label:
+          [
+            general,
+            aave,
+            ankr,
+            aura,
+            balancer,
+            compound,
+            convex,
+            cowswap,
+            lido,
+            maker,
+            rocket_pool,
+            spark,
+            stader,
+            stakewise,
+            uniswap,
+          ]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+            .yarn/cache
+            .yarn/install-state.gz
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
+      - name: Install dependencies & setup
         run: |
-          yarn build
+          yarn -v
+          yarn
+          yarn setup
+      - name: Install anvil
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Run tests
+        run: |
+          cd sdk
+          yarn test ${{ matrix.label }}

@@ -29,7 +29,7 @@ describe("ankr", () => {
       ).toBeAllowed()
       await expect(
         testKit.eth.ankr.flashUnstake.swapEth(
-          parseEther("0.01"),
+          parseEther("0.000001"),
           avatar._address
         )
       ).not.toRevert()
