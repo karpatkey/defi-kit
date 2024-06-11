@@ -10,7 +10,7 @@ describe("aave_v3", () => {
   describe("borrow", () => {
     beforeAll(async () => {
       await applyPermissions(await eth.deposit({ targets: ["ETH", "USDC"] }))
-      await applyPermissions(await eth.borrow({ tokens: ["ETH", "USDC"] }))
+      await applyPermissions(await eth.borrow({ targets: ["ETH", "USDC"] }))
     })
 
     it("deposit USDC", async () => {

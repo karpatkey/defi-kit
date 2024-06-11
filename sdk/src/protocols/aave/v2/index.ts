@@ -63,12 +63,12 @@ export const eth = {
   },
 
   borrow: async ({
-    tokens,
+    targets,
   }: {
-    tokens: ("ETH" | Token["symbol"] | Token["token"])[]
+    targets: ("ETH" | Token["symbol"] | Token["token"])[]
   }) => {
-    return tokens.flatMap((token) =>
-      token === "ETH" ? borrowEther() : borrowToken(findToken(token))
+    return targets.flatMap((target) =>
+      target === "ETH" ? borrowEther() : borrowToken(findToken(target))
     )
   },
 
