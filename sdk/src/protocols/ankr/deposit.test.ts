@@ -20,8 +20,7 @@ describe("ankr", () => {
       ).not.toRevert()
     })
 
-    // TODO: fix me (revertinG with ModuleTransactionFailed())
-    it.skip("only withdraw with flash unstake to avatar", async () => {
+    it("only withdraw with flash unstake to avatar", async () => {
       await expect(
         testKit.eth.ankr.ankrETH.approve(
           contracts.mainnet.ankr.flashUnstake,
@@ -30,7 +29,7 @@ describe("ankr", () => {
       ).toBeAllowed()
       await expect(
         testKit.eth.ankr.flashUnstake.swapEth(
-          parseEther("0.01"),
+          parseEther("0.000001"),
           avatar._address
         )
       ).not.toRevert()

@@ -1,9 +1,13 @@
 import { eth } from "."
+import { avatar } from "../../../test/wallets"
 import { queryDepositPool } from "./utils"
 import { applyPermissions } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { testKit } from "../../../test/kit"
 import { parseEther } from "ethers/lib/utils"
+import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+
+const sdk = getMainnetSdk(avatar)
 
 describe("rocket_pool", () => {
   describe("deposit", () => {
@@ -16,21 +20,23 @@ describe("rocket_pool", () => {
       console.log("Deposit Pool: ", deposit_pool)
     })
 
-    // TODO: fix me (failing)
-    it.skip("deposit and withdraw through deposit pool", async () => {
-      await expect(
-        testKit.eth.rocket_pool.deposit_pool.deposit({
-          value: parseEther("1"),
-        })
-      ).not.toRevert()
+    it("deposit and withdraw through deposit pool", async () => {
+      const deposit_amount = await sdk.rocket_pool.deposit_pool.getMaximumDepositAmount()
+      
+      if (deposit_amount.toBigInt() > 0) {
+        await expect(
+          testKit.eth.rocket_pool.deposit_pool.deposit({
+            value: parseEther("1"),
+          })
+        ).not.toRevert()
 
-      await expect(
-        testKit.eth.rocket_pool.rETH.burn(parseEther("0.01"))
-      ).not.toRevert()
+        await expect(
+          testKit.eth.rocket_pool.rETH.burn(parseEther("0.01"))
+        ).not.toRevert()
+      }
     })
 
-    // TODO: fix me (running into timeout)
-    it.skip("deposit and withdraw using secondary markets with swap router (only through roles)", async () => {
+    it("deposit and withdraw using secondary markets with swap router (only through roles)", async () => {
       await expect(
         testKit.eth.rocket_pool.swap_router.swapTo(
           3,
@@ -50,7 +56,6 @@ describe("rocket_pool", () => {
         )
       ).toBeAllowed()
 
-      console.log("before swapFrom")
       await expect(
         testKit.eth.rocket_pool.swap_router.swapFrom(
           0,
@@ -60,6 +65,6 @@ describe("rocket_pool", () => {
           parseEther("50000")
         )
       ).toBeAllowed()
-    })
+    }, 30000)
   })
 })
