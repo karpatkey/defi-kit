@@ -21,8 +21,9 @@ describe("rocket_pool", () => {
     })
 
     it("deposit and withdraw through deposit pool", async () => {
-      const deposit_amount = await sdk.rocket_pool.deposit_pool.getMaximumDepositAmount()
-      
+      const deposit_amount =
+        await sdk.rocket_pool.deposit_pool.getMaximumDepositAmount()
+
       if (deposit_amount.toBigInt() > 0) {
         await expect(
           testKit.eth.rocket_pool.deposit_pool.deposit({
