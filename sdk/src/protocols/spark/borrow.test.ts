@@ -20,7 +20,7 @@ describe("spark", () => {
         await eth.deposit({ targets: ["DAI", "ETH", "sDAI"] })
       )
       await applyPermissions(
-        await eth.borrow({ tokens: ["DAI", "ETH", "sDAI"] })
+        await eth.borrow({ targets: ["DAI", "ETH", "sDAI"] })
       )
     })
 
