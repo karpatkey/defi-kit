@@ -9,12 +9,14 @@ https://aave.com
 | Name                    | Address                                                                                                               |
 | :---------------------- | :-------------------------------------------------------------------------------------------------------------------- |
 | `AaveLendingPoolV3`     | [0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2](https://etherscan.io/address/0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2) |
-| `WrappedTokenGatewayV3` | [0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C](https://etherscan.io/address/0xD322A49006FC828F9B5B37Ab215F99B4E5caB19C) |
+| `WrappedTokenGatewayV3` | [0x893411580e590D62dDBca8a703d61Cc4A8c7b2b9](https://etherscan.io/address/0x893411580e590D62dDBca8a703d61Cc4A8c7b2b9) |
 | `aEthWETH`              | [0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8](https://etherscan.io/address/0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8) |
 | `AAVE`                  | [0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9](https://etherscan.io/address/0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9) |
 | `stkAAVE`               | [0x4da27a545c0c5b758a6ba100e3a049001de870f5](https://etherscan.io/address/0x4da27a545c0c5b758a6ba100e3a049001de870f5) |
-| `ABPT`                  | [0x41A08648C3766F9F9d85598fF102a08f4ef84F84](https://etherscan.io/address/0x41A08648C3766F9F9d85598fF102a08f4ef84F84) |
-| `stkABPT`               | [0xa1116930326D21fB917d5A27F1E9943A9595fb47](https://etherscan.io/address/0xa1116930326D21fB917d5A27F1E9943A9595fb47) |
+| `ABPTV2`                | [0x3de27EFa2F1AA663Ae5D458857e731c129069F29](https://etherscan.io/address/0x3de27EFa2F1AA663Ae5D458857e731c129069F29) |
+| `stkABPTv2`             | [0x9eDA81C21C273a82BE9Bbc19B6A6182212068101](https://etherscan.io/address/0x9eDA81C21C273a82BE9Bbc19B6A6182212068101) |
+| `GHO`                   | [0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f](https://etherscan.io/address/0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f) |
+| `stkGHO`                | [0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d](https://etherscan.io/address/0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d) |
 
 ## Action: `deposit`
 
@@ -44,20 +46,6 @@ Approve `AaveLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar.
   | :-------- | :--------------------------- |
   | `spender` | equal to `AaveLendingPoolV3` |
   | `amount`  | -                            |
-
-#### If TARGET is `WETH`
-
-##### `aEthWETH · approve`
-
-Approve `WrappedTokenGatewayV3` to spend `aEthWETH` tokens on behalf of the avatar.
-
-- **Contract:** `aEthWETH`
-- **Function:** `approve(address,uint256)`
-
-  | Parameter | Constraint                       |
-  | :-------- | :------------------------------- |
-  | `spender` | equal to `WrappedTokenGatewayV3` |
-  | `amount`  | -                                |
 
 #### `AaveLendingPoolV3 · supply`
 
@@ -352,14 +340,14 @@ Claim `AAVE` rewards accrued from staking `AAVE`.
 
 #### `stkAAVE · cooldown`
 
-Initiates a 10 days cooldown period. Ince this is over, the 2 days unstaking window opens.
+Initiates a 20 days cooldown period. Ince this is over, the 2 days unstaking window opens.
 
 - **Contract:** `stkAAVE`
 - **Function:** `cooldown()`
 
 #### `stkAAVE · unstake`
 
-Unstake `AAVE` can only be called during the 2 days unstaking window after the 10 days cooldown period.
+Unstake `AAVE` can only be called during the 2 days unstaking window after the 20 days cooldown period.
 
 - **Contract:** `stkAAVE`
 - **Function:** `redeem(address,uint256)`
@@ -369,27 +357,27 @@ Unstake `AAVE` can only be called during the 2 days unstaking window after the 1
   | `to`      | equal to `AVATAR` |
   | `amount`  | -                 |
 
-### Target: `ABPT`
+### Target: `ABPTV2`
 
-If the `ABPT` token is given as an element of `targets`, the following functions will be allowed:
+If the `ABPTV2` token is given as an element of `targets`, the following functions will be allowed:
 
-#### `ABPT · approve`
+#### `ABPTV2 · approve`
 
-Approve `stkABPT` to spend `ABPT` tokens on behalf of the avatar.
+Approve `stkABPTv2` to spend `ABPTV2` tokens on behalf of the avatar.
 
-- **Contract:** `ABPT`
+- **Contract:** `ABPTV2`
 - **Function:** `approve(address,uint256)`
 
   | Parameter | Constraint         |
   | :-------- | :----------------- |
-  | `spender` | equal to `stkABPT` |
+  | `spender` | equal to `stkABPTv2` |
   | `amount`  | -                  |
 
-#### `stkABPT · stake`
+#### `stkABPTv2 · stake`
 
-Stake `ABPT` in Aave's safety module.
+Stake `ABPTV2` in Aave's safety module.
 
-- **Contract:** `stkABPT`
+- **Contract:** `stkABPTv2`
 - **Function:** `stake(address,uint256)`
 
   | Parameter    | Constraint        |
@@ -397,11 +385,11 @@ Stake `ABPT` in Aave's safety module.
   | `onBehalfOf` | equal to `AVATAR` |
   | `amount`     | -                 |
 
-#### `stkABPT · claimRewards`
+#### `stkABPTv2 · claimRewards`
 
-Claim `ABPT` rewards accrued from staking `ABPT`.
+Claim `ABPTV2` rewards accrued from staking `ABPTV2`.
 
-- **Contract:** `stkABPT`
+- **Contract:** `stkABPTv2`
 - **Function:** `claimRewards(address,uint256)`
 
   | Parameter | Constraint        |
@@ -409,18 +397,77 @@ Claim `ABPT` rewards accrued from staking `ABPT`.
   | `to`      | equal to `AVATAR` |
   | `amount`  | -                 |
 
-#### `stkABPT · cooldown`
+#### `stkABPTv2 · cooldown`
 
-Initiates a 10 days cooldown period. Once this is over, the 2 days unstaking window opens.
+Initiates a 20 days cooldown period. Once this is over, the 2 days unstaking window opens.
 
-- **Contract:** `stkABPT`
+- **Contract:** `stkABPTv2`
 - **Function:** `cooldown()`
 
-#### `stkABPT · unstake`
+#### `stkABPTv2 · unstake`
 
-Unstake `ABPT` can only be called during the 2 days unstaking window after the 10 days cooldown period.
+Unstake `ABPTV2` can only be called during the 2 days unstaking window after the 20 days cooldown period.
 
-- **Contract:** `stkABPT`
+- **Contract:** `stkABPTv2`
+- **Function:** `redeem(address,uint256)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `to`      | equal to `AVATAR` |
+  | `amount`  | -                 |
+
+### Target: `GHO`
+
+If the `GHO` token is given as an element of `targets`, the following functions will be allowed:
+
+#### `GHO · approve`
+
+Approve `stkGHO` to spend `GHO` tokens on behalf of the avatar.
+
+- **Contract:** `GHO`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `spender` | equal to `stkGHO` |
+  | `amount`  | -                 |
+
+#### `stkGHO · stake`
+
+Stake `GHO` in Aave's safety module.
+
+- **Contract:** `stkGHO`
+- **Function:** `stake(address,uint256)`
+
+  | Parameter    | Constraint        |
+  | :----------- | :---------------- |
+  | `onBehalfOf` | equal to `AVATAR` |
+  | `amount`     | -                 |
+
+#### `stkGHO · claimRewards`
+
+Claim `AAVE` rewards accrued from staking `GHO`.
+
+- **Contract:** `stkGHO`
+- **Function:** `claimRewards(address,uint256)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `to`      | equal to `AVATAR` |
+  | `amount`  | -                 |
+
+#### `stkGHO · cooldown`
+
+Initiates a 20 days cooldown period. Once this is over, the 2 days unstaking window opens.
+
+- **Contract:** `stkGHO`
+- **Function:** `cooldown()`
+
+#### `stkGHO · unstake`
+
+Unstake `GHO` can only be called during the 2 days unstaking window after the 20 days cooldown period.
+
+- **Contract:** `stkGHO`
 - **Function:** `redeem(address,uint256)`
 
   | Parameter | Constraint        |

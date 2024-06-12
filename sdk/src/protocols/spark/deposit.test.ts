@@ -8,13 +8,16 @@ import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
 import { parseEther, parseUnits } from "ethers/lib/utils"
 import { ethers } from "ethers"
 
+const MAX_AMOUNT =
+  115792089237316195423570985008687907853269984665640564039457584007913129639935n
+
 const sdk = getMainnetSdk(avatar)
 
 describe("spark", () => {
   describe("deposit", () => {
     beforeAll(async () => {
       await applyPermissions(
-        await eth.deposit({ targets: ["DSR_sDAI", "ETH", "USDC"] })
+        await eth.deposit({ targets: ["DSR_sDAI", "ETH", "USDC", "WETH"] })
       )
     })
 
@@ -85,6 +88,78 @@ describe("spark", () => {
           )
         ).toRevert()
       }
+    })
+
+    // Test with WETH
+    it("only allows depositing WETH on behalf of avatar", async () => {
+      await stealErc20(
+        contracts.mainnet.weth,
+        parseEther("1"),
+        contracts.mainnet.balancer.vault
+      )
+      await expect(
+        testKit.eth.weth.approve(
+          contracts.mainnet.spark.sparkLendingPoolV3,
+          parseEther("1")
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.spark.sparkLendingPoolV3.supply(
+          contracts.mainnet.weth,
+          parseEther("1"),
+          avatar._address,
+          0
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.spark.sparkLendingPoolV3.supply(
+          contracts.mainnet.weth,
+          parseEther("1"),
+          member._address,
+          0
+        )
+      ).toBeForbidden(Status.ParameterNotAllowed)
+    })
+
+    it("only allows withdrawing WETH from avatars' position", async () => {
+      await expect(
+        testKit.eth.spark.sparkLendingPoolV3.withdraw(
+          contracts.mainnet.weth,
+          parseEther("1"),
+          avatar._address
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.spark.sparkLendingPoolV3.withdraw(
+          contracts.mainnet.weth,
+          parseEther("1"),
+          member._address
+        )
+      ).toBeForbidden(Status.ParameterNotAllowed)
+    })
+
+    // Claim rewards to avatar
+    it("only claim rewards to avatar", async () => {
+      await expect(
+        testKit.eth.spark.RewardsController.claimRewards(
+          [contracts.mainnet.spark.spWETH],
+          MAX_AMOUNT,
+          avatar._address,
+          contracts.mainnet.lido.wsteth
+        )
+      ).not.toRevert()
+
+      await expect(
+        testKit.eth.spark.RewardsController.claimRewards(
+          [contracts.mainnet.spark.spWETH],
+          MAX_AMOUNT,
+          member._address,
+          contracts.mainnet.lido.wsteth
+        )
+      ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     // Test with USDC

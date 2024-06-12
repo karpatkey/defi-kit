@@ -36,10 +36,10 @@ export const eth = {
       throw new Error("Either `targets` or `tokens` must be specified.")
     }
 
-    const mintFees = fees?.map((fee) => FeeMapping[fee]) || undefined
-    console.log("mintFees: ", mintFees)
-    console.log("tokens: ", tokens)
+    if (targets && targets.length === 0)
+      throw new Error("`targets` must not be empty")
 
+    const mintFees = fees?.map((fee) => FeeMapping[fee]) || undefined
     const nftIds =
       targets &&
       targets.map((target) => {
@@ -51,7 +51,7 @@ export const eth = {
         }
       })
 
-    const tokensForTargets = nftIds && (await queryTokens(nftIds))
+    const tokensForTargets = (nftIds && (await queryTokens(nftIds))) || []
 
     const mintTokenAddresses =
       tokens?.map((addressOrSymbol) => findToken(ethInfo, addressOrSymbol)) ||
@@ -64,29 +64,14 @@ export const eth = {
       ...allowErc20Approve(mintTokenAddresses, [
         contracts.mainnet.uniswap_v3.positions_nft,
       ]),
-      {
-        ...allow.mainnet.uniswap_v3.positions_nft.mint(
-          {
-            recipient: c.avatar,
-            token0: oneOf(mintTokenAddresses),
-            token1: oneOf(mintTokenAddresses),
-            fee: mintFees ? oneOf(mintFees) : undefined,
-          },
-          {
-            send: true,
-          }
-        ),
-      },
-      {
-        ...allow.mainnet.uniswap_v3.positions_nft.increaseLiquidity(
-          {
-            tokenId: nftIds ? oneOf(nftIds) : c.avatarIsOwnerOfErc721,
-          },
-          {
-            send: true,
-          }
-        ),
-      },
+      allow.mainnet.uniswap_v3.positions_nft.increaseLiquidity(
+        {
+          tokenId: nftIds ? oneOf(nftIds) : c.avatarIsOwnerOfErc721,
+        },
+        {
+          send: true,
+        }
+      ),
       allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(
         nftIds
           ? {
@@ -99,6 +84,22 @@ export const eth = {
         recipient: c.avatar,
       }),
     ]
+
+    if (mintTokenAddresses && mintTokenAddresses.length > 0) {
+      permissions.push(
+        allow.mainnet.uniswap_v3.positions_nft.mint(
+          {
+            recipient: c.avatar,
+            token0: oneOf(mintTokenAddresses),
+            token1: oneOf(mintTokenAddresses),
+            fee: mintFees && mintFees.length > 0 ? oneOf(mintFees) : undefined,
+          },
+          {
+            send: true,
+          }
+        )
+      )
+    }
 
     if (
       mintTokenAddresses.includes(contracts.mainnet.weth) ||

@@ -16,7 +16,7 @@ export const depositDsr = (): Permission[] => {
 }
 
 export const depositToken = (token: Token) => {
-  const permissions = [
+  return [
     ...allowErc20Approve(
       [token.token],
       [contracts.mainnet.spark.sparkLendingPoolV3]
@@ -34,18 +34,12 @@ export const depositToken = (token: Token) => {
     allow.mainnet.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
       token.token
     ),
+    allow.mainnet.spark.RewardsController.claimRewards(
+      undefined,
+      undefined,
+      c.avatar
+    ),
   ]
-
-  if (token.symbol === "WETH") {
-    permissions.push(
-      ...allowErc20Approve(
-        [contracts.mainnet.spark.spWETH],
-        [contracts.mainnet.spark.wrappedTokenGatewayV3]
-      )
-    )
-  }
-
-  return permissions
 }
 
 export const depositEther = () => [
@@ -66,6 +60,11 @@ export const depositEther = () => [
   ),
   allow.mainnet.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
     contracts.mainnet.weth
+  ),
+  allow.mainnet.spark.RewardsController.claimRewards(
+    undefined,
+    undefined,
+    c.avatar
   ),
 ]
 

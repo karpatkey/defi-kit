@@ -1,5 +1,5 @@
 from defyes.functions import get_contract, get_symbol, get_node
-from karpatkit.constants import Chain
+from defabipedia import Chain
 from lib.dump import dump
 import requests
 

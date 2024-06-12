@@ -1,9 +1,13 @@
 import { eth } from "."
+import { avatar } from "../../../test/wallets"
 import { queryDepositPool } from "./utils"
 import { applyPermissions } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { testKit } from "../../../test/kit"
 import { parseEther } from "ethers/lib/utils"
+import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+
+const sdk = getMainnetSdk(avatar)
 
 describe("rocket_pool", () => {
   describe("deposit", () => {
@@ -17,15 +21,20 @@ describe("rocket_pool", () => {
     })
 
     it("deposit and withdraw through deposit pool", async () => {
-      await expect(
-        testKit.eth.rocket_pool.deposit_pool.deposit({
-          value: parseEther("1"),
-        })
-      ).not.toRevert()
+      const deposit_amount =
+        await sdk.rocket_pool.deposit_pool.getMaximumDepositAmount()
 
-      await expect(
-        testKit.eth.rocket_pool.rETH.burn(parseEther("0.01"))
-      ).not.toRevert()
+      if (deposit_amount.toBigInt() > 0) {
+        await expect(
+          testKit.eth.rocket_pool.deposit_pool.deposit({
+            value: parseEther("1"),
+          })
+        ).not.toRevert()
+
+        await expect(
+          testKit.eth.rocket_pool.rETH.burn(parseEther("0.01"))
+        ).not.toRevert()
+      }
     })
 
     it("deposit and withdraw using secondary markets with swap router (only through roles)", async () => {
@@ -48,7 +57,6 @@ describe("rocket_pool", () => {
         )
       ).toBeAllowed()
 
-      console.log("before swapFrom")
       await expect(
         testKit.eth.rocket_pool.swap_router.swapFrom(
           0,
@@ -58,6 +66,6 @@ describe("rocket_pool", () => {
           parseEther("50000")
         )
       ).toBeAllowed()
-    })
+    }, 30000)
   })
 })

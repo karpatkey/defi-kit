@@ -13,6 +13,7 @@ https://spark.fi/
 | `spWETH`                | [0x59cD1C87501baa753d0B5B5Ab5D8416A45cD71DB](https://etherscan.io/address/0x59cD1C87501baa753d0B5B5Ab5D8416A45cD71DB) |
 | `variableDebtWETH`      | [0x2e7576042566f8D6990e07A1B61Ad1efd86Ae70d](https://etherscan.io/address/0x2e7576042566f8D6990e07A1B61Ad1efd86Ae70d) |
 | `sDAI`                  | [0x83F20F44975D03b1b09e64809B757c47f942BEeA](https://etherscan.io/address/0x83F20F44975D03b1b09e64809B757c47f942BEeA) |
+| `RewardsController`     | [0x4370D3b6C9588E02ce9D22e684387859c7Ff5b34](https://etherscan.io/address/0x4370D3b6C9588E02ce9D22e684387859c7Ff5b34) |
 
 ## Action: `deposit`
 
@@ -42,18 +43,6 @@ Approve `SparkLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar.
   | :-------- | :---------------------------- |
   | `spender` | equal to `SparkLendingPoolV3` |
   | `amount`  | -                             |
-
-#### `spWETH · approve`
-
-Approve `WrappedTokenGatewayV3` to spend `spWETH` tokens on behalf of the avatar.
-
-- **Contract:** `spWETH`
-- **Function:** `approve(address,uint256)`
-
-  | Parameter | Constraint                       |
-  | :-------- | :------------------------------- |
-  | `spender` | equal to `WrappedTokenGatewayV3` |
-  | `amount`  | -                                |
 
 #### `SparkLendingPoolV3 · supply`
 
@@ -93,6 +82,20 @@ Redeem `spToken` and withdraw `TARGET`.
   | `asset`   | equal to `TARGET` |
   | `amount`  | -                 |
   | `to`      | equal to `AVATAR` |
+
+#### `RewardsController · claimRewards`
+
+Claim rewards.
+
+- **Contract:** `RewardsController`
+- **Function:** `claimRewards(address[],uint256,address,address)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `assets`  | -                 |
+  | `amount`  | -                 |
+  | `to`      | equal to `AVATAR` |
+  | `reward`  | -                 |
 
 ### Target: ETH
 
@@ -147,6 +150,20 @@ Redeem `spWETH` and withdraw ETH.
   | `address` | equal to `SparkLendingPoolV3` |
   | `amount`  | -                             |
   | `to`      | equal to `AVATAR`             |
+
+#### `RewardsController · claimRewards`
+
+Claim rewards.
+
+- **Contract:** `RewardsController`
+- **Function:** `claimRewards(address[],uint256,address,address)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `assets`  | -                 |
+  | `amount`  | -                 |
+  | `to`      | equal to `AVATAR` |
+  | `reward`  | -                 |
 
 ### Target: DSR_sDAI
 

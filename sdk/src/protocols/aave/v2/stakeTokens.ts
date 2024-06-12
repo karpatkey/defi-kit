@@ -4,7 +4,11 @@ export default [
     symbol: "AAVE",
   },
   {
-    address: "0x41A08648C3766F9F9d85598fF102a08f4ef84F84",
-    symbol: "ABPT",
+    address: "0x3de27efa2f1aa663ae5d458857e731c129069f29",
+    symbol: "ABPTV2",
+  },
+  {
+    address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+    symbol: "GHO",
   },
 ] as const

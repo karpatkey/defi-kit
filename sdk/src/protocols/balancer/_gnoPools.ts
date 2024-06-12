@@ -45,6 +45,25 @@ export default [
     ],
   },
   {
+    bpt: "0x17794DB163DD298bbA1FfA4d42918C6b8474D948",
+    id: "0x17794db163dd298bba1ffa4d42918c6b8474d94800020000000000000000008b",
+    name: "10REG-90USDC",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x0AA1e96D2a46Ec6beB2923dE1E61Addf5F5f1dce",
+        symbol: "REG",
+        id: "0x",
+      },
+      {
+        address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
+        symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x2086f52651837600180dE173B09470F54EF74910",
     id: "0x2086f52651837600180de173b09470f54ef7491000000000000000000000004f",
     name: "staBAL3",
@@ -83,6 +102,25 @@ export default [
       {
         address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
         symbol: "GNO",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x22D3f4E4Dada5d7a3007a58DD191897AD8578160",
+    id: "0x22d3f4e4dada5d7a3007a58dd191897ad8578160000200000000000000000089",
+    name: "50REG-50sDAI",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x0AA1e96D2a46Ec6beB2923dE1E61Addf5F5f1dce",
+        symbol: "REG",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
         id: "0x",
       },
     ],
@@ -183,6 +221,25 @@ export default [
     ],
   },
   {
+    bpt: "0x5DC587361652A791A4B271e635B060665A1D4ceF",
+    id: "0x5dc587361652a791a4b271e635b060665a1d4cef00020000000000000000009d",
+    name: "15sDAI-85SLX",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+        id: "0x",
+      },
+      {
+        address: "0xF4F3c1666E750E014DE65c50d0e98B1263E678B8",
+        symbol: "SLX",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x66888E4F35063Ad8bb11506A6fde5024fb4f1dB0",
     id: "0x66888e4f35063ad8bb11506a6fde5024fb4f1db0000100000000000000000053",
     name: "staBAL3-WETH-WBTC-BPT",
@@ -265,6 +322,25 @@ export default [
     ],
   },
   {
+    bpt: "0x9D93F38b75B376AcDFe607cD1ECF4495E047dEfF",
+    id: "0x9d93f38b75b376acdfe607cd1ecf4495e047deff00000000000000000000009e",
+    name: "GBPe/sDAI",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
+        symbol: "GBPe",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xa99FD9950B5D5dCeEaf4939E221dcA8cA9B938aB",
     id: "0xa99fd9950b5d5dceeaf4939e221dca8ca9b938ab000100000000000000000025",
     name: "25WETH-25BAL-25GNO-25wxDAI",
@@ -289,6 +365,25 @@ export default [
       {
         address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
         symbol: "WXDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xa9B2234773cc6A4F3A34A770C52c931CbA5C24B2",
+    id: "0xa9b2234773cc6a4f3a34a770c52c931cba5c24b2000200000000000000000087",
+    name: "50SAFE-50GNO",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4d18815D14fe5c3304e87B3FA18318baa5c23820",
+        symbol: "SAFE",
+        id: "0x",
+      },
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
         id: "0x",
       },
     ],
@@ -389,6 +484,25 @@ export default [
     ],
   },
   {
+    bpt: "0xdccAa73705dC7457bcfb3dAFEe529B30920e3008",
+    id: "0xdccaa73705dc7457bcfb3dafee529b30920e300800020000000000000000009a",
+    name: "50GIV-50GNO",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4f4F9b8D5B4d0Dc10506e5551B0513B61fD59e75",
+        symbol: "GIV",
+        id: "0x",
+      },
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xDd439304A77f54B1F7854751Ac1169b279591Ef7",
     id: "0xdd439304a77f54b1f7854751ac1169b279591ef7000000000000000000000064",
     name: "EURe/sDAI",
@@ -408,6 +522,25 @@ export default [
     ],
   },
   {
+    bpt: "0xe2343512dcF8a23d81E6cdc2Fac656Db1FF83aA1",
+    id: "0xe2343512dcf8a23d81e6cdc2fac656db1ff83aa100020000000000000000009b",
+    name: "50WBTC-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252",
+        symbol: "WBTC",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xEA54604e7E1DdEc8320cF838CFE857FbF44Aad9f",
     id: "0xea54604e7e1ddec8320cf838cfe857fbf44aad9f000200000000000000000078",
     name: "B-50GBPe-50WXDAI",
@@ -422,40 +555,6 @@ export default [
       {
         address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
         symbol: "WXDAI",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xEb30C85CC528537f5350CF5684Ce6a4538e13394",
-    id: "0xeb30c85cc528537f5350cf5684ce6a4538e13394000200000000000000000059",
-    name: "B-50USD-50wstETH",
-    type: "Weighted",
-    gauge: "0xef23C2Ec60A1ea3Ed6a44681Fb72356cB411177e",
-    tokens: [
-      {
-        address: "0x2086f52651837600180dE173B09470F54EF74910",
-        symbol: "staBAL3",
-        id: "0x2086f52651837600180de173b09470f54ef7491000000000000000000000004f",
-      },
-      {
-        address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
-        symbol: "USDT",
-        id: "0x",
-      },
-      {
-        address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
-        symbol: "WXDAI",
-        id: "0x",
-      },
-      {
-        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
-        symbol: "wstETH",
         id: "0x",
       },
     ],

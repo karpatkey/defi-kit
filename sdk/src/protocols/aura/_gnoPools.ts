@@ -14,10 +14,6 @@ export default [
         address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
         symbol: "wstETH",
       },
-      {
-        address: "0xbAd20c15A773bf03ab973302F61FAbceA5101f0A",
-        symbol: "bb-WETH-wstETH",
-      },
     ],
     rewarder: "0x026d163C28cC7dbf57d6ED57f14208Ee412CA526",
   },
@@ -42,10 +38,6 @@ export default [
     id: "10",
     bpt: "0x2086f52651837600180dE173B09470F54EF74910",
     tokens: [
-      {
-        address: "0x2086f52651837600180dE173B09470F54EF74910",
-        symbol: "staBAL3",
-      },
       {
         address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
         symbol: "USDT",
@@ -118,10 +110,6 @@ export default [
     id: "14",
     bpt: "0x0C1B9CE6Bf6C01f587C2ee98b0ef4B20C6648753",
     tokens: [
-      {
-        address: "0x0C1B9CE6Bf6C01f587C2ee98b0ef4B20C6648753",
-        symbol: "EURe/staBAL3",
-      },
       {
         address: "0x2086f52651837600180dE173B09470F54EF74910",
         symbol: "staBAL3",
@@ -198,10 +186,6 @@ export default [
         address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
         symbol: "EURe",
       },
-      {
-        address: "0xDd439304A77f54B1F7854751Ac1169b279591Ef7",
-        symbol: "EURe/sDAI",
-      },
     ],
     rewarder: "0xDE151980d461696543aa07A19BbE2603B20ECbAE",
   },
@@ -247,10 +231,6 @@ export default [
         symbol: "USDT",
       },
       {
-        address: "0x7644fA5D0eA14FcF3E813Fdf93ca9544f8567655",
-        symbol: "sBAL3",
-      },
-      {
         address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
         symbol: "sDAI",
       },
@@ -271,10 +251,6 @@ export default [
         symbol: "stEUR",
       },
       {
-        address: "0x06135A9Ae830476d3a941baE9010B63732a055F4",
-        symbol: "stEUR/EURe",
-      },
-      {
         address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
         symbol: "EURe",
       },
@@ -293,10 +269,6 @@ export default [
       {
         address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
         symbol: "sDAI",
-      },
-      {
-        address: "0xc9F00C3a713008DDf69b768d90d4978549bFDF94",
-        symbol: "crvUSD/sDAI",
       },
     ],
     rewarder: "0xFaD4505C5bF3D3654bA7C97A0Cea6e7B35882959",
