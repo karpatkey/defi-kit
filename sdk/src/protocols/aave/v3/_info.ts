@@ -373,4 +373,16 @@ export default [
     stableDebtTokenAddress: "0x43Cc8AD0c223b38D9c04802bB184A2D97e497D38",
     variableDebtTokenAddress: "0x015396E1F286289aE23a762088E863b3ec465145",
   },
+  {
+    symbol: "ETHx",
+    token: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: true,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x1c0E06a0b1A4c160c17545FF2A951bfcA57C0002",
+    stableDebtTokenAddress: "0xBDfa7DE5CF7a7DdE4F023Cac842BF520fcF5395C",
+    variableDebtTokenAddress: "0x08a8Dc81AeA67F84745623aC6c72CDA3967aab8b",
+  },
 ] as const

@@ -2061,25 +2061,6 @@ export default [
     ],
   },
   {
-    bpt: "0x80bE0c303D8Ad2A280878b50a39B1ee8E54DBD22",
-    id: "0x80be0c303d8ad2a280878b50a39b1ee8e54dbd2200020000000000000000000f",
-    name: "B-50LPT-50WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x58b6A8A3302369DAEc383334672404Ee733aB239",
-        symbol: "LPT",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x8167A1117691f39e05e9131cfA88F0e3A620E967",
     id: "0x8167a1117691f39e05e9131cfa88f0e3a620e96700020000000000000000038c",
     name: "20WETH-80T",
@@ -3464,25 +3445,6 @@ export default [
       {
         address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
         symbol: "wstETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xd590931466cdD6d488A25da1E89dD0539723800c",
-    id: "0xd590931466cdd6d488a25da1e89dd0539723800c00020000000000000000042b",
-    name: "50RBN-50USDC",
-    type: "Weighted",
-    gauge: "0x81C452E84B103555C2Dd2DEc0bFABC0c4d6B3065",
-    tokens: [
-      {
-        address: "0x6123B0049F904d730dB3C36a31167D9d4121fA6B",
-        symbol: "RBN",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
         id: "0x",
       },
     ],

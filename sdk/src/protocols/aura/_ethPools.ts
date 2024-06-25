@@ -1717,4 +1717,20 @@ export default [
     ],
     rewarder: "0xdB745558A1b71E5C355aF79c2E54118e753F5c83",
   },
+  {
+    name: "50ZRS-50WETH-BPT",
+    id: "212",
+    bpt: "0x87Cf784Ee055d0260AD3AB7EE40888D4a0A5d364",
+    tokens: [
+      {
+        address: "0x75e88B8c2d34a52a6d36deAda664D7dc9116e4EF",
+        symbol: "ZRS",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0x1c4dC626738968A9BB52223481d0678fFf8893DC",
+  },
 ] as const
