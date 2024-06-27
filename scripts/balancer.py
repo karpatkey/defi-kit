@@ -46,10 +46,10 @@ def subgraph_query_pools(blockchain):
 
     the_graph_apikey = os.getenv('THE_GRAPH_APIKEY')
     if blockchain == Chain.ETHEREUM:
-        # subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
+        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
         subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/C4ayEZP2yTXRAB8vSaTrgN4m9anTe9Mdm2ViyiAuV9TV"
     elif blockchain == Chain.GNOSIS:
-        # subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
+        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
         subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/EJezH1Cp31QkKPaBDerhVPRWsKVZLrDfzjrLqpmv6cGg"
 
     while True:
@@ -92,10 +92,10 @@ def subgraph_query_pool_type(blockchain, pool_id):
     
     the_graph_apikey = os.getenv('THE_GRAPH_APIKEY')
     if blockchain == Chain.ETHEREUM:
-        # subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
+        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
         subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/C4ayEZP2yTXRAB8vSaTrgN4m9anTe9Mdm2ViyiAuV9TV"
     elif blockchain == Chain.GNOSIS:
-        # subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
+        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
         subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/EJezH1Cp31QkKPaBDerhVPRWsKVZLrDfzjrLqpmv6cGg"
 
     # Initialize subgraph
