@@ -6,7 +6,7 @@ import { Chain } from "../../types"
 import { deposit, stake, lock } from "./actions"
 import stakeTokens from "./stakeTokens"
 
-const findPool = (pools: readonly Pool[], nameOrAddressOrId: string) => {
+export const findPool = (pools: readonly Pool[], nameOrAddressOrId: string) => {
   const nameOrAddressOrIdLower = nameOrAddressOrId.toLowerCase()
   const pool = pools.find(
     (pool) =>

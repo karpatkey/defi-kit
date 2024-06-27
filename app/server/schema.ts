@@ -56,17 +56,34 @@ export const prefixedAddress = z.string().transform((val, ctx) => {
   return { chain: chainPrefix.data, address: address.data }
 })
 
-// request query params used by all permissions endpoints (permissions/...) , used for parsing next.js request query params
-export const permissionsQueryBase = z.object({
+// request query params used by all protocol action permissions endpoints (permissions/...) , used for parsing next.js request query params
+export const actionPermissionsQueryBase = z.object({
   chain: chain,
   protocol: z.string(),
 })
 
-// request query params used by all transactions ([mod/[role]/...) endpoints, used for parsing next.js request query params
-export const transactionsQueryBase = z.object({
+// request query params used by all protocol action transactions ([mod/[role]/...) endpoints, used for parsing next.js request query params
+export const actionTransactionsQueryBase = z.object({
   mod: prefixedAddress, // in next.js routes we can only extract full path components, so the `mod` param includes the chain prefix
   role: roleKey,
   protocol: z.string(),
+})
+
+// request query params used by all strategy permissions endpoints (strategy/permissions/...) , used for parsing next.js request query params
+export const strategyPermissionsQueryBase = z.object({
+  chain: chain,
+  type: z.literal("exit"),
+  category: z.string(),
+  name: z.string(),
+})
+
+// request query params used by all strategy transactions (strategy/[mod/[role]/...) endpoints, used for parsing next.js request query params
+export const strategyTransactionsQueryBase = z.object({
+  mod: prefixedAddress, // in next.js routes we can only extract full path components, so the `mod` param includes the chain prefix
+  role: roleKey,
+  type: z.literal("exit"),
+  category: z.string(),
+  name: z.string(),
 })
 
 // request params used by all transactions endpoints, used for generating API docs
