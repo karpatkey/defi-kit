@@ -273,4 +273,52 @@ export default [
     ],
     rewarder: "0xFaD4505C5bF3D3654bA7C97A0Cea6e7B35882959",
   },
+  {
+    name: "ECLP-sDAI-AUSDC",
+    id: "24",
+    bpt: "0x045200C6077f105023000D803F3F95B16B187D70",
+    tokens: [
+      {
+        address: "0x270bA1f35D8b87510D24F693fcCc0da02e6E4EeB",
+        symbol: "stataGnoUSDC",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+    ],
+    rewarder: "0xd48c2A5d7c2Ccf7f0Abf3CC3696ddB081962eD25",
+  },
+  {
+    name: "ECLP-wstETH-WETH",
+    id: "25",
+    bpt: "0x8DD4df4Ce580b9644437f3375e54f1ab09808228",
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+      },
+      {
+        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
+        symbol: "wstETH",
+      },
+    ],
+    rewarder: "0x6869b960599A45396E67C086C6AA5123269291FA",
+  },
+  {
+    name: "ECLP-rETH-WETH",
+    id: "26",
+    bpt: "0x71E1179C5e197FA551BEEC85ca2EF8693c61b85b",
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+      },
+      {
+        address: "0xc791240D1F2dEf5938E2031364Ff4ed887133C3d",
+        symbol: "rETH",
+      },
+    ],
+    rewarder: "0x37748422F82b0c07CCbD40347abC1Da55ac138a0",
+  },
 ] as const

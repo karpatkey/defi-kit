@@ -109,4 +109,16 @@ export default [
     stableDebtTokenAddress: "0x0Dae62F953Ceb2E969fB4dE85f3F9074fa920776",
     variableDebtTokenAddress: "0x529b6158d1D2992E3129F7C69E81a7c677dc3B12",
   },
+  {
+    symbol: "weETH",
+    token: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: false,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x3CFd5C0D4acAA8Faee335842e4f31159fc76B008",
+    stableDebtTokenAddress: "0x5B1F8aF3E6C0BF4d20e8e5220a4e4A3A8fA6Dc0A",
+    variableDebtTokenAddress: "0xc2bD6d2fEe70A0A73a33795BdbeE0368AeF5c766",
+  },
 ] as const

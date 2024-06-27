@@ -145,6 +145,25 @@ export default [
     ],
   },
   {
+    bpt: "0x3B7F9B579cb50B00bDb71672fA1a26F6EAdA9114",
+    id: "0x3b7f9b579cb50b00bdb71672fa1a26f6eada91140002000000000000000000a7",
+    name: "50WETH-50EURe",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
+        symbol: "EURe",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x4683e340a8049261057D5aB1b29C8d840E75695e",
     id: "0x4683e340a8049261057d5ab1b29c8d840e75695e00020000000000000000005a",
     name: "B-50wstETH-50GNO",
@@ -465,6 +484,25 @@ export default [
     ],
   },
   {
+    bpt: "0xC66936a47E6D40DD050A8419B4352825D9082241",
+    id: "0xc66936a47e6d40dd050a8419b4352825d9082241000000000000000000000090",
+    name: "EURe-jEUR",
+    type: "ComposableStable",
+    gauge: "0xe8672E6d593D5D2769266919abB6dAd7b9687608",
+    tokens: [
+      {
+        address: "0x9fB1d52596c44603198fB0aee434fac3a679f702",
+        symbol: "jEUR",
+        id: "0x",
+      },
+      {
+        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
+        symbol: "EURe",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xc9F00C3a713008DDf69b768d90d4978549bFDF94",
     id: "0xc9f00c3a713008ddf69b768d90d4978549bfdf9400000000000000000000006d",
     name: "crvUSD/sDAI",
@@ -574,6 +612,30 @@ export default [
       {
         address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
         symbol: "WXDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xfC095C811fE836Ed12f247BCf042504342B73FB7",
+    id: "0xfc095c811fe836ed12f247bcf042504342b73fb700000000000000000000009f",
+    name: "sBAL3",
+    type: "ComposableStable",
+    gauge: "0x306b2E81Fc7c6F73F2460E3974538D724a88f8a5",
+    tokens: [
+      {
+        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
+        symbol: "USDC.e",
+        id: "0x",
+      },
+      {
+        address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
+        symbol: "USDT",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
         id: "0x",
       },
     ],
