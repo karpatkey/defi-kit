@@ -385,4 +385,16 @@ export default [
     stableDebtTokenAddress: "0xBDfa7DE5CF7a7DdE4F023Cac842BF520fcF5395C",
     variableDebtTokenAddress: "0x08a8Dc81AeA67F84745623aC6c72CDA3967aab8b",
   },
+  {
+    symbol: "sUSDe",
+    token: "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: false,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x4579a27aF00A62C0EB156349f31B345c08386419",
+    stableDebtTokenAddress: "0xc9335dE638f4C96a8330b2FFc44353Bab58774e3",
+    variableDebtTokenAddress: "0xeFFDE9BFA8EC77c14C364055a200746d6e12BeD6",
+  },
 ] as const
