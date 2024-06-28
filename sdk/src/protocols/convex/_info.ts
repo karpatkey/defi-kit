@@ -2374,4 +2374,25 @@ export default [
     cvxDepositToken: "0xd6Ab4Ca1fb1D3993db4d37b04621D28B669b671E",
     rewarder: "0xcE2E915Dd0530E66Cfc34b7421E9A93F09A9A6b5",
   },
+  {
+    name: "USD3eUSD",
+    id: "366",
+    crvLPToken: "0x79586fa680958102154093B795Fdb8EFBc013822",
+    cvxDepositToken: "0xf3Db48031157299a4f26383c6762074Ab10F4f2D",
+    rewarder: "0x01EdE9cA2d9c49cfe7385dC31BB2313c855D29c7",
+  },
+  {
+    name: "ZUNFXUSD",
+    id: "367",
+    crvLPToken: "0x13eA95Ce68185e334d3747539845A3b7643a8cab",
+    cvxDepositToken: "0x60b2C94226bb85772DA80CB184AF67933e04eb38",
+    rewarder: "0xeB503b47F192e83b73Dc39185f61114e94e644B8",
+  },
+  {
+    name: "dgnETHETH+",
+    id: "368",
+    crvLPToken: "0x021cF6B7ebb8c8EFcF21396Eb4c94658976172c7",
+    cvxDepositToken: "0x35df357aDB203646dFB0000853F792A79A82Ab24",
+    rewarder: "0x68366805E9e1Dd58d053Ed4EA4A0a4a346c9393C",
+  },
 ] as const

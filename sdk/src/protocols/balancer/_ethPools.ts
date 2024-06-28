@@ -222,6 +222,25 @@ export default [
     ],
   },
   {
+    bpt: "0x093254005743b7Af89e24F645730Ba2dD8441333",
+    id: "0x093254005743b7af89e24f645730ba2dd84413330002000000000000000006a4",
+    name: "50APW-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4104b135DBC9609Fc1A9490E61369036497660c8",
+        symbol: "APW",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x09B03b7cBB19b3daE94F884cF60dBc3c99a3947b",
     id: "0x09b03b7cbb19b3dae94f884cf60dbc3c99a3947b00000000000000000000066c",
     name: "pyUSD/sDOLA BSP",
@@ -2204,25 +2223,6 @@ export default [
     ],
   },
   {
-    bpt: "0x85370D9e3bb111391cc89F6DE344E80176046183",
-    id: "0x85370d9e3bb111391cc89f6de344e801760461830002000000000000000001ef",
-    name: "CREAM_ETH",
-    type: "Weighted",
-    gauge: "0x9F65d476DD77E24445A48b4FeCdeA81afAA63480",
-    tokens: [
-      {
-        address: "0x2ba592F78dB6436527729929AAf6c908497cB200",
-        symbol: "CREAM",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x87165B659Ba7746907a48763063efA3B323C2B07",
     id: "0x87165b659ba7746907a48763063efa3b323c2b0700020000000000000000002d",
     name: "80BANK-20WETH",
@@ -2603,25 +2603,6 @@ export default [
       {
         address: "0xd084944d3c05CD115C09d072B9F44bA3E0E45921",
         symbol: "FOLD",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x9c6d47Ff73e0F5E51BE5FD53236e3F595C5793F2",
-    id: "0x9c6d47ff73e0f5e51be5fd53236e3f595c5793f200020000000000000000042c",
-    name: "B-cbETH-wstETH-Stable",
-    type: "MetaStable",
-    gauge: "0x01A9502C11f411b494c62746D37e89d6f7078657",
-    tokens: [
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
-        id: "0x",
-      },
-      {
-        address: "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
-        symbol: "cbETH",
         id: "0x",
       },
     ],
@@ -3264,25 +3245,6 @@ export default [
       {
         address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
         symbol: "DAI",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xc88c76dD8b92408Fe9bEa1a54922A31E232d873c",
-    id: "0xc88c76dd8b92408fe9bea1a54922a31e232d873c0002000000000000000005b2",
-    name: "80ASX-20WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x67d85A291fcDC862A78812a3C26d55e28FFB2701",
-        symbol: "ASX",
         id: "0x",
       },
       {
