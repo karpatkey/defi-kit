@@ -39,7 +39,8 @@ jobs:
       - name: Run aura.py
         run: python scripts/aura.py
       - name: Run balancer.py
-        env: THE_GRAPH_APIKEY: ${{ secrets.THE_GRAPH_APIKEY }}
+        env:
+          THE_GRAPH_APIKEY: ${{ secrets.THE_GRAPH_APIKEY }}
         run: python scripts/balancer.py
       - name: Run compound_v2
         run: python scripts/compound_v2.py
