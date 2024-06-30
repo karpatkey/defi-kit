@@ -241,25 +241,6 @@ export default [
     ],
   },
   {
-    bpt: "0x09B03b7cBB19b3daE94F884cF60dBc3c99a3947b",
-    id: "0x09b03b7cbb19b3dae94f884cf60dbc3c99a3947b00000000000000000000066c",
-    name: "pyUSD/sDOLA BSP",
-    type: "ComposableStable",
-    gauge: "0xF849D20a927C892Ad2C476a5cc7E2cDbD9BbC18f",
-    tokens: [
-      {
-        address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-        symbol: "PYUSD",
-        id: "0x",
-      },
-      {
-        address: "0xb45ad160634c528Cc3D2926d9807104FA3157305",
-        symbol: "sDOLA",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x0A8156fdc4B488CB1Bf1c44c7eE944088174Fa30",
     id: "0x0a8156fdc4b488cb1bf1c44c7ee944088174fa30000200000000000000000319",
     name: "80MYC-20WETH",
@@ -336,25 +317,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x0F9FdC4D883f6D85b68CE1B8b96AA706A3538e5B",
-    id: "0x0f9fdc4d883f6d85b68ce1b8b96aa706a3538e5b000200000000000000000675",
-    name: "80gVEC-20vETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x38D64ce1Bdf1A9f24E0Ec469C9cAde61236fB4a0",
-        symbol: "vETH",
-        id: "0x",
-      },
-      {
-        address: "0xb2D007293a421471586D6BC3FBfEB1990fdFa2e6",
-        symbol: "gVEC",
         id: "0x",
       },
     ],
