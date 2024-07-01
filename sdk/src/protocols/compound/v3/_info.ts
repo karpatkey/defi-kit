@@ -51,6 +51,14 @@ export default [
         address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
         symbol: "rETH",
       },
+      {
+        address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+        symbol: "rsETH",
+      },
+      {
+        address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+        symbol: "weETH",
+      },
     ],
   },
 ] as const
