@@ -2395,4 +2395,18 @@ export default [
     cvxDepositToken: "0x35df357aDB203646dFB0000853F792A79A82Ab24",
     rewarder: "0x68366805E9e1Dd58d053Ed4EA4A0a4a346c9393C",
   },
+  {
+    name: "eUSDUSDC",
+    id: "369",
+    crvLPToken: "0x08BfA22bB3e024CDfEB3eca53c0cb93bF59c4147",
+    cvxDepositToken: "0xa3536c636F8D3e72224e9f690dD55C646B63B6c9",
+    rewarder: "0xdD2642EBD57A6e8BF9644040Ef15A39Ad568feC9",
+  },
+  {
+    name: "USD3ETH+",
+    id: "370",
+    crvLPToken: "0x06A2e1521aFDe7f7Dc30d351DCF04408042F536E",
+    cvxDepositToken: "0x1fBDCcDDF7B6CB7c1AE7fa0Ea45FE0AbAF9eBF71",
+    rewarder: "0xE77005903C1Ab09DC89c8f9F76b6a7D346E7b72C",
+  },
 ] as const
