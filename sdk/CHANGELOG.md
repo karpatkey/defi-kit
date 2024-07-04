@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.2](https://github.com/karpatkey/defi-kit/compare/v1.10.1...v1.10.2) (2024-07-04)
+
+
+### Bug Fixes
+
+* Uniswap v3 new subgraph endpoint ([#195](https://github.com/karpatkey/defi-kit/issues/195)) ([3fe87a0](https://github.com/karpatkey/defi-kit/commit/3fe87a0d2b156ee6fb077f0e109dcbcffcf87a50))
+
 ## [1.10.1](https://github.com/karpatkey/defi-kit/compare/v1.10.0...v1.10.1) (2024-06-11)
 
 
