@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.3](https://github.com/karpatkey/defi-kit/compare/v1.10.2...v1.10.3) (2024-07-04)
+
+
+### Bug Fixes
+
+* Bump release on a new version ([#198](https://github.com/karpatkey/defi-kit/issues/198)) ([3175fdc](https://github.com/karpatkey/defi-kit/commit/3175fdc95453cbab21b1067360ff360082ab7f62))
+
 ## [1.10.2](https://github.com/karpatkey/defi-kit/compare/v1.10.1...v1.10.2) (2024-07-04)
 
 
