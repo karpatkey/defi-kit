@@ -1104,6 +1104,40 @@ export default [
     ],
   },
   {
+    bpt: "0x4216d5900a6109bba48418b5e2AB6cc4e61Cf477",
+    id: "0x4216d5900a6109bba48418b5e2ab6cc4e61cf4770000000000000000000006a1",
+    name: "trenSTETH",
+    type: "ComposableStable",
+    gauge: "0x03ac2920378A51d6CA78813b1d7578Dab08d3760",
+    tokens: [
+      {
+        address: "0x5fD13359Ba15A84B76f7F87568309040176167cd",
+        symbol: "amphrETH",
+        id: "0x",
+      },
+      {
+        address: "0x7a4EffD87C2f3C55CA251080b1343b605f327E3a",
+        symbol: "rstETH",
+        id: "0x",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0x84631c0d0081FDe56DeB72F6DE77abBbF6A9f93a",
+        symbol: "Re7LRT",
+        id: "0x",
+      },
+      {
+        address: "0xBEEF69Ac7870777598A04B2bd4771c71212E6aBc",
+        symbol: "steakLRT",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x42ED016F826165C2e5976fe5bC3df540C5aD0Af7",
     id: "0x42ed016f826165c2e5976fe5bc3df540c5ad0af700000000000000000000058b",
     name: "wstETH-rETH-sfrxETH-BPT",

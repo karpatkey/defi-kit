@@ -341,6 +341,25 @@ export default [
     ],
   },
   {
+    bpt: "0x8189c4c96826D016A99986394103DFa9aE41e7ee",
+    id: "0x8189c4c96826d016a99986394103dfa9ae41e7ee0002000000000000000000aa",
+    name: "WXDAI-GNO",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+        id: "0x",
+      },
+      {
+        address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+        symbol: "WXDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x9D93F38b75B376AcDFe607cD1ECF4495E047dEfF",
     id: "0x9d93f38b75b376acdfe607cd1ecf4495e047deff00000000000000000000009e",
     name: "GBPe/sDAI",
