@@ -53,6 +53,8 @@ jobs:
       - name: Run spark
         run: python scripts/spark.py
       - name: Run uniswap_v3
+        env:
+          THE_GRAPH_APIKEY: ${{ secrets.THE_GRAPH_APIKEY }}
         run: python scripts/uniswap_v3.py
 
       - uses: actions/setup-node@v4
