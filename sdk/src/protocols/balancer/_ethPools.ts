@@ -1789,7 +1789,7 @@ export default [
       },
       {
         address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
-        symbol: "InETH",
+        symbol: "genETH",
         id: "0x",
       },
     ],
@@ -3508,25 +3508,6 @@ export default [
       {
         address: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
         symbol: "osETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xDb0cBcF1b8282dedc90e8c2CEFe11041d6d1e9f0",
-    id: "0xdb0cbcf1b8282dedc90e8c2cefe11041d6d1e9f0000200000000000000000431",
-    name: "50SD-50USDC",
-    type: "Weighted",
-    gauge: "0x4dC35eC8562596ddA6aEe8EceE59a76D4d72b83E",
-    tokens: [
-      {
-        address: "0x30D20208d987713f46DFD34EF128Bb16C404D10f",
-        symbol: "SD",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
         id: "0x",
       },
     ],
