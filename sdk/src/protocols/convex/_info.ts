@@ -2409,4 +2409,11 @@ export default [
     cvxDepositToken: "0x1fBDCcDDF7B6CB7c1AE7fa0Ea45FE0AbAF9eBF71",
     rewarder: "0xE77005903C1Ab09DC89c8f9F76b6a7D346E7b72C",
   },
+  {
+    name: "cvcrvUSD",
+    id: "371",
+    crvLPToken: "0xc687141c18F20f7Ba405e45328825579fDdD3195",
+    cvxDepositToken: "0x04f08cAA46a9ADD56dd639709e124aC6F5046f0d",
+    rewarder: "0xAa2a3e2aF248CC6A2401D876ad37738073a53F1B",
+  },
 ] as const

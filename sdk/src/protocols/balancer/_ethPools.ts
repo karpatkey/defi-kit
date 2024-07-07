@@ -226,7 +226,7 @@ export default [
     id: "0x093254005743b7af89e24f645730ba2dd84413330002000000000000000006a4",
     name: "50APW-50WETH",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x2fA29bbfd19314b3fAf170dC7826EF69372203a6",
     tokens: [
       {
         address: "0x4104b135DBC9609Fc1A9490E61369036497660c8",
@@ -1789,7 +1789,7 @@ export default [
       },
       {
         address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
-        symbol: "genETH",
+        symbol: "InETH",
         id: "0x",
       },
     ],
@@ -2599,25 +2599,6 @@ export default [
       {
         address: "0xd084944d3c05CD115C09d072B9F44bA3E0E45921",
         symbol: "FOLD",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x9c6d47Ff73e0F5E51BE5FD53236e3F595C5793F2",
-    id: "0x9c6d47ff73e0f5e51be5fd53236e3f595c5793f200020000000000000000042c",
-    name: "B-cbETH-wstETH-Stable",
-    type: "MetaStable",
-    gauge: "0x01A9502C11f411b494c62746D37e89d6f7078657",
-    tokens: [
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
-        id: "0x",
-      },
-      {
-        address: "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
-        symbol: "cbETH",
         id: "0x",
       },
     ],

@@ -90,6 +90,10 @@ export default [
     symbol: "wNXM",
   },
   {
+    address: "0x0B498ff89709d3838a063f1dFA463091F9801c2b",
+    symbol: "BTC2x-FLI",
+  },
+  {
     address: "0x6c6EE5e31d828De241282B9606C8e98Ea48526E2",
     symbol: "HOT",
   },
@@ -258,6 +262,10 @@ export default [
     symbol: "SIPHER",
   },
   {
+    address: "0x33349B282065b0284d756F0577FB39c158F935e6",
+    symbol: "MPL",
+  },
+  {
     address: "0x0ab87046fBb341D058F17CBC4c1133F25a20a52f",
     symbol: "gOHM",
   },
@@ -362,6 +370,10 @@ export default [
     symbol: "DC",
   },
   {
+    address: "0x430EF9263E76DAE63c84292C3409D61c598E9682",
+    symbol: "PYR",
+  },
+  {
     address: "0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
     symbol: "SAFE",
   },
@@ -400,10 +412,6 @@ export default [
   {
     address: "0x5283D291DBCF85356A21bA090E6db59121208b44",
     symbol: "BLUR",
-  },
-  {
-    address: "0x3446Dd70B2D52A6Bf4a5a192D9b0A161295aB7F9",
-    symbol: "SUDO",
   },
   {
     address: "0xb23d80f5FefcDDaa212212F028021B41DEd428CF",
@@ -666,6 +674,10 @@ export default [
     symbol: "UDW",
   },
   {
+    address: "0xAcd2c239012D17BEB128B0944D49015104113650",
+    symbol: "KARRAT",
+  },
+  {
     address: "0x66D79B8f60ec93Bfce0b56F5Ac14A2714E509a99",
     symbol: "MAPO",
   },
@@ -682,12 +694,12 @@ export default [
     symbol: "PEW",
   },
   {
-    address: "0x3fFEea07a27Fab7ad1df5297fa75e77a43CB5790",
-    symbol: "PEIPEI",
-  },
-  {
     address: "0xFeAc2Eae96899709a43E252B6B92971D32F9C0F9",
     symbol: "ANYONE",
+  },
+  {
+    address: "0xD7fC610F6595b3aA6E24466b5cA166D10a0fbdcb",
+    symbol: "KERN",
   },
   {
     address: "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
@@ -708,6 +720,10 @@ export default [
   {
     address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
     symbol: "LINK",
+  },
+  {
+    address: "0x0D8775F648430679A709E98d2b0Cb6250d2887EF",
+    symbol: "BAT",
   },
   {
     address: "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
@@ -926,6 +942,10 @@ export default [
     symbol: "STFX",
   },
   {
+    address: "0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
+    symbol: "ARB",
+  },
+  {
     address: "0x2dfF88A56767223A5529eA5960Da7A3F5f766406",
     symbol: "ID",
   },
@@ -960,6 +980,10 @@ export default [
   {
     address: "0xBAac2B4491727D78D2b78815144570b9f2Fe8899",
     symbol: "DOG",
+  },
+  {
+    address: "0x467719aD09025FcC6cF6F8311755809d45a5E5f3",
+    symbol: "AXL",
   },
   {
     address: "0x24D73Bca2bD9c3a61E99dFc7cB86D3C379EbDEd7",
@@ -1012,6 +1036,10 @@ export default [
   {
     address: "0xe5018913F2fdf33971864804dDB5fcA25C539032",
     symbol: "OLM",
+  },
+  {
+    address: "0xa84f95eb3DaBdc1bbD613709ef5F2fD42CE5bE8d",
+    symbol: "EAI",
   },
   {
     address: "0xc555D625828c4527d477e595fF1Dd5801B4a600e",
