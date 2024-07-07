@@ -59,6 +59,10 @@ export default [
         address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
         symbol: "weETH",
       },
+      {
+        address: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
+        symbol: "osETH",
+      },
     ],
   },
 ] as const

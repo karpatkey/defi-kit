@@ -229,7 +229,7 @@ export default [
     tokens: [
       {
         address: "0x4b1E2c2762667331Bc91648052F646d1b0d35984",
-        symbol: "agEUR",
+        symbol: "EURA",
         id: "0x",
       },
       {
