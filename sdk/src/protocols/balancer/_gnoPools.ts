@@ -503,25 +503,6 @@ export default [
     ],
   },
   {
-    bpt: "0xC66936a47E6D40DD050A8419B4352825D9082241",
-    id: "0xc66936a47e6d40dd050a8419b4352825d9082241000000000000000000000090",
-    name: "EURe-jEUR",
-    type: "ComposableStable",
-    gauge: "0xe8672E6d593D5D2769266919abB6dAd7b9687608",
-    tokens: [
-      {
-        address: "0x9fB1d52596c44603198fB0aee434fac3a679f702",
-        symbol: "jEUR",
-        id: "0x",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xc9F00C3a713008DDf69b768d90d4978549bFDF94",
     id: "0xc9f00c3a713008ddf69b768d90d4978549bfdf9400000000000000000000006d",
     name: "crvUSD/sDAI",
