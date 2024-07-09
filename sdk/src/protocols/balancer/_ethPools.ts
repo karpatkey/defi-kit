@@ -384,6 +384,25 @@ export default [
     ],
   },
   {
+    bpt: "0x19DF5BB37380186bC8EFc5Ad91516373A2C5459f",
+    id: "0x19df5bb37380186bc8efc5ad91516373a2c5459f000200000000000000000698",
+    name: "20B-baoETH-ETH-BPT-80BAO",
+    type: "Weighted",
+    gauge: "0x7C02ac2BAd481dC4E566D3D54359244f381d58dC",
+    tokens: [
+      {
+        address: "0x1A44E35d5451E0b78621A1B3e7a53DFaA306B1D0",
+        symbol: "B-baoETH-ETH-BPT",
+        id: "0x1a44e35d5451e0b78621a1b3e7a53dfaa306b1d000000000000000000000051b",
+      },
+      {
+        address: "0xCe391315b414D4c7555956120461D21808A69F3A",
+        symbol: "BAO",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x1A44E35d5451E0b78621A1B3e7a53DFaA306B1D0",
     id: "0x1a44e35d5451e0b78621a1b3e7a53dfaa306b1d000000000000000000000051b",
     name: "B-baoETH-ETH-BPT",
@@ -2547,6 +2566,25 @@ export default [
     ],
   },
   {
+    bpt: "0x9412206f58cc72b9b4e340422A95354372A3ec3D",
+    id: "0x9412206f58cc72b9b4e340422a95354372a3ec3d00020000000000000000069a",
+    name: "20B-baoUSD-LUSD-BPT-80BAO",
+    type: "Weighted",
+    gauge: "0x6b9dE817875952Cb23d985AbF6fa9ec4b7f66ad5",
+    tokens: [
+      {
+        address: "0x7E9AfD25F5Ec0eb24d7d4b089Ae7EcB9651c8b1F",
+        symbol: "B-baoUSD-LUSD-BPT",
+        id: "0x7e9afd25f5ec0eb24d7d4b089ae7ecb9651c8b1f000000000000000000000511",
+      },
+      {
+        address: "0xCe391315b414D4c7555956120461D21808A69F3A",
+        symbol: "BAO",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x96646936b91d6B9D7D0c47C496AfBF3D6ec7B6f8",
     id: "0x96646936b91d6b9d7d0c47c496afbf3d6ec7b6f8000200000000000000000019",
     name: "B-50USDC-50WETH",
@@ -3108,6 +3146,30 @@ export default [
       {
         address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
         symbol: "weETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xBA9Cc2cff8858CFa72B28d316F3bf3f31b68E080",
+    id: "0xba9cc2cff8858cfa72b28d316f3bf3f31b68e0800001000000000000000006ab",
+    name: "BTC-ETH-GOLD",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        symbol: "WBTC",
+        id: "0x",
+      },
+      {
+        address: "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
+        symbol: "PAXG",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
         id: "0x",
       },
     ],

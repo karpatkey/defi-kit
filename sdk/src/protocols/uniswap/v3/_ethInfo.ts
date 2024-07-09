@@ -802,6 +802,10 @@ export default [
     symbol: "DUSK",
   },
   {
+    address: "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
+    symbol: "SNT",
+  },
+  {
     address: "0xaA7a9CA87d3694B5755f213B5D04094b8d0F0A6F",
     symbol: "TRAC",
   },
@@ -942,10 +946,6 @@ export default [
     symbol: "STFX",
   },
   {
-    address: "0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
-    symbol: "ARB",
-  },
-  {
     address: "0x2dfF88A56767223A5529eA5960Da7A3F5f766406",
     symbol: "ID",
   },
@@ -1036,10 +1036,6 @@ export default [
   {
     address: "0xe5018913F2fdf33971864804dDB5fcA25C539032",
     symbol: "OLM",
-  },
-  {
-    address: "0xa84f95eb3DaBdc1bbD613709ef5F2fD42CE5bE8d",
-    symbol: "EAI",
   },
   {
     address: "0xc555D625828c4527d477e595fF1Dd5801B4a600e",
