@@ -202,6 +202,10 @@ export default [
     symbol: "AGLD",
   },
   {
+    address: "0x7aE1D57b58fA6411F32948314BadD83583eE0e8C",
+    symbol: "PAPER",
+  },
+  {
     address: "0x92D6C1e31e14520e676a687F0a93788B716BEff5",
     symbol: "DYDX",
   },
@@ -298,6 +302,10 @@ export default [
     symbol: "PDT",
   },
   {
+    address: "0xADe6FDAba1643E4D1eeF68Da7170F234470938c6",
+    symbol: "HARAMBE",
+  },
+  {
     address: "0x3819f64f282bf135d62168C1e513280dAF905e06",
     symbol: "HDRN",
   },
@@ -312,10 +320,6 @@ export default [
   {
     address: "0xAf5191B0De278C7286d6C7CC6ab6BB8A73bA2Cd6",
     symbol: "STG",
-  },
-  {
-    address: "0x9d71CE49ab8A0E6D2a1e7BFB89374C9392FD6804",
-    symbol: "Nvir",
   },
   {
     address: "0xc2544A32872A91F4A553b404C6950e89De901fdb",
@@ -694,6 +698,10 @@ export default [
     symbol: "PEW",
   },
   {
+    address: "0x3fFEea07a27Fab7ad1df5297fa75e77a43CB5790",
+    symbol: "PEIPEI",
+  },
+  {
     address: "0xFeAc2Eae96899709a43E252B6B92971D32F9C0F9",
     symbol: "ANYONE",
   },
@@ -946,12 +954,20 @@ export default [
     symbol: "STFX",
   },
   {
+    address: "0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
+    symbol: "ARB",
+  },
+  {
     address: "0x2dfF88A56767223A5529eA5960Da7A3F5f766406",
     symbol: "ID",
   },
   {
     address: "0x9bf1D7D63dD7a4ce167CF4866388226EEefa702E",
     symbol: "BEN",
+  },
+  {
+    address: "0x12970E6868f88f6557B76120662c1B3E50A646bf",
+    symbol: "LADYS",
   },
   {
     address: "0xd1d2Eb1B1e90B638588728b4130137D262C87cae",
@@ -1036,6 +1052,10 @@ export default [
   {
     address: "0xe5018913F2fdf33971864804dDB5fcA25C539032",
     symbol: "OLM",
+  },
+  {
+    address: "0xa84f95eb3DaBdc1bbD613709ef5F2fD42CE5bE8d",
+    symbol: "EAI",
   },
   {
     address: "0xc555D625828c4527d477e595fF1Dd5801B4a600e",
