@@ -1471,7 +1471,7 @@ export default [
     id: "0x58aadfb1afac0ad7fca1148f3cde6aedf5236b6d00000000000000000000067f",
     name: "rsETH / WETH",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xdf04E3a7ab9857a16FB97174e0f1001aa44380AF",
     tokens: [
       {
         address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
@@ -3870,6 +3870,25 @@ export default [
       {
         address: "0x4C5Cb5D87709387f8821709f7a6664f00DcF0C93",
         symbol: "RAFT",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xe96a45f66bdDA121B24F0a861372A72E8889523d",
+    id: "0xe96a45f66bdda121b24f0a861372a72e8889523d00020000000000000000069b",
+    name: "80TRUF/20LINK",
+    type: "Weighted",
+    gauge: "0xA99280581D6520d336231687Fd8D673bBA97c115",
+    tokens: [
+      {
+        address: "0x38C2a4a7330b22788374B8Ff70BBa513C8D848cA",
+        symbol: "TRUF",
+        id: "0x",
+      },
+      {
+        address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+        symbol: "LINK",
         id: "0x",
       },
     ],
