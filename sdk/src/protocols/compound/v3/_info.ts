@@ -67,6 +67,10 @@ export default [
         address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
         symbol: "WBTC",
       },
+      {
+        address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+        symbol: "ezETH",
+      },
     ],
   },
 ] as const

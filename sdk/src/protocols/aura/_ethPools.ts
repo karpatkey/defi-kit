@@ -1733,4 +1733,80 @@ export default [
     ],
     rewarder: "0x1c4dC626738968A9BB52223481d0678fFf8893DC",
   },
+  {
+    name: "trenSTETH",
+    id: "213",
+    bpt: "0x4216d5900a6109bba48418b5e2AB6cc4e61Cf477",
+    tokens: [
+      {
+        address: "0x5fD13359Ba15A84B76f7F87568309040176167cd",
+        symbol: "amphrETH",
+      },
+      {
+        address: "0x7a4EffD87C2f3C55CA251080b1343b605f327E3a",
+        symbol: "rstETH",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0x84631c0d0081FDe56DeB72F6DE77abBbF6A9f93a",
+        symbol: "Re7LRT",
+      },
+      {
+        address: "0xBEEF69Ac7870777598A04B2bd4771c71212E6aBc",
+        symbol: "steakLRT",
+      },
+    ],
+    rewarder: "0xD1Bc10ef8b46efA5BC7F49AE8E9E87F2c89736D3",
+  },
+  {
+    name: "50WAR-50WETH",
+    id: "214",
+    bpt: "0x5002EB99f569405987d56e53Cec01FbB5DA28968",
+    tokens: [
+      {
+        address: "0xa8258deE2a677874a48F5320670A869D74f0cbC1",
+        symbol: "WAR",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0x07404be4b134bDDCDc6B80a0Ceb6c239DFE003E7",
+  },
+  {
+    name: "20B-baoUSD-LUSD-BPT-80BAO",
+    id: "215",
+    bpt: "0x9412206f58cc72b9b4e340422A95354372A3ec3D",
+    tokens: [
+      {
+        address: "0x7E9AfD25F5Ec0eb24d7d4b089Ae7EcB9651c8b1F",
+        symbol: "B-baoUSD-LUSD-BPT",
+      },
+      {
+        address: "0xCe391315b414D4c7555956120461D21808A69F3A",
+        symbol: "BAO",
+      },
+    ],
+    rewarder: "0x35533f3B146633c025B8781d72F0F12F5f73f669",
+  },
+  {
+    name: "20B-baoETH-ETH-BPT-80BAO",
+    id: "216",
+    bpt: "0x19DF5BB37380186bC8EFc5Ad91516373A2C5459f",
+    tokens: [
+      {
+        address: "0x1A44E35d5451E0b78621A1B3e7a53DFaA306B1D0",
+        symbol: "B-baoETH-ETH-BPT",
+      },
+      {
+        address: "0xCe391315b414D4c7555956120461D21808A69F3A",
+        symbol: "BAO",
+      },
+    ],
+    rewarder: "0xfa15b4173092c832CF7514349F022613E20d396B",
+  },
 ] as const

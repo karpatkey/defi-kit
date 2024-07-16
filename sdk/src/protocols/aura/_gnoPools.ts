@@ -321,4 +321,24 @@ export default [
     ],
     rewarder: "0x37748422F82b0c07CCbD40347abC1Da55ac138a0",
   },
+  {
+    name: "sBAL3",
+    id: "27",
+    bpt: "0xfC095C811fE836Ed12f247BCf042504342B73FB7",
+    tokens: [
+      {
+        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
+        symbol: "USDC.e",
+      },
+      {
+        address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
+        symbol: "USDT",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+    ],
+    rewarder: "0x13E5AA7310b17a8eAF233731dE54EeD95a72e57a",
+  },
 ] as const
