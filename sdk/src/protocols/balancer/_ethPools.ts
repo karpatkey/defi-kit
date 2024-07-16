@@ -1329,6 +1329,44 @@ export default [
     ],
   },
   {
+    bpt: "0x4f883B5C0C01Fe13CeDd05c684f00266b0626e23",
+    id: "0x4f883b5c0c01fe13cedd05c684f00266b0626e230002000000000000000006ad",
+    name: "80wDAG-20USDC",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x2E3CFE45E3EE7C017277f22e35d2f29edC99d570",
+        symbol: "wDAG",
+        id: "0x",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x5002EB99f569405987d56e53Cec01FbB5DA28968",
+    id: "0x5002eb99f569405987d56e53cec01fbb5da28968000200000000000000000696",
+    name: "50WAR-50WETH",
+    type: "Weighted",
+    gauge: "0x7152d543177fd720BC8EC14891c072BCc6f8218b",
+    tokens: [
+      {
+        address: "0xa8258deE2a677874a48F5320670A869D74f0cbC1",
+        symbol: "WAR",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x5122E01D819E58BB2E22528c0D68D310f0AA6FD7",
     id: "0x5122e01d819e58bb2e22528c0d68d310f0aa6fd7000200000000000000000163",
     name: "sNOTE-BPT",
@@ -3151,30 +3189,6 @@ export default [
     ],
   },
   {
-    bpt: "0xBA9Cc2cff8858CFa72B28d316F3bf3f31b68E080",
-    id: "0xba9cc2cff8858cfa72b28d316f3bf3f31b68e0800001000000000000000006ab",
-    name: "BTC-ETH-GOLD",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-        symbol: "WBTC",
-        id: "0x",
-      },
-      {
-        address: "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
-        symbol: "PAXG",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xBaeEC99c90E3420Ec6c1e7A769d2A856d2898e4D",
     id: "0xbaeec99c90e3420ec6c1e7a769d2a856d2898e4d00020000000000000000008a",
     name: "B-50VITA-50WETH",
@@ -3551,6 +3565,25 @@ export default [
       {
         address: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
         symbol: "osETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xDb0cBcF1b8282dedc90e8c2CEFe11041d6d1e9f0",
+    id: "0xdb0cbcf1b8282dedc90e8c2cefe11041d6d1e9f0000200000000000000000431",
+    name: "50SD-50USDC",
+    type: "Weighted",
+    gauge: "0x4dC35eC8562596ddA6aEe8EceE59a76D4d72b83E",
+    tokens: [
+      {
+        address: "0x30D20208d987713f46DFD34EF128Bb16C404D10f",
+        symbol: "SD",
+        id: "0x",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
         id: "0x",
       },
     ],
