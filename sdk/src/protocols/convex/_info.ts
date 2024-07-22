@@ -2458,4 +2458,18 @@ export default [
     cvxDepositToken: "0x0b243F1341d5aB31d1eb9E13eDA5e4239e0991Af",
     rewarder: "0x64973eE75eB00B99E99EEb8c380550a5C4Eb680d",
   },
+  {
+    name: "fxUSDrUSD",
+    id: "378",
+    crvLPToken: "0x52bF165abd26106D810733CC29FAfF68b96DECe8",
+    cvxDepositToken: "0x775fE8CA65a1c5e360Fc8eeA709739601E1451f0",
+    rewarder: "0xE00Da4e45b5ddF09C1E4AB99C7bb47C18687611F",
+  },
+  {
+    name: "USRUSDC",
+    id: "379",
+    crvLPToken: "0x3eE841F47947FEFbE510366E4bbb49e145484195",
+    cvxDepositToken: "0x02F118837f5AcfeA9f028767f2700d1AC0a00107",
+    rewarder: "0x24e7fC74809902E635d1F8998dB72dCfD1dC6a80",
+  },
 ] as const

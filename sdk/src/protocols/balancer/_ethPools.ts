@@ -1329,6 +1329,25 @@ export default [
     ],
   },
   {
+    bpt: "0x49F5bAC6b54a983bEe731abbf5441d7C726bEB99",
+    id: "0x49f5bac6b54a983bee731abbf5441d7c726beb990000000000000000000006b0",
+    name: "XAUt-USDt-BPT",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x68749665FF8D2d112Fa859AA293F07A622782F38",
+        symbol: "XAUt",
+        id: "0x",
+      },
+      {
+        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        symbol: "USDT",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x4f883B5C0C01Fe13CeDd05c684f00266b0626e23",
     id: "0x4f883b5c0c01fe13cedd05c684f00266b0626e230002000000000000000006ad",
     name: "80wDAG-20USDC",
@@ -2128,6 +2147,25 @@ export default [
       {
         address: "0x7945b0A6674b175695e5d1D08aE1e6F13744Abb0",
         symbol: "BaoUSD",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x80bE0c303D8Ad2A280878b50a39B1ee8E54DBD22",
+    id: "0x80be0c303d8ad2a280878b50a39b1ee8e54dbd2200020000000000000000000f",
+    name: "B-50LPT-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x58b6A8A3302369DAEc383334672404Ee733aB239",
+        symbol: "LPT",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
         id: "0x",
       },
     ],
@@ -3584,6 +3622,25 @@ export default [
       {
         address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xDb1f2e1655477d08FB0992f82EEDe0053B8Cd382",
+    id: "0xdb1f2e1655477d08fb0992f82eede0053b8cd3820000000000000000000006ae",
+    name: "shezETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0xB002073210698B0852E34DA6A5e432a04D299205",
+    tokens: [
+      {
+        address: "0x63a0964A36c34E81959da5894ad888800e17405b",
+        symbol: "ShezETH",
+        id: "0x",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
         id: "0x",
       },
     ],
