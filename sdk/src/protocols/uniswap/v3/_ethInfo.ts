@@ -230,10 +230,6 @@ export default [
     symbol: "XMON",
   },
   {
-    address: "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
-    symbol: "SNX",
-  },
-  {
     address: "0x0f2D719407FdBeFF09D87557AbB7232601FD9F29",
     symbol: "SYN",
   },
@@ -542,10 +538,6 @@ export default [
     symbol: "WLD",
   },
   {
-    address: "0x4b1D0b9F081468D780Ca1d5d79132b64301085d1",
-    symbol: "LMR",
-  },
-  {
     address: "0x423f4e6138E475D85CF7Ea071AC92097Ed631eea",
     symbol: "PNDC",
   },
@@ -734,10 +726,6 @@ export default [
     symbol: "UDW",
   },
   {
-    address: "0x857FfC55B1Aa61A7fF847C82072790cAE73cd883",
-    symbol: "EEFI",
-  },
-  {
     address: "0xAcd2c239012D17BEB128B0944D49015104113650",
     symbol: "KARRAT",
   },
@@ -810,6 +798,10 @@ export default [
     symbol: "BAT",
   },
   {
+    address: "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
+    symbol: "SNX",
+  },
+  {
     address: "0xB4EFd85c19999D84251304bDA99E90B92300Bd93",
     symbol: "RPL",
   },
@@ -880,10 +872,6 @@ export default [
   {
     address: "0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26",
     symbol: "OGN",
-  },
-  {
-    address: "0x940a2dB1B7008B6C776d4faaCa729d6d4A4AA551",
-    symbol: "DUSK",
   },
   {
     address: "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
@@ -1042,6 +1030,10 @@ export default [
     symbol: "ID",
   },
   {
+    address: "0x25722Cd432d02895d9BE45f5dEB60fc479c8781E",
+    symbol: "SPONGE",
+  },
+  {
     address: "0x9bf1D7D63dD7a4ce167CF4866388226EEefa702E",
     symbol: "BEN",
   },
@@ -1106,10 +1098,6 @@ export default [
     symbol: "MAVIA",
   },
   {
-    address: "0xD9A442856C234a39a81a089C06451EBAa4306a72",
-    symbol: "pufETH",
-  },
-  {
     address: "0x8C282C35B5E1088bb208991c151182A782637699",
     symbol: "MONAI",
   },
@@ -1158,6 +1146,10 @@ export default [
     symbol: "ATH",
   },
   {
+    address: "0xc8388e437031B09B2c61FC4277469091382A1B13",
+    symbol: "SHOG",
+  },
+  {
     address: "0x74950FC112473caba58193c6bF6412a6f1e4d7d2",
     symbol: "wVTRS",
   },
@@ -1170,12 +1162,20 @@ export default [
     symbol: "ZRO",
   },
   {
+    address: "0x6DF0E641FC9847c0c6Fde39bE6253045440c14d3",
+    symbol: "DINERO",
+  },
+  {
     address: "0x03ab458634910AaD20eF5f1C8ee96F1D6ac54919",
     symbol: "RAI",
   },
   {
     address: "0x853d955aCEf822Db058eb8505911ED77F175b99e",
     symbol: "FRAX",
+  },
+  {
+    address: "0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D",
+    symbol: "renBTC",
   },
   {
     address: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",

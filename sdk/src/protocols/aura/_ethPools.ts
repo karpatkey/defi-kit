@@ -1809,4 +1809,100 @@ export default [
     ],
     rewarder: "0xfa15b4173092c832CF7514349F022613E20d396B",
   },
+  {
+    name: "B-baoETH-wstETH-BPT",
+    id: "217",
+    bpt: "0x8296057Edb832feac03269E9fCE8304EbCbAbCaF",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xf4edfad26EE0D23B69CA93112eccE52704E0006f",
+        symbol: "baoETH",
+      },
+    ],
+    rewarder: "0x489B0846F0F74c19c3785810406eEb914176d332",
+  },
+  {
+    name: "B-baoUSD-sDAI-BPT",
+    id: "218",
+    bpt: "0xC5B3F108024da9776D024fD9CEFa4b48e021f1A2",
+    tokens: [
+      {
+        address: "0x7945b0A6674b175695e5d1D08aE1e6F13744Abb0",
+        symbol: "BaoUSD",
+      },
+      {
+        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+        symbol: "sDAI",
+      },
+    ],
+    rewarder: "0xE9F91Df773104B41aFE2d6d02694fA7AC67E5E96",
+  },
+  {
+    name: "B-baoETH-rETH-BPT",
+    id: "219",
+    bpt: "0xAbC7d08EF73FE3Fb67eFd900F4471CCa788b0899",
+    tokens: [
+      {
+        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
+        symbol: "rETH",
+      },
+      {
+        address: "0xf4edfad26EE0D23B69CA93112eccE52704E0006f",
+        symbol: "baoETH",
+      },
+    ],
+    rewarder: "0xd761D8A5Fd2b6099b512B98139557b68Cc3df736",
+  },
+  {
+    name: "50wstETH-50sUSDe",
+    id: "220",
+    bpt: "0xa8210885430aaA333c9F0D66AB5d0c312beD5E43",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+        symbol: "sUSDe",
+      },
+    ],
+    rewarder: "0x99D9e4D3078f7C9c5b792999749290A54fB87257",
+  },
+  {
+    name: "rsETH / WETH",
+    id: "221",
+    bpt: "0x58AAdFB1Afac0ad7fca1148f3cdE6aEDF5236B6D",
+    tokens: [
+      {
+        address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+        symbol: "rsETH",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0xB5FdB4f75C26798A62302ee4959E4281667557E0",
+  },
+  {
+    name: "uniETH-WETH",
+    id: "222",
+    bpt: "0xdD59f89B5B07B7844d72996fC9d83D81acC82196",
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+      {
+        address: "0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4",
+        symbol: "uniETH",
+      },
+    ],
+    rewarder: "0xF61beaEBfe56AE47Fdd85ECaA9F64ca13A90bc12",
+  },
 ] as const
