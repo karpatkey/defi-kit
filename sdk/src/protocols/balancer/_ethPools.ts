@@ -203,25 +203,6 @@ export default [
     ],
   },
   {
-    bpt: "0x08cC92fEdc1cE2D8525176a63FcfF404450f2998",
-    id: "0x08cc92fedc1ce2d8525176a63fcff404450f2998000200000000000000000542",
-    name: "50B-baoUSD-LUSD-BPT-50BAO",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x7E9AfD25F5Ec0eb24d7d4b089Ae7EcB9651c8b1F",
-        symbol: "B-baoUSD-LUSD-BPT",
-        id: "0x7e9afd25f5ec0eb24d7d4b089ae7ecb9651c8b1f000000000000000000000511",
-      },
-      {
-        address: "0xCe391315b414D4c7555956120461D21808A69F3A",
-        symbol: "BAO",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x093254005743b7Af89e24F645730Ba2dD8441333",
     id: "0x093254005743b7af89e24f645730ba2dd84413330002000000000000000006a4",
     name: "50APW-50WETH",
