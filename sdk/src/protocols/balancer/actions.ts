@@ -19,15 +19,6 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
     .map((token) => token.address)
     .filter((address) => tokens.some((token) => token.address === address))
 
-  const tokenPoolIds = pool.tokens
-    .filter(
-      (token) =>
-        tokens.some((t) => token.address === t.address) &&
-        token.id !== null &&
-        token.id !== "0x"
-    )
-    .map((token) => token.id)
-
   const permissions: Permission[] = [
     ...allowErc20Approve(tokenAddresses, [contracts.mainnet.balancer.vault]),
 
@@ -47,63 +38,73 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
     allow.mainnet.balancer.vault.exitPool(pool.id, c.avatar, c.avatar),
   ]
 
-  if (tokenPoolIds.length > 0) {
-    permissions.push(
-      // With the latest changes that Balancer made, there's no need to swap
-      // tokens in order to join or exit pools
-      // allow.mainnet.balancer.vault.swap(
-      //   { poolId: c.or(...(tokenPoolIds as [string, string, ...string[]])) },
-      //   { recipient: c.avatar, sender: c.avatar }
-      // ),
+  // WARNING: The Relayer permissions have been removed as there is 
+  // no evidence that they are being used for joins or exits.
+  // const tokenPoolIds = pool.tokens
+  //   .filter(
+  //     (token) =>
+  //       tokens.some((t) => token.address === t.address) &&
+  //       token.id !== null &&
+  //       token.id !== "0x"
+  //   )
+  //   .map((token) => token.id)
+  // if (tokenPoolIds.length > 0) {
+  //   permissions.push(
+  //     // With the latest changes that Balancer made, there's no need to swap
+  //     // tokens in order to join or exit pools
+  //     // allow.mainnet.balancer.vault.swap(
+  //     //   { poolId: c.or(...(tokenPoolIds as [string, string, ...string[]])) },
+  //     //   { recipient: c.avatar, sender: c.avatar }
+  //     // ),
 
-      allow.mainnet.balancer.vault.setRelayerApproval(
-        c.avatar,
-        contracts.mainnet.balancer.relayer
-      ),
+  //     allow.mainnet.balancer.vault.setRelayerApproval(
+  //       c.avatar,
+  //       contracts.mainnet.balancer.relayer
+  //     ),
 
-      allow.mainnet.balancer.relayer.multicall(
-        c.every(
-          c.or(
-            c.calldataMatches(
-              allow.mainnet.balancer.relayerLibrary.joinPool(
-                c.or(
-                  pool.id,
-                  ...(tokenPoolIds as [string, string, ...string[]])
-                ),
-                undefined,
-                c.or(c.avatar, contracts.mainnet.balancer.relayer),
-                c.or(c.avatar, contracts.mainnet.balancer.relayer)
-              )
-            ),
-            c.calldataMatches(
-              allow.mainnet.balancer.relayerLibrary.exitPool(
-                c.or(
-                  pool.id,
-                  ...(tokenPoolIds as [string, string, ...string[]])
-                ),
-                undefined,
-                c.avatar,
-                c.avatar
-              )
-            )
-            // With the latest changes that Balancer made, there's no need to swap
-            // tokens in order to join or exit pools
-            // c.calldataMatches(
-            //   allow.mainnet.balancer.relayerLibrary.swap(
-            //     {
-            //       poolId: c.or(
-            //         ...(tokenPoolIds as [string, string, ...string[]])
-            //       ),
-            //     },
-            //     { recipient: c.avatar, sender: c.avatar }
-            //   )
-            // )
-          )
-        ),
-        { send: true }
-      )
-    )
-  }
+  //     allow.mainnet.balancer.relayer.multicall(
+  //       c.every(
+  //         c.or(
+  //           c.calldataMatches(
+  //             allow.mainnet.balancer.relayerLibrary.joinPool(
+  //               c.or(
+  //                 pool.id,
+  //                 ...(tokenPoolIds as [string, string, ...string[]])
+  //               ),
+  //               undefined,
+  //               c.or(c.avatar, contracts.mainnet.balancer.relayer),
+  //               c.or(c.avatar, contracts.mainnet.balancer.relayer)
+  //             )
+  //           ),
+  //           c.calldataMatches(
+  //             allow.mainnet.balancer.relayerLibrary.exitPool(
+  //               c.or(
+  //                 pool.id,
+  //                 ...(tokenPoolIds as [string, string, ...string[]])
+  //               ),
+  //               undefined,
+  //               c.avatar,
+  //               c.avatar
+  //             )
+  //           )
+  //           // With the latest changes that Balancer made, there's no need to swap
+  //           // tokens in order to join or exit pools
+  //           // c.calldataMatches(
+  //           //   allow.mainnet.balancer.relayerLibrary.swap(
+  //           //     {
+  //           //       poolId: c.or(
+  //           //         ...(tokenPoolIds as [string, string, ...string[]])
+  //           //       ),
+  //           //     },
+  //           //     { recipient: c.avatar, sender: c.avatar }
+  //           //   )
+  //           // )
+  //         )
+  //       ),
+  //       { send: true }
+  //     )
+  //   )
+  // }
 
   return permissions
 }
