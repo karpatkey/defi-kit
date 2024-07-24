@@ -64,8 +64,6 @@ export const eth = {
   }: {
     // "targets" is a mandatory parameter
     targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
-    // "tokens" is an optional parameter since the user might want to allow (or not) the depositSingle() function
-    // If "tokens" is not specified then we allow all the pool.tokens[]
     tokens?: (EthToken["address"] | EthToken["symbol"])[]
   }) => {
     return targets.flatMap((target) =>
@@ -100,4 +98,22 @@ export const eth = {
   //   ).flatMap((pool) =>
   //     swap(pool, options.sell?.map(findToken), options.buy?.map(findToken))
   //   ),
+}
+
+export const gno = {
+  deposit: async ({
+    targets,
+    tokens,
+  }: {
+    // "targets" is a mandatory parameter
+    targets: (GnoPool["name"] | GnoPool["bpt"] | GnoPool["id"])[]
+    tokens?: (GnoToken["address"] | GnoToken["symbol"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      deposit(
+        findPool(gnoPools, target),
+        tokens?.map((addressOrSymbol) => findToken(gnoPools, addressOrSymbol))
+      )
+    )
+  },
 }

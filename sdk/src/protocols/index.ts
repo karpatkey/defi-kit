@@ -44,6 +44,7 @@ export const eth = annotateAll(
 export const gno = annotateAll(
   {
     aura: aura.gno,
+    balancer: balancer.gno,
     cowswap: cowswap.gno,
   },
   "gno"
