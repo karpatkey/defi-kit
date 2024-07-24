@@ -38,7 +38,7 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
     allow.mainnet.balancer.vault.exitPool(pool.id, c.avatar, c.avatar),
   ]
 
-  // WARNING: The Relayer permissions have been removed as there is 
+  // WARNING: The Relayer permissions have been removed as there is
   // no evidence that they are being used for joins or exits.
   // const tokenPoolIds = pool.tokens
   //   .filter(
