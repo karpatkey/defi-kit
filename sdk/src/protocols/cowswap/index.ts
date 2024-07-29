@@ -55,8 +55,7 @@ const swap = async (options: {
     allow.mainnet.cowswap.orderSigner.signOrder(
       orderStructScoping,
       undefined,
-      feeAmountBp !== undefined
-        ? c.lte(feeAmountBp) : undefined,
+      feeAmountBp !== undefined ? c.lte(feeAmountBp) : undefined,
       { delegatecall: true }
     ),
 
