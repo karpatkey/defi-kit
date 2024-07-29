@@ -19,7 +19,7 @@ https://swap.cow.fi/
 | :-------------- | :-------------------- | :----------------------------------------------------------------- |
 | `sell`          | _string[] (required)_ | ETH \| `Token` address                                             |
 | `buy`           | _string[] (optional)_ | ETH \| `Token` address                                             |
-| `fee_amount_bp` | _int[] (optional)_    | Fee amount basis points (0-10000), where 0 is 0% and 10000 is 100% |
+| `feeAmountBp` | _int[] (optional)_    | Fee amount basis points (0-10000), where 0 is 0% and 10000 is 100% |
 
 <Callout type="info">
   When using the Pilot Extension, all swaps will be routed through a delegate
@@ -49,7 +49,7 @@ https://swap.cow.fi/
 
 <Callout type="info">
   `FEE_AMOUNT_BP` specifies the fee amount in basis points given in
-  `fee_amount_bp`. It accepts a value between 0 and 10000, where 0 represents 0%
+  `feeAmountBp`. It accepts a value between 0 and 10000, where 0 represents 0%
   and 10000 represents 100%.
 </Callout>
 
@@ -87,7 +87,7 @@ Sign order to swap `SELL_TOKEN` to `BUY_TOKEN`.
   | `order.sellTokenBalance`  | -                                 |
   | `order.buyTokenBalance`   | -                                 |
   | `validDuration`           | -                                 |
-  | `feeAmountBP`             | lower or equal to `FEE_AMOUNT_BP` |
+  | `feeAmountBp`             | lower or equal to `FEE_AMOUNT_BP` |
 
 <Callout type="info">
   The `signOrder` function does not allow sending ETH. Therefore, ETH must be

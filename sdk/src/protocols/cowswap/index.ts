@@ -10,9 +10,9 @@ const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 const swap = async (options: {
   sell: (`0x${string}` | "ETH")[]
   buy?: (`0x${string}` | "ETH")[]
-  fee_amount_bp?: number
+  feeAmountBp?: number
 }) => {
-  const { sell, buy, fee_amount_bp } = options
+  const { sell, buy, feeAmountBp } = options
   const permissions: Permission[] = []
 
   if (sell.length === 0) {
@@ -23,13 +23,13 @@ const swap = async (options: {
       "`buy` must not be an empty array. Pass `undefined` if you want to allow buying any token."
     )
   }
-  if (fee_amount_bp !== undefined) {
+  if (feeAmountBp !== undefined) {
     if (
-      !Number.isInteger(fee_amount_bp) ||
-      fee_amount_bp < 0 ||
-      fee_amount_bp > 10000
+      !Number.isInteger(feeAmountBp) ||
+      feeAmountBp < 0 ||
+      feeAmountBp > 10000
     ) {
-      throw new Error("`fee_amount_bp` must be an integer between 0 and 10000.")
+      throw new Error("`feeAmountBp` must be an integer between 0 and 10000.")
     }
   }
 
@@ -55,8 +55,8 @@ const swap = async (options: {
     allow.mainnet.cowswap.orderSigner.signOrder(
       orderStructScoping,
       undefined,
-      fee_amount_bp !== undefined
-        ? c.lte(fee_amount_bp as BigNumberish)
+      feeAmountBp !== undefined
+        ? c.lte(feeAmountBp as BigNumberish)
         : undefined,
       { delegatecall: true }
     ),
