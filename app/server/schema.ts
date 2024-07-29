@@ -144,7 +144,7 @@ const baseCondition = z.object({
 })
 
 type Condition = z.infer<typeof baseCondition> & {
-  children?: Condition[]
+  children?: readonly Condition[]
 }
 
 export const condition: z.ZodType<Condition> = baseCondition
