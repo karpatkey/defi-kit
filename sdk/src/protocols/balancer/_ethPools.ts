@@ -279,30 +279,6 @@ export default [
     ],
   },
   {
-    bpt: "0x0EC120Ed63212A4Cb018795b43c0B03c59190424",
-    id: "0x0ec120ed63212a4cb018795b43c0b03c5919042400010000000000000000068f",
-    name: "33GOLD-33USDC-33WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x9DeB0fc809955b79c85e82918E8586d3b7d2695a",
-        symbol: "GOLD",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x100A6a9524541E92dd068a9cd3E5DEF16388Fec0",
     id: "0x100a6a9524541e92dd068a9cd3e5def16388fec0000200000000000000000213",
     name: "50COIN-50WETH",
@@ -909,25 +885,6 @@ export default [
       {
         address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
         symbol: "wstETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x3B9Fb87F7d081CEDdb1289258FA5660d955317b6",
-    id: "0x3b9fb87f7d081ceddb1289258fa5660d955317b6000200000000000000000544",
-    name: "50B-baoETH-ETH-BPT-50BAO",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x1A44E35d5451E0b78621A1B3e7a53DFaA306B1D0",
-        symbol: "B-baoETH-ETH-BPT",
-        id: "0x1a44e35d5451e0b78621a1b3e7a53dfaa306b1d000000000000000000000051b",
-      },
-      {
-        address: "0xCe391315b414D4c7555956120461D21808A69F3A",
-        symbol: "BAO",
         id: "0x",
       },
     ],
@@ -2133,25 +2090,6 @@ export default [
     ],
   },
   {
-    bpt: "0x80bE0c303D8Ad2A280878b50a39B1ee8E54DBD22",
-    id: "0x80be0c303d8ad2a280878b50a39b1ee8e54dbd2200020000000000000000000f",
-    name: "B-50LPT-50WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x58b6A8A3302369DAEc383334672404Ee733aB239",
-        symbol: "LPT",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x8167A1117691f39e05e9131cfA88F0e3A620E967",
     id: "0x8167a1117691f39e05e9131cfa88f0e3a620e96700020000000000000000038c",
     name: "20WETH-80T",
@@ -2166,6 +2104,25 @@ export default [
       {
         address: "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5",
         symbol: "T",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x8296057Edb832feac03269E9fCE8304EbCbAbCaF",
+    id: "0x8296057edb832feac03269e9fce8304ebcbabcaf00000000000000000000069c",
+    name: "B-baoETH-wstETH-BPT",
+    type: "ComposableStable",
+    gauge: "0x001EDF44D8aa79922dBE74f57C703EbCe2E13B43",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xf4edfad26EE0D23B69CA93112eccE52704E0006f",
+        symbol: "baoETH",
         id: "0x",
       },
     ],
@@ -2965,6 +2922,25 @@ export default [
     ],
   },
   {
+    bpt: "0xAbC7d08EF73FE3Fb67eFd900F4471CCa788b0899",
+    id: "0xabc7d08ef73fe3fb67efd900f4471cca788b089900000000000000000000069d",
+    name: "B-baoETH-rETH-BPT",
+    type: "ComposableStable",
+    gauge: "0x80f129622dC60f5A7De85cBc98F7e3a99b09E57f",
+    tokens: [
+      {
+        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
+        symbol: "rETH",
+        id: "0x",
+      },
+      {
+        address: "0xf4edfad26EE0D23B69CA93112eccE52704E0006f",
+        symbol: "baoETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xB06bFBD7b50F80c8d9dA57Fc4cF5CBD5B3E2f148",
     id: "0xb06bfbd7b50f80c8d9da57fc4cf5cbd5b3e2f14800000000000000000000064d",
     name: "pxETH/frxETH",
@@ -3327,6 +3303,25 @@ export default [
     ],
   },
   {
+    bpt: "0xC5B3F108024da9776D024fD9CEFa4b48e021f1A2",
+    id: "0xc5b3f108024da9776d024fd9cefa4b48e021f1a200000000000000000000069e",
+    name: "B-baoUSD-sDAI-BPT",
+    type: "ComposableStable",
+    gauge: "0x17753fC89894A5eBD8b327F7d6121038e9240437",
+    tokens: [
+      {
+        address: "0x7945b0A6674b175695e5d1D08aE1e6F13744Abb0",
+        symbol: "BaoUSD",
+        id: "0x",
+      },
+      {
+        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+        symbol: "sDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xC6A5032dC4bF638e15b4a66BC718ba7bA474FF73",
     id: "0xc6a5032dc4bf638e15b4a66bc718ba7ba474ff73000200000000000000000004",
     name: "B-60WETH-40DAI",
@@ -3584,25 +3579,6 @@ export default [
       {
         address: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
         symbol: "osETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xDb0cBcF1b8282dedc90e8c2CEFe11041d6d1e9f0",
-    id: "0xdb0cbcf1b8282dedc90e8c2cefe11041d6d1e9f0000200000000000000000431",
-    name: "50SD-50USDC",
-    type: "Weighted",
-    gauge: "0x4dC35eC8562596ddA6aEe8EceE59a76D4d72b83E",
-    tokens: [
-      {
-        address: "0x30D20208d987713f46DFD34EF128Bb16C404D10f",
-        symbol: "SD",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
         id: "0x",
       },
     ],
