@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/karpatkey/defi-kit/compare/v1.10.4...v1.11.0) (2024-07-29)
+
+
+### Features
+
+* optional feeAmountBP constraint in Cow ([#212](https://github.com/karpatkey/defi-kit/issues/212)) ([8bac172](https://github.com/karpatkey/defi-kit/commit/8bac1723dd8b0e75963e1ae9cb12557cd46094a7))
+
 ## [1.10.4](https://github.com/karpatkey/defi-kit/compare/v1.10.3...v1.10.4) (2024-07-05)
 
 
