@@ -56,8 +56,7 @@ const swap = async (options: {
       orderStructScoping,
       undefined,
       feeAmountBp !== undefined
-        ? c.lte(feeAmountBp as BigNumberish)
-        : undefined,
+        ? c.lte(feeAmountBp) : undefined,
       { delegatecall: true }
     ),
 
