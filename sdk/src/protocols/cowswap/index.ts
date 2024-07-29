@@ -2,7 +2,6 @@ import { allow } from "zodiac-roles-sdk/kit"
 import { allowErc20Approve, oneOf } from "../../conditions"
 import { c, Permission } from "zodiac-roles-sdk"
 import { contracts } from "../../../eth-sdk/config"
-import { BigNumberish } from "ethers"
 
 const GPv2VaultRelayer = "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
@@ -55,9 +54,7 @@ const swap = async (options: {
     allow.mainnet.cowswap.orderSigner.signOrder(
       orderStructScoping,
       undefined,
-      fee_amount_bp !== undefined
-        ? c.lte(fee_amount_bp as BigNumberish)
-        : undefined,
+      fee_amount_bp !== undefined ? c.lte(fee_amount_bp) : undefined,
       { delegatecall: true }
     ),
 
