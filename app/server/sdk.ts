@@ -1,19 +1,22 @@
 import * as eth from "defi-kit/eth"
 import * as gno from "defi-kit/gno"
-import { ActionName, Chain, NotFoundError, ProtocolActions } from "defi-kit"
+import {
+  ActionName,
+  StrategyType,
+  Chain,
+  NotFoundError,
+  AllowFunction,
+} from "defi-kit"
 import { parseQuery } from "./parse"
 
 export const sdks = {
   eth,
   gno,
-  // bnb: 56,
-  // matic: 137,
-  // arb1: 42161,
 } as const
 
 export type ChainPrefix = keyof typeof sdks
 
-export const queryPermissionSet = ({
+export const queryActionPermissionSet = ({
   action,
   chain,
   protocol,
@@ -34,7 +37,7 @@ export const queryPermissionSet = ({
   }
 
   const allowAction = (allow as any)[protocol][action] as
-    | ProtocolActions[ActionName]
+    | AllowFunction
     | undefined
   const paramsSchema = (schema as any)[protocol][action]
 
@@ -45,4 +48,40 @@ export const queryPermissionSet = ({
   }
 
   return allowAction(parseQuery(query, paramsSchema))
+}
+
+export const queryStrategyPermissionSet = ({
+  type,
+  chain,
+  category,
+  name,
+  query,
+}: {
+  type: StrategyType
+  chain: Chain
+  category: string
+  name: string
+  query: Partial<{
+    [key: string]: string | string[]
+  }>
+}) => {
+  const sdk = sdks[chain]
+  const { allowStrategy, strategiesSchema } = sdk
+
+  if (!(type in strategiesSchema) || !(type in allowStrategy)) {
+    throw new NotFoundError(`${type} strategies are not supported on ${chain}`)
+  }
+
+  const allowStrategyFn = (allowStrategy as any)[type][category]?.[name] as
+    | AllowFunction
+    | undefined
+  const paramsSchema = (strategiesSchema as any)[type][category]?.[name]
+
+  if (!allowStrategyFn || !paramsSchema) {
+    throw new NotFoundError(
+      `${type} strategy '${category} / ${name}' does not exist`
+    )
+  }
+
+  return allowStrategyFn(parseQuery(query, paramsSchema))
 }
