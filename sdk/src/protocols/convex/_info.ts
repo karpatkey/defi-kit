@@ -2472,4 +2472,11 @@ export default [
     cvxDepositToken: "0x02F118837f5AcfeA9f028767f2700d1AC0a00107",
     rewarder: "0x24e7fC74809902E635d1F8998dB72dCfD1dC6a80",
   },
+  {
+    name: "eBTCtBTC",
+    id: "380",
+    crvLPToken: "0x272BF7e4Ce3308B1Fb5e54d6a1Fc32113619c401",
+    cvxDepositToken: "0xe1Cb0158111A9048569791e0fdC7ed06b11716D6",
+    rewarder: "0xDbd17Dc03a442D4349de988533737db3fBb5eC39",
+  },
 ] as const

@@ -145,25 +145,6 @@ export default [
     ],
   },
   {
-    bpt: "0x3B7F9B579cb50B00bDb71672fA1a26F6EAdA9114",
-    id: "0x3b7f9b579cb50b00bdb71672fa1a26f6eada91140002000000000000000000a7",
-    name: "50WETH-50EURe",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x4683e340a8049261057D5aB1b29C8d840E75695e",
     id: "0x4683e340a8049261057d5ab1b29c8d840e75695e00020000000000000000005a",
     name: "B-50wstETH-50GNO",
