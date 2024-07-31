@@ -124,334 +124,336 @@ describe("balancer", () => {
       ).toBeForbidden()
     })
 
-    it("only deposit and withdraw from avatar through relayer", async () => {
-      await stealErc20(
-        contracts.mainnet.usdc,
-        parseUnits("1000", 6),
-        contracts.mainnet.balancer.vault
-      )
-      await expect(
-        testKit.eth.balancer.vault.setRelayerApproval(
-          avatar._address,
-          contracts.mainnet.balancer.relayer,
-          true
-        )
-      ).not.toRevert()
-      await expect(
-        testKit.eth.usdc.approve(
-          contracts.mainnet.balancer.vault,
-          parseUnits("1000", 6)
-        )
-      ).not.toRevert()
+    // WARNING: The Relayer permissions tests have been removed as there is
+    // no evidence that they are being used for joins or exits.
+    //   it("only deposit and withdraw from avatar through relayer", async () => {
+    //     await stealErc20(
+    //       contracts.mainnet.usdc,
+    //       parseUnits("1000", 6),
+    //       contracts.mainnet.balancer.vault
+    //     )
+    //     await expect(
+    //       testKit.eth.balancer.vault.setRelayerApproval(
+    //         avatar._address,
+    //         contracts.mainnet.balancer.relayer,
+    //         true
+    //       )
+    //     ).not.toRevert()
+    //     await expect(
+    //       testKit.eth.usdc.approve(
+    //         contracts.mainnet.balancer.vault,
+    //         parseUnits("1000", 6)
+    //       )
+    //     ).not.toRevert()
 
-      await expect(
-        testKit.eth.balancer.relayer.multicall([
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
-            B_USDC_DAI_USDT_pid,
-            0,
-            avatar._address,
-            contracts.mainnet.balancer.relayer,
-            {
-              assets: [
-                contracts.mainnet.dai,
-                B_USDC_DAI_USDT,
-                contracts.mainnet.usdc,
-                contracts.mainnet.usdt,
-              ],
-              maxAmountsIn: [0, 0, parseUnits("1000", 6), 0],
-              userData:
-                "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003b9aca000000000000000000000000000000000000000000000000000000000000000000",
-              fromInternalBalance: false,
-            },
-            0,
-            84158459389524002386711626555386694745894712975979482213248346579970065170433n,
-          ]),
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
-            B_50WETH_50_3pool_pid,
-            0,
-            contracts.mainnet.balancer.relayer,
-            avatar._address,
-            {
-              assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
-              maxAmountsIn: [
-                84158459389524002386711626555386694745894712975979482213248346579970065170433n,
-                0,
-              ],
-              userData:
-                "0x0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000002ba100000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000",
-              fromInternalBalance: false,
-            },
-            0,
-            84158459389524002386711626555386694745894712975979482213248346579970065170432n,
-          ]),
-        ])
-      ).not.toRevert()
-      // member address not allowed
-      await expect(
-        testKit.eth.balancer.relayer.multicall([
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
-            B_USDC_DAI_USDT_pid,
-            0,
-            member._address,
-            contracts.mainnet.balancer.relayer,
-            {
-              assets: [
-                contracts.mainnet.dai,
-                B_USDC_DAI_USDT,
-                contracts.mainnet.usdc,
-                contracts.mainnet.usdt,
-              ],
-              maxAmountsIn: [0, 0, parseUnits("1000", 6), 0],
-              userData:
-                "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003b9aca000000000000000000000000000000000000000000000000000000000000000000",
-              fromInternalBalance: false,
-            },
-            0,
-            84158459389524002386711626555386694745894712975979482213248346579970065170433n,
-          ]),
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
-            B_50WETH_50_3pool_pid,
-            0,
-            contracts.mainnet.balancer.relayer,
-            avatar._address,
-            {
-              assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
-              maxAmountsIn: [
-                84158459389524002386711626555386694745894712975979482213248346579970065170433n,
-                0,
-              ],
-              userData:
-                "0x0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000002ba100000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000",
-              fromInternalBalance: false,
-            },
-            0,
-            84158459389524002386711626555386694745894712975979482213248346579970065170432n,
-          ]),
-        ])
-      ).toBeForbidden()
-      // pool id not allowed
-      await expect(
-        testKit.eth.balancer.relayer.multicall([
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
-            B_rETH_STABLE_pid,
-            0,
-            avatar._address,
-            contracts.mainnet.balancer.relayer,
-            {
-              assets: [
-                contracts.mainnet.dai,
-                B_USDC_DAI_USDT,
-                contracts.mainnet.usdc,
-                contracts.mainnet.usdt,
-              ],
-              maxAmountsIn: [0, 0, parseUnits("1000", 6), 0],
-              userData:
-                "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003b9aca000000000000000000000000000000000000000000000000000000000000000000",
-              fromInternalBalance: false,
-            },
-            0,
-            84158459389524002386711626555386694745894712975979482213248346579970065170433n,
-          ]),
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
-            B_50WETH_50_3pool_pid,
-            0,
-            contracts.mainnet.balancer.relayer,
-            avatar._address,
-            {
-              assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
-              maxAmountsIn: [
-                84158459389524002386711626555386694745894712975979482213248346579970065170433n,
-                0,
-              ],
-              userData:
-                "0x0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000002ba100000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000",
-              fromInternalBalance: false,
-            },
-            0,
-            84158459389524002386711626555386694745894712975979482213248346579970065170432n,
-          ]),
-        ])
-      ).toBeForbidden()
+    //     await expect(
+    //       testKit.eth.balancer.relayer.multicall([
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
+    //           B_USDC_DAI_USDT_pid,
+    //           0,
+    //           avatar._address,
+    //           contracts.mainnet.balancer.relayer,
+    //           {
+    //             assets: [
+    //               contracts.mainnet.dai,
+    //               B_USDC_DAI_USDT,
+    //               contracts.mainnet.usdc,
+    //               contracts.mainnet.usdt,
+    //             ],
+    //             maxAmountsIn: [0, 0, parseUnits("1000", 6), 0],
+    //             userData:
+    //               "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003b9aca000000000000000000000000000000000000000000000000000000000000000000",
+    //             fromInternalBalance: false,
+    //           },
+    //           0,
+    //           84158459389524002386711626555386694745894712975979482213248346579970065170433n,
+    //         ]),
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
+    //           B_50WETH_50_3pool_pid,
+    //           0,
+    //           contracts.mainnet.balancer.relayer,
+    //           avatar._address,
+    //           {
+    //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
+    //             maxAmountsIn: [
+    //               84158459389524002386711626555386694745894712975979482213248346579970065170433n,
+    //               0,
+    //             ],
+    //             userData:
+    //               "0x0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000002ba100000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000",
+    //             fromInternalBalance: false,
+    //           },
+    //           0,
+    //           84158459389524002386711626555386694745894712975979482213248346579970065170432n,
+    //         ]),
+    //       ])
+    //     ).not.toRevert()
+    //     // member address not allowed
+    //     await expect(
+    //       testKit.eth.balancer.relayer.multicall([
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
+    //           B_USDC_DAI_USDT_pid,
+    //           0,
+    //           member._address,
+    //           contracts.mainnet.balancer.relayer,
+    //           {
+    //             assets: [
+    //               contracts.mainnet.dai,
+    //               B_USDC_DAI_USDT,
+    //               contracts.mainnet.usdc,
+    //               contracts.mainnet.usdt,
+    //             ],
+    //             maxAmountsIn: [0, 0, parseUnits("1000", 6), 0],
+    //             userData:
+    //               "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003b9aca000000000000000000000000000000000000000000000000000000000000000000",
+    //             fromInternalBalance: false,
+    //           },
+    //           0,
+    //           84158459389524002386711626555386694745894712975979482213248346579970065170433n,
+    //         ]),
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
+    //           B_50WETH_50_3pool_pid,
+    //           0,
+    //           contracts.mainnet.balancer.relayer,
+    //           avatar._address,
+    //           {
+    //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
+    //             maxAmountsIn: [
+    //               84158459389524002386711626555386694745894712975979482213248346579970065170433n,
+    //               0,
+    //             ],
+    //             userData:
+    //               "0x0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000002ba100000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000",
+    //             fromInternalBalance: false,
+    //           },
+    //           0,
+    //           84158459389524002386711626555386694745894712975979482213248346579970065170432n,
+    //         ]),
+    //       ])
+    //     ).toBeForbidden()
+    //     // pool id not allowed
+    //     await expect(
+    //       testKit.eth.balancer.relayer.multicall([
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
+    //           B_rETH_STABLE_pid,
+    //           0,
+    //           avatar._address,
+    //           contracts.mainnet.balancer.relayer,
+    //           {
+    //             assets: [
+    //               contracts.mainnet.dai,
+    //               B_USDC_DAI_USDT,
+    //               contracts.mainnet.usdc,
+    //               contracts.mainnet.usdt,
+    //             ],
+    //             maxAmountsIn: [0, 0, parseUnits("1000", 6), 0],
+    //             userData:
+    //               "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003b9aca000000000000000000000000000000000000000000000000000000000000000000",
+    //             fromInternalBalance: false,
+    //           },
+    //           0,
+    //           84158459389524002386711626555386694745894712975979482213248346579970065170433n,
+    //         ]),
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
+    //           B_50WETH_50_3pool_pid,
+    //           0,
+    //           contracts.mainnet.balancer.relayer,
+    //           avatar._address,
+    //           {
+    //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
+    //             maxAmountsIn: [
+    //               84158459389524002386711626555386694745894712975979482213248346579970065170433n,
+    //               0,
+    //             ],
+    //             userData:
+    //               "0x0000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000002ba100000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000",
+    //             fromInternalBalance: false,
+    //           },
+    //           0,
+    //           84158459389524002386711626555386694745894712975979482213248346579970065170432n,
+    //         ]),
+    //       ])
+    //     ).toBeForbidden()
 
-      await expect(
-        testKit.eth.balancer.relayer.multicall([
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
-            B_50WETH_50_3pool_pid,
-            0,
-            avatar._address,
-            avatar._address,
-            {
-              assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
-              minAmountsOut: [0, 0],
-              userData:
-                "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000de0b6b3a7640000",
-              toInternalBalance: false,
-            },
-            [
-              {
-                index: 0,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170433n,
-              },
-              {
-                index: 1,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170437n,
-              },
-            ],
-          ]),
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
-            B_USDC_DAI_USDT_pid,
-            3,
-            avatar._address,
-            avatar._address,
-            {
-              assets: [
-                contracts.mainnet.dai,
-                B_USDC_DAI_USDT,
-                contracts.mainnet.usdc,
-                contracts.mainnet.usdt,
-              ],
-              minAmountsOut: [0, 0, 0, 0],
-              userData:
-                "0x0000000000000000000000000000000000000000000000000000000000000002ba10000000000000000000000000000000000000000000000000000000000001",
-              toInternalBalance: false,
-            },
-            [
-              {
-                index: 0,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170434n,
-              },
-              {
-                index: 2,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170435n,
-              },
-              {
-                index: 3,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170436n,
-              },
-            ],
-          ]),
-        ])
-      ).not.toRevert()
-      // member address not allowed
-      await expect(
-        testKit.eth.balancer.relayer.multicall([
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
-            B_50WETH_50_3pool_pid,
-            0,
-            member._address,
-            avatar._address,
-            {
-              assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
-              minAmountsOut: [0, 0],
-              userData:
-                "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000de0b6b3a7640000",
-              toInternalBalance: false,
-            },
-            [
-              {
-                index: 0,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170433n,
-              },
-              {
-                index: 1,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170437n,
-              },
-            ],
-          ]),
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
-            B_USDC_DAI_USDT_pid,
-            3,
-            avatar._address,
-            avatar._address,
-            {
-              assets: [
-                contracts.mainnet.dai,
-                B_USDC_DAI_USDT,
-                contracts.mainnet.usdc,
-                contracts.mainnet.usdt,
-              ],
-              minAmountsOut: [0, 0, 0, 0],
-              userData:
-                "0x0000000000000000000000000000000000000000000000000000000000000002ba10000000000000000000000000000000000000000000000000000000000001",
-              toInternalBalance: false,
-            },
-            [
-              {
-                index: 0,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170434n,
-              },
-              {
-                index: 2,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170435n,
-              },
-              {
-                index: 3,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170436n,
-              },
-            ],
-          ]),
-        ])
-      ).toBeForbidden()
-      // pool id not allowed
-      await expect(
-        testKit.eth.balancer.relayer.multicall([
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
-            B_rETH_STABLE_pid,
-            0,
-            avatar._address,
-            avatar._address,
-            {
-              assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
-              minAmountsOut: [0, 0],
-              userData:
-                "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000de0b6b3a7640000",
-              toInternalBalance: false,
-            },
-            [
-              {
-                index: 0,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170433n,
-              },
-              {
-                index: 1,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170437n,
-              },
-            ],
-          ]),
-          sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
-            B_USDC_DAI_USDT_pid,
-            3,
-            avatar._address,
-            avatar._address,
-            {
-              assets: [
-                contracts.mainnet.dai,
-                B_USDC_DAI_USDT,
-                contracts.mainnet.usdc,
-                contracts.mainnet.usdt,
-              ],
-              minAmountsOut: [0, 0, 0, 0],
-              userData:
-                "0x0000000000000000000000000000000000000000000000000000000000000002ba10000000000000000000000000000000000000000000000000000000000001",
-              toInternalBalance: false,
-            },
-            [
-              {
-                index: 0,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170434n,
-              },
-              {
-                index: 2,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170435n,
-              },
-              {
-                index: 3,
-                key: 84158459389524002386711626555386694745894712975979482213248346579970065170436n,
-              },
-            ],
-          ]),
-        ])
-      ).toBeForbidden()
-    }, 30000) // Added 30 seconds of timeout because the test takes too long and it fails.
+    //     await expect(
+    //       testKit.eth.balancer.relayer.multicall([
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
+    //           B_50WETH_50_3pool_pid,
+    //           0,
+    //           avatar._address,
+    //           avatar._address,
+    //           {
+    //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
+    //             minAmountsOut: [0, 0],
+    //             userData:
+    //               "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    //             toInternalBalance: false,
+    //           },
+    //           [
+    //             {
+    //               index: 0,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170433n,
+    //             },
+    //             {
+    //               index: 1,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170437n,
+    //             },
+    //           ],
+    //         ]),
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
+    //           B_USDC_DAI_USDT_pid,
+    //           3,
+    //           avatar._address,
+    //           avatar._address,
+    //           {
+    //             assets: [
+    //               contracts.mainnet.dai,
+    //               B_USDC_DAI_USDT,
+    //               contracts.mainnet.usdc,
+    //               contracts.mainnet.usdt,
+    //             ],
+    //             minAmountsOut: [0, 0, 0, 0],
+    //             userData:
+    //               "0x0000000000000000000000000000000000000000000000000000000000000002ba10000000000000000000000000000000000000000000000000000000000001",
+    //             toInternalBalance: false,
+    //           },
+    //           [
+    //             {
+    //               index: 0,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170434n,
+    //             },
+    //             {
+    //               index: 2,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170435n,
+    //             },
+    //             {
+    //               index: 3,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170436n,
+    //             },
+    //           ],
+    //         ]),
+    //       ])
+    //     ).not.toRevert()
+    //     // member address not allowed
+    //     await expect(
+    //       testKit.eth.balancer.relayer.multicall([
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
+    //           B_50WETH_50_3pool_pid,
+    //           0,
+    //           member._address,
+    //           avatar._address,
+    //           {
+    //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
+    //             minAmountsOut: [0, 0],
+    //             userData:
+    //               "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    //             toInternalBalance: false,
+    //           },
+    //           [
+    //             {
+    //               index: 0,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170433n,
+    //             },
+    //             {
+    //               index: 1,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170437n,
+    //             },
+    //           ],
+    //         ]),
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
+    //           B_USDC_DAI_USDT_pid,
+    //           3,
+    //           avatar._address,
+    //           avatar._address,
+    //           {
+    //             assets: [
+    //               contracts.mainnet.dai,
+    //               B_USDC_DAI_USDT,
+    //               contracts.mainnet.usdc,
+    //               contracts.mainnet.usdt,
+    //             ],
+    //             minAmountsOut: [0, 0, 0, 0],
+    //             userData:
+    //               "0x0000000000000000000000000000000000000000000000000000000000000002ba10000000000000000000000000000000000000000000000000000000000001",
+    //             toInternalBalance: false,
+    //           },
+    //           [
+    //             {
+    //               index: 0,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170434n,
+    //             },
+    //             {
+    //               index: 2,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170435n,
+    //             },
+    //             {
+    //               index: 3,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170436n,
+    //             },
+    //           ],
+    //         ]),
+    //       ])
+    //     ).toBeForbidden()
+    //     // pool id not allowed
+    //     await expect(
+    //       testKit.eth.balancer.relayer.multicall([
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
+    //           B_rETH_STABLE_pid,
+    //           0,
+    //           avatar._address,
+    //           avatar._address,
+    //           {
+    //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
+    //             minAmountsOut: [0, 0],
+    //             userData:
+    //               "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000de0b6b3a7640000",
+    //             toInternalBalance: false,
+    //           },
+    //           [
+    //             {
+    //               index: 0,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170433n,
+    //             },
+    //             {
+    //               index: 1,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170437n,
+    //             },
+    //           ],
+    //         ]),
+    //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
+    //           B_USDC_DAI_USDT_pid,
+    //           3,
+    //           avatar._address,
+    //           avatar._address,
+    //           {
+    //             assets: [
+    //               contracts.mainnet.dai,
+    //               B_USDC_DAI_USDT,
+    //               contracts.mainnet.usdc,
+    //               contracts.mainnet.usdt,
+    //             ],
+    //             minAmountsOut: [0, 0, 0, 0],
+    //             userData:
+    //               "0x0000000000000000000000000000000000000000000000000000000000000002ba10000000000000000000000000000000000000000000000000000000000001",
+    //             toInternalBalance: false,
+    //           },
+    //           [
+    //             {
+    //               index: 0,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170434n,
+    //             },
+    //             {
+    //               index: 2,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170435n,
+    //             },
+    //             {
+    //               index: 3,
+    //               key: 84158459389524002386711626555386694745894712975979482213248346579970065170436n,
+    //             },
+    //           ],
+    //         ]),
+    //       ])
+    //     ).toBeForbidden()
+    //   }, 30000) // Added 30 seconds of timeout because the test takes too long and it fails.
   })
 })

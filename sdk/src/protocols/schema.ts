@@ -39,5 +39,6 @@ export const eth = {
 
 export const gno = {
   aura: aura.gno,
+  balancer: balancer.gno,
   cowswap: cowswap.gno,
 } satisfies Record<string, ProtocolSchemas>
