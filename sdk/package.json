@@ -19,6 +19,11 @@
       "require": "./dist/gno.js",
       "import": "./dist/gno.mjs",
       "types": "./dist/gno.d.ts"
+    },
+    "./arb1": {
+      "require": "./dist/arb1.js",
+      "import": "./dist/arb1.mjs",
+      "types": "./dist/arb1.d.ts"
     }
   },
   "typesVersions": {
@@ -31,6 +36,9 @@
       ],
       "gno": [
         "./dist/gno.d.ts"
+      ],
+      "arb1": [
+        "./dist/arb1.d.ts"
       ]
     }
   },

@@ -14,3 +14,7 @@ export const eth = {
 export const gno = {
   swap,
 }
+
+export const arb1 = {
+  swap,
+}

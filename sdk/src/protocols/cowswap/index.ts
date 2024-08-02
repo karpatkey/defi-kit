@@ -1,17 +1,42 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { allowErc20Approve, oneOf } from "../../conditions"
 import { c, Permission } from "zodiac-roles-sdk"
-import { contracts } from "../../../eth-sdk/config"
-import { BigNumberish } from "ethers"
+import { contractAddressOverrides, contracts } from "../../../eth-sdk/config"
+import { Chain } from "../../types"
 
 const GPv2VaultRelayer = "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 
-const swap = async (options: {
-  sell: (`0x${string}` | "ETH")[]
-  buy?: (`0x${string}` | "ETH")[]
-  feeAmountBp?: number
-}) => {
+const getWethAddress = (chain: Chain) => {
+  switch (chain) {
+    case Chain.eth:
+      return contracts.mainnet.weth
+    case Chain.gno:
+      return contractAddressOverrides.gnosis.weth
+    case Chain.arb1:
+      return contractAddressOverrides.arbitrumOne.weth
+  }
+}
+
+const getOrderSignerAddress = (chain: Chain) => {
+  switch (chain) {
+    case Chain.eth:
+      return contracts.mainnet.cowswap.orderSigner
+    case Chain.gno:
+      return contracts.mainnet.cowswap.orderSigner
+    case Chain.arb1:
+      return contractAddressOverrides.arbitrumOne.cowswap.orderSigner
+  }
+}
+
+const swap = async (
+  options: {
+    sell: (`0x${string}` | "ETH")[]
+    buy?: (`0x${string}` | "ETH")[]
+    feeAmountBp?: number
+  },
+  chain: Chain
+) => {
   const { sell, buy, feeAmountBp } = options
   const permissions: Permission[] = []
 
@@ -33,13 +58,16 @@ const swap = async (options: {
     }
   }
 
+  const wethAddress = getWethAddress(chain)
+
   if ("ETH" in sell) {
-    permissions.push(allow.mainnet.weth.deposit({ send: true }))
+    permissions.push({
+      ...allow.mainnet.weth.deposit({ send: true }),
+      targetAddress: wethAddress,
+    })
   }
 
-  const updatedSell = sell.map((item) =>
-    item === "ETH" ? contracts.mainnet.weth : item
-  )
+  const updatedSell = sell.map((item) => (item === "ETH" ? wethAddress : item))
   const updatedBuy =
     buy && buy.map((item) => (item === "ETH" ? E_ADDRESS : item))
 
@@ -49,28 +77,52 @@ const swap = async (options: {
     receiver: c.avatar,
   }
 
+  const orderSigner = getOrderSignerAddress(chain)
+
   permissions.push(
     ...allowErc20Approve(updatedSell as `0x${string}`[], [GPv2VaultRelayer]),
 
-    allow.mainnet.cowswap.orderSigner.signOrder(
-      orderStructScoping,
-      undefined,
-      feeAmountBp !== undefined ? c.lte(feeAmountBp) : undefined,
-      { delegatecall: true }
-    ),
+    {
+      ...allow.mainnet.cowswap.orderSigner.signOrder(
+        orderStructScoping,
+        undefined,
+        feeAmountBp !== undefined ? c.lte(feeAmountBp) : undefined,
+        { delegatecall: true }
+      ),
+      targetAddress: orderSigner,
+    },
 
-    allow.mainnet.cowswap.orderSigner.unsignOrder(orderStructScoping, {
-      delegatecall: true,
-    })
+    {
+      ...allow.mainnet.cowswap.orderSigner.unsignOrder(orderStructScoping, {
+        delegatecall: true,
+      }),
+      targetAddress: orderSigner,
+    }
   )
 
   return permissions
 }
 
 export const eth = {
-  swap,
+  swap: (options: {
+    sell: (`0x${string}` | "ETH")[]
+    buy?: (`0x${string}` | "ETH")[]
+    feeAmountBp?: number
+  }) => swap(options, Chain.eth),
 }
 
 export const gno = {
-  swap,
+  swap: (options: {
+    sell: (`0x${string}` | "ETH")[]
+    buy?: (`0x${string}` | "ETH")[]
+    feeAmountBp?: number
+  }) => swap(options, Chain.gno),
+}
+
+export const arb1 = {
+  swap: (options: {
+    sell: (`0x${string}` | "ETH")[]
+    buy?: (`0x${string}` | "ETH")[]
+    feeAmountBp?: number
+  }) => swap(options, Chain.arb1),
 }
