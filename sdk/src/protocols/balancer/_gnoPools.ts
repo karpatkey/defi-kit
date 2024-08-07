@@ -126,6 +126,25 @@ export default [
     ],
   },
   {
+    bpt: "0x3220C83e953186f2B9dDFc0B5dD69483354EDCA2",
+    id: "0x3220c83e953186f2b9ddfc0b5dd69483354edca20000000000000000000000b0",
+    name: "osGNO/GNO-BPT",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+        id: "0x",
+      },
+      {
+        address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
+        symbol: "osGNO",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x388Cae2f7d3704C937313d990298Ba67D70a3709",
     id: "0x388cae2f7d3704c937313d990298ba67d70a3709000200000000000000000026",
     name: "50AGVE-50GNO",
@@ -474,6 +493,25 @@ export default [
       {
         address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
         symbol: "GBPe",
+        id: "0x",
+      },
+      {
+        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
+        symbol: "EURe",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xC66936a47E6D40DD050A8419B4352825D9082241",
+    id: "0xc66936a47e6d40dd050a8419b4352825d9082241000000000000000000000090",
+    name: "EURe-jEUR",
+    type: "ComposableStable",
+    gauge: "0xe8672E6d593D5D2769266919abB6dAd7b9687608",
+    tokens: [
+      {
+        address: "0x9fB1d52596c44603198fB0aee434fac3a679f702",
+        symbol: "jEUR",
         id: "0x",
       },
       {

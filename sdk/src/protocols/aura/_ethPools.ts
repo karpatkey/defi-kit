@@ -1905,4 +1905,36 @@ export default [
     ],
     rewarder: "0xF61beaEBfe56AE47Fdd85ECaA9F64ca13A90bc12",
   },
+  {
+    name: "shezETH/wstETH",
+    id: "223",
+    bpt: "0xDb1f2e1655477d08FB0992f82EEDe0053B8Cd382",
+    tokens: [
+      {
+        address: "0x63a0964A36c34E81959da5894ad888800e17405b",
+        symbol: "ShezETH",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+    ],
+    rewarder: "0x747eF4e13cB71264897af2D69855f56b771b42ce",
+  },
+  {
+    name: "B-baoUSD-sUSDe-BPT",
+    id: "224",
+    bpt: "0x79AF734562f741946566D5126bBDed4Cb699E355",
+    tokens: [
+      {
+        address: "0x7945b0A6674b175695e5d1D08aE1e6F13744Abb0",
+        symbol: "BaoUSD",
+      },
+      {
+        address: "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+        symbol: "sUSDe",
+      },
+    ],
+    rewarder: "0xD34793BF42D922B04E7e53253F7195725A4a7E9d",
+  },
 ] as const
