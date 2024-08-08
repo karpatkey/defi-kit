@@ -48,3 +48,10 @@ export const gno = annotateAll(
   },
   "gno"
 )
+
+export const arb1 = annotateAll(
+  {
+    cowswap: cowswap.arb1,
+  },
+  "arb1"
+)

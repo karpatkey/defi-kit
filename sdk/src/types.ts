@@ -4,6 +4,7 @@ import { Permission } from "zodiac-roles-sdk"
 export enum Chain {
   eth = "eth",
   gno = "gno",
+  arb1 = "arb1",
 }
 
 export type ActionFunction = (options: any) => Promise<Permission[]>

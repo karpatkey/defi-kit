@@ -41,3 +41,7 @@ export const gno = {
   aura: aura.gno,
   cowswap: cowswap.gno,
 } satisfies Record<string, ProtocolSchemas>
+
+export const arb1 = {
+  cowswap: cowswap.arb1,
+} satisfies Record<string, ProtocolSchemas>
