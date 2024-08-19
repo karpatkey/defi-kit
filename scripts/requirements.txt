@@ -1,5 +1,5 @@
-defyes @ git+https://github.com/karpatkey/defyes.git
-karpatkit @ git+https://github.com/karpatkey/karpatkit.git
+defyes @ git+https://$GH_TOKEN@github.com/karpatkey/defyes.git
+karpatkit @ git+https://$GH_TOKEN@github.com/karpatkey/karpatkit.git
 
 gql>=3.4.0
 web3>=5.29.0
