@@ -17,3 +17,11 @@ export const gnoProvider = new providers.JsonRpcProvider(
     name: "Gnosis",
   }
 )
+
+export const arb1Provider = new providers.JsonRpcProvider(
+  "https://rpc.arb1.arbitrum.gateway.fm",
+  {
+    chainId: 42161,
+    name: "ArbitrumOne",
+  }
+)
