@@ -65,7 +65,7 @@ export default [
     symbol: "WBTC",
     token: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
     usageAsCollateralEnabled: true,
-    borrowingEnabled: true,
+    borrowingEnabled: false,
     stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,
