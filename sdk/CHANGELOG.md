@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/karpatkey/defi-kit/compare/v1.11.0...v1.12.0) (2024-08-20)
+
+
+### Features
+
+* Add Arbitrum Support to Defi Kit with Cow Protocol Integration ([#215](https://github.com/karpatkey/defi-kit/issues/215)) ([d493b86](https://github.com/karpatkey/defi-kit/commit/d493b86b7d72e5dae83c056944b152d6c583a836))
+
 ## [1.11.0](https://github.com/karpatkey/defi-kit/compare/v1.10.4...v1.11.0) (2024-07-29)
 
 
