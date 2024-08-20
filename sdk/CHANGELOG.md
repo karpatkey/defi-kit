@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.1](https://github.com/karpatkey/defi-kit/compare/v1.12.0...v1.12.1) (2024-08-20)
+
+
+### Bug Fixes
+
+* fix typing issue and app build after adding arb1 sdk ([#221](https://github.com/karpatkey/defi-kit/issues/221)) ([69619ed](https://github.com/karpatkey/defi-kit/commit/69619edbbfedc5e8391cf1785991ebd21262985e))
+
 ## [1.12.0](https://github.com/karpatkey/defi-kit/compare/v1.11.0...v1.12.0) (2024-08-20)
 
 
