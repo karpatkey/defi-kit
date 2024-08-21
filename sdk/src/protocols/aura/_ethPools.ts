@@ -1953,4 +1953,20 @@ export default [
     ],
     rewarder: "0x3Db0d3b807CdF9d22c4691503a78582cb96D0653",
   },
+  {
+    name: "80TRUF/20LINK",
+    id: "226",
+    bpt: "0xe96a45f66bdDA121B24F0a861372A72E8889523d",
+    tokens: [
+      {
+        address: "0x38C2a4a7330b22788374B8Ff70BBa513C8D848cA",
+        symbol: "TRUF",
+      },
+      {
+        address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+        symbol: "LINK",
+      },
+    ],
+    rewarder: "0x3520e29488bb19AFDCC4e2Cf5CB22DF29b7E4148",
+  },
 ] as const
