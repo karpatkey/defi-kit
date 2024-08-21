@@ -2,7 +2,7 @@ import { Chain } from "../../types"
 import { allow } from "zodiac-roles-sdk/kit"
 import { allowErc20Approve, oneOf } from "../../conditions"
 import { c, Permission } from "zodiac-roles-sdk"
-import { getOrderSignerAddressByChain, getWrappedNativeToken } from "./utils"
+import { getWrappedNativeToken } from "./utils"
 
 const GPv2VaultRelayer = "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
@@ -57,27 +57,19 @@ export const swap = async (
     receiver: c.avatar,
   }
 
-  const orderSigner = getOrderSignerAddressByChain(chain)
-
   permissions.push(
     ...allowErc20Approve(updatedSell as `0x${string}`[], [GPv2VaultRelayer]),
 
-    {
-      ...allow.mainnet.cowswap.orderSigner.signOrder(
-        orderStructScoping,
-        undefined,
-        feeAmountBp !== undefined ? c.lte(feeAmountBp) : undefined,
-        { delegatecall: true }
-      ),
-      targetAddress: orderSigner,
-    },
+    allow.mainnet.cowswap.orderSigner.signOrder(
+      orderStructScoping,
+      undefined,
+      feeAmountBp !== undefined ? c.lte(feeAmountBp) : undefined,
+      { delegatecall: true }
+    ),
 
-    {
-      ...allow.mainnet.cowswap.orderSigner.unsignOrder(orderStructScoping, {
-        delegatecall: true,
-      }),
-      targetAddress: orderSigner,
-    }
+    allow.mainnet.cowswap.orderSigner.unsignOrder(orderStructScoping, 
+      { delegatecall: true }
+    )
   )
 
   return permissions
