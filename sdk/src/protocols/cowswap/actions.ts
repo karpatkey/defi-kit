@@ -45,7 +45,9 @@ export const swap = async (
     })
   }
 
-  const updatedSell = sell.map((item) => (item === "ETH" || "XDAI" ? wrappedNativeToken : item))
+  const updatedSell = sell.map((item) =>
+    item === "ETH" || "XDAI" ? wrappedNativeToken : item
+  )
   const updatedBuy =
     buy && buy.map((item) => (item === "ETH" || "XDAI" ? E_ADDRESS : item))
 
