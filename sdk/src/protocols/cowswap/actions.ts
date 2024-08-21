@@ -67,9 +67,9 @@ export const swap = async (
       { delegatecall: true }
     ),
 
-    allow.mainnet.cowswap.orderSigner.unsignOrder(orderStructScoping, 
-      { delegatecall: true }
-    )
+    allow.mainnet.cowswap.orderSigner.unsignOrder(orderStructScoping, {
+      delegatecall: true,
+    })
   )
 
   return permissions
