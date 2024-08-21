@@ -2514,4 +2514,11 @@ export default [
     cvxDepositToken: "0x1D6FDa866054F14E060790d009191320f7B0d488",
     rewarder: "0x411fe77fAF1991ddfc606C94ACf7F91bd8A61387",
   },
+  {
+    name: "YFImkUSD",
+    id: "386",
+    crvLPToken: "0x5756bbdDC03DaB01a3900F01Fb15641C3bfcc457",
+    cvxDepositToken: "0x979CcA9622E1cee964D96163aEfa3D377fbd67d6",
+    rewarder: "0xC046f096a2b3b1D5CF2c5fdFeB23D8E2Ab08E080",
+  },
 ] as const
