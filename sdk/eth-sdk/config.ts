@@ -143,7 +143,7 @@ export const contractAddressOverrides = {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
       reward_pool_deposit_wrapper: "0x0Fec3d212BcC29eF3E505B555D7a7343DF0B7F76",
     },
-    weth: "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1",
+    wxdai: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
   },
   arbitrumOne: {
     cowswap: {

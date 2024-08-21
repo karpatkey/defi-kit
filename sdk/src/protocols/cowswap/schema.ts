@@ -7,12 +7,18 @@ const swap = z.object({
   feeAmountBp: z.number().int().min(0).max(10000).optional(),
 })
 
+const swap_gno = z.object({
+  sell: zx.address().or(z.literal("XDAI")).array(),
+  buy: zx.address().or(z.literal("XDAI")).array().optional(),
+  feeAmountBp: z.number().int().min(0).max(10000).optional(),
+})
+
 export const eth = {
   swap,
 }
 
 export const gno = {
-  swap,
+  swap_gno,
 }
 
 export const arb1 = {

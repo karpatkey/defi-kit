@@ -11,8 +11,8 @@ export const eth = {
 
 export const gno = {
   swap: (options: {
-    sell: (`0x${string}` | "ETH")[]
-    buy?: (`0x${string}` | "ETH")[]
+    sell: (`0x${string}` | "XDAI")[]
+    buy?: (`0x${string}` | "XDAI")[]
     feeAmountBp?: number
   }) => swap(options, Chain.gno),
 }
