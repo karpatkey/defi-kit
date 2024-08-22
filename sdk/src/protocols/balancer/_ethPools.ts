@@ -260,25 +260,6 @@ export default [
     ],
   },
   {
-    bpt: "0x0be5302a7D6B330AfE6A530e6625CA787E1071F6",
-    id: "0x0be5302a7d6b330afe6a530e6625ca787e1071f60002000000000000000006b5",
-    name: "40st-yETH-60GOLD",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x583019fF0f430721aDa9cfb4fac8F06cA104d0B4",
-        symbol: "st-yETH",
-        id: "0x",
-      },
-      {
-        address: "0x9DeB0fc809955b79c85e82918E8586d3b7d2695a",
-        symbol: "GOLD",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x0BF37157d30dFe6f56757DCadff01AEd83b08cD6",
     id: "0x0bf37157d30dfe6f56757dcadff01aed83b08cd600020000000000000000019a",
     name: "80NATION-20WETH",
