@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.2](https://github.com/karpatkey/defi-kit/compare/v1.12.1...v1.12.2) (2024-08-22)
+
+
+### Bug Fixes
+
+* Cowswap Native Token handling ([#225](https://github.com/karpatkey/defi-kit/issues/225)) ([4289886](https://github.com/karpatkey/defi-kit/commit/4289886cd9eaeeed427a73bbfc26da235408b5be))
+
 ## [1.12.1](https://github.com/karpatkey/defi-kit/compare/v1.12.0...v1.12.1) (2024-08-20)
 
 
