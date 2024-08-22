@@ -46,10 +46,11 @@ export const swap = async (
   }
 
   const updatedSell = sell.map((item) =>
-    item === "ETH" || "XDAI" ? wrappedNativeToken : item
+    item === "ETH" || item === "XDAI" ? wrappedNativeToken : item
   )
   const updatedBuy =
-    buy && buy.map((item) => (item === "ETH" || "XDAI" ? E_ADDRESS : item))
+    buy &&
+    buy.map((item) => (item === "ETH" || item === "XDAI" ? E_ADDRESS : item))
 
   const orderStructScoping = {
     sellToken: oneOf(updatedSell),
