@@ -2521,4 +2521,32 @@ export default [
     cvxDepositToken: "0x979CcA9622E1cee964D96163aEfa3D377fbd67d6",
     rewarder: "0xC046f096a2b3b1D5CF2c5fdFeB23D8E2Ab08E080",
   },
+  {
+    name: "dgnETHETH+",
+    id: "387",
+    crvLPToken: "0x5bA541585D6297B756F08B7c61a7E37752123B4F",
+    cvxDepositToken: "0x1e56e7E4460c4D89Be0ca9F058954d0eBf88606C",
+    rewarder: "0xA2FF14e7B059184C170B6968f78f358D0eEfd0b8",
+  },
+  {
+    name: "AUSDFRAX",
+    id: "388",
+    crvLPToken: "0xf5D7c5484C02C03cF131b76C67C3EB969828bD3D",
+    cvxDepositToken: "0xd3665De8d48559dd7390CFC756eE64209FB4Ba98",
+    rewarder: "0x474e0c325997e15311f98284FF383Bd1853f71Bf",
+  },
+  {
+    name: "pufETHwstE",
+    id: "389",
+    crvLPToken: "0xEEda34A377dD0ca676b9511EE1324974fA8d980D",
+    cvxDepositToken: "0xA2B529DE9a0Ed9e613a7766504eD034B13e14040",
+    rewarder: "0xFc3f980268FdC40eF6F302380B3E62A3c017Dc78",
+  },
+  {
+    name: "crv-stUSDT",
+    id: "390",
+    crvLPToken: "0xB73527615C25ac2D226db2581525f69968926caf",
+    cvxDepositToken: "0xaF8EAb48441CB4F5c3Ae680F21B7C82394eEbdB9",
+    rewarder: "0xe499B4e0E2203D3d6E2879AB9091388f4E301167",
+  },
 ] as const
