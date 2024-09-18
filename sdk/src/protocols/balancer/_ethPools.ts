@@ -455,25 +455,6 @@ export default [
     ],
   },
   {
-    bpt: "0x20a61B948E33879ce7F23e535CC7BAA3BC66c5a9",
-    id: "0x20a61b948e33879ce7f23e535cc7baa3bc66c5a9000000000000000000000555",
-    name: "R-DAI-BLP",
-    type: "ComposableStable",
-    gauge: "0x6F3b31296FD2457eba6Dca3BED65ec79e06c1295",
-    tokens: [
-      {
-        address: "0x183015a9bA6fF60230fdEaDc3F43b3D788b13e21",
-        symbol: "R",
-        id: "0x",
-      },
-      {
-        address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-        symbol: "DAI",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x20FacEcaa68E9b7c92d2d0ec9136D864Df805233",
     id: "0x20facecaa68e9b7c92d2d0ec9136d864df805233000100000000000000000190",
     name: "WILDFIRE",
@@ -760,50 +741,6 @@ export default [
       {
         address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
         symbol: "ETHx",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x382dC5b2eCa1C1308Eb7e2B40c0F571AFB899aC8",
-    id: "0x382dc5b2eca1c1308eb7e2b40c0f571afb899ac8000100000000000000000557",
-    name: "14DNT-14WBTC-14VEE-14KEY-14SNT-14QSP-14WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x0AbdAce70D3790235af448C88547603b945604ea",
-        symbol: "DNT",
-        id: "0x",
-      },
-      {
-        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-        symbol: "WBTC",
-        id: "0x",
-      },
-      {
-        address: "0x340D2bdE5Eb28c1eed91B2f790723E3B160613B7",
-        symbol: "VEE",
-        id: "0x",
-      },
-      {
-        address: "0x4CC19356f2D37338b9802aa8E8fc58B0373296E7",
-        symbol: "KEY",
-        id: "0x",
-      },
-      {
-        address: "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
-        symbol: "SNT",
-        id: "0x",
-      },
-      {
-        address: "0x99ea4dB9EE77ACD40B119BD1dC4E33e1C070b80d",
-        symbol: "QSP",
         id: "0x",
       },
       {
@@ -1305,25 +1242,6 @@ export default [
     ],
   },
   {
-    bpt: "0x5002EB99f569405987d56e53Cec01FbB5DA28968",
-    id: "0x5002eb99f569405987d56e53cec01fbb5da28968000200000000000000000696",
-    name: "50WAR-50WETH",
-    type: "Weighted",
-    gauge: "0x7152d543177fd720BC8EC14891c072BCc6f8218b",
-    tokens: [
-      {
-        address: "0xa8258deE2a677874a48F5320670A869D74f0cbC1",
-        symbol: "WAR",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x5122E01D819E58BB2E22528c0D68D310f0AA6FD7",
     id: "0x5122e01d819e58bb2e22528c0d68d310f0aa6fd7000200000000000000000163",
     name: "sNOTE-BPT",
@@ -1414,6 +1332,25 @@ export default [
       {
         address: "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
         symbol: "LQTY",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x56bc9d9987edeC2fC6e1990e27AF4A0987b53096",
+    id: "0x56bc9d9987edec2fc6e1990e27af4a0987b53096000200000000000000000686",
+    name: "99goldCOMP-1WETH",
+    type: "Weighted",
+    gauge: "0x50BE312DFe134a3076f913d8E085c4055421DE3D",
+    tokens: [
+      {
+        address: "0x939CED8875d1Cd75D8b9aca439e6526e9A822A48",
+        symbol: "goldCOMP",
         id: "0x",
       },
       {
@@ -1771,6 +1708,25 @@ export default [
     ],
   },
   {
+    bpt: "0x6873789A71b18eFa98a8E8758A5EA456D70c178f",
+    id: "0x6873789a71b18efa98a8e8758a5ea456d70c178f0002000000000000000006c6",
+    name: "50GIV-50FOX",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x900dB999074d9277c5DA2A43F252D74366230DA0",
+        symbol: "GIV",
+        id: "0x",
+      },
+      {
+        address: "0xc770EEfAd204B5180dF6a14Ee197D99d808ee52d",
+        symbol: "FOX",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x68e3266C9C8bbD44ad9Dca5AFBfe629022AeE9fE",
     id: "0x68e3266c9c8bbd44ad9dca5afbfe629022aee9fe000200000000000000000512",
     name: "B-wjAura-wETH",
@@ -1804,30 +1760,6 @@ export default [
       {
         address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
         symbol: "InETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x6f0ed6f346007563D3266DE350d174a831bDE0ca",
-    id: "0x6f0ed6f346007563d3266de350d174a831bde0ca0001000000000000000005db",
-    name: "50KNC-25WETH-25USDC-BPT",
-    type: "Weighted",
-    gauge: "0x02ea1C2702eCD478082D4b3AE902B6d10d26b920",
-    tokens: [
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xdeFA4e8a7bcBA345F687a2f1456F5Edd9CE97202",
-        symbol: "KNC",
         id: "0x",
       },
     ],
@@ -1890,6 +1822,25 @@ export default [
       {
         address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x740A691bd31c4176BCb6B8A7a40f1A723537D99d",
+    id: "0x740a691bd31c4176bcb6b8a7a40f1a723537d99d0000000000000000000006b6",
+    name: "cdcETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0x80A423a65a6a630943D9A34b8b78943af00c98cD",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xfe18aE03741a5b84e39C295Ac9C856eD7991C38e",
+        symbol: "CDCETH",
         id: "0x",
       },
     ],
@@ -2085,6 +2036,25 @@ export default [
       {
         address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x7D98f308Db99FDD04BbF4217a4be8809F38fAa64",
+    id: "0x7d98f308db99fdd04bbf4217a4be8809f38faa6400020000000000000000059b",
+    name: "80wstETH/20GHO",
+    type: "Weighted",
+    gauge: "0x6EE63656BbF5BE3fdF9Be4982BF9466F6a921b83",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+        id: "0x",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
         id: "0x",
       },
     ],
@@ -2466,25 +2436,6 @@ export default [
     ],
   },
   {
-    bpt: "0x8f4205e1604133d1875a3E771AE7e4F2b0865639",
-    id: "0x8f4205e1604133d1875a3e771ae7e4f2b086563900020000000000000000010e",
-    name: "50N/A-50N/A",
-    type: "Weighted",
-    gauge: "0xf46FD013Acc2c6988BB2f773bd879101eB5d4573",
-    tokens: [
-      {
-        address: "0x43D4A3cd90ddD2F8f4f693170C9c8098163502ad",
-        symbol: "D2D",
-        id: "0x",
-      },
-      {
-        address: "0xba100000625a3754423978a60c9317c58a424e3D",
-        symbol: "BAL",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x8fE054748Fc5c8eE50AB8860409a4E9e760E13f4",
     id: "0x8fe054748fc5c8ee50ab8860409a4e9e760e13f4000200000000000000000328",
     name: "50WETH-50EUL",
@@ -2613,25 +2564,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x9412206f58cc72b9b4e340422A95354372A3ec3D",
-    id: "0x9412206f58cc72b9b4e340422a95354372a3ec3d00020000000000000000069a",
-    name: "20B-baoUSD-LUSD-BPT-80BAO",
-    type: "Weighted",
-    gauge: "0x6b9dE817875952Cb23d985AbF6fa9ec4b7f66ad5",
-    tokens: [
-      {
-        address: "0x7E9AfD25F5Ec0eb24d7d4b089Ae7EcB9651c8b1F",
-        symbol: "B-baoUSD-LUSD-BPT",
-        id: "0x7e9afd25f5ec0eb24d7d4b089ae7ecb9651c8b1f000000000000000000000511",
-      },
-      {
-        address: "0xCe391315b414D4c7555956120461D21808A69F3A",
-        symbol: "BAO",
         id: "0x",
       },
     ],
@@ -4202,6 +4134,25 @@ export default [
       {
         address: "0xD533a949740bb3306d119CC777fa900bA034cd52",
         symbol: "CRV",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xf3AeB3aBbA741f0EEcE8a1B1D2F11b85899951CB",
+    id: "0xf3aeb3abba741f0eece8a1b1d2f11b85899951cb000200000000000000000351",
+    name: "MAI-USDC-SP",
+    type: "Stable",
+    gauge: "0x91A75880b07d36672f5C8DFE0F2334f086e29D47",
+    tokens: [
+      {
+        address: "0x8D6CeBD76f18E1558D4DB88138e2DeFB3909fAD6",
+        symbol: "MAI",
+        id: "0x",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
         id: "0x",
       },
     ],

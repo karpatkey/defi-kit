@@ -130,7 +130,7 @@ export default [
     id: "0x3220c83e953186f2b9ddfc0b5dd69483354edca20000000000000000000000b0",
     name: "osGNO/GNO-BPT",
     type: "ComposableStable",
-    gauge: "0x1350724a020B27c4f0E369bB00ae3127022d5465",
+    gauge: null,
     tokens: [
       {
         address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",

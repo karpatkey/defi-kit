@@ -106,22 +106,6 @@ export default [
     rewarder: "0x112EA63D3A70bB7926F95DA81EaDF71Aba0f0955",
   },
   {
-    name: "EURe/staBAL3",
-    id: "14",
-    bpt: "0x0C1B9CE6Bf6C01f587C2ee98b0ef4B20C6648753",
-    tokens: [
-      {
-        address: "0x2086f52651837600180dE173B09470F54EF74910",
-        symbol: "staBAL3",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
-      },
-    ],
-    rewarder: "0xF4116F1be90057E6f85b0dcC14c47c84cc4575da",
-  },
-  {
     name: "B-50wstETH-50GNO",
     id: "15",
     bpt: "0x4683e340a8049261057D5aB1b29C8d840E75695e",
@@ -136,22 +120,6 @@ export default [
       },
     ],
     rewarder: "0x14A81C9283CC16897DaA3f466847Baa260b770eB",
-  },
-  {
-    name: "B-50USD-50wstETH",
-    id: "16",
-    bpt: "0xEb30C85CC528537f5350CF5684Ce6a4538e13394",
-    tokens: [
-      {
-        address: "0x2086f52651837600180dE173B09470F54EF74910",
-        symbol: "staBAL3",
-      },
-      {
-        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
-        symbol: "wstETH",
-      },
-    ],
-    rewarder: "0xDdB26F9864da5CF70C680942Be91FC7E9aA2401C",
   },
   {
     name: "B-50wstETH-25BAL-25AURA",
@@ -340,5 +308,37 @@ export default [
       },
     ],
     rewarder: "0x13E5AA7310b17a8eAF233731dE54EeD95a72e57a",
+  },
+  {
+    name: "osGNO/GNO-BPT",
+    id: "28",
+    bpt: "0x3220C83e953186f2B9dDFc0B5dD69483354EDCA2",
+    tokens: [
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+      },
+      {
+        address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
+        symbol: "osGNO",
+      },
+    ],
+    rewarder: "0x198F9709870d061c40ED5c08b1b09093144DdE2B",
+  },
+  {
+    name: "EURe-jEUR",
+    id: "29",
+    bpt: "0xC66936a47E6D40DD050A8419B4352825D9082241",
+    tokens: [
+      {
+        address: "0x9fB1d52596c44603198fB0aee434fac3a679f702",
+        symbol: "jEUR",
+      },
+      {
+        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
+        symbol: "EURe",
+      },
+    ],
+    rewarder: "0xf85896ccc6e199aC983227075a9fda9f76cbb7B6",
   },
 ] as const
