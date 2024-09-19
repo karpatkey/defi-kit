@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.3](https://github.com/karpatkey/defi-kit/compare/v1.12.2...v1.12.3) (2024-09-19)
+
+
+### Bug Fixes
+
+* Balancer script update ([#229](https://github.com/karpatkey/defi-kit/issues/229)) ([fc706d3](https://github.com/karpatkey/defi-kit/commit/fc706d338fa138dfdfee887cc78979d60d8cb439))
+
 ## [1.12.2](https://github.com/karpatkey/defi-kit/compare/v1.12.1...v1.12.2) (2024-08-22)
 
 
