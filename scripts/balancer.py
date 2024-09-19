@@ -141,6 +141,8 @@ def is_deprecated(pool_id, lptoken_address, pool_tokens, blockchain, web3):
     try:
         join_pool = balancer_queries.functions.queryJoin(pool_id, Address.ZERO, Address.ZERO, [pool_tokens, amounts, user_data, False]).call()
     except Exception as e:
+        # This is a workaround for some pools, like the Gyroscope ones, that do not yet support EXACT_TOKENS_IN_FOR_BPT_OUT.
+        # https://etherscan.io/address/0x3932b187f440cE7703653b3908EDc5bB7676C283#code#F1#L382
         join_kind = 3 # ALL_TOKENS_IN_FOR_EXACT_BPT_OUT
         bpt_amout_out = 1
         abi = ['uint256', 'uint256']
