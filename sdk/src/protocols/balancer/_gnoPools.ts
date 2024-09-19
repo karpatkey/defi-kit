@@ -130,7 +130,7 @@ export default [
     id: "0x3220c83e953186f2b9ddfc0b5dd69483354edca20000000000000000000000b0",
     name: "osGNO/GNO-BPT",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0x1350724a020B27c4f0E369bB00ae3127022d5465",
     tokens: [
       {
         address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
@@ -298,6 +298,25 @@ export default [
     ],
   },
   {
+    bpt: "0x71E1179C5e197FA551BEEC85ca2EF8693c61b85b",
+    id: "0x71e1179c5e197fa551beec85ca2ef8693c61b85b0002000000000000000000a0",
+    name: "ECLP-rETH-WETH",
+    type: "GyroE",
+    gauge: "0x25F822EB509177e393a32181182ae3981eeE6E53",
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xc791240D1F2dEf5938E2031364Ff4ed887133C3d",
+        symbol: "rETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x7644fA5D0eA14FcF3E813Fdf93ca9544f8567655",
     id: "0x7644fa5d0ea14fcf3e813fdf93ca9544f8567655000000000000000000000066",
     name: "sBAL3",
@@ -360,6 +379,25 @@ export default [
     ],
   },
   {
+    bpt: "0x8DD4df4Ce580b9644437f3375e54f1ab09808228",
+    id: "0x8dd4df4ce580b9644437f3375e54f1ab0980822800020000000000000000009c",
+    name: "ECLP-wstETH-WETH",
+    type: "GyroE",
+    gauge: "0xa1fF1e44E4f8346398767f94ae7DbeAB71522164",
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
+        symbol: "wstETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x9D93F38b75B376AcDFe607cD1ECF4495E047dEfF",
     id: "0x9d93f38b75b376acdfe607cd1ecf4495e047deff00000000000000000000009e",
     name: "GBPe/sDAI",
@@ -417,25 +455,6 @@ export default [
       {
         address: "0x4d18815D14fe5c3304e87B3FA18318baa5c23820",
         symbol: "SAFE",
-        id: "0x",
-      },
-      {
-        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
-        symbol: "GNO",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xB8bB1ce9C6E5401D66fE2126dB6E7387E1E24fFE",
-    id: "0xb8bb1ce9c6e5401d66fe2126db6e7387e1e24ffe00020000000000000000003d",
-    name: "50WETH-50GNO",
-    type: "Weighted",
-    gauge: "0xd264f4d4Ad98FEf4b198547059C07a8E8bBF2F0E",
-    tokens: [
-      {
-        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
-        symbol: "WETH",
         id: "0x",
       },
       {
