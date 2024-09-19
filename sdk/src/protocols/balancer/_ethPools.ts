@@ -298,6 +298,25 @@ export default [
     ],
   },
   {
+    bpt: "0x127ECc2318d002664cc4515C9f2B22B09b6aea85",
+    id: "0x127ecc2318d002664cc4515c9f2b22b09b6aea85000200000000000000000602",
+    name: "ECLP-swETH-wstETH",
+    type: "GyroE",
+    gauge: "0x17748Aa07A6a1Be2ACE8bCC546919C006B40De34",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xf951E335afb289353dc249e82926178EaC7DEd78",
+        symbol: "swETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x178E029173417b1F9C8bC16DCeC6f697bC323746",
     id: "0x178e029173417b1f9c8bc16dcec6f697bc32374600000000000000000000025d",
     name: "FUD",
@@ -417,6 +436,25 @@ export default [
     ],
   },
   {
+    bpt: "0x1CCE5169bDe03f3d5aD0206f6BD057953539DAE6",
+    id: "0x1cce5169bde03f3d5ad0206f6bd057953539dae600020000000000000000062b",
+    name: "ECLP-GYD-sDAI",
+    type: "GyroE",
+    gauge: "0xFc3f916C28f32DEBA1cc04b1F6011F28a691134c",
+    tokens: [
+      {
+        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+        symbol: "sDAI",
+        id: "0x",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x1E19CF2D73a72Ef1332C882F20534B6519Be0276",
     id: "0x1e19cf2d73a72ef1332c882f20534b6519be0276000200000000000000000112",
     name: "B-rETH-STABLE",
@@ -450,6 +488,25 @@ export default [
       {
         address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
         symbol: "rETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x2044aFEF1268100918F88De66a3532Eab3D8f3ef",
+    id: "0x2044afef1268100918f88de66a3532eab3d8f3ef00020000000000000000068a",
+    name: "ECLP-PAR-EURA",
+    type: "GyroE",
+    gauge: "0x597AEbfe41dCc042db206Eb888c42560a22c9303",
+    tokens: [
+      {
+        address: "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
+        symbol: "EURA",
+        id: "0x",
+      },
+      {
+        address: "0x68037790A0229e9Ce6EaA8A99ea92964106C4703",
+        symbol: "PAR",
         id: "0x",
       },
     ],
@@ -499,6 +556,25 @@ export default [
       {
         address: "0xfb5453340C03db5aDe474b27E68B6a9c6b2823Eb",
         symbol: "ROBOT",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x2191Df821C198600499aA1f0031b1a7514D7A7D9",
+    id: "0x2191df821c198600499aa1f0031b1a7514d7a7d9000200000000000000000639",
+    name: "ECLP-GYD-sDAI",
+    type: "GyroE",
+    gauge: "0x0fD5B305C5e09D8A74732F155116dEd43115E421",
+    tokens: [
+      {
+        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
+        symbol: "sDAI",
+        id: "0x",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
         id: "0x",
       },
     ],
@@ -784,6 +860,44 @@ export default [
       {
         address: "0xF1617882A71467534D14EEe865922de1395c9E89",
         symbol: "saETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x3932b187f440cE7703653b3908EDc5bB7676C283",
+    id: "0x3932b187f440ce7703653b3908edc5bb7676c283000200000000000000000664",
+    name: "ECLP-GHO-USDC-2",
+    type: "GyroE",
+    gauge: "0xa2F8bd6B95a0cB9094206075504CD0ED1Cc717Be",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+        id: "0x",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x398901C7a1a05a93499A40F88fca6381De912de8",
+    id: "0x398901c7a1a05a93499a40f88fca6381de912de80002000000000000000006c1",
+    name: "ECLP-ynETH-wstETH",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x09db87A538BD693E9d08544577d5cCfAA6373A48",
+        symbol: "ynETH",
+        id: "0x",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
         id: "0x",
       },
     ],
@@ -2374,6 +2488,25 @@ export default [
     ],
   },
   {
+    bpt: "0x8D93B853849b9884E2Bb413444Ec23eB5366eE91",
+    id: "0x8d93b853849b9884e2bb413444ec23eb5366ee910002000000000000000006b3",
+    name: "ECLP-sUSDe-GYD",
+    type: "GyroE",
+    gauge: "0x934DA8673aB0c6677F2D772Fce58B30Af7F4Ba47",
+    tokens: [
+      {
+        address: "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+        symbol: "sUSDe",
+        id: "0x",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x8e6C196e201942246Cef85718C5D3a5622518053",
     id: "0x8e6c196e201942246cef85718c5d3a5622518053000200000000000000000582",
     name: "B-80LE-20WETH",
@@ -2626,6 +2759,25 @@ export default [
     ],
   },
   {
+    bpt: "0x99e7b15df044e1b62e2e1774fD4469d54D9409aC",
+    id: "0x99e7b15df044e1b62e2e1774fd4469d54d9409ac00020000000000000000065a",
+    name: "ECLP-GHO-USDC",
+    type: "GyroE",
+    gauge: "0x5b0ed1fa8850012Db8B075602253335cACD53aD4",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+        id: "0x",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x9e030b67a8384cbba09D5927533Aa98010C87d91",
     id: "0x9e030b67a8384cbba09d5927533aa98010c87d9100020000000000000000008f",
     name: "LPeYyvUSDC-28JAN22",
@@ -2854,6 +3006,25 @@ export default [
     ],
   },
   {
+    bpt: "0xaA7a70070E7495fe86c67225329DbD39BAa2F63b",
+    id: "0xaa7a70070e7495fe86c67225329dbd39baa2f63b000200000000000000000663",
+    name: "ECLP-GHO-GYD",
+    type: "GyroE",
+    gauge: "0x4a7475D32CCD29edD65b2a1712b091aA741ba9BB",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+        id: "0x",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xaac98EE71D4F8A156B6abaa6844Cdb7789d086CE",
     id: "0xaac98ee71d4f8a156b6abaa6844cdb7789d086ce00020000000000000000001b",
     name: "B-60MKR-40WETH",
@@ -2911,6 +3082,25 @@ export default [
     ],
   },
   {
+    bpt: "0xae2D97CbBc13B67988ECEd2abA0F6939655eD3De",
+    id: "0xae2d97cbbc13b67988eced2aba0f6939655ed3de00020000000000000000068b",
+    name: "ECLP-paUSD-GYD",
+    type: "GyroE",
+    gauge: "0x30cEE2F8Cb8e53FC587f6B2578241a118188D530",
+    tokens: [
+      {
+        address: "0x571f54D23cDf2211C83E9A0CbD92AcA36c48Fa02",
+        symbol: "paUSD",
+        id: "0x",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xB06bFBD7b50F80c8d9dA57Fc4cF5CBD5B3E2f148",
     id: "0xb06bfbd7b50f80c8d9da57fc4cf5cbd5b3e2f14800000000000000000000064d",
     name: "pxETH/frxETH",
@@ -2958,6 +3148,25 @@ export default [
       {
         address: "0xbf30461210b37012783957D90dC26B95Ce3b6f2d",
         symbol: "SWIV",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xb3b675a9A3CB0DF8F66Caf08549371BfB76A9867",
+    id: "0xb3b675a9a3cb0df8f66caf08549371bfb76a9867000200000000000000000611",
+    name: "ECLP-mevETH-wETH",
+    type: "GyroE",
+    gauge: "0x70754AB20c63cc65Ea12206CF28342723d731aC6",
+    tokens: [
+      {
+        address: "0x24Ae2dA0f361AA4BE46b48EB19C91e02c5e4f27E",
+        symbol: "mevETH",
         id: "0x",
       },
       {
@@ -3230,6 +3439,25 @@ export default [
     ],
   },
   {
+    bpt: "0xC2AA60465BfFa1A88f5bA471a59cA0435c3ec5c1",
+    id: "0xc2aa60465bffa1a88f5ba471a59ca0435c3ec5c100020000000000000000062c",
+    name: "ECLP-GYD-USDC",
+    type: "GyroE",
+    gauge: "0xf21Fa4Fb30cA6eAFDF567A02aAD92E49D6d0752D",
+    tokens: [
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xc45D42f801105e861e86658648e3678aD7aa70f9",
     id: "0xc45d42f801105e861e86658648e3678ad7aa70f900010000000000000000011e",
     name: "50OHM-25DAI-25WETH",
@@ -3363,6 +3591,25 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xcF8dFdb73e7434b05903B5599fB96174555F4353",
+    id: "0xcf8dfdb73e7434b05903b5599fb96174555f43530002000000000000000006c3",
+    name: "60GOLD-40WETH",
+    type: "Weighted",
+    gauge: "0xC219821b1FE1bBe436f62D911F00Ef1C8542A8F7",
+    tokens: [
+      {
+        address: "0x583019fF0f430721aDa9cfb4fac8F06cA104d0B4",
+        symbol: "st-yETH",
+        id: "0x",
+      },
+      {
+        address: "0x9DeB0fc809955b79c85e82918E8586d3b7d2695a",
+        symbol: "GOLD",
         id: "0x",
       },
     ],
@@ -3725,6 +3972,25 @@ export default [
     ],
   },
   {
+    bpt: "0xe0E8AC08De6708603cFd3D23B613d2f80e3b7afB",
+    id: "0xe0e8ac08de6708603cfd3d23b613d2f80e3b7afb00020000000000000000058a",
+    name: "ECLP-wstETH-swETH",
+    type: "GyroE",
+    gauge: "0xe74795EC9251E2381f490a4a5b8BE1D3FA73DE82",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xf951E335afb289353dc249e82926178EaC7DEd78",
+        symbol: "swETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xE24281bc68C2a56e19B67b3787Fd5e95937bd970",
     id: "0xe24281bc68c2a56e19b67b3787fd5e95937bd970000200000000000000000062",
     name: "50WPE-50WETH",
@@ -4063,6 +4329,25 @@ export default [
     ],
   },
   {
+    bpt: "0xf01b0684C98CD7aDA480BFDF6e43876422fa1Fc1",
+    id: "0xf01b0684c98cd7ada480bfdf6e43876422fa1fc10002000000000000000005de",
+    name: "ECLP-wstETH-wETH",
+    type: "GyroE",
+    gauge: "0xdf54d2Dd06F8Be3B0c4FfC157bE54EC9cca91F3C",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xf16aEe6a71aF1A9Bc8F56975A4c2705ca7A782Bc",
     id: "0xf16aee6a71af1a9bc8f56975a4c2705ca7a782bc0002000000000000000004bb",
     name: "20WETH-80ALCX",
@@ -4215,6 +4500,25 @@ export default [
     ],
   },
   {
+    bpt: "0xF7A826D47c8E02835D94fb0Aa40F0cC9505cb134",
+    id: "0xf7a826d47c8e02835d94fb0aa40f0cc9505cb1340002000000000000000005e0",
+    name: "ECLP-wstETH-cbETH",
+    type: "GyroE",
+    gauge: "0x4D4264aebf65Bb1727bb5438E0b2Aaf86186DA50",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
+        symbol: "cbETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xf8C4CD95c7496cB7c8d97202Cf7e5b8DA2204C2b",
     id: "0xf8c4cd95c7496cb7c8d97202cf7e5b8da2204c2b00020000000000000000039e",
     name: "80psdnOCEAN-20OCEAN",
@@ -4248,6 +4552,25 @@ export default [
       {
         address: "0xEd1480d12bE41d92F36f5f7bDd88212E381A3677",
         symbol: "FDT",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xfbfaD5fa9E99081da6461F36f229B5cC88A64c63",
+    id: "0xfbfad5fa9e99081da6461f36f229b5cc88a64c6300020000000000000000062d",
+    name: "ECLP-GYD-USDT",
+    type: "GyroE",
+    gauge: "0xfC7D964f1676831d8105506b1F0c3B3e2B55c467",
+    tokens: [
+      {
+        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        symbol: "USDT",
+        id: "0x",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
         id: "0x",
       },
     ],
