@@ -134,7 +134,7 @@ describe("aave_v2", () => {
 
       await expect(
         testKit.eth.aaveV2.stkgho.claimRewards(avatar._address, 1)
-      ).not.toRevert()
+      ).toBeAllowed()
 
       await expect(testKit.eth.aaveV2.stkgho.cooldown()).not.toRevert()
 
@@ -145,7 +145,7 @@ describe("aave_v2", () => {
       ).not.toRevert()
       await expect(
         testKit.eth.aaveV2.stkgho.claimRewards(avatar._address, 1)
-      ).not.toRevert()
+      ).toBeAllowed()
     })
 
     it("only allows staking GHO and claiming AAVE from avatar", async () => {
