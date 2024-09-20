@@ -148,8 +148,15 @@ export const contractAddressOverrides = {
       relayer: "0x2163c2FcD0940e84B8a68991bF926eDfB0Cd926C",
       relayerLibrary: "0x8eA89804145c007e7D226001A96955ad53836087",
     },
+    wxdai: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
   },
-}
+  arbitrumOne: {
+    cowswap: {
+      orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
+    },
+    weth: "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
+  },
+} as const satisfies EthSdkConfig["contracts"]
 
 export default defineConfig({
   contracts,

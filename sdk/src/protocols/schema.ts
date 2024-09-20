@@ -42,3 +42,7 @@ export const gno = {
   balancer: balancer.gno,
   cowswap: cowswap.gno,
 } satisfies Record<string, ProtocolSchemas>
+
+export const arb1 = {
+  cowswap: cowswap.arb1,
+} satisfies Record<string, ProtocolSchemas>

@@ -126,6 +126,25 @@ export default [
     ],
   },
   {
+    bpt: "0x3220C83e953186f2B9dDFc0B5dD69483354EDCA2",
+    id: "0x3220c83e953186f2b9ddfc0b5dd69483354edca20000000000000000000000b0",
+    name: "osGNO/GNO-BPT",
+    type: "ComposableStable",
+    gauge: "0x1350724a020B27c4f0E369bB00ae3127022d5465",
+    tokens: [
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+        id: "0x",
+      },
+      {
+        address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
+        symbol: "osGNO",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x388Cae2f7d3704C937313d990298Ba67D70a3709",
     id: "0x388cae2f7d3704c937313d990298ba67d70a3709000200000000000000000026",
     name: "50AGVE-50GNO",
@@ -140,25 +159,6 @@ export default [
       {
         address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
         symbol: "GNO",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x3B7F9B579cb50B00bDb71672fA1a26F6EAdA9114",
-    id: "0x3b7f9b579cb50b00bdb71672fa1a26f6eada91140002000000000000000000a7",
-    name: "50WETH-50EURe",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
         id: "0x",
       },
     ],
@@ -298,6 +298,25 @@ export default [
     ],
   },
   {
+    bpt: "0x71E1179C5e197FA551BEEC85ca2EF8693c61b85b",
+    id: "0x71e1179c5e197fa551beec85ca2ef8693c61b85b0002000000000000000000a0",
+    name: "ECLP-rETH-WETH",
+    type: "GyroE",
+    gauge: "0x25F822EB509177e393a32181182ae3981eeE6E53",
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xc791240D1F2dEf5938E2031364Ff4ed887133C3d",
+        symbol: "rETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x7644fA5D0eA14FcF3E813Fdf93ca9544f8567655",
     id: "0x7644fa5d0ea14fcf3e813fdf93ca9544f8567655000000000000000000000066",
     name: "sBAL3",
@@ -355,6 +374,25 @@ export default [
       {
         address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
         symbol: "WXDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x8DD4df4Ce580b9644437f3375e54f1ab09808228",
+    id: "0x8dd4df4ce580b9644437f3375e54f1ab0980822800020000000000000000009c",
+    name: "ECLP-wstETH-WETH",
+    type: "GyroE",
+    gauge: "0xa1fF1e44E4f8346398767f94ae7DbeAB71522164",
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
+        symbol: "wstETH",
         id: "0x",
       },
     ],
@@ -427,25 +465,6 @@ export default [
     ],
   },
   {
-    bpt: "0xB8bB1ce9C6E5401D66fE2126dB6E7387E1E24fFE",
-    id: "0xb8bb1ce9c6e5401d66fe2126db6e7387e1e24ffe00020000000000000000003d",
-    name: "50WETH-50GNO",
-    type: "Weighted",
-    gauge: "0xd264f4d4Ad98FEf4b198547059C07a8E8bBF2F0E",
-    tokens: [
-      {
-        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
-        symbol: "GNO",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xbAd20c15A773bf03ab973302F61FAbceA5101f0A",
     id: "0xbad20c15a773bf03ab973302f61fabcea5101f0a000000000000000000000034",
     name: "bb-WETH-wstETH",
@@ -493,6 +512,25 @@ export default [
       {
         address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
         symbol: "GBPe",
+        id: "0x",
+      },
+      {
+        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
+        symbol: "EURe",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xC66936a47E6D40DD050A8419B4352825D9082241",
+    id: "0xc66936a47e6d40dd050a8419b4352825d9082241000000000000000000000090",
+    name: "EURe-jEUR",
+    type: "ComposableStable",
+    gauge: "0xe8672E6d593D5D2769266919abB6dAd7b9687608",
+    tokens: [
+      {
+        address: "0x9fB1d52596c44603198fB0aee434fac3a679f702",
+        symbol: "jEUR",
         id: "0x",
       },
       {

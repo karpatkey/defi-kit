@@ -1,6 +1,6 @@
 {
   "name": "defi-kit",
-  "version": "1.10.4",
+  "version": "1.12.4",
   "description": "Permissions for Zodiac Roles covering interactions with DeFi protocols",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -19,6 +19,11 @@
       "require": "./dist/gno.js",
       "import": "./dist/gno.mjs",
       "types": "./dist/gno.d.ts"
+    },
+    "./arb1": {
+      "require": "./dist/arb1.js",
+      "import": "./dist/arb1.mjs",
+      "types": "./dist/arb1.d.ts"
     }
   },
   "typesVersions": {
@@ -31,6 +36,9 @@
       ],
       "gno": [
         "./dist/gno.d.ts"
+      ],
+      "arb1": [
+        "./dist/arb1.d.ts"
       ]
     }
   },
@@ -53,7 +61,7 @@
     "@ethersproject/abi": "^5.7.0",
     "ethers": "^5.7.2",
     "zod": "^3.22.2",
-    "zodiac-roles-sdk": "^2.9.0"
+    "zodiac-roles-sdk": "^2.13.1"
   },
   "devDependencies": {
     "@dethcrypto/eth-sdk": "^0.3.4",

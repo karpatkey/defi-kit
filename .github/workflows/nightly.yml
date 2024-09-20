@@ -30,6 +30,7 @@ jobs:
         run: |
           cd scripts
           python -m pip install --upgrade pip
+          git config --global url."https://${{ secrets.GH_TOKEN }}@github.com/".insteadOf "https://github.com/"
           pip install -r requirements.txt
 
       - name: Run aave_v2.py

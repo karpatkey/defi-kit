@@ -1,5 +1,47 @@
 # Changelog
 
+## [1.12.4](https://github.com/karpatkey/defi-kit/compare/v1.12.3...v1.12.4) (2024-09-19)
+
+
+### Bug Fixes
+
+* Balancer script update ([#232](https://github.com/karpatkey/defi-kit/issues/232)) ([78527bc](https://github.com/karpatkey/defi-kit/commit/78527bcd0856b165d427d607a7a777d4cad96735))
+
+## [1.12.3](https://github.com/karpatkey/defi-kit/compare/v1.12.2...v1.12.3) (2024-09-19)
+
+
+### Bug Fixes
+
+* Balancer script update ([#229](https://github.com/karpatkey/defi-kit/issues/229)) ([fc706d3](https://github.com/karpatkey/defi-kit/commit/fc706d338fa138dfdfee887cc78979d60d8cb439))
+
+## [1.12.2](https://github.com/karpatkey/defi-kit/compare/v1.12.1...v1.12.2) (2024-08-22)
+
+
+### Bug Fixes
+
+* Cowswap Native Token handling ([#225](https://github.com/karpatkey/defi-kit/issues/225)) ([4289886](https://github.com/karpatkey/defi-kit/commit/4289886cd9eaeeed427a73bbfc26da235408b5be))
+
+## [1.12.1](https://github.com/karpatkey/defi-kit/compare/v1.12.0...v1.12.1) (2024-08-20)
+
+
+### Bug Fixes
+
+* fix typing issue and app build after adding arb1 sdk ([#221](https://github.com/karpatkey/defi-kit/issues/221)) ([69619ed](https://github.com/karpatkey/defi-kit/commit/69619edbbfedc5e8391cf1785991ebd21262985e))
+
+## [1.12.0](https://github.com/karpatkey/defi-kit/compare/v1.11.0...v1.12.0) (2024-08-20)
+
+
+### Features
+
+* Add Arbitrum Support to Defi Kit with Cow Protocol Integration ([#215](https://github.com/karpatkey/defi-kit/issues/215)) ([d493b86](https://github.com/karpatkey/defi-kit/commit/d493b86b7d72e5dae83c056944b152d6c583a836))
+
+## [1.11.0](https://github.com/karpatkey/defi-kit/compare/v1.10.4...v1.11.0) (2024-07-29)
+
+
+### Features
+
+* optional feeAmountBP constraint in Cow ([#212](https://github.com/karpatkey/defi-kit/issues/212)) ([8bac172](https://github.com/karpatkey/defi-kit/commit/8bac1723dd8b0e75963e1ae9cb12557cd46094a7))
+
 ## [1.10.4](https://github.com/karpatkey/defi-kit/compare/v1.10.3...v1.10.4) (2024-07-05)
 
 
