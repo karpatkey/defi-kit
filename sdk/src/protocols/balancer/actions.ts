@@ -123,7 +123,15 @@ export const stake = (chain: Chain, pool: Pool) => {
 
     case Chain.gno:
       minter = contractAddressOverrides.gnosis.balancer.minter as `0x${string}`
-      relayer = contractAddressOverrides.gnosis.balancer.relayer as `0x${string}`
+      relayer = contractAddressOverrides.gnosis.balancer
+        .relayer as `0x${string}`
+      break
+
+    case Chain.arb1:
+      minter = contractAddressOverrides.arbitrumOne.balancer
+        .minter as `0x${string}`
+      relayer = contractAddressOverrides.arbitrumOne.balancer
+        .relayer as `0x${string}`
       break
   }
 
@@ -144,35 +152,32 @@ export const stake = (chain: Chain, pool: Pool) => {
       },
       {
         ...allow.mainnet.balancer.minter.mint(pool.gauge),
-        targetAddress: minter
+        targetAddress: minter,
       },
 
       // New permissions for Unstaking and Claiming
-      allow.mainnet.balancer.vault.setRelayerApproval(
-        c.avatar,
-        relayer
-      ),
+      allow.mainnet.balancer.vault.setRelayerApproval(c.avatar, relayer),
       {
         ...allow.mainnet.balancer.relayer.gaugeWithdraw(
           pool.gauge,
           c.avatar,
           c.avatar
         ),
-        targetAddress: relayer
+        targetAddress: relayer,
       },
       // New permissions for Claiming and Claiming All
       {
         ...allow.mainnet.balancer.minter.setMinterApproval(relayer),
-        targetAddress: minter
+        targetAddress: minter,
       },
       // vault.setRelayerApproval() already added
       {
         ...allow.mainnet.balancer.relayer.gaugeClaimRewards(), // WARNING!!: Specify gauge?
-        targetAddress: relayer
+        targetAddress: relayer,
       },
       {
         ...allow.mainnet.balancer.relayer.gaugeMint(), // WARNING!!: Specify gauge?
-        targetAddress: relayer
+        targetAddress: relayer,
       }
     )
   }

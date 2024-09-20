@@ -151,6 +151,11 @@ export const contractAddressOverrides = {
     wxdai: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
   },
   arbitrumOne: {
+    balancer: {
+      minter: "0xc3ccacE87f6d3A81724075ADcb5ddd85a8A1bB68",
+      relayer: "0x9B892E515D2Ab8869F17488d64B3b918731cc70d",
+      relayerLibrary: "0x4b7b369989e613ff2C65768B7Cf930cC927F901E",
+    },
     cowswap: {
       orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
     },

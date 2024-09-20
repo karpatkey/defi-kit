@@ -77,7 +77,10 @@ export const eth = {
 
   stake: async (options: {
     targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
-  }) => options.targets.flatMap((target) => stake(Chain.eth, findPool(ethPools, target))),
+  }) =>
+    options.targets.flatMap((target) =>
+      stake(Chain.eth, findPool(ethPools, target))
+    ),
 
   lock: async () => {
     return lock()
@@ -119,5 +122,8 @@ export const gno = {
   },
   stake: async (options: {
     targets: (GnoPool["name"] | GnoPool["bpt"] | GnoPool["id"])[]
-  }) => options.targets.flatMap((target) => stake(Chain.gno, findPool(ethPools, target))),
+  }) =>
+    options.targets.flatMap((target) =>
+      stake(Chain.gno, findPool(ethPools, target))
+    ),
 }
