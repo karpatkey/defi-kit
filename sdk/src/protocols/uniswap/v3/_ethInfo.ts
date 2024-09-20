@@ -538,6 +538,10 @@ export default [
     symbol: "NO",
   },
   {
+    address: "0xEeee2A2E650697d2A8e8BC990C2f3d04203bE06f",
+    symbol: "FP",
+  },
+  {
     address: "0x1Bbe973BeF3a977Fc51CbED703E8ffDEfE001Fed",
     symbol: "PORTAL",
   },
@@ -1044,10 +1048,6 @@ export default [
   {
     address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
     symbol: "ezETH",
-  },
-  {
-    address: "0xA469B7Ee9ee773642b3e93E842e5D9b5BaA10067",
-    symbol: "USDz",
   },
   {
     address: "0x0BFFDD787C83235f6F0afa0Faed42061a4619B7a",

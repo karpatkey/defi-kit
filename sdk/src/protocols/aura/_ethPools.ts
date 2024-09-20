@@ -1985,4 +1985,20 @@ export default [
     ],
     rewarder: "0x7405Bf405185391525Ab06fABcdFf51fdc656A46",
   },
+  {
+    name: "60GOLD-40WETH",
+    id: "229",
+    bpt: "0xcF8dFdb73e7434b05903B5599fB96174555F4353",
+    tokens: [
+      {
+        address: "0x583019fF0f430721aDa9cfb4fac8F06cA104d0B4",
+        symbol: "st-yETH",
+      },
+      {
+        address: "0x9DeB0fc809955b79c85e82918E8586d3b7d2695a",
+        symbol: "GOLD",
+      },
+    ],
+    rewarder: "0xca5Ee20b1bF03EfBCfD28f01Cd2cAb4d0028E64c",
+  },
 ] as const
