@@ -56,4 +56,8 @@ export const gno = {
     targets: zGnoPool.array(),
     tokens: zGnoToken.array().optional(),
   }),
+
+  stake: z.object({
+    targets: zGnoPool.array(),
+  }),
 }

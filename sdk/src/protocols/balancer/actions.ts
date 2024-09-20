@@ -1,9 +1,9 @@
 import { Permission, c } from "zodiac-roles-sdk"
 import { allow } from "zodiac-roles-sdk/kit"
-
-import { Pool, Token } from "./types"
 import { allowErc20Approve } from "../../conditions"
-import { contracts } from "../../../eth-sdk/config"
+import { Pool, Token } from "./types"
+import { contracts, contractAddressOverrides } from "../../../eth-sdk/config"
+import { Chain } from "../../types"
 
 export const BAL = "0xba100000625a3754423978a60c9317c58a424e3D"
 const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
@@ -109,8 +109,23 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
   return permissions
 }
 
-export const stake = (pool: Pool) => {
+export const stake = (chain: Chain, pool: Pool) => {
   const permissions: Permission[] = []
+
+  let minter: `0x${string}`
+  let relayer: `0x${string}`
+
+  switch (chain) {
+    case Chain.eth:
+      minter = contracts.mainnet.balancer.minter as `0x${string}`
+      relayer = contracts.mainnet.balancer.relayer as `0x${string}`
+      break
+
+    case Chain.gno:
+      minter = contractAddressOverrides.gnosis.balancer.minter as `0x${string}`
+      relayer = contractAddressOverrides.gnosis.balancer.relayer as `0x${string}`
+      break
+  }
 
   if (pool.gauge) {
     permissions.push(
@@ -127,7 +142,38 @@ export const stake = (pool: Pool) => {
         ...allow.mainnet.balancer.gauge["claim_rewards()"](),
         targetAddress: pool.gauge,
       },
-      allow.mainnet.balancer.minter.mint(pool.gauge)
+      {
+        ...allow.mainnet.balancer.minter.mint(pool.gauge),
+        targetAddress: minter
+      },
+
+      // New permissions for Unstaking and Claiming
+      allow.mainnet.balancer.vault.setRelayerApproval(
+        c.avatar,
+        relayer
+      ),
+      {
+        ...allow.mainnet.balancer.relayer.gaugeWithdraw(
+          pool.gauge,
+          c.avatar,
+          c.avatar
+        ),
+        targetAddress: relayer
+      },
+      // New permissions for Claiming and Claiming All
+      {
+        ...allow.mainnet.balancer.minter.setMinterApproval(relayer),
+        targetAddress: minter
+      },
+      // vault.setRelayerApproval() already added
+      {
+        ...allow.mainnet.balancer.relayer.gaugeClaimRewards(), // WARNING!!: Specify gauge?
+        targetAddress: relayer
+      },
+      {
+        ...allow.mainnet.balancer.relayer.gaugeMint(), // WARNING!!: Specify gauge?
+        targetAddress: relayer
+      }
     )
   }
 

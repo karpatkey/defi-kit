@@ -143,6 +143,11 @@ export const contractAddressOverrides = {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
       reward_pool_deposit_wrapper: "0x0Fec3d212BcC29eF3E505B555D7a7343DF0B7F76",
     },
+    balancer: {
+      minter: "0xA8920455934Da4D853faac1f94Fe7bEf72943eF1",
+      relayer: "0x2163c2FcD0940e84B8a68991bF926eDfB0Cd926C",
+      relayerLibrary: "0x8eA89804145c007e7D226001A96955ad53836087",
+    },
   },
 }
 
