@@ -2797,6 +2797,25 @@ export default [
     ],
   },
   {
+    bpt: "0x9ed2DbE178f5720eD6085630D3a0b76EE2cD3aB2",
+    id: "0x9ed2dbe178f5720ed6085630d3a0b76ee2cd3ab20002000000000000000006aa",
+    name: "ECLP-GHO-USD0",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+        id: "0x",
+      },
+      {
+        address: "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
+        symbol: "USD0",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x9F2a5E84abf5AA0771f4027c726B5697d9D2010a",
     id: "0x9f2a5e84abf5aa0771f4027c726b5697d9d2010a000200000000000000000342",
     name: "50WBTC-50WETH",
