@@ -47,8 +47,8 @@ export const contracts = {
       rewarder: "0x59D66C58E83A26d6a0E35114323f65c3945c89c1",
     },
     balancer: {
-      relayer: "0xfeA793Aa415061C483D2390414275AD314B3F621",
-      relayerLibrary: "0xf77018c0d817dA22caDbDf504C00c0d32cE1e5C2",
+      relayer: "0x35Cea9e57A393ac66Aaa7E25C391D52C74B5648f",
+      relayerLibrary: "0xeA66501dF1A00261E3bB79D1E90444fc6A186B62",
       vault: "0xba12222222228d8ba445958a75a0704d566bf2c8",
       gauge: "0xcD4722B7c24C29e0413BDCd9e51404B4539D14aE",
       minter: "0x239e55F427D44C3cc793f49bFB507ebe76638a2b",

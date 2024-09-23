@@ -15,6 +15,16 @@
         "internalType": "contract IBalancerMinter",
         "name": "minter",
         "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "canCallUserCheckpoint",
+        "type": "bool"
+      },
+      {
+        "internalType": "string",
+        "name": "version",
+        "type": "string"
       }
     ],
     "stateMutability": "nonpayable",
@@ -143,8 +153,27 @@
       }
     ],
     "name": "batchSwap",
-    "outputs": [],
+    "outputs": [
+      {
+        "internalType": "int256[]",
+        "name": "results",
+        "type": "int256[]"
+      }
+    ],
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "canCallUserCheckpoint",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -215,6 +244,24 @@
       }
     ],
     "name": "exitPool",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "contract IStakingLiquidityGauge[]",
+        "name": "gauges",
+        "type": "address[]"
+      }
+    ],
+    "name": "gaugeCheckpoint",
     "outputs": [],
     "stateMutability": "payable",
     "type": "function"
@@ -473,6 +520,23 @@
         "internalType": "uint256",
         "name": "value",
         "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "index",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "key",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct VaultActions.OutputReference[]",
+        "name": "outputReferences",
+        "type": "tuple[]"
       }
     ],
     "name": "manageUserBalance",
@@ -496,7 +560,7 @@
         "type": "uint256"
       }
     ],
-    "stateMutability": "view",
+    "stateMutability": "payable",
     "type": "function"
   },
   {
@@ -656,7 +720,13 @@
       }
     ],
     "name": "swap",
-    "outputs": [],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "result",
+        "type": "uint256"
+      }
+    ],
     "stateMutability": "payable",
     "type": "function"
   },

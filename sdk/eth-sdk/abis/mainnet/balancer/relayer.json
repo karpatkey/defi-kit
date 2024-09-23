@@ -10,6 +10,16 @@
         "internalType": "address",
         "name": "libraryAddress",
         "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "queryLibrary",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "version",
+        "type": "string"
       }
     ],
     "stateMutability": "nonpayable",
@@ -18,6 +28,19 @@
   {
     "inputs": [],
     "name": "getLibrary",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getQueryLibrary",
     "outputs": [
       {
         "internalType": "address",
@@ -58,6 +81,38 @@
       }
     ],
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes[]",
+        "name": "data",
+        "type": "bytes[]"
+      }
+    ],
+    "name": "vaultActionsQueryMulticall",
+    "outputs": [
+      {
+        "internalType": "bytes[]",
+        "name": "results",
+        "type": "bytes[]"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "version",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {

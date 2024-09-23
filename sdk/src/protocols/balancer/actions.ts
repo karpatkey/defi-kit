@@ -172,11 +172,11 @@ export const stake = (chain: Chain, pool: Pool) => {
       },
       // vault.setRelayerApproval() already added
       {
-        ...allow.mainnet.balancer.relayer.gaugeClaimRewards(), // WARNING!!: Specify gauge?
+        ...allow.mainnet.balancer.relayer.gaugeClaimRewards([pool.gauge]), // WARNING!!: Specify gauge?
         targetAddress: relayer,
       },
       {
-        ...allow.mainnet.balancer.relayer.gaugeMint(), // WARNING!!: Specify gauge?
+        ...allow.mainnet.balancer.relayer.gaugeMint([pool.gauge]), // WARNING!!: Specify gauge?
         targetAddress: relayer,
       }
     )
