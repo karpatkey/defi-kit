@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.5](https://github.com/karpatkey/defi-kit/compare/v1.12.4...v1.12.5) (2024-09-23)
+
+
+### Bug Fixes
+
+* missing ETH literal in spark tokens ([#236](https://github.com/karpatkey/defi-kit/issues/236)) ([98caaa5](https://github.com/karpatkey/defi-kit/commit/98caaa583a0d47560407e24efdd12894cec1f48e))
+
 ## [1.12.4](https://github.com/karpatkey/defi-kit/compare/v1.12.3...v1.12.4) (2024-09-19)
 
 
