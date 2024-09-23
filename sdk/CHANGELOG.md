@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.6](https://github.com/karpatkey/defi-kit/compare/v1.12.5...v1.12.6) (2024-09-23)
+
+
+### Bug Fixes
+
+* add sDAI withdraw() function ([#238](https://github.com/karpatkey/defi-kit/issues/238)) ([9477de3](https://github.com/karpatkey/defi-kit/commit/9477de3e46643aad0ae7c7b78ec1045469d5a81b))
+
 ## [1.12.5](https://github.com/karpatkey/defi-kit/compare/v1.12.4...v1.12.5) (2024-09-23)
 
 

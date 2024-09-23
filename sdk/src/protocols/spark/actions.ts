@@ -12,6 +12,8 @@ export const depositDsr = (): Permission[] => {
     ),
     allow.mainnet.spark.sDAI.deposit(undefined, c.avatar),
     allow.mainnet.spark.sDAI.redeem(undefined, c.avatar, c.avatar),
+    // Spark's new UI now calls the withdraw() function instead of redeem()
+    allow.mainnet.spark.sDAI.withdraw(undefined, c.avatar, c.avatar),
   ]
 }
 
