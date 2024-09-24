@@ -1,4 +1,5 @@
 
 from lib.aave import reserves_tokens_data
+from defabipedia import Chain
 
-reserves_tokens_data(2)
+reserves_tokens_data(Chain.ETHEREUM)

@@ -1,5 +1,5 @@
 import { z } from "zod"
-import ethTokens from "./_info"
+import ethTokens from "./_ethInfo"
 
 const zTokenDeposit = z.enum([
   ...ethTokens.map((token) => token.symbol),

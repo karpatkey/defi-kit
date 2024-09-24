@@ -135,10 +135,23 @@ export const contracts = {
     usdt: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
   },
+  gnosis: {
+    spark: {
+      SavingsXDaiAdapter: "0xD499b51fcFc66bd31248ef4b28d656d67E591A94",
+    },
+  }
 } as const satisfies EthSdkConfig["contracts"]
 
 export const contractAddressOverrides = {
   gnosis: {
+    aaveV3: {
+      data_provider: "0x501B4c19dd9C2e06E94dA7b6D5Ed4ddA013EC741",
+      aaveLendingPoolV3: "0xb50201558B00496A145fE76f7424749556E326D8",
+      wrappedTokenGatewayV3: "0xfE76366A986B72c3f2923e05E6ba07b7de5401e4",
+      aGnoWXDAI: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
+      variableDebtWXDAI: "0xaC8b1cE0548C69318920C3e0b21Db296d5770D57",
+      stableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
+    },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
       reward_pool_deposit_wrapper: "0x0Fec3d212BcC29eF3E505B555D7a7343DF0B7F76",
@@ -148,9 +161,20 @@ export const contractAddressOverrides = {
       relayer: "0x2163c2FcD0940e84B8a68991bF926eDfB0Cd926C",
       relayerLibrary: "0x8eA89804145c007e7D226001A96955ad53836087",
     },
+    spark: {
+      sDAI: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+    },
     wxdai: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
   },
   arbitrumOne: {
+    aaveV3: {
+      data_provider: "0x69FA688f1Dc47d4B5d8029D5a35FB7a548310654",
+      aaveLendingPoolV3: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
+      wrappedTokenGatewayV3: "0xecD4bd3121F9FD604ffaC631bF6d41ec12f1fafb",
+      aArbWETH: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
+      variableDebtWETH: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
+      stableDebtWETH: "0xD8Ad37849950903571df17049516a5CD4cbE55F6",
+    },
     balancer: {
       minter: "0xc3ccacE87f6d3A81724075ADcb5ddd85a8A1bB68",
       relayer: "0x9B892E515D2Ab8869F17488d64B3b918731cc70d",
@@ -164,5 +188,13 @@ export const contractAddressOverrides = {
 } as const satisfies EthSdkConfig["contracts"]
 
 export default defineConfig({
+  etherscanURLs: {
+    gnosis: "https://api.gnosisscan.io/api",
+    //gnosis: "https://blockscout.com/xdai/mainnet/api",
+  },
+  rpc: {
+    gnosis: "https://rpc.gnosischain.com/",
+    //gnosis: "https://rpc.ankr.com/gnosis"
+  },
   contracts,
 })
