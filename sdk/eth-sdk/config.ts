@@ -139,7 +139,7 @@ export const contracts = {
     spark: {
       SavingsXDaiAdapter: "0xD499b51fcFc66bd31248ef4b28d656d67E591A94",
     },
-  }
+  },
 } as const satisfies EthSdkConfig["contracts"]
 
 export const contractAddressOverrides = {

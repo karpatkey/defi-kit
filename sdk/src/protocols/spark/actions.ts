@@ -6,7 +6,6 @@ import { contracts, contractAddressOverrides } from "../../../eth-sdk/config"
 import { Chain } from "../../types"
 
 export const depositDsr = (chain: Chain): Permission[] => {
-
   switch (chain) {
     case Chain.eth:
       return [
@@ -19,26 +18,22 @@ export const depositDsr = (chain: Chain): Permission[] => {
         // Spark's new UI now calls the withdraw() function instead of redeem()
         allow.mainnet.spark.sDAI.withdraw(undefined, c.avatar, c.avatar),
       ]
-    
-      case Chain.gno:
-        return [
-          ...allowErc20Approve(
-            [contractAddressOverrides.gnosis.spark.sDAI],
-            [contracts.gnosis.spark.SavingsXDaiAdapter]
-          ),
-          allow.gnosis.spark.SavingsXDaiAdapter.depositXDAI(
-            c.avatar,
-            { send: true }
-          ),
-          allow.gnosis.spark.SavingsXDaiAdapter.redeemXDAI(
-            undefined,
-            c.avatar
-          )
-        ]
 
-      default:
-        // Handle unsupported chains
-        throw new Error(`Unsupported chain: ${chain}`)
+    case Chain.gno:
+      return [
+        ...allowErc20Approve(
+          [contractAddressOverrides.gnosis.spark.sDAI],
+          [contracts.gnosis.spark.SavingsXDaiAdapter]
+        ),
+        allow.gnosis.spark.SavingsXDaiAdapter.depositXDAI(c.avatar, {
+          send: true,
+        }),
+        allow.gnosis.spark.SavingsXDaiAdapter.redeemXDAI(undefined, c.avatar),
+      ]
+
+    default:
+      // Handle unsupported chains
+      throw new Error(`Unsupported chain: ${chain}`)
   }
 }
 
@@ -66,10 +61,7 @@ export const depositToken = (token: Token) => {
       undefined,
       c.avatar
     ),
-    allow.mainnet.spark.RewardsController.claimAllRewards(
-      undefined,
-      c.avatar
-    )
+    allow.mainnet.spark.RewardsController.claimAllRewards(undefined, c.avatar),
   ]
 }
 
@@ -97,10 +89,7 @@ export const depositEther = () => [
     undefined,
     c.avatar
   ),
-  allow.mainnet.spark.RewardsController.claimAllRewards(
-    undefined,
-    c.avatar
-  )
+  allow.mainnet.spark.RewardsController.claimAllRewards(undefined, c.avatar),
 ]
 
 export const borrowToken = (token: Token) => {

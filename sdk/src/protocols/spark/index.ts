@@ -11,7 +11,10 @@ import {
 } from "./actions"
 import { Chain } from "../../types"
 
-const findToken = (tokens: readonly Token[], symbolOrAddress: string): Token => {
+const findToken = (
+  tokens: readonly Token[],
+  symbolOrAddress: string
+): Token => {
   const symbolOrAddressLower = symbolOrAddress.toLowerCase()
   const token = tokens.find(
     (token) =>
@@ -45,7 +48,9 @@ export const eth = {
     targets: ("ETH" | EthToken["symbol"] | EthToken["token"])[]
   }) => {
     return targets.flatMap((target) =>
-      target === "ETH" ? borrowEther() : borrowToken(findToken(ethTokens, target))
+      target === "ETH"
+        ? borrowEther()
+        : borrowToken(findToken(ethTokens, target))
     )
   },
 }
@@ -63,5 +68,5 @@ export const gno = {
         ? depositEther()
         : depositToken(findToken(gnoTokens, target))
     )
-  }
+  },
 }
