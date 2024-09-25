@@ -11,17 +11,30 @@ export function parseQuery<T extends AnyZodObject>(
   const coercedQuery = Object.fromEntries(
     Object.entries(query).map(([key, value]) => {
       const fieldSchema = schema.shape[key]
-      const isArrayParam =
-        fieldSchema?._def.typeName === "ZodArray" ||
-        (fieldSchema?._def.typeName === "ZodOptional" &&
-          fieldSchema._def.innerType?._def.typeName == "ZodArray")
 
-      if (isArrayParam && !Array.isArray(value)) {
+      if (
+        hasType(fieldSchema, z.ZodFirstPartyTypeKind.ZodArray) &&
+        !Array.isArray(value)
+      ) {
         return [key, value?.split(",")]
       }
+
+      if (hasType(fieldSchema, z.ZodFirstPartyTypeKind.ZodNumber)) {
+        return [key, Number(value)]
+      }
+
       return [key, value]
     })
   )
 
   return schema.parse(coercedQuery)
+}
+
+const hasType = (schema: any, typeName: z.ZodFirstPartyTypeKind) => {
+  if (!schema) return false
+  return (
+    schema._def.typeName === typeName ||
+    (schema._def.typeName === "ZodOptional" &&
+      schema._def.innerType?._def.typeName == typeName)
+  )
 }
