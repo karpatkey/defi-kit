@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/karpatkey/defi-kit/compare/v1.12.6...v1.13.0) (2024-09-25)
+
+
+### Features
+
+* GNO compatibility for Balancer, Aave v3 and Spark ([#210](https://github.com/karpatkey/defi-kit/issues/210)) ([1d1b347](https://github.com/karpatkey/defi-kit/commit/1d1b347b36a5def29d6a92590bd2d9d4ab9d8e0f))
+
 ## [1.12.6](https://github.com/karpatkey/defi-kit/compare/v1.12.5...v1.12.6) (2024-09-23)
 
 
