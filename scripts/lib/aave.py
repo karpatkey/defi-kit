@@ -10,11 +10,15 @@ from lib.dump import dump
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # PROTOCOL DATA PROVIDER
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Protocol Data Provider - Ethereum
-PDP_ETHEREUM = "0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d"
-
-# Protocol Data Provider V3 - Ethereum
-PDPV3_ETHEREUM = '0x7B4EB56E7CD4b454BA8ff71E4518426369a138a3'
+PROTOCOL_DATA_PROVIDER = {
+    Chain.ETHEREUM: {
+        'v2': '0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d',
+        'v3': '0x7B4EB56E7CD4b454BA8ff71E4518426369a138a3'
+    },
+    Chain.GNOSIS: {
+        'v3': '0x501B4c19dd9C2e06E94dA7b6D5Ed4ddA013EC741',
+    }
+}
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ABIs
@@ -26,17 +30,16 @@ ABI_PDP = '[{"inputs":[],"name":"getAllReservesTokens","outputs":[{"components":
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # reserves_tokens_data
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def reserves_tokens_data(version=2):
+def reserves_tokens_data(chain, version=3):
     reserves_tokens_data = []
     
-    web3 = get_node(Chain.ETHEREUM)
+    web3 = get_node(chain)
 
-    if version == 2:
-        pdp_contract = get_contract(PDP_ETHEREUM, Chain.ETHEREUM, web3=web3, abi=ABI_PDP)
-    elif version == 3:
-        pdp_contract = get_contract(PDPV3_ETHEREUM, Chain.ETHEREUM, web3=web3, abi=ABI_PDP)
-    else:
-        return "Error: wrong version!"
+    try:
+        pdp_address = PROTOCOL_DATA_PROVIDER[chain]['v' + str(version)]
+        pdp_contract = get_contract(pdp_address, chain, web3=web3, abi=ABI_PDP)
+    except KeyError:
+        return "Error: wrong chain or version!"
 
     reserves_tokens = pdp_contract.functions.getAllReservesTokens().call()
     
@@ -62,5 +65,8 @@ def reserves_tokens_data(version=2):
 
         reserves_tokens_data.append(token_data)
 
-    dump(reserves_tokens_data, 'aave/v' + str(version))
+    if chain == Chain.ETHEREUM:
+        dump(reserves_tokens_data, 'aave/v' + str(version), "_ethInfo.ts")
+    elif chain == Chain.GNOSIS:
+        dump(reserves_tokens_data, 'aave/v' + str(version), "_gnoInfo.ts")
 

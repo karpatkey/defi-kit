@@ -9,7 +9,7 @@ https://balancer.fi/
 | Name             | Address                                                                                                               |
 | :--------------- | :-------------------------------------------------------------------------------------------------------------------- |
 | `Vault`          | [0xBA12222222228d8Ba445958a75a0704d566BF2C8](https://etherscan.io/address/0xBA12222222228d8Ba445958a75a0704d566BF2C8) |
-| `Relayer`        | [0xfeA793Aa415061C483D2390414275AD314B3F621](https://etherscan.io/address/0xfeA793Aa415061C483D2390414275AD314B3F621) |
+| `Relayer`        | [0x35Cea9e57A393ac66Aaa7E25C391D52C74B5648f](https://etherscan.io/address/0x35Cea9e57A393ac66Aaa7E25C391D52C74B5648f) |
 | `BalancerMinter` | [0x239e55F427D44C3cc793f49bFB507ebe76638a2b](https://etherscan.io/address/0x239e55F427D44C3cc793f49bFB507ebe76638a2b) |
 | `BAL`            | [0xba100000625a3754423978a60c9317c58a424e3D](https://etherscan.io/address/0xba100000625a3754423978a60c9317c58a424e3D) |
 | `B-80BAL-20WETH` | [0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56](https://etherscan.io/address/0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56) |
@@ -45,14 +45,6 @@ For each Balancer pool we allow specifying the deposit targets using any of the 
   `tokens`. If `tokens` is not specified then the pool tokens of each `TARGET`
   are considered.
 </Callout>
-
-### Target: "Non-Composable Pools"
-
-<Callout type="info">
-  "Non-Composable Pools" have no BPTs in their `Pool` tokens.
-</Callout>
-
-For targets that are "Non-Composable Pools", the following functions are allowed:
 
 #### `TOKEN · approve`
 
@@ -99,123 +91,6 @@ Redeem `TARGET_BPT` tokens to the corresponding Balancer pool and receive `TOKEN
   | `request.minAmountsOut`     | -                    |
   | `request.userData`          | -                    |
   | `request.toInternalBalance` | -                    |
-
-### Target: "Composable Pools"
-
-<Callout type="info">
-  "Composable Pools" have at least one BPT in their `Pool` tokens.
-</Callout>
-
-For targets that are "Composable Pools", the following functions are allowed:
-
-#### `TOKEN · approve`
-
-Approve `Vault` to spend `TOKEN` tokens on behalf of the avatar.
-
-- **Contract:** `TOKEN`
-- **Function:** `approve(address,uint256)`
-
-  | Parameter | Constraint       |
-  | :-------- | :--------------- |
-  | `spender` | equal to `Vault` |
-  | `amount`  | -                |
-
-#### `Vault · joinPool`
-
-Deposit `TOKEN` tokens to the corresponding Balancer pool and receive `TARGET_BPT` tokens in exchange.
-
-- **Contract:** `Vault` Ξ _allow sending ETH_
-- **Function:** `joinPool(bytes32,address,address,(address[],uint256[],bytes,bool))`
-
-  | Parameter                     | Constraint           |
-  | :---------------------------- | :------------------- |
-  | `poolId`                      | equal to `TARGET_ID` |
-  | `sender`                      | equal to `AVATAR`    |
-  | `recipient`                   | equal to `AVATAR`    |
-  | `request.assets`              | -                    |
-  | `request.maxAmountsIn`        | -                    |
-  | `request.userData`            | -                    |
-  | `request.fromInternalBalance` | -                    |
-
-#### `Vault · exitPool`
-
-Redeem `TARGET_BPT` tokens to the corresponding Balancer pool and receive `TOKEN` tokens in exchange.
-
-- **Contract:** `Vault`
-- **Function:** `exitPool(bytes32,address,address,(address[],uint256[],bytes,bool))`
-
-  | Parameter                   | Constraint           |
-  | :-------------------------- | :------------------- |
-  | `poolId`                    | equal to `TARGET_ID` |
-  | `sender`                    | equal to `AVATAR`    |
-  | `recipient`                 | equal to `AVATAR`    |
-  | `request.assets`            | -                    |
-  | `request.minAmountsOut`     | -                    |
-  | `request.userData`          | -                    |
-  | `request.toInternalBalance` | -                    |
-
-#### `Vault · setRelayerApproval`
-
-One-time (and persistent) approval of the Relayer as single-point of entry.
-
-- **Contract:** `Vault`
-- **Function:** `setRelayerApproval(address,address,bool)`
-
-  | Parameter  | Constraint         |
-  | :--------- | :----------------- |
-  | `sender`   | equal to `AVATAR`  |
-  | `relayer`  | equal to `Relayer` |
-  | `approved` | -                  |
-
-#### `Relayer · multicall`
-
-When using the `Relayer` as a single point of entry, all individual function calls to it must be wrapped within the metafunction `multicall(bytes[])`.
-
-- **Contract:** `Relayer`
-- **Function:** `multicall(bytes[])` Ξ _allow sending ETH_
-
-  | Parameter | Constraint                                                                   |
-  | :-------- | :--------------------------------------------------------------------------- |
-  | `data`    | every element of `data` must be equal to `Relayer`(`joinPool` or `exitPool`) |
-
-##### `Relayer · joinPool` (internal)
-
-This function is internal and can only be called through the `multicall` entry point. Thus, permissions are applied to the encoded calldata bytes items passed to `multicall`.
-
-- **Contract:** `Relayer`
-- **Function:** `joinPool(bytes32,uint8,address,address,(address[],uint256[],bytes,bool),uint256,uint256)`
-
-  | Parameter                     | Constraint           |
-  | :---------------------------- | :------------------- |
-  | `poolId`                      | equal to `TARGET_ID` |
-  | `kind`                        | -                    |
-  | `sender`                      | equal to `AVATAR`    |
-  | `recipient`                   | equal to `AVATAR`    |
-  | `request.assets`              | -                    |
-  | `request.maxAmountsIn`        | -                    |
-  | `request.userData`            | -                    |
-  | `request.fromInternalBalance` | -                    |
-  | `value`                       | -                    |
-  | `outputReference`             | -                    |
-
-##### `Relayer · exitPool` (internal)
-
-This function is internal and can only be called through the `multicall` entry point. Thus, permissions are applied to the encoded calldata bytes items passed to `multicall`.
-
-- **Contract:** `Relayer`
-- **Function:** `exitPool(bytes32,uint8,address,address,(address[],uint256[],bytes,bool),uint256,uint256)`
-
-  | Parameter                   | Constraint           |
-  | :-------------------------- | :------------------- |
-  | `poolId`                    | equal to `TARGET_ID` |
-  | `kind`                      | -                    |
-  | `sender`                    | equal to `AVATAR`    |
-  | `recipient`                 | equal to `AVATAR`    |
-  | `request.assets`            | -                    |
-  | `request.minAmountsOut`     | -                    |
-  | `request.userData`          | -                    |
-  | `request.toInternalBalance` | -                    |
-  | `outputReferences`          | -                    |
 
 ## Action: `stake`
 
@@ -283,6 +158,68 @@ Mint BAL rewards for `Pool`.
   | Parameter | Constraint              |
   | :-------- | :---------------------- |
   | `gauge`   | equal to `TARGET_GAUGE` |
+
+#### `Vault · setRelayerApproval`
+
+One-time (and persistent) approval of the Relayer as single-point of entry.
+
+- **Contract:** `Vault`
+- **Function:** `setRelayerApproval(address,address,bool)`
+
+  | Parameter  | Constraint         |
+  | :--------- | :----------------- |
+  | `sender`   | equal to `AVATAR`  |
+  | `relayer`  | equal to `Relayer` |
+  | `approved` | -                  |
+
+#### `Relayer · gaugeWithdraw`
+
+Redeem `TARGET_GAUGE` tokens and receive `TARGET_BPT` tokens in exchange.
+
+- **Contract:** `Relayer`
+- **Function:** `gaugeWithdraw(address,address,address,uint256)`
+
+  | Parameter   | Constraint              |
+  | :---------- | :---------------------- |
+  | `gauge`     | equal to `TARGET_GAUGE` |
+  | `sender`    | equal to `AVATAR`       |
+  | `recipient` | equal to `AVATAR`       |
+  | `amount`    | -                       |
+
+#### `Minter · setMinterApproval`
+
+One-time (and persistent) approval of the Relayer as single-point of entry.
+
+- **Contract:** `Minter`
+- **Function:** `setMinterApproval(address,bool)`
+
+  | Parameter  | Constraint         |
+  | :--------- | :----------------- |
+  | `minter`   | equal to `Relayer` |
+  | `approval` | -                  |
+
+#### `Relayer · gaugeClaimRewards`
+
+Claim `Pool` rewards.
+
+- **Contract:** `Relayer`
+- **Function:** `gaugeClaimRewards(address[])`
+
+  | Parameter | Constraint                |
+  | :-------- | :------------------------ |
+  | `gauges`  | equal to `[TARGET_GAUGE]` |
+
+#### `Relayer · gaugeMint`
+
+Mint BAL rewards for `Pool`.
+
+- **Contract:** `Relayer`
+- **Function:** `gaugeMint(address[],uint256)`
+
+  | Parameter         | Constraint                |
+  | :---------------- | :------------------------ |
+  | `gauges`          | equal to `[TARGET_GAUGE]` |
+  | `outputReference` | -                         |
 
 ## Action: `lock`
 

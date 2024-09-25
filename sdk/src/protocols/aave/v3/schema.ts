@@ -1,10 +1,11 @@
 import { z } from "zod"
-import ethTokens from "./_info"
+import ethTokens from "./_ethInfo"
+import gnoTokens from "./_ethInfo"
 import ethStakeTokens from "../v2/stakeTokens"
 import ethDelegateTokens from "../v2/delegateTokens"
 import { zx } from "../../../zx"
 
-const zToken = z.enum([
+const zEthToken = z.enum([
   "ETH",
   ...ethTokens.map((token) => token.symbol),
   ...ethTokens.map((token) => token.token),
@@ -22,13 +23,19 @@ const zDelegateToken = z.enum([
 
 const zDelegatee = zx.address()
 
+const zGnoToken = z.enum([
+  "XDAI",
+  ...gnoTokens.map((token) => token.symbol),
+  ...gnoTokens.map((token) => token.token),
+] as [string, string, ...string[]])
+
 export const eth = {
   deposit: z.object({
-    targets: zToken.array(),
+    targets: zEthToken.array(),
   }),
 
   borrow: z.object({
-    targets: zToken.array(),
+    targets: zEthToken.array(),
   }),
 
   stake: z.object({
@@ -38,5 +45,15 @@ export const eth = {
   delegate: z.object({
     targets: zDelegateToken.array(),
     delegatee: zDelegatee,
+  }),
+}
+
+export const gno = {
+  deposit: z.object({
+    targets: zGnoToken.array(),
+  }),
+
+  borrow: z.object({
+    targets: zGnoToken.array(),
   }),
 }

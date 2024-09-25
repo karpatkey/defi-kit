@@ -3,6 +3,7 @@ import ethPools from "./_ethPools"
 import gnoPools from "./_gnoPools"
 import { NotFoundError } from "../../errors"
 import { deposit, stake, lock } from "./actions"
+import { Chain } from "../../types"
 
 export const findPool = (pools: readonly Pool[], nameIdOrBpt: string) => {
   const nameIdOrBptLower = nameIdOrBpt.toLowerCase()
@@ -64,8 +65,6 @@ export const eth = {
   }: {
     // "targets" is a mandatory parameter
     targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
-    // "tokens" is an optional parameter since the user might want to allow (or not) the depositSingle() function
-    // If "tokens" is not specified then we allow all the pool.tokens[]
     tokens?: (EthToken["address"] | EthToken["symbol"])[]
   }) => {
     return targets.flatMap((target) =>
@@ -78,7 +77,10 @@ export const eth = {
 
   stake: async (options: {
     targets: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
-  }) => options.targets.flatMap((target) => stake(findPool(ethPools, target))),
+  }) =>
+    options.targets.flatMap((target) =>
+      stake(Chain.eth, findPool(ethPools, target))
+    ),
 
   lock: async () => {
     return lock()
@@ -100,4 +102,28 @@ export const eth = {
   //   ).flatMap((pool) =>
   //     swap(pool, options.sell?.map(findToken), options.buy?.map(findToken))
   //   ),
+}
+
+export const gno = {
+  deposit: async ({
+    targets,
+    tokens,
+  }: {
+    // "targets" is a mandatory parameter
+    targets: (GnoPool["name"] | GnoPool["bpt"] | GnoPool["id"])[]
+    tokens?: (GnoToken["address"] | GnoToken["symbol"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      deposit(
+        findPool(gnoPools, target),
+        tokens?.map((addressOrSymbol) => findToken(gnoPools, addressOrSymbol))
+      )
+    )
+  },
+  stake: async (options: {
+    targets: (GnoPool["name"] | GnoPool["bpt"] | GnoPool["id"])[]
+  }) =>
+    options.targets.flatMap((target) =>
+      stake(Chain.gno, findPool(ethPools, target))
+    ),
 }

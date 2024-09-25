@@ -1,6 +1,7 @@
 import { NotFoundError } from "../../errors"
-import tokens from "./_info"
-import { Token } from "./types"
+import ethTokens from "./_ethInfo"
+import gnoTokens from "./_gnoInfo"
+import { EthToken, GnoToken, Token } from "./types"
 import {
   depositEther,
   depositToken,
@@ -8,8 +9,12 @@ import {
   borrowEther,
   borrowToken,
 } from "./actions"
+import { Chain } from "../../types"
 
-const findToken = (symbolOrAddress: string): Token => {
+const findToken = (
+  tokens: readonly Token[],
+  symbolOrAddress: string
+): Token => {
   const symbolOrAddressLower = symbolOrAddress.toLowerCase()
   const token = tokens.find(
     (token) =>
@@ -26,29 +31,54 @@ export const eth = {
   deposit: async ({
     targets,
   }: {
-    targets: ("DSR_sDAI" | "ETH" | Token["symbol"] | Token["token"])[]
+    targets: ("DSR_sDAI" | "ETH" | EthToken["symbol"] | EthToken["token"])[]
   }) => {
     return targets.flatMap((target) =>
       target === "DSR_sDAI"
-        ? depositDsr()
+        ? depositDsr(Chain.eth)
         : target === "ETH"
-        ? depositEther()
-        : depositToken(findToken(target))
+        ? depositEther(Chain.eth)
+        : depositToken(Chain.eth, findToken(ethTokens, target))
     )
   },
 
   borrow: async ({
-    targets = allTokenSymbols,
+    targets,
   }: {
-    targets: ("ETH" | Token["symbol"] | Token["token"])[]
+    targets: ("ETH" | EthToken["symbol"] | EthToken["token"])[]
   }) => {
     return targets.flatMap((target) =>
-      target === "ETH" ? borrowEther() : borrowToken(findToken(target))
+      target === "ETH"
+        ? borrowEther(Chain.eth)
+        : borrowToken(Chain.eth, findToken(ethTokens, target))
     )
   },
 }
 
-const allTokenSymbols = [...tokens.map((token) => token.symbol), "ETH"] as (
-  | "ETH"
-  | Token["symbol"]
-)[]
+export const gno = {
+  deposit: async ({
+    targets,
+  }: {
+    targets: ("DSR_sDAI" | "XDAI" | GnoToken["symbol"] | GnoToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "DSR_sDAI"
+        ? depositDsr(Chain.gno)
+        : target === "XDAI"
+        ? depositEther(Chain.gno)
+        : depositToken(Chain.gno, findToken(gnoTokens, target))
+    )
+  },
+
+  borrow: async ({
+    targets,
+  }: {
+    targets: ("XDAI" | GnoToken["symbol"] | GnoToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "XDAI"
+        ? borrowEther(Chain.gno)
+        : borrowToken(Chain.gno, findToken(gnoTokens, target))
+    )
+  },
+}
