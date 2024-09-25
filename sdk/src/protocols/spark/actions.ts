@@ -85,23 +85,17 @@ export const depositDsr = (chain: Chain): Permission[] => {
 }
 
 export const depositToken = (chain: Chain, token: Token) => {
-  const {
-    sparkLendingPoolV3,
-    RewardsController
-  } = _getAllAddresses(chain)
+  const { sparkLendingPoolV3, RewardsController } = _getAllAddresses(chain)
 
   return [
-    ...allowErc20Approve(
-      [token.token],
-      [sparkLendingPoolV3]
-    ),
+    ...allowErc20Approve([token.token], [sparkLendingPoolV3]),
     {
       ...allow.mainnet.spark.sparkLendingPoolV3.supply(
         token.token,
         undefined,
         c.avatar
       ),
-      targetAddress: sparkLendingPoolV3
+      targetAddress: sparkLendingPoolV3,
     },
     {
       ...allow.mainnet.spark.sparkLendingPoolV3.withdraw(
@@ -109,13 +103,13 @@ export const depositToken = (chain: Chain, token: Token) => {
         undefined,
         c.avatar
       ),
-      targetAddress: sparkLendingPoolV3
+      targetAddress: sparkLendingPoolV3,
     },
     {
       ...allow.mainnet.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
         token.token
       ),
-      targetAddress: sparkLendingPoolV3
+      targetAddress: sparkLendingPoolV3,
     },
     {
       ...allow.mainnet.spark.RewardsController.claimRewards(
@@ -123,12 +117,15 @@ export const depositToken = (chain: Chain, token: Token) => {
         undefined,
         c.avatar
       ),
-      targetAddress: RewardsController
+      targetAddress: RewardsController,
     },
     {
-      ...allow.mainnet.spark.RewardsController.claimAllRewards(undefined, c.avatar),
-      targetAddress: RewardsController
-    }
+      ...allow.mainnet.spark.RewardsController.claimAllRewards(
+        undefined,
+        c.avatar
+      ),
+      targetAddress: RewardsController,
+    },
   ]
 }
 
@@ -138,7 +135,7 @@ export const depositEther = (chain: Chain) => {
     wrappedTokenGatewayV3,
     sparkLendingPoolV3,
     wrappedNativeToken,
-    RewardsController
+    RewardsController,
   } = _getAllAddresses(chain)
 
   return [
@@ -175,9 +172,12 @@ export const depositEther = (chain: Chain) => {
       targetAddress: RewardsController,
     },
     {
-      ...allow.mainnet.spark.RewardsController.claimAllRewards(undefined, c.avatar),
+      ...allow.mainnet.spark.RewardsController.claimAllRewards(
+        undefined,
+        c.avatar
+      ),
       targetAddress: RewardsController,
-    }
+    },
   ]
 }
 
