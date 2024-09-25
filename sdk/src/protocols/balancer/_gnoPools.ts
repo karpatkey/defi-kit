@@ -221,25 +221,6 @@ export default [
     ],
   },
   {
-    bpt: "0x5C78d05b8ECF97507d1cf70646082c54FaA4dA95",
-    id: "0x5c78d05b8ecf97507d1cf70646082c54faa4da95000000000000000000000030",
-    name: "bb-agEUR-EURe",
-    type: "ComposableStable",
-    gauge: "0x210ABdFD989f3eE5C08614a8f4e096Cf8408f5DF",
-    tokens: [
-      {
-        address: "0x4b1E2c2762667331Bc91648052F646d1b0d35984",
-        symbol: "EURA",
-        id: "0x",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x5DC587361652A791A4B271e635B060665A1D4ceF",
     id: "0x5dc587361652a791a4b271e635b060665a1d4cef00020000000000000000009d",
     name: "15sDAI-85SLX",
