@@ -37,8 +37,8 @@ export const eth = {
       target === "DSR_sDAI"
         ? depositDsr(Chain.eth)
         : target === "ETH"
-        ? depositEther()
-        : depositToken(findToken(ethTokens, target))
+        ? depositEther(Chain.gno)
+        : depositToken(Chain.eth, findToken(ethTokens, target))
     )
   },
 
@@ -49,8 +49,8 @@ export const eth = {
   }) => {
     return targets.flatMap((target) =>
       target === "ETH"
-        ? borrowEther()
-        : borrowToken(findToken(ethTokens, target))
+        ? borrowEther(Chain.eth)
+        : borrowToken(Chain.eth, findToken(ethTokens, target))
     )
   },
 }
@@ -65,8 +65,20 @@ export const gno = {
       target === "DSR_sDAI"
         ? depositDsr(Chain.gno)
         : target === "XDAI"
-        ? depositEther()
-        : depositToken(findToken(gnoTokens, target))
+        ? depositEther(Chain.gno)
+        : depositToken(Chain.gno, findToken(gnoTokens, target))
+    )
+  },
+
+  borrow: async ({
+    targets,
+  }: {
+    targets: ("XDAI" | GnoToken["symbol"] | GnoToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "XDAI"
+        ? borrowEther(Chain.gno)
+        : borrowToken(Chain.gno, findToken(gnoTokens, target))
     )
   },
 }

@@ -61,7 +61,7 @@ export const _getAllAddresses = (chain: Chain) => {
 export const depositToken = (chain: Chain, token: Token) => {
   const { aaveLendingPoolV3 } = _getAllAddresses(chain)
 
-  const permissions: Permission[] = [
+  return [
     ...allowErc20Approve([token.token], [aaveLendingPoolV3]),
     {
       ...allow.mainnet.aaveV3.aaveLendingPoolV3.supply(
@@ -86,8 +86,6 @@ export const depositToken = (chain: Chain, token: Token) => {
       targetAddress: aaveLendingPoolV3,
     },
   ]
-
-  return permissions
 }
 
 export const depositEther = (chain: Chain) => {
@@ -98,7 +96,7 @@ export const depositEther = (chain: Chain) => {
     wrappedNativeToken,
   } = _getAllAddresses(chain)
 
-  const permissions: Permission[] = [
+  return [
     ...allowErc20Approve([aNativeToken], [wrappedTokenGatewayV3]),
     {
       ...allow.mainnet.aaveV3.wrappedTokenGatewayV3.depositETH(
@@ -124,14 +122,12 @@ export const depositEther = (chain: Chain) => {
       targetAddress: aaveLendingPoolV3,
     },
   ]
-
-  return permissions
 }
 
 export const borrowToken = (chain: Chain, token: Token) => {
   const { aaveLendingPoolV3 } = _getAllAddresses(chain)
 
-  const permissions: Permission[] = [
+  return [
     ...allowErc20Approve([token.token], [aaveLendingPoolV3]),
     {
       ...allow.mainnet.aaveV3.aaveLendingPoolV3.borrow(
@@ -157,8 +153,6 @@ export const borrowToken = (chain: Chain, token: Token) => {
       targetAddress: aaveLendingPoolV3,
     },
   ]
-
-  return permissions
 }
 
 export const borrowEther = (chain: Chain) => {
@@ -170,7 +164,7 @@ export const borrowEther = (chain: Chain) => {
     stableDebtWrappedNativeToken,
   } = _getAllAddresses(chain)
 
-  const permissions: Permission[] = [
+  return [
     {
       ...allow.mainnet.aaveV3.variableDebtWETH.approveDelegation(
         wrappedTokenGatewayV3
@@ -206,6 +200,4 @@ export const borrowEther = (chain: Chain) => {
       targetAddress: aaveLendingPoolV3,
     },
   ]
-
-  return permissions
 }

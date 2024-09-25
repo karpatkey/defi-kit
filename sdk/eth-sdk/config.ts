@@ -163,6 +163,11 @@ export const contractAddressOverrides = {
     },
     spark: {
       sDAI: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+      sparkLendingPoolV3: "0x2Dae5307c5E3FD1CF5A72Cb6F698f915860607e0",
+      wrappedTokenGatewayV3: "0xBD7D6a9ad7865463DE44B05F04559f65e3B11704",
+      spWXDAI: "0xC9Fe2D32E96Bb364c7d29f3663ed3b27E30767bB",
+      variableDebtWXDAI: "0x868ADfDf12A86422524EaB6978beAE08A0008F37",
+      RewardsController: "0x4370D3b6C9588E02ce9D22e684387859c7Ff5b34",
     },
     wxdai: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
   },
