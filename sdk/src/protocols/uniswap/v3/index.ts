@@ -106,7 +106,7 @@ export const eth = {
       tokensForTargets?.includes(contracts.mainnet.weth)
     ) {
       permissions.push(
-        allow.mainnet.uniswap_v3.positions_nft.refundETH({send:true}),
+        allow.mainnet.uniswap_v3.positions_nft.refundETH({ send: true }),
         allow.mainnet.uniswap_v3.positions_nft.unwrapWETH9(undefined, c.avatar),
         allow.mainnet.uniswap_v3.positions_nft.collect({
           tokenId: nftIds ? oneOf(nftIds) : undefined,
