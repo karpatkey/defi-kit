@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.1](https://github.com/karpatkey/defi-kit/compare/v1.13.0...v1.13.1) (2024-09-26)
+
+
+### Bug Fixes
+
+* Uniswap v3 refundETH() ([#244](https://github.com/karpatkey/defi-kit/issues/244)) ([bf58808](https://github.com/karpatkey/defi-kit/commit/bf58808233a2e446c7cc5bec864da4b25435fae5))
+
 ## [1.13.0](https://github.com/karpatkey/defi-kit/compare/v1.12.6...v1.13.0) (2024-09-25)
 
 
