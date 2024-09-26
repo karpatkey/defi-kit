@@ -4215,25 +4215,6 @@ export default [
     ],
   },
   {
-    bpt: "0xe96a45f66bdDA121B24F0a861372A72E8889523d",
-    id: "0xe96a45f66bdda121b24f0a861372a72e8889523d00020000000000000000069b",
-    name: "80TRUF/20LINK",
-    type: "Weighted",
-    gauge: "0xA99280581D6520d336231687Fd8D673bBA97c115",
-    tokens: [
-      {
-        address: "0x38C2a4a7330b22788374B8Ff70BBa513C8D848cA",
-        symbol: "TRUF",
-        id: "0x",
-      },
-      {
-        address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
-        symbol: "LINK",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xE99481DC77691d8E2456E5f3F61C1810adFC1503",
     id: "0xe99481dc77691d8e2456e5f3f61c1810adfc1503000200000000000000000018",
     name: "B-50LINK-50WETH",
