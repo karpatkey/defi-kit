@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.2](https://github.com/karpatkey/defi-kit/compare/v1.13.1...v1.13.2) (2024-09-26)
+
+
+### Bug Fixes
+
+* pin version of roles sdk to last with ethers 5 ([#246](https://github.com/karpatkey/defi-kit/issues/246)) ([412fc73](https://github.com/karpatkey/defi-kit/commit/412fc735497c8f0bbb51193d776e1852c8a80898))
+
 ## [1.13.1](https://github.com/karpatkey/defi-kit/compare/v1.13.0...v1.13.1) (2024-09-26)
 
 
