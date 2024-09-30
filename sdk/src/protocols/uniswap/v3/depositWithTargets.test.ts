@@ -3,7 +3,7 @@ import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-import { parseUnits } from "ethers/lib/utils"
+import { parseUnits, parseEther } from "ethers/lib/utils"
 import { testKit } from "../../../../test/kit"
 import { mintNFT, getPosition, calculateAmounts } from "./testUtils"
 
@@ -17,9 +17,12 @@ const sdk = getMainnetSdk(avatar)
 describe("uniswap_v3", () => {
   describe("deposit (with targets)", () => {
     beforeAll(async () => {
+      await sdk.weth.deposit({ value: parseEther("10") })
+
       const nftId = await mintNFT(
         contracts.mainnet.usdc,
-        E_ADDRESS,
+        // E_ADDRESS, No ETH sending allowed.
+        contracts.mainnet.weth,
         3000,
         0n,
         1000000000000000000n
@@ -80,6 +83,12 @@ describe("uniswap_v3", () => {
           parseUnits("50000", 6)
         )
       ).not.toRevert()
+      await expect(
+        testKit.eth.weth.approve(
+          contracts.mainnet.uniswap_v3.positions_nft,
+          parseEther("10")
+        )
+      ).not.toRevert()
       const nftId = await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(
         avatar._address,
         0
@@ -103,13 +112,13 @@ describe("uniswap_v3", () => {
             amount0Min: amount0Min,
             amount1Min: amount1Min,
             deadline: Math.floor(new Date().getTime() / 1000) + 1800,
-          },
-          { value: amount1Desired }
+          }
+          // { value: amount1Desired } No ETH sending allowed.
         )
       ).not.toRevert()
-      await expect(
-        testKit.eth.uniswap_v3.positions_nft.refundETH()
-      ).not.toRevert()
+      // await expect(
+      //   testKit.eth.uniswap_v3.positions_nft.refundETH()
+      // ).not.toRevert()
       await expect(
         testKit.eth.uniswap_v3.positions_nft.increaseLiquidity(
           {
@@ -119,8 +128,8 @@ describe("uniswap_v3", () => {
             amount0Min: amount0Min,
             amount1Min: amount1Min,
             deadline: Math.floor(new Date().getTime() / 1000) + 1800,
-          },
-          { value: amount1Desired }
+          }
+          // { value: amount1Desired } No ETH sending allowed.
         )
       ).toBeForbidden()
     })
@@ -158,39 +167,40 @@ describe("uniswap_v3", () => {
       ).toBeForbidden()
     })
 
-    it("decrease liquidity and collect using ETH", async () => {
-      const nftId = await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(
-        avatar._address,
-        0
-      )
-      const position = await getPosition(nftId)
-      await expect(
-        testKit.eth.uniswap_v3.positions_nft.decreaseLiquidity({
-          tokenId: nftId,
-          liquidity: position[7],
-          amount0Min: 0,
-          amount1Min: 0,
-          deadline: Math.floor(new Date().getTime() / 1000) + 1800,
-        })
-      ).not.toRevert()
-      await expect(
-        testKit.eth.uniswap_v3.positions_nft.collect({
-          tokenId: nftId,
-          amount0Max: COLLECT_MAX_AMOUNT,
-          amount1Max: COLLECT_MAX_AMOUNT,
-          recipient: ZERO_ADDRESS,
-        })
-      ).not.toRevert()
-      await expect(
-        testKit.eth.uniswap_v3.positions_nft.unwrapWETH9(0, avatar._address)
-      ).not.toRevert()
-      await expect(
-        testKit.eth.uniswap_v3.positions_nft.sweepToken(
-          contracts.mainnet.usdc,
-          0,
-          avatar._address
-        )
-      ).not.toRevert()
-    })
+    // No ETH sending allowed.
+    // it("decrease liquidity and collect using ETH", async () => {
+    //   const nftId = await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(
+    //     avatar._address,
+    //     0
+    //   )
+    //   const position = await getPosition(nftId)
+    //   await expect(
+    //     testKit.eth.uniswap_v3.positions_nft.decreaseLiquidity({
+    //       tokenId: nftId,
+    //       liquidity: position[7],
+    //       amount0Min: 0,
+    //       amount1Min: 0,
+    //       deadline: Math.floor(new Date().getTime() / 1000) + 1800,
+    //     })
+    //   ).not.toRevert()
+    //   await expect(
+    //     testKit.eth.uniswap_v3.positions_nft.collect({
+    //       tokenId: nftId,
+    //       amount0Max: COLLECT_MAX_AMOUNT,
+    //       amount1Max: COLLECT_MAX_AMOUNT,
+    //       recipient: ZERO_ADDRESS,
+    //     })
+    //   ).not.toRevert()
+    //   await expect(
+    //     testKit.eth.uniswap_v3.positions_nft.unwrapWETH9(0, avatar._address)
+    //   ).not.toRevert()
+    //   await expect(
+    //     testKit.eth.uniswap_v3.positions_nft.sweepToken(
+    //       contracts.mainnet.usdc,
+    //       0,
+    //       avatar._address
+    //     )
+    //   ).not.toRevert()
+    // })
   })
 })

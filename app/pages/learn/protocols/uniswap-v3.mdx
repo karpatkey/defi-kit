@@ -21,6 +21,12 @@ https://app.uniswap.org/
 | `fees`    | _string[] (optional)_ | `Fee` fee                         |
 
 <Callout type="info">
+  For safety reasons and to prevent potential ETH losses, sending ETH directly
+  is prohibited for any function. Instead, ETH must be wrapped into WETH
+  (Wrapped Ether) before interacting with the protocol.
+</Callout>
+
+<Callout type="info">
   If `targets` is unspecified `tokens` must be passed. New positions in any pair
   of these tokens can be minted. Existing positions in any pair of these tokens
   can be managed.
@@ -84,7 +90,7 @@ Approve `PositionsNFT` to spend `TOKEN` tokens on behalf of the avatar.
 Deposit `TOKEN` tokens to the corresponding Uniswap v3 pool and receive an ERC-721 token (NFT) representing the newly minted liquidity position.
 
 - **Contract:** `PositionsNFT`
-- **Function:** `mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))` Ξ _allow sending ETH_
+- **Function:** `mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))` {/* Ξ _allow sending ETH_ */}
 
   | Parameter               | Constraint       |
   | :---------------------- | :--------------- |
@@ -104,7 +110,7 @@ Deposit `TOKEN` tokens to the corresponding Uniswap v3 pool and receive an ERC-7
 Increase the liquidity in a NFT position by adding the desired amounts of `token0` and `token1`.
 
 - **Contract:** `PositionsNFT`
-- **Function:** `increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))` Ξ _allow sending ETH_
+- **Function:** `increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))` {/* Ξ _allow sending ETH_ */}
 
   | Parameter               | Constraint        |
   | :---------------------- | :---------------- |
@@ -152,7 +158,7 @@ Collect accumulated fees from a specific NFT position.
   | `params.amount0Max` | -                 |
   | `params.amount1Max` | -                 |
 
-### If WETH is involved:
+{/* ### If WETH is involved:
 
 #### `collect · PositionsNFT`
 
@@ -202,4 +208,4 @@ Transfers the specified `token` amount from the `PositionsNFT` contract balance 
   | :-------------- | :---------------- |
   | `token`         | -                 |
   | `amountMinimum` | -                 |
-  | `recipient`     | equal to `AVATAR` |
+  | `recipient`     | equal to `AVATAR` | */}
