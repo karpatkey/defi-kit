@@ -17,7 +17,7 @@ const sdk = getMainnetSdk(avatar)
 describe("uniswap_v3", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await sdk.weth.deposit({ value:  parseEther("10")})
+      await sdk.weth.deposit({ value: parseEther("10") })
 
       const nftId = await mintNFT(
         contracts.mainnet.usdc,
@@ -115,7 +115,7 @@ describe("uniswap_v3", () => {
             amount0Min: amount0Min,
             amount1Min: amount1Min,
             deadline: Math.floor(new Date().getTime() / 1000) + 1800,
-          },
+          }
           // { value: amount1Desired } No ETH sending allowed.
         )
       ).not.toRevert()
@@ -131,7 +131,7 @@ describe("uniswap_v3", () => {
             amount0Min: amount0Min,
             amount1Min: amount1Min,
             deadline: Math.floor(new Date().getTime() / 1000) + 1800,
-          },
+          }
           // { value: amount1Desired } No ETH sending allowed.
         )
       ).toBeForbidden()
@@ -194,16 +194,16 @@ describe("uniswap_v3", () => {
     //       recipient: ZERO_ADDRESS,
     //     })
     //   ).not.toRevert()
-      // await expect(
-      //   testKit.eth.uniswap_v3.positions_nft.unwrapWETH9(0, avatar._address)
-      // ).not.toRevert()
-      // await expect(
-      //   testKit.eth.uniswap_v3.positions_nft.sweepToken(
-      //     contracts.mainnet.usdc,
-      //     0,
-      //     avatar._address
-      //   )
-      // ).not.toRevert()
+    // await expect(
+    //   testKit.eth.uniswap_v3.positions_nft.unwrapWETH9(0, avatar._address)
+    // ).not.toRevert()
+    // await expect(
+    //   testKit.eth.uniswap_v3.positions_nft.sweepToken(
+    //     contracts.mainnet.usdc,
+    //     0,
+    //     avatar._address
+    //   )
+    // ).not.toRevert()
     // })
   })
 })

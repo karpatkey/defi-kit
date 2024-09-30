@@ -179,7 +179,7 @@ export const mintNFT = async (
       amount1Min: amount1Min,
       recipient: avatar._address,
       deadline: Math.floor(new Date().getTime() / 1000) + 1800,
-    },
+    }
     // { value: value }
   )
 

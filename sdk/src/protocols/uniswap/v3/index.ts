@@ -67,7 +67,7 @@ export const eth = {
       allow.mainnet.uniswap_v3.positions_nft.increaseLiquidity(
         {
           tokenId: nftIds ? oneOf(nftIds) : c.avatarIsOwnerOfErc721,
-        },
+        }
         // No ETH sending allowed.
         // {
         //   send: true,
@@ -94,7 +94,7 @@ export const eth = {
             token0: oneOf(mintTokenAddresses),
             token1: oneOf(mintTokenAddresses),
             fee: mintFees && mintFees.length > 0 ? oneOf(mintFees) : undefined,
-          },
+          }
           // No ETH sending allowed
           // {
           //   send: true,
