@@ -180,7 +180,7 @@ export const mintNFT = async (
       recipient: avatar._address,
       deadline: Math.floor(new Date().getTime() / 1000) + 1800,
     },
-    { value: value }
+    // { value: value }
   )
 
   const ownedNfts = await sdk.uniswap_v3.positions_nft.balanceOf(
