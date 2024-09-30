@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.3](https://github.com/karpatkey/defi-kit/compare/v1.13.2...v1.13.3) (2024-09-30)
+
+
+### Bug Fixes
+
+* Forbid ETH sending in Uniswap v3 ([#250](https://github.com/karpatkey/defi-kit/issues/250)) ([d9cd24e](https://github.com/karpatkey/defi-kit/commit/d9cd24ef8f6b1ccfa4542dfd77a0fbbfe5a94b0e))
+
 ## [1.13.2](https://github.com/karpatkey/defi-kit/compare/v1.13.1...v1.13.2) (2024-09-26)
 
 
