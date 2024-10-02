@@ -8,15 +8,18 @@ extendZodWithOpenApi(z)
 
 export const zx = {
   address: () =>
-    z.string().transform((val, ctx) => {
-      try {
-        return getAddress(val) as `0x${string}`
-      } catch (e) {
-        ctx.addIssue({
-          code: z.ZodIssueCode.custom,
-          message: "Address checksum is invalid",
-        })
-        return z.NEVER
-      }
-    }),
+    z
+      .string()
+      .regex(/0x[a-fA-F0-9]{40}/)
+      .transform((val, ctx) => {
+        try {
+          return getAddress(val) as `0x${string}`
+        } catch (e) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: "Address checksum is invalid",
+          })
+          return z.NEVER
+        }
+      }),
 }
