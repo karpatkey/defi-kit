@@ -79,6 +79,14 @@ export default [
         address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
         symbol: "ezETH",
       },
+      {
+        address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        symbol: "cbBTC",
+      },
+      {
+        address: "0xFAe103DC9cf190eD75350761e95403b7b8aFa6c0",
+        symbol: "rswETH",
+      },
     ],
   },
 ] as const

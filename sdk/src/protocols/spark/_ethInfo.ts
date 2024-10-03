@@ -121,4 +121,16 @@ export default [
     stableDebtTokenAddress: "0x5B1F8aF3E6C0BF4d20e8e5220a4e4A3A8fA6Dc0A",
     variableDebtTokenAddress: "0xc2bD6d2fEe70A0A73a33795BdbeE0368AeF5c766",
   },
+  {
+    symbol: "cbBTC",
+    token: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: true,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0xb3973D459df38ae57797811F2A1fd061DA1BC123",
+    stableDebtTokenAddress: "0x26a76E2fa1EaDbe7C30f0c333059Bcc3642c28d2",
+    variableDebtTokenAddress: "0x661fE667D2103eb52d3632a3eB2cAbd123F27938",
+  },
 ] as const

@@ -827,25 +827,6 @@ export default [
     ],
   },
   {
-    bpt: "0x383e7859271B2D0589B013b6d944572a0a8bE3cB",
-    id: "0x383e7859271b2d0589b013b6d944572a0a8be3cb000000000000000000000657",
-    name: "DOLA-mkUSD BSP",
-    type: "ComposableStable",
-    gauge: "0x6D560CbE3Cc25Eca8c930835Ec3d296a6C16B210",
-    tokens: [
-      {
-        address: "0x4591DBfF62656E7859Afe5e45f6f47D3669fBB28",
-        symbol: "mkUSD",
-        id: "0x",
-      },
-      {
-        address: "0x865377367054516e17014CcdED1e7d814EDC9ce4",
-        symbol: "DOLA",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x38fe2B73612527eFf3C5aC3bF2Dcb73784aD9274",
     id: "0x38fe2b73612527eff3c5ac3bf2dcb73784ad927400000000000000000000068c",
     name: "saETH/wstETH",
@@ -3858,25 +3839,6 @@ export default [
     ],
   },
   {
-    bpt: "0xdB3575310Dd8F6c9E51be290FeD9a2Db32743FDE",
-    id: "0xdb3575310dd8f6c9e51be290fed9a2db32743fde00000000000000000000068e",
-    name: "inankrETH/ankrETH",
-    type: "ComposableStable",
-    gauge: "0xCC9723faDed81a9448a9664c39C0Df2e77FDfA2E",
-    tokens: [
-      {
-        address: "0xE95A203B1a91a908F9B9CE46459d101078c2c3cb",
-        symbol: "ankrETH",
-        id: "0x",
-      },
-      {
-        address: "0xfa2629B9cF3998D52726994E0FcdB750224D8B9D",
-        symbol: "InankrETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xDbC4F138528B6B893cBCc3fd9c15D8B34D0554aE",
     id: "0xdbc4f138528b6b893cbcc3fd9c15d8b34d0554ae0002000000000000000003bf",
     name: "85QNT-15USDC",
@@ -4229,25 +4191,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xEBDD200fe52997142215F7603bC28A80bECDAdEb",
-    id: "0xebdd200fe52997142215f7603bc28a80becdadeb000200000000000000000694",
-    name: "50OLAS-50USDC",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x0001A500A6B18995B03f44bb040A5fFc28E45CB0",
-        symbol: "OLAS",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
         id: "0x",
       },
     ],
