@@ -1606,22 +1606,6 @@ export default [
     rewarder: "0x6Ea41486A8f21EED7B20AfDB681b90a5B6C6D029",
   },
   {
-    name: "ShezUSD/sDAI",
-    id: "206",
-    bpt: "0xEd0DF9Cd16D806E8A523805e53cf0c56E6dB4D1d",
-    tokens: [
-      {
-        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
-        symbol: "sDAI",
-      },
-      {
-        address: "0xD60EeA80C83779a8A5BFCDAc1F3323548e6BB62d",
-        symbol: "ShezUSD",
-      },
-    ],
-    rewarder: "0x5153DD9B05ac642e387c87a12C89E97Fe1bE6860",
-  },
-  {
     name: "ETHx/wstETH",
     id: "207",
     bpt: "0xB91159aa527D4769CB9FAf3e4ADB760c7E8C8Ea7",
@@ -1890,22 +1874,6 @@ export default [
     rewarder: "0xF61beaEBfe56AE47Fdd85ECaA9F64ca13A90bc12",
   },
   {
-    name: "shezETH/wstETH",
-    id: "223",
-    bpt: "0xDb1f2e1655477d08FB0992f82EEDe0053B8Cd382",
-    tokens: [
-      {
-        address: "0x63a0964A36c34E81959da5894ad888800e17405b",
-        symbol: "ShezETH",
-      },
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
-      },
-    ],
-    rewarder: "0x747eF4e13cB71264897af2D69855f56b771b42ce",
-  },
-  {
     name: "B-baoUSD-sUSDe-BPT",
     id: "224",
     bpt: "0x79AF734562f741946566D5126bBDed4Cb699E355",
@@ -2000,5 +1968,37 @@ export default [
       },
     ],
     rewarder: "0xca5Ee20b1bF03EfBCfD28f01Cd2cAb4d0028E64c",
+  },
+  {
+    name: "ECLP-sUSDe-GYD",
+    id: "230",
+    bpt: "0x8D93B853849b9884E2Bb413444Ec23eB5366eE91",
+    tokens: [
+      {
+        address: "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
+        symbol: "sUSDe",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
+      },
+    ],
+    rewarder: "0x1F2B312C30B08C1957bd3ADA616E77BC7bFf51ff",
+  },
+  {
+    name: "balETH/wstETH",
+    id: "231",
+    bpt: "0xB757DdbC72155C0a41058E148969BA29BA071A2E",
+    tokens: [
+      {
+        address: "0x6dC3ce9C57b20131347FDc9089D740DAf6eB34c5",
+        symbol: "balETH",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+    ],
+    rewarder: "0xAddc38cd32ac2c2228399Dfb2665EAF953611c1a",
   },
 ] as const
