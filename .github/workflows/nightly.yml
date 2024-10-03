@@ -79,7 +79,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "fix: protocol updates"
-          title: "[nightly] Protocol updates"
+          title: "fix: [nightly] Protocol updates"
           body: >
             The nightly job detected updates to the protocol configs
           labels: bot
