@@ -78,8 +78,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3.10.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "fix: protocol updates"
-          title: "[nightly] Protocol updates"
+          commit-message: "fix: protocol updates [nightly]"
+          title: "fix: protocol updates [nightly]"
           body: >
             The nightly job detected updates to the protocol configs
           labels: bot
