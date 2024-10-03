@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/karpatkey/defi-kit/compare/v1.13.3...v1.14.0) (2024-10-03)
+
+
+### Features
+
+* attach patterns to address schema ([#254](https://github.com/karpatkey/defi-kit/issues/254)) ([007c162](https://github.com/karpatkey/defi-kit/commit/007c162fff47ef3f5af4a100a8b6a7bf8fd95043))
+
 ## [1.13.3](https://github.com/karpatkey/defi-kit/compare/v1.13.2...v1.13.3) (2024-09-30)
 
 
