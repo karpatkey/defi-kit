@@ -54,6 +54,10 @@ export default [
     symbol: "LEASH",
   },
   {
+    address: "0x767FE9EDC9E0dF98E07454847909b5E959D7ca0E",
+    symbol: "ILV",
+  },
+  {
     address: "0x7D29A64504629172a429e64183D6673b9dAcbFCe",
     symbol: "VXV",
   },
@@ -366,6 +370,10 @@ export default [
     symbol: "PEPE",
   },
   {
+    address: "0x5026F006B85729a8b14553FAE6af249aD16c9aaB",
+    symbol: "WOJAK",
+  },
+  {
     address: "0xA9E8aCf069C58aEc8825542845Fd754e41a9489A",
     symbol: "pepecoin",
   },
@@ -432,6 +440,10 @@ export default [
   {
     address: "0x423f4e6138E475D85CF7Ea071AC92097Ed631eea",
     symbol: "PNDC",
+  },
+  {
+    address: "0x8DD09822E83313adCA54c75696aE80C5429697Ff",
+    symbol: "Sifu",
   },
   {
     address: "0x44971ABF0251958492FeE97dA3e5C5adA88B9185",
@@ -550,16 +562,8 @@ export default [
     symbol: "NO",
   },
   {
-    address: "0xaeB3607eC434454ceB308f5Cd540875efb54309A",
-    symbol: "STRDY",
-  },
-  {
     address: "0xEeee2A2E650697d2A8e8BC990C2f3d04203bE06f",
     symbol: "FP",
-  },
-  {
-    address: "0x1Bbe973BeF3a977Fc51CbED703E8ffDEfE001Fed",
-    symbol: "PORTAL",
   },
   {
     address: "0x614577036F0a024DBC1C88BA616b394DD65d105a",
@@ -580,6 +584,10 @@ export default [
   {
     address: "0x66D79B8f60ec93Bfce0b56F5Ac14A2714E509a99",
     symbol: "MAPO",
+  },
+  {
+    address: "0x289Ff00235D2b98b0145ff5D4435d3e92f9540a6",
+    symbol: "BOOE",
   },
   {
     address: "0x8143182a775C54578c8B7b3Ef77982498866945D",
@@ -628,10 +636,6 @@ export default [
   {
     address: "0xCb76314C2540199f4B844D4ebbC7998C604880cA",
     symbol: "BERRY",
-  },
-  {
-    address: "0xA78BCBb74b822e74a847897d2D1d2d5EE2c76BD8",
-    symbol: "GOLD",
   },
   {
     address: "0xF1A7000000950C7ad8Aff13118Bb7aB561A448ee",
@@ -720,10 +724,6 @@ export default [
   {
     address: "0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26",
     symbol: "OGN",
-  },
-  {
-    address: "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
-    symbol: "SNT",
   },
   {
     address: "0xaA7a9CA87d3694B5755f213B5D04094b8d0F0A6F",
@@ -1000,6 +1000,10 @@ export default [
   {
     address: "0xd0D56273290D339aaF1417D9bfa1bb8cFe8A0933",
     symbol: "FOOM",
+  },
+  {
+    address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+    symbol: "GHO",
   },
   {
     address: "0x99b2E411589FD3bb4E2EB4BB65729dB013887372",
