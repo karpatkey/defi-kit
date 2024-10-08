@@ -68,7 +68,7 @@ export const swap = async (
       { delegatecall: true }
     ),
 
-    allow.mainnet.cowswap.orderSigner.unsignOrder(orderStructScoping, {
+    allow.mainnet.cowswap.orderSigner.unsignOrder(undefined, {
       delegatecall: true,
     })
   )
