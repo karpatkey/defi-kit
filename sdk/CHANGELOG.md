@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.2](https://github.com/karpatkey/defi-kit/compare/v1.14.1...v1.14.2) (2024-10-08)
+
+
+### Bug Fixes
+
+* CowSwap unsignOrder scoping ([#264](https://github.com/karpatkey/defi-kit/issues/264)) ([f81adc6](https://github.com/karpatkey/defi-kit/commit/f81adc6f37983cd162989de91ca617758d18c854))
+
 ## [1.14.1](https://github.com/karpatkey/defi-kit/compare/v1.14.0...v1.14.1) (2024-10-04)
 
 
