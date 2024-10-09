@@ -124,6 +124,6 @@ export const gno = {
     targets: (GnoPool["name"] | GnoPool["bpt"] | GnoPool["id"])[]
   }) =>
     options.targets.flatMap((target) =>
-      stake(Chain.gno, findPool(ethPools, target))
+      stake(Chain.gno, findPool(gnoPools, target))
     ),
 }
