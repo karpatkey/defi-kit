@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.4](https://github.com/karpatkey/defi-kit/compare/v1.14.3...v1.14.4) (2024-10-09)
+
+
+### Bug Fixes
+
+* Balancer stake action in gno ([#268](https://github.com/karpatkey/defi-kit/issues/268)) ([6f98e6f](https://github.com/karpatkey/defi-kit/commit/6f98e6f4649a0b38949eae44d4b5718a287cc33d))
+
 ## [1.14.3](https://github.com/karpatkey/defi-kit/compare/v1.14.2...v1.14.3) (2024-10-09)
 
 
