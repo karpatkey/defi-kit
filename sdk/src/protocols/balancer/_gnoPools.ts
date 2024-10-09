@@ -164,6 +164,25 @@ export default [
     ],
   },
   {
+    bpt: "0x4665228B80cF5cD016277157237c40b6d7bd2c65",
+    id: "0x4665228b80cf5cd016277157237c40b6d7bd2c650002000000000000000000d4",
+    name: "20osGNO-80SWISE",
+    type: "Weighted",
+    gauge: "0x375C3e436B82BbC20D12f248C0aC4e55A11456E0",
+    tokens: [
+      {
+        address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
+        symbol: "osGNO",
+        id: "0x",
+      },
+      {
+        address: "0xfdA94F056346d2320d4B5E468D6Ad099b2277746",
+        symbol: "SWISE",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x4683e340a8049261057D5aB1b29C8d840E75695e",
     id: "0x4683e340a8049261057d5ab1b29c8d840e75695e00020000000000000000005a",
     name: "B-50wstETH-50GNO",
