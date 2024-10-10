@@ -410,10 +410,6 @@ export default [
     symbol: "OX",
   },
   {
-    address: "0xa19f5264F7D7Be11c451C093D8f92592820Bea86",
-    symbol: "BYTES",
-  },
-  {
     address: "0x927402ab67c0CDA3c187E9DFE34554AC581441f2",
     symbol: "SAITABIT",
   },
@@ -458,16 +454,8 @@ export default [
     symbol: "NEXT",
   },
   {
-    address: "0x20561172f791f915323241E885b4f7D5187c36E1",
-    symbol: "CAL",
-  },
-  {
     address: "0x470c8950C0c3aA4B09654bC73b004615119A44b5",
     symbol: "KIZUNA",
-  },
-  {
-    address: "0xfA3E941D1F6B7b10eD84A0C211bfA8aeE907965e",
-    symbol: "HAY",
   },
   {
     address: "0x102c776DDB30C754dEd4fDcC77A19230A60D4e4f",
@@ -566,10 +554,6 @@ export default [
     symbol: "AXGT",
   },
   {
-    address: "0x382EDfe4c6168858C81893fE00fCB7b68914d929",
-    symbol: "EMERALD",
-  },
-  {
     address: "0xE99620545740a30Dbf8B4601d2F7dDC99cC1dc42",
     symbol: "NO",
   },
@@ -588,10 +572,6 @@ export default [
   {
     address: "0x594DaaD7D77592a2b97b725A7AD59D7E188b5bFa",
     symbol: "APU",
-  },
-  {
-    address: "0xAcd2c239012D17BEB128B0944D49015104113650",
-    symbol: "KARRAT",
   },
   {
     address: "0x66D79B8f60ec93Bfce0b56F5Ac14A2714E509a99",
@@ -624,14 +604,6 @@ export default [
   {
     address: "0x3fFEea07a27Fab7ad1df5297fa75e77a43CB5790",
     symbol: "PEIPEI",
-  },
-  {
-    address: "0x525574C899A7c877a11865339e57376092168258",
-    symbol: "GURU",
-  },
-  {
-    address: "0xEDB171C18cE90B633DB442f2A6F72874093b49Ef",
-    symbol: "WAMPL",
   },
   {
     address: "0xFeAc2Eae96899709a43E252B6B92971D32F9C0F9",
@@ -750,10 +722,6 @@ export default [
     symbol: "OGN",
   },
   {
-    address: "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
-    symbol: "SNT",
-  },
-  {
     address: "0xaA7a9CA87d3694B5755f213B5D04094b8d0F0A6F",
     symbol: "TRAC",
   },
@@ -818,10 +786,6 @@ export default [
     symbol: "TORG",
   },
   {
-    address: "0xB17548c7B510427baAc4e267BEa62e800b247173",
-    symbol: "SMT",
-  },
-  {
     address: "0x1A4b46696b2bB4794Eb3D4c26f1c55F9170fa4C5",
     symbol: "BIT",
   },
@@ -872,10 +836,6 @@ export default [
   {
     address: "0x8e0E57DCb1ce8d9091dF38ec1BfC3b224529754A",
     symbol: "CAH",
-  },
-  {
-    address: "0x9343e24716659A3551eB10Aff9472A2dcAD5Db2d",
-    symbol: "STFX",
   },
   {
     address: "0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
@@ -974,10 +934,6 @@ export default [
     symbol: "SAFE",
   },
   {
-    address: "0xc555D625828c4527d477e595fF1Dd5801B4a600e",
-    symbol: "MON",
-  },
-  {
     address: "0xbe0Ed4138121EcFC5c0E56B40517da27E6c5226B",
     symbol: "ATH",
   },
@@ -1008,10 +964,6 @@ export default [
   {
     address: "0xB528edBef013aff855ac3c50b381f253aF13b997",
     symbol: "AEVO",
-  },
-  {
-    address: "0xD0EbFe04Adb5Ef449Ec5874e450810501DC53ED5",
-    symbol: "BRUME",
   },
   {
     address: "0x853d955aCEf822Db058eb8505911ED77F175b99e",
@@ -1128,6 +1080,10 @@ export default [
   {
     address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
     symbol: "ezETH",
+  },
+  {
+    address: "0xC96dE26018A54D51c097160568752c4E3BD6C364",
+    symbol: "FBTC",
   },
   {
     address: "0x437cc33344a0B27A429f795ff6B469C72698B291",
