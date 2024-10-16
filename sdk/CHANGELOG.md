@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/karpatkey/defi-kit/compare/v1.14.4...v1.15.0) (2024-10-16)
+
+
+### Features
+
+* Spark: add USDS functionality / Update Python Scripts ([#271](https://github.com/karpatkey/defi-kit/issues/271)) ([85e082a](https://github.com/karpatkey/defi-kit/commit/85e082a50413271c520a4b32e8bce053e06f8e81))
+
 ## [1.14.4](https://github.com/karpatkey/defi-kit/compare/v1.14.3...v1.14.4) (2024-10-09)
 
 
