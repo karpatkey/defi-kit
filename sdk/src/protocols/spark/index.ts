@@ -32,7 +32,13 @@ export const eth = {
   deposit: async ({
     targets,
   }: {
-    targets: ("DSR_sDAI" | "SKY_USDS" | "ETH" | EthToken["symbol"] | EthToken["token"])[]
+    targets: (
+      | "DSR_sDAI"
+      | "SKY_USDS"
+      | "ETH"
+      | EthToken["symbol"]
+      | EthToken["token"]
+    )[]
   }) => {
     return targets.flatMap((target) =>
       target === "DSR_sDAI"

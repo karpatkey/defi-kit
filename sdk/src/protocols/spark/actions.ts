@@ -101,20 +101,9 @@ export const depositUSDS = (): Permission[] => {
       [contracts.mainnet.spark.USDS],
       [contracts.mainnet.spark.sUSDS]
     ),
-    allow.mainnet.spark.sUSDS["deposit(uint256,address)"](
-      undefined,
-      c.avatar
-    ),
-    allow.mainnet.spark.sUSDS.withdraw(
-      undefined,
-      c.avatar,
-      c.avatar
-    ),
-    allow.mainnet.spark.sUSDS.redeem(
-      undefined,
-      c.avatar,
-      c.avatar
-    )
+    allow.mainnet.spark.sUSDS["deposit(uint256,address)"](undefined, c.avatar),
+    allow.mainnet.spark.sUSDS.withdraw(undefined, c.avatar, c.avatar),
+    allow.mainnet.spark.sUSDS.redeem(undefined, c.avatar, c.avatar),
   ]
 }
 
