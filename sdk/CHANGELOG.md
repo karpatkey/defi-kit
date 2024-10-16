@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.1](https://github.com/karpatkey/defi-kit/compare/v1.15.0...v1.15.1) (2024-10-16)
+
+
+### Bug Fixes
+
+* Spark docs ([#273](https://github.com/karpatkey/defi-kit/issues/273)) ([afa14ac](https://github.com/karpatkey/defi-kit/commit/afa14acdb137384c94fea0c634ad43f2ad2dd6ac))
+
 ## [1.15.0](https://github.com/karpatkey/defi-kit/compare/v1.14.4...v1.15.0) (2024-10-16)
 
 
