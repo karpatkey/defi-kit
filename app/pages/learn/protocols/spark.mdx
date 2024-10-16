@@ -244,6 +244,126 @@ Redeem `sDAI` and withdraw `DAI`.
   | `receiver` | equal to `AVATAR` |
   | `owner`    | equal to `AVATAR` |
 
+### Target: SKY_USDS
+
+#### `DAI · approve`
+
+Approve `MigrationActions` to spend `DAI` tokens on behalf of the avatar.
+
+- **Contract:** `DAI`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint                  |
+  | :-------- | :-------------------------- |
+  | `spender` | equal to `MigrationActions` |
+  | `amount`  | -                           |
+
+#### `USDS · approve - MigrationActions as spender`
+
+Approve `MigrationActions` to spend `USDS` tokens on behalf of the avatar.
+
+- **Contract:** `USDS`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint                  |
+  | :-------- | :-------------------------- |
+  | `spender` | equal to `MigrationActions` |
+  | `amount`  | -                           |
+
+#### `USDS · approve - sUSDS as spender`
+
+Approve `sUSDS` to spend `USDS` tokens on behalf of the avatar.
+
+- **Contract:** `USDS`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint       |
+  | :-------- | :--------------- |
+  | `spender` | equal to `sUSDS` |
+  | `amount`  | -                |
+
+#### `MigrationActions · migrateDAIToUSDS`
+
+Burns `DAI` tokens and mints `USDS` tokens for the receiver.
+
+- **Contract:** `MigrationActions`
+- **Function:** `migrateDAIToUSDS(address,uint256)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `receiver` | equal to `AVATAR` |
+  | `assetsIn` | -                 |
+
+#### `MigrationActions · migrateDAIToSUSDS`
+
+Burns `DAI` tokens and mints `sUSDS` tokens for the receiver.
+
+- **Contract:** `MigrationActions`
+- **Function:** `migrateDAIToSUSDS(address,uint256)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `receiver` | equal to `AVATAR` |
+  | `assetsIn` | -                 |
+
+#### `MigrationActions · downgradeUSDSToDAI`
+
+Burns `USDS` tokens and mints `DAI` tokens for the receiver.
+
+- **Contract:** `MigrationActions`
+- **Function:** `downgradeUSDSToDAI(address,uint256)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `receiver` | equal to `AVATAR` |
+  | `assetsIn` | -                 |
+
+#### `sUSDS · deposit`
+
+Deposit `USDS` tokens and receive `sUSDS` tokens in exchange.
+
+- **Contract:** `sUSDS`
+- **Function:** `deposit(uint256,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `assets`   | -                 |
+  | `receiver` | equal to `AVATAR` |
+
+#### `sUSDS · withdraw`
+
+Redeem `sUSDS` and withdraw `USDS`.
+
+- **Contract:** `sUSDS`
+- **Function:** `withdraw(uint256,address,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `assets`   | -                 |
+  | `receiver` | equal to `AVATAR` |
+  | `owner`    | equal to `AVATAR` |
+
+## Action: `borrow`
+
+**Parameters:**
+
+| Name      | Type                  | Description                                 |
+| :-------- | :-------------------- | :------------------------------------------ |
+| `targets` | _string[] (required)_ | ETH \| `Token` symbols \| `Token` addresses |
+
+#### `sUSDS · redeem`
+
+Redeem `sUSDS` and withdraw `USDS`.
+
+- **Contract:** `sUSDS`
+- **Function:** `redeem(uint256,address,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `shares`   | -                 |
+  | `receiver` | equal to `AVATAR` |
+  | `owner`    | equal to `AVATAR` |
+
 ## Action: `borrow`
 
 **Parameters:**
