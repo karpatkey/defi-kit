@@ -1,8 +1,8 @@
 import os
-from defyes.functions import get_contract, get_decimals, get_symbol, get_node
+from karpatkit.functions import get_contract, get_decimals, get_symbol, get_node
+from karpatkit.constants import Address
 from defyes.protocols.balancer import get_gauge_addresses
 from defabipedia import Chain
-from karpatkit.constants import Address
 # thegraph queries
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport

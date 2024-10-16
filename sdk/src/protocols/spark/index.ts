@@ -6,6 +6,7 @@ import {
   depositEther,
   depositToken,
   depositDsr,
+  depositUSDS,
   borrowEther,
   borrowToken,
 } from "./actions"
@@ -31,11 +32,19 @@ export const eth = {
   deposit: async ({
     targets,
   }: {
-    targets: ("DSR_sDAI" | "ETH" | EthToken["symbol"] | EthToken["token"])[]
+    targets: (
+      | "DSR_sDAI"
+      | "SKY_USDS"
+      | "ETH"
+      | EthToken["symbol"]
+      | EthToken["token"]
+    )[]
   }) => {
     return targets.flatMap((target) =>
       target === "DSR_sDAI"
         ? depositDsr(Chain.eth)
+        : target === "SKY_USDS"
+        ? depositUSDS()
         : target === "ETH"
         ? depositEther(Chain.eth)
         : depositToken(Chain.eth, findToken(ethTokens, target))

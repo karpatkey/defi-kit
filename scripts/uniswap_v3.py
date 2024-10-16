@@ -3,7 +3,7 @@ import time
 # thegraph queries
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
-from defyes.functions import get_node
+from karpatkit.functions import get_node
 from defabipedia import Chain
 from lib.dump import dump
 

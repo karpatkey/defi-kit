@@ -1,6 +1,6 @@
-from defyes.functions import get_contract, get_symbol, get_node
-from defabipedia import Chain
+from karpatkit.functions import get_contract, get_symbol, get_node
 from karpatkit.constants import Address
+from defabipedia import Chain
 from lib.dump import dump
 
 COMETS = [
