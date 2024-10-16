@@ -113,6 +113,9 @@ export const contracts = {
       spWETH: "0x59cD1C87501baa753d0B5B5Ab5D8416A45cD71DB",
       sDAI: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
       RewardsController: "0x4370D3b6C9588E02ce9D22e684387859c7Ff5b34",
+      MigrationActions: "0xf86141a5657Cf52AEB3E30eBccA5Ad3a8f714B89",
+      USDS: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
+      sUSDS: "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
     },
     stader: {
       staking_pool_manager: "0xcf5EA1b38380f6aF39068375516Daf40Ed70D299",

@@ -84,6 +84,40 @@ export const depositDsr = (chain: Chain): Permission[] => {
   }
 }
 
+export const depositUSDS = (): Permission[] => {
+  return [
+    ...allowErc20Approve(
+      [contracts.mainnet.dai],
+      [contracts.mainnet.spark.MigrationActions]
+    ),
+    allow.mainnet.spark.MigrationActions.migrateDAIToUSDS(c.avatar),
+    allow.mainnet.spark.MigrationActions.migrateDAIToSUSDS(c.avatar),
+    ...allowErc20Approve(
+      [contracts.mainnet.spark.USDS],
+      [contracts.mainnet.spark.MigrationActions]
+    ),
+    allow.mainnet.spark.MigrationActions.downgradeUSDSToDAI(c.avatar),
+    ...allowErc20Approve(
+      [contracts.mainnet.spark.USDS],
+      [contracts.mainnet.spark.sUSDS]
+    ),
+    allow.mainnet.spark.sUSDS["deposit(uint256,address)"](
+      undefined,
+      c.avatar
+    ),
+    allow.mainnet.spark.sUSDS.withdraw(
+      undefined,
+      c.avatar,
+      c.avatar
+    ),
+    allow.mainnet.spark.sUSDS.redeem(
+      undefined,
+      c.avatar,
+      c.avatar
+    )
+  ]
+}
+
 export const depositToken = (chain: Chain, token: Token) => {
   const { sparkLendingPoolV3, RewardsController } = _getAllAddresses(chain)
 

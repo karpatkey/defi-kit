@@ -1,11 +1,10 @@
+from karpatkit.functions import get_contract, get_node
+from defabipedia import Chain
+from lib.dump import dump
 import os
 import sys
 lib_path = os.path.abspath(os.path.join(__file__, '..'))
 sys.path.append(lib_path)
-
-from defyes.functions import get_contract, get_node
-from defabipedia import Chain
-from lib.dump import dump
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # PROTOCOL DATA PROVIDER
