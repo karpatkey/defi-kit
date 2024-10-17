@@ -341,4 +341,20 @@ export default [
     ],
     rewarder: "0xf85896ccc6e199aC983227075a9fda9f76cbb7B6",
   },
+  {
+    name: "ECLP-sDAI-USDC.e-rh",
+    id: "30",
+    bpt: "0xaa56989Be5E6267fC579919576948DB3e1F10807",
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+      {
+        address: "0xf0E7eC247b918311afa054E0AEdb99d74c31b809",
+        symbol: "stataGnoUSDCe",
+      },
+    ],
+    rewarder: "0x41FaEAEC99Ca60cFc1cEd927cA93f480f040325F",
+  },
 ] as const
