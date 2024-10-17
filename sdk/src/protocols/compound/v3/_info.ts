@@ -37,6 +37,10 @@ export default [
         address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
         symbol: "cbBTC",
       },
+      {
+        address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
+        symbol: "tBTC",
+      },
     ],
   },
   {
@@ -86,6 +90,10 @@ export default [
       {
         address: "0xFAe103DC9cf190eD75350761e95403b7b8aFa6c0",
         symbol: "rswETH",
+      },
+      {
+        address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
+        symbol: "tBTC",
       },
     ],
   },

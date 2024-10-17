@@ -2,6 +2,25 @@
 
 export default [
   {
+    bpt: "0x0195538979e579D49999f780C04FC4bf68778B6f",
+    id: "0x0195538979e579d49999f780c04fc4bf68778b6f0000000000000000000006d9",
+    name: "syrupUSDC/USDC",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x80ac24aA929eaF5013f6436cdA2a7ba190f5Cc0b",
+        symbol: "syrupUSDC",
+        id: "0x",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x02CA8086498552C071451724D3A34cAA3922b65a",
     id: "0x02ca8086498552c071451724d3a34caa3922b65a000200000000000000000613",
     name: "80ROOT-20WETH",
@@ -212,6 +231,25 @@ export default [
       {
         address: "0x4b13006980aCB09645131b91D259eaA111eaF5Ba",
         symbol: "MYC",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x0AAba3D6a05a606b7A794877Dd0beFDa47474dB0",
+    id: "0x0aaba3d6a05a606b7a794877dd0befda47474db00002000000000000000006d2",
+    name: "B-KAI-WETH-WEIGHTED",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x63e5dC7C071C1F18d44b69bc86f4c80F24851388",
+        symbol: "KAI",
         id: "0x",
       },
       {
@@ -632,6 +670,25 @@ export default [
       {
         address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x2875f3eFfE9Ec897D7e4C32680D77cA3E628f33a",
+    id: "0x2875f3effe9ec897d7e4c32680d77ca3e628f33a0002000000000000000006d1",
+    name: "ECLP-GYD-USDC",
+    type: "GyroE",
+    gauge: "0x9C1A157cf8B242F67b3c950EDA9A30b320bDe9cd",
+    tokens: [
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
         id: "0x",
       },
     ],
@@ -1751,6 +1808,25 @@ export default [
       {
         address: "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5",
         symbol: "T",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x62E57e37E3185871c13a422A363293780D17305B",
+    id: "0x62e57e37e3185871c13a422a363293780d17305b0002000000000000000006d3",
+    name: "B-kaiAURA-AURA-WEIGHTED",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+        symbol: "AURA",
+        id: "0x",
+      },
+      {
+        address: "0xFFd9c960bC303b8d3aAED58229ce8a7310bCc5b8",
+        symbol: "kaiAURA",
         id: "0x",
       },
     ],
@@ -3744,25 +3820,6 @@ export default [
       {
         address: "0xE60779CC1b2c1d0580611c526a8DF0E3f870EC48",
         symbol: "USH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xd7F6A3c844d431f083E576a9972E56192a6635F3",
-    id: "0xd7f6a3c844d431f083e576a9972e56192a6635f30000000000000000000006b4",
-    name: "syrupUSDC/sDAI",
-    type: "ComposableStable",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x80ac24aA929eaF5013f6436cdA2a7ba190f5Cc0b",
-        symbol: "syrupUSDC",
-        id: "0x",
-      },
-      {
-        address: "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
-        symbol: "sDAI",
         id: "0x",
       },
     ],
