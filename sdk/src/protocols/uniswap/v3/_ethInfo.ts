@@ -246,6 +246,10 @@ export default [
     symbol: "BOO",
   },
   {
+    address: "0xC5b3D3231001a776123194Cf1290068e8b0C783b",
+    symbol: "LIT",
+  },
+  {
     address: "0x9F52c8ecbEe10e00D9faaAc5Ee9Ba0fF6550F511",
     symbol: "SIPHER",
   },
@@ -302,20 +306,16 @@ export default [
     symbol: "COW",
   },
   {
-    address: "0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
-    symbol: "EUL",
-  },
-  {
     address: "0xD101dCC414F310268c37eEb4cD376CcFA507F571",
     symbol: "RSC",
   },
   {
-    address: "0x66761Fa41377003622aEE3c7675Fc7b5c1C2FaC5",
-    symbol: "CPOOL",
+    address: "0xf3b9569F82B18aEf890De263B84189bd33EBe452",
+    symbol: "CAW",
   },
   {
-    address: "0x72B886d09C117654aB7dA13A14d603001dE0B777",
-    symbol: "XDEFI",
+    address: "0x66761Fa41377003622aEE3c7675Fc7b5c1C2FaC5",
+    symbol: "CPOOL",
   },
   {
     address: "0x4e4a47cAC6A28A62dcC20990ed2cdA9BC659469F",
@@ -444,10 +444,6 @@ export default [
   {
     address: "0x423f4e6138E475D85CF7Ea071AC92097Ed631eea",
     symbol: "PNDC",
-  },
-  {
-    address: "0x8DD09822E83313adCA54c75696aE80C5429697Ff",
-    symbol: "Sifu",
   },
   {
     address: "0xE0f63A424a4439cBE457D80E4f4b51aD25b2c56C",
@@ -642,10 +638,6 @@ export default [
     symbol: "PEIPEI",
   },
   {
-    address: "0x525574C899A7c877a11865339e57376092168258",
-    symbol: "GURU",
-  },
-  {
     address: "0xEDB171C18cE90B633DB442f2A6F72874093b49Ef",
     symbol: "WAMPL",
   },
@@ -716,10 +708,6 @@ export default [
   {
     address: "0x808507121B80c02388fAd14726482e061B8da827",
     symbol: "PENDLE",
-  },
-  {
-    address: "0x0F5D2fB29fb7d3CFeE444a200298f468908cC942",
-    symbol: "MANA",
   },
   {
     address: "0xf21661D0D1d76d3ECb8e1B9F1c923DBfffAe4097",
@@ -840,6 +828,10 @@ export default [
   {
     address: "0xCfa0885131F602D11D4DA248D2c65A62063567A9",
     symbol: "TORG",
+  },
+  {
+    address: "0xB17548c7B510427baAc4e267BEa62e800b247173",
+    symbol: "SMT",
   },
   {
     address: "0x1A4b46696b2bB4794Eb3D4c26f1c55F9170fa4C5",
