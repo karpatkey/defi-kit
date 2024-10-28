@@ -4,7 +4,7 @@ import {
   KnownContracts,
   calculateProxyAddress,
   deployAndSetUpModule,
-} from "@gnosis.pm/zodiac"
+} from "@gnosis-guild/zodiac"
 import { encodeBytes32String } from "../src"
 import { avatar, deployer, member, owner } from "./wallets"
 import { ethers } from "ethers"

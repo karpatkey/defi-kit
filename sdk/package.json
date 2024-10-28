@@ -58,15 +58,14 @@
   },
   "dependencies": {
     "@asteasolutions/zod-to-openapi": "^5.5.0",
-    "@ethersproject/abi": "^5.7.0",
-    "ethers": "^5.7.2",
+    "@gnosis-guild/eth-sdk": "^0.3.7",
+    "@gnosis-guild/eth-sdk-client": "^0.1.6",
+    "@gnosis-guild/zodiac": "^4.0.3",
+    "ethers": "^6.13.4",
     "zod": "^3.22.2",
-    "zodiac-roles-sdk": "2.13.0"
+    "zodiac-roles-sdk": "^2.14.4"
   },
   "devDependencies": {
-    "@dethcrypto/eth-sdk": "^0.3.4",
-    "@dethcrypto/eth-sdk-client": "^0.1.6",
-    "@gnosis.pm/zodiac": "^3.5.2",
     "@types/jest": "^29.5.2",
     "@types/wait-on": "^5.3.1",
     "concurrently": "^8.2.1",
