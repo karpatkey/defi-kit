@@ -4,7 +4,7 @@ import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { Status } from "../../../../test/types"
 import { testKit } from "../../../../test/kit"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { parseEther, parseUnits } from "ethers/lib/utils"
 
 // TODO we need to find a solution for handling the compundV3 bulker permissions

@@ -10,7 +10,7 @@ export default defineConfig({
   },
   noExternal: [
     "zodiac-roles-sdk/kit",
-    "@dethcrypto/eth-sdk-client",
+    "@gnosis-guild/eth-sdk-client",
     ".dethcrypto/eth-sdk-client",
   ],
   external: ["zodiac-roles-sdk"],

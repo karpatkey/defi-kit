@@ -13,7 +13,7 @@ import { avatar, member } from "../../../test/wallets"
 import { applyPermissions } from "../../../test/helpers"
 import { testKit } from "../../../test/kit"
 import { parseEther } from "ethers/lib/utils"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 const sdk = getMainnetSdk(avatar)

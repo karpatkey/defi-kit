@@ -1,4 +1,4 @@
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { NotFoundError } from "../../../errors"
 import { BigNumber } from "ethers"
 import { ethProvider } from "../../../provider"

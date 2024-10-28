@@ -3,7 +3,7 @@ import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { testKit } from "../../../test/kit"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { parseEther, parseUnits } from "ethers/lib/utils"
 
 const B_rETH_STABLE_pid =

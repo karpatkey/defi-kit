@@ -1,7 +1,7 @@
 import { eth } from "."
 import { avatar } from "../../../test/wallets"
 import { applyPermissions } from "../../../test/helpers"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { queryCdps, queryIlk, queryProxy } from "./utils"
 import { BigNumber } from "ethers"
 import { LogDescription, arrayify, parseEther } from "ethers/lib/utils"

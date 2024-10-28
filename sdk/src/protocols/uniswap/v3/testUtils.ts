@@ -1,10 +1,10 @@
 import { avatar } from "../../../../test/wallets"
 import { stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { testKit } from "../../../../test/kit"
 import { BigNumber, ContractTransaction } from "ethers"
-import { Address } from "@dethcrypto/eth-sdk"
+import { Address } from "@gnosis-guild/eth-sdk"
 
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 const stealAddress = "0x8eb8a3b98659cce290402893d0123abb75e3ab28"

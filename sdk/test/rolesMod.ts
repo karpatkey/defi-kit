@@ -7,7 +7,9 @@ import {
 } from "@gnosis-guild/zodiac"
 import { encodeBytes32String } from "../src"
 import { avatar, deployer, member, owner } from "./wallets"
-import { ethers } from "ethers"
+import { AbiCoder, Contract } from "ethers"
+
+const defaultAbiCoder = AbiCoder.defaultAbiCoder()
 
 export const testRoleKey = encodeBytes32String("TEST-ROLE")
 
@@ -15,7 +17,7 @@ const SALT =
   "0x0000000000000000000000000000000000000000000000000000000000000000"
 
 const predictRolesModAddress = () => {
-  const encodedInitParams = ethers.utils.defaultAbiCoder.encode(
+  const encodedInitParams = defaultAbiCoder.encode(
     ["address", "address", "address"],
     [owner._address, avatar._address, avatar._address]
   )
@@ -28,7 +30,7 @@ const predictRolesModAddress = () => {
     ContractFactories[KnownContracts.FACTORY].connect(
       ContractAddresses[1][KnownContracts.FACTORY],
       deployer
-    ),
+    ) as unknown as Contract,
     ContractAddresses[1][KnownContracts.ROLES_V2],
     moduleSetupData,
     SALT
@@ -47,7 +49,7 @@ export async function deployRolesMod() {
     SALT
   )
 
-  if (expectedModuleAddress !== predictRolesModAddress()) {
+  if (expectedModuleAddress !== (await predictRolesModAddress())) {
     throw new Error(
       `Roles mod address deployment unexpected, expected ${predictRolesModAddress()}, actual: ${expectedModuleAddress}`
     )
@@ -62,15 +64,15 @@ export async function deployRolesMod() {
   console.log("Roles mod deployed at", expectedModuleAddress)
 }
 
-export const getRolesMod = () => {
+export const getRolesMod = async () => {
   return ContractFactories[KnownContracts.ROLES_V2].connect(
-    predictRolesModAddress(),
+    await predictRolesModAddress(),
     owner
   )
 }
 
 export async function setupRole() {
-  const rolesMod = getRolesMod()
+  const rolesMod = await getRolesMod()
   await rolesMod.assignRoles(
     member._address,
     [encodeBytes32String("TEST-ROLE")],

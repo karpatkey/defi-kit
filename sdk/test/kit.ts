@@ -1,4 +1,4 @@
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { BaseContract, BigNumber } from "ethers"
 import { avatar } from "./wallets"
 import { execThroughRole } from "./helpers"

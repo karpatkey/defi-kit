@@ -5064,7 +5064,7 @@ __metadata:
     defi-kit: "workspace:*"
     eslint: ^8.41.0
     eslint-config-next: ^13.4.4
-    ethers: ^5.7.2
+    ethers: ^6.13.4
     next: ^14.1.0
     nextra: ^2.13.2
     nextra-theme-docs: ^2.13.2
@@ -13849,9 +13849,9 @@ __metadata:
     ethers: ^5.7.2
     zodiac-roles-deployments: ^2.2.5
   peerDependencies:
-    "@dethcrypto/eth-sdk-client": ^0.1.6
+    "@gnosis-guild/eth-sdk-client": ^0.1.6
   peerDependenciesMeta:
-    "@dethcrypto/eth-sdk-client":
+    "@gnosis-guild/eth-sdk-client":
       optional: true
   checksum: 6b829382113ccbd72fd8d5860f8d779c2168d8f17b5174ceeec3b367758f9bb43dc79c0155c4e8cfcd76311dabe14c5b9d72eb7b0c3aa6dc84e44f465a5fa2b4
   languageName: node
