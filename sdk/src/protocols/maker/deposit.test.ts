@@ -13,8 +13,8 @@ import { encodeBytes32String } from "../../encode"
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 
 const getProxy = async () => {
-  const proxyAddress = await queryProxy(avatar._address as `0x${string}`)
-  console.log({ proxyAddress, avatar: avatar._address })
+  const proxyAddress = await queryProxy(avatar.address as `0x${string}`)
+  console.log({ proxyAddress, avatar: avatar.address })
   const proxy = testKit.eth.maker.DsProxy.attach(proxyAddress)
   return proxy
 }
@@ -23,11 +23,11 @@ const openMakerCdp = async ({ ilk }: { ilk: string }) => {
   const sdk = getMainnetSdk(avatar)
 
   // build proxy if it doesn't exist yet
-  if ((await queryProxy(avatar._address as `0x${string}`)) === ZERO_ADDRESS) {
+  if ((await queryProxy(avatar.address as `0x${string}`)) === ZERO_ADDRESS) {
     await sdk.maker.ProxyRegistry["build()"]()
   }
 
-  const proxyAddress = await queryProxy(avatar._address as `0x${string}`)
+  const proxyAddress = await queryProxy(avatar.address as `0x${string}`)
   const proxy = sdk.maker.DsProxy.attach(proxyAddress)
   console.log("ILK from gemjoin", await sdk.maker.GemJoin.ilk())
 
@@ -68,10 +68,10 @@ describe("maker", () => {
       console.log("cdpID: ", cdp)
       console.log(
         "applied permissions",
-        await eth.deposit({ avatar: avatar._address as `0x${string}` })
+        await eth.deposit({ avatar: avatar.address as `0x${string}` })
       )
       await applyPermissions(
-        await eth.deposit({ avatar: avatar._address as `0x${string}` })
+        await eth.deposit({ avatar: avatar.address as `0x${string}` })
       )
     })
 

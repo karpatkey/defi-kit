@@ -18,7 +18,7 @@ describe("aave_v2", () => {
       await expect(testKit.eth.aaveV2.aave.delegate(DELEGATEE)).not.toRevert()
 
       await expect(
-        testKit.eth.aaveV2.aave.delegate(member._address)
+        testKit.eth.aaveV2.aave.delegate(member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
 
       await expect(
@@ -26,7 +26,7 @@ describe("aave_v2", () => {
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aaveV2.aave.delegateByType(member._address, 0)
+        testKit.eth.aaveV2.aave.delegateByType(member.address, 0)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
   })

@@ -23,7 +23,7 @@ describe("compound_v2", () => {
       //   testKit.eth.compoundV2.cETH.mint(
       //     {
       //       value: parseEther("1"),
-      //       from: member._address
+      //       from: member.address
       //     },
       //   )
       // ).toBeForbidden()
@@ -38,7 +38,7 @@ describe("compound_v2", () => {
       //   testKit.eth.compoundV2.cETH.redeemUnderlying(
       //     parseEther("1"),
       //     {
-      //       from: member._address
+      //       from: member.address
       //     }
       //   )
       // ).toBeForbidden(Status.ParameterNotAllowed)
@@ -100,7 +100,7 @@ describe("compound_v2", () => {
     it("only allow claiming COMP on behalf of avatar", async () => {
       await expect(
         testKit.eth.compoundV2.comptroller["claimComp(address,address[])"](
-          avatar._address,
+          avatar.address,
           [
             contracts.mainnet.compoundV2.cETH,
             // The cToken in the config file corresponds to cUSDC
@@ -110,7 +110,7 @@ describe("compound_v2", () => {
       ).not.toRevert()
       await expect(
         testKit.eth.compoundV2.comptroller["claimComp(address,address[])"](
-          member._address,
+          member.address,
           [
             contracts.mainnet.compoundV2.cETH,
             contracts.mainnet.compoundV2.cToken,

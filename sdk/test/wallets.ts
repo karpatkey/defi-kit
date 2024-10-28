@@ -26,11 +26,11 @@ export const createWallets = async () => {
   )
 }
 
-export const deployer = createSigner(addresses.deployer)
-export const avatar = createSigner(addresses.avatar)
-export const owner = createSigner(addresses.owner)
-export const member = createSigner(addresses.member)
-export const other = createSigner(addresses.other)
+export const deployer = await createSigner(addresses.deployer)
+export const avatar = await createSigner(addresses.avatar)
+export const owner = await createSigner(addresses.owner)
+export const member = await createSigner(addresses.member)
+export const other = await createSigner(addresses.other)
 
 // export const getDeployerWallet = () => createSigner(addresses["deployer"])
 // export const getAvatarWallet = () => wallets["avatar"]

@@ -22,7 +22,7 @@ describe("aave_v3", () => {
       await expect(
         testKit.eth.aaveV3.wrappedTokenGatewayV3.depositETH(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
-          avatar._address,
+          avatar.address,
           0,
           { value: parseEther("1") }
         )
@@ -31,7 +31,7 @@ describe("aave_v3", () => {
       await expect(
         testKit.eth.aaveV3.wrappedTokenGatewayV3.depositETH(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
-          member._address,
+          member.address,
           0,
           { value: parseEther("1") }
         )
@@ -50,7 +50,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.wrappedTokenGatewayV3.withdrawETH(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
           parseEther("1"),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -58,7 +58,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.wrappedTokenGatewayV3.withdrawETH(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
           parseEther("1"),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -105,7 +105,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.aaveLendingPoolV3.supply(
           contracts.mainnet.weth,
           parseEther("1"),
-          avatar._address,
+          avatar.address,
           0
         )
       ).not.toRevert()
@@ -114,7 +114,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.aaveLendingPoolV3.supply(
           contracts.mainnet.weth,
           parseEther("1"),
-          member._address,
+          member.address,
           0
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -125,7 +125,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.aaveLendingPoolV3.withdraw(
           contracts.mainnet.weth,
           parseEther("1"),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -133,7 +133,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.aaveLendingPoolV3.withdraw(
           contracts.mainnet.weth,
           parseEther("1"),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -156,7 +156,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.aaveLendingPoolV3.supply(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          avatar._address,
+          avatar.address,
           0
         )
       ).not.toRevert()
@@ -165,7 +165,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.aaveLendingPoolV3.supply(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          member._address,
+          member.address,
           0
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -176,7 +176,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.aaveLendingPoolV3.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -184,7 +184,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.aaveLendingPoolV3.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })

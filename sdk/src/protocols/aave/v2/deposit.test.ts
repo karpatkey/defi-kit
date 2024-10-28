@@ -20,7 +20,7 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.depositETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          avatar._address,
+          avatar.address,
           0,
           { value: parseEther("1") }
         )
@@ -29,7 +29,7 @@ describe("aave_v2", () => {
       await expect(
         testKit.eth.aaveV2.wrappedTokenGatewayV2.depositETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          member._address,
+          member.address,
           0,
           { value: parseEther("1") }
         )
@@ -48,7 +48,7 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           parseEther("1"),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -56,7 +56,7 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.aaveLendingPoolV2,
           parseEther("1"),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -103,7 +103,7 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          avatar._address,
+          avatar.address,
           0
         )
       ).not.toRevert()
@@ -112,7 +112,7 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          member._address,
+          member.address,
           0
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -123,7 +123,7 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -131,7 +131,7 @@ describe("aave_v2", () => {
         testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })

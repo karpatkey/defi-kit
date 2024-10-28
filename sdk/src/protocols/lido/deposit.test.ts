@@ -17,7 +17,7 @@ describe("lido", () => {
 
     it("allows submitting ETH", async () => {
       await expect(
-        testKit.eth.lido.steth.submit(avatar._address, {
+        testKit.eth.lido.steth.submit(avatar.address, {
           value: parseEther("10"),
         })
       ).not.toRevert()
@@ -47,7 +47,7 @@ describe("lido", () => {
       await expect(
         testKit.eth.lido.unsteth.requestWithdrawals(
           [parseEther("1")],
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -61,20 +61,20 @@ describe("lido", () => {
       await expect(
         testKit.eth.lido.unsteth.requestWithdrawalsWstETH(
           [parseEther("1")],
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
       await expect(
         testKit.eth.lido.unsteth.requestWithdrawals(
           [parseEther("1")],
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
       await expect(
         testKit.eth.lido.unsteth.requestWithdrawalsWstETH(
           [parseEther("1")],
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })

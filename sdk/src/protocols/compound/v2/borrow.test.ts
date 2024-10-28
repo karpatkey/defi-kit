@@ -39,13 +39,13 @@ describe("compound_v2", () => {
       ).not.toRevert()
 
       await expect(
-        testKit.eth.compoundV2.maximillion.repayBehalf(avatar._address, {
+        testKit.eth.compoundV2.maximillion.repayBehalf(avatar.address, {
           value: parseEther("0.5"),
         })
       ).not.toRevert()
 
       await expect(
-        testKit.eth.compoundV2.maximillion.repayBehalf(member._address, {
+        testKit.eth.compoundV2.maximillion.repayBehalf(member.address, {
           value: parseEther("0.5"),
         })
       ).toBeForbidden()

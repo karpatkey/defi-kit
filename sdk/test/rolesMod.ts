@@ -7,6 +7,7 @@ import {
 } from "@gnosis-guild/zodiac"
 import { encodeBytes32String } from "../src"
 import { avatar, deployer, member, owner } from "./wallets"
+import { getProvider } from "./provider"
 import { AbiCoder, Contract } from "ethers"
 
 const defaultAbiCoder = AbiCoder.defaultAbiCoder()
@@ -19,7 +20,7 @@ const SALT =
 const predictRolesModAddress = () => {
   const encodedInitParams = defaultAbiCoder.encode(
     ["address", "address", "address"],
-    [owner._address, avatar._address, avatar._address]
+    [owner.address, avatar.address, avatar.address]
   )
 
   const moduleSetupData = ContractFactories[KnownContracts.ROLES_V2]
@@ -42,10 +43,10 @@ export async function deployRolesMod() {
     KnownContracts.ROLES_V2,
     {
       types: ["address", "address", "address"],
-      values: [owner._address, avatar._address, avatar._address],
+      values: [owner.address, avatar.address, avatar.address],
     },
     deployer.provider,
-    await deployer.getChainId(),
+    Number((await getProvider().getNetwork()).chainId),
     SALT
   )
 
@@ -74,9 +75,9 @@ export const getRolesMod = async () => {
 export async function setupRole() {
   const rolesMod = await getRolesMod()
   await rolesMod.assignRoles(
-    member._address,
+    member.address,
     [encodeBytes32String("TEST-ROLE")],
     [true]
   )
-  console.log("Created TEST-ROLE role with member:", member._address)
+  console.log("Created TEST-ROLE role with member:", member.address)
 }

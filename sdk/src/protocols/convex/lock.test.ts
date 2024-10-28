@@ -25,21 +25,21 @@ describe("convex", () => {
       ).not.toRevert()
 
       await expect(
-        testKit.eth.convex.vlCVX.lock(avatar._address, parseEther("1"), 0)
+        testKit.eth.convex.vlCVX.lock(avatar.address, parseEther("1"), 0)
       ).not.toRevert()
       await expect(
-        testKit.eth.convex.vlCVX.lock(member._address, parseEther("1"), 0)
+        testKit.eth.convex.vlCVX.lock(member.address, parseEther("1"), 0)
       ).toBeForbidden(Status.ParameterNotAllowed)
 
       await expect(
         testKit.eth.convex.vlCVX["getReward(address,bool)"](
-          avatar._address,
+          avatar.address,
           false
         )
       ).not.toRevert()
       await expect(
         testKit.eth.convex.vlCVX["getReward(address,bool)"](
-          member._address,
+          member.address,
           false
         )
       ).toBeForbidden(Status.ParameterNotAllowed)

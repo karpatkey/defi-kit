@@ -68,18 +68,10 @@ describe("aura", () => {
         testKit.eth.aura.aurabal_compounding_rewarder["getReward()"]()
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.stkaurabal.withdraw(
-          1,
-          avatar._address,
-          avatar._address
-        )
+        testKit.eth.aura.stkaurabal.withdraw(1, avatar.address, avatar.address)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.stkaurabal.withdraw(
-          1,
-          member._address,
-          member._address
-        )
+        testKit.eth.aura.stkaurabal.withdraw(1, member.address, member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
     }, 90000) // Added 90 seconds of timeout because the deposit takes too long and the test fails.
 
@@ -132,18 +124,10 @@ describe("aura", () => {
         testKit.eth.aura.aurabal_compounding_rewarder["getReward()"]()
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.stkaurabal.withdraw(
-          1,
-          avatar._address,
-          avatar._address
-        )
+        testKit.eth.aura.stkaurabal.withdraw(1, avatar.address, avatar.address)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.stkaurabal.withdraw(
-          1,
-          member._address,
-          member._address
-        )
+        testKit.eth.aura.stkaurabal.withdraw(1, member.address, member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
     }, 30000) // Added 30 seconds of timeout because the deposit takes too long and the test fails.
 
@@ -176,10 +160,10 @@ describe("aura", () => {
 
       // compound
       await expect(
-        testKit.eth.aura.stkaurabal.deposit(parseEther("1"), avatar._address)
+        testKit.eth.aura.stkaurabal.deposit(parseEther("1"), avatar.address)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.stkaurabal.deposit(parseEther("1"), member._address)
+        testKit.eth.aura.stkaurabal.deposit(parseEther("1"), member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
   })

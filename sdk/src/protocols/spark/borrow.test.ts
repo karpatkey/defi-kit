@@ -40,7 +40,7 @@ describe("spark", () => {
         testKit.eth.spark.sparkLendingPoolV3.supply(
           contracts.mainnet.spark.sDAI,
           parseEther("10000"),
-          avatar._address,
+          avatar.address,
           0
         )
       ).not.toRevert()
@@ -68,7 +68,7 @@ describe("spark", () => {
           contracts.mainnet.spark.sparkLendingPoolV3,
           parseEther("0.5"),
           2,
-          avatar._address,
+          avatar.address,
           { value: parseEther("0.5") }
         )
       ).not.toRevert()
@@ -78,7 +78,7 @@ describe("spark", () => {
       await expect(
         testKit.eth.spark.wrappedTokenGatewayV3.depositETH(
           contracts.mainnet.spark.sparkLendingPoolV3,
-          avatar._address,
+          avatar.address,
           0,
           { value: parseEther("1") }
         )
@@ -90,7 +90,7 @@ describe("spark", () => {
           parseEther("100"),
           2,
           0,
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -106,7 +106,7 @@ describe("spark", () => {
           contracts.mainnet.dai,
           parseEther("50"),
           2,
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
     })
@@ -137,7 +137,7 @@ describe("spark", () => {
           contracts.mainnet.spark.sparkLendingPoolV3,
           parseEther("1"),
           2,
-          avatar._address,
+          avatar.address,
           { value: parseEther("1") }
         )
       ).toBeAllowed()
@@ -147,7 +147,7 @@ describe("spark", () => {
           contracts.mainnet.spark.sparkLendingPoolV3,
           parseEther("1"),
           2,
-          member._address,
+          member.address,
           { value: parseEther("1") }
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -170,7 +170,7 @@ describe("spark", () => {
           parseEther("10000"),
           2,
           0,
-          avatar._address
+          avatar.address
         )
       ).toBeAllowed()
 
@@ -180,7 +180,7 @@ describe("spark", () => {
           parseEther("10000"),
           2,
           0,
-          member._address
+          member.address
         )
       ).toBeForbidden()
     })
@@ -204,7 +204,7 @@ describe("spark", () => {
           contracts.mainnet.dai,
           parseEther("10000"),
           2,
-          avatar._address
+          avatar.address
         )
       ).toBeAllowed()
 
@@ -213,7 +213,7 @@ describe("spark", () => {
           contracts.mainnet.dai,
           parseEther("10000"),
           2,
-          member._address
+          member.address
         )
       ).toBeForbidden()
     })

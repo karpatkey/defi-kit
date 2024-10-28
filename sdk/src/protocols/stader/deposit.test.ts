@@ -15,7 +15,7 @@ describe("stader", () => {
     it("only deposit ETH on behalf of avatar", async () => {
       await expect(
         testKit.eth.stader.staking_pool_manager["deposit(address)"](
-          avatar._address,
+          avatar.address,
           {
             value: parseEther("5"),
           }
@@ -23,7 +23,7 @@ describe("stader", () => {
       ).not.toRevert()
       await expect(
         testKit.eth.stader.staking_pool_manager["deposit(address)"](
-          member._address,
+          member.address,
           {
             value: parseEther("5"),
           }
@@ -41,12 +41,12 @@ describe("stader", () => {
       await expect(
         testKit.eth.stader.user_withdraw_manager[
           "requestWithdraw(uint256,address)"
-        ](parseEther("1"), avatar._address)
+        ](parseEther("1"), avatar.address)
       ).not.toRevert()
       await expect(
         testKit.eth.stader.user_withdraw_manager[
           "requestWithdraw(uint256,address)"
-        ](parseEther("1"), member._address)
+        ](parseEther("1"), member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 

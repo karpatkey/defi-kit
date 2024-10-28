@@ -48,12 +48,12 @@ describe("aura", () => {
       await expect(
         testKit.eth.aura.rewarder
           .attach(aura_50WETH_50AURA_rewarder)
-          ["getReward(address,bool)"](avatar._address, true)
+          ["getReward(address,bool)"](avatar.address, true)
       ).not.toRevert()
       await expect(
         testKit.eth.aura.rewarder
           .attach(aura_50WETH_50AURA_rewarder)
-          ["getReward(address,bool)"](member._address, true)
+          ["getReward(address,bool)"](member.address, true)
       ).toBeForbidden(Status.ParameterNotAllowed)
     }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
 

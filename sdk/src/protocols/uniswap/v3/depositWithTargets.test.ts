@@ -90,7 +90,7 @@ describe("uniswap_v3", () => {
         )
       ).not.toRevert()
       const nftId = await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(
-        avatar._address,
+        avatar.address,
         0
       )
       const position = await getPosition(nftId)
@@ -136,7 +136,7 @@ describe("uniswap_v3", () => {
 
     it("decrease liquidity and collect using WETH", async () => {
       const nftId = await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(
-        avatar._address,
+        avatar.address,
         0
       )
       const position = await getPosition(nftId)
@@ -154,7 +154,7 @@ describe("uniswap_v3", () => {
           tokenId: nftId,
           amount0Max: COLLECT_MAX_AMOUNT,
           amount1Max: COLLECT_MAX_AMOUNT,
-          recipient: avatar._address,
+          recipient: avatar.address,
         })
       ).not.toRevert()
       await expect(
@@ -162,7 +162,7 @@ describe("uniswap_v3", () => {
           tokenId: nftId,
           amount0Max: COLLECT_MAX_AMOUNT,
           amount1Max: COLLECT_MAX_AMOUNT,
-          recipient: member._address,
+          recipient: member.address,
         })
       ).toBeForbidden()
     })
@@ -170,7 +170,7 @@ describe("uniswap_v3", () => {
     // No ETH sending allowed.
     // it("decrease liquidity and collect using ETH", async () => {
     //   const nftId = await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(
-    //     avatar._address,
+    //     avatar.address,
     //     0
     //   )
     //   const position = await getPosition(nftId)
@@ -192,13 +192,13 @@ describe("uniswap_v3", () => {
     //     })
     //   ).not.toRevert()
     //   await expect(
-    //     testKit.eth.uniswap_v3.positions_nft.unwrapWETH9(0, avatar._address)
+    //     testKit.eth.uniswap_v3.positions_nft.unwrapWETH9(0, avatar.address)
     //   ).not.toRevert()
     //   await expect(
     //     testKit.eth.uniswap_v3.positions_nft.sweepToken(
     //       contracts.mainnet.usdc,
     //       0,
-    //       avatar._address
+    //       avatar.address
     //     )
     //   ).not.toRevert()
     // })

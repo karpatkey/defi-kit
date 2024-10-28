@@ -28,8 +28,8 @@ describe("balancer", () => {
       await expect(
         testKit.eth.balancer.vault.joinPool(
           B_80BAL_20WETH_PID,
-          avatar._address,
-          avatar._address,
+          avatar.address,
+          avatar.address,
           {
             assets: [BAL, ZERO_ADDRESS],
             maxAmountsIn: [0, parseEther("100")],
@@ -44,8 +44,8 @@ describe("balancer", () => {
       await expect(
         testKit.eth.balancer.vault.exitPool(
           B_80BAL_20WETH_PID,
-          avatar._address,
-          avatar._address,
+          avatar.address,
+          avatar.address,
           {
             assets: [BAL, contracts.mainnet.weth],
             minAmountsOut: [0, 0],
@@ -101,7 +101,7 @@ describe("balancer", () => {
 
       // Claim only with avatar as user
       await expect(
-        testKit.eth.balancer.fee_distributor.claimTokens(avatar._address, [
+        testKit.eth.balancer.fee_distributor.claimTokens(avatar.address, [
           bb_a_USD_v1,
           bb_a_USD_v2,
           bb_a_USD_v3,
@@ -111,7 +111,7 @@ describe("balancer", () => {
       ).not.toRevert()
 
       await expect(
-        testKit.eth.balancer.fee_distributor.claimTokens(member._address, [
+        testKit.eth.balancer.fee_distributor.claimTokens(member.address, [
           bb_a_USD_v1,
           bb_a_USD_v2,
           bb_a_USD_v3,

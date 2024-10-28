@@ -177,19 +177,17 @@ export const mintNFT = async (
       amount1Desired: amount1Desired,
       amount0Min: amount0Min,
       amount1Min: amount1Min,
-      recipient: avatar._address,
+      recipient: avatar.address,
       deadline: Math.floor(new Date().getTime() / 1000) + 1800,
     }
     // { value: value }
   )
 
-  const ownedNfts = await sdk.uniswap_v3.positions_nft.balanceOf(
-    avatar._address
-  )
+  const ownedNfts = await sdk.uniswap_v3.positions_nft.balanceOf(avatar.address)
   let nftId = null
   if (ownedNfts.gt(0)) {
     nftId = await sdk.uniswap_v3.positions_nft.tokenOfOwnerByIndex(
-      avatar._address,
+      avatar.address,
       ownedNfts.sub(1)
     )
   }

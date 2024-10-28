@@ -40,14 +40,14 @@ async function setupAvatar() {
   const provider = getProvider()
 
   await provider.send("anvil_setCode", [
-    avatar._address,
+    avatar.address,
     testAvatarDeployedBytecode,
   ])
 
-  console.log(`Successfully initilized avatar at ${avatar._address}`)
+  console.log(`Successfully initilized avatar at ${avatar.address}`)
 }
 
 async function isAlreadySetup() {
   const provider = getProvider()
-  return (await provider.getCode(avatar._address)) !== "0x"
+  return (await provider.getCode(avatar.address)) !== "0x"
 }

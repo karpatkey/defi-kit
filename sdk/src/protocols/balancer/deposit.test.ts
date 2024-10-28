@@ -36,8 +36,8 @@ describe("balancer", () => {
       await expect(
         testKit.eth.balancer.vault.joinPool(
           B_rETH_STABLE_pid,
-          avatar._address,
-          avatar._address,
+          avatar.address,
+          avatar.address,
           {
             assets: [rETH, contracts.mainnet.weth],
             maxAmountsIn: [0, parseEther("1")],
@@ -51,8 +51,8 @@ describe("balancer", () => {
       await expect(
         testKit.eth.balancer.vault.joinPool(
           B_rETH_STABLE_pid,
-          member._address,
-          member._address,
+          member.address,
+          member.address,
           {
             assets: [rETH, contracts.mainnet.weth],
             maxAmountsIn: [0, parseEther("1")],
@@ -66,8 +66,8 @@ describe("balancer", () => {
       await expect(
         testKit.eth.balancer.vault.joinPool(
           "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014",
-          avatar._address,
-          avatar._address,
+          avatar.address,
+          avatar.address,
           {
             assets: [rETH, contracts.mainnet.weth],
             maxAmountsIn: [0, parseEther("1")],
@@ -81,8 +81,8 @@ describe("balancer", () => {
       await expect(
         testKit.eth.balancer.vault.exitPool(
           B_rETH_STABLE_pid,
-          avatar._address,
-          avatar._address,
+          avatar.address,
+          avatar.address,
           {
             assets: [rETH, contracts.mainnet.weth],
             minAmountsOut: [0, 0],
@@ -96,8 +96,8 @@ describe("balancer", () => {
       await expect(
         testKit.eth.balancer.vault.exitPool(
           B_rETH_STABLE_pid,
-          member._address,
-          member._address,
+          member.address,
+          member.address,
           {
             assets: [rETH, contracts.mainnet.weth],
             minAmountsOut: [0, 0],
@@ -111,8 +111,8 @@ describe("balancer", () => {
       await expect(
         testKit.eth.balancer.vault.exitPool(
           "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014",
-          avatar._address,
-          avatar._address,
+          avatar.address,
+          avatar.address,
           {
             assets: [rETH, contracts.mainnet.weth],
             minAmountsOut: [0, 0],
@@ -134,7 +134,7 @@ describe("balancer", () => {
     //     )
     //     await expect(
     //       testKit.eth.balancer.vault.setRelayerApproval(
-    //         avatar._address,
+    //         avatar.address,
     //         contracts.mainnet.balancer.relayer,
     //         true
     //       )
@@ -151,7 +151,7 @@ describe("balancer", () => {
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
     //           B_USDC_DAI_USDT_pid,
     //           0,
-    //           avatar._address,
+    //           avatar.address,
     //           contracts.mainnet.balancer.relayer,
     //           {
     //             assets: [
@@ -172,7 +172,7 @@ describe("balancer", () => {
     //           B_50WETH_50_3pool_pid,
     //           0,
     //           contracts.mainnet.balancer.relayer,
-    //           avatar._address,
+    //           avatar.address,
     //           {
     //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
     //             maxAmountsIn: [
@@ -194,7 +194,7 @@ describe("balancer", () => {
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
     //           B_USDC_DAI_USDT_pid,
     //           0,
-    //           member._address,
+    //           member.address,
     //           contracts.mainnet.balancer.relayer,
     //           {
     //             assets: [
@@ -215,7 +215,7 @@ describe("balancer", () => {
     //           B_50WETH_50_3pool_pid,
     //           0,
     //           contracts.mainnet.balancer.relayer,
-    //           avatar._address,
+    //           avatar.address,
     //           {
     //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
     //             maxAmountsIn: [
@@ -237,7 +237,7 @@ describe("balancer", () => {
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
     //           B_rETH_STABLE_pid,
     //           0,
-    //           avatar._address,
+    //           avatar.address,
     //           contracts.mainnet.balancer.relayer,
     //           {
     //             assets: [
@@ -258,7 +258,7 @@ describe("balancer", () => {
     //           B_50WETH_50_3pool_pid,
     //           0,
     //           contracts.mainnet.balancer.relayer,
-    //           avatar._address,
+    //           avatar.address,
     //           {
     //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
     //             maxAmountsIn: [
@@ -280,8 +280,8 @@ describe("balancer", () => {
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
     //           B_50WETH_50_3pool_pid,
     //           0,
-    //           avatar._address,
-    //           avatar._address,
+    //           avatar.address,
+    //           avatar.address,
     //           {
     //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
     //             minAmountsOut: [0, 0],
@@ -303,8 +303,8 @@ describe("balancer", () => {
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
     //           B_USDC_DAI_USDT_pid,
     //           3,
-    //           avatar._address,
-    //           avatar._address,
+    //           avatar.address,
+    //           avatar.address,
     //           {
     //             assets: [
     //               contracts.mainnet.dai,
@@ -340,8 +340,8 @@ describe("balancer", () => {
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
     //           B_50WETH_50_3pool_pid,
     //           0,
-    //           member._address,
-    //           avatar._address,
+    //           member.address,
+    //           avatar.address,
     //           {
     //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
     //             minAmountsOut: [0, 0],
@@ -363,8 +363,8 @@ describe("balancer", () => {
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
     //           B_USDC_DAI_USDT_pid,
     //           3,
-    //           avatar._address,
-    //           avatar._address,
+    //           avatar.address,
+    //           avatar.address,
     //           {
     //             assets: [
     //               contracts.mainnet.dai,
@@ -400,8 +400,8 @@ describe("balancer", () => {
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
     //           B_rETH_STABLE_pid,
     //           0,
-    //           avatar._address,
-    //           avatar._address,
+    //           avatar.address,
+    //           avatar.address,
     //           {
     //             assets: [B_USDC_DAI_USDT, contracts.mainnet.weth],
     //             minAmountsOut: [0, 0],
@@ -423,8 +423,8 @@ describe("balancer", () => {
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
     //           B_USDC_DAI_USDT_pid,
     //           3,
-    //           avatar._address,
-    //           avatar._address,
+    //           avatar.address,
+    //           avatar.address,
     //           {
     //             assets: [
     //               contracts.mainnet.dai,

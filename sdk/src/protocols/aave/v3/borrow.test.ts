@@ -29,7 +29,7 @@ describe("aave_v3", () => {
         testKit.eth.aaveV3.aaveLendingPoolV3.supply(
           contracts.mainnet.usdc,
           parseUnits("10000", 6),
-          avatar._address,
+          avatar.address,
           0
         )
       ).not.toRevert()
@@ -57,7 +57,7 @@ describe("aave_v3", () => {
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
           parseEther("0.5"),
           2,
-          avatar._address,
+          avatar.address,
           { value: parseEther("0.5") }
         )
       ).not.toRevert()
@@ -67,7 +67,7 @@ describe("aave_v3", () => {
       await expect(
         testKit.eth.aaveV3.wrappedTokenGatewayV3.depositETH(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
-          avatar._address,
+          avatar.address,
           0,
           { value: parseEther("1") }
         )
@@ -79,7 +79,7 @@ describe("aave_v3", () => {
           parseUnits("100", 6),
           2,
           0,
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -95,7 +95,7 @@ describe("aave_v3", () => {
           contracts.mainnet.usdc,
           parseUnits("50", 6),
           2,
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
     })
@@ -126,7 +126,7 @@ describe("aave_v3", () => {
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
           parseEther("1"),
           2,
-          avatar._address,
+          avatar.address,
           { value: parseEther("1") }
         )
       ).toBeAllowed()
@@ -136,7 +136,7 @@ describe("aave_v3", () => {
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
           parseEther("1"),
           2,
-          member._address,
+          member.address,
           { value: parseEther("1") }
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -159,7 +159,7 @@ describe("aave_v3", () => {
           parseUnits("10000", 6),
           2,
           0,
-          avatar._address
+          avatar.address
         )
       ).toBeAllowed()
 
@@ -169,7 +169,7 @@ describe("aave_v3", () => {
           parseUnits("10000", 6),
           2,
           0,
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -193,7 +193,7 @@ describe("aave_v3", () => {
           contracts.mainnet.usdc,
           parseUnits("10000", 6),
           2,
-          avatar._address
+          avatar.address
         )
       ).toBeAllowed()
 
@@ -202,7 +202,7 @@ describe("aave_v3", () => {
           contracts.mainnet.usdc,
           parseUnits("10000", 6),
           2,
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })

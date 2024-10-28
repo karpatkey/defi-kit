@@ -47,7 +47,7 @@ describe("convex", () => {
       ).not.toRevert()
       // Using cvxCRV
       await expect(
-        testKit.eth.convex.stkCvxCrv.stake(parseEther("1"), avatar._address)
+        testKit.eth.convex.stkCvxCrv.stake(parseEther("1"), avatar.address)
       ).not.toRevert()
 
       await stealErc20(CRV, parseEther("1"), contracts.mainnet.balancer.vault)
@@ -70,10 +70,10 @@ describe("convex", () => {
         testKit.eth.convex.stkCvxCrv.setRewardWeight(5000)
       ).not.toRevert()
       await expect(
-        testKit.eth.convex.stkCvxCrv["getReward(address)"](avatar._address)
+        testKit.eth.convex.stkCvxCrv["getReward(address)"](avatar.address)
       ).not.toRevert()
       await expect(
-        testKit.eth.convex.stkCvxCrv["getReward(address)"](member._address)
+        testKit.eth.convex.stkCvxCrv["getReward(address)"](member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
 
       // Withdraw

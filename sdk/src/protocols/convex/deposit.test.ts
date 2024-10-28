@@ -4,7 +4,7 @@ import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import { parseEther } from "ethers"
 
 const steCRV = "0x06325440D014e39736583c165C2963BA99fAf14E"
 const cvxsteCRV = "0x9518c9063eB0262D791f38d8d6Eb0aca33c63ed0"
@@ -67,13 +67,13 @@ describe("convex", () => {
     it("only claim rewards to avatar", async () => {
       await expect(
         testKit.eth.convex.rewarder["getReward(address,bool)"](
-          avatar._address,
+          avatar.address,
           true
         )
       ).not.toRevert()
       await expect(
         testKit.eth.convex.rewarder["getReward(address,bool)"](
-          member._address,
+          member.address,
           true
         )
       ).toBeForbidden(Status.ParameterNotAllowed)

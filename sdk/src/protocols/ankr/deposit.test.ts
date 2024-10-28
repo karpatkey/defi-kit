@@ -30,13 +30,13 @@ describe("ankr", () => {
       await expect(
         testKit.eth.ankr.flashUnstake.swapEth(
           parseEther("0.000001"),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
       await expect(
         testKit.eth.ankr.flashUnstake.swapEth(
           parseEther("0.01"),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })

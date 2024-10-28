@@ -27,7 +27,7 @@ export const applyPermissions = async (
   })
 
   console.log(`Applying permissions with ${calls.length} calls`)
-  let nonce = await owner.getTransactionCount()
+  let nonce = await owner.getNonce()
 
   await Promise.all(
     calls.map(async (call, i) => {
@@ -184,36 +184,16 @@ export const execThroughRole = async (
   },
   overrides?: Overrides
 ) =>
-  (await getRolesMod()).connect(member).execTransactionWithRole(
-    to,
-    value || 0,
-    data || "0x",
-    operation,
-    testRoleKey,
-    true
-    overrides
-  )
-
-export const callThroughRole = async ({
-  to,
-  data,
-  value,
-  operation = 0,
-}: {
-  to: `0x${string}`
-  data?: `0x${string}`
-  value?: `0x${string}`
-  operation?: 0 | 1
-}) =>
-  await getRolesMod()
+  (await getRolesMod())
     .connect(member)
-    .callStatic.execTransactionWithRole(
+    .execTransactionWithRole(
       to,
       value || 0,
       data || "0x",
       operation,
       testRoleKey,
-      false
+      true,
+      overrides || {}
     )
 
 const erc20Interface = new Interface([

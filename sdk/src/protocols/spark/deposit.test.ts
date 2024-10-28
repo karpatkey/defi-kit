@@ -26,7 +26,7 @@ describe("spark", () => {
       await expect(
         testKit.eth.spark.wrappedTokenGatewayV3.depositETH(
           contracts.mainnet.spark.sparkLendingPoolV3,
-          avatar._address,
+          avatar.address,
           0,
           { value: parseEther("1") }
         )
@@ -35,7 +35,7 @@ describe("spark", () => {
       await expect(
         testKit.eth.spark.wrappedTokenGatewayV3.depositETH(
           contracts.mainnet.spark.sparkLendingPoolV3,
-          member._address,
+          member.address,
           0,
           { value: parseEther("1") }
         )
@@ -54,7 +54,7 @@ describe("spark", () => {
         testKit.eth.spark.wrappedTokenGatewayV3.withdrawETH(
           contracts.mainnet.spark.sparkLendingPoolV3,
           parseEther("1"),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -62,7 +62,7 @@ describe("spark", () => {
         testKit.eth.spark.wrappedTokenGatewayV3.withdrawETH(
           contracts.mainnet.spark.sparkLendingPoolV3,
           parseEther("1"),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -108,7 +108,7 @@ describe("spark", () => {
         testKit.eth.spark.sparkLendingPoolV3.supply(
           contracts.mainnet.weth,
           parseEther("1"),
-          avatar._address,
+          avatar.address,
           0
         )
       ).not.toRevert()
@@ -117,7 +117,7 @@ describe("spark", () => {
         testKit.eth.spark.sparkLendingPoolV3.supply(
           contracts.mainnet.weth,
           parseEther("1"),
-          member._address,
+          member.address,
           0
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -128,7 +128,7 @@ describe("spark", () => {
         testKit.eth.spark.sparkLendingPoolV3.withdraw(
           contracts.mainnet.weth,
           parseEther("1"),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -136,7 +136,7 @@ describe("spark", () => {
         testKit.eth.spark.sparkLendingPoolV3.withdraw(
           contracts.mainnet.weth,
           parseEther("1"),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -147,7 +147,7 @@ describe("spark", () => {
         testKit.eth.spark.RewardsController.claimRewards(
           [contracts.mainnet.spark.spWETH],
           MAX_AMOUNT,
-          avatar._address,
+          avatar.address,
           contracts.mainnet.lido.wsteth
         )
       ).not.toRevert()
@@ -156,7 +156,7 @@ describe("spark", () => {
         testKit.eth.spark.RewardsController.claimRewards(
           [contracts.mainnet.spark.spWETH],
           MAX_AMOUNT,
-          member._address,
+          member.address,
           contracts.mainnet.lido.wsteth
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -180,7 +180,7 @@ describe("spark", () => {
         testKit.eth.spark.sparkLendingPoolV3.supply(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          avatar._address,
+          avatar.address,
           0
         )
       ).not.toRevert()
@@ -189,7 +189,7 @@ describe("spark", () => {
         testKit.eth.spark.sparkLendingPoolV3.supply(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          member._address,
+          member.address,
           0
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -200,7 +200,7 @@ describe("spark", () => {
         testKit.eth.spark.sparkLendingPoolV3.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
@@ -208,7 +208,7 @@ describe("spark", () => {
         testKit.eth.spark.sparkLendingPoolV3.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -249,28 +249,28 @@ describe("spark", () => {
         )
       ).not.toRevert()
       await expect(
-        testKit.eth.spark.sDAI.deposit(parseEther("1000"), avatar._address)
+        testKit.eth.spark.sDAI.deposit(parseEther("1000"), avatar.address)
       ).not.toRevert()
-      const sdai_balance_bn = await sdk.spark.sDAI.balanceOf(avatar._address)
+      const sdai_balance_bn = await sdk.spark.sDAI.balanceOf(avatar.address)
       const sdai_balance = ethers.utils
         .formatUnits(sdai_balance_bn, 18)
         .toString()
       await expect(
         testKit.eth.spark.sDAI.redeem(
           parseEther(sdai_balance),
-          avatar._address,
-          avatar._address
+          avatar.address,
+          avatar.address
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.spark.sDAI.deposit(parseEther("1000"), member._address)
+        testKit.eth.spark.sDAI.deposit(parseEther("1000"), member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
       await expect(
         testKit.eth.spark.sDAI.redeem(
           parseEther("1000"),
-          member._address,
-          member._address
+          member.address,
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })

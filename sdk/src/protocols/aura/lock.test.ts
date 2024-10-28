@@ -25,17 +25,17 @@ describe("aura", () => {
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aura.aura_locker.lock(avatar._address, parseEther("1"))
+        testKit.eth.aura.aura_locker.lock(avatar.address, parseEther("1"))
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.aura_locker.lock(member._address, parseEther("1"))
+        testKit.eth.aura.aura_locker.lock(member.address, parseEther("1"))
       ).toBeForbidden(Status.ParameterNotAllowed)
 
       await expect(
-        testKit.eth.aura.aura_locker["getReward(address)"](avatar._address)
+        testKit.eth.aura.aura_locker["getReward(address)"](avatar.address)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.aura_locker["getReward(address)"](member._address)
+        testKit.eth.aura.aura_locker["getReward(address)"](member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
 
       await advanceTime(10200000) // 16 weeks and 5 days must pass for the tokens to be unlocked
