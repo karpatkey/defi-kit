@@ -146,19 +146,22 @@ const makeTestContract = <C extends BaseContract>(
                 } catch (e) {}
                 if (rolesError) {
                   // Decode the revert data using Roles ABI. this will throw a better error
-                  rolesInterface.decodeFunctionResult(
-                    "execTransactionWithRole",
-                    rootError.data
+                  console.log(
+                    rootError.transaction,
+                    rolesInterface.decodeErrorResult(rolesError, rootError.data)
+                  )
+
+                  throw rolesInterface.makeError(
+                    rootError.data,
+                    rootError.transaction
                   )
                 }
 
                 // Not a Roles error, try decoding the call return data, this will decode the revert reason using the target contract's ABI and throw a better error
-                contract.interface.decodeFunctionResult(
-                  original.fragment,
-                  rootError.data
+                throw contract.interface.makeError(
+                  rootError.data,
+                  rootError.transaction
                 )
-                // we should never get here
-                throw new Error("invariant violation")
               }
 
               throw error
@@ -166,7 +169,8 @@ const makeTestContract = <C extends BaseContract>(
           }
 
         const contractMethod = throughRoles(0) as any
-        Object.assign(contractMethod, original)
+        const { name, ...propsToCarryOver } = original
+        Object.assign(contractMethod, propsToCarryOver)
         contractMethod.call = throughRoles(0)
         contractMethod.delegateCall = throughRoles(1)
 
@@ -178,6 +182,15 @@ const makeTestContract = <C extends BaseContract>(
   }) as any
 }
 
-export const testKit = {
-  eth: mapSdk(getMainnetSdk(avatar)),
+const kit = {} as any as Awaited<ReturnType<typeof initKits>>
+const initKits = async () => {
+  const avatarSdk = getMainnetSdk(await avatar.getSigner())
+  const memberSdk = mapSdk(avatarSdk)
+  return { asAvatar: avatarSdk, asMember: memberSdk }
 }
+
+beforeAll(async () => {
+  Object.assign(kit, await initKits())
+})
+
+export default kit

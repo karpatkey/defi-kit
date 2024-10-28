@@ -2,9 +2,9 @@ import { ethers, id, solidityPackedKeccak256 } from "ethers"
 import { eth } from "."
 import { avatar } from "../../../test/wallets"
 import { applyPermissions } from "../../../test/helpers"
-import { testKit } from "../../../test/kit"
 import { getProvider } from "../../../test/provider"
 import { contracts } from "../../../eth-sdk/config"
+import kit from "../../../test/kit"
 
 describe("cowswap", () => {
   describe("swap", () => {
@@ -39,13 +39,13 @@ describe("cowswap", () => {
       const provider = getProvider()
       const block = await provider.getBlock("latest")
 
-      testOrder.receiver = await avatar.getAddress()
+      testOrder.receiver = avatar.address
       testOrder.validTo = block!.timestamp + testOrderValidDuration
     })
 
     it("it only allows swapping the specified token pair", async () => {
       await expect(
-        testKit.eth.cowswap.orderSigner.signOrder.delegateCall(
+        kit.asMember.cowswap.orderSigner.signOrder.delegateCall(
           testOrder,
           testOrderValidDuration,
           testOrderFeeAmountBP
@@ -53,7 +53,7 @@ describe("cowswap", () => {
       ).not.toRevert()
 
       await expect(
-        testKit.eth.cowswap.orderSigner.signOrder.delegateCall(
+        kit.asMember.cowswap.orderSigner.signOrder.delegateCall(
           {
             ...testOrder,
             sellToken: contracts.mainnet.weth,
@@ -67,7 +67,7 @@ describe("cowswap", () => {
 
     it("allows cancelling orders", async () => {
       await expect(
-        testKit.eth.cowswap.orderSigner.unsignOrder.delegateCall(testOrder)
+        kit.asMember.cowswap.orderSigner.unsignOrder.delegateCall(testOrder)
       ).not.toRevert()
     })
   })

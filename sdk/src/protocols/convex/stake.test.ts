@@ -5,7 +5,7 @@ import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import { parseEther } from "ethers"
 
 const cvxCRV = "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7"
 

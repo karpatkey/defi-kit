@@ -12,7 +12,7 @@ import { Status } from "../../../test/types"
 import { avatar, member } from "../../../test/wallets"
 import { applyPermissions } from "../../../test/helpers"
 import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import { parseEther } from "ethers"
 import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"

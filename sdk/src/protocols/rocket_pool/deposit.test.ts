@@ -4,7 +4,7 @@ import { queryDepositPool } from "./utils"
 import { applyPermissions } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import { parseEther } from "ethers"
 import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 
 const sdk = getMainnetSdk(avatar)

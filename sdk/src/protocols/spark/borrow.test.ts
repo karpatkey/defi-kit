@@ -8,7 +8,7 @@ import {
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import { parseEther } from "ethers"
 import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 
 const sdk = getMainnetSdk(avatar)

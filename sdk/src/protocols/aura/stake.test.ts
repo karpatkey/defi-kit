@@ -5,7 +5,7 @@ import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import { parseEther } from "ethers"
 
 const BAL = "0xba100000625a3754423978a60c9317c58a424e3D"
 const B_80BAL_20WETH = "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56"

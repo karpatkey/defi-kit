@@ -1,7 +1,7 @@
 import { eth } from "."
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import { parseEther } from "ethers"
 
 const B_rETH_STABLE = "0x1E19CF2D73a72Ef1332C882F20534B6519Be0276"
 const B_rETH_STABLE_gauge = "0x79eF6103A513951a3b25743DB509E267685726B7"

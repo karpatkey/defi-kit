@@ -6,7 +6,7 @@ import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
 import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
-import { parseEther } from "ethers/lib/utils"
+import { parseEther } from "ethers"
 
 const sdk = getMainnetSdk(avatar)
 const b_50WETH_50AURA = "0xCfCA23cA9CA720B6E98E3Eb9B6aa0fFC4a5C08B9"

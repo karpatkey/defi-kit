@@ -4,7 +4,7 @@ import { avatar, member } from "../../../test/wallets"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import { parseEther } from "ethers"
 
 describe("stader", () => {
   describe("deposit", () => {

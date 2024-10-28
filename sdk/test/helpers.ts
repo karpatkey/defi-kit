@@ -27,14 +27,15 @@ export const applyPermissions = async (
   })
 
   console.log(`Applying permissions with ${calls.length} calls`)
-  let nonce = await owner.getNonce()
+  const ownerSigner = await owner.getSigner()
+  let nonce = await ownerSigner.getNonce()
 
   await Promise.all(
     calls.map(async (call, i) => {
       try {
-        return await owner.sendTransaction({
+        return await ownerSigner.sendTransaction({
           ...call,
-          nonce: nonce++,
+          // nonce: nonce++,
         })
       } catch (e: any) {
         console.error(`Error applying permissions in call #${i}:`, call)
@@ -185,7 +186,7 @@ export const execThroughRole = async (
   overrides?: Overrides
 ) =>
   (await getRolesMod())
-    .connect(member)
+    .connect(await member.getSigner())
     .execTransactionWithRole(
       to,
       value || 0,
@@ -219,7 +220,7 @@ export const stealErc20 = async (
   await provider.send("anvil_setBalance", [from, toBeHex(parseEther("1"))])
 
   // Transfer the requested amount to the avatar
-  await contract.transfer(await avatar.getAddress(), amount)
+  await contract.transfer(avatar.address, amount)
 
   // Stop impersonating
   await provider.send("anvil_stopImpersonatingAccount", [from])
