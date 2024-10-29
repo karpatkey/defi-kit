@@ -89,6 +89,8 @@ describe("aave_v2", () => {
         kit.asMember.aaveV2.stkabptV2.stake(avatar.address, parseEther("1"))
       ).not.toRevert()
 
+      await advanceTime(2)
+      await kit.asAvatar.aaveV2.stkabptV2.claimRewards(avatar.address, 1)
       await expect(
         kit.asMember.aaveV2.stkabptV2.claimRewards(avatar.address, 1)
       ).not.toRevert()
