@@ -43,6 +43,7 @@ jobs:
       matrix:
         label: [
             aave,
+            compound,
             # general,
             # # aave,
             # ankr,

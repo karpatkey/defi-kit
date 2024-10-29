@@ -110,6 +110,10 @@ describe("aura", () => {
       await expect(
         kit.asMember.aura.aurabal_staking_rewarder["getReward()"]()
       ).not.toRevert()
+
+      console.log("BEFORE")
+      await kit.asAvatar.aura.aurabal_staking_rewarder.withdraw(1, true)
+      console.log("AFTER")
       await expect(
         kit.asMember.aura.aurabal_staking_rewarder.withdraw(1, true)
       ).not.toRevert()
