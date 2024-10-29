@@ -187,7 +187,6 @@ export const borrowEther = (chain: Chain) => {
       ...allow.mainnet.aaveV3.wrappedTokenGatewayV3.repayETH(
         aaveLendingPoolV3,
         undefined,
-        undefined,
         c.avatar,
         { send: true }
       ),

@@ -47,7 +47,6 @@ describe("aave_v3", () => {
         kit.asMember.aaveV3.wrappedTokenGatewayV3.borrowETH(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
           parseEther("1"),
-          2,
           0
         )
       ).not.toRevert()
@@ -56,7 +55,6 @@ describe("aave_v3", () => {
         kit.asMember.aaveV3.wrappedTokenGatewayV3.repayETH(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
           parseEther("0.5"),
-          2,
           avatar.address,
           { value: parseEther("0.5") }
         )
@@ -114,7 +112,6 @@ describe("aave_v3", () => {
         kit.asMember.aaveV3.wrappedTokenGatewayV3.borrowETH(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
           parseEther("1"),
-          2,
           0
         )
       ).toBeAllowed()
@@ -125,7 +122,6 @@ describe("aave_v3", () => {
         kit.asMember.aaveV3.wrappedTokenGatewayV3.repayETH(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
           parseEther("1"),
-          2,
           avatar.address,
           { value: parseEther("1") }
         )
@@ -135,7 +131,6 @@ describe("aave_v3", () => {
         kit.asMember.aaveV3.wrappedTokenGatewayV3.repayETH(
           contracts.mainnet.aaveV3.aaveLendingPoolV3,
           parseEther("1"),
-          2,
           member.address,
           { value: parseEther("1") }
         )
