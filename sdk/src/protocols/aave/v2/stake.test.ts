@@ -10,7 +10,7 @@ import { Status } from "../../../../test/types"
 import kit from "../../../../test/kit"
 import { parseEther } from "ethers"
 
-describe("aave_v2", () => {
+describe.only("aave_v2", () => {
   describe("stake", () => {
     beforeAll(async () => {
       await applyPermissions(
@@ -71,7 +71,7 @@ describe("aave_v2", () => {
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
-    it.only("stake ABPT", async () => {
+    it("stake ABPT", async () => {
       await stealErc20(
         contracts.mainnet.aaveV2.abptV2,
         parseEther("1"),
