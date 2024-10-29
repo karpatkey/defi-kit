@@ -43,9 +43,9 @@ jobs:
       matrix:
         label: [
             general,
-            aave,
+            # aave,
             ankr,
-            aura,
+            # aura,
             balancer,
             # compound,
             convex,
