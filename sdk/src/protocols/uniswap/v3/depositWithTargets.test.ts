@@ -6,7 +6,6 @@ import { parseUnits, parseEther } from "ethers"
 import kit from "../../../../test/kit"
 import { mintNFT, getPosition, calculateAmounts } from "./testUtils"
 
-const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 const STEAL_ADDRESS = "0x8eb8a3b98659cce290402893d0123abb75e3ab28"
 const COLLECT_MAX_AMOUNT = 340282366920938463463374607431768211455n
@@ -20,12 +19,17 @@ describe("uniswap_v3", () => {
         contracts.mainnet.usdc,
         // E_ADDRESS, No ETH sending allowed.
         contracts.mainnet.weth,
-        3000n,
+        3000,
         0n,
         1000000000000000000n
       )
       const nft_id = Number(nftId || 0)
       console.log("Initial NFT Id: ", nft_id)
+      console.log({
+        targets: [nft_id.toString()],
+        tokens: [contracts.mainnet.dai, contracts.mainnet.usdc],
+        fees: ["0.01%"],
+      })
       await applyPermissions(
         await eth.deposit({
           targets: [nft_id.toString()],
@@ -40,7 +44,7 @@ describe("uniswap_v3", () => {
         mintNFT(
           contracts.mainnet.dai,
           contracts.mainnet.usdc,
-          100n,
+          100,
           1000000000000000000000n,
           0n,
           true
@@ -50,7 +54,7 @@ describe("uniswap_v3", () => {
         mintNFT(
           contracts.mainnet.dai,
           contracts.mainnet.usdt,
-          100n,
+          100,
           1000000000000000000000n,
           0n,
           true
@@ -60,7 +64,7 @@ describe("uniswap_v3", () => {
         mintNFT(
           contracts.mainnet.dai,
           contracts.mainnet.usdc,
-          500n,
+          500,
           1000000000000000000000n,
           0n,
           true
@@ -94,13 +98,21 @@ describe("uniswap_v3", () => {
       const position = await getPosition(nftId)
       const [amount0Desired, amount1Desired, amount0Min, amount1Min] =
         await calculateAmounts(
-          position[5],
-          position[6],
+          Number(position[5]),
+          Number(position[6]),
           0n,
           1000000000000000000n,
           undefined,
           nftId
         )
+      console.log({
+        tokenId: nftId,
+        amount0Desired: amount0Desired,
+        amount1Desired: amount1Desired,
+        amount0Min: amount0Min,
+        amount1Min: amount1Min,
+        deadline: Math.floor(new Date().getTime() / 1000) + 1800,
+      })
       await expect(
         kit.asMember.uniswap_v3.positions_nft.increaseLiquidity(
           {

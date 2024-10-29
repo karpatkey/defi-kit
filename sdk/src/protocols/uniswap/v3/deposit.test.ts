@@ -19,7 +19,7 @@ describe("uniswap_v3", () => {
         contracts.mainnet.usdc,
         // E_ADDRESS, No ETH sending allowed.
         contracts.mainnet.weth,
-        3000n,
+        3000,
         0n,
         1000000000000000000n
       )
@@ -41,7 +41,7 @@ describe("uniswap_v3", () => {
         mintNFT(
           contracts.mainnet.dai,
           contracts.mainnet.usdc,
-          100n,
+          100,
           1000000000000000000000n,
           0n,
           true
@@ -51,7 +51,7 @@ describe("uniswap_v3", () => {
         mintNFT(
           contracts.mainnet.dai,
           contracts.mainnet.usdt,
-          100n,
+          100,
           1000000000000000000000n,
           0n,
           true
@@ -61,7 +61,7 @@ describe("uniswap_v3", () => {
         mintNFT(
           contracts.mainnet.dai,
           contracts.mainnet.usdc,
-          500n,
+          500,
           1000000000000000000000n,
           0n,
           true
@@ -95,8 +95,8 @@ describe("uniswap_v3", () => {
       const position = await getPosition(nftId)
       const [amount0Desired, amount1Desired, amount0Min, amount1Min] =
         await calculateAmounts(
-          position[5],
-          position[6],
+          Number(position[5]),
+          Number(position[6]),
           0n,
           1000000000000000000n,
           undefined,

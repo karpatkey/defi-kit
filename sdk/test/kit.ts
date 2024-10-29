@@ -10,7 +10,6 @@ import {
 } from "ethers"
 import { avatar } from "./wallets"
 import { execThroughRole } from "./helpers"
-import { getRolesMod } from "./rolesMod"
 import { ContractFactories, KnownContracts } from "@gnosis-guild/zodiac"
 
 /** We need to skip over functions with "view" state mutability. We do this by matching the ethers ContractMethod type  */

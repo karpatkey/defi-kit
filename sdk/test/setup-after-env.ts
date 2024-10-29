@@ -178,12 +178,3 @@ expect.extend({
     }
   },
 })
-
-const getErrorSignature = (error: any) => {
-  if (error.errorSignature) {
-    return {
-      signature: error.errorSignature,
-      args: error.errorArgs,
-    }
-  }
-}
