@@ -11,19 +11,19 @@
       "import": "./dist/index.mjs"
     },
     "./eth": {
+      "types": "./dist/eth.d.ts",
       "require": "./dist/eth.js",
-      "import": "./dist/eth.mjs",
-      "types": "./dist/eth.d.ts"
+      "import": "./dist/eth.mjs"
     },
     "./gno": {
+      "types": "./dist/gno.d.ts",
       "require": "./dist/gno.js",
-      "import": "./dist/gno.mjs",
-      "types": "./dist/gno.d.ts"
+      "import": "./dist/gno.mjs"
     },
     "./arb1": {
+      "types": "./dist/arb1.d.ts",
       "require": "./dist/arb1.js",
-      "import": "./dist/arb1.mjs",
-      "types": "./dist/arb1.d.ts"
+      "import": "./dist/arb1.mjs"
     }
   },
   "typesVersions": {

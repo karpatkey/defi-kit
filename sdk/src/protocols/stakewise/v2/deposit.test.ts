@@ -18,7 +18,7 @@ describe("stakewise_v2", () => {
         mintNFT(
           E_ADDRESS,
           contracts.mainnet.stakewise_v2.seth2,
-          3000,
+          3000n,
           1000000000000000000000n,
           0n,
           true,
@@ -29,7 +29,7 @@ describe("stakewise_v2", () => {
         mintNFT(
           E_ADDRESS,
           contracts.mainnet.usdt, // invalid token
-          3000,
+          3000n,
           1000000000000000000000n,
           0n,
           true
@@ -39,7 +39,7 @@ describe("stakewise_v2", () => {
         mintNFT(
           E_ADDRESS,
           contracts.mainnet.stakewise_v2.seth2,
-          500, // invalid fee
+          500n, // invalid fee
           1000000000000000000000n,
           0n,
           true,

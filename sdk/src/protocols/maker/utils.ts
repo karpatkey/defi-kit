@@ -27,7 +27,7 @@ export const queryCdps = async (proxy: `0x${string}`, targets?: string[]) => {
     try {
       return BigInt(target)
     } catch (e) {
-      // could not be parsed as BigNumber
+      // could not be parsed as BigInt
       throw new NotFoundError(`Cdp not found: ${target}`)
     }
   })

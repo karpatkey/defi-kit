@@ -1,16 +1,11 @@
-import { providers } from "ethers"
+import { JsonRpcProvider } from "ethers"
 
-console.log("node env", process.env.NODE_ENV)
+export const ethProvider = new JsonRpcProvider("https://rpc.eth.gateway.fm", {
+  chainId: 1,
+  name: "Ethereum",
+})
 
-export const ethProvider = new providers.JsonRpcProvider(
-  "https://rpc.eth.gateway.fm",
-  {
-    chainId: 1,
-    name: "Ethereum",
-  }
-)
-
-export const gnoProvider = new providers.JsonRpcProvider(
+export const gnoProvider = new JsonRpcProvider(
   "https://rpc.gnosis.gateway.fm",
   {
     chainId: 100,
@@ -18,7 +13,7 @@ export const gnoProvider = new providers.JsonRpcProvider(
   }
 )
 
-export const arb1Provider = new providers.JsonRpcProvider(
+export const arb1Provider = new JsonRpcProvider(
   "https://rpc.arb1.arbitrum.gateway.fm",
   {
     chainId: 42161,
