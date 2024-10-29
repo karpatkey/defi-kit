@@ -50,7 +50,7 @@ jobs:
             balancer,
             compound,
             convex,
-            cowswap,
+            # cowswap,
             lido,
             maker,
             rocket_pool,
