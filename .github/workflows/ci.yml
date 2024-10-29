@@ -38,8 +38,9 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}-${{ matrix.label }}
-      cancel-in-progress: false
+      cancel-in-progress: true
     strategy:
+      fail-fast: false
       matrix:
         label:
           [
