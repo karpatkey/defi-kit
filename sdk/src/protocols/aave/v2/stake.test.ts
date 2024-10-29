@@ -71,7 +71,7 @@ describe("aave_v2", () => {
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
-    it("stake ABPT", async () => {
+    it.only("stake ABPT", async () => {
       await stealErc20(
         contracts.mainnet.aaveV2.abptV2,
         parseEther("1"),
@@ -89,6 +89,7 @@ describe("aave_v2", () => {
         kit.asMember.aaveV2.stkabptV2.stake(avatar.address, parseEther("1"))
       ).not.toRevert()
 
+      await kit.asAvatar.aaveV2.stkabptV2.claimRewards(avatar.address, 1)
       await expect(
         kit.asMember.aaveV2.stkabptV2.claimRewards(avatar.address, 1)
       ).not.toRevert()

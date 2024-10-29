@@ -2,7 +2,6 @@ import { getProvider } from "./provider"
 
 const createSigner = async (address: string) => {
   const provider = getProvider()
-  await provider.send("anvil_impersonateAccount", [address])
   return await provider.getSigner(address)
 }
 
