@@ -38,27 +38,28 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}-${{ matrix.label }}
-      cancel-in-progress: true
+      cancel-in-progress: false
     strategy:
       matrix:
-        label: [
+        label:
+          [
             aave,
-            # compound,
-            # general,
-            # # aave,
-            # ankr,
-            # # aura,
-            # balancer,
-            # # compound,
-            # convex,
-            # # cowswap,
-            # lido,
-            # maker,
-            # rocket_pool,
-            # # spark,
-            # stader,
-            # stakewise,
-            # uniswap,
+            compound,
+            general,
+            aave,
+            ankr,
+            aura,
+            balancer,
+            compound,
+            convex,
+            cowswap,
+            lido,
+            maker,
+            rocket_pool,
+            spark,
+            stader,
+            stakewise,
+            uniswap,
           ]
     steps:
       - uses: actions/checkout@v3
