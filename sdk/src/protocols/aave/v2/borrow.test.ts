@@ -90,6 +90,14 @@ describe("aave_v2", () => {
         )
       ).not.toRevert()
 
+      // TODO: fix me - this is failing with VL_NO_DEBT_OF_SELECTED_TYPE = '15'
+      // as you can see when debugging the call using:
+      // kit.asAvatar.aaveV2.aaveLendingPoolV2.repay(
+      //   contracts.mainnet.usdc,
+      //   parseUnits("50", 6),
+      //   2,
+      //   avatar.address
+      // )
       await expect(
         kit.asMember.aaveV2.aaveLendingPoolV2.repay(
           contracts.mainnet.usdc,
