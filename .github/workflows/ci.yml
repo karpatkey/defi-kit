@@ -53,7 +53,7 @@ jobs:
             lido,
             maker,
             rocket_pool,
-            spark,
+            # spark,
             stader,
             stakewise,
             uniswap,
