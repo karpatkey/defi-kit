@@ -82,7 +82,8 @@ jobs:
       - name: Install anvil
         uses: foundry-rs/foundry-toolchain@v1
         with:
-          version: nightly
+          # https://github.com/foundry-rs/foundry/releases/tag/nightly-fd565286372b42a19b22d6a756e59a1b60a4135c
+          version: nightly-fd565286372b42a19b22d6a756e59a1b60a4135c
 
       - name: Run tests
         run: |
