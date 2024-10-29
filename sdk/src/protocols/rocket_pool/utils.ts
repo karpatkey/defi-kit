@@ -17,7 +17,7 @@ export const queryDepositPool = async () => {
 
   // TODO: we need this as any cast because typechain does not yet correctly generate the types for conflicting function names
   // (getAddress is a BaseContract member, so the full TypeChain would have to create the function member type under the full signature key)
-  return (await (sdk.rocket_pool.storage as any)[
-    "getAddress(bytes32)"
-  ].getAddress(deposit_pool_key)) as `0x${string}`
+  return (await (sdk.rocket_pool.storage as any)["getAddress(bytes32)"](
+    deposit_pool_key
+  )) as `0x${string}`
 }
