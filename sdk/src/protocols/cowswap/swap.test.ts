@@ -1,4 +1,4 @@
-import { ethers, id, solidityPackedKeccak256 } from "ethers"
+import { id, solidityPackedKeccak256 } from "ethers"
 import { eth } from "."
 import { avatar } from "../../../test/wallets"
 import { applyPermissions } from "../../../test/helpers"
