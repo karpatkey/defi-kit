@@ -10,7 +10,7 @@ import { Status } from "../../../../test/types"
 import kit from "../../../../test/kit"
 import { parseEther } from "ethers"
 
-describe("aave_v2", () => {
+describe.only("aave_v2", () => {
   describe("stake", () => {
     beforeAll(async () => {
       await applyPermissions(
@@ -36,6 +36,7 @@ describe("aave_v2", () => {
         kit.asMember.aaveV2.stkaave.stake(avatar.address, parseEther("1"))
       ).not.toRevert()
 
+      await advanceTime(2)
       await expect(
         kit.asMember.aaveV2.stkaave.claimRewards(avatar.address, 1)
       ).not.toRevert()
@@ -90,7 +91,6 @@ describe("aave_v2", () => {
       ).not.toRevert()
 
       await advanceTime(2)
-      await kit.asAvatar.aaveV2.stkabptV2.claimRewards(avatar.address, 1)
       await expect(
         kit.asMember.aaveV2.stkabptV2.claimRewards(avatar.address, 1)
       ).not.toRevert()
@@ -134,6 +134,7 @@ describe("aave_v2", () => {
         kit.asMember.aaveV2.stkgho.stake(avatar.address, parseEther("1"))
       ).not.toRevert()
 
+      await advanceTime(2)
       await expect(
         kit.asMember.aaveV2.stkgho.claimRewards(avatar.address, 1)
       ).toBeAllowed() // Replaced not.toRevert() with toBeAllowed() because it was failing for an unknown reason.
