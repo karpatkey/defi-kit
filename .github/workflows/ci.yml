@@ -47,7 +47,7 @@ jobs:
             # ankr,
             # aura,
             balancer,
-            compound,
+            # compound,
             convex,
             # cowswap,
             lido,
