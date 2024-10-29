@@ -60,7 +60,7 @@ describe("aave_v2", () => {
 
     it("allow setting the deposited ETH as collateral", async () => {
       let reserve_config: Array<any> =
-        await sdk.aaveV2.data_provider.getReserveConfigurationData(
+        await kit.asAvatar.aaveV2.data_provider.getReserveConfigurationData(
           contracts.mainnet.weth
         )
       const collateralizable: boolean = reserve_config[5]

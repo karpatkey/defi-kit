@@ -2,10 +2,8 @@ import { eth } from "."
 import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
-import { Status } from "../../../../test/types"
-import { testKit } from "../../../../test/kit"
-import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
-import { parseEther, parseUnits } from "ethers/lib/utils"
+import kit from "../../../../test/kit"
+import { parseEther, parseUnits } from "ethers"
 
 describe("compound_v2", () => {
   describe("deposit", () => {
@@ -16,11 +14,11 @@ describe("compound_v2", () => {
     // Test with ETH
     it("allows depositing ETH on behalf of avatar", async () => {
       await expect(
-        testKit.eth.compoundV2.cETH.mint({ value: parseEther("1") })
+        kit.asMember.compoundV2.cETH.mint({ value: parseEther("1") })
       ).not.toRevert()
 
       // await expect(
-      //   testKit.eth.compoundV2.cETH.mint(
+      //   kit.asMember.compoundV2.cETH.mint(
       //     {
       //       value: parseEther("1"),
       //       from: member.address
@@ -31,11 +29,11 @@ describe("compound_v2", () => {
 
     it("allows withdrawing ETH from avatars' position", async () => {
       await expect(
-        testKit.eth.compoundV2.cETH.redeemUnderlying(parseEther("0.5"))
+        kit.asMember.compoundV2.cETH.redeemUnderlying(parseEther("0.5"))
       ).not.toRevert()
 
       // await expect(
-      //   testKit.eth.compoundV2.cETH.redeemUnderlying(
+      //   kit.asMember.compoundV2.cETH.redeemUnderlying(
       //     parseEther("1"),
       //     {
       //       from: member.address
@@ -46,12 +44,12 @@ describe("compound_v2", () => {
 
     it("allow setting/removing the deposited ETH as collateral", async () => {
       await expect(
-        testKit.eth.compoundV2.comptroller.enterMarkets([
+        kit.asMember.compoundV2.comptroller.enterMarkets([
           contracts.mainnet.compoundV2.cETH,
         ])
       ).not.toRevert()
       await expect(
-        testKit.eth.compoundV2.comptroller.exitMarket(
+        kit.asMember.compoundV2.comptroller.exitMarket(
           contracts.mainnet.compoundV2.cETH
         )
       ).not.toRevert()
@@ -65,7 +63,7 @@ describe("compound_v2", () => {
         contracts.mainnet.balancer.vault
       )
       await expect(
-        testKit.eth.usdc.approve(
+        kit.asMember.usdc.approve(
           // The cToken in the config file corresponds to cUSDC
           contracts.mainnet.compoundV2.cToken,
           parseUnits("1000", 6)
@@ -74,24 +72,24 @@ describe("compound_v2", () => {
 
       await expect(
         // The cToken in the config file corresponds to cUSDC
-        testKit.eth.compoundV2.cToken.mint(parseUnits("1000", 6))
+        kit.asMember.compoundV2.cToken.mint(parseUnits("1000", 6))
       ).not.toRevert()
     })
 
     it("allows withdrawing USDC from avatars' position", async () => {
       await expect(
-        testKit.eth.compoundV2.cToken.redeemUnderlying(parseUnits("1000", 6))
+        kit.asMember.compoundV2.cToken.redeemUnderlying(parseUnits("1000", 6))
       ).not.toRevert()
     })
 
     it("allow setting/removing the deposited USDC as collateral", async () => {
       await expect(
-        testKit.eth.compoundV2.comptroller.enterMarkets([
+        kit.asMember.compoundV2.comptroller.enterMarkets([
           contracts.mainnet.compoundV2.cToken,
         ])
       ).not.toRevert()
       await expect(
-        testKit.eth.compoundV2.comptroller.exitMarket(
+        kit.asMember.compoundV2.comptroller.exitMarket(
           contracts.mainnet.compoundV2.cToken
         )
       ).not.toRevert()
@@ -99,7 +97,7 @@ describe("compound_v2", () => {
 
     it("only allow claiming COMP on behalf of avatar", async () => {
       await expect(
-        testKit.eth.compoundV2.comptroller["claimComp(address,address[])"](
+        kit.asMember.compoundV2.comptroller["claimComp(address,address[])"](
           avatar.address,
           [
             contracts.mainnet.compoundV2.cETH,
@@ -109,7 +107,7 @@ describe("compound_v2", () => {
         )
       ).not.toRevert()
       await expect(
-        testKit.eth.compoundV2.comptroller["claimComp(address,address[])"](
+        kit.asMember.compoundV2.comptroller["claimComp(address,address[])"](
           member.address,
           [
             contracts.mainnet.compoundV2.cETH,

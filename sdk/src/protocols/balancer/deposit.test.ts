@@ -2,9 +2,8 @@ import { eth } from "."
 import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
-import { testKit } from "../../../test/kit"
-import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
-import { parseEther, parseUnits } from "ethers/lib/utils"
+import kit from "../../../test/kit"
+import { parseEther, parseUnits } from "ethers"
 
 const B_rETH_STABLE_pid =
   "0x1e19cf2d73a72ef1332c882f20534b6519be0276000200000000000000000112"
@@ -14,7 +13,6 @@ const B_USDC_DAI_USDT_pid =
   "0x79c58f70905f734641735bc61e45c19dd9ad60bc0000000000000000000004e7"
 const B_50WETH_50_3pool_pid =
   "0x08775ccb6674d6bdceb0797c364c2653ed84f3840002000000000000000004f0"
-const sdk = getMainnetSdk(avatar)
 
 describe("balancer", () => {
   describe("deposit", () => {
@@ -25,16 +23,16 @@ describe("balancer", () => {
     })
 
     it("only deposit and withdraw from avatar", async () => {
-      await sdk.weth.deposit({ value: parseEther("1") })
+      await kit.asAvatar.weth.deposit({ value: parseEther("1") })
       await expect(
-        testKit.eth.weth.approve(
+        kit.asMember.weth.approve(
           contracts.mainnet.balancer.vault,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.balancer.vault.joinPool(
+        kit.asMember.balancer.vault.joinPool(
           B_rETH_STABLE_pid,
           avatar.address,
           avatar.address,
@@ -49,7 +47,7 @@ describe("balancer", () => {
       ).not.toRevert()
       // member address not allowed
       await expect(
-        testKit.eth.balancer.vault.joinPool(
+        kit.asMember.balancer.vault.joinPool(
           B_rETH_STABLE_pid,
           member.address,
           member.address,
@@ -64,7 +62,7 @@ describe("balancer", () => {
       ).toBeForbidden()
       // pool id not allowed
       await expect(
-        testKit.eth.balancer.vault.joinPool(
+        kit.asMember.balancer.vault.joinPool(
           "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014",
           avatar.address,
           avatar.address,
@@ -79,7 +77,7 @@ describe("balancer", () => {
       ).toBeForbidden()
 
       await expect(
-        testKit.eth.balancer.vault.exitPool(
+        kit.asMember.balancer.vault.exitPool(
           B_rETH_STABLE_pid,
           avatar.address,
           avatar.address,
@@ -94,7 +92,7 @@ describe("balancer", () => {
       ).not.toRevert()
       // member address not allowed
       await expect(
-        testKit.eth.balancer.vault.exitPool(
+        kit.asMember.balancer.vault.exitPool(
           B_rETH_STABLE_pid,
           member.address,
           member.address,
@@ -109,7 +107,7 @@ describe("balancer", () => {
       ).toBeForbidden()
       // pool id not allowed
       await expect(
-        testKit.eth.balancer.vault.exitPool(
+        kit.asMember.balancer.vault.exitPool(
           "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014",
           avatar.address,
           avatar.address,
@@ -133,21 +131,21 @@ describe("balancer", () => {
     //       contracts.mainnet.balancer.vault
     //     )
     //     await expect(
-    //       testKit.eth.balancer.vault.setRelayerApproval(
+    //       kit.asMember.balancer.vault.setRelayerApproval(
     //         avatar.address,
     //         contracts.mainnet.balancer.relayer,
     //         true
     //       )
     //     ).not.toRevert()
     //     await expect(
-    //       testKit.eth.usdc.approve(
+    //       kit.asMember.usdc.approve(
     //         contracts.mainnet.balancer.vault,
     //         parseUnits("1000", 6)
     //       )
     //     ).not.toRevert()
 
     //     await expect(
-    //       testKit.eth.balancer.relayer.multicall([
+    //       kit.asMember.balancer.relayer.multicall([
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
     //           B_USDC_DAI_USDT_pid,
     //           0,
@@ -190,7 +188,7 @@ describe("balancer", () => {
     //     ).not.toRevert()
     //     // member address not allowed
     //     await expect(
-    //       testKit.eth.balancer.relayer.multicall([
+    //       kit.asMember.balancer.relayer.multicall([
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
     //           B_USDC_DAI_USDT_pid,
     //           0,
@@ -233,7 +231,7 @@ describe("balancer", () => {
     //     ).toBeForbidden()
     //     // pool id not allowed
     //     await expect(
-    //       testKit.eth.balancer.relayer.multicall([
+    //       kit.asMember.balancer.relayer.multicall([
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("joinPool", [
     //           B_rETH_STABLE_pid,
     //           0,
@@ -276,7 +274,7 @@ describe("balancer", () => {
     //     ).toBeForbidden()
 
     //     await expect(
-    //       testKit.eth.balancer.relayer.multicall([
+    //       kit.asMember.balancer.relayer.multicall([
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
     //           B_50WETH_50_3pool_pid,
     //           0,
@@ -336,7 +334,7 @@ describe("balancer", () => {
     //     ).not.toRevert()
     //     // member address not allowed
     //     await expect(
-    //       testKit.eth.balancer.relayer.multicall([
+    //       kit.asMember.balancer.relayer.multicall([
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
     //           B_50WETH_50_3pool_pid,
     //           0,
@@ -396,7 +394,7 @@ describe("balancer", () => {
     //     ).toBeForbidden()
     //     // pool id not allowed
     //     await expect(
-    //       testKit.eth.balancer.relayer.multicall([
+    //       kit.asMember.balancer.relayer.multicall([
     //         sdk.balancer.relayerLibrary.interface.encodeFunctionData("exitPool", [
     //           B_rETH_STABLE_pid,
     //           0,

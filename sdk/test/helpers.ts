@@ -28,7 +28,7 @@ export const applyPermissions = async (
 
   console.log(`Applying permissions with ${calls.length} calls`)
   const ownerSigner = await owner.getSigner()
-  let nonce = await ownerSigner.getNonce()
+  // let nonce = await ownerSigner.getNonce()
 
   await Promise.all(
     calls.map(async (call, i) => {
@@ -208,16 +208,16 @@ export const stealErc20 = async (
 ) => {
   const provider = getProvider()
 
+  // Impersonate the token holder and give a little gas stipend
+  await provider.send("anvil_impersonateAccount", [from])
+  await provider.send("anvil_setBalance", [from, toBeHex(parseEther("1"))])
+
   // Get the token contract with impersonated signer
   const contract = new Contract(
     token,
     erc20Interface,
     await provider.getSigner(from)
   )
-
-  // Impersonate the token holder and give a little gas stipend
-  await provider.send("anvil_impersonateAccount", [from])
-  await provider.send("anvil_setBalance", [from, toBeHex(parseEther("1"))])
 
   // Transfer the requested amount to the avatar
   await contract.transfer(avatar.address, amount)

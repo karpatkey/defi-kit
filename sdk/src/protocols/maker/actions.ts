@@ -1,6 +1,5 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { Permission, c } from "zodiac-roles-sdk"
-import { BigNumber } from "ethers"
 import { Ilk } from "./types"
 import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
@@ -11,7 +10,7 @@ export const deposit = ({
   ilk,
 }: {
   proxy: `0x${string}`
-  cdp: BigNumber
+  cdp: bigint
   ilk: Ilk
 }): Permission[] => {
   const permissions: Permission[] = [
@@ -92,7 +91,7 @@ export const borrow = ({
   cdp,
 }: {
   proxy: `0x${string}`
-  cdp: BigNumber
+  cdp: bigint
 }): Permission[] => {
   return [
     // Draw

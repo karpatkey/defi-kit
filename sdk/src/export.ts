@@ -1,14 +1,13 @@
 import {
   Interface,
+  JsonFragment,
+  JsonFragmentType,
   Result,
   hexlify,
-  isBytes,
   isBytesLike,
-} from "ethers/lib/utils"
-import { JsonFragment, JsonFragmentType } from "@ethersproject/abi"
+} from "ethers"
 import { ChainId, posterAbi, rolesAbi } from "zodiac-roles-sdk"
 import { POSTER_ADDRESS } from "./apply"
-import { BigNumber } from "ethers"
 
 export const createExportToSafeTransactionBuilder = (chainId: ChainId) => {
   /**
@@ -104,7 +103,7 @@ const asTxBuilderInputValues = (result: Result) => {
       let serialized = value
       if (typeof value === "string") {
         serialized = value
-      } else if (BigNumber.isBigNumber(value)) {
+      } else if (typeof value === "bigint") {
         serialized = value.toString()
       } else if (isBytesLike(value)) {
         serialized = hexlify(value)

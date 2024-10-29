@@ -19,9 +19,7 @@ const openMakerCdp = async ({ ilk }: { ilk: string }) => {
   }
 
   const proxyAddress = await queryProxy(avatar.address as `0x${string}`)
-  const proxy = kit.asAvatar.maker.DsProxy.attach(
-    proxyAddress
-  ) as typeof kit.asAvatar.maker.DsProxy
+  const proxy = kit.asAvatar.maker.DsProxy.attach(proxyAddress)
   console.log("ILK from gemjoin", await kit.asAvatar.maker.GemJoin.ilk())
 
   console.log("encoding", encodeBytes32String("ETH-A"))

@@ -146,11 +146,6 @@ const makeTestContract = <C extends BaseContract>(
                 } catch (e) {}
                 if (rolesError) {
                   // Decode the revert data using Roles ABI. this will throw a better error
-                  console.log(
-                    rootError.transaction,
-                    rolesInterface.decodeErrorResult(rolesError, rootError.data)
-                  )
-
                   throw rolesInterface.makeError(
                     rootError.data,
                     rootError.transaction
