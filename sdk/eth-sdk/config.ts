@@ -1,4 +1,4 @@
-import { EthSdkConfig, defineConfig } from "@dethcrypto/eth-sdk"
+import { EthSdkConfig, defineConfig } from "@gnosis-guild/eth-sdk"
 
 export const contracts = {
   mainnet: {
@@ -22,7 +22,7 @@ export const contracts = {
     aaveV3: {
       data_provider: "0x7B4EB56E7CD4b454BA8ff71E4518426369a138a3",
       aaveLendingPoolV3: "0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2",
-      wrappedTokenGatewayV3: "0x893411580e590D62dDBca8a703d61Cc4A8c7b2b9",
+      wrappedTokenGatewayV3: "0xA434D495249abE33E031Fe71a969B81f3c07950D",
       aEthWETH: "0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8",
       variableDebtWETH: "0xeA51d7853EEFb32b6ee06b1C12E6dcCA88Be0fFE",
       stableDebtWETH: "0x102633152313C81cD80419b6EcF66d14Ad68949A",
@@ -150,7 +150,7 @@ export const contractAddressOverrides = {
     aaveV3: {
       data_provider: "0x501B4c19dd9C2e06E94dA7b6D5Ed4ddA013EC741",
       aaveLendingPoolV3: "0xb50201558B00496A145fE76f7424749556E326D8",
-      wrappedTokenGatewayV3: "0xfE76366A986B72c3f2923e05E6ba07b7de5401e4",
+      wrappedTokenGatewayV3: "0x7B9c12915c594a68dE96201Cbdc79147F09da278",
       aGnoWXDAI: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
       variableDebtWXDAI: "0xaC8b1cE0548C69318920C3e0b21Db296d5770D57",
       stableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
@@ -178,7 +178,7 @@ export const contractAddressOverrides = {
     aaveV3: {
       data_provider: "0x69FA688f1Dc47d4B5d8029D5a35FB7a548310654",
       aaveLendingPoolV3: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
-      wrappedTokenGatewayV3: "0xecD4bd3121F9FD604ffaC631bF6d41ec12f1fafb",
+      wrappedTokenGatewayV3: "0x5760E34c4003752329bC77790B1De44C2799F8C3",
       aArbWETH: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWETH: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
       stableDebtWETH: "0xD8Ad37849950903571df17049516a5CD4cbE55F6",

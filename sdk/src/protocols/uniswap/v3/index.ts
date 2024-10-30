@@ -5,7 +5,6 @@ import { contracts } from "../../../../eth-sdk/config"
 import { allow } from "zodiac-roles-sdk/kit"
 import { c, Permission } from "zodiac-roles-sdk"
 import ethInfo from "./_ethInfo"
-import { BigNumber } from "ethers"
 import { NotFoundError } from "../../../errors"
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
@@ -44,9 +43,9 @@ export const eth = {
       targets &&
       targets.map((target) => {
         try {
-          return BigNumber.from(target)
+          return BigInt(target)
         } catch (e) {
-          // could not be parsed as BigNumber
+          // could not be parsed as BigInt
           throw new NotFoundError(`Invalid NFT ID: ${target}`)
         }
       })

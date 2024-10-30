@@ -2,7 +2,7 @@ import { eth } from "."
 import { member } from "../../../../test/wallets"
 import { applyPermissions } from "../../../../test/helpers"
 import { Status } from "../../../../test/types"
-import { testKit } from "../../../../test/kit"
+import kit from "../../../../test/kit"
 
 const DELEGATEE = "0x849D52316331967b6fF1198e5E32A0eB168D039d"
 
@@ -15,18 +15,18 @@ describe("aave_v2", () => {
     })
 
     it("only allow delegation of AAVE to delegatee", async () => {
-      await expect(testKit.eth.aaveV2.aave.delegate(DELEGATEE)).not.toRevert()
+      await expect(kit.asMember.aaveV2.aave.delegate(DELEGATEE)).not.toRevert()
 
       await expect(
-        testKit.eth.aaveV2.aave.delegate(member._address)
+        kit.asMember.aaveV2.aave.delegate(member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
 
       await expect(
-        testKit.eth.aaveV2.aave.delegateByType(DELEGATEE, 0)
+        kit.asMember.aaveV2.aave.delegateByType(DELEGATEE, 0)
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aaveV2.aave.delegateByType(member._address, 0)
+        kit.asMember.aaveV2.aave.delegateByType(member.address, 0)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
   })

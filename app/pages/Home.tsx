@@ -35,7 +35,7 @@ const Home = () => (
       <h1 className={styles.title}>DeFi Kit</h1>
       <h3 className={styles.subtitle}>
         <a
-          href="https://github.com/gnosis/zodiac-modifier-roles"
+          href="https://github.com/gnosisguild/zodiac-modifier-roles"
           target="_blank"
           rel="noopener noreferrer"
         >

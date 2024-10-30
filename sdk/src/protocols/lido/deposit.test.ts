@@ -3,11 +3,8 @@ import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, advanceTime } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
-import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-
-const sdk = getMainnetSdk(avatar)
+import kit from "../../../test/kit"
+import { parseEther } from "ethers"
 
 describe("lido", () => {
   describe("deposit", () => {
@@ -17,7 +14,7 @@ describe("lido", () => {
 
     it("allows submitting ETH", async () => {
       await expect(
-        testKit.eth.lido.steth.submit(avatar._address, {
+        kit.asMember.lido.steth.submit(avatar.address, {
           value: parseEther("10"),
         })
       ).not.toRevert()
@@ -25,56 +22,58 @@ describe("lido", () => {
 
     it("allows wrapping and unwrapping stETH", async () => {
       await expect(
-        testKit.eth.lido.steth.approve(
+        kit.asMember.lido.steth.approve(
           contracts.mainnet.lido.wsteth,
           parseEther("5")
         )
       ).not.toRevert()
-      await expect(testKit.eth.lido.wsteth.wrap(parseEther("5"))).not.toRevert()
       await expect(
-        testKit.eth.lido.wsteth.unwrap(parseEther("1"))
+        kit.asMember.lido.wsteth.wrap(parseEther("5"))
+      ).not.toRevert()
+      await expect(
+        kit.asMember.lido.wsteth.unwrap(parseEther("1"))
       ).not.toRevert()
     })
 
     it("only allows requesting withdrawals from avatar's positions", async () => {
       await expect(
-        testKit.eth.lido.steth.approve(
+        kit.asMember.lido.steth.approve(
           contracts.mainnet.lido.unsteth,
           parseEther("1")
         )
       ).not.toRevert()
       await advanceTime(2)
       await expect(
-        testKit.eth.lido.unsteth.requestWithdrawals(
+        kit.asMember.lido.unsteth.requestWithdrawals(
           [parseEther("1")],
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.lido.wsteth.approve(
+        kit.asMember.lido.wsteth.approve(
           contracts.mainnet.lido.unsteth,
           parseEther("1")
         )
       ).not.toRevert()
       await advanceTime(2)
       await expect(
-        testKit.eth.lido.unsteth.requestWithdrawalsWstETH(
+        kit.asMember.lido.unsteth.requestWithdrawalsWstETH(
           [parseEther("1")],
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.lido.unsteth.requestWithdrawals(
+        kit.asMember.lido.unsteth.requestWithdrawals(
           [parseEther("1")],
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
       await expect(
-        testKit.eth.lido.unsteth.requestWithdrawalsWstETH(
+        kit.asMember.lido.unsteth.requestWithdrawalsWstETH(
           [parseEther("1")],
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })

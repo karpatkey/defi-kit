@@ -1,6 +1,5 @@
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
+import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { NotFoundError } from "../../../errors"
-import { BigNumber } from "ethers"
 import { ethProvider } from "../../../provider"
 import { getProvider } from "../../../../test/provider"
 import { EthToken } from "./types"
@@ -26,7 +25,7 @@ export const findToken = (
   return token.address
 }
 
-export const queryTokens = async (nftIds: BigNumber[]) => {
+export const queryTokens = async (nftIds: bigint[]) => {
   const positions = await Promise.all(
     nftIds.map((nftId) => sdk.uniswap_v3.positions_nft.positions(nftId))
   )

@@ -1,6 +1,12 @@
 import { Permission, PermissionSet } from "zodiac-roles-sdk"
-import { BigNumberish, Contract, Overrides } from "ethers"
-import { Interface, parseEther } from "ethers/lib/utils"
+import {
+  BigNumberish,
+  Contract,
+  Interface,
+  Overrides,
+  parseEther,
+  toBeHex,
+} from "ethers"
 
 import { avatar, owner, member } from "./wallets"
 import { getProvider } from "./provider"
@@ -11,8 +17,9 @@ export const applyPermissions = async (
   permissions: (Permission | PermissionSet | Promise<PermissionSet>)[]
 ) => {
   const apply = createApply(1) // chainId here won't matter (since we pass currentTargets and currentAnnotations no subgraph queries will be made)
+  const mod = await getRolesMod()
   const calls = await apply(testRoleKey, permissions, {
-    address: getRolesMod().address as `0x${string}`,
+    address: (await mod.getAddress()) as `0x${string}`,
     mode: "replace",
     log: console.debug,
     currentTargets: [],
@@ -20,14 +27,15 @@ export const applyPermissions = async (
   })
 
   console.log(`Applying permissions with ${calls.length} calls`)
-  let nonce = await owner.getTransactionCount()
+  const ownerSigner = await owner.getSigner()
+  // let nonce = await ownerSigner.getNonce()
 
   await Promise.all(
     calls.map(async (call, i) => {
       try {
-        return await owner.sendTransaction({
+        return await ownerSigner.sendTransaction({
           ...call,
-          nonce: nonce++,
+          // nonce: nonce++,
         })
       } catch (e: any) {
         console.error(`Error applying permissions in call #${i}:`, call)
@@ -177,8 +185,8 @@ export const execThroughRole = async (
   },
   overrides?: Overrides
 ) =>
-  await getRolesMod()
-    .connect(member)
+  (await getRolesMod())
+    .connect(await member.getSigner())
     .execTransactionWithRole(
       to,
       value || 0,
@@ -186,29 +194,7 @@ export const execThroughRole = async (
       operation,
       testRoleKey,
       true,
-      overrides
-    )
-
-export const callThroughRole = async ({
-  to,
-  data,
-  value,
-  operation = 0,
-}: {
-  to: `0x${string}`
-  data?: `0x${string}`
-  value?: `0x${string}`
-  operation?: 0 | 1
-}) =>
-  await getRolesMod()
-    .connect(member)
-    .callStatic.execTransactionWithRole(
-      to,
-      value || 0,
-      data || "0x",
-      operation,
-      testRoleKey,
-      false
+      overrides || {}
     )
 
 const erc20Interface = new Interface([
@@ -222,6 +208,10 @@ export const stealErc20 = async (
 ) => {
   const provider = getProvider()
 
+  // Impersonate the token holder and give a little gas stipend
+  await provider.send("anvil_impersonateAccount", [from])
+  await provider.send("anvil_setBalance", [from, toBeHex(parseEther("1"))])
+
   // Get the token contract with impersonated signer
   const contract = new Contract(
     token,
@@ -229,12 +219,8 @@ export const stealErc20 = async (
     await provider.getSigner(from)
   )
 
-  // Impersonate the token holder and give a little gas stipend
-  await provider.send("anvil_impersonateAccount", [from])
-  await provider.send("anvil_setBalance", [from, parseEther("1").toHexString()])
-
   // Transfer the requested amount to the avatar
-  await contract.transfer(await avatar.getAddress(), amount)
+  await contract.transfer(avatar.address, amount)
 
   // Stop impersonating
   await provider.send("anvil_stopImpersonatingAccount", [from])

@@ -4,8 +4,8 @@ import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
-import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import kit from "../../../test/kit"
+import { parseEther } from "ethers"
 
 const BAL = "0xba100000625a3754423978a60c9317c58a424e3D"
 const B_80BAL_20WETH = "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56"
@@ -21,7 +21,7 @@ describe("aura", () => {
     it("mint auraBAL using BAL, stake and compound", async () => {
       await stealErc20(BAL, parseEther("3"), contracts.mainnet.balancer.vault)
       await expect(
-        testKit.eth.usdc
+        kit.asMember.usdc
           .attach(BAL)
           .approve(
             contracts.mainnet.aura.bal_depositor_wrapper,
@@ -31,7 +31,7 @@ describe("aura", () => {
 
       // mint
       await expect(
-        testKit.eth.aura.bal_depositor_wrapper.deposit(
+        kit.asMember.aura.bal_depositor_wrapper.deposit(
           parseEther("1"),
           0,
           true,
@@ -41,7 +41,7 @@ describe("aura", () => {
 
       // stake
       await expect(
-        testKit.eth.aura.bal_depositor_wrapper.deposit(
+        kit.asMember.aura.bal_depositor_wrapper.deposit(
           parseEther("1"),
           0,
           true,
@@ -49,15 +49,15 @@ describe("aura", () => {
         )
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.aurabal_staking_rewarder["getReward()"]()
+        kit.asMember.aura.aurabal_staking_rewarder["getReward()"]()
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.aurabal_staking_rewarder.withdraw(1, true)
+        kit.asMember.aura.aurabal_staking_rewarder.withdraw(1, true)
       ).not.toRevert()
 
       // compound
       await expect(
-        testKit.eth.aura.bal_depositor_wrapper.deposit(
+        kit.asMember.aura.bal_depositor_wrapper.deposit(
           parseEther("1"),
           0,
           true,
@@ -65,21 +65,13 @@ describe("aura", () => {
         )
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.aurabal_compounding_rewarder["getReward()"]()
+        kit.asMember.aura.aurabal_compounding_rewarder["getReward()"]()
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.stkaurabal.withdraw(
-          1,
-          avatar._address,
-          avatar._address
-        )
+        kit.asMember.aura.stkaurabal.withdraw(1, avatar.address, avatar.address)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.stkaurabal.withdraw(
-          1,
-          member._address,
-          member._address
-        )
+        kit.asMember.aura.stkaurabal.withdraw(1, member.address, member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
     }, 90000) // Added 90 seconds of timeout because the deposit takes too long and the test fails.
 
@@ -90,7 +82,7 @@ describe("aura", () => {
         contracts.mainnet.balancer.vault
       )
       await expect(
-        testKit.eth.usdc
+        kit.asMember.usdc
           .attach(B_80BAL_20WETH)
           .approve(
             contracts.mainnet.aura.b_80bal_20weth_depositor_wrapper,
@@ -100,14 +92,14 @@ describe("aura", () => {
 
       // mint
       await expect(
-        testKit.eth.aura.b_80bal_20weth_depositor_wrapper[
+        kit.asMember.aura.b_80bal_20weth_depositor_wrapper[
           "deposit(uint256,bool,address)"
         ](parseEther("1"), true, ZERO_ADDRESS)
       ).not.toRevert()
 
       // stake
       await expect(
-        testKit.eth.aura.b_80bal_20weth_depositor_wrapper[
+        kit.asMember.aura.b_80bal_20weth_depositor_wrapper[
           "deposit(uint256,bool,address)"
         ](
           parseEther("1"),
@@ -116,34 +108,30 @@ describe("aura", () => {
         )
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.aurabal_staking_rewarder["getReward()"]()
+        kit.asMember.aura.aurabal_staking_rewarder["getReward()"]()
       ).not.toRevert()
+
+      console.log("BEFORE")
+      await kit.asAvatar.aura.aurabal_staking_rewarder.withdraw(1, true)
+      console.log("AFTER")
       await expect(
-        testKit.eth.aura.aurabal_staking_rewarder.withdraw(1, true)
+        kit.asMember.aura.aurabal_staking_rewarder.withdraw(1, true)
       ).not.toRevert()
 
       // compound
       await expect(
-        testKit.eth.aura.b_80bal_20weth_depositor_wrapper[
+        kit.asMember.aura.b_80bal_20weth_depositor_wrapper[
           "deposit(uint256,bool,address)"
         ](parseEther("1"), true, contracts.mainnet.aura.aurabal_staker)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.aurabal_compounding_rewarder["getReward()"]()
+        kit.asMember.aura.aurabal_compounding_rewarder["getReward()"]()
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.stkaurabal.withdraw(
-          1,
-          avatar._address,
-          avatar._address
-        )
+        kit.asMember.aura.stkaurabal.withdraw(1, avatar.address, avatar.address)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.stkaurabal.withdraw(
-          1,
-          member._address,
-          member._address
-        )
+        kit.asMember.aura.stkaurabal.withdraw(1, member.address, member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
     }, 30000) // Added 30 seconds of timeout because the deposit takes too long and the test fails.
 
@@ -155,7 +143,7 @@ describe("aura", () => {
       )
       // For staking
       await expect(
-        testKit.eth.usdc
+        kit.asMember.usdc
           .attach(auraBAL)
           .approve(
             contracts.mainnet.aura.aurabal_staking_rewarder,
@@ -164,22 +152,22 @@ describe("aura", () => {
       ).not.toRevert()
       // For compounding
       await expect(
-        testKit.eth.usdc
+        kit.asMember.usdc
           .attach(auraBAL)
           .approve(contracts.mainnet.aura.stkaurabal, parseEther("1"))
       ).not.toRevert()
 
       // stake
       await expect(
-        testKit.eth.aura.aurabal_staking_rewarder.stake(parseEther("1"))
+        kit.asMember.aura.aurabal_staking_rewarder.stake(parseEther("1"))
       ).not.toRevert()
 
       // compound
       await expect(
-        testKit.eth.aura.stkaurabal.deposit(parseEther("1"), avatar._address)
+        kit.asMember.aura.stkaurabal.deposit(parseEther("1"), avatar.address)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.stkaurabal.deposit(parseEther("1"), member._address)
+        kit.asMember.aura.stkaurabal.deposit(parseEther("1"), member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
   })

@@ -1,13 +1,9 @@
 import { eth } from "."
-import { avatar } from "../../../test/wallets"
 import { queryDepositPool } from "./utils"
 import { applyPermissions } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
-import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-
-const sdk = getMainnetSdk(avatar)
+import kit from "../../../test/kit"
+import { parseEther } from "ethers"
 
 describe("rocket_pool", () => {
   describe("deposit", () => {
@@ -22,24 +18,24 @@ describe("rocket_pool", () => {
 
     it("deposit and withdraw through deposit pool", async () => {
       const deposit_amount =
-        await sdk.rocket_pool.deposit_pool.getMaximumDepositAmount()
+        await kit.asAvatar.rocket_pool.deposit_pool.getMaximumDepositAmount()
 
-      if (deposit_amount.toBigInt() > 0) {
+      if (deposit_amount > 0n) {
         await expect(
-          testKit.eth.rocket_pool.deposit_pool.deposit({
+          kit.asMember.rocket_pool.deposit_pool.deposit({
             value: parseEther("1"),
           })
         ).not.toRevert()
 
         await expect(
-          testKit.eth.rocket_pool.rETH.burn(parseEther("0.01"))
+          kit.asMember.rocket_pool.rETH.burn(parseEther("0.01"))
         ).not.toRevert()
       }
     })
 
     it("deposit and withdraw using secondary markets with swap router (only through roles)", async () => {
       await expect(
-        testKit.eth.rocket_pool.swap_router.swapTo(
+        kit.asMember.rocket_pool.swap_router.swapTo(
           3,
           7,
           parseEther("400"),
@@ -51,14 +47,14 @@ describe("rocket_pool", () => {
       ).toBeAllowed()
 
       await expect(
-        testKit.eth.rocket_pool.rETH.approve(
+        kit.asMember.rocket_pool.rETH.approve(
           contracts.mainnet.rocket_pool.swap_router,
           parseEther("50000")
         )
       ).toBeAllowed()
 
       await expect(
-        testKit.eth.rocket_pool.swap_router.swapFrom(
+        kit.asMember.rocket_pool.swap_router.swapFrom(
           0,
           10,
           parseEther("14000"),

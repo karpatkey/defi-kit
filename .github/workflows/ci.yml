@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - uses: actions/cache@v3
         with:
           path: |
@@ -40,9 +40,12 @@ jobs:
       group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}-${{ matrix.label }}
       cancel-in-progress: true
     strategy:
+      fail-fast: false
       matrix:
         label:
           [
+            aave,
+            compound,
             general,
             aave,
             ankr,
@@ -63,7 +66,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - uses: actions/cache@v3
         with:
           path: |
@@ -79,7 +82,8 @@ jobs:
       - name: Install anvil
         uses: foundry-rs/foundry-toolchain@v1
         with:
-          version: nightly
+          # https://github.com/foundry-rs/foundry/releases/tag/nightly-fd565286372b42a19b22d6a756e59a1b60a4135c
+          version: nightly-fd565286372b42a19b22d6a756e59a1b60a4135c
 
       - name: Run tests
         run: |
