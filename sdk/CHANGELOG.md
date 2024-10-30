@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/karpatkey/defi-kit/compare/v1.15.2...v2.0.0) (2024-10-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade ethers & roles sdk  ([#278](https://github.com/karpatkey/defi-kit/issues/278))
+
+### Miscellaneous Chores
+
+* upgrade ethers & roles sdk  ([#278](https://github.com/karpatkey/defi-kit/issues/278)) ([f187647](https://github.com/karpatkey/defi-kit/commit/f18764771bebb3dd064247c243c32442365501d4))
+
 ## [1.15.2](https://github.com/karpatkey/defi-kit/compare/v1.15.1...v1.15.2) (2024-10-17)
 
 
