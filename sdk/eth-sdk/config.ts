@@ -20,13 +20,12 @@ export const contracts = {
       stkgho: "0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d",
     },
     aaveV3: {
-      data_provider: "0x41393e5e337606dc3821075Af65AeE84D7688CBD", //new data provider, based on doc aave v3
+      data_provider: "0x41393e5e337606dc3821075Af65AeE84D7688CBD",
       aaveLendingPoolV3: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
-      wrappedTokenGatewayV3: "0xA434D495249abE33E031Fe71a969B81f3c07950D", //new wrapped token gateway, based on doc aave v3
-      aEthWETH: "0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8", // StaticATokenFactory based on doc aave v3
-      //how to get aEthWETH: get protocol data add -> get allreserves -> get aEthWETH -> get aTokenAddress
+      wrappedTokenGatewayV3: "0xA434D495249abE33E031Fe71a969B81f3c07950D",
+      aEthWETH: "0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8",
       variableDebtWETH: "0xeA51d7853EEFb32b6ee06b1C12E6dcCA88Be0fFE",
-      stableDebtWETH: "0x0000000000000000000000000000000000000000", //deprecated
+      stableDebtWETH: "0x0000000000000000000000000000000000000000",
     },
     ankr: {
       ETH2_Staking: "0x84db6ee82b7cf3b47e8f19270abde5718b936670",
@@ -149,12 +148,12 @@ export const contracts = {
 export const contractAddressOverrides = {
   gnosis: {
     aaveV3: {
-      data_provider: "0x57038C3e3Fe0a170BB72DE2fD56E98e4d1a69717", //new data provider, based on doc aave v3
+      data_provider: "0x57038C3e3Fe0a170BB72DE2fD56E98e4d1a69717",
       aaveLendingPoolV3: "0xb50201558B00496A145fE76f7424749556E326D8",
-      wrappedTokenGatewayV3: "0x90127A46207e97e4205db5CCC1Ec9D6D43633FD4",//new wrapped token gateway, based on doc aave v3
+      wrappedTokenGatewayV3: "0x90127A46207e97e4205db5CCC1Ec9D6D43633FD4",
       aGnoWXDAI: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
-      variableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D", //updated
-      stableDebtWXDAI: "0x0000000000000000000000000000000000000000" //deprecated
+      variableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
+      stableDebtWXDAI: "0x0000000000000000000000000000000000000000"
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
@@ -177,12 +176,12 @@ export const contractAddressOverrides = {
   },
   arbitrumOne: {
     aaveV3: {
-      data_provider: "0x7F23D86Ee20D869112572136221e173428DD740B", //new data provider, based on doc aave v3
+      data_provider: "0x7F23D86Ee20D869112572136221e173428DD740B",
       aaveLendingPoolV3: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
       wrappedTokenGatewayV3: "0x5760E34c4003752329bC77790B1De44C2799F8C3",
       aArbWETH: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWETH: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
-      stableDebtWETH: "0x0000000000000000000000000000000000000000", //deprecated
+      stableDebtWETH: "0x0000000000000000000000000000000000000000",
     },
     balancer: {
       minter: "0xc3ccacE87f6d3A81724075ADcb5ddd85a8A1bB68",
