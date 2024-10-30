@@ -1,6 +1,7 @@
 import { z } from "zod"
 import ethTokens from "./_ethInfo"
 import gnoTokens from "./_ethInfo"
+import arb1Token from "./_arb1Info"
 import ethStakeTokens from "../v2/stakeTokens"
 import ethDelegateTokens from "../v2/delegateTokens"
 import { zx } from "../../../zx"
@@ -27,6 +28,12 @@ const zGnoToken = z.enum([
   "XDAI",
   ...gnoTokens.map((token) => token.symbol),
   ...gnoTokens.map((token) => token.token),
+] as [string, string, ...string[]])
+
+const zArb1Token = z.enum([
+  "ETH",
+  ...arb1Token.map((token) => token.symbol),
+  ...arb1Token.map((token) => token.token),
 ] as [string, string, ...string[]])
 
 export const eth = {
