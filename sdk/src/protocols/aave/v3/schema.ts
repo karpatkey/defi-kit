@@ -64,3 +64,13 @@ export const gno = {
     targets: zGnoToken.array(),
   }),
 }
+
+export const arb1 = {
+  deposit: z.object({
+    targets: zArb1Token.array(),
+  }),
+
+  borrow: z.object({
+    targets: zArb1Token.array(),
+  }),
+}
