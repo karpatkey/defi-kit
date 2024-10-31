@@ -66,11 +66,9 @@ export const depositToken = (chain: Chain, token: Token) => {
       targetAddress: aaveLendingPoolV3,
     },
     {
-      ...allow.mainnet.aaveV3.aaveLendingPoolV3["withdraw(address,uint256,address)"](
-        token.token,
-        undefined,
-        c.avatar
-      ),
+      ...allow.mainnet.aaveV3.aaveLendingPoolV3[
+        "withdraw(address,uint256,address)"
+      ](token.token, undefined, c.avatar),
       targetAddress: aaveLendingPoolV3,
     },
     {
@@ -82,12 +80,10 @@ export const depositToken = (chain: Chain, token: Token) => {
   ]
 
   if (chain === Chain.arb1) {
-    permissions.push(
-      {
-        ...allow.mainnet.aaveV3.aaveLendingPoolV3["withdraw(bytes32)"](),
-        targetAddress: aaveLendingPoolV3,
-      }
-    )
+    permissions.push({
+      ...allow.mainnet.aaveV3.aaveLendingPoolV3["withdraw(bytes32)"](),
+      targetAddress: aaveLendingPoolV3,
+    })
   }
 
   return permissions
@@ -152,7 +148,7 @@ export const borrowToken = (chain: Chain, token: Token) => {
         c.avatar
       ),
       targetAddress: aaveLendingPoolV3,
-    }
+    },
   ]
 }
 
@@ -184,6 +180,6 @@ export const borrowEther = (chain: Chain) => {
         { send: true }
       ),
       targetAddress: wrappedTokenGatewayV3,
-    }
+    },
   ]
 }
