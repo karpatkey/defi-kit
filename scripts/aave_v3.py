@@ -4,3 +4,4 @@ from defabipedia import Chain
 
 reserves_tokens_data(Chain.ETHEREUM)
 reserves_tokens_data(Chain.GNOSIS)
+reserves_tokens_data(Chain.ARBITRUM)

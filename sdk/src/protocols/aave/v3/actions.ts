@@ -17,8 +17,6 @@ export const _getAllAddresses = (chain: Chain) => {
         wrappedNativeToken: contracts.mainnet.weth as `0x${string}`,
         variableDebtWrappedNativeToken: contracts.mainnet.aaveV3
           .variableDebtWETH as `0x${string}`,
-        stableDebtWrappedNativeToken: contracts.mainnet.aaveV3
-          .stableDebtWETH as `0x${string}`,
       }
 
     case Chain.gno:
@@ -33,8 +31,6 @@ export const _getAllAddresses = (chain: Chain) => {
           .wxdai as `0x${string}`,
         variableDebtWrappedNativeToken: contractAddressOverrides.gnosis.aaveV3
           .variableDebtWXDAI as `0x${string}`,
-        stableDebtWrappedNativeToken: contractAddressOverrides.gnosis.aaveV3
-          .stableDebtWXDAI as `0x${string}`,
       }
 
     case Chain.arb1:
@@ -49,8 +45,6 @@ export const _getAllAddresses = (chain: Chain) => {
           .weth as `0x${string}`,
         variableDebtWrappedNativeToken: contractAddressOverrides.arbitrumOne
           .aaveV3.variableDebtWETH as `0x${string}`,
-        stableDebtWrappedNativeToken: contractAddressOverrides.arbitrumOne
-          .aaveV3.stableDebtWETH as `0x${string}`,
       }
 
     default:
@@ -61,7 +55,7 @@ export const _getAllAddresses = (chain: Chain) => {
 export const depositToken = (chain: Chain, token: Token) => {
   const { aaveLendingPoolV3 } = _getAllAddresses(chain)
 
-  return [
+  const permissions: Permission[] = [
     ...allowErc20Approve([token.token], [aaveLendingPoolV3]),
     {
       ...allow.mainnet.aaveV3.aaveLendingPoolV3.supply(
@@ -72,7 +66,7 @@ export const depositToken = (chain: Chain, token: Token) => {
       targetAddress: aaveLendingPoolV3,
     },
     {
-      ...allow.mainnet.aaveV3.aaveLendingPoolV3.withdraw(
+      ...allow.mainnet.aaveV3.aaveLendingPoolV3["withdraw(address,uint256,address)"](
         token.token,
         undefined,
         c.avatar
@@ -86,6 +80,17 @@ export const depositToken = (chain: Chain, token: Token) => {
       targetAddress: aaveLendingPoolV3,
     },
   ]
+
+  if (chain === Chain.arb1) {
+    permissions.push(
+      {
+        ...allow.mainnet.aaveV3.aaveLendingPoolV3["withdraw(bytes32)"](),
+        targetAddress: aaveLendingPoolV3,
+      }
+    )
+  }
+
+  return permissions
 }
 
 export const depositEther = (chain: Chain) => {
@@ -147,11 +152,7 @@ export const borrowToken = (chain: Chain, token: Token) => {
         c.avatar
       ),
       targetAddress: aaveLendingPoolV3,
-    },
-    {
-      ...allow.mainnet.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(token.token),
-      targetAddress: aaveLendingPoolV3,
-    },
+    }
   ]
 }
 
@@ -159,9 +160,7 @@ export const borrowEther = (chain: Chain) => {
   const {
     wrappedTokenGatewayV3,
     aaveLendingPoolV3,
-    wrappedNativeToken,
     variableDebtWrappedNativeToken,
-    stableDebtWrappedNativeToken,
   } = _getAllAddresses(chain)
 
   return [
@@ -170,12 +169,6 @@ export const borrowEther = (chain: Chain) => {
         wrappedTokenGatewayV3
       ),
       targetAddress: variableDebtWrappedNativeToken,
-    },
-    {
-      ...allow.mainnet.aaveV3.stableDebtWETH.approveDelegation(
-        wrappedTokenGatewayV3
-      ),
-      targetAddress: stableDebtWrappedNativeToken,
     },
     {
       ...allow.mainnet.aaveV3.wrappedTokenGatewayV3.borrowETH(
@@ -191,12 +184,6 @@ export const borrowEther = (chain: Chain) => {
         { send: true }
       ),
       targetAddress: wrappedTokenGatewayV3,
-    },
-    {
-      ...allow.mainnet.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(
-        wrappedNativeToken
-      ),
-      targetAddress: aaveLendingPoolV3,
-    },
+    }
   ]
 }

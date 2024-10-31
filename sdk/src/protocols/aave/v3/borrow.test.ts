@@ -137,15 +137,6 @@ describe("aave_v3", () => {
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
-    it("allows swapping the ETH borrow rate mode", async () => {
-      await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(
-          contracts.mainnet.weth,
-          1
-        )
-      ).toRevert()
-    })
-
     // Test with USDC
     it("only allows borrowing USDC from avatar", async () => {
       await expect(
@@ -200,15 +191,6 @@ describe("aave_v3", () => {
           member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
-    })
-
-    it("allows swapping the USDC borrow rate mode", async () => {
-      await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(
-          contracts.mainnet.usdc,
-          1
-        )
-      ).toRevert()
     })
   })
 })

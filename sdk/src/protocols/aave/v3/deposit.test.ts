@@ -119,7 +119,7 @@ describe("aave_v3", () => {
 
     it("only allows withdrawing WETH from avatars' position", async () => {
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.withdraw(
+        kit.asMember.aaveV3.aaveLendingPoolV3["withdraw(address,uint256,address)"](
           contracts.mainnet.weth,
           parseEther("1"),
           avatar.address
@@ -127,7 +127,7 @@ describe("aave_v3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.withdraw(
+        kit.asMember.aaveV3.aaveLendingPoolV3["withdraw(address,uint256,address)"](
           contracts.mainnet.weth,
           parseEther("1"),
           member.address
@@ -170,7 +170,7 @@ describe("aave_v3", () => {
 
     it("only allows withdrawing USDC from avatars' position", async () => {
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.withdraw(
+        kit.asMember.aaveV3.aaveLendingPoolV3["withdraw(address,uint256,address)"](
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
           avatar.address
@@ -178,7 +178,7 @@ describe("aave_v3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.withdraw(
+        kit.asMember.aaveV3.aaveLendingPoolV3["withdraw(address,uint256,address)"](
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
           member.address
