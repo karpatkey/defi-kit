@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/karpatkey/defi-kit/compare/v2.0.0...v2.0.1) (2024-10-31)
+
+
+### Bug Fixes
+
+* export to tx-builder helper function ([#282](https://github.com/karpatkey/defi-kit/issues/282)) ([4480b1a](https://github.com/karpatkey/defi-kit/commit/4480b1ad154d6116948753ea2454046712860b36))
+
 ## [2.0.0](https://github.com/karpatkey/defi-kit/compare/v1.15.2...v2.0.0) (2024-10-30)
 
 
