@@ -1,4 +1,4 @@
-import { EthSdkConfig, defineConfig } from "@dethcrypto/eth-sdk"
+import { EthSdkConfig, defineConfig } from "@gnosis-guild/eth-sdk"
 
 export const contracts = {
   mainnet: {
