@@ -2,7 +2,7 @@ import { allow } from "zodiac-roles-sdk/kit"
 import { Permission, c } from "zodiac-roles-sdk"
 import { Token } from "./types"
 import { allowErc20Approve } from "../../../conditions"
-import { contracts, contractAddressOverrides } from "../../../../eth-sdk/config"
+import { contracts } from "../../../../eth-sdk/config"
 import { Chain } from "../../../types"
 
 export const _getAllAddresses = (chain: Chain) => {
@@ -23,34 +23,30 @@ export const _getAllAddresses = (chain: Chain) => {
 
     case Chain.gno:
       return {
-        aNativeToken: contractAddressOverrides.gnosis.aaveV3
-          .aGnoWXDAI as `0x${string}`,
-        wrappedTokenGatewayV3: contractAddressOverrides.gnosis.aaveV3
+        aNativeToken: contracts.gnosis.aaveV3.aGnoWXDAI as `0x${string}`,
+        wrappedTokenGatewayV3: contracts.gnosis.aaveV3
           .wrappedTokenGatewayV3 as `0x${string}`,
-        aaveLendingPoolV3: contractAddressOverrides.gnosis.aaveV3
+        aaveLendingPoolV3: contracts.gnosis.aaveV3
           .aaveLendingPoolV3 as `0x${string}`,
-        wrappedNativeToken: contractAddressOverrides.gnosis
-          .wxdai as `0x${string}`,
-        variableDebtWrappedNativeToken: contractAddressOverrides.gnosis.aaveV3
+        wrappedNativeToken: contracts.gnosis.wxdai as `0x${string}`,
+        variableDebtWrappedNativeToken: contracts.gnosis.aaveV3
           .variableDebtWXDAI as `0x${string}`,
-        stableDebtWrappedNativeToken: contractAddressOverrides.gnosis.aaveV3
+        stableDebtWrappedNativeToken: contracts.gnosis.aaveV3
           .stableDebtWXDAI as `0x${string}`,
       }
 
     case Chain.arb1:
       return {
-        aNativeToken: contractAddressOverrides.arbitrumOne.aaveV3
-          .aArbWETH as `0x${string}`,
-        wrappedTokenGatewayV3: contractAddressOverrides.arbitrumOne.aaveV3
+        aNativeToken: contracts.arbitrumOne.aaveV3.aArbWETH as `0x${string}`,
+        wrappedTokenGatewayV3: contracts.arbitrumOne.aaveV3
           .wrappedTokenGatewayV3 as `0x${string}`,
-        aaveLendingPoolV3: contractAddressOverrides.arbitrumOne.aaveV3
+        aaveLendingPoolV3: contracts.arbitrumOne.aaveV3
           .aaveLendingPoolV3 as `0x${string}`,
-        wrappedNativeToken: contractAddressOverrides.arbitrumOne
-          .weth as `0x${string}`,
-        variableDebtWrappedNativeToken: contractAddressOverrides.arbitrumOne
-          .aaveV3.variableDebtWETH as `0x${string}`,
-        stableDebtWrappedNativeToken: contractAddressOverrides.arbitrumOne
-          .aaveV3.stableDebtWETH as `0x${string}`,
+        wrappedNativeToken: contracts.arbitrumOne.weth as `0x${string}`,
+        variableDebtWrappedNativeToken: contracts.arbitrumOne.aaveV3
+          .variableDebtWETH as `0x${string}`,
+        stableDebtWrappedNativeToken: contracts.arbitrumOne.aaveV3
+          .stableDebtWETH as `0x${string}`,
       }
 
     default:

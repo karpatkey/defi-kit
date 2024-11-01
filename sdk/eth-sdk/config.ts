@@ -1,5 +1,7 @@
 import { EthSdkConfig, defineConfig } from "@gnosis-guild/eth-sdk"
 
+const baseContracts = {}
+
 export const contracts = {
   mainnet: {
     aaveV2: {
@@ -139,14 +141,6 @@ export const contracts = {
     weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
   },
   gnosis: {
-    spark: {
-      SavingsXDaiAdapter: "0xD499b51fcFc66bd31248ef4b28d656d67E591A94",
-    },
-  },
-} as const satisfies EthSdkConfig["contracts"]
-
-export const contractAddressOverrides = {
-  gnosis: {
     aaveV3: {
       data_provider: "0x501B4c19dd9C2e06E94dA7b6D5Ed4ddA013EC741",
       aaveLendingPoolV3: "0xb50201558B00496A145fE76f7424749556E326D8",
@@ -171,6 +165,7 @@ export const contractAddressOverrides = {
       spWXDAI: "0xC9Fe2D32E96Bb364c7d29f3663ed3b27E30767bB",
       variableDebtWXDAI: "0x868ADfDf12A86422524EaB6978beAE08A0008F37",
       RewardsController: "0x4370D3b6C9588E02ce9D22e684387859c7Ff5b34",
+      SavingsXDaiAdapter: "0xD499b51fcFc66bd31248ef4b28d656d67E591A94",
     },
     wxdai: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
   },
@@ -196,13 +191,9 @@ export const contractAddressOverrides = {
 } as const satisfies EthSdkConfig["contracts"]
 
 export default defineConfig({
-  etherscanURLs: {
-    gnosis: "https://api.gnosisscan.io/api",
-    //gnosis: "https://blockscout.com/xdai/mainnet/api",
-  },
   rpc: {
     gnosis: "https://rpc.gnosischain.com/",
-    //gnosis: "https://rpc.ankr.com/gnosis"
+    arbitrumOne: "https://arb1.arbitrum.io/rpc",
   },
   contracts,
 })

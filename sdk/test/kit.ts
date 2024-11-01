@@ -1,4 +1,8 @@
-import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
+import {
+  getArbitrumOneSdk,
+  getGnosisSdk,
+  getMainnetSdk,
+} from "@gnosis-guild/eth-sdk-client"
 import {
   Addressable,
   BaseContract,
@@ -176,15 +180,30 @@ const makeTestContract = <C extends BaseContract>(
   }) as any
 }
 
-const kit = {} as any as Awaited<ReturnType<typeof initKits>>
-const initKits = async () => {
+const initEthKits = async () => {
   const avatarSdk = getMainnetSdk(await avatar.getSigner())
   const memberSdk = mapSdk(avatarSdk)
   return { asAvatar: avatarSdk, asMember: memberSdk }
 }
 
-beforeAll(async () => {
-  Object.assign(kit, await initKits())
-})
+const initGnoKits = async () => {
+  const avatarSdk = getGnosisSdk(await avatar.getSigner())
+  const memberSdk = mapSdk(avatarSdk)
+  return { asAvatar: avatarSdk, asMember: memberSdk }
+}
 
-export default kit
+const initArb1Kits = async () => {
+  const avatarSdk = getArbitrumOneSdk(await avatar.getSigner())
+  const memberSdk = mapSdk(avatarSdk)
+  return { asAvatar: avatarSdk, asMember: memberSdk }
+}
+
+export const eth = {} as any as Awaited<ReturnType<typeof initEthKits>>
+export const gno = {} as any as Awaited<ReturnType<typeof initGnoKits>>
+export const arb1 = {} as any as Awaited<ReturnType<typeof initArb1Kits>>
+
+beforeAll(async () => {
+  Object.assign(eth, await initEthKits())
+  Object.assign(gno, await initGnoKits())
+  Object.assign(arb1, await initArb1Kits())
+})
