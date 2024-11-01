@@ -11,7 +11,7 @@ import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { avatar, member } from "../../../test/wallets"
 import { applyPermissions } from "../../../test/helpers"
-import kit from "../../../test/kit"
+import { eth as kit } from "../../../test/kit"
 import { ZeroAddress, parseEther } from "ethers"
 
 describe("balancer", () => {

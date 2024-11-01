@@ -1,7 +1,7 @@
 import { avatar } from "../../../../test/wallets"
 import { stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
-import kit from "../../../../test/kit"
+import { eth as kit } from "../../../../test/kit"
 
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 const stealAddress = "0x8eb8a3b98659cce290402893d0123abb75e3ab28"

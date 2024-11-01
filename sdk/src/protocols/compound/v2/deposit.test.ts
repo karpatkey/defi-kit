@@ -2,7 +2,7 @@ import { eth } from "."
 import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
-import kit from "../../../../test/kit"
+import { eth as kit } from "../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 
 describe("compound_v2", () => {

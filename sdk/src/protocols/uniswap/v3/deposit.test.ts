@@ -3,7 +3,7 @@ import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { parseUnits, parseEther } from "ethers"
-import kit from "../../../../test/kit"
+import { eth as kit } from "../../../../test/kit"
 import { mintNFT, getPosition, calculateAmounts } from "./testUtils"
 
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"

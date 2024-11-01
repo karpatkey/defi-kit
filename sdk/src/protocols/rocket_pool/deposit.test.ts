@@ -2,7 +2,7 @@ import { eth } from "."
 import { queryDepositPool } from "./utils"
 import { applyPermissions } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
-import kit from "../../../test/kit"
+import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 
 describe("rocket_pool", () => {

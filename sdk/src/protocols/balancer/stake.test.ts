@@ -1,6 +1,6 @@
 import { eth } from "."
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
-import kit from "../../../test/kit"
+import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 
 const B_rETH_STABLE = "0x1E19CF2D73a72Ef1332C882F20534B6519Be0276"

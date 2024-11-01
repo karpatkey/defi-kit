@@ -3,7 +3,7 @@ import { avatar } from "../../../test/wallets"
 import { applyPermissions } from "../../../test/helpers"
 import { queryCdps, queryIlk, queryProxy } from "./utils"
 import { ZeroAddress, encodeBytes32String, parseEther } from "ethers"
-import kit from "../../../test/kit"
+import { eth as kit } from "../../../test/kit"
 
 const getProxy = async () => {
   const proxyAddress = await queryProxy(avatar.address as `0x${string}`)

@@ -3,7 +3,7 @@ import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { Status } from "../../../../test/types"
-import kit from "../../../../test/kit"
+import { eth as kit } from "../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 
 describe("aave_v3", () => {

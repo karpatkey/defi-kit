@@ -1,7 +1,7 @@
 import { eth } from "."
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
-import kit from "../../../../test/kit"
+import { eth as kit } from "../../../../test/kit"
 import { parseUnits } from "ethers"
 
 // TODO we need to find a solution for handling the compundV3 bulker permissions

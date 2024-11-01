@@ -4,7 +4,7 @@ import { avatar } from "../../../test/wallets"
 import { applyPermissions } from "../../../test/helpers"
 import { getProvider } from "../../../test/provider"
 import { contracts } from "../../../eth-sdk/config"
-import kit from "../../../test/kit"
+import { eth as kit } from "../../../test/kit"
 
 describe("cowswap", () => {
   describe("swap", () => {
