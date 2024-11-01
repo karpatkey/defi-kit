@@ -9,7 +9,7 @@ const _mint = (token: Token): Permission[] => {
 
   if (token.symbol === "ETH") {
     permissions.push(
-      allow.mainnet.compoundV2.cETH.mint({
+      allow.mainnet.compoundV2.cEth.mint({
         send: true,
       })
     )

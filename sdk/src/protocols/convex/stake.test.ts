@@ -19,19 +19,19 @@ describe("convex", () => {
       await expect(
         kit.asMember.usdc
           .attach(CRV)
-          .approve(contracts.mainnet.convex.CrvDepositor, parseEther("2"))
+          .approve(contracts.mainnet.convex.crvDepositor, parseEther("2"))
       ).not.toRevert()
 
       // Converts CRV to cvxCRV
       await expect(
-        kit.asMember.convex.CrvDepositor["deposit(uint256,bool)"](
+        kit.asMember.convex.crvDepositor["deposit(uint256,bool)"](
           parseEther("1"),
           false
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.convex.CrvDepositor["deposit(uint256,bool,address)"](
+        kit.asMember.convex.crvDepositor["deposit(uint256,bool,address)"](
           parseEther("1"),
           false,
           ZERO_ADDRESS
@@ -54,11 +54,11 @@ describe("convex", () => {
       await expect(
         kit.asMember.usdc
           .attach(CRV)
-          .approve(contracts.mainnet.convex.CrvDepositor, parseEther("1"))
+          .approve(contracts.mainnet.convex.crvDepositor, parseEther("1"))
       ).not.toRevert()
       // Using CRV
       await expect(
-        kit.asMember.convex.CrvDepositor["deposit(uint256,bool,address)"](
+        kit.asMember.convex.crvDepositor["deposit(uint256,bool,address)"](
           parseEther("1"),
           true,
           contracts.mainnet.convex.stkCvxCrv

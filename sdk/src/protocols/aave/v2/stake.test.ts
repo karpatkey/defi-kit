@@ -27,48 +27,48 @@ describe("aave_v2", () => {
 
       await expect(
         kit.asMember.aaveV2.aave.approve(
-          contracts.mainnet.aaveV2.stkaave,
+          contracts.mainnet.aaveV2.stkAave,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV2.stkaave.stake(avatar.address, parseEther("1"))
+        kit.asMember.aaveV2.stkAave.stake(avatar.address, parseEther("1"))
       ).not.toRevert()
 
       await advanceTime(2)
       await expect(
-        kit.asMember.aaveV2.stkaave.claimRewards(avatar.address, 1)
+        kit.asMember.aaveV2.stkAave.claimRewards(avatar.address, 1)
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV2.stkaave.claimRewardsAndStake(avatar.address, 1)
+        kit.asMember.aaveV2.stkAave.claimRewardsAndStake(avatar.address, 1)
       ).not.toRevert()
 
-      await expect(kit.asMember.aaveV2.stkaave.cooldown()).not.toRevert()
+      await expect(kit.asMember.aaveV2.stkAave.cooldown()).not.toRevert()
 
       // The 20 days cooldown period must pass in order to withdraw the AAVE.
       await advanceTime(1730000)
       await expect(
-        kit.asMember.aaveV2.stkaave.redeem(avatar.address, 1)
+        kit.asMember.aaveV2.stkAave.redeem(avatar.address, 1)
       ).not.toRevert()
       await expect(
-        kit.asMember.aaveV2.stkaave.claimRewardsAndStake(avatar.address, 1)
+        kit.asMember.aaveV2.stkAave.claimRewardsAndStake(avatar.address, 1)
       ).not.toRevert()
       await expect(
-        kit.asMember.aaveV2.stkaave.claimRewards(avatar.address, 1)
+        kit.asMember.aaveV2.stkAave.claimRewards(avatar.address, 1)
       ).not.toRevert()
     })
 
     it("only allows staking and claiming AAVE from avatar", async () => {
       await expect(
-        kit.asMember.aaveV2.stkaave.stake(member.address, parseEther("1"))
+        kit.asMember.aaveV2.stkAave.stake(member.address, parseEther("1"))
       ).toBeForbidden(Status.ParameterNotAllowed)
       await expect(
-        kit.asMember.aaveV2.stkaave.claimRewardsAndStake(member.address, 1)
+        kit.asMember.aaveV2.stkAave.claimRewardsAndStake(member.address, 1)
       ).toBeForbidden(Status.ParameterNotAllowed)
       await expect(
-        kit.asMember.aaveV2.stkaave.claimRewards(member.address, 1)
+        kit.asMember.aaveV2.stkAave.claimRewards(member.address, 1)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
@@ -76,43 +76,43 @@ describe("aave_v2", () => {
       await stealErc20(
         contracts.mainnet.aaveV2.abptV2,
         parseEther("1"),
-        contracts.mainnet.aaveV2.stkabptV2
+        contracts.mainnet.aaveV2.stkAbptV2
       )
 
       await expect(
         kit.asMember.aaveV2.abptV2.approve(
-          contracts.mainnet.aaveV2.stkabptV2,
+          contracts.mainnet.aaveV2.stkAbptV2,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV2.stkabptV2.stake(avatar.address, parseEther("1"))
+        kit.asMember.aaveV2.stkAbptV2.stake(avatar.address, parseEther("1"))
       ).not.toRevert()
 
       await advanceTime(2)
       await expect(
-        kit.asMember.aaveV2.stkabptV2.claimRewards(avatar.address, 1)
+        kit.asMember.aaveV2.stkAbptV2.claimRewards(avatar.address, 1)
       ).not.toRevert()
 
-      await expect(kit.asMember.aaveV2.stkabptV2.cooldown()).not.toRevert()
+      await expect(kit.asMember.aaveV2.stkAbptV2.cooldown()).not.toRevert()
 
       // The 20 days cooldown period must pass in order to withdraw the AAVE.
       await advanceTime(1730000)
       await expect(
-        kit.asMember.aaveV2.stkabptV2.redeem(avatar.address, 1)
+        kit.asMember.aaveV2.stkAbptV2.redeem(avatar.address, 1)
       ).not.toRevert()
       await expect(
-        kit.asMember.aaveV2.stkabptV2.claimRewards(avatar.address, 1)
+        kit.asMember.aaveV2.stkAbptV2.claimRewards(avatar.address, 1)
       ).not.toRevert()
     })
 
     it("only allows staking ABPT and claiming AAVE from avatar", async () => {
       await expect(
-        kit.asMember.aaveV2.stkabptV2.stake(member.address, parseEther("1"))
+        kit.asMember.aaveV2.stkAbptV2.stake(member.address, parseEther("1"))
       ).toBeForbidden(Status.ParameterNotAllowed)
       await expect(
-        kit.asMember.aaveV2.stkabptV2.claimRewards(member.address, 1)
+        kit.asMember.aaveV2.stkAbptV2.claimRewards(member.address, 1)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
@@ -125,38 +125,38 @@ describe("aave_v2", () => {
 
       await expect(
         kit.asMember.aaveV2.gho.approve(
-          contracts.mainnet.aaveV2.stkgho,
+          contracts.mainnet.aaveV2.stkGho,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV2.stkgho.stake(avatar.address, parseEther("1"))
+        kit.asMember.aaveV2.stkGho.stake(avatar.address, parseEther("1"))
       ).not.toRevert()
 
       await advanceTime(2)
       await expect(
-        kit.asMember.aaveV2.stkgho.claimRewards(avatar.address, 1)
+        kit.asMember.aaveV2.stkGho.claimRewards(avatar.address, 1)
       ).toBeAllowed() // Replaced not.toRevert() with toBeAllowed() because it was failing for an unknown reason.
 
-      await expect(kit.asMember.aaveV2.stkgho.cooldown()).not.toRevert()
+      await expect(kit.asMember.aaveV2.stkGho.cooldown()).not.toRevert()
 
       // The 20 days cooldown period must pass in order to withdraw the AAVE.
       await advanceTime(1730000)
       await expect(
-        kit.asMember.aaveV2.stkgho.redeem(avatar.address, 1)
+        kit.asMember.aaveV2.stkGho.redeem(avatar.address, 1)
       ).not.toRevert()
       await expect(
-        kit.asMember.aaveV2.stkgho.claimRewards(avatar.address, 1)
+        kit.asMember.aaveV2.stkGho.claimRewards(avatar.address, 1)
       ).toBeAllowed() // Replaced not.toRevert() with toBeAllowed() because it was failing for an unknown reason.
     })
 
     it("only allows staking GHO and claiming AAVE from avatar", async () => {
       await expect(
-        kit.asMember.aaveV2.stkgho.stake(member.address, parseEther("1"))
+        kit.asMember.aaveV2.stkGho.stake(member.address, parseEther("1"))
       ).toBeForbidden(Status.ParameterNotAllowed)
       await expect(
-        kit.asMember.aaveV2.stkgho.claimRewards(member.address, 1)
+        kit.asMember.aaveV2.stkGho.claimRewards(member.address, 1)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
   })

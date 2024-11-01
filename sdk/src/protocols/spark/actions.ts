@@ -9,32 +9,32 @@ export const _getAllAddresses = (chain: Chain) => {
   switch (chain) {
     case Chain.eth:
       return {
-        spNativeToken: contracts.mainnet.spark.spWETH as `0x${string}`,
+        spNativeToken: contracts.mainnet.spark.spWeth as `0x${string}`,
         wrappedTokenGatewayV3: contracts.mainnet.spark
           .wrappedTokenGatewayV3 as `0x${string}`,
-        sparkLendingPoolV3: contracts.mainnet.spark
-          .sparkLendingPoolV3 as `0x${string}`,
+        lendingPoolV3: contracts.mainnet.spark
+          .lendingPoolV3 as `0x${string}`,
         wrappedNativeToken: contracts.mainnet.weth as `0x${string}`,
         variableDebtWrappedNativeToken: contracts.mainnet.spark
-          .variableDebtWETH as `0x${string}`,
+          .variableDebtWeth as `0x${string}`,
         stableDebtWrappedNativeToken: contracts.mainnet.spark
-          .stableDebtWETH as `0x${string}`,
-        RewardsController: contracts.mainnet.spark
-          .RewardsController as `0x${string}`,
+          .stableDebtWeth as `0x${string}`,
+        rewardsController: contracts.mainnet.spark
+          .rewardsController as `0x${string}`,
       }
 
     case Chain.gno:
       return {
-        spNativeToken: contracts.gnosis.spark.spWXDAI as `0x${string}`,
+        spNativeToken: contracts.gnosis.spark.spWxdai as `0x${string}`,
         wrappedTokenGatewayV3: contracts.gnosis.spark
           .wrappedTokenGatewayV3 as `0x${string}`,
-        sparkLendingPoolV3: contracts.gnosis.spark
-          .sparkLendingPoolV3 as `0x${string}`,
+        lendingPoolV3: contracts.gnosis.spark
+          .lendingPoolV3 as `0x${string}`,
         wrappedNativeToken: contracts.gnosis.wxdai as `0x${string}`,
         variableDebtWrappedNativeToken: contracts.gnosis.spark
-          .variableDebtWXDAI as `0x${string}`,
-        RewardsController: contracts.gnosis.spark
-          .RewardsController as `0x${string}`,
+          .variableDebtWxdai as `0x${string}`,
+        rewardsController: contracts.gnosis.spark
+          .rewardsController as `0x${string}`,
       }
 
     default:
@@ -48,32 +48,32 @@ export const depositDsr = (chain: Chain): Permission[] => {
       return [
         ...allowErc20Approve(
           [contracts.mainnet.dai],
-          [contracts.mainnet.spark.sDAI]
+          [contracts.mainnet.spark.sDai]
         ),
-        allow.mainnet.spark.sDAI.deposit(undefined, c.avatar),
-        allow.mainnet.spark.sDAI.redeem(undefined, c.avatar, c.avatar),
+        allow.mainnet.spark.sDai.deposit(undefined, c.avatar),
+        allow.mainnet.spark.sDai.redeem(undefined, c.avatar, c.avatar),
         // Spark's new UI now calls the withdraw() function instead of redeem()
-        allow.mainnet.spark.sDAI.withdraw(undefined, c.avatar, c.avatar),
+        allow.mainnet.spark.sDai.withdraw(undefined, c.avatar, c.avatar),
       ]
 
     case Chain.gno:
       return [
         ...allowErc20Approve(
-          [contracts.gnosis.spark.sDAI],
-          [contracts.gnosis.spark.SavingsXDaiAdapter]
+          [contracts.gnosis.spark.sDai],
+          [contracts.gnosis.spark.savingsXdaiAdapter]
         ),
         // Using XDAI
-        allow.gnosis.spark.SavingsXDaiAdapter.depositXDAI(c.avatar, {
+        allow.gnosis.spark.savingsXdaiAdapter.depositXDAI(c.avatar, {
           send: true,
         }),
-        allow.gnosis.spark.SavingsXDaiAdapter.redeemXDAI(undefined, c.avatar),
+        allow.gnosis.spark.savingsXdaiAdapter.redeemXDAI(undefined, c.avatar),
         // Using WXDAI
         ...allowErc20Approve(
           [contracts.gnosis.wxdai],
-          [contracts.gnosis.spark.SavingsXDaiAdapter]
+          [contracts.gnosis.spark.savingsXdaiAdapter]
         ),
-        allow.gnosis.spark.SavingsXDaiAdapter.deposit(undefined, c.avatar),
-        allow.gnosis.spark.SavingsXDaiAdapter.redeem(undefined, c.avatar),
+        allow.gnosis.spark.savingsXdaiAdapter.deposit(undefined, c.avatar),
+        allow.gnosis.spark.savingsXdaiAdapter.redeem(undefined, c.avatar),
       ]
 
     default:
@@ -86,66 +86,66 @@ export const depositUSDS = (): Permission[] => {
   return [
     ...allowErc20Approve(
       [contracts.mainnet.dai],
-      [contracts.mainnet.spark.MigrationActions]
+      [contracts.mainnet.spark.migrationActions]
     ),
-    allow.mainnet.spark.MigrationActions.migrateDAIToUSDS(c.avatar),
-    allow.mainnet.spark.MigrationActions.migrateDAIToSUSDS(c.avatar),
+    allow.mainnet.spark.migrationActions.migrateDAIToUSDS(c.avatar),
+    allow.mainnet.spark.migrationActions.migrateDAIToSUSDS(c.avatar),
     ...allowErc20Approve(
-      [contracts.mainnet.spark.USDS],
-      [contracts.mainnet.spark.MigrationActions]
+      [contracts.mainnet.spark.usds],
+      [contracts.mainnet.spark.migrationActions]
     ),
-    allow.mainnet.spark.MigrationActions.downgradeUSDSToDAI(c.avatar),
+    allow.mainnet.spark.migrationActions.downgradeUSDSToDAI(c.avatar),
     ...allowErc20Approve(
-      [contracts.mainnet.spark.USDS],
-      [contracts.mainnet.spark.sUSDS]
+      [contracts.mainnet.spark.usds],
+      [contracts.mainnet.spark.sUsds]
     ),
-    allow.mainnet.spark.sUSDS["deposit(uint256,address)"](undefined, c.avatar),
-    allow.mainnet.spark.sUSDS.withdraw(undefined, c.avatar, c.avatar),
-    allow.mainnet.spark.sUSDS.redeem(undefined, c.avatar, c.avatar),
+    allow.mainnet.spark.sUsds["deposit(uint256,address)"](undefined, c.avatar),
+    allow.mainnet.spark.sUsds.withdraw(undefined, c.avatar, c.avatar),
+    allow.mainnet.spark.sUsds.redeem(undefined, c.avatar, c.avatar),
   ]
 }
 
 export const depositToken = (chain: Chain, token: Token) => {
-  const { sparkLendingPoolV3, RewardsController } = _getAllAddresses(chain)
+  const { lendingPoolV3, rewardsController } = _getAllAddresses(chain)
 
   return [
-    ...allowErc20Approve([token.token], [sparkLendingPoolV3]),
+    ...allowErc20Approve([token.token], [lendingPoolV3]),
     {
-      ...allow.mainnet.spark.sparkLendingPoolV3.supply(
+      ...allow.mainnet.spark.lendingPoolV3.supply(
         token.token,
         undefined,
         c.avatar
       ),
-      targetAddress: sparkLendingPoolV3,
+      targetAddress: lendingPoolV3,
     },
     {
-      ...allow.mainnet.spark.sparkLendingPoolV3.withdraw(
+      ...allow.mainnet.spark.lendingPoolV3.withdraw(
         token.token,
         undefined,
         c.avatar
       ),
-      targetAddress: sparkLendingPoolV3,
+      targetAddress: lendingPoolV3,
     },
     {
-      ...allow.mainnet.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
+      ...allow.mainnet.spark.lendingPoolV3.setUserUseReserveAsCollateral(
         token.token
       ),
-      targetAddress: sparkLendingPoolV3,
+      targetAddress: lendingPoolV3,
     },
     {
-      ...allow.mainnet.spark.RewardsController.claimRewards(
+      ...allow.mainnet.spark.rewardsController.claimRewards(
         undefined,
         undefined,
         c.avatar
       ),
-      targetAddress: RewardsController,
+      targetAddress: rewardsController,
     },
     {
-      ...allow.mainnet.spark.RewardsController.claimAllRewards(
+      ...allow.mainnet.spark.rewardsController.claimAllRewards(
         undefined,
         c.avatar
       ),
-      targetAddress: RewardsController,
+      targetAddress: rewardsController,
     },
   ]
 }
@@ -154,16 +154,16 @@ export const depositEther = (chain: Chain) => {
   const {
     spNativeToken,
     wrappedTokenGatewayV3,
-    sparkLendingPoolV3,
+    lendingPoolV3,
     wrappedNativeToken,
-    RewardsController,
+    rewardsController,
   } = _getAllAddresses(chain)
 
   return [
     ...allowErc20Approve([spNativeToken], [wrappedTokenGatewayV3]),
     {
       ...allow.mainnet.spark.wrappedTokenGatewayV3.depositETH(
-        sparkLendingPoolV3,
+        lendingPoolV3,
         c.avatar,
         undefined,
         { send: true }
@@ -172,76 +172,76 @@ export const depositEther = (chain: Chain) => {
     },
     {
       ...allow.mainnet.spark.wrappedTokenGatewayV3.withdrawETH(
-        sparkLendingPoolV3,
+        lendingPoolV3,
         undefined,
         c.avatar
       ),
       targetAddress: wrappedTokenGatewayV3,
     },
     {
-      ...allow.mainnet.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
+      ...allow.mainnet.spark.lendingPoolV3.setUserUseReserveAsCollateral(
         wrappedNativeToken
       ),
-      targetAddress: sparkLendingPoolV3,
+      targetAddress: lendingPoolV3,
     },
     {
-      ...allow.mainnet.spark.RewardsController.claimRewards(
+      ...allow.mainnet.spark.rewardsController.claimRewards(
         undefined,
         undefined,
         c.avatar
       ),
-      targetAddress: RewardsController,
+      targetAddress: rewardsController,
     },
     {
-      ...allow.mainnet.spark.RewardsController.claimAllRewards(
+      ...allow.mainnet.spark.rewardsController.claimAllRewards(
         undefined,
         c.avatar
       ),
-      targetAddress: RewardsController,
+      targetAddress: rewardsController,
     },
   ]
 }
 
 export const borrowToken = (chain: Chain, token: Token) => {
-  const { sparkLendingPoolV3 } = _getAllAddresses(chain)
+  const { lendingPoolV3 } = _getAllAddresses(chain)
 
   return [
-    ...allowErc20Approve([token.token], [sparkLendingPoolV3]),
+    ...allowErc20Approve([token.token], [lendingPoolV3]),
     {
-      ...allow.mainnet.spark.sparkLendingPoolV3.borrow(
+      ...allow.mainnet.spark.lendingPoolV3.borrow(
         token.token,
         undefined,
         undefined,
         undefined,
         c.avatar
       ),
-      targetAddress: sparkLendingPoolV3,
+      targetAddress: lendingPoolV3,
     },
     {
-      ...allow.mainnet.spark.sparkLendingPoolV3.repay(
+      ...allow.mainnet.spark.lendingPoolV3.repay(
         token.token,
         undefined,
         undefined,
         c.avatar
       ),
-      targetAddress: sparkLendingPoolV3,
+      targetAddress: lendingPoolV3,
     },
     // Spark has only made available the borrow action with interestRateModel = 2 (Variable Debt)
-    // allow.mainnet.spark.sparkLendingPoolV3.swapBorrowRateMode(token.token),
+    // allow.mainnet.spark.lendingPoolV3.swapBorrowRateMode(token.token),
   ]
 }
 
 export const borrowEther = (chain: Chain) => {
   const {
     wrappedTokenGatewayV3,
-    sparkLendingPoolV3,
+    lendingPoolV3,
     variableDebtWrappedNativeToken,
     stableDebtWrappedNativeToken,
   } = _getAllAddresses(chain)
 
   return [
     {
-      ...allow.mainnet.spark.variableDebtWETH.approveDelegation(
+      ...allow.mainnet.spark.variableDebtWeth.approveDelegation(
         wrappedTokenGatewayV3
       ),
       targetAddress: variableDebtWrappedNativeToken,
@@ -251,7 +251,7 @@ export const borrowEther = (chain: Chain) => {
     ...(stableDebtWrappedNativeToken
       ? [
           {
-            ...allow.mainnet.spark.stableDebtWETH.approveDelegation(
+            ...allow.mainnet.spark.stableDebtWeth.approveDelegation(
               wrappedTokenGatewayV3
             ),
             targetAddress: stableDebtWrappedNativeToken,
@@ -260,13 +260,13 @@ export const borrowEther = (chain: Chain) => {
       : []),
     {
       ...allow.mainnet.spark.wrappedTokenGatewayV3.borrowETH(
-        sparkLendingPoolV3
+        lendingPoolV3
       ),
       targetAddress: wrappedTokenGatewayV3,
     },
     {
       ...allow.mainnet.spark.wrappedTokenGatewayV3.repayETH(
-        sparkLendingPoolV3,
+        lendingPoolV3,
         undefined,
         undefined,
         c.avatar,
@@ -275,6 +275,6 @@ export const borrowEther = (chain: Chain) => {
       targetAddress: wrappedTokenGatewayV3,
     },
     // Spark has only made available the borrow action with interestRateModel = 2 (Variable Debt)
-    // allow.mainnet.spark.sparkLendingPoolV3.swapBorrowRateMode(WETH),
+    // allow.mainnet.spark.lendingPoolV3.swapBorrowRateMode(WETH),
   ]
 }

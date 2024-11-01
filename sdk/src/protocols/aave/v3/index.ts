@@ -1,7 +1,8 @@
 import { NotFoundError } from "../../../errors"
 import ethTokens from "./_ethInfo"
 import gnoTokens from "./_gnoInfo"
-import { EthToken, GnoToken, Token } from "./types"
+import arb1Tokens from "./_arb1Info"
+import { EthToken, GnoToken, Arb1Token, Token } from "./types"
 import { DelegateToken, StakeToken } from "../v2/types"
 import { findDelegateToken, findStakeToken } from "../v2/index"
 import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
@@ -92,6 +93,32 @@ export const gno = {
       target === "XDAI"
         ? borrowEther(Chain.gno)
         : borrowToken(Chain.gno, findToken(gnoTokens, target))
+    )
+  },
+}
+
+export const arb1 = {
+  deposit: async ({
+    targets,
+  }: {
+    targets: ("ETH" | Arb1Token["symbol"] | Arb1Token["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? depositEther(Chain.arb1)
+        : depositToken(Chain.arb1, findToken(arb1Tokens, target))
+    )
+  },
+
+  borrow: async ({
+    targets,
+  }: {
+    targets: ("ETH" | Arb1Token["symbol"] | Arb1Token["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? borrowEther(Chain.arb1)
+        : borrowToken(Chain.arb1, findToken(arb1Tokens, target))
     )
   },
 }

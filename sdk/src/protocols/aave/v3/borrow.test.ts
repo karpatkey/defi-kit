@@ -21,12 +21,12 @@ describe("aave_v3", () => {
       )
       await expect(
         kit.asMember.usdc.approve(
-          contracts.mainnet.aaveV3.aaveLendingPoolV3,
+          contracts.mainnet.aaveV3.lendingPoolV3,
           parseUnits("10000", 6)
         )
       ).not.toRevert()
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.supply(
+        kit.asMember.aaveV3.lendingPoolV3.supply(
           contracts.mainnet.usdc,
           parseUnits("10000", 6),
           avatar.address,
@@ -37,7 +37,7 @@ describe("aave_v3", () => {
 
     it("borrow ETH and repay", async () => {
       await expect(
-        kit.asMember.aaveV3.variableDebtWETH.approveDelegation(
+        kit.asMember.aaveV3.variableDebtWeth.approveDelegation(
           contracts.mainnet.aaveV3.wrappedTokenGatewayV3,
           parseEther("1")
         )
@@ -45,7 +45,7 @@ describe("aave_v3", () => {
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.borrowETH(
-          contracts.mainnet.aaveV3.aaveLendingPoolV3,
+          contracts.mainnet.aaveV3.lendingPoolV3,
           parseEther("1"),
           0
         )
@@ -53,7 +53,7 @@ describe("aave_v3", () => {
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.repayETH(
-          contracts.mainnet.aaveV3.aaveLendingPoolV3,
+          contracts.mainnet.aaveV3.lendingPoolV3,
           parseEther("0.5"),
           avatar.address,
           { value: parseEther("0.5") }
@@ -64,7 +64,7 @@ describe("aave_v3", () => {
     it("deposit ETH, borrow USDC and repay", async () => {
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.depositETH(
-          contracts.mainnet.aaveV3.aaveLendingPoolV3,
+          contracts.mainnet.aaveV3.lendingPoolV3,
           avatar.address,
           0,
           { value: parseEther("1") }
@@ -72,7 +72,7 @@ describe("aave_v3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.borrow(
+        kit.asMember.aaveV3.lendingPoolV3.borrow(
           contracts.mainnet.usdc,
           parseUnits("100", 6),
           2,
@@ -83,13 +83,13 @@ describe("aave_v3", () => {
 
       await expect(
         kit.asMember.usdc.approve(
-          contracts.mainnet.aaveV3.aaveLendingPoolV3,
+          contracts.mainnet.aaveV3.lendingPoolV3,
           parseUnits("50", 6)
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.repay(
+        kit.asMember.aaveV3.lendingPoolV3.repay(
           contracts.mainnet.usdc,
           parseUnits("50", 6),
           2,
@@ -102,7 +102,7 @@ describe("aave_v3", () => {
     // Test with ETH
     it("allows borrowing ETH from avatar", async () => {
       await expect(
-        kit.asMember.aaveV3.variableDebtWETH.approveDelegation(
+        kit.asMember.aaveV3.variableDebtWeth.approveDelegation(
           contracts.mainnet.aaveV3.wrappedTokenGatewayV3,
           parseEther("1")
         )
@@ -110,7 +110,7 @@ describe("aave_v3", () => {
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.borrowETH(
-          contracts.mainnet.aaveV3.aaveLendingPoolV3,
+          contracts.mainnet.aaveV3.lendingPoolV3,
           parseEther("1"),
           0
         )
@@ -120,7 +120,7 @@ describe("aave_v3", () => {
     it("only allows repaying ETH from avatar", async () => {
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.repayETH(
-          contracts.mainnet.aaveV3.aaveLendingPoolV3,
+          contracts.mainnet.aaveV3.lendingPoolV3,
           parseEther("1"),
           avatar.address,
           { value: parseEther("1") }
@@ -129,7 +129,7 @@ describe("aave_v3", () => {
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.repayETH(
-          contracts.mainnet.aaveV3.aaveLendingPoolV3,
+          contracts.mainnet.aaveV3.lendingPoolV3,
           parseEther("1"),
           member.address,
           { value: parseEther("1") }
@@ -137,19 +137,10 @@ describe("aave_v3", () => {
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
-    it("allows swapping the ETH borrow rate mode", async () => {
-      await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(
-          contracts.mainnet.weth,
-          1
-        )
-      ).toRevert()
-    })
-
     // Test with USDC
     it("only allows borrowing USDC from avatar", async () => {
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.borrow(
+        kit.asMember.aaveV3.lendingPoolV3.borrow(
           contracts.mainnet.usdc,
           parseUnits("10000", 6),
           2,
@@ -159,7 +150,7 @@ describe("aave_v3", () => {
       ).toBeAllowed()
 
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.borrow(
+        kit.asMember.aaveV3.lendingPoolV3.borrow(
           contracts.mainnet.usdc,
           parseUnits("10000", 6),
           2,
@@ -178,13 +169,13 @@ describe("aave_v3", () => {
 
       await expect(
         kit.asMember.usdc.approve(
-          contracts.mainnet.aaveV3.aaveLendingPoolV3,
+          contracts.mainnet.aaveV3.lendingPoolV3,
           parseUnits("10000", 6)
         )
       ).toBeAllowed()
 
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.repay(
+        kit.asMember.aaveV3.lendingPoolV3.repay(
           contracts.mainnet.usdc,
           parseUnits("10000", 6),
           2,
@@ -193,22 +184,13 @@ describe("aave_v3", () => {
       ).toBeAllowed()
 
       await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.repay(
+        kit.asMember.aaveV3.lendingPoolV3.repay(
           contracts.mainnet.usdc,
           parseUnits("10000", 6),
           2,
           member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
-    })
-
-    it("allows swapping the USDC borrow rate mode", async () => {
-      await expect(
-        kit.asMember.aaveV3.aaveLendingPoolV3.swapBorrowRateMode(
-          contracts.mainnet.usdc,
-          1
-        )
-      ).toRevert()
     })
   })
 })

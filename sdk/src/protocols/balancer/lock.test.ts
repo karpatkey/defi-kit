@@ -59,7 +59,7 @@ describe("balancer", () => {
       await expect(
         kit.asMember.usdc
           .attach(B_80BAL_20WETH)
-          .approve(contracts.mainnet.balancer.vebal, parseEther("200"))
+          .approve(contracts.mainnet.balancer.veBal, parseEther("200"))
       ).not.toRevert()
 
       // The create_lock() reverts because it checks if the call
@@ -67,7 +67,7 @@ describe("balancer", () => {
       // To check if the the smart contract is whitelisted you can query
       // the check() in https://etherscan.io/address/0x7869296Efd0a76872fEE62A058C8fBca5c1c826C
       await expect(
-        kit.asMember.balancer.vebal.create_lock(
+        kit.asMember.balancer.veBal.create_lock(
           parseEther("100"),
           unlock_timestamp
         )
@@ -75,7 +75,7 @@ describe("balancer", () => {
 
       // Test that the transaction goes through the roles
       await expect(
-        kit.asMember.balancer.vebal.create_lock(
+        kit.asMember.balancer.veBal.create_lock(
           parseEther("100"),
           unlock_timestamp
         )
@@ -83,21 +83,21 @@ describe("balancer", () => {
 
       // Test that the transaction goes through the roles
       await expect(
-        kit.asMember.balancer.vebal.increase_amount(parseEther("200"))
+        kit.asMember.balancer.veBal.increase_amount(parseEther("200"))
       ).toBeAllowed()
 
       unlock_timestamp = unlock_timestamp + 30 * 24 * 60 * 60
       // Test that the transaction goes through the roles
       await expect(
-        kit.asMember.balancer.vebal.increase_unlock_time(unlock_timestamp)
+        kit.asMember.balancer.veBal.increase_unlock_time(unlock_timestamp)
       ).toBeAllowed()
 
       // Test that the transaction goes through the roles
-      await expect(kit.asMember.balancer.vebal.withdraw()).toBeAllowed()
+      await expect(kit.asMember.balancer.veBal.withdraw()).toBeAllowed()
 
       // Claim only with avatar as user
       await expect(
-        kit.asMember.balancer.fee_distributor.claimTokens(avatar.address, [
+        kit.asMember.balancer.feeDistributor.claimTokens(avatar.address, [
           bb_a_USD_v1,
           bb_a_USD_v2,
           bb_a_USD_v3,
@@ -107,7 +107,7 @@ describe("balancer", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.balancer.fee_distributor.claimTokens(member.address, [
+        kit.asMember.balancer.feeDistributor.claimTokens(member.address, [
           bb_a_USD_v1,
           bb_a_USD_v2,
           bb_a_USD_v3,

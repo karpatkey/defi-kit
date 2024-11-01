@@ -17,11 +17,11 @@ export const deposit = ({
     ...allowErc20Approve([ilk.address], [proxy]),
     // lockGem
     {
-      ...allow.mainnet.maker.DsProxy["execute(address,bytes)"](
-        contracts.mainnet.maker.ProxyActions,
+      ...allow.mainnet.maker.dsProxy["execute(address,bytes)"](
+        contracts.mainnet.maker.proxyActions,
         c.calldataMatches(
-          allow.mainnet.maker.ProxyActions.lockGem(
-            contracts.mainnet.maker.CdpManager,
+          allow.mainnet.maker.proxyActions.lockGem(
+            contracts.mainnet.maker.cdpManager,
             ilk.gemJoin,
             cdp
           )
@@ -32,11 +32,11 @@ export const deposit = ({
     },
     // freeGem
     {
-      ...allow.mainnet.maker.DsProxy["execute(address,bytes)"](
-        contracts.mainnet.maker.ProxyActions,
+      ...allow.mainnet.maker.dsProxy["execute(address,bytes)"](
+        contracts.mainnet.maker.proxyActions,
         c.calldataMatches(
-          allow.mainnet.maker.ProxyActions.freeGem(
-            contracts.mainnet.maker.CdpManager,
+          allow.mainnet.maker.proxyActions.freeGem(
+            contracts.mainnet.maker.cdpManager,
             ilk.gemJoin,
             cdp
           )
@@ -52,11 +52,11 @@ export const deposit = ({
     permissions.push(
       // lockETH
       {
-        ...allow.mainnet.maker.DsProxy["execute(address,bytes)"](
-          contracts.mainnet.maker.ProxyActions,
+        ...allow.mainnet.maker.dsProxy["execute(address,bytes)"](
+          contracts.mainnet.maker.proxyActions,
           c.calldataMatches(
-            allow.mainnet.maker.ProxyActions.lockETH(
-              contracts.mainnet.maker.CdpManager,
+            allow.mainnet.maker.proxyActions.lockETH(
+              contracts.mainnet.maker.cdpManager,
               ilk.gemJoin,
               cdp
             )
@@ -67,11 +67,11 @@ export const deposit = ({
       },
       // freeETH
       {
-        ...allow.mainnet.maker.DsProxy["execute(address,bytes)"](
-          contracts.mainnet.maker.ProxyActions,
+        ...allow.mainnet.maker.dsProxy["execute(address,bytes)"](
+          contracts.mainnet.maker.proxyActions,
           c.calldataMatches(
-            allow.mainnet.maker.ProxyActions.freeETH(
-              contracts.mainnet.maker.CdpManager,
+            allow.mainnet.maker.proxyActions.freeETH(
+              contracts.mainnet.maker.cdpManager,
               ilk.gemJoin,
               cdp
             )
@@ -96,13 +96,13 @@ export const borrow = ({
   return [
     // Draw
     {
-      ...allow.mainnet.maker.DsProxy["execute(address,bytes)"](
-        contracts.mainnet.maker.ProxyActions,
+      ...allow.mainnet.maker.dsProxy["execute(address,bytes)"](
+        contracts.mainnet.maker.proxyActions,
         c.calldataMatches(
-          allow.mainnet.maker.ProxyActions.draw(
-            contracts.mainnet.maker.CdpManager,
-            contracts.mainnet.maker.Jug,
-            contracts.mainnet.maker.DaiJoin,
+          allow.mainnet.maker.proxyActions.draw(
+            contracts.mainnet.maker.cdpManager,
+            contracts.mainnet.maker.jug,
+            contracts.mainnet.maker.daiJoin,
             cdp
           )
         )
@@ -112,12 +112,12 @@ export const borrow = ({
     },
     // Wipe
     {
-      ...allow.mainnet.maker.DsProxy["execute(address,bytes)"](
-        contracts.mainnet.maker.ProxyActions,
+      ...allow.mainnet.maker.dsProxy["execute(address,bytes)"](
+        contracts.mainnet.maker.proxyActions,
         c.calldataMatches(
-          allow.mainnet.maker.ProxyActions.wipe(
-            contracts.mainnet.maker.CdpManager,
-            contracts.mainnet.maker.DaiJoin,
+          allow.mainnet.maker.proxyActions.wipe(
+            contracts.mainnet.maker.cdpManager,
+            contracts.mainnet.maker.daiJoin,
             cdp
           )
         )

@@ -9,11 +9,11 @@ import * as convex from "./convex"
 import * as cowswap from "./cowswap"
 import * as lido from "./lido"
 import * as maker from "./maker"
-import * as rocket_pool from "./rocket_pool"
+import * as rocketPool from "./rocketPool"
 import * as spark from "./spark"
 import * as stader from "./stader"
-import * as stakewise_v2 from "./stakewise/v2"
-import * as uniswap_v3 from "./uniswap/v3"
+import * as stakeWiseV2 from "./stakeWise/v2"
+import * as uniswapV3 from "./uniswap/v3"
 
 import { annotateAll } from "./annotate"
 
@@ -32,11 +32,11 @@ export const eth = annotateAll(
     cowswap: cowswap.eth,
     lido: lido.eth,
     maker: maker.eth,
-    rocket_pool: rocket_pool.eth,
+    rocketPool: rocketPool.eth,
     spark: spark.eth,
     stader: stader.eth,
-    stakewise_v2: stakewise_v2.eth,
-    uniswap_v3: uniswap_v3.eth,
+    stakeWiseV2: stakeWiseV2.eth,
+    uniswapV3: uniswapV3.eth,
   },
   "eth"
 )

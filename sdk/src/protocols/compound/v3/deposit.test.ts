@@ -22,12 +22,12 @@ describe.skip("compound_v3", () => {
       )
       await expect(
         kit.asMember.usdc.approve(
-          contracts.mainnet.compoundV3.cUSDCv3,
+          contracts.mainnet.compoundV3.cUsdcV3,
           parseUnits("10000", 6)
         )
       ).not.toRevert()
       await expect(
-        kit.asMember.compoundV3.cUSDCv3.supply(
+        kit.asMember.compoundV3.cUsdcV3.supply(
           contracts.mainnet.usdc,
           parseUnits("10000", 6)
         )

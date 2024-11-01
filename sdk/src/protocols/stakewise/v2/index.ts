@@ -37,7 +37,7 @@ export const eth = {
     )
     const permissions = univ3Permissions.flat()
     permissions.push(
-      allow.mainnet.stakewise_v2.merkle_distributor.claim(undefined, c.avatar)
+      allow.mainnet.stakeWiseV2.merkleDistributor.claim(undefined, c.avatar)
     )
 
     return permissions

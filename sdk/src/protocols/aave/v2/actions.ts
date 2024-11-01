@@ -10,7 +10,7 @@ export const depositToken = (token: Token) => {
   if (token.symbol === "WETH") {
     permissions.push(
       ...allowErc20Approve(
-        [contracts.mainnet.aaveV2.aWETH],
+        [contracts.mainnet.aaveV2.aWeth],
         [contracts.mainnet.aaveV2.wrappedTokenGatewayV2]
       )
     )
@@ -18,23 +18,23 @@ export const depositToken = (token: Token) => {
     permissions.push(
       ...allowErc20Approve(
         [token.token],
-        [contracts.mainnet.aaveV2.aaveLendingPoolV2]
+        [contracts.mainnet.aaveV2.lendingPoolV2]
       )
     )
   }
 
   permissions.push(
-    allow.mainnet.aaveV2.aaveLendingPoolV2.deposit(
+    allow.mainnet.aaveV2.lendingPoolV2.deposit(
       token.token,
       undefined,
       c.avatar
     ),
-    allow.mainnet.aaveV2.aaveLendingPoolV2.withdraw(
+    allow.mainnet.aaveV2.lendingPoolV2.withdraw(
       token.token,
       undefined,
       c.avatar
     ),
-    allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
+    allow.mainnet.aaveV2.lendingPoolV2.setUserUseReserveAsCollateral(
       token.token
     )
   )
@@ -44,21 +44,21 @@ export const depositToken = (token: Token) => {
 
 export const depositEther = () => [
   allow.mainnet.aaveV2.wrappedTokenGatewayV2.depositETH(
-    contracts.mainnet.aaveV2.aaveLendingPoolV2,
+    contracts.mainnet.aaveV2.lendingPoolV2,
     c.avatar,
     undefined,
     { send: true }
   ),
   ...allowErc20Approve(
-    [contracts.mainnet.aaveV2.aWETH],
+    [contracts.mainnet.aaveV2.aWeth],
     [contracts.mainnet.aaveV2.wrappedTokenGatewayV2]
   ),
   allow.mainnet.aaveV2.wrappedTokenGatewayV2.withdrawETH(
-    contracts.mainnet.aaveV2.aaveLendingPoolV2,
+    contracts.mainnet.aaveV2.lendingPoolV2,
     undefined,
     c.avatar
   ),
-  allow.mainnet.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
+  allow.mainnet.aaveV2.lendingPoolV2.setUserUseReserveAsCollateral(
     contracts.mainnet.weth
   ),
 ]
@@ -67,44 +67,44 @@ export const borrowToken = (token: Token) => {
   return [
     ...allowErc20Approve(
       [token.token],
-      [contracts.mainnet.aaveV2.aaveLendingPoolV2]
+      [contracts.mainnet.aaveV2.lendingPoolV2]
     ),
-    allow.mainnet.aaveV2.aaveLendingPoolV2.borrow(
+    allow.mainnet.aaveV2.lendingPoolV2.borrow(
       token.token,
       undefined,
       undefined,
       undefined,
       c.avatar
     ),
-    allow.mainnet.aaveV2.aaveLendingPoolV2.repay(
+    allow.mainnet.aaveV2.lendingPoolV2.repay(
       token.token,
       undefined,
       undefined,
       c.avatar
     ),
-    allow.mainnet.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(token.token),
+    allow.mainnet.aaveV2.lendingPoolV2.swapBorrowRateMode(token.token),
   ]
 }
 
 export const borrowEther = () => {
   return [
-    allow.mainnet.aaveV2.variableDebtWETH.approveDelegation(
+    allow.mainnet.aaveV2.variableDebtWeth.approveDelegation(
       contracts.mainnet.aaveV2.wrappedTokenGatewayV2
     ),
-    allow.mainnet.aaveV2.stableDebtWETH.approveDelegation(
+    allow.mainnet.aaveV2.stableDebtWeth.approveDelegation(
       contracts.mainnet.aaveV2.wrappedTokenGatewayV2
     ),
     allow.mainnet.aaveV2.wrappedTokenGatewayV2.borrowETH(
-      contracts.mainnet.aaveV2.aaveLendingPoolV2
+      contracts.mainnet.aaveV2.lendingPoolV2
     ),
     allow.mainnet.aaveV2.wrappedTokenGatewayV2.repayETH(
-      contracts.mainnet.aaveV2.aaveLendingPoolV2,
+      contracts.mainnet.aaveV2.lendingPoolV2,
       undefined,
       undefined,
       c.avatar,
       { send: true }
     ),
-    allow.mainnet.aaveV2.aaveLendingPoolV2.swapBorrowRateMode(
+    allow.mainnet.aaveV2.lendingPoolV2.swapBorrowRateMode(
       contracts.mainnet.weth
     ),
   ]
@@ -118,37 +118,37 @@ export const stake = (token: StakeToken): Permission[] => {
       permissions.push(
         ...allowErc20Approve(
           [contracts.mainnet.aaveV2.aave],
-          [contracts.mainnet.aaveV2.stkaave]
+          [contracts.mainnet.aaveV2.stkAave]
         ),
-        allow.mainnet.aaveV2.stkaave.stake(c.avatar),
-        allow.mainnet.aaveV2.stkaave.claimRewardsAndStake(c.avatar),
-        allow.mainnet.aaveV2.stkaave.redeem(c.avatar),
-        allow.mainnet.aaveV2.stkaave.cooldown(),
-        allow.mainnet.aaveV2.stkaave.claimRewards(c.avatar)
+        allow.mainnet.aaveV2.stkAave.stake(c.avatar),
+        allow.mainnet.aaveV2.stkAave.claimRewardsAndStake(c.avatar),
+        allow.mainnet.aaveV2.stkAave.redeem(c.avatar),
+        allow.mainnet.aaveV2.stkAave.cooldown(),
+        allow.mainnet.aaveV2.stkAave.claimRewards(c.avatar)
       )
       break
     case "ABPTV2":
       permissions.push(
         ...allowErc20Approve(
           [contracts.mainnet.aaveV2.abptV2],
-          [contracts.mainnet.aaveV2.stkabptV2]
+          [contracts.mainnet.aaveV2.stkAbptV2]
         ),
-        allow.mainnet.aaveV2.stkabptV2.stake(c.avatar),
-        allow.mainnet.aaveV2.stkabptV2.redeem(c.avatar),
-        allow.mainnet.aaveV2.stkabptV2.cooldown(),
-        allow.mainnet.aaveV2.stkabptV2.claimRewards(c.avatar)
+        allow.mainnet.aaveV2.stkAbptV2.stake(c.avatar),
+        allow.mainnet.aaveV2.stkAbptV2.redeem(c.avatar),
+        allow.mainnet.aaveV2.stkAbptV2.cooldown(),
+        allow.mainnet.aaveV2.stkAbptV2.claimRewards(c.avatar)
       )
       break
     case "GHO":
       permissions.push(
         ...allowErc20Approve(
           [contracts.mainnet.aaveV2.gho],
-          [contracts.mainnet.aaveV2.stkgho]
+          [contracts.mainnet.aaveV2.stkGho]
         ),
-        allow.mainnet.aaveV2.stkgho.stake(c.avatar),
-        allow.mainnet.aaveV2.stkgho.redeem(c.avatar),
-        allow.mainnet.aaveV2.stkgho.cooldown(),
-        allow.mainnet.aaveV2.stkgho.claimRewards(c.avatar)
+        allow.mainnet.aaveV2.stkGho.stake(c.avatar),
+        allow.mainnet.aaveV2.stkGho.redeem(c.avatar),
+        allow.mainnet.aaveV2.stkGho.cooldown(),
+        allow.mainnet.aaveV2.stkGho.claimRewards(c.avatar)
       )
       break
   }
@@ -168,14 +168,14 @@ export const delegate = (token: DelegateToken, delegatee: string) => {
       break
     case "stkAAVE":
       permissions.push(
-        allow.mainnet.aaveV2.stkaave.delegate(delegatee),
-        allow.mainnet.aaveV2.stkaave.delegateByType(delegatee)
+        allow.mainnet.aaveV2.stkAave.delegate(delegatee),
+        allow.mainnet.aaveV2.stkAave.delegateByType(delegatee)
       )
       break
     case "aEthAAVE":
       permissions.push(
-        allow.mainnet.aaveV2.aEthAAVE.delegate(delegatee),
-        allow.mainnet.aaveV2.aEthAAVE.delegateByType(delegatee)
+        allow.mainnet.aaveV2.aEthAave.delegate(delegatee),
+        allow.mainnet.aaveV2.aEthAave.delegateByType(delegatee)
       )
       break
   }

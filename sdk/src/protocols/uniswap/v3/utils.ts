@@ -27,7 +27,7 @@ export const findToken = (
 
 export const queryTokens = async (nftIds: bigint[]) => {
   const positions = await Promise.all(
-    nftIds.map((nftId) => sdk.uniswap_v3.positions_nft.positions(nftId))
+    nftIds.map((nftId) => sdk.uniswapV3.positionsNft.positions(nftId))
   )
   const result = new Set<`0x${string}`>()
   for (const position of positions) {

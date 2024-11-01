@@ -185,7 +185,7 @@ export const stake = (chain: Chain, pool: Pool) => {
 export const lock = (): Permission[] => {
   return [
     ...allowErc20Approve([BAL, WETH], [contracts.mainnet.balancer.vault]),
-    ...allowErc20Approve([B_80BAL_20WETH], [contracts.mainnet.balancer.vebal]),
+    ...allowErc20Approve([B_80BAL_20WETH], [contracts.mainnet.balancer.veBal]),
     allow.mainnet.balancer.vault.joinPool(
       B_80BAL_20WETH_PID,
       c.avatar,
@@ -201,12 +201,12 @@ export const lock = (): Permission[] => {
     // As Safes are smart contracts they are not allowed to lock veBAL
     // if the they are not whitelisted previously by Balancer:
     // https://forum.balancer.fi/t/allow-for-gnosis-safe-to-be-used-for-vebal-locking/2698
-    allow.mainnet.balancer.vebal.create_lock(),
-    allow.mainnet.balancer.vebal.increase_amount(),
-    allow.mainnet.balancer.vebal.increase_unlock_time(),
-    allow.mainnet.balancer.vebal.withdraw(),
-    allow.mainnet.balancer.fee_distributor.claimToken(c.avatar),
-    allow.mainnet.balancer.fee_distributor.claimTokens(c.avatar),
+    allow.mainnet.balancer.veBal.create_lock(),
+    allow.mainnet.balancer.veBal.increase_amount(),
+    allow.mainnet.balancer.veBal.increase_unlock_time(),
+    allow.mainnet.balancer.veBal.withdraw(),
+    allow.mainnet.balancer.feeDistributor.claimToken(c.avatar),
+    allow.mainnet.balancer.feeDistributor.claimTokens(c.avatar),
   ]
 }
 
