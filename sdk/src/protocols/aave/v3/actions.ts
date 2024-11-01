@@ -1,5 +1,8 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { Permission, c } from "zodiac-roles-sdk"
+import ethTokens from "./_ethInfo"
+import gnoTokens from "./_gnoInfo"
+import arb1Tokens from "./_arb1Info"
 import { Token } from "./types"
 import { allowErc20Approve } from "../../../conditions"
 import { contracts, contractAddressOverrides } from "../../../../eth-sdk/config"
@@ -52,6 +55,35 @@ export const _getAllAddresses = (chain: Chain) => {
   }
 }
 
+// Function to get the 2-byte hexadecimal representation of the assetId
+const _getAssetId = (chain: Chain, token: Token): string => {
+  // Select the appropriate token list based on the chain
+  let tokens
+  switch (chain) {
+    case Chain.eth:
+      tokens = ethTokens
+      break
+    case Chain.gno:
+      tokens = gnoTokens
+      break
+    case Chain.arb1:
+      tokens = arb1Tokens
+      break
+    default:
+      throw new Error(`Unsupported chain: ${chain}`)
+  }
+
+  // Find the index of the token in the list
+  const index = tokens.findIndex((t) => t.token === token.token)
+  if (index === -1) {
+    throw new Error(`Token not found in the ${chain} token list.`)
+  }
+
+  // Convert the index to a 2-byte hexadecimal string, padded with leading zeros
+  const hexIndex = index.toString(16).padStart(4, "0")
+  return `0x${hexIndex}`
+}
+
 export const depositToken = (chain: Chain, token: Token) => {
   const { aaveLendingPoolV3 } = _getAllAddresses(chain)
 
@@ -80,8 +112,18 @@ export const depositToken = (chain: Chain, token: Token) => {
   ]
 
   if (chain === Chain.arb1) {
+    const assetId = _getAssetId(chain, token)
+
     permissions.push({
-      ...allow.mainnet.aaveV3.aaveLendingPoolV3["withdraw(bytes32)"](),
+      ...allow.mainnet.aaveV3.aaveLendingPoolV3["withdraw(bytes32)"](
+        // Skip amount 30 bytes
+        // Set assetId
+        c.bitmask({
+          shift: 30,
+          mask: "0xffff",
+          value: assetId,
+        })
+      ),
       targetAddress: aaveLendingPoolV3,
     })
   }
