@@ -2,7 +2,7 @@ import { allow } from "zodiac-roles-sdk/kit"
 import { c, Permission } from "zodiac-roles-sdk"
 import { Token } from "./types"
 import { allowErc20Approve } from "../../conditions"
-import { contracts, contractAddressOverrides } from "../../../eth-sdk/config"
+import { contracts } from "../../../eth-sdk/config"
 import { Chain } from "../../types"
 
 export const _getAllAddresses = (chain: Chain) => {
@@ -25,17 +25,15 @@ export const _getAllAddresses = (chain: Chain) => {
 
     case Chain.gno:
       return {
-        spNativeToken: contractAddressOverrides.gnosis.spark
-          .spWXDAI as `0x${string}`,
-        wrappedTokenGatewayV3: contractAddressOverrides.gnosis.spark
+        spNativeToken: contracts.gnosis.spark.spWXDAI as `0x${string}`,
+        wrappedTokenGatewayV3: contracts.gnosis.spark
           .wrappedTokenGatewayV3 as `0x${string}`,
-        sparkLendingPoolV3: contractAddressOverrides.gnosis.spark
+        sparkLendingPoolV3: contracts.gnosis.spark
           .sparkLendingPoolV3 as `0x${string}`,
-        wrappedNativeToken: contractAddressOverrides.gnosis
-          .wxdai as `0x${string}`,
-        variableDebtWrappedNativeToken: contractAddressOverrides.gnosis.spark
+        wrappedNativeToken: contracts.gnosis.wxdai as `0x${string}`,
+        variableDebtWrappedNativeToken: contracts.gnosis.spark
           .variableDebtWXDAI as `0x${string}`,
-        RewardsController: contractAddressOverrides.gnosis.spark
+        RewardsController: contracts.gnosis.spark
           .RewardsController as `0x${string}`,
       }
 
@@ -61,7 +59,7 @@ export const depositDsr = (chain: Chain): Permission[] => {
     case Chain.gno:
       return [
         ...allowErc20Approve(
-          [contractAddressOverrides.gnosis.spark.sDAI],
+          [contracts.gnosis.spark.sDAI],
           [contracts.gnosis.spark.SavingsXDaiAdapter]
         ),
         // Using XDAI
@@ -71,7 +69,7 @@ export const depositDsr = (chain: Chain): Permission[] => {
         allow.gnosis.spark.SavingsXDaiAdapter.redeemXDAI(undefined, c.avatar),
         // Using WXDAI
         ...allowErc20Approve(
-          [contractAddressOverrides.gnosis.wxdai],
+          [contracts.gnosis.wxdai],
           [contracts.gnosis.spark.SavingsXDaiAdapter]
         ),
         allow.gnosis.spark.SavingsXDaiAdapter.deposit(undefined, c.avatar),

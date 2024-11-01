@@ -2,7 +2,7 @@ import { Permission, c } from "zodiac-roles-sdk"
 import { allow } from "zodiac-roles-sdk/kit"
 import { allowErc20Approve } from "../../conditions"
 import { Pool, Token } from "./types"
-import { contracts, contractAddressOverrides } from "../../../eth-sdk/config"
+import { contracts } from "../../../eth-sdk/config"
 import { Chain } from "../../types"
 
 export const BAL = "0xba100000625a3754423978a60c9317c58a424e3D"
@@ -122,16 +122,13 @@ export const stake = (chain: Chain, pool: Pool) => {
       break
 
     case Chain.gno:
-      minter = contractAddressOverrides.gnosis.balancer.minter as `0x${string}`
-      relayer = contractAddressOverrides.gnosis.balancer
-        .relayer as `0x${string}`
+      minter = contracts.gnosis.balancer.minter as `0x${string}`
+      relayer = contracts.gnosis.balancer.relayer as `0x${string}`
       break
 
     case Chain.arb1:
-      minter = contractAddressOverrides.arbitrumOne.balancer
-        .minter as `0x${string}`
-      relayer = contractAddressOverrides.arbitrumOne.balancer
-        .relayer as `0x${string}`
+      minter = contracts.arbitrumOne.balancer.minter as `0x${string}`
+      relayer = contracts.arbitrumOne.balancer.relayer as `0x${string}`
       break
   }
 

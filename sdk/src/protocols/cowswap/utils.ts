@@ -1,4 +1,4 @@
-import { contractAddressOverrides, contracts } from "../../../eth-sdk/config"
+import { contracts } from "../../../eth-sdk/config"
 import { Chain } from "../../types"
 
 export const getWrappedNativeToken = (chain: Chain): `0x${string}` => {
@@ -6,9 +6,9 @@ export const getWrappedNativeToken = (chain: Chain): `0x${string}` => {
     case Chain.eth:
       return contracts.mainnet.weth
     case Chain.gno:
-      return contractAddressOverrides.gnosis.wxdai
+      return contracts.gnosis.wxdai
     case Chain.arb1:
-      return contractAddressOverrides.arbitrumOne.weth
+      return contracts.arbitrumOne.weth
     default:
       throw new Error("No chainId found")
   }

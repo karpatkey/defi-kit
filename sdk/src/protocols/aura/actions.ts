@@ -2,7 +2,7 @@ import { allow } from "zodiac-roles-sdk/kit"
 import { Permission, c } from "zodiac-roles-sdk"
 import { Pool, StakeToken, Token } from "./types"
 import { allowErc20Approve } from "../../conditions"
-import { contracts, contractAddressOverrides } from "../../../eth-sdk/config"
+import { contracts } from "../../../eth-sdk/config"
 import balancerEthPools from "../balancer/_ethPools"
 import balancerGnoPools from "../balancer/_gnoPools"
 import { findPool as findBalancerPool } from "../balancer/index"
@@ -33,8 +33,8 @@ export const deposit = (
       break
 
     case Chain.gno:
-      booster = contractAddressOverrides.gnosis.aura.booster as `0x${string}`
-      reward_pool_deposit_wrapper = contractAddressOverrides.gnosis.aura
+      booster = contracts.gnosis.aura.booster as `0x${string}`
+      reward_pool_deposit_wrapper = contracts.gnosis.aura
         .reward_pool_deposit_wrapper as `0x${string}`
       balancer_pools = balancerGnoPools
 
