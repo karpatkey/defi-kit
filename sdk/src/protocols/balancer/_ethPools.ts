@@ -21,6 +21,25 @@ export default [
     ],
   },
   {
+    bpt: "0x0297e37f1873D2DAb4487Aa67cD56B58E2F27875",
+    id: "0x0297e37f1873d2dab4487aa67cd56b58e2f27875000200000000000000000003",
+    name: "B-50WBTC-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        symbol: "WBTC",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x02CA8086498552C071451724D3A34cAA3922b65a",
     id: "0x02ca8086498552c071451724d3a34caa3922b65a000200000000000000000613",
     name: "80ROOT-20WETH",
@@ -594,6 +613,25 @@ export default [
       {
         address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
         symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x2238aB6c8c58473a5e81b86ec352322fB3f5Edd8",
+    id: "0x2238ab6c8c58473a5e81b86ec352322fb3f5edd80000000000000000000006de",
+    name: "pumpBTC/wBTC",
+    type: "ComposableStable",
+    gauge: "0xDFaD195F91e1591ae8Eb4c1c7183185CeF58864D",
+    tokens: [
+      {
+        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        symbol: "WBTC",
+        id: "0x",
+      },
+      {
+        address: "0xF469fBD2abcd6B9de8E169d128226C0Fc90a012e",
+        symbol: "pumpBTC",
         id: "0x",
       },
     ],
@@ -1265,25 +1303,6 @@ export default [
     ],
   },
   {
-    bpt: "0x47E1Cf97A0586367349A14306A65F54Ba0b8f1B6",
-    id: "0x47e1cf97a0586367349a14306a65f54ba0b8f1b60002000000000000000005cd",
-    name: "20WETH-80ALTR",
-    type: "Weighted",
-    gauge: "0xeE707Ae5500DD9072aC0daB1170DD16d9AddD68F",
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xD1ffCacFc630CE68d3cd3369F5db829a3ed01fE2",
-        symbol: "ALTR",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x487f94d114E41aF8D533a31AbC8A49E24D3FA38D",
     id: "0x487f94d114e41af8d533a31abc8a49e24d3fa38d0002000000000000000006c2",
     name: "50st-yETH-50WETH",
@@ -1927,6 +1946,25 @@ export default [
     ],
   },
   {
+    bpt: "0x6a2E09758cAc6C81ea64B5A600067A4f122823db",
+    id: "0x6a2e09758cac6c81ea64b5a600067a4f122823db0002000000000000000006a3",
+    name: "99WHALE-1WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x10456F0788Bfba7405C89451bE257b11b490975E",
+        symbol: "WHALE",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x6AA5a6b9257CA6e18b2da94e1a5FbE57ce2947cA",
     id: "0x6aa5a6b9257ca6e18b2da94e1a5fbe57ce2947ca00000000000000000000067b",
     name: "genETH/wstETH",
@@ -2360,6 +2398,25 @@ export default [
     ],
   },
   {
+    bpt: "0x8405DC5Ed3789fDBEc5A7f9366b977cB0B023F9f",
+    id: "0x8405dc5ed3789fdbec5a7f9366b977cb0b023f9f0002000000000000000002b7",
+    name: "20USDC-80FLOAT",
+    type: "Weighted",
+    gauge: "0x9D5d7CF33758f92Fb0F79B7b4A90EFF37ba7f505",
+    tokens: [
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+        id: "0x",
+      },
+      {
+        address: "0xb05097849BCA421A3f51B249BA6CCa4aF4b97cb9",
+        symbol: "FLOAT",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x844Ba71D4902Ed3dE091112951b9c4B4D25A09DD",
     id: "0x844ba71d4902ed3de091112951b9c4b4d25a09dd00020000000000000000014b",
     name: "Balancer 90 EEFI 10 WETH",
@@ -2612,6 +2669,25 @@ export default [
       {
         address: "0xBA485b556399123261a5F9c95d413B4f93107407",
         symbol: "graviAURA",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x8F34d5389d6d36082812644dD2F9fB80c51BEeae",
+    id: "0x8f34d5389d6d36082812644dd2f9fb80c51beeae0000000000000000000006e2",
+    name: "st-yETH/ETH",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x583019fF0f430721aDa9cfb4fac8F06cA104d0B4",
+        symbol: "st-yETH",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
         id: "0x",
       },
     ],
