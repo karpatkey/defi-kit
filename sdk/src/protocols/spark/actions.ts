@@ -12,8 +12,7 @@ export const _getAllAddresses = (chain: Chain) => {
         spNativeToken: contracts.mainnet.spark.spWeth as `0x${string}`,
         wrappedTokenGatewayV3: contracts.mainnet.spark
           .wrappedTokenGatewayV3 as `0x${string}`,
-        lendingPoolV3: contracts.mainnet.spark
-          .lendingPoolV3 as `0x${string}`,
+        lendingPoolV3: contracts.mainnet.spark.lendingPoolV3 as `0x${string}`,
         wrappedNativeToken: contracts.mainnet.weth as `0x${string}`,
         variableDebtWrappedNativeToken: contracts.mainnet.spark
           .variableDebtWeth as `0x${string}`,
@@ -28,8 +27,7 @@ export const _getAllAddresses = (chain: Chain) => {
         spNativeToken: contracts.gnosis.spark.spWxdai as `0x${string}`,
         wrappedTokenGatewayV3: contracts.gnosis.spark
           .wrappedTokenGatewayV3 as `0x${string}`,
-        lendingPoolV3: contracts.gnosis.spark
-          .lendingPoolV3 as `0x${string}`,
+        lendingPoolV3: contracts.gnosis.spark.lendingPoolV3 as `0x${string}`,
         wrappedNativeToken: contracts.gnosis.wxdai as `0x${string}`,
         variableDebtWrappedNativeToken: contracts.gnosis.spark
           .variableDebtWxdai as `0x${string}`,
@@ -259,9 +257,7 @@ export const borrowEther = (chain: Chain) => {
         ]
       : []),
     {
-      ...allow.mainnet.spark.wrappedTokenGatewayV3.borrowETH(
-        lendingPoolV3
-      ),
+      ...allow.mainnet.spark.wrappedTokenGatewayV3.borrowETH(lendingPoolV3),
       targetAddress: wrappedTokenGatewayV3,
     },
     {

@@ -23,10 +23,7 @@ describe("aura", () => {
       await expect(
         kit.asMember.usdc
           .attach(BAL)
-          .approve(
-            contracts.mainnet.aura.balDepositorWrapper,
-            parseEther("3")
-          )
+          .approve(contracts.mainnet.aura.balDepositorWrapper, parseEther("3"))
       ).not.toRevert()
 
       // mint
@@ -101,11 +98,7 @@ describe("aura", () => {
       await expect(
         kit.asMember.aura.b80Bal20WethDepositorWrapper[
           "deposit(uint256,bool,address)"
-        ](
-          parseEther("1"),
-          true,
-          contracts.mainnet.aura.auraBalStakingRewarder
-        )
+        ](parseEther("1"), true, contracts.mainnet.aura.auraBalStakingRewarder)
       ).not.toRevert()
       await expect(
         kit.asMember.aura.auraBalStakingRewarder["getReward()"]()

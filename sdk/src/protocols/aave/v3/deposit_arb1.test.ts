@@ -9,9 +9,7 @@ import { parseEther } from "ethers"
 describe("aave_v3", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await applyPermissions(
-        await arb1.deposit({ targets: ["ETH", "WETH"] })
-      )
+      await applyPermissions(await arb1.deposit({ targets: ["ETH", "WETH"] }))
     })
 
     // Test with ETH
@@ -90,7 +88,9 @@ describe("aave_v3", () => {
 
     it("allow withdrawing WETH", async () => {
       await expect(
-        kit.asMember.aaveV3.lendingPoolV3["withdraw(bytes32)"]("0x0000000000000000000000000000ffffffffffffffffffffffffffffffff0004")
+        kit.asMember.aaveV3.lendingPoolV3["withdraw(bytes32)"](
+          "0x0000000000000000000000000000ffffffffffffffffffffffffffffffff0004"
+        )
       ).toBeAllowed()
     })
   })

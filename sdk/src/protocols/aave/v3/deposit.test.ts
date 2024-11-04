@@ -119,11 +119,19 @@ describe("aave_v3", () => {
 
     it("only allows withdrawing WETH from avatars' position", async () => {
       await expect(
-        kit.asMember.aaveV3.lendingPoolV3.withdraw(contracts.mainnet.weth, parseEther("1"), avatar.address)
+        kit.asMember.aaveV3.lendingPoolV3.withdraw(
+          contracts.mainnet.weth,
+          parseEther("1"),
+          avatar.address
+        )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.lendingPoolV3.withdraw(contracts.mainnet.weth, parseEther("1"), member.address)
+        kit.asMember.aaveV3.lendingPoolV3.withdraw(
+          contracts.mainnet.weth,
+          parseEther("1"),
+          member.address
+        )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
@@ -162,11 +170,19 @@ describe("aave_v3", () => {
 
     it("only allows withdrawing USDC from avatars' position", async () => {
       await expect(
-        kit.asMember.aaveV3.lendingPoolV3.withdraw(contracts.mainnet.usdc, parseUnits("1000", 6), avatar.address)
+        kit.asMember.aaveV3.lendingPoolV3.withdraw(
+          contracts.mainnet.usdc,
+          parseUnits("1000", 6),
+          avatar.address
+        )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.lendingPoolV3.withdraw(contracts.mainnet.usdc, parseUnits("1000", 6), member.address)
+        kit.asMember.aaveV3.lendingPoolV3.withdraw(
+          contracts.mainnet.usdc,
+          parseUnits("1000", 6),
+          member.address
+        )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 

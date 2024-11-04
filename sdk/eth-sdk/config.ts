@@ -28,8 +28,7 @@ export const contracts = {
       aEthWeth: "0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8",
       variableDebtWeth: "0xeA51d7853EEFb32b6ee06b1C12E6dcCA88Be0fFE",
       lendingPoolLidoV3: "0x4e033931ad43597d96D6bcc25c280717730B58B1",
-      wrappedTokenGatewayLidoV3:
-        "0x0B8C700917a6991FEa7198dDFC80bc8962b5055D",
+      wrappedTokenGatewayLidoV3: "0x0B8C700917a6991FEa7198dDFC80bc8962b5055D",
       meritDistributor: "0x3Ef3D8bA38EBe18DB133cEc108f4D14CE00Dd9Ae",
     },
     acrossV2: {
@@ -52,8 +51,7 @@ export const contracts = {
       auraBalStakingRewarder: "0x00A7BA8Ae7bca0B10A32Ea1f8e2a1Da980c6CAd2",
       stkauraBal: "0xfAA2eD111B4F580fCb85C48E6DC6782Dc5FCD7a6",
       auraBalStaker: "0xa3fCaFCa8150636C3B736A16Cd73d49cC8A7E10E",
-      auraBalCompoundingRewarder:
-        "0xAc16927429c5c7Af63dD75BC9d8a58c63FfD0147",
+      auraBalCompoundingRewarder: "0xAc16927429c5c7Af63dD75BC9d8a58c63FfD0147",
       vlAura: "0x3Fa73f1E5d8A792C80F426fc8F84FBF7Ce9bBCAC",
       rewarder: "0x59D66C58E83A26d6a0E35114323f65c3945c89c1",
       claimZapV3: "0x5b2364fD757E262253423373E4D57C5c011Ad7F4",

@@ -15,8 +15,7 @@ export const _getAllAddresses = (chain: Chain) => {
         aNativeToken: contracts.mainnet.aaveV3.aEthWeth as `0x${string}`,
         wrappedTokenGatewayV3: contracts.mainnet.aaveV3
           .wrappedTokenGatewayV3 as `0x${string}`,
-        lendingPoolV3: contracts.mainnet.aaveV3
-          .lendingPoolV3 as `0x${string}`,
+        lendingPoolV3: contracts.mainnet.aaveV3.lendingPoolV3 as `0x${string}`,
         wrappedNativeToken: contracts.mainnet.weth as `0x${string}`,
         variableDebtWrappedNativeToken: contracts.mainnet.aaveV3
           .variableDebtWeth as `0x${string}`,
@@ -27,8 +26,7 @@ export const _getAllAddresses = (chain: Chain) => {
         aNativeToken: contracts.gnosis.aaveV3.aGnoWXDAI as `0x${string}`,
         wrappedTokenGatewayV3: contracts.gnosis.aaveV3
           .wrappedTokenGatewayV3 as `0x${string}`,
-        lendingPoolV3: contracts.gnosis.aaveV3
-          .lendingPoolV3 as `0x${string}`,
+        lendingPoolV3: contracts.gnosis.aaveV3.lendingPoolV3 as `0x${string}`,
         wrappedNativeToken: contracts.gnosis.wxdai as `0x${string}`,
         variableDebtWrappedNativeToken: contracts.gnosis.aaveV3
           .variableDebtWXDAI as `0x${string}`,
@@ -94,7 +92,11 @@ export const depositToken = (chain: Chain, token: Token) => {
       targetAddress: lendingPoolV3,
     },
     {
-      ...allow.mainnet.aaveV3.lendingPoolV3.withdraw(token.token, undefined, c.avatar),
+      ...allow.mainnet.aaveV3.lendingPoolV3.withdraw(
+        token.token,
+        undefined,
+        c.avatar
+      ),
       targetAddress: lendingPoolV3,
     },
     {
@@ -203,9 +205,7 @@ export const borrowEther = (chain: Chain) => {
       targetAddress: variableDebtWrappedNativeToken,
     },
     {
-      ...allow.mainnet.aaveV3.wrappedTokenGatewayV3.borrowETH(
-        lendingPoolV3
-      ),
+      ...allow.mainnet.aaveV3.wrappedTokenGatewayV3.borrowETH(lendingPoolV3),
       targetAddress: wrappedTokenGatewayV3,
     },
     {
