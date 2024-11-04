@@ -1,10 +1,10 @@
-import * as aave_v2 from "./aave/v2"
-import * as aave_v3 from "./aave/v3"
+import * as aaveV2 from "./aave/v2"
+import * as aaveV3 from "./aave/v3"
 import * as ankr from "./ankr"
 import * as aura from "./aura"
 import * as balancer from "./balancer"
-import * as compound_v2 from "./compound/v2"
-// import * as compound_v3 from "./compound/v3"
+import * as compoundV2 from "./compound/v2"
+// import * as compoundV3 from "./compound/v3"
 import * as convex from "./convex"
 import * as cowswap from "./cowswap"
 import * as lido from "./lido"
@@ -21,13 +21,13 @@ import { annotateAll } from "./annotate"
 
 export const eth = annotateAll(
   {
-    aave_v2: aave_v2.eth,
-    aave_v3: aave_v3.eth,
+    aaveV2: aaveV2.eth,
+    aaveV3: aaveV3.eth,
     ankr: ankr.eth,
     aura: aura.eth,
     balancer: balancer.eth,
-    compound_v2: compound_v2.eth,
-    // compound_v3: compound_v3.eth,
+    compoundV2: compoundV2.eth,
+    // compoundV3: compoundV3.eth,
     convex: convex.eth,
     cowswap: cowswap.eth,
     lido: lido.eth,
@@ -43,7 +43,7 @@ export const eth = annotateAll(
 
 export const gno = annotateAll(
   {
-    aave_v3: aave_v3.gno,
+    aaveV3: aaveV3.gno,
     aura: aura.gno,
     balancer: balancer.gno,
     cowswap: cowswap.gno,
@@ -54,6 +54,7 @@ export const gno = annotateAll(
 
 export const arb1 = annotateAll(
   {
+    aaveV3: aaveV3.arb1,
     cowswap: cowswap.arb1,
   },
   "arb1"
