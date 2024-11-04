@@ -3016,6 +3016,25 @@ export default [
     ],
   },
   {
+    bpt: "0xa34bD98E54411494C55F6b12626204350d2D447f",
+    id: "0xa34bd98e54411494c55f6b12626204350d2d447f0000000000000000000006dc",
+    name: "hETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0x60adB6A1D73b16F47EA3CCBa94f79cc95D2ba73B",
+    tokens: [
+      {
+        address: "0x270B7748CdF8243bFe68FaCE7230ef0fCE695389",
+        symbol: "hETH",
+        id: "0x",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xa3C500969accb3D8DF08CBa313C120818fE0ed9D",
     id: "0xa3c500969accb3d8df08cba313c120818fe0ed9d000200000000000000000471",
     name: "50SYN-50WETH",
