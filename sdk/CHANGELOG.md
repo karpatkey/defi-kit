@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/karpatkey/defi-kit/compare/v2.0.3...v2.1.0) (2024-11-04)
+
+
+### Features
+
+* Aave v3 extended to Arbitrum and Deployments updates / Refactoring / Allow using test kits for other chains ([#288](https://github.com/karpatkey/defi-kit/issues/288)) ([a6b5125](https://github.com/karpatkey/defi-kit/commit/a6b51259cdfdddaa5e9c83fa7794e81e74b52734))
+
 ## [2.0.3](https://github.com/karpatkey/defi-kit/compare/v2.0.2...v2.0.3) (2024-11-04)
 
 
