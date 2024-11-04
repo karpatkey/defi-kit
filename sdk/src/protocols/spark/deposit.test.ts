@@ -3,7 +3,7 @@ import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
-import kit from "../../../test/kit"
+import { eth as kit } from "../../../test/kit"
 import { formatUnits, parseEther, parseUnits } from "ethers"
 
 const MAX_AMOUNT =
@@ -21,7 +21,7 @@ describe("spark", () => {
     it("only allows depositing ETH on behalf of avatar", async () => {
       await expect(
         kit.asMember.spark.wrappedTokenGatewayV3.depositETH(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+          contracts.mainnet.spark.lendingPoolV3,
           avatar.address,
           0,
           { value: parseEther("1") }
@@ -30,7 +30,7 @@ describe("spark", () => {
 
       await expect(
         kit.asMember.spark.wrappedTokenGatewayV3.depositETH(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+          contracts.mainnet.spark.lendingPoolV3,
           member.address,
           0,
           { value: parseEther("1") }
@@ -40,7 +40,7 @@ describe("spark", () => {
 
     it("only allows withdrawing ETH from avatars' position", async () => {
       await expect(
-        kit.asMember.spark.spWETH.approve(
+        kit.asMember.spark.spWeth.approve(
           contracts.mainnet.spark.wrappedTokenGatewayV3,
           parseEther("1")
         )
@@ -48,7 +48,7 @@ describe("spark", () => {
 
       await expect(
         kit.asMember.spark.wrappedTokenGatewayV3.withdrawETH(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("1"),
           avatar.address
         )
@@ -56,7 +56,7 @@ describe("spark", () => {
 
       await expect(
         kit.asMember.spark.wrappedTokenGatewayV3.withdrawETH(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("1"),
           member.address
         )
@@ -65,20 +65,20 @@ describe("spark", () => {
 
     it("allow setting the deposited ETH as collateral", async () => {
       let reserve_config: Array<any> =
-        await kit.asAvatar.spark.data_provider.getReserveConfigurationData(
+        await kit.asAvatar.spark.dataProvider.getReserveConfigurationData(
           contracts.mainnet.weth
         )
       const collateralizable: boolean = reserve_config[5]
       if (collateralizable) {
         await expect(
-          kit.asMember.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
+          kit.asMember.spark.lendingPoolV3.setUserUseReserveAsCollateral(
             contracts.mainnet.weth,
             true
           )
         ).not.toRevert()
       } else {
         await expect(
-          kit.asMember.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
+          kit.asMember.spark.lendingPoolV3.setUserUseReserveAsCollateral(
             contracts.mainnet.weth,
             true
           )
@@ -95,13 +95,13 @@ describe("spark", () => {
       )
       await expect(
         kit.asMember.weth.approve(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.spark.sparkLendingPoolV3.supply(
+        kit.asMember.spark.lendingPoolV3.supply(
           contracts.mainnet.weth,
           parseEther("1"),
           avatar.address,
@@ -110,7 +110,7 @@ describe("spark", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.spark.sparkLendingPoolV3.supply(
+        kit.asMember.spark.lendingPoolV3.supply(
           contracts.mainnet.weth,
           parseEther("1"),
           member.address,
@@ -121,7 +121,7 @@ describe("spark", () => {
 
     it("only allows withdrawing WETH from avatars' position", async () => {
       await expect(
-        kit.asMember.spark.sparkLendingPoolV3.withdraw(
+        kit.asMember.spark.lendingPoolV3.withdraw(
           contracts.mainnet.weth,
           parseEther("1"),
           avatar.address
@@ -129,7 +129,7 @@ describe("spark", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.spark.sparkLendingPoolV3.withdraw(
+        kit.asMember.spark.lendingPoolV3.withdraw(
           contracts.mainnet.weth,
           parseEther("1"),
           member.address
@@ -140,20 +140,20 @@ describe("spark", () => {
     // Claim rewards to avatar
     it("only claim rewards to avatar", async () => {
       await expect(
-        kit.asMember.spark.RewardsController.claimRewards(
-          [contracts.mainnet.spark.spWETH],
+        kit.asMember.spark.rewardsController.claimRewards(
+          [contracts.mainnet.spark.spWeth],
           MAX_AMOUNT,
           avatar.address,
-          contracts.mainnet.lido.wsteth
+          contracts.mainnet.lido.wstEth
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.spark.RewardsController.claimRewards(
-          [contracts.mainnet.spark.spWETH],
+        kit.asMember.spark.rewardsController.claimRewards(
+          [contracts.mainnet.spark.spWeth],
           MAX_AMOUNT,
           member.address,
-          contracts.mainnet.lido.wsteth
+          contracts.mainnet.lido.wstEth
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -167,13 +167,13 @@ describe("spark", () => {
       )
       await expect(
         kit.asMember.usdc.approve(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+          contracts.mainnet.spark.lendingPoolV3,
           parseUnits("1000", 6)
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.spark.sparkLendingPoolV3.supply(
+        kit.asMember.spark.lendingPoolV3.supply(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
           avatar.address,
@@ -182,7 +182,7 @@ describe("spark", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.spark.sparkLendingPoolV3.supply(
+        kit.asMember.spark.lendingPoolV3.supply(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
           member.address,
@@ -193,7 +193,7 @@ describe("spark", () => {
 
     it("only allows withdrawing USDC from avatars' position", async () => {
       await expect(
-        kit.asMember.spark.sparkLendingPoolV3.withdraw(
+        kit.asMember.spark.lendingPoolV3.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
           avatar.address
@@ -201,7 +201,7 @@ describe("spark", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.spark.sparkLendingPoolV3.withdraw(
+        kit.asMember.spark.lendingPoolV3.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
           member.address
@@ -211,20 +211,20 @@ describe("spark", () => {
 
     it("allow setting the deposited USDC as collateral", async () => {
       let reserve_config: Array<any> =
-        await kit.asAvatar.spark.data_provider.getReserveConfigurationData(
+        await kit.asAvatar.spark.dataProvider.getReserveConfigurationData(
           contracts.mainnet.usdc
         )
       const collateralizable: boolean = reserve_config[5]
       if (collateralizable) {
         await expect(
-          kit.asMember.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
+          kit.asMember.spark.lendingPoolV3.setUserUseReserveAsCollateral(
             contracts.mainnet.usdc,
             true
           )
         ).not.toRevert()
       } else {
         await expect(
-          kit.asMember.spark.sparkLendingPoolV3.setUserUseReserveAsCollateral(
+          kit.asMember.spark.lendingPoolV3.setUserUseReserveAsCollateral(
             contracts.mainnet.usdc,
             true
           )
@@ -240,19 +240,19 @@ describe("spark", () => {
       )
       await expect(
         kit.asMember.dai.approve(
-          contracts.mainnet.spark.sDAI,
+          contracts.mainnet.spark.sDai,
           parseEther("1000")
         )
       ).not.toRevert()
       await expect(
-        kit.asMember.spark.sDAI.deposit(parseEther("1000"), avatar.address)
+        kit.asMember.spark.sDai.deposit(parseEther("1000"), avatar.address)
       ).not.toRevert()
-      const sdai_balance_bn = await kit.asAvatar.spark.sDAI.balanceOf(
+      const sdai_balance_bn = await kit.asAvatar.spark.sDai.balanceOf(
         avatar.address
       )
       const sdai_balance = formatUnits(sdai_balance_bn, 18).toString()
       await expect(
-        kit.asMember.spark.sDAI.redeem(
+        kit.asMember.spark.sDai.redeem(
           parseEther(sdai_balance),
           avatar.address,
           avatar.address
@@ -260,10 +260,10 @@ describe("spark", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.spark.sDAI.deposit(parseEther("1000"), member.address)
+        kit.asMember.spark.sDai.deposit(parseEther("1000"), member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
       await expect(
-        kit.asMember.spark.sDAI.redeem(
+        kit.asMember.spark.sDai.redeem(
           parseEther("1000"),
           member.address,
           member.address

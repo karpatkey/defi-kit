@@ -1,7 +1,7 @@
 import { eth } from "."
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
-import kit from "../../../../test/kit"
+import { eth as kit } from "../../../../test/kit"
 import { parseUnits } from "ethers"
 
 // TODO we need to find a solution for handling the compundV3 bulker permissions
@@ -22,12 +22,12 @@ describe.skip("compound_v3", () => {
       )
       await expect(
         kit.asMember.usdc.approve(
-          contracts.mainnet.compoundV3.cUSDCv3,
+          contracts.mainnet.compoundV3.cUsdcV3,
           parseUnits("10000", 6)
         )
       ).not.toRevert()
       await expect(
-        kit.asMember.compoundV3.cUSDCv3.supply(
+        kit.asMember.compoundV3.cUsdcV3.supply(
           contracts.mainnet.usdc,
           parseUnits("10000", 6)
         )

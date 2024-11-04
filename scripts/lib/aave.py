@@ -12,10 +12,13 @@ sys.path.append(lib_path)
 PROTOCOL_DATA_PROVIDER = {
     Chain.ETHEREUM: {
         'v2': '0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d',
-        'v3': '0x7B4EB56E7CD4b454BA8ff71E4518426369a138a3'
+        'v3': '0x41393e5e337606dc3821075Af65AeE84D7688CBD'
     },
     Chain.GNOSIS: {
-        'v3': '0x501B4c19dd9C2e06E94dA7b6D5Ed4ddA013EC741',
+        'v3': '0x57038C3e3Fe0a170BB72DE2fD56E98e4d1a69717',
+    },
+    Chain.ARBITRUM: {
+        'v3': '0x7F23D86Ee20D869112572136221e173428DD740B',
     }
 }
 
@@ -59,7 +62,6 @@ def reserves_tokens_data(chain, version=3):
         token_addresses = pdp_contract.functions.getReserveTokensAddresses(token_data['token']).call()
 
         token_data['aTokenAddress'] = token_addresses[0]
-        token_data['stableDebtTokenAddress'] = token_addresses[1]
         token_data['variableDebtTokenAddress'] = token_addresses[2]
 
         reserves_tokens_data.append(token_data)
@@ -68,4 +70,6 @@ def reserves_tokens_data(chain, version=3):
         dump(reserves_tokens_data, 'aave/v' + str(version), "_ethInfo.ts")
     elif chain == Chain.GNOSIS:
         dump(reserves_tokens_data, 'aave/v' + str(version), "_gnoInfo.ts")
+    elif chain == Chain.ARBITRUM:
+        dump(reserves_tokens_data, 'aave/v' + str(version), "_arb1Info.ts")
 

@@ -3,7 +3,7 @@ import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
-import kit from "../../../test/kit"
+import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 
 const steCRV = "0x06325440D014e39736583c165C2963BA99fAf14E"

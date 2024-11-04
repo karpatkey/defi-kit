@@ -3,7 +3,7 @@ import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { Status } from "../../../../test/types"
-import kit from "../../../../test/kit"
+import { eth as kit } from "../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 
 describe("compound_v2", () => {
@@ -35,7 +35,7 @@ describe("compound_v2", () => {
 
     it("borrow ETH and only repay from avatar", async () => {
       await expect(
-        kit.asMember.compoundV2.cETH.borrow(parseEther("1"))
+        kit.asMember.compoundV2.cEth.borrow(parseEther("1"))
       ).not.toRevert()
 
       await expect(
@@ -53,7 +53,7 @@ describe("compound_v2", () => {
 
     it("deposit ETH, borrow USDC and repay", async () => {
       await expect(
-        kit.asMember.compoundV2.cETH.mint({ value: parseEther("1") })
+        kit.asMember.compoundV2.cEth.mint({ value: parseEther("1") })
       ).not.toRevert()
 
       await expect(

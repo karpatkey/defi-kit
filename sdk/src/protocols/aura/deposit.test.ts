@@ -4,7 +4,7 @@ import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
-import kit from "../../../test/kit"
+import { eth as kit } from "../../../test/kit"
 import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { parseEther } from "ethers"
 
@@ -60,13 +60,13 @@ describe("aura", () => {
       await kit.asAvatar.weth.deposit({ value: parseEther("1") })
       await expect(
         kit.asMember.weth.approve(
-          contracts.mainnet.aura.reward_pool_deposit_wrapper,
+          contracts.mainnet.aura.rewardPoolDepositWrapper,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aura.reward_pool_deposit_wrapper.depositSingle(
+        kit.asMember.aura.rewardPoolDepositWrapper.depositSingle(
           aura_50WETH_50AURA_rewarder,
           contracts.mainnet.weth,
           parseEther("1"),
@@ -82,7 +82,7 @@ describe("aura", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aura.reward_pool_deposit_wrapper.depositSingle(
+        kit.asMember.aura.rewardPoolDepositWrapper.depositSingle(
           aura_50WETH_50AURA_rewarder,
           contracts.mainnet.usdc, // USDC not allowed
           parseEther("1"),

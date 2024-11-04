@@ -10,17 +10,17 @@ const sdk = getMainnetSdk(
 )
 
 export const queryProxy = async (avatar: `0x${string}`) => {
-  return (await sdk.maker.ProxyRegistry.proxies(avatar)) as `0x${string}`
+  return (await sdk.maker.proxyRegistry.proxies(avatar)) as `0x${string}`
 }
 
 export const queryCdps = async (proxy: `0x${string}`, targets?: string[]) => {
   // fetch all cdps
   const cdps: bigint[] = []
-  let cdp = await sdk.maker.CdpManager.first(proxy)
+  let cdp = await sdk.maker.cdpManager.first(proxy)
   console.log({ first: cdp, proxy })
   while (cdp !== 0n) {
     cdps.push(cdp)
-    cdp = (await sdk.maker.CdpManager.list(cdp)).next
+    cdp = (await sdk.maker.cdpManager.list(cdp)).next
   }
 
   const targetCdps = targets?.map((target) => {
@@ -41,7 +41,7 @@ export const queryCdps = async (proxy: `0x${string}`, targets?: string[]) => {
 }
 
 export const queryIlk = async (cdp: bigint) => {
-  const ilkId = await sdk.maker.CdpManager.ilks(cdp)
+  const ilkId = await sdk.maker.cdpManager.ilks(cdp)
   const ilk = ilks.find((ilk) => ilk.ilk === ilkId)
   if (!ilk) {
     throw new Error(`Unexpected ilk ${ilkId} of cdp ${Number(cdp)}`)

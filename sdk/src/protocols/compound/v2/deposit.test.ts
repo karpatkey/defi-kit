@@ -2,7 +2,7 @@ import { eth } from "."
 import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
-import kit from "../../../../test/kit"
+import { eth as kit } from "../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 
 describe("compound_v2", () => {
@@ -14,11 +14,11 @@ describe("compound_v2", () => {
     // Test with ETH
     it("allows depositing ETH on behalf of avatar", async () => {
       await expect(
-        kit.asMember.compoundV2.cETH.mint({ value: parseEther("1") })
+        kit.asMember.compoundV2.cEth.mint({ value: parseEther("1") })
       ).not.toRevert()
 
       // await expect(
-      //   kit.asMember.compoundV2.cETH.mint(
+      //   kit.asMember.compoundV2.cEth.mint(
       //     {
       //       value: parseEther("1"),
       //       from: member.address
@@ -29,11 +29,11 @@ describe("compound_v2", () => {
 
     it("allows withdrawing ETH from avatars' position", async () => {
       await expect(
-        kit.asMember.compoundV2.cETH.redeemUnderlying(parseEther("0.5"))
+        kit.asMember.compoundV2.cEth.redeemUnderlying(parseEther("0.5"))
       ).not.toRevert()
 
       // await expect(
-      //   kit.asMember.compoundV2.cETH.redeemUnderlying(
+      //   kit.asMember.compoundV2.cEth.redeemUnderlying(
       //     parseEther("1"),
       //     {
       //       from: member.address
@@ -45,12 +45,12 @@ describe("compound_v2", () => {
     it("allow setting/removing the deposited ETH as collateral", async () => {
       await expect(
         kit.asMember.compoundV2.comptroller.enterMarkets([
-          contracts.mainnet.compoundV2.cETH,
+          contracts.mainnet.compoundV2.cEth,
         ])
       ).not.toRevert()
       await expect(
         kit.asMember.compoundV2.comptroller.exitMarket(
-          contracts.mainnet.compoundV2.cETH
+          contracts.mainnet.compoundV2.cEth
         )
       ).not.toRevert()
     })
@@ -100,7 +100,7 @@ describe("compound_v2", () => {
         kit.asMember.compoundV2.comptroller["claimComp(address,address[])"](
           avatar.address,
           [
-            contracts.mainnet.compoundV2.cETH,
+            contracts.mainnet.compoundV2.cEth,
             // The cToken in the config file corresponds to cUSDC
             contracts.mainnet.compoundV2.cToken,
           ]
@@ -110,7 +110,7 @@ describe("compound_v2", () => {
         kit.asMember.compoundV2.comptroller["claimComp(address,address[])"](
           member.address,
           [
-            contracts.mainnet.compoundV2.cETH,
+            contracts.mainnet.compoundV2.cEth,
             contracts.mainnet.compoundV2.cToken,
           ]
         )

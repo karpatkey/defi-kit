@@ -2,7 +2,7 @@ import { eth } from "."
 import { member } from "../../../../test/wallets"
 import { applyPermissions } from "../../../../test/helpers"
 import { Status } from "../../../../test/types"
-import kit from "../../../../test/kit"
+import { eth as kit } from "../../../../test/kit"
 
 const DELEGATEE = "0x849D52316331967b6fF1198e5E32A0eB168D039d"
 

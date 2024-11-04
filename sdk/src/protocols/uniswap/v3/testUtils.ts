@@ -1,21 +1,21 @@
 import { avatar } from "../../../../test/wallets"
 import { stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
-import kit from "../../../../test/kit"
+import { eth as kit } from "../../../../test/kit"
 
 const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 const stealAddress = "0x8eb8a3b98659cce290402893d0123abb75e3ab28"
 
 export const getPosition = async (nftId: bigint) => {
-  return kit.asAvatar.uniswap_v3.positions_nft.positions(nftId)
+  return kit.asAvatar.uniswapV3.positionsNft.positions(nftId)
 }
 
 const getPoolAddress = async (token0: string, token1: string, fee: number) => {
-  return await kit.asAvatar.uniswap_v3.factory.getPool(token0, token1, fee)
+  return await kit.asAvatar.uniswapV3.factory.getPool(token0, token1, fee)
 }
 
 const getPoolSlot0 = async (poolAddress: string) => {
-  return await kit.asAvatar.uniswap_v3.pool.attach(poolAddress).slot0()
+  return await kit.asAvatar.uniswapV3.pool.attach(poolAddress).slot0()
 }
 
 export const calculateAmounts = async (
@@ -36,7 +36,7 @@ export const calculateAmounts = async (
       position[3],
       Number(position[4])
     )
-    const slot0 = await kit.asAvatar.uniswap_v3.pool.attach(poolAddress).slot0()
+    const slot0 = await kit.asAvatar.uniswapV3.pool.attach(poolAddress).slot0()
     sqrtPriceX96 = BigInt(slot0[0].toString())
   }
 
@@ -100,7 +100,7 @@ export const mintNFT = async (
   const sqrtPrice = Number(sqrtPricen) / 10 ** 18
   const poolPrice =
     sqrtPrice ** 2 / 10 ** (Number(token1Decimals) - Number(token0Decimals))
-  const tickSpacing = await kit.asAvatar.uniswap_v3.pool
+  const tickSpacing = await kit.asAvatar.uniswapV3.pool
     .attach(poolAddress)
     .tickSpacing()
 
@@ -142,27 +142,27 @@ export const mintNFT = async (
     await stealErc20(token1, amount1Desired, stealAddress)
     await kit.asAvatar.weth
       .attach(token0)
-      .approve(contracts.mainnet.uniswap_v3.positions_nft, amount0Desired)
+      .approve(contracts.mainnet.uniswapV3.positionsNft, amount0Desired)
     await kit.asAvatar.weth
       .attach(token1)
-      .approve(contracts.mainnet.uniswap_v3.positions_nft, amount1Desired)
+      .approve(contracts.mainnet.uniswapV3.positionsNft, amount1Desired)
   } else {
     if (token0 == contracts.mainnet.weth) {
       value = amount0Desired
       await stealErc20(token1, amount1Desired, stealAddress)
       await kit.asAvatar.weth
         .attach(token1)
-        .approve(contracts.mainnet.uniswap_v3.positions_nft, amount1Desired)
+        .approve(contracts.mainnet.uniswapV3.positionsNft, amount1Desired)
     } else {
       value = amount1Desired
       await stealErc20(token0, amount0Desired, stealAddress)
       await kit.asAvatar.weth
         .attach(token0)
-        .approve(contracts.mainnet.uniswap_v3.positions_nft, amount0Desired)
+        .approve(contracts.mainnet.uniswapV3.positionsNft, amount0Desired)
     }
   }
 
-  const mint = await asActor.uniswap_v3.positions_nft.mint(
+  const mint = await asActor.uniswapV3.positionsNft.mint(
     {
       token0: token0,
       token1: token1,
@@ -179,12 +179,12 @@ export const mintNFT = async (
     // { value: value }
   )
 
-  const ownedNfts = await kit.asAvatar.uniswap_v3.positions_nft.balanceOf(
+  const ownedNfts = await kit.asAvatar.uniswapV3.positionsNft.balanceOf(
     avatar.address
   )
   let nftId = null
   if (ownedNfts > 0n) {
-    nftId = await kit.asAvatar.uniswap_v3.positions_nft.tokenOfOwnerByIndex(
+    nftId = await kit.asAvatar.uniswapV3.positionsNft.tokenOfOwnerByIndex(
       avatar.address,
       ownedNfts - 1n
     )

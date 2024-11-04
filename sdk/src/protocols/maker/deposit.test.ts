@@ -3,40 +3,40 @@ import { avatar } from "../../../test/wallets"
 import { applyPermissions } from "../../../test/helpers"
 import { queryCdps, queryIlk, queryProxy } from "./utils"
 import { ZeroAddress, encodeBytes32String, parseEther } from "ethers"
-import kit from "../../../test/kit"
+import { eth as kit } from "../../../test/kit"
 
 const getProxy = async () => {
   const proxyAddress = await queryProxy(avatar.address as `0x${string}`)
   console.log({ proxyAddress, avatar: avatar.address })
-  const proxy = kit.asMember.maker.DsProxy.attach(proxyAddress)
+  const proxy = kit.asMember.maker.dsProxy.attach(proxyAddress)
   return proxy
 }
 
 const openMakerCdp = async ({ ilk }: { ilk: string }) => {
   // build proxy if it doesn't exist yet
   if ((await queryProxy(avatar.address as `0x${string}`)) === ZeroAddress) {
-    await kit.asAvatar.maker.ProxyRegistry["build()"]()
+    await kit.asAvatar.maker.proxyRegistry["build()"]()
   }
 
   const proxyAddress = await queryProxy(avatar.address as `0x${string}`)
-  const proxy = kit.asAvatar.maker.DsProxy.attach(proxyAddress)
-  console.log("ILK from gemjoin", await kit.asAvatar.maker.GemJoin.ilk())
+  const proxy = kit.asAvatar.maker.dsProxy.attach(proxyAddress)
+  console.log("ILK from gemjoin", await kit.asAvatar.maker.gemJoin.ilk())
 
   console.log("encoding", encodeBytes32String("ETH-A"))
 
   console.log(
     "Open data: ",
-    await kit.asAvatar.maker.ProxyActions.getAddress(),
-    await kit.asAvatar.maker.CdpManager.getAddress(),
+    await kit.asAvatar.maker.proxyActions.getAddress(),
+    await kit.asAvatar.maker.cdpManager.getAddress(),
     ilk,
     await proxy.getAddress(),
     proxyAddress
   )
 
   const tx = await proxy["execute(address,bytes)"](
-    await kit.asAvatar.maker.ProxyActions.getAddress(),
-    kit.asAvatar.maker.ProxyActions.interface.encodeFunctionData("open", [
-      await kit.asAvatar.maker.CdpManager.getAddress(),
+    await kit.asAvatar.maker.proxyActions.getAddress(),
+    kit.asAvatar.maker.proxyActions.interface.encodeFunctionData("open", [
+      await kit.asAvatar.maker.cdpManager.getAddress(),
       ilk,
       await proxy.getAddress(),
     ])
@@ -77,16 +77,16 @@ describe("maker", () => {
       const ilk = await queryIlk(cdp)
       console.log(
         "Data",
-        await kit.asAvatar.maker.CdpManager.getAddress(),
+        await kit.asAvatar.maker.cdpManager.getAddress(),
         ilk.gemJoin,
         cdp
       )
       await expect(
         proxy["execute(address,bytes)"](
-          await kit.asAvatar.maker.ProxyActions.getAddress(),
-          kit.asAvatar.maker.ProxyActions.interface.encodeFunctionData(
+          await kit.asAvatar.maker.proxyActions.getAddress(),
+          kit.asAvatar.maker.proxyActions.interface.encodeFunctionData(
             "lockETH",
-            [await kit.asAvatar.maker.CdpManager.getAddress(), ilk.gemJoin, cdp]
+            [await kit.asAvatar.maker.cdpManager.getAddress(), ilk.gemJoin, cdp]
           ),
           { value: parseEther("1000") }
         )
@@ -95,10 +95,10 @@ describe("maker", () => {
       // make sure permissions really only allow to lock to our own CDPs
       await expect(
         proxy["execute(address,bytes)"](
-          await kit.asAvatar.maker.ProxyActions.getAddress(),
-          kit.asAvatar.maker.ProxyActions.interface.encodeFunctionData(
+          await kit.asAvatar.maker.proxyActions.getAddress(),
+          kit.asAvatar.maker.proxyActions.interface.encodeFunctionData(
             "lockETH",
-            [await kit.asAvatar.maker.CdpManager.getAddress(), ilk.gemJoin, 123]
+            [await kit.asAvatar.maker.cdpManager.getAddress(), ilk.gemJoin, 123]
           ),
           { value: parseEther("1000") }
         )

@@ -8,7 +8,7 @@ import {
 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
-import kit from "../../../test/kit"
+import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 
 describe("aura", () => {
@@ -21,26 +21,26 @@ describe("aura", () => {
       await expect(
         kit.asMember.usdc
           .attach(AURA)
-          .approve(contracts.mainnet.aura.aura_locker, parseEther("1"))
+          .approve(contracts.mainnet.aura.vlAura, parseEther("1"))
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aura.aura_locker.lock(avatar.address, parseEther("1"))
+        kit.asMember.aura.vlAura.lock(avatar.address, parseEther("1"))
       ).not.toRevert()
       await expect(
-        kit.asMember.aura.aura_locker.lock(member.address, parseEther("1"))
+        kit.asMember.aura.vlAura.lock(member.address, parseEther("1"))
       ).toBeForbidden(Status.ParameterNotAllowed)
 
       await expect(
-        kit.asMember.aura.aura_locker["getReward(address)"](avatar.address)
+        kit.asMember.aura.vlAura["getReward(address)"](avatar.address)
       ).not.toRevert()
       await expect(
-        kit.asMember.aura.aura_locker["getReward(address)"](member.address)
+        kit.asMember.aura.vlAura["getReward(address)"](member.address)
       ).toBeForbidden(Status.ParameterNotAllowed)
 
       await advanceTime(10200000) // 16 weeks and 5 days must pass for the tokens to be unlocked
       await expect(
-        kit.asMember.aura.aura_locker.processExpiredLocks(true)
+        kit.asMember.aura.vlAura.processExpiredLocks(true)
       ).not.toRevert()
     })
   })

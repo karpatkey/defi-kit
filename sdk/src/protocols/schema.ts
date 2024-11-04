@@ -9,11 +9,11 @@ import * as convex from "./convex/schema"
 import * as cowswap from "./cowswap/schema"
 import * as lido from "./lido/schema"
 import * as maker from "./maker/schema"
-import * as rocket_pool from "./rocket_pool/schema"
+import * as rocketPool from "./rocketPool/schema"
 import * as spark from "./spark/schema"
 import * as stader from "./stader/schema"
-import * as stakewise_v2 from "./stakewise/v2/schema"
-import * as uniswap_v3 from "./uniswap/v3/schema"
+import * as stakeWiseV2 from "./stakeWise/v2/schema"
+import * as uniswapV3 from "./uniswap/v3/schema"
 import { ProtocolSchemas } from "../types"
 
 // group all protocols schemas by chain
@@ -30,11 +30,11 @@ export const eth = {
   cowswap: cowswap.eth,
   lido: lido.eth,
   maker: maker.eth,
-  rocket_pool: rocket_pool.eth,
+  rocketPool: rocketPool.eth,
   spark: spark.eth,
   stader: stader.eth,
-  stakewise_v2: stakewise_v2.eth,
-  uniswap_v3: uniswap_v3.eth,
+  stakeWiseV2: stakeWiseV2.eth,
+  uniswapV3: uniswapV3.eth,
 } satisfies Record<string, ProtocolSchemas>
 
 export const gno = {
@@ -46,5 +46,6 @@ export const gno = {
 } satisfies Record<string, ProtocolSchemas>
 
 export const arb1 = {
+  aave_v3: aave_v3.arb1,
   cowswap: cowswap.arb1,
 } satisfies Record<string, ProtocolSchemas>
