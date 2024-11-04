@@ -482,10 +482,6 @@ export default [
     symbol: "Bonk",
   },
   {
-    address: "0x0800394f6E23dD539929c8B77a3d45c96F76AEFC",
-    symbol: "TURT",
-  },
-  {
     address: "0x39D5313C3750140E5042887413bA8AA6145a9bd2",
     symbol: "EMP",
   },
@@ -572,10 +568,6 @@ export default [
   {
     address: "0x594DaaD7D77592a2b97b725A7AD59D7E188b5bFa",
     symbol: "APU",
-  },
-  {
-    address: "0xf94e7d0710709388bCe3161C32B4eEA56d3f91CC",
-    symbol: "DSync",
   },
   {
     address: "0x857FfC55B1Aa61A7fF847C82072790cAE73cd883",
@@ -702,6 +694,10 @@ export default [
     symbol: "PENDLE",
   },
   {
+    address: "0xf21661D0D1d76d3ECb8e1B9F1c923DBfffAe4097",
+    symbol: "RIO",
+  },
+  {
     address: "0x1494CA1F11D487c2bBe4543E90080AeBa4BA3C2b",
     symbol: "DPI",
   },
@@ -748,10 +744,6 @@ export default [
   {
     address: "0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26",
     symbol: "OGN",
-  },
-  {
-    address: "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
-    symbol: "SNT",
   },
   {
     address: "0xaA7a9CA87d3694B5755f213B5D04094b8d0F0A6F",
@@ -866,10 +858,6 @@ export default [
     symbol: "HUNT",
   },
   {
-    address: "0x8e0E57DCb1ce8d9091dF38ec1BfC3b224529754A",
-    symbol: "CAH",
-  },
-  {
     address: "0x04C17b9D3b29A78F7Bd062a57CF44FC633e71f85",
     symbol: "IMPT",
   },
@@ -922,10 +910,6 @@ export default [
     symbol: "AXL",
   },
   {
-    address: "0x710287D1D39DCf62094A83EBB3e736e79400068a",
-    symbol: "ENQAI",
-  },
-  {
     address: "0xBa25B2281214300E4e649feAd9A6d6acD25f1c0a",
     symbol: "TREE",
   },
@@ -948,10 +932,6 @@ export default [
   {
     address: "0xFe0c30065B384F05761f15d0CC899D4F9F9Cc0eB",
     symbol: "ETHFI",
-  },
-  {
-    address: "0x65c4C0517025Ec0843C9146aF266A2C5a2D148A2",
-    symbol: "ETH2X",
   },
   {
     address: "0x1495bc9e44Af1F8BCB62278D2bEC4540cF0C05ea",
@@ -1098,20 +1078,12 @@ export default [
     symbol: "XUSD",
   },
   {
-    address: "0xFd03723a9A3AbE0562451496a9a394D2C4bad4ab",
-    symbol: "DYAD",
-  },
-  {
     address: "0x57B96D4aF698605563A4653D882635da59Bf11AF",
     symbol: "RCH",
   },
   {
     address: "0x8236a87084f8B84306f72007F36F2618A5634494",
     symbol: "LBTC",
-  },
-  {
-    address: "0xf02C96DbbB92DC0325AD52B3f9F2b951f972bf00",
-    symbol: "krETH",
   },
   {
     address: "0x7A56E1C57C7475CCf742a1832B028F0456652F97",
