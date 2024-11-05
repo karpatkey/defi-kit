@@ -2001,4 +2001,20 @@ export default [
     ],
     rewarder: "0xAddc38cd32ac2c2228399Dfb2665EAF953611c1a",
   },
+  {
+    name: "hETH/wstETH",
+    id: "232",
+    bpt: "0xa34bD98E54411494C55F6b12626204350d2D447f",
+    tokens: [
+      {
+        address: "0x270B7748CdF8243bFe68FaCE7230ef0fCE695389",
+        symbol: "hETH",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+    ],
+    rewarder: "0xd00455D46f1B7d4cfe6F83d9F0Fd8c8377A4E323",
+  },
 ] as const

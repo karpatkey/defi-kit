@@ -2,7 +2,7 @@ import { Permission, c } from "zodiac-roles-sdk"
 import { allow } from "zodiac-roles-sdk/kit"
 import { allowErc20Approve } from "../../conditions"
 import { Pool, Token } from "./types"
-import { contracts, contractAddressOverrides } from "../../../eth-sdk/config"
+import { contracts } from "../../../eth-sdk/config"
 import { Chain } from "../../types"
 
 export const BAL = "0xba100000625a3754423978a60c9317c58a424e3D"
@@ -122,16 +122,13 @@ export const stake = (chain: Chain, pool: Pool) => {
       break
 
     case Chain.gno:
-      minter = contractAddressOverrides.gnosis.balancer.minter as `0x${string}`
-      relayer = contractAddressOverrides.gnosis.balancer
-        .relayer as `0x${string}`
+      minter = contracts.gnosis.balancer.minter as `0x${string}`
+      relayer = contracts.gnosis.balancer.relayer as `0x${string}`
       break
 
     case Chain.arb1:
-      minter = contractAddressOverrides.arbitrumOne.balancer
-        .minter as `0x${string}`
-      relayer = contractAddressOverrides.arbitrumOne.balancer
-        .relayer as `0x${string}`
+      minter = contracts.arbitrumOne.balancer.minter as `0x${string}`
+      relayer = contracts.arbitrumOne.balancer.relayer as `0x${string}`
       break
   }
 
@@ -188,7 +185,7 @@ export const stake = (chain: Chain, pool: Pool) => {
 export const lock = (): Permission[] => {
   return [
     ...allowErc20Approve([BAL, WETH], [contracts.mainnet.balancer.vault]),
-    ...allowErc20Approve([B_80BAL_20WETH], [contracts.mainnet.balancer.vebal]),
+    ...allowErc20Approve([B_80BAL_20WETH], [contracts.mainnet.balancer.veBal]),
     allow.mainnet.balancer.vault.joinPool(
       B_80BAL_20WETH_PID,
       c.avatar,
@@ -204,12 +201,12 @@ export const lock = (): Permission[] => {
     // As Safes are smart contracts they are not allowed to lock veBAL
     // if the they are not whitelisted previously by Balancer:
     // https://forum.balancer.fi/t/allow-for-gnosis-safe-to-be-used-for-vebal-locking/2698
-    allow.mainnet.balancer.vebal.create_lock(),
-    allow.mainnet.balancer.vebal.increase_amount(),
-    allow.mainnet.balancer.vebal.increase_unlock_time(),
-    allow.mainnet.balancer.vebal.withdraw(),
-    allow.mainnet.balancer.fee_distributor.claimToken(c.avatar),
-    allow.mainnet.balancer.fee_distributor.claimTokens(c.avatar),
+    allow.mainnet.balancer.veBal.create_lock(),
+    allow.mainnet.balancer.veBal.increase_amount(),
+    allow.mainnet.balancer.veBal.increase_unlock_time(),
+    allow.mainnet.balancer.veBal.withdraw(),
+    allow.mainnet.balancer.feeDistributor.claimToken(c.avatar),
+    allow.mainnet.balancer.feeDistributor.claimTokens(c.avatar),
   ]
 }
 

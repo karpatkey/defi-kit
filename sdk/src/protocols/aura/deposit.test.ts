@@ -4,11 +4,10 @@ import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
-import { testKit } from "../../../test/kit"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-import { parseEther } from "ethers/lib/utils"
+import { eth as kit } from "../../../test/kit"
+import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
+import { parseEther } from "ethers"
 
-const sdk = getMainnetSdk(avatar)
 const b_50WETH_50AURA = "0xCfCA23cA9CA720B6E98E3Eb9B6aa0fFC4a5C08B9"
 const b_50WETH_50AURA_pid =
   "0xcfca23ca9ca720b6e98e3eb9b6aa0ffc4a5c08b9000200000000000000000274"
@@ -27,47 +26,47 @@ describe("aura", () => {
         contracts.mainnet.aura.booster
       )
       await expect(
-        testKit.eth.usdc
+        kit.asMember.usdc
           .attach(b_50WETH_50AURA)
           .approve(contracts.mainnet.aura.booster, parseEther("1"))
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aura.booster.deposit(100, parseEther("1"), true)
+        kit.asMember.aura.booster.deposit(100, parseEther("1"), true)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.booster.deposit(99, parseEther("1"), true)
+        kit.asMember.aura.booster.deposit(99, parseEther("1"), true)
       ).toBeForbidden(Status.ParameterNotAllowed)
 
       await expect(
-        testKit.eth.aura.rewarder
+        kit.asMember.aura.rewarder
           .attach(aura_50WETH_50AURA_rewarder)
           .withdrawAndUnwrap(parseEther("1"), false)
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aura.rewarder
+        kit.asMember.aura.rewarder
           .attach(aura_50WETH_50AURA_rewarder)
-          ["getReward(address,bool)"](avatar._address, true)
+          ["getReward(address,bool)"](avatar.address, true)
       ).not.toRevert()
       await expect(
-        testKit.eth.aura.rewarder
+        kit.asMember.aura.rewarder
           .attach(aura_50WETH_50AURA_rewarder)
-          ["getReward(address,bool)"](member._address, true)
+          ["getReward(address,bool)"](member.address, true)
       ).toBeForbidden(Status.ParameterNotAllowed)
     }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
 
     it("deposit single token, withdraw bpt from pool", async () => {
-      await sdk.weth.deposit({ value: parseEther("1") })
+      await kit.asAvatar.weth.deposit({ value: parseEther("1") })
       await expect(
-        testKit.eth.weth.approve(
-          contracts.mainnet.aura.reward_pool_deposit_wrapper,
+        kit.asMember.weth.approve(
+          contracts.mainnet.aura.rewardPoolDepositWrapper,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aura.reward_pool_deposit_wrapper.depositSingle(
+        kit.asMember.aura.rewardPoolDepositWrapper.depositSingle(
           aura_50WETH_50AURA_rewarder,
           contracts.mainnet.weth,
           parseEther("1"),
@@ -83,7 +82,7 @@ describe("aura", () => {
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aura.reward_pool_deposit_wrapper.depositSingle(
+        kit.asMember.aura.rewardPoolDepositWrapper.depositSingle(
           aura_50WETH_50AURA_rewarder,
           contracts.mainnet.usdc, // USDC not allowed
           parseEther("1"),

@@ -3,11 +3,8 @@ import { avatar, member } from "../../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { Status } from "../../../../test/types"
-import { testKit } from "../../../../test/kit"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-import { parseEther, parseUnits } from "ethers/lib/utils"
-
-const sdk = getMainnetSdk(avatar)
+import { eth as kit } from "../../../../test/kit"
+import { parseEther, parseUnits } from "ethers"
 
 describe("aave_v2", () => {
   describe("deposit", () => {
@@ -18,18 +15,18 @@ describe("aave_v2", () => {
     // Test with ETH
     it("only allows depositing ETH on behalf of avatar", async () => {
       await expect(
-        testKit.eth.aaveV2.wrappedTokenGatewayV2.depositETH(
-          contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          avatar._address,
+        kit.asMember.aaveV2.wrappedTokenGatewayV2.depositETH(
+          contracts.mainnet.aaveV2.lendingPoolV2,
+          avatar.address,
           0,
           { value: parseEther("1") }
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aaveV2.wrappedTokenGatewayV2.depositETH(
-          contracts.mainnet.aaveV2.aaveLendingPoolV2,
-          member._address,
+        kit.asMember.aaveV2.wrappedTokenGatewayV2.depositETH(
+          contracts.mainnet.aaveV2.lendingPoolV2,
+          member.address,
           0,
           { value: parseEther("1") }
         )
@@ -38,46 +35,46 @@ describe("aave_v2", () => {
 
     it("only allows withdrawing ETH from avatars' position", async () => {
       await expect(
-        testKit.eth.aaveV2.aWETH.approve(
+        kit.asMember.aaveV2.aWeth.approve(
           contracts.mainnet.aaveV2.wrappedTokenGatewayV2,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
-          contracts.mainnet.aaveV2.aaveLendingPoolV2,
+        kit.asMember.aaveV2.wrappedTokenGatewayV2.withdrawETH(
+          contracts.mainnet.aaveV2.lendingPoolV2,
           parseEther("1"),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aaveV2.wrappedTokenGatewayV2.withdrawETH(
-          contracts.mainnet.aaveV2.aaveLendingPoolV2,
+        kit.asMember.aaveV2.wrappedTokenGatewayV2.withdrawETH(
+          contracts.mainnet.aaveV2.lendingPoolV2,
           parseEther("1"),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     it("allow setting the deposited ETH as collateral", async () => {
       let reserve_config: Array<any> =
-        await sdk.aaveV2.data_provider.getReserveConfigurationData(
+        await kit.asAvatar.aaveV2.protocolDataProviderV2.getReserveConfigurationData(
           contracts.mainnet.weth
         )
       const collateralizable: boolean = reserve_config[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(
-          testKit.eth.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
+          kit.asMember.aaveV2.lendingPoolV2.setUserUseReserveAsCollateral(
             contracts.mainnet.weth,
             true
           )
         ).not.toRevert()
       } else {
         await expect(
-          testKit.eth.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
+          kit.asMember.aaveV2.lendingPoolV2.setUserUseReserveAsCollateral(
             contracts.mainnet.weth,
             true
           )
@@ -93,26 +90,26 @@ describe("aave_v2", () => {
         contracts.mainnet.balancer.vault
       )
       await expect(
-        testKit.eth.usdc.approve(
-          contracts.mainnet.aaveV2.aaveLendingPoolV2,
+        kit.asMember.usdc.approve(
+          contracts.mainnet.aaveV2.lendingPoolV2,
           parseUnits("1000", 6)
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
+        kit.asMember.aaveV2.lendingPoolV2.deposit(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          avatar._address,
+          avatar.address,
           0
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aaveV2.aaveLendingPoolV2.deposit(
+        kit.asMember.aaveV2.lendingPoolV2.deposit(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          member._address,
+          member.address,
           0
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -120,39 +117,39 @@ describe("aave_v2", () => {
 
     it("only allows withdrawing USDC from avatars' position", async () => {
       await expect(
-        testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
+        kit.asMember.aaveV2.lendingPoolV2.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.aaveV2.aaveLendingPoolV2.withdraw(
+        kit.asMember.aaveV2.lendingPoolV2.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     it("allow setting the deposited USDC as collateral", async () => {
       let reserve_config: Array<any> =
-        await sdk.aaveV2.data_provider.getReserveConfigurationData(
+        await kit.asAvatar.aaveV2.protocolDataProviderV2.getReserveConfigurationData(
           contracts.mainnet.usdc
         )
       const collateralizable: boolean = reserve_config[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(
-          testKit.eth.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
+          kit.asMember.aaveV2.lendingPoolV2.setUserUseReserveAsCollateral(
             contracts.mainnet.usdc,
             true
           )
         ).not.toRevert()
       } else {
         await expect(
-          testKit.eth.aaveV2.aaveLendingPoolV2.setUserUseReserveAsCollateral(
+          kit.asMember.aaveV2.lendingPoolV2.setUserUseReserveAsCollateral(
             contracts.mainnet.usdc,
             true
           )

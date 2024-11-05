@@ -7,11 +7,8 @@ import {
 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
-import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-
-const sdk = getMainnetSdk(avatar)
+import { eth as kit } from "../../../test/kit"
+import { parseEther } from "ethers"
 
 describe("spark", () => {
   describe("borrow", () => {
@@ -26,21 +23,21 @@ describe("spark", () => {
 
     it("deposit sDAI", async () => {
       await stealErc20(
-        contracts.mainnet.spark.sDAI,
+        contracts.mainnet.spark.sDai,
         parseEther("10000"),
         contracts.mainnet.balancer.vault
       )
       await expect(
-        testKit.eth.spark.sDAI.approve(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+        kit.asMember.spark.sDai.approve(
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("10000")
         )
       ).not.toRevert()
       await expect(
-        testKit.eth.spark.sparkLendingPoolV3.supply(
-          contracts.mainnet.spark.sDAI,
+        kit.asMember.spark.lendingPoolV3.supply(
+          contracts.mainnet.spark.sDai,
           parseEther("10000"),
-          avatar._address,
+          avatar.address,
           0
         )
       ).not.toRevert()
@@ -48,15 +45,15 @@ describe("spark", () => {
 
     it("borrow ETH and repay", async () => {
       await expect(
-        testKit.eth.spark.variableDebtWETH.approveDelegation(
+        kit.asMember.spark.variableDebtWeth.approveDelegation(
           contracts.mainnet.spark.wrappedTokenGatewayV3,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.spark.wrappedTokenGatewayV3.borrowETH(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+        kit.asMember.spark.wrappedTokenGatewayV3.borrowETH(
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("1"),
           2,
           0
@@ -64,11 +61,11 @@ describe("spark", () => {
       ).not.toRevert()
 
       await expect(
-        testKit.eth.spark.wrappedTokenGatewayV3.repayETH(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+        kit.asMember.spark.wrappedTokenGatewayV3.repayETH(
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("0.5"),
           2,
-          avatar._address,
+          avatar.address,
           { value: parseEther("0.5") }
         )
       ).not.toRevert()
@@ -76,37 +73,37 @@ describe("spark", () => {
 
     it("deposit ETH, borrow DAI and repay", async () => {
       await expect(
-        testKit.eth.spark.wrappedTokenGatewayV3.depositETH(
-          contracts.mainnet.spark.sparkLendingPoolV3,
-          avatar._address,
+        kit.asMember.spark.wrappedTokenGatewayV3.depositETH(
+          contracts.mainnet.spark.lendingPoolV3,
+          avatar.address,
           0,
           { value: parseEther("1") }
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.spark.sparkLendingPoolV3.borrow(
+        kit.asMember.spark.lendingPoolV3.borrow(
           contracts.mainnet.dai,
           parseEther("100"),
           2,
           0,
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.dai.approve(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+        kit.asMember.dai.approve(
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("50")
         )
       ).not.toRevert()
 
       await expect(
-        testKit.eth.spark.sparkLendingPoolV3.repay(
+        kit.asMember.spark.lendingPoolV3.repay(
           contracts.mainnet.dai,
           parseEther("50"),
           2,
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
     })
@@ -115,15 +112,15 @@ describe("spark", () => {
     // Test with ETH
     it("allows borrowing ETH from avatar", async () => {
       await expect(
-        testKit.eth.spark.variableDebtWETH.approveDelegation(
+        kit.asMember.spark.variableDebtWeth.approveDelegation(
           contracts.mainnet.spark.wrappedTokenGatewayV3,
           parseEther("1")
         )
       ).toBeAllowed()
 
       await expect(
-        testKit.eth.spark.wrappedTokenGatewayV3.borrowETH(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+        kit.asMember.spark.wrappedTokenGatewayV3.borrowETH(
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("1"),
           2,
           0
@@ -133,21 +130,21 @@ describe("spark", () => {
 
     it("only allows repaying ETH from avatar", async () => {
       await expect(
-        testKit.eth.spark.wrappedTokenGatewayV3.repayETH(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+        kit.asMember.spark.wrappedTokenGatewayV3.repayETH(
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("1"),
           2,
-          avatar._address,
+          avatar.address,
           { value: parseEther("1") }
         )
       ).toBeAllowed()
 
       await expect(
-        testKit.eth.spark.wrappedTokenGatewayV3.repayETH(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+        kit.asMember.spark.wrappedTokenGatewayV3.repayETH(
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("1"),
           2,
-          member._address,
+          member.address,
           { value: parseEther("1") }
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -155,7 +152,7 @@ describe("spark", () => {
 
     it("allows swapping the ETH borrow rate mode", async () => {
       await expect(
-        testKit.eth.spark.sparkLendingPoolV3.swapBorrowRateMode(
+        kit.asMember.spark.lendingPoolV3.swapBorrowRateMode(
           contracts.mainnet.weth,
           1
         )
@@ -165,22 +162,22 @@ describe("spark", () => {
     // Test with DAI
     it("only allows borrowing DAI from avatar", async () => {
       await expect(
-        testKit.eth.spark.sparkLendingPoolV3.borrow(
+        kit.asMember.spark.lendingPoolV3.borrow(
           contracts.mainnet.dai,
           parseEther("10000"),
           2,
           0,
-          avatar._address
+          avatar.address
         )
       ).toBeAllowed()
 
       await expect(
-        testKit.eth.spark.sparkLendingPoolV3.borrow(
+        kit.asMember.spark.lendingPoolV3.borrow(
           contracts.mainnet.dai,
           parseEther("10000"),
           2,
           0,
-          member._address
+          member.address
         )
       ).toBeForbidden()
     })
@@ -193,34 +190,34 @@ describe("spark", () => {
       )
 
       await expect(
-        testKit.eth.dai.approve(
-          contracts.mainnet.spark.sparkLendingPoolV3,
+        kit.asMember.dai.approve(
+          contracts.mainnet.spark.lendingPoolV3,
           parseEther("10000")
         )
       ).toBeAllowed()
 
       await expect(
-        testKit.eth.spark.sparkLendingPoolV3.repay(
+        kit.asMember.spark.lendingPoolV3.repay(
           contracts.mainnet.dai,
           parseEther("10000"),
           2,
-          avatar._address
+          avatar.address
         )
       ).toBeAllowed()
 
       await expect(
-        testKit.eth.spark.sparkLendingPoolV3.repay(
+        kit.asMember.spark.lendingPoolV3.repay(
           contracts.mainnet.dai,
           parseEther("10000"),
           2,
-          member._address
+          member.address
         )
       ).toBeForbidden()
     })
 
     it("allows swapping the DAI borrow rate mode", async () => {
       await expect(
-        testKit.eth.spark.sparkLendingPoolV3.swapBorrowRateMode(
+        kit.asMember.spark.lendingPoolV3.swapBorrowRateMode(
           contracts.mainnet.dai,
           1
         )
