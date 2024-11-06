@@ -44,14 +44,14 @@ export const stake = (token: StakeToken): Permission[] => {
   switch (token.symbol) {
     case "cvxCRV":
       permissions.push(
-        ...allowErc20Approve([CRV], [contracts.mainnet.convex.CrvDepositor]),
+        ...allowErc20Approve([CRV], [contracts.mainnet.convex.crvDepositor]),
         ...allowErc20Approve(
-          [contracts.mainnet.convex.cvxCRV],
+          [contracts.mainnet.convex.cvxCrv],
           [contracts.mainnet.convex.stkCvxCrv]
         ),
-        allow.mainnet.convex.CrvDepositor["deposit(uint256,bool)"](),
+        allow.mainnet.convex.crvDepositor["deposit(uint256,bool)"](),
         allow.mainnet.convex.stkCvxCrv.stake(undefined, c.avatar),
-        allow.mainnet.convex.CrvDepositor["deposit(uint256,bool,address)"](
+        allow.mainnet.convex.crvDepositor["deposit(uint256,bool,address)"](
           undefined,
           undefined,
           c.or(ZERO_ADDRESS, contracts.mainnet.convex.stkCvxCrv)
@@ -76,9 +76,9 @@ export const stake = (token: StakeToken): Permission[] => {
 
 export const lock = (): Permission[] => {
   return [
-    ...allowErc20Approve([CVX], [contracts.mainnet.convex.vlCVX]),
-    allow.mainnet.convex.vlCVX.lock(c.avatar),
-    allow.mainnet.convex.vlCVX.processExpiredLocks(),
-    allow.mainnet.convex.vlCVX["getReward(address,bool)"](c.avatar),
+    ...allowErc20Approve([CVX], [contracts.mainnet.convex.vlCvx]),
+    allow.mainnet.convex.vlCvx.lock(c.avatar),
+    allow.mainnet.convex.vlCvx.processExpiredLocks(),
+    allow.mainnet.convex.vlCvx["getReward(address,bool)"](c.avatar),
   ]
 }

@@ -6,37 +6,37 @@ import { contracts } from "../../../eth-sdk/config"
 export const eth = {
   deposit: async () => [
     ...allowErc20Approve(
-      [contracts.mainnet.lido.steth],
-      [contracts.mainnet.lido.wsteth]
+      [contracts.mainnet.lido.stEth],
+      [contracts.mainnet.lido.wstEth]
     ),
     ...allowErc20Approve(
-      [contracts.mainnet.lido.steth, contracts.mainnet.lido.wsteth],
-      [contracts.mainnet.lido.unsteth]
+      [contracts.mainnet.lido.stEth, contracts.mainnet.lido.wstEth],
+      [contracts.mainnet.lido.unstEth]
     ),
-    allow.mainnet.lido.wsteth.wrap(),
-    allow.mainnet.lido.wsteth.unwrap(),
-    allow.mainnet.lido.steth.submit(undefined, { send: true }),
+    allow.mainnet.lido.wstEth.wrap(),
+    allow.mainnet.lido.wstEth.unwrap(),
+    allow.mainnet.lido.stEth.submit(undefined, { send: true }),
     // Request stETH Withdrawal - Locks your stETH in the queue. In exchange you receive an NFT, that represents your position
     // in the queue
-    allow.mainnet.lido.unsteth.requestWithdrawals(undefined, c.avatar),
+    allow.mainnet.lido.unstEth.requestWithdrawals(undefined, c.avatar),
     // When the unstETH has no allowance over the owner's stETH
-    allow.mainnet.lido.unsteth.requestWithdrawalsWithPermit(
+    allow.mainnet.lido.unstEth.requestWithdrawalsWithPermit(
       undefined,
       c.avatar
     ),
 
     // Request wstETH Withdrawal - Transfers the wstETH to the unstETH to be burned in exchange for stETH. Then it locks your stETH
     // in the queue. In exchange you receive an NFT, that represents your position in the queue
-    allow.mainnet.lido.unsteth.requestWithdrawalsWstETH(undefined, c.avatar),
+    allow.mainnet.lido.unstEth.requestWithdrawalsWstETH(undefined, c.avatar),
     // When the unstETH has no allowance over the owner's wstETH
-    allow.mainnet.lido.unsteth.requestWithdrawalsWstETHWithPermit(
+    allow.mainnet.lido.unstEth.requestWithdrawalsWstETHWithPermit(
       undefined,
       c.avatar
     ),
 
     // Claim ETH - Once the request is finalized by the oracle report and becomes claimable,
     // this function claims your ether and burns the NFT
-    allow.mainnet.lido.unsteth.claimWithdrawal(),
-    allow.mainnet.lido.unsteth.claimWithdrawals(),
+    allow.mainnet.lido.unstEth.claimWithdrawal(),
+    allow.mainnet.lido.unstEth.claimWithdrawals(),
   ],
 }

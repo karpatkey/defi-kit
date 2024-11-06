@@ -3,8 +3,8 @@ import { applyPermissions } from "../../../test/helpers"
 import { avatar, member } from "../../../test/wallets"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
-import { testKit } from "../../../test/kit"
-import { parseEther } from "ethers/lib/utils"
+import { eth as kit } from "../../../test/kit"
+import { parseEther } from "ethers"
 
 describe("ankr", () => {
   describe("deposit", () => {
@@ -14,7 +14,7 @@ describe("ankr", () => {
 
     it("deposit ETH", async () => {
       await expect(
-        testKit.eth.ankr.ETH2_Staking.stakeAndClaimAethC({
+        kit.asMember.ankr.eth2Staking.stakeAndClaimAethC({
           value: parseEther("5"),
         })
       ).not.toRevert()
@@ -22,28 +22,28 @@ describe("ankr", () => {
 
     it("only withdraw with flash unstake to avatar", async () => {
       await expect(
-        testKit.eth.ankr.ankrETH.approve(
+        kit.asMember.ankr.ankrEth.approve(
           contracts.mainnet.ankr.flashUnstake,
           parseEther("1")
         )
       ).toBeAllowed()
       await expect(
-        testKit.eth.ankr.flashUnstake.swapEth(
+        kit.asMember.ankr.flashUnstake.swapEth(
           parseEther("0.000001"),
-          avatar._address
+          avatar.address
         )
       ).not.toRevert()
       await expect(
-        testKit.eth.ankr.flashUnstake.swapEth(
+        kit.asMember.ankr.flashUnstake.swapEth(
           parseEther("0.01"),
-          member._address
+          member.address
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     it("withdraw with standard unstake", async () => {
       await expect(
-        testKit.eth.ankr.ETH2_Staking.unstakeAETH(parseEther("1"))
+        kit.asMember.ankr.eth2Staking.unstakeAETH(parseEther("1"))
       ).not.toRevert()
     })
   })

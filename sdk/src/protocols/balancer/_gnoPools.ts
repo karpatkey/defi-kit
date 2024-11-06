@@ -465,6 +465,44 @@ export default [
     ],
   },
   {
+    bpt: "0xaa56989Be5E6267fC579919576948DB3e1F10807",
+    id: "0xaa56989be5e6267fc579919576948db3e1f108070002000000000000000000ca",
+    name: "ECLP-sDAI-USDC.e-rh",
+    type: "GyroE",
+    gauge: "0x9ED250d67c4E5F5B2b5F982a678eD1c0ba011207",
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+        id: "0x",
+      },
+      {
+        address: "0xf0E7eC247b918311afa054E0AEdb99d74c31b809",
+        symbol: "stataGnoUSDCe",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xAE2a38545167Be5A2EBa9B931B28DE5A7d95315e",
+    id: "0xae2a38545167be5a2eba9b931b28de5a7d95315e0002000000000000000000cc",
+    name: "50bCSPX-50sDAI",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x1e2C4fb7eDE391d116E6B41cD0608260e8801D59",
+        symbol: "bCSPX",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xbAd20c15A773bf03ab973302F61FAbceA5101f0A",
     id: "0xbad20c15a773bf03ab973302f61fabcea5101f0a000000000000000000000034",
     name: "bb-WETH-wstETH",
@@ -498,25 +536,6 @@ export default [
       {
         address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
         symbol: "sDAI",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xC5Df11757F4A8DFACcC731d13b9577f67055c6c6",
-    id: "0xc5df11757f4a8dfaccc731d13b9577f67055c6c6000200000000000000000077",
-    name: "B-50EURe-50GBPe",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
-        symbol: "GBPe",
-        id: "0x",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
         id: "0x",
       },
     ],
@@ -612,25 +631,6 @@ export default [
       {
         address: "0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252",
         symbol: "WBTC",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xEA54604e7E1DdEc8320cF838CFE857FbF44Aad9f",
-    id: "0xea54604e7e1ddec8320cf838cfe857fbf44aad9f000200000000000000000078",
-    name: "B-50GBPe-50WXDAI",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
-        symbol: "GBPe",
-        id: "0x",
-      },
-      {
-        address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
-        symbol: "WXDAI",
         id: "0x",
       },
     ],

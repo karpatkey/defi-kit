@@ -4,20 +4,22 @@ import {
   KnownContracts,
   calculateProxyAddress,
   deployAndSetUpModule,
-} from "@gnosis.pm/zodiac"
-import { encodeBytes32String } from "../src"
+} from "@gnosis-guild/zodiac"
 import { avatar, deployer, member, owner } from "./wallets"
-import { ethers } from "ethers"
+import { getProvider } from "./provider"
+import { AbiCoder, Contract, encodeBytes32String } from "ethers"
 
-export const testRoleKey = encodeBytes32String("TEST-ROLE")
+const defaultAbiCoder = AbiCoder.defaultAbiCoder()
+
+export const testRoleKey = encodeBytes32String("TEST-ROLE") as `0x${string}`
 
 const SALT =
   "0x0000000000000000000000000000000000000000000000000000000000000000"
 
-const predictRolesModAddress = () => {
-  const encodedInitParams = ethers.utils.defaultAbiCoder.encode(
+const predictRolesModAddress = async () => {
+  const encodedInitParams = defaultAbiCoder.encode(
     ["address", "address", "address"],
-    [owner._address, avatar._address, avatar._address]
+    [owner.address, avatar.address, avatar.address]
   )
 
   const moduleSetupData = ContractFactories[KnownContracts.ROLES_V2]
@@ -27,8 +29,8 @@ const predictRolesModAddress = () => {
   return calculateProxyAddress(
     ContractFactories[KnownContracts.FACTORY].connect(
       ContractAddresses[1][KnownContracts.FACTORY],
-      deployer
-    ),
+      await deployer.getSigner()
+    ) as unknown as Contract,
     ContractAddresses[1][KnownContracts.ROLES_V2],
     moduleSetupData,
     SALT
@@ -36,25 +38,26 @@ const predictRolesModAddress = () => {
 }
 
 export async function deployRolesMod() {
+  const deployerSigner = await deployer.getSigner()
   const { expectedModuleAddress, transaction } = await deployAndSetUpModule(
     KnownContracts.ROLES_V2,
     {
       types: ["address", "address", "address"],
-      values: [owner._address, avatar._address, avatar._address],
+      values: [owner.address, avatar.address, avatar.address],
     },
-    deployer.provider,
-    await deployer.getChainId(),
+    deployerSigner.provider,
+    Number((await getProvider().getNetwork()).chainId),
     SALT
   )
 
-  if (expectedModuleAddress !== predictRolesModAddress()) {
+  if (expectedModuleAddress !== (await predictRolesModAddress())) {
     throw new Error(
       `Roles mod address deployment unexpected, expected ${predictRolesModAddress()}, actual: ${expectedModuleAddress}`
     )
   }
 
   try {
-    await deployer.sendTransaction(transaction)
+    await deployerSigner.sendTransaction(transaction)
   } catch (e) {
     console.error(e)
   }
@@ -62,19 +65,19 @@ export async function deployRolesMod() {
   console.log("Roles mod deployed at", expectedModuleAddress)
 }
 
-export const getRolesMod = () => {
+export const getRolesMod = async () => {
   return ContractFactories[KnownContracts.ROLES_V2].connect(
-    predictRolesModAddress(),
-    owner
+    await predictRolesModAddress(),
+    await owner.getSigner()
   )
 }
 
 export async function setupRole() {
-  const rolesMod = getRolesMod()
+  const rolesMod = await getRolesMod()
   await rolesMod.assignRoles(
-    member._address,
+    member.address,
     [encodeBytes32String("TEST-ROLE")],
     [true]
   )
-  console.log("Created TEST-ROLE role with member:", member._address)
+  console.log("Created TEST-ROLE role with member:", member.address)
 }

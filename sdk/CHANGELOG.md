@@ -1,5 +1,51 @@
 # Changelog
 
+## [2.1.1](https://github.com/karpatkey/defi-kit/compare/v2.1.0...v2.1.1) (2024-11-04)
+
+
+### Bug Fixes
+
+* api schema ([#292](https://github.com/karpatkey/defi-kit/issues/292)) ([2331ec8](https://github.com/karpatkey/defi-kit/commit/2331ec817eab8d101b586c4dbdc8bddef2a4c504))
+
+## [2.1.0](https://github.com/karpatkey/defi-kit/compare/v2.0.3...v2.1.0) (2024-11-04)
+
+
+### Features
+
+* Aave v3 extended to Arbitrum and Deployments updates / Refactoring / Allow using test kits for other chains ([#288](https://github.com/karpatkey/defi-kit/issues/288)) ([a6b5125](https://github.com/karpatkey/defi-kit/commit/a6b51259cdfdddaa5e9c83fa7794e81e74b52734))
+
+## [2.0.3](https://github.com/karpatkey/defi-kit/compare/v2.0.2...v2.0.3) (2024-11-04)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#289](https://github.com/karpatkey/defi-kit/issues/289)) ([c8c4f8b](https://github.com/karpatkey/defi-kit/commit/c8c4f8b8b0f38b2c2b9236eeb2299016d418ebe7))
+
+## [2.0.2](https://github.com/karpatkey/defi-kit/compare/v2.0.1...v2.0.2) (2024-11-01)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#277](https://github.com/karpatkey/defi-kit/issues/277)) ([281ff12](https://github.com/karpatkey/defi-kit/commit/281ff1280743276f2f3245d1444f9564c73335fe))
+
+## [2.0.1](https://github.com/karpatkey/defi-kit/compare/v2.0.0...v2.0.1) (2024-10-31)
+
+
+### Bug Fixes
+
+* export to tx-builder helper function ([#282](https://github.com/karpatkey/defi-kit/issues/282)) ([4480b1a](https://github.com/karpatkey/defi-kit/commit/4480b1ad154d6116948753ea2454046712860b36))
+
+## [2.0.0](https://github.com/karpatkey/defi-kit/compare/v1.15.2...v2.0.0) (2024-10-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade ethers & roles sdk  ([#278](https://github.com/karpatkey/defi-kit/issues/278))
+
+### Miscellaneous Chores
+
+* upgrade ethers & roles sdk  ([#278](https://github.com/karpatkey/defi-kit/issues/278)) ([f187647](https://github.com/karpatkey/defi-kit/commit/f18764771bebb3dd064247c243c32442365501d4))
+
 ## [1.15.2](https://github.com/karpatkey/defi-kit/compare/v1.15.1...v1.15.2) (2024-10-17)
 
 

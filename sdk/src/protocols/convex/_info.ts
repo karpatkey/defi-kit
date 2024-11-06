@@ -2549,4 +2549,25 @@ export default [
     cvxDepositToken: "0xaF8EAb48441CB4F5c3Ae680F21B7C82394eEbdB9",
     rewarder: "0xe499B4e0E2203D3d6E2879AB9091388f4E301167",
   },
+  {
+    name: "hETHWETH",
+    id: "391",
+    crvLPToken: "0x1f7e9321CE32Af1F9EA1185fD10D31Fea31FFD95",
+    cvxDepositToken: "0x828E2fAF82C25Ca867a1392e79206F94c9e3fcdA",
+    rewarder: "0x9AB157bfaD66De1aE0eFf4802895dD9C8B755e25",
+  },
+  {
+    name: "cbBTC-WBTC",
+    id: "392",
+    crvLPToken: "0x839d6bDeDFF886404A6d7a788ef241e4e28F4802",
+    cvxDepositToken: "0xe0b1a458f01331CE68E5FDd0BaC8ac391887dc14",
+    rewarder: "0xEd211Ec6F81f3516Ef6c5DFaC6CF09cD33A6Dff3",
+  },
+  {
+    name: "USRRLP",
+    id: "393",
+    crvLPToken: "0xC907ba505C2E1cbc4658c395d4a2c7E6d2c32656",
+    cvxDepositToken: "0x7dC9d935059782D118099EDA88C35FDF7cD93EA7",
+    rewarder: "0xc2892644C2d17C0C348ac7f4487353c0E9eE4F42",
+  },
 ] as const

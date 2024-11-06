@@ -1,4 +1,4 @@
-import { getAddress } from "ethers/lib/utils"
+import { getAddress } from "ethers"
 import { z } from "zod"
 import { extendZodWithOpenApi } from "@asteasolutions/zod-to-openapi"
 
