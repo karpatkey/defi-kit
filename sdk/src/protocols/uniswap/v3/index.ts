@@ -7,7 +7,7 @@ import { c, Permission } from "zodiac-roles-sdk"
 import ethInfo from "./_ethInfo"
 import { NotFoundError } from "../../../errors"
 
-const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
+const zeroAddress = "0x0000000000000000000000000000000000000000"
 
 const FeeMapping: { [key: string]: number } = {
   "0.01%": 100,
@@ -112,7 +112,7 @@ export const eth = {
         allow.mainnet.uniswapV3.positionsNft.unwrapWETH9(undefined, c.avatar),
         allow.mainnet.uniswapV3.positionsNft.collect({
           tokenId: nftIds ? oneOf(nftIds) : undefined,
-          recipient: ZERO_ADDRESS,
+          recipient: zeroAddress,
         }),
         allow.mainnet.uniswapV3.positionsNft.sweepToken(
           undefined,

@@ -10,7 +10,7 @@ import { Status } from "../../../../test/types"
 import { eth as kit } from "../../../../test/kit"
 import { parseEther } from "ethers"
 
-describe("aave_v2", () => {
+describe("aaveV2", () => {
   describe("stake", () => {
     beforeAll(async () => {
       await applyPermissions(

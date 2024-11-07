@@ -6,9 +6,8 @@ import { parseUnits, parseEther } from "ethers"
 import { eth as kit } from "../../../../test/kit"
 import { mintNFT, getPosition, calculateAmounts } from "./testUtils"
 
-const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-const STEAL_ADDRESS = "0x8eb8a3b98659cce290402893d0123abb75e3ab28"
-const COLLECT_MAX_AMOUNT = 340282366920938463463374607431768211455n
+const stealAddress = "0x8eb8a3b98659cce290402893d0123abb75e3ab28"
+const collectMaxAmount = 340282366920938463463374607431768211455n
 
 describe("uniswapV3", () => {
   describe("deposit", () => {
@@ -17,7 +16,6 @@ describe("uniswapV3", () => {
 
       const nftId = await mintNFT(
         contracts.mainnet.usdc,
-        // E_ADDRESS, No ETH sending allowed.
         contracts.mainnet.weth,
         3000,
         0n,
@@ -73,7 +71,7 @@ describe("uniswapV3", () => {
       await stealErc20(
         contracts.mainnet.usdc,
         parseUnits("50000", 6),
-        STEAL_ADDRESS
+        stealAddress
       )
       await expect(
         kit.asMember.usdc.approve(
@@ -153,55 +151,19 @@ describe("uniswapV3", () => {
       await expect(
         kit.asMember.uniswapV3.positionsNft.collect({
           tokenId: nftId,
-          amount0Max: COLLECT_MAX_AMOUNT,
-          amount1Max: COLLECT_MAX_AMOUNT,
+          amount0Max: collectMaxAmount,
+          amount1Max: collectMaxAmount,
           recipient: avatar.address,
         })
       ).not.toRevert()
       await expect(
         kit.asMember.uniswapV3.positionsNft.collect({
           tokenId: nftId,
-          amount0Max: COLLECT_MAX_AMOUNT,
-          amount1Max: COLLECT_MAX_AMOUNT,
+          amount0Max: collectMaxAmount,
+          amount1Max: collectMaxAmount,
           recipient: member.address,
         })
       ).toBeForbidden()
     })
-
-    // No ETH sending allowed.
-    // it("decrease liquidity and collect using ETH", async () => {
-    //   const nftId = await kit.asAvatar.uniswapV3.positionsNft.tokenOfOwnerByIndex(
-    //     avatar.address,
-    //     0
-    //   )
-    //   const position = await getPosition(nftId)
-    //   await expect(
-    //     kit.asMember.uniswapV3.positionsNft.decreaseLiquidity({
-    //       tokenId: nftId,
-    //       liquidity: position[7],
-    //       amount0Min: 0,
-    //       amount1Min: 0,
-    //       deadline: Math.floor(new Date().getTime() / 1000) + 1800,
-    //     })
-    //   ).not.toRevert()
-    //   await expect(
-    //     kit.asMember.uniswapV3.positionsNft.collect({
-    //       tokenId: nftId,
-    //       amount0Max: COLLECT_MAX_AMOUNT,
-    //       amount1Max: COLLECT_MAX_AMOUNT,
-    //       recipient: ZERO_ADDRESS,
-    //     })
-    //   ).not.toRevert()
-    // await expect(
-    //   kit.asMember.uniswapV3.positionsNft.unwrapWETH9(0, avatar.address)
-    // ).not.toRevert()
-    // await expect(
-    //   kit.asMember.uniswapV3.positionsNft.sweepToken(
-    //     contracts.mainnet.usdc,
-    //     0,
-    //     avatar.address
-    //   )
-    // ).not.toRevert()
-    // })
   })
 })

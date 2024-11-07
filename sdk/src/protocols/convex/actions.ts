@@ -4,9 +4,9 @@ import { Pool, StakeToken } from "./types"
 import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 
-export const CRV = "0xD533a949740bb3306d119CC777fa900bA034cd52"
-export const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
-export const CVX = "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b"
+export const crv = "0xD533a949740bb3306d119CC777fa900bA034cd52"
+export const zeroAddress = "0x0000000000000000000000000000000000000000"
+export const cvx = "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b"
 
 export const deposit = (pool: Pool) => {
   const permissions: Permission[] = [
@@ -44,7 +44,7 @@ export const stake = (token: StakeToken): Permission[] => {
   switch (token.symbol) {
     case "cvxCRV":
       permissions.push(
-        ...allowErc20Approve([CRV], [contracts.mainnet.convex.crvDepositor]),
+        ...allowErc20Approve([crv], [contracts.mainnet.convex.crvDepositor]),
         ...allowErc20Approve(
           [contracts.mainnet.convex.cvxCrv],
           [contracts.mainnet.convex.stkCvxCrv]
@@ -54,7 +54,7 @@ export const stake = (token: StakeToken): Permission[] => {
         allow.mainnet.convex.crvDepositor["deposit(uint256,bool,address)"](
           undefined,
           undefined,
-          c.or(ZERO_ADDRESS, contracts.mainnet.convex.stkCvxCrv)
+          c.or(zeroAddress, contracts.mainnet.convex.stkCvxCrv)
         ),
         allow.mainnet.convex.stkCvxCrv.withdraw(),
         allow.mainnet.convex.stkCvxCrv.setRewardWeight(),
@@ -63,7 +63,7 @@ export const stake = (token: StakeToken): Permission[] => {
       break
     case "CVX":
       permissions.push(
-        ...allowErc20Approve([CVX], [contracts.mainnet.convex.cvxRewardPool]),
+        ...allowErc20Approve([cvx], [contracts.mainnet.convex.cvxRewardPool]),
         allow.mainnet.convex.cvxRewardPool.stake(),
         allow.mainnet.convex.cvxRewardPool.withdraw(),
         allow.mainnet.convex.cvxRewardPool["getReward(bool)"]()
@@ -76,7 +76,7 @@ export const stake = (token: StakeToken): Permission[] => {
 
 export const lock = (): Permission[] => {
   return [
-    ...allowErc20Approve([CVX], [contracts.mainnet.convex.vlCvx]),
+    ...allowErc20Approve([cvx], [contracts.mainnet.convex.vlCvx]),
     allow.mainnet.convex.vlCvx.lock(c.avatar),
     allow.mainnet.convex.vlCvx.processExpiredLocks(),
     allow.mainnet.convex.vlCvx["getReward(address,bool)"](c.avatar),

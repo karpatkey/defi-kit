@@ -6,7 +6,7 @@ import { Status } from "../../../../test/types"
 import { arb1 as kit } from "../../../../test/kit"
 import { parseEther } from "ethers"
 
-describe("aave_v3", () => {
+describe("aaveV3", () => {
   describe("deposit", () => {
     beforeAll(async () => {
       await applyPermissions(await arb1.deposit({ targets: ["ETH", "WETH"] }))

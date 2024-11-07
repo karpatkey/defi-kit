@@ -51,13 +51,13 @@ jobs:
             balancer,
             compound,
             convex,
-            # cowswap,
+            cowSwap,
             lido,
             maker,
-            rocket_pool,
+            rocketPool,
             spark,
             stader,
-            stakewise,
+            stakeWise,
             uniswap,
           ]
     steps:

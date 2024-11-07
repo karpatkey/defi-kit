@@ -1,8 +1,6 @@
 import { Callout } from "nextra/components"
 
-# Compound v2
-
-https://compound.finance
+# Compound v2 on Ethereum
 
 **Deployments**
 
@@ -43,7 +41,7 @@ Approve `cToken` to spend `TARGET` tokens on behalf of the avatar.
 
 #### `cToken · mint`
 
-Deposit `TARGET` tokens and receive `cToken` tokens in exchange.
+Deposit `TARGET` and receive `cToken` tokens in exchange.
 
 - **Contract:** `cToken`
 - **Function:** `mint(uint256)`
@@ -76,7 +74,8 @@ Unset deposited asset as collateral.
 
 #### `cToken · redeem`
 
-Redeem `cToken` and withdraw `TARGET` (it is called when MAX underlying amount is withdrawn).
+Redeem `cToken` and withdraw `TARGET` tokens.<br/>
+This function is called when MAX underlying amount is withdrawn.
 
 - **Contract:** `cToken`
 - **Function:** `redeem(uint256)`
@@ -87,7 +86,7 @@ Redeem `cToken` and withdraw `TARGET` (it is called when MAX underlying amount i
 
 #### `cToken · redeemUnderlying`
 
-Redeem `cToken` and withdraw `TARGET`.
+Redeem `cToken` and withdraw `TARGET` tokens.
 
 - **Contract:** `cToken`
 - **Function:** `redeemUnderlying(uint256)`
@@ -147,7 +146,8 @@ Unset deposited asset as collateral.
 
 #### `cETH · redeem`
 
-Redeem `cETH` and withdraw ETH (it is called when MAX underlying amount is withdrawn).
+Redeem `cETH` and withdraw ETH tokens.<br/>
+This functions is called when MAX underlying amount is withdrawn.
 
 - **Contract:** `cETH`
 - **Function:** `redeem(uint256)`
@@ -158,7 +158,7 @@ Redeem `cETH` and withdraw ETH (it is called when MAX underlying amount is withd
 
 #### `cETH · redeemUnderlying`
 
-Redeem `cETH` and withdraw ETH.
+Redeem `cETH` and withdraw ETH tokens.
 
 - **Contract:** `cETH`
 - **Function:** `redeemUnderlying(uint256)`

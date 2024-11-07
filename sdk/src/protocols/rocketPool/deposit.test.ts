@@ -12,15 +12,15 @@ describe("rocketPool", () => {
     })
 
     it("query pool", async () => {
-      const deposit_pool = await queryDepositPool()
-      console.log("Deposit Pool: ", deposit_pool)
+      const depositPool = await queryDepositPool()
+      console.log("Deposit Pool: ", depositPool)
     })
 
     it("deposit and withdraw through deposit pool", async () => {
-      const deposit_amount =
+      const depositAmount =
         await kit.asAvatar.rocketPool.depositPool.getMaximumDepositAmount()
 
-      if (deposit_amount > 0n) {
+      if (depositAmount > 0n) {
         await expect(
           kit.asMember.rocketPool.depositPool.deposit({
             value: parseEther("1"),

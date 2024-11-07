@@ -1,11 +1,11 @@
 import { eth } from "."
 import {
-  BAL,
-  B_80BAL_20WETH,
-  B_80BAL_20WETH_PID,
-  bb_a_USD_v1,
-  bb_a_USD_v2,
-  bb_a_USD_v3,
+  bal,
+  b80Bal20Weth,
+  b80Bal20WethPid,
+  bbaUsdV1,
+  bbaUsdV2,
+  bbaUsdV3,
 } from "./actions"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
@@ -23,11 +23,11 @@ describe("balancer", () => {
     it("deposit and withdraw from B-80BAL-20WETH pool", async () => {
       await expect(
         kit.asMember.balancer.vault.joinPool(
-          B_80BAL_20WETH_PID,
+          b80Bal20WethPid,
           avatar.address,
           avatar.address,
           {
-            assets: [BAL, ZeroAddress],
+            assets: [bal, ZeroAddress],
             maxAmountsIn: [0, parseEther("100")],
             userData:
               "0x000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000056bc75e2d63100000",
@@ -39,11 +39,11 @@ describe("balancer", () => {
 
       await expect(
         kit.asMember.balancer.vault.exitPool(
-          B_80BAL_20WETH_PID,
+          b80Bal20WethPid,
           avatar.address,
           avatar.address,
           {
-            assets: [BAL, contracts.mainnet.weth],
+            assets: [bal, contracts.mainnet.weth],
             minAmountsOut: [0, 0],
             userData:
               "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001",
@@ -58,7 +58,7 @@ describe("balancer", () => {
         Math.floor(new Date().getTime() / 1000) + 30 * 24 * 60 * 60
       await expect(
         kit.asMember.usdc
-          .attach(B_80BAL_20WETH)
+          .attach(b80Bal20Weth)
           .approve(contracts.mainnet.balancer.veBal, parseEther("200"))
       ).not.toRevert()
 
@@ -98,20 +98,20 @@ describe("balancer", () => {
       // Claim only with avatar as user
       await expect(
         kit.asMember.balancer.feeDistributor.claimTokens(avatar.address, [
-          bb_a_USD_v1,
-          bb_a_USD_v2,
-          bb_a_USD_v3,
-          BAL,
+          bbaUsdV1,
+          bbaUsdV2,
+          bbaUsdV3,
+          bal,
           contracts.mainnet.usdc,
         ])
       ).not.toRevert()
 
       await expect(
         kit.asMember.balancer.feeDistributor.claimTokens(member.address, [
-          bb_a_USD_v1,
-          bb_a_USD_v2,
-          bb_a_USD_v3,
-          BAL,
+          bbaUsdV1,
+          bbaUsdV2,
+          bbaUsdV3,
+          bal,
           contracts.mainnet.usdc,
         ])
       ).toBeForbidden(Status.ParameterNotAllowed)

@@ -6,7 +6,7 @@ import { getProvider } from "../../../test/provider"
 import { contracts } from "../../../eth-sdk/config"
 import { eth as kit } from "../../../test/kit"
 
-describe("cowswap", () => {
+describe("cowSwap", () => {
   describe("swap", () => {
     const appData = '{"version":"0.9.0","metadata":{}}'
     const testOrder = {

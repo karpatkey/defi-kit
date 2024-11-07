@@ -6,7 +6,7 @@ import { Status } from "../../../../test/types"
 import { eth as kit } from "../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 
-describe("aave_v3", () => {
+describe("aaveV3", () => {
   describe("borrow", () => {
     beforeAll(async () => {
       await applyPermissions(await eth.deposit({ targets: ["ETH", "USDC"] }))

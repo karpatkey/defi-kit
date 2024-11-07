@@ -6,7 +6,7 @@ import { eth as kit } from "../../../../test/kit"
 
 const DELEGATEE = "0x849D52316331967b6fF1198e5E32A0eB168D039d"
 
-describe("aave_v2", () => {
+describe("aaveV2", () => {
   describe("delegate", () => {
     beforeAll(async () => {
       await applyPermissions(

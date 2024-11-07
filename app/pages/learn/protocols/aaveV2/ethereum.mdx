@@ -1,8 +1,6 @@
 import { Callout } from "nextra/components"
 
-# Aave v2
-
-https://aave.com
+# Aave v2 on Ethereum
 
 **Deployments**
 
@@ -11,6 +9,8 @@ https://aave.com
 | `AaveLendingPoolV2`     | [0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9](https://etherscan.io/address/0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9) |
 | `WrappedTokenGatewayV2` | [0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31](https://etherscan.io/address/0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31) |
 | `aWETH`                 | [0x030bA81f1c18d280636F32af80b9AAd02Cf0854e](https://etherscan.io/address/0x030bA81f1c18d280636F32af80b9AAd02Cf0854e) |
+| `variableDebtWETH`      | [0xF63B34710400CAd3e044cFfDcAb00a0f32E33eCf](https://etherscan.io/address/0xF63B34710400CAd3e044cFfDcAb00a0f32E33eCf) |
+| `stableDebtWETH`        | [0x4e977830ba4bd783C0BB7F15d3e243f73FF57121](https://etherscan.io/address/0x4e977830ba4bd783C0BB7F15d3e243f73FF57121) |
 | `AAVE`                  | [0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9](https://etherscan.io/address/0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9) |
 | `stkAAVE`               | [0x4da27a545c0c5b758a6ba100e3a049001de870f5](https://etherscan.io/address/0x4da27a545c0c5b758a6ba100e3a049001de870f5) |
 | `ABPTV2`                | [0x3de27EFa2F1AA663Ae5D458857e731c129069F29](https://etherscan.io/address/0x3de27EFa2F1AA663Ae5D458857e731c129069F29) |
@@ -64,7 +64,7 @@ Approve `WrappedTokenGatewayV2` to spend `aWETH` tokens on behalf of the avatar.
 
 #### `AaveLendingPoolV2 · deposit`
 
-Deposit `TARGET` tokens to the Aave lending pool and receive `aToken` tokens in exchange.
+Deposit `TARGET` and receive `aToken` tokens in exchange.
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `deposit(address,uint256,address,uint16)`
@@ -90,7 +90,7 @@ Set/unset deposited asset as collateral.
 
 #### `AaveLendingPoolV2 · withdraw`
 
-Redeem `aToken` and withdraw `TARGET`.
+Redeem `aToken` and withdraw `TARGET` tokens.
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `withdraw(address,uint256,address)`
@@ -119,7 +119,7 @@ Approve `WrappedTokenGatewayV2` to spend `aWETH` tokens on behalf of the avatar.
 
 #### `WrappedTokenGatewayV2 · depositETH`
 
-Deposit ETH and receive `aWETH` in exchange.
+Deposit ETH and receive `aWETH` tokens in exchange.
 
 - **Contract:** `WrappedTokenGatewayV2`
 - **Function:** `depositETH(address,address,uint16)` Ξ _allow sending ETH_
@@ -144,7 +144,7 @@ Set/unset deposited asset as collateral.
 
 #### `WrappedTokenGatewayV2 · withdrawETH`
 
-Redeem `aWETH` and withdraw ETH.
+Redeem `aWETH` and withdraw ETH tokens.
 
 - **Contract:** `WrappedTokenGatewayV2`
 - **Function:** `withdrawETH(address,uint256,address)`
@@ -186,7 +186,7 @@ Approve `AaveLendingPoolV2` to spend `TARGET` tokens on behalf of the avatar.
 
 #### `AaveLendingPoolV2 · borrow`
 
-Receive `TARGET` tokens and receive `debtToken` (stable or variable debt).
+Receive `TARGET` and `debtToken` (stable or variable debt) tokens.
 
 - **Contract:** `AaveLendingPoolV2`
 - **Function:** `borrow(address,uint256,uint256,uint16,address)`
@@ -231,7 +231,7 @@ For `"ETH"` as an element of `targets`, the following functions are allowed:
 
 #### `variableDebtWETH · approveDelegation`
 
-Set the amount of allowance for `WrappedTokenGatewayV2` to borrow of `variableDebtWETH`.
+Set the amount of allowance for `WrappedTokenGatewayV2` to borrow `variableDebtWETH` tokens.
 
 - **Contract:** `variableDebtWETH`
 - **Function:** `approveDelegation(address,uint256)`
@@ -243,7 +243,7 @@ Set the amount of allowance for `WrappedTokenGatewayV2` to borrow of `variableDe
 
 #### `stableDebtWETH · approveDelegation`
 
-Set the amount of allowance for `WrappedTokenGatewayV2` to borrow of `stableDebtWETH`.
+Set the amount of allowance for `WrappedTokenGatewayV2` to borrow `stableDebtWETH` tokens.
 
 - **Contract:** `stableDebtWETH`
 - **Function:** `approveDelegation(address,uint256)`
@@ -255,7 +255,7 @@ Set the amount of allowance for `WrappedTokenGatewayV2` to borrow of `stableDebt
 
 #### `WrappedTokenGatewayV2 · borrowETH`
 
-Receive ETH and `debtETH` (stable or variable debt) token.
+Receive ETH and `debtETH` (stable or variable debt) tokens.
 
 - **Contract:** `WrappedTokenGatewayV2`
 - **Function:** `borrowETH(address,uint256,uint256,uint16)`

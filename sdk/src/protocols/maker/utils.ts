@@ -1,7 +1,6 @@
 import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { NotFoundError } from "../../errors"
 import ilks from "./_info"
-import { Ilk } from "./types"
 import { ethProvider } from "../../provider"
 import { getProvider } from "../../../test/provider"
 

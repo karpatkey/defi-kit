@@ -1,5 +1,5 @@
 import { eth } from "."
-import { CRV, CVX, ZERO_ADDRESS } from "./actions"
+import { crv, cvx, zeroAddress } from "./actions"
 import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
@@ -7,7 +7,7 @@ import { Status } from "../../../test/types"
 import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 
-const cvxCRV = "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7"
+const cvxCrv = "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7"
 
 describe("convex", () => {
   describe("stake", () => {
@@ -15,10 +15,10 @@ describe("convex", () => {
       await applyPermissions(await eth.stake({ targets: ["CVX", "cvxCRV"] }))
     })
     it("convert CRV to cvxCRV", async () => {
-      await stealErc20(CRV, parseEther("2"), contracts.mainnet.balancer.vault)
+      await stealErc20(crv, parseEther("2"), contracts.mainnet.balancer.vault)
       await expect(
         kit.asMember.usdc
-          .attach(CRV)
+          .attach(crv)
           .approve(contracts.mainnet.convex.crvDepositor, parseEther("2"))
       ).not.toRevert()
 
@@ -34,7 +34,7 @@ describe("convex", () => {
         kit.asMember.convex.crvDepositor["deposit(uint256,bool,address)"](
           parseEther("1"),
           false,
-          ZERO_ADDRESS
+          zeroAddress
         )
       ).not.toRevert()
     })
@@ -42,7 +42,7 @@ describe("convex", () => {
     it("stake and withdraw cvxCRV / set rewards weight and claim", async () => {
       await expect(
         kit.asMember.usdc
-          .attach(cvxCRV)
+          .attach(cvxCrv)
           .approve(contracts.mainnet.convex.stkCvxCrv, parseEther("1"))
       ).not.toRevert()
       // Using cvxCRV
@@ -50,10 +50,10 @@ describe("convex", () => {
         kit.asMember.convex.stkCvxCrv.stake(parseEther("1"), avatar.address)
       ).not.toRevert()
 
-      await stealErc20(CRV, parseEther("1"), contracts.mainnet.balancer.vault)
+      await stealErc20(crv, parseEther("1"), contracts.mainnet.balancer.vault)
       await expect(
         kit.asMember.usdc
-          .attach(CRV)
+          .attach(crv)
           .approve(contracts.mainnet.convex.crvDepositor, parseEther("1"))
       ).not.toRevert()
       // Using CRV
@@ -83,10 +83,10 @@ describe("convex", () => {
     }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
 
     it("stake and withdraw CVX / claim rewards", async () => {
-      await stealErc20(CVX, parseEther("1"), contracts.mainnet.balancer.vault)
+      await stealErc20(cvx, parseEther("1"), contracts.mainnet.balancer.vault)
       await expect(
         kit.asMember.usdc
-          .attach(CVX)
+          .attach(cvx)
           .approve(contracts.mainnet.convex.cvxRewardPool, parseEther("1"))
       ).not.toRevert()
 
