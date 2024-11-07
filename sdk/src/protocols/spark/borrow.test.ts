@@ -1,9 +1,6 @@
 import { eth } from "."
 import { avatar, member } from "../../../test/wallets"
-import {
-  applyPermissions,
-  stealErc20,
-} from "../../../test/helpers"
+import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { eth as kit } from "../../../test/kit"

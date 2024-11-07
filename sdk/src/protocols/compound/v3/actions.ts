@@ -176,10 +176,7 @@ export const borrow = (comet: Comet) => {
       allow.mainnet.compoundV3.mainnetBulker.invoke(
         // TODO this does not work, since the type trees are different (Roles mod will raise an integrity check error when applying)
         c.every(
-          c.or(
-            c.eq(actionSupplyNativeToken),
-            c.eq(actionWithdrawNativeToken)
-          )
+          c.or(c.eq(actionSupplyNativeToken), c.eq(actionWithdrawNativeToken))
         ),
         c.every(
           c.abiEncodedMatches(

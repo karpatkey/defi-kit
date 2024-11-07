@@ -115,7 +115,10 @@ export const stake = (chain: Chain, pool: Pool) => {
 
 export const lock = (): Permission[] => {
   return [
-    ...allowErc20Approve([bal, contracts.mainnet.weth], [contracts.mainnet.balancer.vault]),
+    ...allowErc20Approve(
+      [bal, contracts.mainnet.weth],
+      [contracts.mainnet.balancer.vault]
+    ),
     ...allowErc20Approve([b80Bal20Weth], [contracts.mainnet.balancer.veBal]),
     allow.mainnet.balancer.vault.joinPool(
       b80Bal20WethPid,
@@ -124,11 +127,7 @@ export const lock = (): Permission[] => {
       undefined,
       { send: true }
     ),
-    allow.mainnet.balancer.vault.exitPool(
-      b80Bal20WethPid,
-      c.avatar,
-      c.avatar
-    ),
+    allow.mainnet.balancer.vault.exitPool(b80Bal20WethPid, c.avatar, c.avatar),
     // As Safes are smart contracts they are not allowed to lock veBAL
     // if the they are not whitelisted previously by Balancer:
     // https://forum.balancer.fi/t/allow-for-gnosis-safe-to-be-used-for-vebal-locking/2698
