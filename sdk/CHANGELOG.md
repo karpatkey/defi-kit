@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/karpatkey/defi-kit/compare/v2.1.2...v2.2.0) (2024-11-08)
+
+
+### Features
+
+* Cross chain docs / Refactoring ([#279](https://github.com/karpatkey/defi-kit/issues/279)) ([f4cc81a](https://github.com/karpatkey/defi-kit/commit/f4cc81add16d74ae81552b6259966ceda8ec6cd6))
+
 ## [2.1.2](https://github.com/karpatkey/defi-kit/compare/v2.1.1...v2.1.2) (2024-11-08)
 
 
