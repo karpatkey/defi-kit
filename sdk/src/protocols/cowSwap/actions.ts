@@ -61,14 +61,14 @@ export const swap = async (
   permissions.push(
     ...allowErc20Approve(updatedSell as `0x${string}`[], [gpV2VaultRelayer]),
 
-    allow.mainnet.cowswap.orderSigner.signOrder(
+    allow.mainnet.cowSwap.orderSigner.signOrder(
       orderStructScoping,
       undefined,
       feeAmountBp !== undefined ? c.lte(feeAmountBp) : undefined,
       { delegatecall: true }
     ),
 
-    allow.mainnet.cowswap.orderSigner.unsignOrder(undefined, {
+    allow.mainnet.cowSwap.orderSigner.unsignOrder(undefined, {
       delegatecall: true,
     })
   )

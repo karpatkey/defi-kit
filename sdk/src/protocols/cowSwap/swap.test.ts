@@ -45,7 +45,7 @@ describe("cowSwap", () => {
 
     it("it only allows swapping the specified token pair", async () => {
       await expect(
-        kit.asMember.cowswap.orderSigner.signOrder.delegateCall(
+        kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
           testOrder,
           testOrderValidDuration,
           testOrderFeeAmountBP
@@ -53,7 +53,7 @@ describe("cowSwap", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.cowswap.orderSigner.signOrder.delegateCall(
+        kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
           {
             ...testOrder,
             sellToken: contracts.mainnet.weth,
@@ -67,7 +67,7 @@ describe("cowSwap", () => {
 
     it("allows cancelling orders", async () => {
       await expect(
-        kit.asMember.cowswap.orderSigner.unsignOrder.delegateCall(testOrder)
+        kit.asMember.cowSwap.orderSigner.unsignOrder.delegateCall(testOrder)
       ).not.toRevert()
     })
   })
