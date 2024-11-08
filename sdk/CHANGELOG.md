@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/karpatkey/defi-kit/compare/v2.2.0...v2.2.1) (2024-11-08)
+
+
+### Bug Fixes
+
+* Naming ([#297](https://github.com/karpatkey/defi-kit/issues/297)) ([57c76b3](https://github.com/karpatkey/defi-kit/commit/57c76b3d59a526a5cca53988b0a7ad763e0f6857))
+
 ## [2.2.0](https://github.com/karpatkey/defi-kit/compare/v2.1.2...v2.2.0) (2024-11-08)
 
 
