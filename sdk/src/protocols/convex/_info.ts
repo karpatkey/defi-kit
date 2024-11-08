@@ -2570,4 +2570,11 @@ export default [
     cvxDepositToken: "0x7dC9d935059782D118099EDA88C35FDF7cD93EA7",
     rewarder: "0xc2892644C2d17C0C348ac7f4487353c0E9eE4F42",
   },
+  {
+    name: "alETHpxETH",
+    id: "394",
+    crvLPToken: "0x30bf3E17CAD0baF1d6B64079Ec219808d2708fEb",
+    cvxDepositToken: "0xd68bAb1aEC631Ec36Bab7148B1fCEC457A240082",
+    rewarder: "0x7AC80c1a7633071fD5598c4fc5A6DEAb422cb60E",
+  },
 ] as const
