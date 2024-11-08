@@ -10,7 +10,6 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xa818F1B57c201E092C4A2017A91815034326Efd1",
-    stableDebtTokenAddress: "0x0000000000000000000000000000000000000000",
     variableDebtTokenAddress: "0x0c0fce05F2314540EcB095bF4D069e5E0ED90fF8",
   },
   {
@@ -22,7 +21,6 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x23e4E76D01B2002BE436CE8d6044b0aA2f68B68a",
-    stableDebtTokenAddress: "0x0000000000000000000000000000000000000000",
     variableDebtTokenAddress: "0x9D881f67F20B49243c98f53d2B9E91E39d02Ae09",
   },
   {
@@ -34,7 +32,6 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xA1Fa064A85266E2Ca82DEe5C5CcEC84DF445760e",
-    stableDebtTokenAddress: "0x0000000000000000000000000000000000000000",
     variableDebtTokenAddress: "0xBc59E99198DbA71985A66E1713cC89FFEC53f7FC",
   },
   {
@@ -46,7 +43,6 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xc6B7AcA6DE8a6044E0e32d0c841a89244A10D284",
-    stableDebtTokenAddress: "0x0000000000000000000000000000000000000000",
     variableDebtTokenAddress: "0x5F6f7B0a87CA3CF3d0b431Ae03EF3305180BFf4d",
   },
   {
@@ -58,7 +54,6 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
-    stableDebtTokenAddress: "0x0000000000000000000000000000000000000000",
     variableDebtTokenAddress: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
   },
   {
@@ -70,7 +65,6 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xEdBC7449a9b594CA4E053D9737EC5Dc4CbCcBfb2",
-    stableDebtTokenAddress: "0x0000000000000000000000000000000000000000",
     variableDebtTokenAddress: "0xb96404e475f337A7E98e4a541C9b71309BB66c5A",
   },
   {
@@ -82,7 +76,6 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x7a5c3860a77a8DC1b225BD46d0fb2ac1C6D191BC",
-    stableDebtTokenAddress: "0x0000000000000000000000000000000000000000",
     variableDebtTokenAddress: "0x8Fe06E1D8Aff42Bf6812CacF7854A2249a00bED7",
   },
   {
@@ -94,7 +87,6 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xC0333cb85B59a788d8C7CAe5e1Fd6E229A3E5a65",
-    stableDebtTokenAddress: "0x0000000000000000000000000000000000000000",
     variableDebtTokenAddress: "0x37B9Ad6b5DC8Ad977AD716e92F49e9D200e58431",
   },
 ] as const
