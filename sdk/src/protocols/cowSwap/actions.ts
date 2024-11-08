@@ -4,8 +4,8 @@ import { allowErc20Approve, oneOf } from "../../conditions"
 import { c, Permission } from "zodiac-roles-sdk"
 import { getWrappedNativeToken } from "./utils"
 
-const GPv2VaultRelayer = "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
-const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+const gpV2VaultRelayer = "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
+const eAddress = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 
 export const swap = async (
   options: {
@@ -50,7 +50,7 @@ export const swap = async (
   )
   const updatedBuy =
     buy &&
-    buy.map((item) => (item === "ETH" || item === "XDAI" ? E_ADDRESS : item))
+    buy.map((item) => (item === "ETH" || item === "XDAI" ? eAddress : item))
 
   const orderStructScoping = {
     sellToken: oneOf(updatedSell),
@@ -59,16 +59,16 @@ export const swap = async (
   }
 
   permissions.push(
-    ...allowErc20Approve(updatedSell as `0x${string}`[], [GPv2VaultRelayer]),
+    ...allowErc20Approve(updatedSell as `0x${string}`[], [gpV2VaultRelayer]),
 
-    allow.mainnet.cowswap.orderSigner.signOrder(
+    allow.mainnet.cowSwap.orderSigner.signOrder(
       orderStructScoping,
       undefined,
       feeAmountBp !== undefined ? c.lte(feeAmountBp) : undefined,
       { delegatecall: true }
     ),
 
-    allow.mainnet.cowswap.orderSigner.unsignOrder(undefined, {
+    allow.mainnet.cowSwap.orderSigner.unsignOrder(undefined, {
       delegatecall: true,
     })
   )

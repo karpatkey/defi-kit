@@ -6,7 +6,7 @@ import { Status } from "../../../../test/types"
 import { eth as kit } from "../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 
-describe("aave_v2", () => {
+describe("aaveV2", () => {
   describe("deposit", () => {
     beforeAll(async () => {
       await applyPermissions(await eth.deposit({ targets: ["ETH", "USDC"] }))
@@ -59,11 +59,11 @@ describe("aave_v2", () => {
     })
 
     it("allow setting the deposited ETH as collateral", async () => {
-      let reserve_config: Array<any> =
+      let reserveConfig: Array<any> =
         await kit.asAvatar.aaveV2.protocolDataProviderV2.getReserveConfigurationData(
           contracts.mainnet.weth
         )
-      const collateralizable: boolean = reserve_config[5]
+      const collateralizable: boolean = reserveConfig[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(
@@ -134,11 +134,11 @@ describe("aave_v2", () => {
     })
 
     it("allow setting the deposited USDC as collateral", async () => {
-      let reserve_config: Array<any> =
+      let reserveConfig: Array<any> =
         await kit.asAvatar.aaveV2.protocolDataProviderV2.getReserveConfigurationData(
           contracts.mainnet.usdc
         )
-      const collateralizable: boolean = reserve_config[5]
+      const collateralizable: boolean = reserveConfig[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(

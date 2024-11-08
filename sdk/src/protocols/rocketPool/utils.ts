@@ -8,7 +8,7 @@ const sdk = getMainnetSdk(
 )
 
 export const queryDepositPool = async () => {
-  const deposit_pool_key = keccak256(
+  const depositPoolKey = keccak256(
     solidityPacked(
       ["string", "string"],
       ["contract.address", "rocketDepositPool"]
@@ -18,6 +18,6 @@ export const queryDepositPool = async () => {
   // TODO: we need this as any cast because typechain does not yet correctly generate the types for conflicting function names
   // (getAddress is a BaseContract member, so the full TypeChain would have to create the function member type under the full signature key)
   return (await (sdk.rocketPool.storage as any)["getAddress(bytes32)"](
-    deposit_pool_key
+    depositPoolKey
   )) as `0x${string}`
 }

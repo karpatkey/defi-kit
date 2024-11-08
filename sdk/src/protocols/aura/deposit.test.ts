@@ -1,17 +1,16 @@
 import { eth, gno } from "."
-import { AURA } from "./actions"
+import { aura } from "./actions"
 import { avatar, member } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { eth as kit } from "../../../test/kit"
-import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { parseEther } from "ethers"
 
-const b_50WETH_50AURA = "0xCfCA23cA9CA720B6E98E3Eb9B6aa0fFC4a5C08B9"
-const b_50WETH_50AURA_pid =
+const b50Weth50Aura = "0xCfCA23cA9CA720B6E98E3Eb9B6aa0fFC4a5C08B9"
+const b50Weth50AuraPid =
   "0xcfca23ca9ca720b6e98e3eb9b6aa0ffc4a5c08b9000200000000000000000274"
-const aura_50WETH_50AURA_rewarder = "0x1204f5060bE8b716F5A62b4Df4cE32acD01a69f5"
+const aura50Weth50AuraRewarder = "0x1204f5060bE8b716F5A62b4Df4cE32acD01a69f5"
 
 describe("aura", () => {
   describe("deposit", () => {
@@ -21,13 +20,13 @@ describe("aura", () => {
     })
     it("deposit and withdraw bpt from pool, only claim to avatar", async () => {
       await stealErc20(
-        b_50WETH_50AURA,
+        b50Weth50Aura,
         parseEther("1"),
         contracts.mainnet.aura.booster
       )
       await expect(
         kit.asMember.usdc
-          .attach(b_50WETH_50AURA)
+          .attach(b50Weth50Aura)
           .approve(contracts.mainnet.aura.booster, parseEther("1"))
       ).not.toRevert()
 
@@ -40,18 +39,18 @@ describe("aura", () => {
 
       await expect(
         kit.asMember.aura.rewarder
-          .attach(aura_50WETH_50AURA_rewarder)
+          .attach(aura50Weth50AuraRewarder)
           .withdrawAndUnwrap(parseEther("1"), false)
       ).not.toRevert()
 
       await expect(
         kit.asMember.aura.rewarder
-          .attach(aura_50WETH_50AURA_rewarder)
+          .attach(aura50Weth50AuraRewarder)
           ["getReward(address,bool)"](avatar.address, true)
       ).not.toRevert()
       await expect(
         kit.asMember.aura.rewarder
-          .attach(aura_50WETH_50AURA_rewarder)
+          .attach(aura50Weth50AuraRewarder)
           ["getReward(address,bool)"](member.address, true)
       ).toBeForbidden(Status.ParameterNotAllowed)
     }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
@@ -67,12 +66,12 @@ describe("aura", () => {
 
       await expect(
         kit.asMember.aura.rewardPoolDepositWrapper.depositSingle(
-          aura_50WETH_50AURA_rewarder,
+          aura50Weth50AuraRewarder,
           contracts.mainnet.weth,
           parseEther("1"),
-          b_50WETH_50AURA_pid,
+          b50Weth50AuraPid,
           {
-            assets: [contracts.mainnet.weth, AURA],
+            assets: [contracts.mainnet.weth, aura],
             maxAmountsIn: [parseEther("1"), 0],
             userData:
               "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000000000000000000",
@@ -83,12 +82,12 @@ describe("aura", () => {
 
       await expect(
         kit.asMember.aura.rewardPoolDepositWrapper.depositSingle(
-          aura_50WETH_50AURA_rewarder,
+          aura50Weth50AuraRewarder,
           contracts.mainnet.usdc, // USDC not allowed
           parseEther("1"),
-          b_50WETH_50AURA_pid,
+          b50Weth50AuraPid,
           {
-            assets: [contracts.mainnet.weth, AURA],
+            assets: [contracts.mainnet.weth, aura],
             maxAmountsIn: [parseEther("1"), 0],
             userData:
               "0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000000000000000000",

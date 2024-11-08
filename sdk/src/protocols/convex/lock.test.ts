@@ -1,5 +1,5 @@
 import { eth } from "."
-import { CVX } from "./actions"
+import { cvx } from "./actions"
 import { avatar, member } from "../../../test/wallets"
 import {
   applyPermissions,
@@ -17,10 +17,10 @@ describe("convex", () => {
       await applyPermissions(await eth.lock())
     })
     it("only allow lock, process expired locks and claim to avatar", async () => {
-      await stealErc20(CVX, parseEther("1"), contracts.mainnet.balancer.vault)
+      await stealErc20(cvx, parseEther("1"), contracts.mainnet.balancer.vault)
       await expect(
         kit.asMember.usdc
-          .attach(CVX)
+          .attach(cvx)
           .approve(contracts.mainnet.convex.vlCvx, parseEther("1"))
       ).not.toRevert()
 

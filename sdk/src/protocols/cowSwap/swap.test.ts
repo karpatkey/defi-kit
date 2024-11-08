@@ -6,7 +6,7 @@ import { getProvider } from "../../../test/provider"
 import { contracts } from "../../../eth-sdk/config"
 import { eth as kit } from "../../../test/kit"
 
-describe("cowswap", () => {
+describe("cowSwap", () => {
   describe("swap", () => {
     const appData = '{"version":"0.9.0","metadata":{}}'
     const testOrder = {
@@ -45,7 +45,7 @@ describe("cowswap", () => {
 
     it("it only allows swapping the specified token pair", async () => {
       await expect(
-        kit.asMember.cowswap.orderSigner.signOrder.delegateCall(
+        kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
           testOrder,
           testOrderValidDuration,
           testOrderFeeAmountBP
@@ -53,7 +53,7 @@ describe("cowswap", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.cowswap.orderSigner.signOrder.delegateCall(
+        kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
           {
             ...testOrder,
             sellToken: contracts.mainnet.weth,
@@ -67,7 +67,7 @@ describe("cowswap", () => {
 
     it("allows cancelling orders", async () => {
       await expect(
-        kit.asMember.cowswap.orderSigner.unsignOrder.delegateCall(testOrder)
+        kit.asMember.cowSwap.orderSigner.unsignOrder.delegateCall(testOrder)
       ).not.toRevert()
     })
   })

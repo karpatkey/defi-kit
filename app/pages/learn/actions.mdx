@@ -1,3 +1,5 @@
+import { Callout } from "nextra/components"
+
 # Actions
 
 One of the main goals of the project is systematizing the DeFi ecosystem using a set of standard actions.
@@ -32,15 +34,25 @@ Stake and unstake LP tokens into a vault or gauge.
 | :-------- | :-------------------- | :--------------------------------------------------------------------------------- |
 | `targets` | _string[] (required)_ | The set of vaults for staking LP tokens, can be contract addresses or vault labels |
 
-## `claim`
+## `lock`
 
-Claim rewards from staking and farming.
+Locking and unlocking tokens within a protocol.
 
 #### Parameters
 
-| Name      | Type                  | Description                                                  |
-| :-------- | :-------------------- | :----------------------------------------------------------- |
-| `targets` | _string[] (required)_ | The set of rewards contract addresses to allow claiming from |
+| Name | Type | Description |
+| :--- | :--- | :---------- |
+| N/A  | N/A  | N/A         |
+
+## `delegate`
+
+Delegate and undelegate tokens within a protocol.
+
+#### Parameters
+
+| Name | Type | Description |
+| :--- | :--- | :---------- |
+| N/A  | N/A  | N/A         |
 
 ## `swap`
 
@@ -52,4 +64,8 @@ Swap tokens on a DEX.
 | :------ | :--------- | :--------------------------------------------------------------------------------------- |
 | `sell`  | _string[]_ | The set of tokens that can be sold, can be contract addresses or token symbols           |
 | `buy`   | _string[]_ | The set of tokens that can be bought, can be contract addresses or token symbols         |
-| `pools` | _string[]_ | The set of AMM pool that can be used for swaps, can be contract addresses or pool labels |
+
+<Callout type="info">
+  **Note:** Parameter requirements may vary depending on the DEX, as different exchanges may require specific formats or additional fields.
+</Callout>
+

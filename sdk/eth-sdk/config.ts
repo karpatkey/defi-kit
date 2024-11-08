@@ -1,7 +1,5 @@
 import { EthSdkConfig, defineConfig } from "@gnosis-guild/eth-sdk"
 
-const baseContracts = {}
-
 export const contracts = {
   mainnet: {
     aaveV2: {
@@ -96,7 +94,7 @@ export const contracts = {
       cvxRewardPool: "0xCF50b810E57Ac33B91dCF525C6ddd9881B139332",
       vlCvx: "0x72a19342e8F1838460eBFCCEf09F6585e32db86E",
     },
-    cowswap: {
+    cowSwap: {
       orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
       gpv2VaultRelayer: "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110",
       vCow: "0xD057B63f5E69CF1B929b356b579Cba08D7688048",
@@ -284,7 +282,7 @@ export const contracts = {
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
-      reward_pool_deposit_wrapper: "0x0Fec3d212BcC29eF3E505B555D7a7343DF0B7F76",
+      rewardPoolDepositWrapper: "0x0Fec3d212BcC29eF3E505B555D7a7343DF0B7F76",
     },
     azuro: {
       lpAzrXdai: "0x204e7371Ade792c5C006fb52711c50a7efC843ed",
@@ -301,7 +299,7 @@ export const contracts = {
       bCowAmm50Gno50Olas: "0xD7f99B1CDa3EeCf6b6eAa8a61ed21d061E745400",
       bCowAmm50Gno50Cow: "0x71663f74490673706D7b8860B7D02b7c76160bAe",
     },
-    cowswap: {
+    cowSwap: {
       orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
       gpv2VaultRelayer: "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110",
       vCow: "0xc20C9C13E853fc64d054b73fF21d3636B2d97eaB",
@@ -328,7 +326,7 @@ export const contracts = {
       wrappedTokenGatewayV3: "0xBD7D6a9ad7865463DE44B05F04559f65e3B11704",
       spWxdai: "0xC9Fe2D32E96Bb364c7d29f3663ed3b27E30767bB",
       variableDebtWxdai: "0x868ADfDf12A86422524EaB6978beAE08A0008F37",
-      rewardsController: "0x4370D3b6C9588E02ce9D22e684387859c7Ff5b34",
+      rewardsController: "0x98e6BcBA7d5daFbfa4a92dAF08d3d7512820c30C",
       savingsXdaiAdapter: "0xD499b51fcFc66bd31248ef4b28d656d67E591A94",
     },
     stakeWiseV3: {
@@ -369,7 +367,7 @@ export const contracts = {
       cUsdcV3: "0x9c4ec768c28520B50860ea7a15bd7213a9fF58bf",
       cometRewards: "0x88730d254A2f7e6AC8388c3198aFd694bA9f7fae",
     },
-    cowswap: {
+    cowSwap: {
       orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
     },
     gyroscope: {

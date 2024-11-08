@@ -5,7 +5,7 @@ import { contracts } from "../../../../eth-sdk/config"
 import { eth as kit } from "../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 
-describe("compound_v2", () => {
+describe("compoundV2", () => {
   describe("deposit", () => {
     beforeAll(async () => {
       await applyPermissions(await eth.deposit({ targets: ["ETH", "USDC"] }))

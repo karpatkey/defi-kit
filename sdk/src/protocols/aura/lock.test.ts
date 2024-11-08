@@ -1,5 +1,5 @@
 import { eth } from "."
-import { AURA } from "./actions"
+import { aura } from "./actions"
 import { avatar, member } from "../../../test/wallets"
 import {
   applyPermissions,
@@ -17,10 +17,10 @@ describe("aura", () => {
       await applyPermissions(await eth.lock())
     })
     it("only allow lock, process expired locks and claim to avatar", async () => {
-      await stealErc20(AURA, parseEther("1"), contracts.mainnet.balancer.vault)
+      await stealErc20(aura, parseEther("1"), contracts.mainnet.balancer.vault)
       await expect(
         kit.asMember.usdc
-          .attach(AURA)
+          .attach(aura)
           .approve(contracts.mainnet.aura.vlAura, parseEther("1"))
       ).not.toRevert()
 

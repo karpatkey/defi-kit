@@ -6,7 +6,7 @@ import { Status } from "../../../test/types"
 import { eth as kit } from "../../../test/kit"
 import { formatUnits, parseEther, parseUnits } from "ethers"
 
-const MAX_AMOUNT =
+const maxAmount =
   115792089237316195423570985008687907853269984665640564039457584007913129639935n
 
 describe("spark", () => {
@@ -64,11 +64,11 @@ describe("spark", () => {
     })
 
     it("allow setting the deposited ETH as collateral", async () => {
-      let reserve_config: Array<any> =
+      let reserveConfig: Array<any> =
         await kit.asAvatar.spark.dataProvider.getReserveConfigurationData(
           contracts.mainnet.weth
         )
-      const collateralizable: boolean = reserve_config[5]
+      const collateralizable: boolean = reserveConfig[5]
       if (collateralizable) {
         await expect(
           kit.asMember.spark.lendingPoolV3.setUserUseReserveAsCollateral(
@@ -142,7 +142,7 @@ describe("spark", () => {
       await expect(
         kit.asMember.spark.rewardsController.claimRewards(
           [contracts.mainnet.spark.spWeth],
-          MAX_AMOUNT,
+          maxAmount,
           avatar.address,
           contracts.mainnet.lido.wstEth
         )
@@ -151,7 +151,7 @@ describe("spark", () => {
       await expect(
         kit.asMember.spark.rewardsController.claimRewards(
           [contracts.mainnet.spark.spWeth],
-          MAX_AMOUNT,
+          maxAmount,
           member.address,
           contracts.mainnet.lido.wstEth
         )
@@ -210,11 +210,11 @@ describe("spark", () => {
     })
 
     it("allow setting the deposited USDC as collateral", async () => {
-      let reserve_config: Array<any> =
+      let reserveConfig: Array<any> =
         await kit.asAvatar.spark.dataProvider.getReserveConfigurationData(
           contracts.mainnet.usdc
         )
-      const collateralizable: boolean = reserve_config[5]
+      const collateralizable: boolean = reserveConfig[5]
       if (collateralizable) {
         await expect(
           kit.asMember.spark.lendingPoolV3.setUserUseReserveAsCollateral(
@@ -247,13 +247,13 @@ describe("spark", () => {
       await expect(
         kit.asMember.spark.sDai.deposit(parseEther("1000"), avatar.address)
       ).not.toRevert()
-      const sdai_balance_bn = await kit.asAvatar.spark.sDai.balanceOf(
+      const sDaiBalanceBn = await kit.asAvatar.spark.sDai.balanceOf(
         avatar.address
       )
-      const sdai_balance = formatUnits(sdai_balance_bn, 18).toString()
+      const sDaiBalance = formatUnits(sDaiBalanceBn, 18).toString()
       await expect(
         kit.asMember.spark.sDai.redeem(
-          parseEther(sdai_balance),
+          parseEther(sDaiBalance),
           avatar.address,
           avatar.address
         )

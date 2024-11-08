@@ -6,7 +6,7 @@ import { queryDepositPool } from "./utils"
 
 export const eth = {
   deposit: async () => {
-    const deposit_pool = await queryDepositPool()
+    const depositPool = await queryDepositPool()
 
     const permissions: Permission[] = [
       ...allowErc20Approve(
@@ -17,7 +17,7 @@ export const eth = {
         ...allow.mainnet.rocketPool.depositPool.deposit(),
         send: true,
         // The Deposit Pool address can change so it's replaced dynamically
-        targetAddress: deposit_pool,
+        targetAddress: depositPool,
       },
       allow.mainnet.rocketPool.rEth.burn(),
       {

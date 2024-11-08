@@ -3,8 +3,8 @@ import { applyPermissions } from "../../../../test/helpers"
 import { contracts } from "../../../../eth-sdk/config"
 import { mintNFT } from "../../uniswap/v3/testUtils"
 
-const STEAL_ADDRESS = "0x56556075Ab3e2Bb83984E90C52850AFd38F20883"
-const E_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+const stealAddress = "0x56556075Ab3e2Bb83984E90C52850AFd38F20883"
+const eAddress = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 
 describe("stakeWiseV2", () => {
   describe("deposit", () => {
@@ -16,18 +16,18 @@ describe("stakeWiseV2", () => {
     it.skip("mint new position with permitted stakeWise pool features", async () => {
       await expect(
         mintNFT(
-          E_ADDRESS,
+          eAddress,
           contracts.mainnet.stakeWiseV2.sEth2,
           3000,
           1000000000000000000000n,
           0n,
           true,
-          STEAL_ADDRESS
+          stealAddress
         )
       ).not.toRevert()
       await expect(
         mintNFT(
-          E_ADDRESS,
+          eAddress,
           contracts.mainnet.usdt, // invalid token
           3000,
           1000000000000000000000n,
@@ -37,13 +37,13 @@ describe("stakeWiseV2", () => {
       ).toBeForbidden()
       await expect(
         mintNFT(
-          E_ADDRESS,
+          eAddress,
           contracts.mainnet.stakeWiseV2.sEth2,
           500, // invalid fee
           1000000000000000000000n,
           0n,
           true,
-          STEAL_ADDRESS
+          stealAddress
         )
       ).toBeForbidden()
     }, 30000)

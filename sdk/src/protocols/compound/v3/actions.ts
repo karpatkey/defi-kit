@@ -6,19 +6,19 @@ import { allowErc20Approve } from "../../../conditions"
 import { contracts } from "../../../../eth-sdk/config"
 
 // abi = (address comet, address to, uint amount)
-const ACTION_SUPPLY_NATIVE_TOKEN =
+const actionSupplyNativeToken =
   "0x414354494f4e5f535550504c595f4e41544956455f544f4b454e000000000000"
 // abi = (address comet, address to, uint amount)
-const ACTION_WITHDRAW_NATIVE_TOKEN =
+const actionWithdrawNativeToken =
   "0x414354494f4e5f57495448445241575f4e41544956455f544f4b454e00000000"
 // abi = (address comet, address to, address asset, uint amount)
-const ACTION_SUPPLY_ASSET =
+const actionSupplyAsset =
   "0x414354494f4e5f535550504c595f415353455400000000000000000000000000"
 // abi = (address comet, address to, address asset, uint amount)
-const ACTION_WITHDRAW_ASSET =
+const actionWithdrawAsset =
   "0x414354494f4e5f57495448445241575f41535345540000000000000000000000"
 // abi = (address comet, address rewards, address src, bool shouldAccrue)
-const ACTION_CLAIM_REWARD =
+const actionClaimReward =
   "0x414354494f4e5f434c41494d5f52455741524400000000000000000000000000"
 
 const _allow = (token: Comet): Permission => {
@@ -66,9 +66,9 @@ export const deposit = (
     allow.mainnet.compoundV3.mainnetBulker.invoke(
       c.every(
         c.or(
-          c.eq(ACTION_SUPPLY_ASSET),
-          c.eq(ACTION_WITHDRAW_ASSET),
-          c.eq(ACTION_CLAIM_REWARD)
+          c.eq(actionSupplyAsset),
+          c.eq(actionWithdrawAsset),
+          c.eq(actionClaimReward)
         )
       ),
       c.every(
@@ -103,9 +103,9 @@ export const deposit = (
       allow.mainnet.compoundV3.mainnetBulker.invoke(
         c.every(
           c.or(
-            c.eq(ACTION_SUPPLY_NATIVE_TOKEN),
-            c.eq(ACTION_WITHDRAW_NATIVE_TOKEN),
-            c.eq(ACTION_CLAIM_REWARD)
+            c.eq(actionSupplyNativeToken),
+            c.eq(actionWithdrawNativeToken),
+            c.eq(actionClaimReward)
           )
         ),
         c.every(
@@ -160,7 +160,7 @@ export const borrow = (comet: Comet) => {
       },
 
       allow.mainnet.compoundV3.mainnetBulker.invoke(
-        c.every(c.or(c.eq(ACTION_SUPPLY_ASSET), c.eq(ACTION_WITHDRAW_ASSET))),
+        c.every(c.or(c.eq(actionSupplyAsset), c.eq(actionWithdrawAsset))),
         c.every(
           c.abiEncodedMatches(
             [comet.address, c.avatar, comet.borrowToken.address],
@@ -176,10 +176,7 @@ export const borrow = (comet: Comet) => {
       allow.mainnet.compoundV3.mainnetBulker.invoke(
         // TODO this does not work, since the type trees are different (Roles mod will raise an integrity check error when applying)
         c.every(
-          c.or(
-            c.eq(ACTION_SUPPLY_NATIVE_TOKEN),
-            c.eq(ACTION_WITHDRAW_NATIVE_TOKEN)
-          )
+          c.or(c.eq(actionSupplyNativeToken), c.eq(actionWithdrawNativeToken))
         ),
         c.every(
           c.abiEncodedMatches(
