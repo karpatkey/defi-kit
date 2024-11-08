@@ -29,7 +29,7 @@ export const eth = annotateAll(
     compoundV2: compoundV2.eth,
     // compoundV3: compoundV3.eth,
     convex: convex.eth,
-    cowswap: cowSwap.eth,
+    cowSwap: cowSwap.eth,
     lido: lido.eth,
     maker: maker.eth,
     rocketPool: rocketPool.eth,
@@ -46,7 +46,7 @@ export const gno = annotateAll(
     aaveV3: aaveV3.gno,
     aura: aura.gno,
     balancer: balancer.gno,
-    cowswap: cowSwap.gno,
+    cowSwap: cowSwap.gno,
     spark: spark.gno,
   },
   "gno"
@@ -55,7 +55,7 @@ export const gno = annotateAll(
 export const arb1 = annotateAll(
   {
     aaveV3: aaveV3.arb1,
-    cowswap: cowSwap.arb1,
+    cowSwap: cowSwap.arb1,
   },
   "arb1"
 )

@@ -41,11 +41,11 @@ export const gno = {
   aaveV3: aaveV3.gno,
   aura: aura.gno,
   balancer: balancer.gno,
-  cowswap: cowSwap.gno,
+  cowSwap: cowSwap.gno,
   spark: spark.gno,
 } satisfies Record<string, ProtocolSchemas>
 
 export const arb1 = {
   aaveV3: aaveV3.arb1,
-  cowswap: cowSwap.arb1,
+  cowSwap: cowSwap.arb1,
 } satisfies Record<string, ProtocolSchemas>
