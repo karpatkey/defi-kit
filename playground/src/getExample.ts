@@ -17,7 +17,7 @@ const ROLES_MOD = '0x39B37934Bf81d87683984961266dD27385bC3f9a'
 
 // Mix and match the permissions you need
 const permissions = [
-  allow.cowswap.swap({buy: [EURE, USDC], sell: [EURE, USDC]})
+  allow.cowSwap.swap({buy: [EURE, USDC], sell: [EURE, USDC]})
 ]
 
 // Apply the permissions to a role.
