@@ -28,7 +28,7 @@ describe("rocketPool", () => {
         ).not.toRevert()
 
         await expect(
-          kit.asMember.rocketPool.rEth.burn(parseEther("0.01"))
+          kit.asMember.rocketPool.rEth.burn(parseEther("0.0001"))
         ).not.toRevert()
       }
     })
