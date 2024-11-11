@@ -29,10 +29,7 @@ export const oethProvider = new JsonRpcProvider(
   }
 )
 
-export const baseProvider = new JsonRpcProvider(
-  "https://base.llamarpc.com",
-  {
-    chainId: 8453,
-    name: "Base",
-  }
-)
+export const baseProvider = new JsonRpcProvider("https://base.llamarpc.com", {
+  chainId: 8453,
+  name: "Base",
+})

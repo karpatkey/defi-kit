@@ -61,7 +61,7 @@ export const stake = (chain: Chain, pool: Pool) => {
       minter = contracts.arbitrumOne.balancer.minter as `0x${string}`
       relayer = contracts.arbitrumOne.balancer.relayer as `0x${string}`
       break
-    
+
     default:
       throw new Error(`Unsupported chain: ${chain}`)
   }
