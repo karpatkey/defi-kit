@@ -4,7 +4,14 @@ import gnoTokens from "./_gnoInfo"
 import arb1Tokens from "./_arb1Info"
 import oethTokens from "./_oethInfo"
 import baseTokens from "./_baseInfo"
-import { EthToken, GnoToken, Arb1Token, OethToken, BaseToken, Token } from "./types"
+import {
+  EthToken,
+  GnoToken,
+  Arb1Token,
+  OethToken,
+  BaseToken,
+  Token,
+} from "./types"
 import { DelegateToken, StakeToken } from "../v2/types"
 import { findDelegateToken, findStakeToken } from "../v2/index"
 import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"

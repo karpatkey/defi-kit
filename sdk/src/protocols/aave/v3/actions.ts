@@ -45,26 +45,24 @@ export const _getAllAddresses = (chain: Chain) => {
         variableDebtWrappedNativeToken: contracts.arbitrumOne.aaveV3
           .variableDebtWeth as `0x${string}`,
       }
-    
-      case Chain.oeth:
-        return {
-          aNativeToken: contracts.optimism.aaveV3.aOptWeth as `0x${string}`,
-          wrappedTokenGatewayV3: contracts.optimism.aaveV3
-            .wrappedTokenGatewayV3 as `0x${string}`,
-          lendingPoolV3: contracts.optimism.aaveV3
-            .lendingPoolV3 as `0x${string}`,
-          wrappedNativeToken: contracts.optimism.weth as `0x${string}`,
-          variableDebtWrappedNativeToken: contracts.optimism.aaveV3
-            .variableDebtWeth as `0x${string}`,
-        }
-      
-      case Chain.base:
+
+    case Chain.oeth:
+      return {
+        aNativeToken: contracts.optimism.aaveV3.aOptWeth as `0x${string}`,
+        wrappedTokenGatewayV3: contracts.optimism.aaveV3
+          .wrappedTokenGatewayV3 as `0x${string}`,
+        lendingPoolV3: contracts.optimism.aaveV3.lendingPoolV3 as `0x${string}`,
+        wrappedNativeToken: contracts.optimism.weth as `0x${string}`,
+        variableDebtWrappedNativeToken: contracts.optimism.aaveV3
+          .variableDebtWeth as `0x${string}`,
+      }
+
+    case Chain.base:
       return {
         aNativeToken: contracts.base.aaveV3.aBasWeth as `0x${string}`,
         wrappedTokenGatewayV3: contracts.base.aaveV3
           .wrappedTokenGatewayV3 as `0x${string}`,
-        lendingPoolV3: contracts.base.aaveV3
-          .lendingPoolV3 as `0x${string}`,
+        lendingPoolV3: contracts.base.aaveV3.lendingPoolV3 as `0x${string}`,
         wrappedNativeToken: contracts.base.weth as `0x${string}`,
         variableDebtWrappedNativeToken: contracts.base.aaveV3
           .variableDebtWeth as `0x${string}`,
