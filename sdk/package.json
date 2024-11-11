@@ -24,6 +24,16 @@
       "types": "./dist/arb1.d.ts",
       "require": "./dist/arb1.js",
       "import": "./dist/arb1.mjs"
+    },
+    "./oeth": {
+      "types": "./dist/oeth.d.ts",
+      "require": "./dist/oeth.js",
+      "import": "./dist/oeth.mjs"
+    },
+    "./base": {
+      "types": "./dist/base.d.ts",
+      "require": "./dist/base.js",
+      "import": "./dist/base.mjs"
     }
   },
   "typesVersions": {
@@ -39,6 +49,12 @@
       ],
       "arb1": [
         "./dist/arb1.d.ts"
+      ],
+      "oeth": [
+        "./dist/oeth.d.ts"
+      ],
+      "base": [
+        "./dist/base.d.ts"
       ]
     }
   },

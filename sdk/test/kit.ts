@@ -2,6 +2,8 @@ import {
   getArbitrumOneSdk,
   getGnosisSdk,
   getMainnetSdk,
+  getOptimismSdk,
+  getBaseSdk,
 } from "@gnosis-guild/eth-sdk-client"
 import {
   Addressable,
@@ -198,12 +200,28 @@ const initArb1Kits = async () => {
   return { asAvatar: avatarSdk, asMember: memberSdk }
 }
 
+const initOethKits = async () => {
+  const avatarSdk = getOptimismSdk(await avatar.getSigner())
+  const memberSdk = mapSdk(avatarSdk)
+  return { asAvatar: avatarSdk, asMember: memberSdk }
+}
+
+const initBaseKits = async () => {
+  const avatarSdk = getBaseSdk(await avatar.getSigner())
+  const memberSdk = mapSdk(avatarSdk)
+  return { asAvatar: avatarSdk, asMember: memberSdk }
+}
+
 export const eth = {} as any as Awaited<ReturnType<typeof initEthKits>>
 export const gno = {} as any as Awaited<ReturnType<typeof initGnoKits>>
 export const arb1 = {} as any as Awaited<ReturnType<typeof initArb1Kits>>
+export const oeth = {} as any as Awaited<ReturnType<typeof initOethKits>>
+export const base = {} as any as Awaited<ReturnType<typeof initBaseKits>>
 
 beforeAll(async () => {
   Object.assign(eth, await initEthKits())
   Object.assign(gno, await initGnoKits())
   Object.assign(arb1, await initArb1Kits())
+  Object.assign(oeth, await initOethKits())
+  Object.assign(base, await initBaseKits())
 })
