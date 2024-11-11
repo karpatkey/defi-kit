@@ -1303,25 +1303,6 @@ export default [
     ],
   },
   {
-    bpt: "0x487f94d114E41aF8D533a31AbC8A49E24D3FA38D",
-    id: "0x487f94d114e41af8d533a31abc8a49e24d3fa38d0002000000000000000006c2",
-    name: "50st-yETH-50WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x583019fF0f430721aDa9cfb4fac8F06cA104d0B4",
-        symbol: "st-yETH",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x494B26D4aEE801Cb1fabF498Ee24f0af20238743",
     id: "0x494b26d4aee801cb1fabf498ee24f0af20238743000200000000000000000083",
     name: "FOURWP",
