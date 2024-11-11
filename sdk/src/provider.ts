@@ -20,3 +20,19 @@ export const arb1Provider = new JsonRpcProvider(
     name: "ArbitrumOne",
   }
 )
+
+export const oethProvider = new JsonRpcProvider(
+  "https://optimism.llamarpc.com",
+  {
+    chainId: 10,
+    name: "Optimism",
+  }
+)
+
+export const baseProvider = new JsonRpcProvider(
+  "https://base.llamarpc.com",
+  {
+    chainId: 8453,
+    name: "Base",
+  }
+)
