@@ -59,3 +59,17 @@ export const arb1 = annotateAll(
   },
   "arb1"
 )
+
+export const oeth = annotateAll(
+  {
+    aaveV3: aaveV3.oeth,
+  },
+  "oeth"
+)
+
+export const base = annotateAll(
+  {
+    aaveV3: aaveV3.base,
+  },
+  "base"
+)
