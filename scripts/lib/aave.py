@@ -19,6 +19,12 @@ PROTOCOL_DATA_PROVIDER = {
     },
     Chain.ARBITRUM: {
         'v3': '0x7F23D86Ee20D869112572136221e173428DD740B',
+    },
+    Chain.OPTIMISM: {
+        'v3': "0x7F23D86Ee20D869112572136221e173428DD740B",
+    },
+    Chain.BASE: {
+        'v3': '0xd82a47fdebB5bf5329b09441C3DaB4b5df2153Ad',
     }
 }
 
@@ -72,4 +78,8 @@ def reserves_tokens_data(chain, version=3):
         dump(reserves_tokens_data, 'aave/v' + str(version), "_gnoInfo.ts")
     elif chain == Chain.ARBITRUM:
         dump(reserves_tokens_data, 'aave/v' + str(version), "_arb1Info.ts")
+    elif chain == Chain.OPTIMISM:
+        dump(reserves_tokens_data, 'aave/v' + str(version), "_oethInfo.ts")
+    elif chain == Chain.BASE:
+        dump(reserves_tokens_data, 'aave/v' + str(version), "_baseInfo.ts")
 

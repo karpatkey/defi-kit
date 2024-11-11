@@ -2,7 +2,16 @@ import { NotFoundError } from "../../../errors"
 import ethTokens from "./_ethInfo"
 import gnoTokens from "./_gnoInfo"
 import arb1Tokens from "./_arb1Info"
-import { EthToken, GnoToken, Arb1Token, Token } from "./types"
+import oethTokens from "./_oethInfo"
+import baseTokens from "./_baseInfo"
+import {
+  EthToken,
+  GnoToken,
+  Arb1Token,
+  OethToken,
+  BaseToken,
+  Token,
+} from "./types"
 import { DelegateToken, StakeToken } from "../v2/types"
 import { findDelegateToken, findStakeToken } from "../v2/index"
 import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
@@ -119,6 +128,58 @@ export const arb1 = {
       target === "ETH"
         ? borrowEther(Chain.arb1)
         : borrowToken(Chain.arb1, findToken(arb1Tokens, target))
+    )
+  },
+}
+
+export const oeth = {
+  deposit: async ({
+    targets,
+  }: {
+    targets: ("ETH" | OethToken["symbol"] | OethToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? depositEther(Chain.oeth)
+        : depositToken(Chain.oeth, findToken(oethTokens, target))
+    )
+  },
+
+  borrow: async ({
+    targets,
+  }: {
+    targets: ("ETH" | OethToken["symbol"] | OethToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? borrowEther(Chain.oeth)
+        : borrowToken(Chain.oeth, findToken(oethTokens, target))
+    )
+  },
+}
+
+export const base = {
+  deposit: async ({
+    targets,
+  }: {
+    targets: ("ETH" | BaseToken["symbol"] | BaseToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? depositEther(Chain.base)
+        : depositToken(Chain.base, findToken(baseTokens, target))
+    )
+  },
+
+  borrow: async ({
+    targets,
+  }: {
+    targets: ("ETH" | BaseToken["symbol"] | BaseToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? borrowEther(Chain.base)
+        : borrowToken(Chain.base, findToken(baseTokens, target))
     )
   },
 }

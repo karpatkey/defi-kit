@@ -49,3 +49,11 @@ export const arb1 = {
   aaveV3: aaveV3.arb1,
   cowSwap: cowSwap.arb1,
 } satisfies Record<string, ProtocolSchemas>
+
+export const oeth = {
+  aaveV3: aaveV3.oeth,
+} satisfies Record<string, ProtocolSchemas>
+
+export const base = {
+  aaveV3: aaveV3.base,
+} satisfies Record<string, ProtocolSchemas>

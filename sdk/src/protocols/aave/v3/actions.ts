@@ -3,6 +3,8 @@ import { Permission, c } from "zodiac-roles-sdk"
 import ethTokens from "./_ethInfo"
 import gnoTokens from "./_gnoInfo"
 import arb1Tokens from "./_arb1Info"
+import oethTokens from "./_oethInfo"
+import baseTokens from "./_baseInfo"
 import { Token } from "./types"
 import { allowErc20Approve } from "../../../conditions"
 import { contracts } from "../../../../eth-sdk/config"
@@ -44,6 +46,28 @@ export const _getAllAddresses = (chain: Chain) => {
           .variableDebtWeth as `0x${string}`,
       }
 
+    case Chain.oeth:
+      return {
+        aNativeToken: contracts.optimism.aaveV3.aOptWeth as `0x${string}`,
+        wrappedTokenGatewayV3: contracts.optimism.aaveV3
+          .wrappedTokenGatewayV3 as `0x${string}`,
+        lendingPoolV3: contracts.optimism.aaveV3.lendingPoolV3 as `0x${string}`,
+        wrappedNativeToken: contracts.optimism.weth as `0x${string}`,
+        variableDebtWrappedNativeToken: contracts.optimism.aaveV3
+          .variableDebtWeth as `0x${string}`,
+      }
+
+    case Chain.base:
+      return {
+        aNativeToken: contracts.base.aaveV3.aBasWeth as `0x${string}`,
+        wrappedTokenGatewayV3: contracts.base.aaveV3
+          .wrappedTokenGatewayV3 as `0x${string}`,
+        lendingPoolV3: contracts.base.aaveV3.lendingPoolV3 as `0x${string}`,
+        wrappedNativeToken: contracts.base.weth as `0x${string}`,
+        variableDebtWrappedNativeToken: contracts.base.aaveV3
+          .variableDebtWeth as `0x${string}`,
+      }
+
     default:
       throw new Error(`Unsupported chain: ${chain}`)
   }
@@ -62,6 +86,12 @@ const _getAssetId = (chain: Chain, token: Token): string => {
       break
     case Chain.arb1:
       tokens = arb1Tokens
+      break
+    case Chain.oeth:
+      tokens = oethTokens
+      break
+    case Chain.base:
+      tokens = baseTokens
       break
     default:
       throw new Error(`Unsupported chain: ${chain}`)
@@ -107,7 +137,7 @@ export const depositToken = (chain: Chain, token: Token) => {
     },
   ]
 
-  if (chain === Chain.arb1) {
+  if (chain === Chain.arb1 || chain === Chain.oeth) {
     const assetId = _getAssetId(chain, token)
 
     permissions.push({

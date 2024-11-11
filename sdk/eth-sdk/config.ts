@@ -384,6 +384,9 @@ export const contracts = {
   optimism: {
     aaveV3: {
       lendingPoolV3: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
+      wrappedTokenGatewayV3: "0x60eE8b61a13c67d0191c851BEC8F0bc850160710",
+      aOptWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
+      variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
     },
     balancer: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
@@ -400,6 +403,7 @@ export const contracts = {
       crvUsdUsdcePool: "0x05FA06D4Fb883F67f1cfEA0889edBff9e8358101",
       sUsd3CrvPool: "0x061b87122Ed14b9526A813209C8a59a633257bAb",
     },
+    weth: "0x4200000000000000000000000000000000000006",
     circleTokenMessenger: "0x2B4069517957735bE00ceE0fadAE88a26365528f",
     daiTokenBridge: "0x467194771dAe2967Aef3ECbEDD3Bf9a310C76C65",
     optimismBridge: "0x4200000000000000000000000000000000000010",
@@ -410,6 +414,9 @@ export const contracts = {
   base: {
     aaveV3: {
       lendingPoolV3: "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5",
+      wrappedTokenGatewayV3: "0x729b3EA8C005AbC58c9150fb57Ec161296F06766",
+      aBasWeth: "0xD4a0e0b9149BCee3C920d2E00b5dE09138fd8bb7",
+      variableDebtWeth: "0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E",
     },
     balancer: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
@@ -423,6 +430,7 @@ export const contracts = {
     sushiSwap: {
       routeProcessor4: "0x0389879e0156033202C44BF784ac18fC02edeE4f",
     },
+    weth: "0x4200000000000000000000000000000000000006",
     circleTokenMessenger: "0x1682Ae6375C4E4A97e4B583BC394c861A46D8962",
     circleMessageTransmitter: "0xAD09780d193884d503182aD4588450C416D6F9D4",
     l2HopCctp: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
