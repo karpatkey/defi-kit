@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/karpatkey/defi-kit/compare/v2.2.2...v2.3.0) (2024-11-11)
+
+
+### Features
+
+* Aave v3 extended to Optimism and Base ([#300](https://github.com/karpatkey/defi-kit/issues/300)) ([161bf62](https://github.com/karpatkey/defi-kit/commit/161bf62c589596ced890f021079798df03c862ad))
+
 ## [2.2.2](https://github.com/karpatkey/defi-kit/compare/v2.2.1...v2.2.2) (2024-11-11)
 
 
