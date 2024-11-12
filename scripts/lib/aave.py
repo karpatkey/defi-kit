@@ -1,5 +1,5 @@
 from karpatkit.functions import get_contract, get_node
-from defabipedia import Chain
+from defabipedia import Chain, tokens
 from lib.dump import dump
 import os
 import sys
@@ -54,7 +54,13 @@ def reserves_tokens_data(chain, version=3):
     for reserve_token in reserves_tokens:
         token_data = {}
 
-        token_data['symbol'] = reserve_token[0]
+        if chain == Chain.ARBITRUM and reserve_token[1] == tokens.ArbitrumTokenAddr.USDCe:
+            token_data['symbol'] = "USDC.e"
+        elif chain == Chain.OPTIMISM and reserve_token[1] == tokens.OptimismTokenAddr.USDCe:
+            token_data['symbol'] = "USDC.e"
+        else:
+            token_data['symbol'] = reserve_token[0]
+        
         token_data['token'] = reserve_token[1]
 
         token_config = pdp_contract.functions.getReserveConfigurationData(token_data['token']).call()
