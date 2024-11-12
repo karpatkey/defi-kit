@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.1](https://github.com/karpatkey/defi-kit/compare/v2.3.0...v2.3.1) (2024-11-12)
+
+
+### Bug Fixes
+
+* USDC.e symbol for Arbitrum and Optimism ([#304](https://github.com/karpatkey/defi-kit/issues/304)) ([de13ff4](https://github.com/karpatkey/defi-kit/commit/de13ff4498024a3161f520999007873e4c8fd846))
+
 ## [2.3.0](https://github.com/karpatkey/defi-kit/compare/v2.2.2...v2.3.0) (2024-11-11)
 
 
