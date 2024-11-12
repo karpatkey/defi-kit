@@ -32,7 +32,7 @@ const calls = await apply(roleKey, [allow.cowSwap.swap(tokenIn, tokenOut)], {
 
 ```typescript
 const res = await fetch(
-  "https://kit.karpatkey.com/api/v1/eth:<MOD>/<ROLE>/allow/cowSwap/swap?sell=<TOKEN_IN>&buy=<TOKEN_OUT>"
+  "https://kit.karpatkey.com/api/v1/eth:<MOD>/<ROLE>/allow/cowswap/swap?sell=<TOKEN_IN>&buy=<TOKEN_OUT>"
 )
 const calls = await res.json()
 ```

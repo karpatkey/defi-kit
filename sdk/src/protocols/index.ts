@@ -18,35 +18,35 @@ import * as uniswapV3 from "./uniswap/v3"
 import { annotateAll } from "./annotate"
 
 // group all protocols actions by chain and wrap the functions to the resulting permissions sets are annotated
-
+// IMPORTANT: API keys were rolled back to prevent breaking annotations in existing policies.
 export const eth = annotateAll(
   {
-    aaveV2: aaveV2.eth,
-    aaveV3: aaveV3.eth,
+    aave_v2: aaveV2.eth,
+    aave_v3: aaveV3.eth,
     ankr: ankr.eth,
     aura: aura.eth,
     balancer: balancer.eth,
-    compoundV2: compoundV2.eth,
-    // compoundV3: compoundV3.eth,
+    compound_v2: compoundV2.eth,
+    // compound_v3: compoundV3.eth,
     convex: convex.eth,
-    cowSwap: cowSwap.eth,
+    cowswap: cowSwap.eth,
     lido: lido.eth,
     maker: maker.eth,
-    rocketPool: rocketPool.eth,
+    rocket_pool: rocketPool.eth,
     spark: spark.eth,
     stader: stader.eth,
-    stakeWiseV2: stakeWiseV2.eth,
-    uniswapV3: uniswapV3.eth,
+    stakewise_v2: stakeWiseV2.eth,
+    uniswap_v3: uniswapV3.eth,
   },
   "eth"
 )
 
 export const gno = annotateAll(
   {
-    aaveV3: aaveV3.gno,
+    aave_v3: aaveV3.gno,
     aura: aura.gno,
     balancer: balancer.gno,
-    cowSwap: cowSwap.gno,
+    cowswap: cowSwap.gno,
     spark: spark.gno,
   },
   "gno"
@@ -54,22 +54,22 @@ export const gno = annotateAll(
 
 export const arb1 = annotateAll(
   {
-    aaveV3: aaveV3.arb1,
-    cowSwap: cowSwap.arb1,
+    aave_v3: aaveV3.arb1,
+    cowswap: cowSwap.arb1,
   },
   "arb1"
 )
 
 export const oeth = annotateAll(
   {
-    aaveV3: aaveV3.oeth,
+    aave_v3: aaveV3.oeth,
   },
   "oeth"
 )
 
 export const base = annotateAll(
   {
-    aaveV3: aaveV3.base,
+    aave_v3: aaveV3.base,
   },
   "base"
 )
