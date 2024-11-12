@@ -24,7 +24,7 @@ export default [
     variableDebtTokenAddress: "0x953A573793604aF8d41F306FEb8274190dB4aE0e",
   },
   {
-    symbol: "USDC",
+    symbol: "USDC.e",
     token: "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
     usageAsCollateralEnabled: true,
     borrowingEnabled: true,
