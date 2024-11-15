@@ -2017,4 +2017,52 @@ export default [
     ],
     rewarder: "0xd00455D46f1B7d4cfe6F83d9F0Fd8c8377A4E323",
   },
+  {
+    name: "ECLP-cbETH-wstETH",
+    id: "233",
+    bpt: "0xC683955059e98350DE4e5Dc1C75971bD640829Bb",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
+        symbol: "cbETH",
+      },
+    ],
+    rewarder: "0x41809921cf916629D3F5A6B8fE9436aeE162A8Da",
+  },
+  {
+    name: "ECLP-cbBTC-WBTC",
+    id: "234",
+    bpt: "0x9D73398C54be236da189d937EACE8E6dccaD3616",
+    tokens: [
+      {
+        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        symbol: "WBTC",
+      },
+      {
+        address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        symbol: "cbBTC",
+      },
+    ],
+    rewarder: "0x08E10eBc99b0B3979761E6fBEc50FA4AcD56E7e8",
+  },
+  {
+    name: "tETH/wstETH",
+    id: "235",
+    bpt: "0x1D13531bf6344c102280CE4c458781FBF14Dad14",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8",
+        symbol: "tETH",
+      },
+    ],
+    rewarder: "0x848fb625aa9ae1F56bdAc8c892Df5246E2c84b61",
+  },
 ] as const

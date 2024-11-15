@@ -2577,4 +2577,11 @@ export default [
     cvxDepositToken: "0xd68bAb1aEC631Ec36Bab7148B1fCEC457A240082",
     rewarder: "0x7AC80c1a7633071fD5598c4fc5A6DEAb422cb60E",
   },
+  {
+    name: "zunBTCtBTC",
+    id: "395",
+    crvLPToken: "0x6fBc5Ddc181240Cb1d9bcEc6Fdea429036818035",
+    cvxDepositToken: "0x53Af952d746d8eD0eCaD990c7123355d8803615E",
+    rewarder: "0xb78B95f5dF4C378fFE043249A65b90fF81A838BB",
+  },
 ] as const
