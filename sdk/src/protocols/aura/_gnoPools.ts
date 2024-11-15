@@ -357,4 +357,36 @@ export default [
     ],
     rewarder: "0x41FaEAEC99Ca60cFc1cEd927cA93f480f040325F",
   },
+  {
+    name: "ECLP-GYD-sDAI",
+    id: "31",
+    bpt: "0x1e8b447129984d8A6B652C807DfC3bd135973133",
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+      },
+    ],
+    rewarder: "0x4BdAAeBD01fce060e0075bc577ED0D716c17BD32",
+  },
+  {
+    name: "ECLP-GYD-AUSDC.e",
+    id: "32",
+    bpt: "0x263A6Edafa6444DC2ae550f9EFF6344c1686d6aA",
+    tokens: [
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+      },
+      {
+        address: "0xf0E7eC247b918311afa054E0AEdb99d74c31b809",
+        symbol: "stataGnoUSDCe",
+      },
+    ],
+    rewarder: "0x0992896C51Bb543696Bf63430DE05461767fF106",
+  },
 ] as const
