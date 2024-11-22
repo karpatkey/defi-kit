@@ -20,7 +20,7 @@ def subgraph_query_vaults(blockchain):
         # GraphQL query with pagination
         query = f"""
         {{
-          vaults(orderBy: totalAssets, orderDirection: desc, where: {{ isOsTokenEnabled: true, isPrivate: false }}, first: {batch_size}, skip: {skip}) {{
+          vaults(orderBy: totalAssets, orderDirection: desc, where: {{ isOsTokenEnabled: true, isPrivate: false, description_not: null }}, first: {batch_size}, skip: {skip}) {{
             description
             displayName
             id
