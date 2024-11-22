@@ -301,7 +301,7 @@ export default [
   {
     symbol: "PYUSD",
     token: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-    usageAsCollateralEnabled: false,
+    usageAsCollateralEnabled: true,
     borrowingEnabled: true,
     stableBorrowRateEnabled: false,
     isActive: true,
@@ -396,5 +396,16 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x32a6268f9Ba3642Dda7892aDd74f1D34469A4259",
     variableDebtTokenAddress: "0x490E0E6255bF65b43E2e02F7acB783c5e04572Ff",
+  },
+  {
+    symbol: "rsETH",
+    token: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: true,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x2D62109243b87C4bA3EE7bA1D91B0dD0A074d7b1",
+    variableDebtTokenAddress: "0x6De3E52A1B7294A34e271a508082b1Ff4a37E30e",
   },
 ] as const

@@ -64,6 +64,25 @@ export default [
     ],
   },
   {
+    bpt: "0x1e8b447129984d8A6B652C807DfC3bd135973133",
+    id: "0x1e8b447129984d8a6b652c807dfc3bd1359731330002000000000000000000d6",
+    name: "ECLP-GYD-sDAI",
+    type: "GyroE",
+    gauge: "0xEA71b7FDAA3683D2d307e8AF3e236FB7a395e88d",
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+        id: "0x",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x2086f52651837600180dE173B09470F54EF74910",
     id: "0x2086f52651837600180de173b09470f54ef7491000000000000000000000004f",
     name: "staBAL3",
@@ -355,6 +374,25 @@ export default [
       {
         address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
         symbol: "WXDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x7E7419eBef7171C84409B7A1C3a5D4538c98d4a1",
+    id: "0x7e7419ebef7171c84409b7a1c3a5d4538c98d4a10002000000000000000000de",
+    name: "ECLP-GYD-sDAI",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+        id: "0x",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
         id: "0x",
       },
     ],
