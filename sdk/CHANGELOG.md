@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/karpatkey/defi-kit/compare/v2.3.3...v2.4.0) (2024-11-22)
+
+
+### Features
+
+* Rollback API keys ([#303](https://github.com/karpatkey/defi-kit/issues/303)) ([b6acf91](https://github.com/karpatkey/defi-kit/commit/b6acf91c7aba78ca2bed280e94e09a91e1537bc3))
+
 ## [2.3.3](https://github.com/karpatkey/defi-kit/compare/v2.3.2...v2.3.3) (2024-11-22)
 
 
