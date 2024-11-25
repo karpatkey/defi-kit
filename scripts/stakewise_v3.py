@@ -20,7 +20,7 @@ def subgraph_query_vaults(blockchain):
         # GraphQL query with pagination
         query = f"""
         {{
-          vaults(orderBy: totalAssets, orderDirection: desc, where: {{ isOsTokenEnabled: true, isPrivate: false, description_not: null }}, first: {batch_size}, skip: {skip}) {{
+          vaults(orderBy: totalAssets, orderDirection: desc, where: {{ isOsTokenEnabled: true, isPrivate: false, displayName_not: null }}, first: {batch_size}, skip: {skip}) {{
             description
             displayName
             id
@@ -70,9 +70,9 @@ def protocol_data(blockchain):
         })
 
     if blockchain == Chain.ETHEREUM:
-        dump(result, 'stakeWise/v3', '_ethPools.ts')
+        dump(result, 'stakeWise/v3', '_ethVaults.ts')
     elif blockchain == Chain.GNOSIS:
-        dump(result, 'stakeWise/v3', '_gnoPools.ts')
+        dump(result, 'stakeWise/v3', '_gnoVaults.ts')
 
 protocol_data(Chain.ETHEREUM)
 protocol_data(Chain.GNOSIS)

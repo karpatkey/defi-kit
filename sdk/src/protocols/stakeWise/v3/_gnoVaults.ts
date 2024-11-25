@@ -117,6 +117,11 @@ export default [
       "Whispers of Sophia's Gnosis\n\nIn realms beyond the veil of sight,\nI dance with truths both dark and light.\nSophia's wisdom, my guiding star,\nGnosis beckons from afar.\n\nThrough winding paths of mystic lore,\nI seek the keys to cosmic doors.\nEach step unveils a sacred sign,\nAs mortal flesh and soul entwine.\n\nIn silence deep, I hear the call,\nOf hidden knowledge, one and all.\nThe serpent's whisper, soft and low,\nReveals the truths I've come to know.\n\nIllumination floods my mind,\nAs earthly shackles fall behind.\nIn gnosis found, both pure and bright,\nI rise, transformed, into the light.\n\nFor wisdom's flame burns ever true,\nIn hearts that dare to see anew.\nAnd in this knowing, vast and free,\nI find the cosmic self that sleeps in me.",
   },
   {
+    id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",
+    name: "Test No Deposit",
+    description: null,
+  },
+  {
     id: "0xb1208506ac11f342dd63656f0a8c2803e89a87ba",
     name: "Stakingverse - Gnosis ENDED",
     description:
@@ -140,11 +145,6 @@ export default [
       "VAULT IS NOT OPERATIONAL\npublic test vault was running from a dappnode on a VPS\n15% vault fee; smoothed rewards",
   },
   {
-    id: "0xba79f05d8fc5ed58f38fce5273af40222b5a88f2",
-    name: null,
-    description: "---",
-  },
-  {
     id: "0x0254baf8c2500b581785ae8fe9dbf422411f7256",
     name: "Fox & Yaga Gnosis",
     description:
@@ -154,6 +154,16 @@ export default [
     id: "0xf2148884af9d980a1f16de20966bacfc691708b6",
     name: "❤️",
     description: "A pool for the lovers of gnosis’s decentralization",
+  },
+  {
+    id: "0xe0e56b8cc3539262a41f578a262922cb1a6de9e3",
+    name: "Kadyr New Stake test",
+    description: null,
+  },
+  {
+    id: "0xded1eb6a2c4b8f34dfda788e03f14da2cf806fee",
+    name: "31415",
+    description: null,
   },
   {
     id: "0xd5f95b151d9c3afb51972370876f8b7b9699d126",
@@ -166,9 +176,39 @@ export default [
     description: "Test Vault (Do Not Deposit)",
   },
   {
+    id: "0x69c1f77c92d8e2dfb6f2f36916ce4d3c17f5d4be",
+    name: "Kadyr Own MEV - Gnosis",
+    description: null,
+  },
+  {
+    id: "0x4078e3b7733f352a695d6385797a3c47319d99f4",
+    name: "Reward splitter Vault",
+    description: null,
+  },
+  {
+    id: "0x337bad16fcb4f1385bb7a46ace21ebc2009daef5",
+    name: "Aave DAO Frontier",
+    description: null,
+  },
+  {
+    id: "0x2e89e32d9083dd9af5f05b789f37043f2173ebce",
+    name: "Kadyr New Stake Test",
+    description: null,
+  },
+  {
     id: "0x256218e70f3deea02bef332933a97d115b59082e",
     name: "Test",
     description: "test",
+  },
+  {
+    id: "0x1e41d8fa981fb1fa9e3a66357b0e0db089b97b08",
+    name: "Kadyr Gnosis",
+    description: null,
+  },
+  {
+    id: "0x00749c049fd05458b38c1e3b9818cc05b98d1522",
+    name: "test",
+    description: null,
   },
   {
     id: "0x456e1e2cf2f25d451c1603892f8485701cc88189",

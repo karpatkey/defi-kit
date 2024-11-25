@@ -120,12 +120,6 @@ export default [
       "Slash insurance backed by a SAFU fund.\nDecentralized infrastructure powered by Distributed Validator Technology. \nConnect with us at: https://linktr.ee/autostake",
   },
   {
-    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
-    name: "Meria",
-    description:
-      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
-  },
-  {
     id: "0x302be829c61c287787030888bbcf11115ecd5773",
     name: "Swiss Liquid Staking",
     description:
@@ -180,16 +174,16 @@ export default [
       "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
   },
   {
-    id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
-    name: "DSRV",
-    description:
-      "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
-  },
-  {
     id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
     name: "Big Euler's e-Stake",
     description:
       "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
+  },
+  {
+    id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
+    name: "DSRV",
+    description:
+      "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
   },
   {
     id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
@@ -214,6 +208,12 @@ export default [
     name: "BRAZILPRACIMA",
     description:
       "Contributing to Ethereum's geographic decentralization and censorship resistance. Always running minority clients, reducing the risk of being slashed to a minimum.\nIndependent validator experience since Beacon Chain's genesis block in December 2020, never missed a proposal.\nProof of reputation https://beaconcha.in/slots?q=brazilpracima",
+  },
+  {
+    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
+    name: "Meria",
+    description:
+      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0x475064d69be1933c3ec0301a7397b0a667993f95",
@@ -297,6 +297,11 @@ export default [
       "Secure, global and innovative blockchain infrastructure based in Australia, since 2018. Operating on hybrid bare metal / cloud environments with full client diversity and MEV capabilities. ",
   },
   {
+    id: "0xf28d4db96e0a151825320ca8e5a09ca1badff785",
+    name: "Cassaforte Rik",
+    description: null,
+  },
+  {
     id: "0xee43a0827eb92bdbf461c4194d041802bbc2b13d",
     name: "meow",
     description: "meow",
@@ -323,6 +328,16 @@ export default [
       "With decades of infrastructure experience, GlobalStake's enterprise-grade Web3 data centers, equipment, and protocols are specifically engineered to secure Proof-of-Stake networks. We believe that if you are going to do something, do it right!",
   },
   {
+    id: "0xcb75149e58235f4551819df0c599acf0c1c9b5f8",
+    name: "TBD",
+    description: null,
+  },
+  {
+    id: "0xc8dd1a761bff84f1057e0c82743a720e98823883",
+    name: "westrnghat",
+    description: null,
+  },
+  {
     id: "0xc5bb7891b129d2470d71da2daffe0768c1b1c0ec",
     name: "H2O Nodes",
     description:
@@ -333,6 +348,11 @@ export default [
     name: "Imperator.co | 1% Fees | MEV ✅",
     description:
       "Imperator.co is a leading node operator, securing over 40+ blockchains in ecosystems like Cosmos, Ethereum, and Sui. Trusted in the industry with $200M in assets staked on our nodes, we serve a global customer base of over 100,000, committed to delivering outstanding professional services.",
+  },
+  {
+    id: "0xbf547b548e050742175b50b15199019a90f7d5e5",
+    name: "MyFavVault",
+    description: null,
   },
   {
     id: "0xbd8e6cc37331dab05efa08456a0ecf70da30a1ac",
@@ -389,9 +409,19 @@ export default [
     description: "Too big to fail",
   },
   {
+    id: "0x8f4b8cd233ec49ca307ec90b44a19e7db04f2f5b",
+    name: "Hayhouse Projects",
+    description: null,
+  },
+  {
     id: "0x8b59f4473035d4615f1982826e5a37b58c6fc0c8",
     name: "Meow Meow",
     description: "LFG",
+  },
+  {
+    id: "0x81b00e1008955999ee7341db62e02efdfd9ceba9",
+    name: "Yield Vault",
+    description: null,
   },
   {
     id: "0x7e9c0c47e1c38c0624a800bfdc52dcf8f7082e95",
@@ -422,6 +452,11 @@ export default [
     description: "A non-custodial open-source Ethereum staking pool.",
   },
   {
+    id: "0x748476544540ac39e27882ddc34e9d80f3ce4b74",
+    name: "KatemoVault",
+    description: null,
+  },
+  {
     id: "0x740dff25651f1b1ac0b25ca947e9f166a06369a6",
     name: "BARK Vault",
     description: "ETH staking ",
@@ -449,6 +484,11 @@ export default [
     description: "Singularity",
   },
   {
+    id: "0x68d2cb03d2bd6661c9c35d18b8c8b4b00ab5c0b9",
+    name: "LG Vault",
+    description: null,
+  },
+  {
     id: "0x55739c7a2a734c0cdea083257487634c9b2151f5",
     name: "Degen Staking Squad",
     description: "A vault for Farcaster and Degen friends and fellowship.",
@@ -472,10 +512,20 @@ export default [
       "Leopard Vault is a non-volatile vault with a permanently set 1% fee.",
   },
   {
+    id: "0x41adbf980d09e6e50afffe606e5c259dcec0af27",
+    name: "Luganodes - Stakekit",
+    description: null,
+  },
+  {
     id: "0x3f36cf451f99d0f9801d26bda2926336c03fc8c1",
     name: "StakerFund",
     description:
       "Pioneering excellence in ETH validation since November 2022, StakerFund is a meticulous validating operation which stands for reliability, robust maintenance protocols and vigilant monitoring. \n\nWith an unwavering commitment to peak effectiveness, we safeguard against disruptions with reliable power sources, comprehensive backups, and fortified fallback node protection. \n\nFor any ETH holders looking to put their assets to work via staking, StakerFund prides ourselves in ease-of-use, ensuring accessibility for all while maintaining minimal fees; making the process of staking your ETH effortless. \n\nStakerFund is pleased to provide our members seasoned experience with a dedication to service that exemplifies the best in ETH liquid-staking.",
+  },
+  {
+    id: "0x3087da9424fbfa048df71e898d5cdb6848f5f89d",
+    name: "redelegate-alotl-alert",
+    description: null,
   },
   {
     id: "0x2e1f06e9777e90070eff3b4755e4443e9cc76ab7",
@@ -522,6 +572,11 @@ export default [
     id: "0x1ce609cbfdff35bb4df722c9abfa966f6b0e4319",
     name: "evmen",
     description: "evmen",
+  },
+  {
+    id: "0x1478de14968cf70143256e97be68ac063ebc5bb7",
+    name: "Apedrian",
+    description: null,
   },
   {
     id: "0x12cbb997b1afac993b36aa584ae5814deedc83ef",
