@@ -17,43 +17,43 @@ import * as uniswapV3 from "./uniswap/v3/schema"
 import { ProtocolSchemas } from "../types"
 
 // group all protocols schemas by chain
-
+// IMPORTANT: API keys were rolled back to prevent breaking annotations in existing policies.
 export const eth = {
-  aaveV2: aaveV2.eth,
-  aaveV3: aaveV3.eth,
+  aave_v2: aaveV2.eth,
+  aave_v3: aaveV3.eth,
   ankr: ankr.eth,
   aura: aura.eth,
   balancer: balancer.eth,
-  compoundV2: compoundV2.eth,
-  // compoundV3: compoundV3.eth,
+  compound_v2: compoundV2.eth,
+  // compound_v3: compoundV3.eth,
   convex: convex.eth,
-  cowSwap: cowSwap.eth,
+  cowswap: cowSwap.eth,
   lido: lido.eth,
   maker: maker.eth,
-  rocketPool: rocketPool.eth,
+  rocket_pool: rocketPool.eth,
   spark: spark.eth,
   stader: stader.eth,
-  stakeWiseV2: stakeWiseV2.eth,
-  uniswapV3: uniswapV3.eth,
+  stakewise_v2: stakeWiseV2.eth,
+  uniswap_v3: uniswapV3.eth,
 } satisfies Record<string, ProtocolSchemas>
 
 export const gno = {
-  aaveV3: aaveV3.gno,
+  aave_v3: aaveV3.gno,
   aura: aura.gno,
   balancer: balancer.gno,
-  cowSwap: cowSwap.gno,
+  cowswap: cowSwap.gno,
   spark: spark.gno,
 } satisfies Record<string, ProtocolSchemas>
 
 export const arb1 = {
-  aaveV3: aaveV3.arb1,
-  cowSwap: cowSwap.arb1,
+  aave_v3: aaveV3.arb1,
+  cowswap: cowSwap.arb1,
 } satisfies Record<string, ProtocolSchemas>
 
 export const oeth = {
-  aaveV3: aaveV3.oeth,
+  aave_v3: aaveV3.oeth,
 } satisfies Record<string, ProtocolSchemas>
 
 export const base = {
-  aaveV3: aaveV3.base,
+  aave_v3: aaveV3.base,
 } satisfies Record<string, ProtocolSchemas>

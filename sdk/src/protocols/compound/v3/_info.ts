@@ -95,6 +95,10 @@ export default [
         address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
         symbol: "tBTC",
       },
+      {
+        address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+        symbol: "ETHx",
+      },
     ],
   },
 ] as const
