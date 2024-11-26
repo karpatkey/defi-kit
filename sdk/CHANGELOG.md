@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/karpatkey/defi-kit/compare/v2.4.0...v2.5.0) (2024-11-26)
+
+
+### Features
+
+* add `contracts` export to sdk ([#313](https://github.com/karpatkey/defi-kit/issues/313)) ([2595020](https://github.com/karpatkey/defi-kit/commit/25950208b96d2f5f361ad7e08bcf8761e72c6f78))
+
 ## [2.4.0](https://github.com/karpatkey/defi-kit/compare/v2.3.3...v2.4.0) (2024-11-22)
 
 
