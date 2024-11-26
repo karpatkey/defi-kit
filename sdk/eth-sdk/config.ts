@@ -64,6 +64,7 @@ export const contracts = {
       relayer: "0x35Cea9e57A393ac66Aaa7E25C391D52C74B5648f",
       relayerLibrary: "0xeA66501dF1A00261E3bB79D1E90444fc6A186B62",
       vault: "0xba12222222228d8ba445958a75a0704d566bf2c8",
+      bpt: "0x93d199263632a4EF4Bb438F1feB99e57b4b5f0BD",
       gauge: "0xcD4722B7c24C29e0413BDCd9e51404B4539D14aE",
       minter: "0x239e55F427D44C3cc793f49bFB507ebe76638a2b",
       veBal: "0xC128a9954e6c874eA3d62ce62B468bA073093F25",
@@ -84,6 +85,7 @@ export const contracts = {
     },
     compoundV3: {
       cUsdcV3: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+      cUsdtV3: "0x3Afdc9BCA9213A35503b077a6072F3D0d5AB0840",
       cWethV3: "0xA17581A9E3356d9A858b789D68B4d866e593aE94",
       comet: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
       mainnetBulker: "0xa397a8C2086C554B531c02E29f3291c9704B00c7",
@@ -259,6 +261,7 @@ export const contracts = {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
       factory: "0x1F98431c8aD98523631AE4a59f267346ea31F984",
       pool: "0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8", // USDC/ETH 0.3%
+      router2: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
     },
     votium: {
       bribe: "0x19BBC3463Dd8d07f55438014b021Fb457EBD4595",
@@ -343,6 +346,7 @@ export const contracts = {
       variableDebtWxdai: "0x868ADfDf12A86422524EaB6978beAE08A0008F37",
       rewardsController: "0x98e6BcBA7d5daFbfa4a92dAF08d3d7512820c30C",
       savingsXdaiAdapter: "0xD499b51fcFc66bd31248ef4b28d656d67E591A94",
+      aWxdai: "0xC9Fe2D32E96Bb364c7d29f3663ed3b27E30767bB",
     },
     stakeWiseV3: {
       vault: "0x00c3C5227402BC4cF383Ae2E6931394dD1e720B4", // GnoVault (Implementation)
