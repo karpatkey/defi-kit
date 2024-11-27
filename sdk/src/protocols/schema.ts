@@ -13,6 +13,7 @@ import * as rocketPool from "./rocketPool/schema"
 import * as spark from "./spark/schema"
 import * as stader from "./stader/schema"
 import * as stakeWiseV2 from "./stakeWise/v2/schema"
+import * as symbiotic from "./symbiotic/schema"
 import * as uniswapV3 from "./uniswap/v3/schema"
 import { ProtocolSchemas } from "../types"
 
@@ -34,6 +35,7 @@ export const eth = {
   spark: spark.eth,
   stader: stader.eth,
   stakewise_v2: stakeWiseV2.eth,
+  symbiotic: symbiotic.eth,
   uniswap_v3: uniswapV3.eth,
 } satisfies Record<string, ProtocolSchemas>
 
