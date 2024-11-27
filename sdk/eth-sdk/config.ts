@@ -64,10 +64,15 @@ export const contracts = {
       relayer: "0x35Cea9e57A393ac66Aaa7E25C391D52C74B5648f",
       relayerLibrary: "0xeA66501dF1A00261E3bB79D1E90444fc6A186B62",
       vault: "0xba12222222228d8ba445958a75a0704d566bf2c8",
+      bpt: "0x93d199263632a4EF4Bb438F1feB99e57b4b5f0BD",
       gauge: "0xcD4722B7c24C29e0413BDCd9e51404B4539D14aE",
       minter: "0x239e55F427D44C3cc793f49bFB507ebe76638a2b",
       veBal: "0xC128a9954e6c874eA3d62ce62B468bA073093F25",
       feeDistributor: "0xD3cf852898b21fc233251427c2DC93d3d604F3BB",
+      bCow50Cow50Wsteth: "0x9bd702E05B9c97E4A4a3E47Df1e0fe7A0C26d2F1",
+      bCow50Weth50Usdc: "0xf08D4dEa369C456d26a3168ff0024B904F2d8b91",
+      bCow50Weth50UsdcGauge: "0xF9423B78D784D610A00955E733dBa0bf9bda7B06",
+      bCow50Wnxm50Weth: "0x7c838b3Ed3C15a5d5032e809B8714f0aE5e9A821",
     },
     compoundV2: {
       comptroller: "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
@@ -80,6 +85,7 @@ export const contracts = {
     },
     compoundV3: {
       cUsdcV3: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
+      cUsdtV3: "0x3Afdc9BCA9213A35503b077a6072F3D0d5AB0840",
       cWethV3: "0xA17581A9E3356d9A858b789D68B4d866e593aE94",
       comet: "0xc3d688B66703497DAA19211EEdff47f25384cdc3",
       mainnetBulker: "0xa397a8C2086C554B531c02E29f3291c9704B00c7",
@@ -123,10 +129,17 @@ export const contracts = {
       crvUsdUsdtPool: "0x390f3595bCa2Df7d23783dFd126427CCeb997BF4",
       crvUsdUsdtGauge: "0x4e6bB6B7447B7B2Aa268C16AB87F4Bb48BF57939",
       sDaiUsdmPool: "0x425BfB93370F14fF525aDb6EaEAcfE1f4e3b5802",
+      usdeUsdcPool: "0x02950460E2b9529D0E00284A5fA2d7bDF3fA4d72",
+      usdeDaiPool: "0xF36a4BA50C603204c3FC6d2dA8b78A7b69CBC67d",
+      mtEthenaPool: "0x167478921b907422F8E88B43C4Af2B8BEa278d3A",
+      crvUsdUsdcPool: "0x4DEcE678ceceb27446b35C672dC7d61F30bAD69E",
     },
     enzyme: {
       depositWrapper2: "0x65BbAD6545B7ac9C30Fb0f07e64e25106Bf05eEc",
       divaStEthVault: "0x648B8d2340842a7040680915c4dAb89382eeEDA9",
+    },
+    ethena: {
+      sUsde: "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
     },
     gyroscope: {
       sGyd: "0xeA50f402653c41cAdbaFD1f788341dB7B7F37816",
@@ -180,6 +193,9 @@ export const contracts = {
     pancakeSwap: {
       smartRouter: "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
     },
+    pendle: {
+      routerV4: "0x888888888889758F76e7103c6CbF23ABbF58F946",
+    },
     pods: {
       ethAdapter: "0x4AAD0755eFd63F4e9B7Fac19Bd426db4a0d9b5E8",
       ethoriaVault: "0x5FE4B38520e856921978715C8579D2D7a4d2274F",
@@ -225,6 +241,7 @@ export const contracts = {
       merkleDistributor: "0xA3F21010e8b9a3930996C8849Df38f9Ca3647c20",
     },
     stakeWiseV3: {
+      vault: "0xba0B5ba961B108BFf8D761A256e9763a4FccFF23", // EthVault (Implementation)
       chrorusOneMevMax: "0xe6d8d8aC54461b1C5eD15740EEe322043F696C08",
       genesis: "0xAC0F906E433d58FA868F936E8A43230473652885",
     },
@@ -244,6 +261,7 @@ export const contracts = {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
       factory: "0x1F98431c8aD98523631AE4a59f267346ea31F984",
       pool: "0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8", // USDC/ETH 0.3%
+      router2: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
     },
     votium: {
       bribe: "0x19BBC3463Dd8d07f55438014b021Fb457EBD4595",
@@ -328,8 +346,10 @@ export const contracts = {
       variableDebtWxdai: "0x868ADfDf12A86422524EaB6978beAE08A0008F37",
       rewardsController: "0x98e6BcBA7d5daFbfa4a92dAF08d3d7512820c30C",
       savingsXdaiAdapter: "0xD499b51fcFc66bd31248ef4b28d656d67E591A94",
+      aWxdai: "0xC9Fe2D32E96Bb364c7d29f3663ed3b27E30767bB",
     },
     stakeWiseV3: {
+      vault: "0x00c3C5227402BC4cF383Ae2E6931394dD1e720B4", // GnoVault (Implementation)
       genesis: "0x4b4406Ed8659D03423490D8b62a1639206dA0A7a",
       serenita: "0x00025C729A3364FaEf02c7D1F577068d87E90ba6",
       nedo: "0x2Cd404D9d75436e7d6dDbCcc2fB9cF7C06941BF1",
