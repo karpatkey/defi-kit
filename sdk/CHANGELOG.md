@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/karpatkey/defi-kit/compare/v2.5.1...v2.6.0) (2024-11-27)
+
+
+### Features
+
+* Add StakeWise v3 on Mainnet and Gnosis Chain ([#311](https://github.com/karpatkey/defi-kit/issues/311)) ([7352c3d](https://github.com/karpatkey/defi-kit/commit/7352c3dd0b3df54c4804ac126bfbf65251959c80))
+
 ## [2.5.1](https://github.com/karpatkey/defi-kit/compare/v2.5.0...v2.5.1) (2024-11-27)
 
 
