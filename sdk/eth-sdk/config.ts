@@ -138,6 +138,7 @@ export const contracts = {
     },
     lido: {
       stEth: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+      // stETH: "0x17144556fd3424EDC8Fc8A4C940B2D04936d17eb",//implementation to get the logic
       wstEth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       unstEth: "0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1",
     },
@@ -232,6 +233,9 @@ export const contracts = {
       router: "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F",
       routeProcessor3: "0x827179dD56d07A7eeA32e3873493835da2866976",
       routeProcessor32: "0x5550D13389bB70F45fCeF58f19f6b6e87F6e747d",
+    },
+    symbiotic: {
+      defaultCollateral: "0xa301ea1E3CAB036AbE8fa70e5526A51Cb41799B6"
     },
     theGraph: {
       staking: "0xF55041E37E12cD407ad00CE2910B8269B01263b9",
