@@ -9,38 +9,34 @@ export const stake = (chain: Chain, vault: Vault) => {
   const permissions: Permission[] = [
     {
       ...allow.mainnet.stakeWiseV3.vault.updateState(),
-      targetAddress: vault.id
+      targetAddress: vault.id,
     },
     {
       ...allow.mainnet.stakeWiseV3.vault.mintOsToken(c.avatar),
-      targetAddress: vault.id
+      targetAddress: vault.id,
     },
     {
       ...allow.mainnet.stakeWiseV3.vault.burnOsToken(),
-      targetAddress: vault.id
+      targetAddress: vault.id,
     },
     {
       ...allow.mainnet.stakeWiseV3.vault.enterExitQueue(undefined, c.avatar),
-      targetAddress: vault.id
+      targetAddress: vault.id,
     },
     {
       ...allow.mainnet.stakeWiseV3.vault.claimExitedAssets(),
-      targetAddress: vault.id
-    }
+      targetAddress: vault.id,
+    },
   ]
 
   switch (chain) {
     case Chain.eth:
       permissions.push(
         {
-          ...allow.mainnet.stakeWiseV3.vault.deposit(
-            c.avatar,
-            undefined,
-            {
-              send: true
-            }
-          ),
-          targetAddress: vault.id
+          ...allow.mainnet.stakeWiseV3.vault.deposit(c.avatar, undefined, {
+            send: true,
+          }),
+          targetAddress: vault.id,
         },
         {
           ...allow.mainnet.stakeWiseV3.vault.updateStateAndDeposit(
@@ -48,24 +44,22 @@ export const stake = (chain: Chain, vault: Vault) => {
             undefined,
             undefined,
             {
-              send: true
+              send: true,
             }
           ),
-          targetAddress: vault.id
+          targetAddress: vault.id,
         }
       )
       break
 
     case Chain.gno:
       allowErc20Approve([contracts.gnosis.gno], [vault.id]),
-      permissions.push(
-        {
+        permissions.push({
           ...allow.gnosis.stakeWiseV3.vault.deposit(undefined, c.avatar),
-          targetAddress: vault.id
-        }
-      )
+          targetAddress: vault.id,
+        })
       break
-    
+
     default:
       throw new Error(`Unsupported chain: ${chain}`)
   }
