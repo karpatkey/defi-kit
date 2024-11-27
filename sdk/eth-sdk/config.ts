@@ -235,7 +235,9 @@ export const contracts = {
       routeProcessor32: "0x5550D13389bB70F45fCeF58f19f6b6e87F6e747d",
     },
     symbiotic: {
-      defaultCollateral: "0xa301ea1E3CAB036AbE8fa70e5526A51Cb41799B6"
+      //wstETHPool: "0xa301ea1E3CAB036AbE8fa70e5526A51Cb41799B6"//implemation for abis
+      wstETHPool: "0xC329400492c6ff2438472D4651Ad17389fCb843a",//proxy 2nd
+    
     },
     theGraph: {
       staking: "0xF55041E37E12cD407ad00CE2910B8269B01263b9",
