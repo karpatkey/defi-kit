@@ -19,8 +19,26 @@ const findPool = (pools: readonly EthPool[], nameOrAddress: string) => {
     return pool
 }
 
+export const eth = {
+    deposit: async ({
+        targets,
+    }: {
+        targets: (EthPool["name"] | EthPool["address"])[]
+    }) => {
+        const permissions = await Promise.all(
+            targets.map((target) =>
+                //allow deposit to the target pool
+                (allow.mainnet.symbiotic[target as keyof typeof allow.mainnet.symbiotic]["deposit(address,uint256)"] as any)()
+                //allow approve to the target pool
+                .concat((allow.mainnet.lido.stEth.approve as any)(findPool(ethPools, target)?.address))
+            )
+        )
+        return permissions
+    },
+
     //deposit 1st pool
-    // allow.mainnet.symbiotic.wstETHPool["deposit(address,uint256)"](),
-    // allow.mainnet.lido.stEth.approve(WSTETH),
-    // allow.mainnet.lido.wstEth.approve(DEFAULT_COLLATERAL),
-    // allow.mainnet.lido.wstEth.wrap(),
+    // allow.mainnet.symbiotic.${POOL}["deposit(address,uint256)"](), //deposit
+    //If you don't have enough wstETH, your stETH will be wrapped automatically.
+    // allow.mainnet.lido.stEth.approve(${POOL}), // allow stETH to wrap
+    // allow.mainnet.lido.wstEth.approve(DEFAULT_COLLATERAL), //approve
+    // allow.mainnet.lido.wstEth.wrap(), //wrap

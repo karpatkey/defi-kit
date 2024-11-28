@@ -1,6 +1,6 @@
 export default [
     {
-        name: "wstETHPoohl",
+        name: "wstETHPool",
         address: "0xC329400492c6ff2438472D4651Ad17389fCb843a",
     },
     {
