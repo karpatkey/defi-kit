@@ -237,7 +237,7 @@ export const contracts = {
     symbiotic: {
       defaultCollateral: "0xa301ea1E3CAB036AbE8fa70e5526A51Cb41799B6", //implementation for all pools
       
-      wstETethHPool: "0xC329400492c6ff2438472D4651Ad17389fCb843a",
+      /*wstETethHPool: "0xC329400492c6ff2438472D4651Ad17389fCb843a",
       WBTCPool: "0x971e5b5d4baa5607863f3748febf287c7bf82618",
       mETHPool: "0x475d3eb031d250070b63fa145f0fcfc5d97c304a", 
       cbETHPool: "0xb26ff591f44b04e78de18f43b46f8b70c6676984",
@@ -255,6 +255,7 @@ export const contracts = {
       ETHxPool: "0xbdea8e677f9f7c294a4556005c640ee505be6925",
       tBTCPool: "0x0c969cec0729487d264716e55f232b404299032c",
       SWELLPool: "0x544f45485418341c1a2b3a44404f12302277fffc",
+      */
     },
     theGraph: {
       staking: "0xF55041E37E12cD407ad00CE2910B8269B01263b9",
