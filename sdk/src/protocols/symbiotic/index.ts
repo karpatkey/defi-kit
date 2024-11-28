@@ -7,7 +7,7 @@ import { allowErc20Approve } from "../../conditions";
 
 const WSTETH = "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0";
 
-const findPoolSym = (nameOrAddress: string) => {
+const findPool = (nameOrAddress: string) => {
     const pools = _ethPools;
     const nameOrAddressLower = nameOrAddress.toLowerCase()
     const pool = pools.find(
@@ -27,49 +27,25 @@ export const eth = {
     }: {
         targets: (EthPool["name"] | EthPool["address"])[]
     }) => {
-        type SymbioticKeys = keyof typeof allow.mainnet.symbiotic;
-        const permissions: Permission[] = []
-        targets.flatMap((target) => {
-            const pool = findPoolSym(target);
-            return [
+        return targets.flatMap((target) => {
+            const pool = findPool(target);
+            const permissions: Permission[] = [];
+            if (pool.name === "wstETHPool") {
+                permissions.push(
+                    allow.mainnet.lido.stEth.approve(WSTETH),
+                    allow.mainnet.lido.wstEth.wrap()
+                );
+            }
+            permissions.push (
                 ...allowErc20Approve([pool.token.address], [pool.address]),
                 {
-                    // Approve target: allow target to wrap if needed
-                    ...allow.mainnet.lido.stEth.approve(WSTETH),
-                    targetAddress: pool.token.address,
-                },
-                {
-                    // Wrap stEth if not already wrapped
-                    ...allow.mainnet.lido.wstEth.wrap(),
+                    ...allow.mainnet.symbiotic.defaultCollateral["deposit(address,uint256)"](
+                        //piloted safe address needed maybe
+                    ),
                     targetAddress: pool.address,
                 },
-                {
-                    // Grant permissions: allow symbiotic to stake your wrapped token
-                    ...allow.mainnet.lido.wstEth.approve(pool.address),//default collateral
-                    targetAddress: pool.address,
-                },
-                {
-                    // Finalize deposit: complete the restaking process
-                    ...allow.mainnet.symbiotic[pool.name as SymbioticKeys]["deposit(address,uint256)"]()
-                },
-            ];
+            );
+            return permissions;
         })
-        return permissions
     },
-
-
-    // Approve stETH: allow stETH to wrap
-    //  allow.mainnet.lido.stETH.approve(WSTETH),
-    // const WSTETH= "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"
-
-
-    // Wrap stETH
-    // allow.mainnet.lido.wstETH.wrap(),
-
-    // Grant permissions: allow symbitoc to stake your wstETH
-    // allow.mainnet.lido.wstEth.approve(DEFAULT_COLLATERAL),
-    // const DEFAULT_COLLATERAL = "0xC329400492c6ff2438472D4651Ad17389fCb843a"
-
-    // Finalize deposit: complete the restaking process 
-    //allow.mainnet.symbiotic.DefaultCollateral["deposit(address,uint256)"](),
-
+}
