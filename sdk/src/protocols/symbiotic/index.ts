@@ -5,6 +5,8 @@ import _ethPools from "./_ethPools";
 import { Permission } from "zodiac-roles-sdk/.";
 import { allowErc20Approve } from "../../conditions";
 
+const WSTETH = "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0";
+
 const findPoolSym = (nameOrAddress: string) => {
     const pools = _ethPools;
     const nameOrAddressLower = nameOrAddress.toLowerCase()
@@ -32,9 +34,9 @@ export const eth = {
             return [
                 ...allowErc20Approve([pool.token.address], [pool.address]),
                 {
-                    // Approve target: allow target to wrap
-                    ...allow.mainnet.lido.stEth.approve(pool.address),
-                    targetAddress: pool.address,
+                    // Approve target: allow target to wrap if needed
+                    ...allow.mainnet.lido.stEth.approve(WSTETH),
+                    targetAddress: pool.token.address,
                 },
                 {
                     // Wrap stEth if not already wrapped
@@ -43,7 +45,7 @@ export const eth = {
                 },
                 {
                     // Grant permissions: allow symbiotic to stake your wrapped token
-                    ...allow.mainnet.lido.wstEth.approve(pool.token.address),
+                    ...allow.mainnet.lido.wstEth.approve(pool.address),//default collateral
                     targetAddress: pool.address,
                 },
                 {
@@ -55,14 +57,19 @@ export const eth = {
         return permissions
     },
 
+
     // Approve stETH: allow stETH to wrap
-    // allow.mainnet.lido.stEth.approve(${POOL})
+    //  allow.mainnet.lido.stETH.approve(WSTETH),
+    // const WSTETH= "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"
+
 
     // Wrap stETH
-    // allow.mainnet.lido.wstEth.wrap(),
+    // allow.mainnet.lido.wstETH.wrap(),
 
     // Grant permissions: allow symbitoc to stake your wstETH
     // allow.mainnet.lido.wstEth.approve(DEFAULT_COLLATERAL),
+    // const DEFAULT_COLLATERAL = "0xC329400492c6ff2438472D4651Ad17389fCb843a"
 
-    // Finalize deposit: complete the restaking process
-    // allow.mainnet.symbiotic.${POOL}["deposit(address,uint256)"]()
+    // Finalize deposit: complete the restaking process 
+    //allow.mainnet.symbiotic.DefaultCollateral["deposit(address,uint256)"](),
+
