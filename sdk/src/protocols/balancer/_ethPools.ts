@@ -1303,25 +1303,6 @@ export default [
     ],
   },
   {
-    bpt: "0x494B26D4aEE801Cb1fabF498Ee24f0af20238743",
-    id: "0x494b26d4aee801cb1fabf498ee24f0af20238743000200000000000000000083",
-    name: "FOURWP",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x4730fB1463A6F1F44AEB45F6c5c422427f37F4D0",
-        symbol: "FOUR",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x49cbD67651fbabCE12d1df18499896ec87BEf46f",
     id: "0x49cbd67651fbabce12d1df18499896ec87bef46f00000000000000000000064a",
     name: "sDAI/3Pool",
@@ -1494,30 +1475,6 @@ export default [
       {
         address: "0xe29797910D413281d2821D5d9a989262c8121CC2",
         symbol: "ELIMU",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x5512A4bbe7B3051f92324bAcF25C02b9000c4a50",
-    id: "0x5512a4bbe7b3051f92324bacf25c02b9000c4a500001000000000000000003d7",
-    name: "33LUSD-33LQTY-33WETH",
-    type: "Weighted",
-    gauge: "0x63E3951212cCCAFE3eDC7588FD4D20Ee5e7Ad73f",
-    tokens: [
-      {
-        address: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
-        symbol: "LUSD",
-        id: "0x",
-      },
-      {
-        address: "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
-        symbol: "LQTY",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
         id: "0x",
       },
     ],
@@ -1836,7 +1793,7 @@ export default [
     id: "0x62e57e37e3185871c13a422a363293780d17305b0002000000000000000006d3",
     name: "B-kaiAURA-AURA-WEIGHTED",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x4fd03B8C15E70E6b3413E4D2ff3825a19746e78B",
     tokens: [
       {
         address: "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
@@ -1891,13 +1848,13 @@ export default [
   {
     bpt: "0x67b532d47A31CE1eD0800E6913dbf5F6e9C48a18",
     id: "0x67b532d47a31ce1ed0800e6913dbf5f6e9c48a180002000000000000000000c5",
-    name: "\u2697\ufe0f_WEIGHTED",
+    name: "⚗️_WEIGHTED",
     type: "Weighted",
     gauge: null,
     tokens: [
       {
         address: "0x88ACDd2a6425c3FaAE4Bc9650Fd7E27e0Bebb7aB",
-        symbol: "\u2697\ufe0f",
+        symbol: "⚗️",
         id: "0x",
       },
       {
@@ -3839,6 +3796,25 @@ export default [
     ],
   },
   {
+    bpt: "0xD3F8AB9C5928FDf53153e7757131aD7815fe3146",
+    id: "0xd3f8ab9c5928fdf53153e7757131ad7815fe3146000000000000000000000661",
+    name: "vETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0x3ca33F22893a51A80Ed4ed8afebc900Ae813cA02",
+    tokens: [
+      {
+        address: "0x38D64ce1Bdf1A9f24E0Ec469C9cAde61236fB4a0",
+        symbol: "vETH",
+        id: "0x",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xd4E2af4507B6B89333441C0c398edfFB40f86f4D",
     id: "0xd4e2af4507b6b89333441c0c398edffb40f86f4d0001000000000000000002ab",
     name: "33WBTC-33WETH-33WAMPL",
@@ -3944,6 +3920,25 @@ export default [
       {
         address: "0xEA47B64e1BFCCb773A0420247C0aa0a3C1D2E5C5",
         symbol: "BAYC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xda17f3663C5D04C0B316cfA1A04Aa53eBBC8c12C",
+    id: "0xda17f3663c5d04c0b316cfa1a04aa53ebbc8c12c0000000000000000000006e7",
+    name: "eBTC/wBTC",
+    type: "ComposableStable",
+    gauge: "0x5d0AA3B7F4429e999C95D392E6c50c6555cD7816",
+    tokens: [
+      {
+        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        symbol: "WBTC",
+        id: "0x",
+      },
+      {
+        address: "0x657e8C867D8B37dCC18fA4Caead9C45EB088C642",
+        symbol: "eBTC",
         id: "0x",
       },
     ],
