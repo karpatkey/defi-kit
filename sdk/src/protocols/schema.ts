@@ -37,7 +37,7 @@ export const eth = {
   stakewise_v2: stakeWiseV2.eth,
   stakewise_v3: stakeWiseV3.eth,
   uniswap_v3: uniswapV3.eth,
-} satisfies Record<string, ProtocolSchemas>
+} satisfies ProtocolSchemas
 
 export const gno = {
   aave_v3: aaveV3.gno,
@@ -46,17 +46,17 @@ export const gno = {
   cowswap: cowSwap.gno,
   spark: spark.gno,
   stakewise_v3: stakeWiseV3.gno,
-} satisfies Record<string, ProtocolSchemas>
+} satisfies ProtocolSchemas
 
 export const arb1 = {
   aave_v3: aaveV3.arb1,
   cowswap: cowSwap.arb1,
-} satisfies Record<string, ProtocolSchemas>
+} satisfies ProtocolSchemas
 
 export const oeth = {
   aave_v3: aaveV3.oeth,
-} satisfies Record<string, ProtocolSchemas>
+} satisfies ProtocolSchemas
 
 export const base = {
   aave_v3: aaveV3.base,
-} satisfies Record<string, ProtocolSchemas>
+} satisfies ProtocolSchemas
