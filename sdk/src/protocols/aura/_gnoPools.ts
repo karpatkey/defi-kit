@@ -106,22 +106,6 @@ export default [
     rewarder: "0x112EA63D3A70bB7926F95DA81EaDF71Aba0f0955",
   },
   {
-    name: "EURe/staBAL3",
-    id: "14",
-    bpt: "0x0C1B9CE6Bf6C01f587C2ee98b0ef4B20C6648753",
-    tokens: [
-      {
-        address: "0x2086f52651837600180dE173B09470F54EF74910",
-        symbol: "staBAL3",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
-      },
-    ],
-    rewarder: "0xF4116F1be90057E6f85b0dcC14c47c84cc4575da",
-  },
-  {
     name: "B-50wstETH-50GNO",
     id: "15",
     bpt: "0x4683e340a8049261057D5aB1b29C8d840E75695e",
@@ -136,22 +120,6 @@ export default [
       },
     ],
     rewarder: "0x14A81C9283CC16897DaA3f466847Baa260b770eB",
-  },
-  {
-    name: "B-50USD-50wstETH",
-    id: "16",
-    bpt: "0xEb30C85CC528537f5350CF5684Ce6a4538e13394",
-    tokens: [
-      {
-        address: "0x2086f52651837600180dE173B09470F54EF74910",
-        symbol: "staBAL3",
-      },
-      {
-        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
-        symbol: "wstETH",
-      },
-    ],
-    rewarder: "0xDdB26F9864da5CF70C680942Be91FC7E9aA2401C",
   },
   {
     name: "B-50wstETH-25BAL-25AURA",
@@ -272,5 +240,153 @@ export default [
       },
     ],
     rewarder: "0xFaD4505C5bF3D3654bA7C97A0Cea6e7B35882959",
+  },
+  {
+    name: "ECLP-sDAI-AUSDC",
+    id: "24",
+    bpt: "0x045200C6077f105023000D803F3F95B16B187D70",
+    tokens: [
+      {
+        address: "0x270bA1f35D8b87510D24F693fcCc0da02e6E4EeB",
+        symbol: "stataGnoUSDC",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+    ],
+    rewarder: "0xd48c2A5d7c2Ccf7f0Abf3CC3696ddB081962eD25",
+  },
+  {
+    name: "ECLP-wstETH-WETH",
+    id: "25",
+    bpt: "0x8DD4df4Ce580b9644437f3375e54f1ab09808228",
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+      },
+      {
+        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
+        symbol: "wstETH",
+      },
+    ],
+    rewarder: "0x6869b960599A45396E67C086C6AA5123269291FA",
+  },
+  {
+    name: "ECLP-rETH-WETH",
+    id: "26",
+    bpt: "0x71E1179C5e197FA551BEEC85ca2EF8693c61b85b",
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+      },
+      {
+        address: "0xc791240D1F2dEf5938E2031364Ff4ed887133C3d",
+        symbol: "rETH",
+      },
+    ],
+    rewarder: "0x37748422F82b0c07CCbD40347abC1Da55ac138a0",
+  },
+  {
+    name: "sBAL3",
+    id: "27",
+    bpt: "0xfC095C811fE836Ed12f247BCf042504342B73FB7",
+    tokens: [
+      {
+        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
+        symbol: "USDC.e",
+      },
+      {
+        address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
+        symbol: "USDT",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+    ],
+    rewarder: "0x13E5AA7310b17a8eAF233731dE54EeD95a72e57a",
+  },
+  {
+    name: "osGNO/GNO-BPT",
+    id: "28",
+    bpt: "0x3220C83e953186f2B9dDFc0B5dD69483354EDCA2",
+    tokens: [
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+      },
+      {
+        address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
+        symbol: "osGNO",
+      },
+    ],
+    rewarder: "0x198F9709870d061c40ED5c08b1b09093144DdE2B",
+  },
+  {
+    name: "EURe-jEUR",
+    id: "29",
+    bpt: "0xC66936a47E6D40DD050A8419B4352825D9082241",
+    tokens: [
+      {
+        address: "0x9fB1d52596c44603198fB0aee434fac3a679f702",
+        symbol: "jEUR",
+      },
+      {
+        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
+        symbol: "EURe",
+      },
+    ],
+    rewarder: "0xf85896ccc6e199aC983227075a9fda9f76cbb7B6",
+  },
+  {
+    name: "ECLP-sDAI-USDC.e-rh",
+    id: "30",
+    bpt: "0xaa56989Be5E6267fC579919576948DB3e1F10807",
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+      {
+        address: "0xf0E7eC247b918311afa054E0AEdb99d74c31b809",
+        symbol: "stataGnoUSDCe",
+      },
+    ],
+    rewarder: "0x41FaEAEC99Ca60cFc1cEd927cA93f480f040325F",
+  },
+  {
+    name: "ECLP-GYD-sDAI",
+    id: "31",
+    bpt: "0x1e8b447129984d8A6B652C807DfC3bd135973133",
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+      },
+    ],
+    rewarder: "0x4BdAAeBD01fce060e0075bc577ED0D716c17BD32",
+  },
+  {
+    name: "ECLP-GYD-AUSDC.e",
+    id: "32",
+    bpt: "0x263A6Edafa6444DC2ae550f9EFF6344c1686d6aA",
+    tokens: [
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+      },
+      {
+        address: "0xf0E7eC247b918311afa054E0AEdb99d74c31b809",
+        symbol: "stataGnoUSDCe",
+      },
+    ],
+    rewarder: "0x0992896C51Bb543696Bf63430DE05461767fF106",
   },
 ] as const

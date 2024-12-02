@@ -1,7 +1,8 @@
-from defyes.functions import get_contract, get_decimals, get_symbol, get_node
+import os
+from karpatkit.functions import get_contract, get_decimals, get_symbol, get_node
+from karpatkit.constants import Address
 from defyes.protocols.balancer import get_gauge_addresses
 from defabipedia import Chain
-from karpatkit.constants import Address
 # thegraph queries
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
@@ -43,10 +44,13 @@ def subgraph_query_pools(blockchain):
     result = []
     skip = 0
 
+    the_graph_apikey = os.getenv('THE_GRAPH_APIKEY')
     if blockchain == Chain.ETHEREUM:
-        subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
+        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/C4ayEZP2yTXRAB8vSaTrgN4m9anTe9Mdm2ViyiAuV9TV"
     elif blockchain == Chain.GNOSIS:
-        subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
+        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/EJezH1Cp31QkKPaBDerhVPRWsKVZLrDfzjrLqpmv6cGg"
 
     while True:
     # Initialize subgraph
@@ -86,10 +90,13 @@ def subgraph_query_pools(blockchain):
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def subgraph_query_pool_type(blockchain, pool_id):
     
+    the_graph_apikey = os.getenv('THE_GRAPH_APIKEY')
     if blockchain == Chain.ETHEREUM:
-        subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
+        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/C4ayEZP2yTXRAB8vSaTrgN4m9anTe9Mdm2ViyiAuV9TV"
     elif blockchain == Chain.GNOSIS:
-        subgraph_url = "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
+        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/EJezH1Cp31QkKPaBDerhVPRWsKVZLrDfzjrLqpmv6cGg"
 
     # Initialize subgraph
     balancer_transport=RequestsHTTPTransport(
@@ -134,8 +141,18 @@ def is_deprecated(pool_id, lptoken_address, pool_tokens, blockchain, web3):
     try:
         join_pool = balancer_queries.functions.queryJoin(pool_id, Address.ZERO, Address.ZERO, [pool_tokens, amounts, user_data, False]).call()
     except Exception as e:
-        # print(str(e) + ': ' + pool_id)
-        return True
+        # This is a workaround for some pools, like the Gyroscope ones, that do not yet support EXACT_TOKENS_IN_FOR_BPT_OUT.
+        # https://etherscan.io/address/0x3932b187f440cE7703653b3908EDc5bB7676C283#code#F1#L382
+        join_kind = 3 # ALL_TOKENS_IN_FOR_EXACT_BPT_OUT
+        bpt_amout_out = 1
+        abi = ['uint256', 'uint256']
+        data = [join_kind, bpt_amout_out]
+        user_data = '0x' + eth_abi.encode(abi, data).hex()
+        try:
+            join_pool = balancer_queries.functions.queryJoin(pool_id, Address.ZERO, Address.ZERO, [pool_tokens, amounts, user_data, False]).call()
+        except Exception as e:
+            # print(str(e) + ': ' + pool_id)
+            return True
     
     if join_pool[0] == 0:
         return True
@@ -213,9 +230,9 @@ def add_pool_tokens(vault_contract, pool_id, lptoken_address, pool_tokens_array,
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# transactions_data
+# protocol_data
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def transactions_data(blockchain):
+def protocol_data(blockchain):
 
     result = []
 
@@ -264,5 +281,6 @@ def transactions_data(blockchain):
     elif blockchain == Chain.GNOSIS:
         dump(result, 'balancer', '_gnoPools.ts')
 
-transactions_data(Chain.GNOSIS)
-transactions_data(Chain.ETHEREUM)
+protocol_data(Chain.ETHEREUM)
+protocol_data(Chain.GNOSIS)
+

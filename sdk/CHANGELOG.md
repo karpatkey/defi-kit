@@ -1,5 +1,296 @@
 # Changelog
 
+## [2.6.0](https://github.com/karpatkey/defi-kit/compare/v2.5.1...v2.6.0) (2024-11-27)
+
+
+### Features
+
+* Add StakeWise v3 on Mainnet and Gnosis Chain ([#311](https://github.com/karpatkey/defi-kit/issues/311)) ([7352c3d](https://github.com/karpatkey/defi-kit/commit/7352c3dd0b3df54c4804ac126bfbf65251959c80))
+
+## [2.5.1](https://github.com/karpatkey/defi-kit/compare/v2.5.0...v2.5.1) (2024-11-27)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#312](https://github.com/karpatkey/defi-kit/issues/312)) ([befcc35](https://github.com/karpatkey/defi-kit/commit/befcc35f5b9e223a12031666f8c9da7f489a2b36))
+
+## [2.5.0](https://github.com/karpatkey/defi-kit/compare/v2.4.0...v2.5.0) (2024-11-26)
+
+
+### Features
+
+* add `contracts` export to sdk ([#313](https://github.com/karpatkey/defi-kit/issues/313)) ([2595020](https://github.com/karpatkey/defi-kit/commit/25950208b96d2f5f361ad7e08bcf8761e72c6f78))
+
+## [2.4.0](https://github.com/karpatkey/defi-kit/compare/v2.3.3...v2.4.0) (2024-11-22)
+
+
+### Features
+
+* Rollback API keys ([#303](https://github.com/karpatkey/defi-kit/issues/303)) ([b6acf91](https://github.com/karpatkey/defi-kit/commit/b6acf91c7aba78ca2bed280e94e09a91e1537bc3))
+
+## [2.3.3](https://github.com/karpatkey/defi-kit/compare/v2.3.2...v2.3.3) (2024-11-22)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#308](https://github.com/karpatkey/defi-kit/issues/308)) ([3b7fb9a](https://github.com/karpatkey/defi-kit/commit/3b7fb9afbf2846db1a6d0ceb4a7c5eb9d03f053d))
+
+## [2.3.2](https://github.com/karpatkey/defi-kit/compare/v2.3.1...v2.3.2) (2024-11-15)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#306](https://github.com/karpatkey/defi-kit/issues/306)) ([4c36dff](https://github.com/karpatkey/defi-kit/commit/4c36dff54c38d292e0fb21c2ae326d443e484b3b))
+
+## [2.3.1](https://github.com/karpatkey/defi-kit/compare/v2.3.0...v2.3.1) (2024-11-12)
+
+
+### Bug Fixes
+
+* USDC.e symbol for Arbitrum and Optimism ([#304](https://github.com/karpatkey/defi-kit/issues/304)) ([de13ff4](https://github.com/karpatkey/defi-kit/commit/de13ff4498024a3161f520999007873e4c8fd846))
+
+## [2.3.0](https://github.com/karpatkey/defi-kit/compare/v2.2.2...v2.3.0) (2024-11-11)
+
+
+### Features
+
+* Aave v3 extended to Optimism and Base ([#300](https://github.com/karpatkey/defi-kit/issues/300)) ([161bf62](https://github.com/karpatkey/defi-kit/commit/161bf62c589596ced890f021079798df03c862ad))
+
+## [2.2.2](https://github.com/karpatkey/defi-kit/compare/v2.2.1...v2.2.2) (2024-11-11)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#299](https://github.com/karpatkey/defi-kit/issues/299)) ([f10831e](https://github.com/karpatkey/defi-kit/commit/f10831ed1a1a907d260631077b6afd241025b163))
+
+## [2.2.1](https://github.com/karpatkey/defi-kit/compare/v2.2.0...v2.2.1) (2024-11-08)
+
+
+### Bug Fixes
+
+* Naming ([#297](https://github.com/karpatkey/defi-kit/issues/297)) ([57c76b3](https://github.com/karpatkey/defi-kit/commit/57c76b3d59a526a5cca53988b0a7ad763e0f6857))
+
+## [2.2.0](https://github.com/karpatkey/defi-kit/compare/v2.1.2...v2.2.0) (2024-11-08)
+
+
+### Features
+
+* Cross chain docs / Refactoring ([#279](https://github.com/karpatkey/defi-kit/issues/279)) ([f4cc81a](https://github.com/karpatkey/defi-kit/commit/f4cc81add16d74ae81552b6259966ceda8ec6cd6))
+
+## [2.1.2](https://github.com/karpatkey/defi-kit/compare/v2.1.1...v2.1.2) (2024-11-08)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#294](https://github.com/karpatkey/defi-kit/issues/294)) ([74df86a](https://github.com/karpatkey/defi-kit/commit/74df86a2c935b433e01a8caab6ff70c651e2ba48))
+
+## [2.1.1](https://github.com/karpatkey/defi-kit/compare/v2.1.0...v2.1.1) (2024-11-04)
+
+
+### Bug Fixes
+
+* api schema ([#292](https://github.com/karpatkey/defi-kit/issues/292)) ([2331ec8](https://github.com/karpatkey/defi-kit/commit/2331ec817eab8d101b586c4dbdc8bddef2a4c504))
+
+## [2.1.0](https://github.com/karpatkey/defi-kit/compare/v2.0.3...v2.1.0) (2024-11-04)
+
+
+### Features
+
+* Aave v3 extended to Arbitrum and Deployments updates / Refactoring / Allow using test kits for other chains ([#288](https://github.com/karpatkey/defi-kit/issues/288)) ([a6b5125](https://github.com/karpatkey/defi-kit/commit/a6b51259cdfdddaa5e9c83fa7794e81e74b52734))
+
+## [2.0.3](https://github.com/karpatkey/defi-kit/compare/v2.0.2...v2.0.3) (2024-11-04)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#289](https://github.com/karpatkey/defi-kit/issues/289)) ([c8c4f8b](https://github.com/karpatkey/defi-kit/commit/c8c4f8b8b0f38b2c2b9236eeb2299016d418ebe7))
+
+## [2.0.2](https://github.com/karpatkey/defi-kit/compare/v2.0.1...v2.0.2) (2024-11-01)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#277](https://github.com/karpatkey/defi-kit/issues/277)) ([281ff12](https://github.com/karpatkey/defi-kit/commit/281ff1280743276f2f3245d1444f9564c73335fe))
+
+## [2.0.1](https://github.com/karpatkey/defi-kit/compare/v2.0.0...v2.0.1) (2024-10-31)
+
+
+### Bug Fixes
+
+* export to tx-builder helper function ([#282](https://github.com/karpatkey/defi-kit/issues/282)) ([4480b1a](https://github.com/karpatkey/defi-kit/commit/4480b1ad154d6116948753ea2454046712860b36))
+
+## [2.0.0](https://github.com/karpatkey/defi-kit/compare/v1.15.2...v2.0.0) (2024-10-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade ethers & roles sdk  ([#278](https://github.com/karpatkey/defi-kit/issues/278))
+
+### Miscellaneous Chores
+
+* upgrade ethers & roles sdk  ([#278](https://github.com/karpatkey/defi-kit/issues/278)) ([f187647](https://github.com/karpatkey/defi-kit/commit/f18764771bebb3dd064247c243c32442365501d4))
+
+## [1.15.2](https://github.com/karpatkey/defi-kit/compare/v1.15.1...v1.15.2) (2024-10-17)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#270](https://github.com/karpatkey/defi-kit/issues/270)) ([c314e94](https://github.com/karpatkey/defi-kit/commit/c314e94811fd78ec15a72bb42316d99066870e9a))
+
+## [1.15.1](https://github.com/karpatkey/defi-kit/compare/v1.15.0...v1.15.1) (2024-10-16)
+
+
+### Bug Fixes
+
+* Spark docs ([#273](https://github.com/karpatkey/defi-kit/issues/273)) ([afa14ac](https://github.com/karpatkey/defi-kit/commit/afa14acdb137384c94fea0c634ad43f2ad2dd6ac))
+
+## [1.15.0](https://github.com/karpatkey/defi-kit/compare/v1.14.4...v1.15.0) (2024-10-16)
+
+
+### Features
+
+* Spark: add USDS functionality / Update Python Scripts ([#271](https://github.com/karpatkey/defi-kit/issues/271)) ([85e082a](https://github.com/karpatkey/defi-kit/commit/85e082a50413271c520a4b32e8bce053e06f8e81))
+
+## [1.14.4](https://github.com/karpatkey/defi-kit/compare/v1.14.3...v1.14.4) (2024-10-09)
+
+
+### Bug Fixes
+
+* Balancer stake action in gno ([#268](https://github.com/karpatkey/defi-kit/issues/268)) ([6f98e6f](https://github.com/karpatkey/defi-kit/commit/6f98e6f4649a0b38949eae44d4b5718a287cc33d))
+
+## [1.14.3](https://github.com/karpatkey/defi-kit/compare/v1.14.2...v1.14.3) (2024-10-09)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#261](https://github.com/karpatkey/defi-kit/issues/261)) ([bdcf850](https://github.com/karpatkey/defi-kit/commit/bdcf850e87a9c3bee6c4650b29f4ab7f22329b35))
+
+## [1.14.2](https://github.com/karpatkey/defi-kit/compare/v1.14.1...v1.14.2) (2024-10-08)
+
+
+### Bug Fixes
+
+* CowSwap unsignOrder scoping ([#264](https://github.com/karpatkey/defi-kit/issues/264)) ([f81adc6](https://github.com/karpatkey/defi-kit/commit/f81adc6f37983cd162989de91ca617758d18c854))
+
+## [1.14.1](https://github.com/karpatkey/defi-kit/compare/v1.14.0...v1.14.1) (2024-10-04)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#259](https://github.com/karpatkey/defi-kit/issues/259)) ([ca7ca5a](https://github.com/karpatkey/defi-kit/commit/ca7ca5ad37f3f95c7e72aa4bf2aa8462cf582772))
+
+## [1.14.0](https://github.com/karpatkey/defi-kit/compare/v1.13.3...v1.14.0) (2024-10-03)
+
+
+### Features
+
+* attach patterns to address schema ([#254](https://github.com/karpatkey/defi-kit/issues/254)) ([007c162](https://github.com/karpatkey/defi-kit/commit/007c162fff47ef3f5af4a100a8b6a7bf8fd95043))
+
+## [1.13.3](https://github.com/karpatkey/defi-kit/compare/v1.13.2...v1.13.3) (2024-09-30)
+
+
+### Bug Fixes
+
+* Forbid ETH sending in Uniswap v3 ([#250](https://github.com/karpatkey/defi-kit/issues/250)) ([d9cd24e](https://github.com/karpatkey/defi-kit/commit/d9cd24ef8f6b1ccfa4542dfd77a0fbbfe5a94b0e))
+
+## [1.13.2](https://github.com/karpatkey/defi-kit/compare/v1.13.1...v1.13.2) (2024-09-26)
+
+
+### Bug Fixes
+
+* pin version of roles sdk to last with ethers 5 ([#246](https://github.com/karpatkey/defi-kit/issues/246)) ([412fc73](https://github.com/karpatkey/defi-kit/commit/412fc735497c8f0bbb51193d776e1852c8a80898))
+
+## [1.13.1](https://github.com/karpatkey/defi-kit/compare/v1.13.0...v1.13.1) (2024-09-26)
+
+
+### Bug Fixes
+
+* Uniswap v3 refundETH() ([#244](https://github.com/karpatkey/defi-kit/issues/244)) ([bf58808](https://github.com/karpatkey/defi-kit/commit/bf58808233a2e446c7cc5bec864da4b25435fae5))
+
+## [1.13.0](https://github.com/karpatkey/defi-kit/compare/v1.12.6...v1.13.0) (2024-09-25)
+
+
+### Features
+
+* GNO compatibility for Balancer, Aave v3 and Spark ([#210](https://github.com/karpatkey/defi-kit/issues/210)) ([1d1b347](https://github.com/karpatkey/defi-kit/commit/1d1b347b36a5def29d6a92590bd2d9d4ab9d8e0f))
+
+## [1.12.6](https://github.com/karpatkey/defi-kit/compare/v1.12.5...v1.12.6) (2024-09-23)
+
+
+### Bug Fixes
+
+* add sDAI withdraw() function ([#238](https://github.com/karpatkey/defi-kit/issues/238)) ([9477de3](https://github.com/karpatkey/defi-kit/commit/9477de3e46643aad0ae7c7b78ec1045469d5a81b))
+
+## [1.12.5](https://github.com/karpatkey/defi-kit/compare/v1.12.4...v1.12.5) (2024-09-23)
+
+
+### Bug Fixes
+
+* missing ETH literal in spark tokens ([#236](https://github.com/karpatkey/defi-kit/issues/236)) ([98caaa5](https://github.com/karpatkey/defi-kit/commit/98caaa583a0d47560407e24efdd12894cec1f48e))
+
+## [1.12.4](https://github.com/karpatkey/defi-kit/compare/v1.12.3...v1.12.4) (2024-09-19)
+
+
+### Bug Fixes
+
+* Balancer script update ([#232](https://github.com/karpatkey/defi-kit/issues/232)) ([78527bc](https://github.com/karpatkey/defi-kit/commit/78527bcd0856b165d427d607a7a777d4cad96735))
+
+## [1.12.3](https://github.com/karpatkey/defi-kit/compare/v1.12.2...v1.12.3) (2024-09-19)
+
+
+### Bug Fixes
+
+* Balancer script update ([#229](https://github.com/karpatkey/defi-kit/issues/229)) ([fc706d3](https://github.com/karpatkey/defi-kit/commit/fc706d338fa138dfdfee887cc78979d60d8cb439))
+
+## [1.12.2](https://github.com/karpatkey/defi-kit/compare/v1.12.1...v1.12.2) (2024-08-22)
+
+
+### Bug Fixes
+
+* Cowswap Native Token handling ([#225](https://github.com/karpatkey/defi-kit/issues/225)) ([4289886](https://github.com/karpatkey/defi-kit/commit/4289886cd9eaeeed427a73bbfc26da235408b5be))
+
+## [1.12.1](https://github.com/karpatkey/defi-kit/compare/v1.12.0...v1.12.1) (2024-08-20)
+
+
+### Bug Fixes
+
+* fix typing issue and app build after adding arb1 sdk ([#221](https://github.com/karpatkey/defi-kit/issues/221)) ([69619ed](https://github.com/karpatkey/defi-kit/commit/69619edbbfedc5e8391cf1785991ebd21262985e))
+
+## [1.12.0](https://github.com/karpatkey/defi-kit/compare/v1.11.0...v1.12.0) (2024-08-20)
+
+
+### Features
+
+* Add Arbitrum Support to Defi Kit with Cow Protocol Integration ([#215](https://github.com/karpatkey/defi-kit/issues/215)) ([d493b86](https://github.com/karpatkey/defi-kit/commit/d493b86b7d72e5dae83c056944b152d6c583a836))
+
+## [1.11.0](https://github.com/karpatkey/defi-kit/compare/v1.10.4...v1.11.0) (2024-07-29)
+
+
+### Features
+
+* optional feeAmountBP constraint in Cow ([#212](https://github.com/karpatkey/defi-kit/issues/212)) ([8bac172](https://github.com/karpatkey/defi-kit/commit/8bac1723dd8b0e75963e1ae9cb12557cd46094a7))
+
+## [1.10.4](https://github.com/karpatkey/defi-kit/compare/v1.10.3...v1.10.4) (2024-07-05)
+
+
+### Bug Fixes
+
+* Protocol data update ([#203](https://github.com/karpatkey/defi-kit/issues/203)) ([9e18ad1](https://github.com/karpatkey/defi-kit/commit/9e18ad1ac2daa08be46f4a6df69597443907d064))
+
+## [1.10.3](https://github.com/karpatkey/defi-kit/compare/v1.10.2...v1.10.3) (2024-07-04)
+
+
+### Bug Fixes
+
+* Bump release on a new version ([#198](https://github.com/karpatkey/defi-kit/issues/198)) ([3175fdc](https://github.com/karpatkey/defi-kit/commit/3175fdc95453cbab21b1067360ff360082ab7f62))
+
+## [1.10.2](https://github.com/karpatkey/defi-kit/compare/v1.10.1...v1.10.2) (2024-07-04)
+
+
+### Bug Fixes
+
+* Uniswap v3 new subgraph endpoint ([#195](https://github.com/karpatkey/defi-kit/issues/195)) ([3fe87a0](https://github.com/karpatkey/defi-kit/commit/3fe87a0d2b156ee6fb077f0e109dcbcffcf87a50))
+
 ## [1.10.1](https://github.com/karpatkey/defi-kit/compare/v1.10.0...v1.10.1) (2024-06-11)
 
 

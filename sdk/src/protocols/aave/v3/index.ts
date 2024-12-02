@@ -1,12 +1,27 @@
 import { NotFoundError } from "../../../errors"
-import tokens from "./_info"
-import { Token } from "./types"
+import ethTokens from "./_ethInfo"
+import gnoTokens from "./_gnoInfo"
+import arb1Tokens from "./_arb1Info"
+import oethTokens from "./_oethInfo"
+import baseTokens from "./_baseInfo"
+import {
+  EthToken,
+  GnoToken,
+  Arb1Token,
+  OethToken,
+  BaseToken,
+  Token,
+} from "./types"
 import { DelegateToken, StakeToken } from "../v2/types"
 import { findDelegateToken, findStakeToken } from "../v2/index"
 import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
 import { stake, delegate } from "../v2/actions"
+import { Chain } from "../../../types"
 
-const findToken = (symbolOrAddress: string): Token => {
+const findToken = (
+  tokens: readonly Token[],
+  symbolOrAddress: string
+): Token => {
   const symbolOrAddressLower = symbolOrAddress.toLowerCase()
   const token = tokens.find(
     (token) =>
@@ -23,20 +38,24 @@ export const eth = {
   deposit: async ({
     targets,
   }: {
-    targets: ("ETH" | Token["symbol"] | Token["token"])[]
+    targets: ("ETH" | EthToken["symbol"] | EthToken["token"])[]
   }) => {
     return targets.flatMap((target) =>
-      target === "ETH" ? depositEther() : depositToken(findToken(target))
+      target === "ETH"
+        ? depositEther(Chain.eth)
+        : depositToken(Chain.eth, findToken(ethTokens, target))
     )
   },
 
   borrow: async ({
     targets,
   }: {
-    targets: ("ETH" | Token["symbol"] | Token["token"])[]
+    targets: ("ETH" | EthToken["symbol"] | EthToken["token"])[]
   }) => {
     return targets.flatMap((target) =>
-      target === "ETH" ? borrowEther() : borrowToken(findToken(target))
+      target === "ETH"
+        ? borrowEther(Chain.eth)
+        : borrowToken(Chain.eth, findToken(ethTokens, target))
     )
   },
 
@@ -57,6 +76,110 @@ export const eth = {
   }) => {
     return targets.flatMap((target) =>
       delegate(findDelegateToken(target), delegatee)
+    )
+  },
+}
+
+export const gno = {
+  deposit: async ({
+    targets,
+  }: {
+    targets: ("XDAI" | GnoToken["symbol"] | GnoToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "XDAI"
+        ? depositEther(Chain.gno)
+        : depositToken(Chain.gno, findToken(gnoTokens, target))
+    )
+  },
+
+  borrow: async ({
+    targets,
+  }: {
+    targets: ("XDAI" | GnoToken["symbol"] | GnoToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "XDAI"
+        ? borrowEther(Chain.gno)
+        : borrowToken(Chain.gno, findToken(gnoTokens, target))
+    )
+  },
+}
+
+export const arb1 = {
+  deposit: async ({
+    targets,
+  }: {
+    targets: ("ETH" | Arb1Token["symbol"] | Arb1Token["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? depositEther(Chain.arb1)
+        : depositToken(Chain.arb1, findToken(arb1Tokens, target))
+    )
+  },
+
+  borrow: async ({
+    targets,
+  }: {
+    targets: ("ETH" | Arb1Token["symbol"] | Arb1Token["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? borrowEther(Chain.arb1)
+        : borrowToken(Chain.arb1, findToken(arb1Tokens, target))
+    )
+  },
+}
+
+export const oeth = {
+  deposit: async ({
+    targets,
+  }: {
+    targets: ("ETH" | OethToken["symbol"] | OethToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? depositEther(Chain.oeth)
+        : depositToken(Chain.oeth, findToken(oethTokens, target))
+    )
+  },
+
+  borrow: async ({
+    targets,
+  }: {
+    targets: ("ETH" | OethToken["symbol"] | OethToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? borrowEther(Chain.oeth)
+        : borrowToken(Chain.oeth, findToken(oethTokens, target))
+    )
+  },
+}
+
+export const base = {
+  deposit: async ({
+    targets,
+  }: {
+    targets: ("ETH" | BaseToken["symbol"] | BaseToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? depositEther(Chain.base)
+        : depositToken(Chain.base, findToken(baseTokens, target))
+    )
+  },
+
+  borrow: async ({
+    targets,
+  }: {
+    targets: ("ETH" | BaseToken["symbol"] | BaseToken["token"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      target === "ETH"
+        ? borrowEther(Chain.base)
+        : borrowToken(Chain.base, findToken(baseTokens, target))
     )
   },
 }

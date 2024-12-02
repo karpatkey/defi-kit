@@ -1,4 +1,4 @@
-from defyes.functions import get_contract, get_symbol, get_node
+from karpatkit.functions import get_contract, get_symbol, get_node
 from defabipedia import Chain
 from web3.exceptions import ContractLogicError
 from lib.dump import dump
@@ -31,9 +31,9 @@ ABI_BPT = '[{"inputs":[],"name":"getPoolId","outputs":[{"internalType":"bytes32"
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# transactions_data
+# protocol_data
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def transactions_data(blockchain = Chain.ETHEREUM):
+def protocol_data(blockchain = Chain.ETHEREUM):
 
     result = []
 
@@ -92,5 +92,5 @@ def transactions_data(blockchain = Chain.ETHEREUM):
     elif blockchain == Chain.GNOSIS:
         dump(result, 'aura', '_gnoPools.ts')
 
-transactions_data()
-transactions_data(Chain.GNOSIS)
+protocol_data()
+protocol_data(Chain.GNOSIS)

@@ -5,9 +5,9 @@ header = "// This file is auto-generated. Do not edit!\n\n"
 
 def dump(dict, protocol, filename = '_info.ts'):
     output_path = (Path(__file__).parent / '../../sdk/src/protocols' / protocol / filename).resolve()
-    content = header + "export default " + json.dumps(dict, indent = 2) + " as const\n"
+    content = header + "export default " + json.dumps(dict, indent = 2, ensure_ascii=False) + " as const\n"
 
-    f = open(output_path, "w")
+    f = open(output_path, "w", encoding="utf-8")
     f.write(content)
     f.close()
 

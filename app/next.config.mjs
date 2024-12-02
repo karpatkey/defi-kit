@@ -16,4 +16,13 @@ export default withNextra({
     })
     return config
   },
+  async headers() {
+    return [
+      {
+        // allow cross-origin requests to the API
+        source: "/api/v1/:path*",
+        headers: [{ key: "Access-Control-Allow-Origin", value: "*" }],
+      },
+    ]
+  },
 })

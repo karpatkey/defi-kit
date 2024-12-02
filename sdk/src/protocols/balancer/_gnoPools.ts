@@ -64,6 +64,25 @@ export default [
     ],
   },
   {
+    bpt: "0x1e8b447129984d8A6B652C807DfC3bd135973133",
+    id: "0x1e8b447129984d8a6b652c807dfc3bd1359731330002000000000000000000d6",
+    name: "ECLP-GYD-sDAI",
+    type: "GyroE",
+    gauge: "0xEA71b7FDAA3683D2d307e8AF3e236FB7a395e88d",
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+        id: "0x",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x2086f52651837600180dE173B09470F54EF74910",
     id: "0x2086f52651837600180de173b09470f54ef7491000000000000000000000004f",
     name: "staBAL3",
@@ -126,6 +145,25 @@ export default [
     ],
   },
   {
+    bpt: "0x3220C83e953186f2B9dDFc0B5dD69483354EDCA2",
+    id: "0x3220c83e953186f2b9ddfc0b5dd69483354edca20000000000000000000000b0",
+    name: "osGNO/GNO-BPT",
+    type: "ComposableStable",
+    gauge: "0x1350724a020B27c4f0E369bB00ae3127022d5465",
+    tokens: [
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+        id: "0x",
+      },
+      {
+        address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
+        symbol: "osGNO",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x388Cae2f7d3704C937313d990298Ba67D70a3709",
     id: "0x388cae2f7d3704c937313d990298ba67d70a3709000200000000000000000026",
     name: "50AGVE-50GNO",
@@ -140,6 +178,25 @@ export default [
       {
         address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
         symbol: "GNO",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x4665228B80cF5cD016277157237c40b6d7bd2c65",
+    id: "0x4665228b80cf5cd016277157237c40b6d7bd2c650002000000000000000000d4",
+    name: "20osGNO-80SWISE",
+    type: "Weighted",
+    gauge: "0x375C3e436B82BbC20D12f248C0aC4e55A11456E0",
+    tokens: [
+      {
+        address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
+        symbol: "osGNO",
+        id: "0x",
+      },
+      {
+        address: "0xfdA94F056346d2320d4B5E468D6Ad099b2277746",
+        symbol: "SWISE",
         id: "0x",
       },
     ],
@@ -197,25 +254,6 @@ export default [
       {
         address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
         symbol: "wstETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x5C78d05b8ECF97507d1cf70646082c54FaA4dA95",
-    id: "0x5c78d05b8ecf97507d1cf70646082c54faa4da95000000000000000000000030",
-    name: "bb-agEUR-EURe",
-    type: "ComposableStable",
-    gauge: "0x210ABdFD989f3eE5C08614a8f4e096Cf8408f5DF",
-    tokens: [
-      {
-        address: "0x4b1E2c2762667331Bc91648052F646d1b0d35984",
-        symbol: "EURA",
-        id: "0x",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
         id: "0x",
       },
     ],
@@ -279,6 +317,25 @@ export default [
     ],
   },
   {
+    bpt: "0x71E1179C5e197FA551BEEC85ca2EF8693c61b85b",
+    id: "0x71e1179c5e197fa551beec85ca2ef8693c61b85b0002000000000000000000a0",
+    name: "ECLP-rETH-WETH",
+    type: "GyroE",
+    gauge: "0x25F822EB509177e393a32181182ae3981eeE6E53",
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xc791240D1F2dEf5938E2031364Ff4ed887133C3d",
+        symbol: "rETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x7644fA5D0eA14FcF3E813Fdf93ca9544f8567655",
     id: "0x7644fa5d0ea14fcf3e813fdf93ca9544f8567655000000000000000000000066",
     name: "sBAL3",
@@ -317,6 +374,63 @@ export default [
       {
         address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
         symbol: "WXDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x7E7419eBef7171C84409B7A1C3a5D4538c98d4a1",
+    id: "0x7e7419ebef7171c84409b7a1c3a5d4538c98d4a10002000000000000000000de",
+    name: "ECLP-GYD-sDAI",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+        id: "0x",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x8189c4c96826D016A99986394103DFa9aE41e7ee",
+    id: "0x8189c4c96826d016a99986394103dfa9ae41e7ee0002000000000000000000aa",
+    name: "WXDAI-GNO",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+        id: "0x",
+      },
+      {
+        address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+        symbol: "WXDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x8DD4df4Ce580b9644437f3375e54f1ab09808228",
+    id: "0x8dd4df4ce580b9644437f3375e54f1ab0980822800020000000000000000009c",
+    name: "ECLP-wstETH-WETH",
+    type: "GyroE",
+    gauge: "0xa1fF1e44E4f8346398767f94ae7DbeAB71522164",
+    tokens: [
+      {
+        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
+        symbol: "wstETH",
         id: "0x",
       },
     ],
@@ -389,20 +503,39 @@ export default [
     ],
   },
   {
-    bpt: "0xB8bB1ce9C6E5401D66fE2126dB6E7387E1E24fFE",
-    id: "0xb8bb1ce9c6e5401d66fe2126db6e7387e1e24ffe00020000000000000000003d",
-    name: "50WETH-50GNO",
-    type: "Weighted",
-    gauge: "0xd264f4d4Ad98FEf4b198547059C07a8E8bBF2F0E",
+    bpt: "0xaa56989Be5E6267fC579919576948DB3e1F10807",
+    id: "0xaa56989be5e6267fc579919576948db3e1f108070002000000000000000000ca",
+    name: "ECLP-sDAI-USDC.e-rh",
+    type: "GyroE",
+    gauge: "0x9ED250d67c4E5F5B2b5F982a678eD1c0ba011207",
     tokens: [
       {
-        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
-        symbol: "WETH",
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
         id: "0x",
       },
       {
-        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
-        symbol: "GNO",
+        address: "0xf0E7eC247b918311afa054E0AEdb99d74c31b809",
+        symbol: "stataGnoUSDCe",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xAE2a38545167Be5A2EBa9B931B28DE5A7d95315e",
+    id: "0xae2a38545167be5a2eba9b931b28de5a7d95315e0002000000000000000000cc",
+    name: "50bCSPX-50sDAI",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x1e2C4fb7eDE391d116E6B41cD0608260e8801D59",
+        symbol: "bCSPX",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
         id: "0x",
       },
     ],
@@ -446,15 +579,15 @@ export default [
     ],
   },
   {
-    bpt: "0xC5Df11757F4A8DFACcC731d13b9577f67055c6c6",
-    id: "0xc5df11757f4a8dfaccc731d13b9577f67055c6c6000200000000000000000077",
-    name: "B-50EURe-50GBPe",
-    type: "Weighted",
-    gauge: null,
+    bpt: "0xC66936a47E6D40DD050A8419B4352825D9082241",
+    id: "0xc66936a47e6d40dd050a8419b4352825d9082241000000000000000000000090",
+    name: "EURe-jEUR",
+    type: "ComposableStable",
+    gauge: "0xe8672E6d593D5D2769266919abB6dAd7b9687608",
     tokens: [
       {
-        address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
-        symbol: "GBPe",
+        address: "0x9fB1d52596c44603198fB0aee434fac3a679f702",
+        symbol: "jEUR",
         id: "0x",
       },
       {
@@ -541,25 +674,6 @@ export default [
     ],
   },
   {
-    bpt: "0xEA54604e7E1DdEc8320cF838CFE857FbF44Aad9f",
-    id: "0xea54604e7e1ddec8320cf838cfe857fbf44aad9f000200000000000000000078",
-    name: "B-50GBPe-50WXDAI",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
-        symbol: "GBPe",
-        id: "0x",
-      },
-      {
-        address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
-        symbol: "WXDAI",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xfbc3112172bA256454047D7436d1E08B3cdc5031",
     id: "0xfbc3112172ba256454047d7436d1e08b3cdc5031000200000000000000000015",
     name: "80MIVA-20WXDAI",
@@ -574,6 +688,30 @@ export default [
       {
         address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
         symbol: "WXDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xfC095C811fE836Ed12f247BCf042504342B73FB7",
+    id: "0xfc095c811fe836ed12f247bcf042504342b73fb700000000000000000000009f",
+    name: "sBAL3",
+    type: "ComposableStable",
+    gauge: "0x306b2E81Fc7c6F73F2460E3974538D724a88f8a5",
+    tokens: [
+      {
+        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
+        symbol: "USDC.e",
+        id: "0x",
+      },
+      {
+        address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
+        symbol: "USDT",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
         id: "0x",
       },
     ],

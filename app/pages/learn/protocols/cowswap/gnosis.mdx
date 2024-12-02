@@ -1,0 +1,140 @@
+import { Callout } from "nextra/components"
+
+# CowSwap on Gnosis Chain
+
+**Deployments**
+
+| Name               | Address                                                                                                                |
+| :----------------- | :--------------------------------------------------------------------------------------------------------------------- |
+| `GPv2VaultRelayer` | [0xC92E8bdf79f0507f65a392b0ab4667716BFE0110](https://gnosisscan.io/address/0xC92E8bdf79f0507f65a392b0ab4667716BFE0110) |
+| `OrderSigner`      | [0x23dA9AdE38E4477b23770DeD512fD37b12381FAB](https://gnosisscan.io/address/0x23dA9AdE38E4477b23770DeD512fD37b12381FAB) |
+
+## Action: `swap`
+
+**Parameters**
+
+| Name          | Type                  | Description                                                        |
+| :------------ | :-------------------- | :----------------------------------------------------------------- |
+| `sell`        | _string[] (required)_ | XDAI \| `Token` address                                            |
+| `buy`         | _string[] (optional)_ | XDAI \| `Token` address                                            |
+| `feeAmountBp` | _int[] (optional)_    | Fee amount basis points (0-10000), where 0 is 0% and 10000 is 100% |
+
+<Callout type="info">
+  When using the Pilot Extension, all swaps will be routed through a delegate
+  call to the [`OrderSigner`](https://github.com/gnosisguild/cow-order-signer)
+  in order to facilitate parameter scoping and minimize risks.
+</Callout>
+
+<Callout type="info">
+  To allow XDAI as `sell` or `buy` token, either the "XDAI" literal or the
+  `0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE` address can be used.
+</Callout>
+
+<Callout type="info">
+  If `buy` is left `undefined`, there would be no restriction on the buy side of
+  the swap.
+</Callout>
+
+<Callout type="info">
+  `SELL_TOKEN` below refers to the ERC-20 token address of each element given in
+  `sell`.
+</Callout>
+
+<Callout type="info">
+  `BUY_TOKEN` below refers to the ERC-20 token address of each element given in
+  `buy`.
+</Callout>
+
+<Callout type="info">
+  `FEE_AMOUNT_BP` specifies the fee amount in basis points given in
+  `feeAmountBp`. It accepts a value between 0 and 10000, where 0 represents 0%
+  and 10000 represents 100%.
+</Callout>
+
+### `SELL_TOKEN · approve`
+
+Approve `GPv2VaultRelayer` to spend `SELL_TOKEN` tokens on behalf of the avatar.
+
+- **Contract:** `SELL_TOKEN`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint                  |
+  | :-------- | :-------------------------- |
+  | `spender` | equal to `GPv2VaultRelayer` |
+  | `amount`  | -                           |
+
+### `OrderSigner · signOrder`
+
+Sign order to swap `SELL_TOKEN` for `BUY_TOKEN`.
+
+- **Contract:** `OrderSigner`
+- **Function:** `signOrder((address,address,address,uint256,uint256,uint32,bytes32,uint256,bytes32,bool,bytes32,bytes32),uint32,uint256)` → delegatecall
+
+  | Parameter                 | Constraint                        |
+  | :------------------------ | :-------------------------------- |
+  | `order.sellToken`         | equal to `SELL_TOKEN`             |
+  | `order.buyToken`          | equal to `BUY_TOKEN`              |
+  | `order.receiver`          | equal to `AVATAR`                 |
+  | `order.sellAmount`        | -                                 |
+  | `order.buyAmount`         | -                                 |
+  | `order.validTo`           | -                                 |
+  | `order.appData`           | -                                 |
+  | `order.feeAmount`         | -                                 |
+  | `order.kind`              | -                                 |
+  | `order.partiallyFillable` | -                                 |
+  | `order.sellTokenBalance`  | -                                 |
+  | `order.buyTokenBalance`   | -                                 |
+  | `validDuration`           | -                                 |
+  | `feeAmountBp`             | lower or equal to `FEE_AMOUNT_BP` |
+
+<Callout type="info">
+  The `signOrder` function does not allow sending XDAI. Therefore, XDAI must be
+  wrapped in order to be sent as a sell token.
+</Callout>
+
+### `OrderSigner · unsignOrder`
+
+Unsign and cancel order.
+
+- **Contract:** `OrderSigner`
+- **Function:** `unsignOrder((address,address,address,uint256,uint256,uint32,bytes32,uint256,bytes32,bool,bytes32,bytes32))` → delegatecall
+
+  | Parameter                 | Constraint            |
+  | :------------------------ | :-------------------- |
+  | `order.sellToken`         | equal to `SELL_TOKEN` |
+  | `order.buyToken`          | equal to `BUY_TOKEN`  |
+  | `order.receiver`          | equal to `AVATAR`     |
+  | `order.sellAmount`        | -                     |
+  | `order.buyAmount`         | -                     |
+  | `order.validTo`           | -                     |
+  | `order.appData`           | -                     |
+  | `order.feeAmount`         | -                     |
+  | `order.kind`              | -                     |
+  | `order.partiallyFillable` | -                     |
+  | `order.sellTokenBalance`  | -                     |
+  | `order.buyTokenBalance`   | -                     |
+
+### If XDAI is `SELL_TOKEN`:
+
+#### `WXDAI · approve`
+
+Approve `GPv2VaultRelayer` to spend `WXDAI` tokens on behalf of the avatar.
+
+- **Contract:** `WXDAI`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint                  |
+  | :-------- | :-------------------------- |
+  | `spender` | equal to `GPv2VaultRelayer` |
+  | `amount`  | -                           |
+
+#### `WXDAI · deposit`
+
+Deposit XDAI and receive `WXDAI` tokens.
+
+- **Contract:** `WXDAI`
+- **Function:** `deposit()` Ξ _allow sending XDAI_
+
+  | Parameter | Constraint |
+  | :-------- | :--------- |
+  | N/A       | N/A        |

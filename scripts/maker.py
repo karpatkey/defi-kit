@@ -1,4 +1,4 @@
-from defyes.functions import get_contract, get_symbol, get_node
+from karpatkit.functions import get_contract, get_symbol, get_node
 from defabipedia import Chain
 from lib.dump import dump
 import requests
@@ -11,9 +11,9 @@ ABI_GEM_JOIN = '[{"constant":true,"inputs":[],"name":"gem","outputs":[{"internal
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# transactions_data
+# protocol_data
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def transactions_data():
+def protocol_data():
     chainlog_data = requests.get("https://chainlog.makerdao.com/api/mainnet/active.json").json()
 
     web3 = get_node(Chain.ETHEREUM)
@@ -34,4 +34,4 @@ def transactions_data():
     
     dump(result, 'maker')
 
-transactions_data()
+protocol_data()

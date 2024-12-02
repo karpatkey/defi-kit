@@ -1,6 +1,6 @@
 {
   "name": "defi-kit",
-  "version": "1.10.1",
+  "version": "2.6.0",
   "description": "Permissions for Zodiac Roles covering interactions with DeFi protocols",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -11,14 +11,29 @@
       "import": "./dist/index.mjs"
     },
     "./eth": {
+      "types": "./dist/eth.d.ts",
       "require": "./dist/eth.js",
-      "import": "./dist/eth.mjs",
-      "types": "./dist/eth.d.ts"
+      "import": "./dist/eth.mjs"
     },
     "./gno": {
+      "types": "./dist/gno.d.ts",
       "require": "./dist/gno.js",
-      "import": "./dist/gno.mjs",
-      "types": "./dist/gno.d.ts"
+      "import": "./dist/gno.mjs"
+    },
+    "./arb1": {
+      "types": "./dist/arb1.d.ts",
+      "require": "./dist/arb1.js",
+      "import": "./dist/arb1.mjs"
+    },
+    "./oeth": {
+      "types": "./dist/oeth.d.ts",
+      "require": "./dist/oeth.js",
+      "import": "./dist/oeth.mjs"
+    },
+    "./base": {
+      "types": "./dist/base.d.ts",
+      "require": "./dist/base.js",
+      "import": "./dist/base.mjs"
     }
   },
   "typesVersions": {
@@ -31,6 +46,15 @@
       ],
       "gno": [
         "./dist/gno.d.ts"
+      ],
+      "arb1": [
+        "./dist/arb1.d.ts"
+      ],
+      "oeth": [
+        "./dist/oeth.d.ts"
+      ],
+      "base": [
+        "./dist/base.d.ts"
       ]
     }
   },
@@ -43,22 +67,22 @@
     "build": "rimraf dist && tsup --format esm,cjs",
     "dev": "tsup --format esm --watch",
     "anvil": "anvil --silent --fork-url ${FORK_RPC:-https://rpc.ankr.com/eth}",
-    "test:watch-only": "jest --runInBand --watch",
-    "test": "env-cmd --silent concurrently --raw --kill-others --passthrough-arguments --success first \"yarn anvil\" \"jest --runInBand -t {@}\" --",
-    "test:watch": "env-cmd --silent concurrently --raw --kill-others --handle-input --passthrough-arguments \"yarn anvil\" \"jest --runInBand --watch {@}\" --",
+    "jest": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch-only": "yarn jest --runInBand --watch",
+    "test": "env-cmd --silent concurrently --raw --kill-others --passthrough-arguments --success first \"yarn anvil\" \"yarn jest --runInBand -t {@}\" --",
+    "test:watch": "env-cmd --silent concurrently --raw --kill-others --handle-input --passthrough-arguments \"yarn anvil\" \"yarn jest --runInBand --watch {@}\" --",
     "check:types": "tsc --noEmit"
   },
   "dependencies": {
     "@asteasolutions/zod-to-openapi": "^5.5.0",
-    "@ethersproject/abi": "^5.7.0",
-    "ethers": "^5.7.2",
+    "@gnosis-guild/eth-sdk": "^0.3.7",
+    "@gnosis-guild/eth-sdk-client": "^0.1.6",
+    "@gnosis-guild/zodiac": "^4.0.3",
+    "ethers": "^6.13.4",
     "zod": "^3.22.2",
-    "zodiac-roles-sdk": "^2.9.0"
+    "zodiac-roles-sdk": "^2.14.5"
   },
   "devDependencies": {
-    "@dethcrypto/eth-sdk": "^0.3.4",
-    "@dethcrypto/eth-sdk-client": "^0.1.6",
-    "@gnosis.pm/zodiac": "^3.5.2",
     "@types/jest": "^29.5.2",
     "@types/wait-on": "^5.3.1",
     "concurrently": "^8.2.1",

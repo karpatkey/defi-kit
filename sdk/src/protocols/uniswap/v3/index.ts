@@ -5,10 +5,9 @@ import { contracts } from "../../../../eth-sdk/config"
 import { allow } from "zodiac-roles-sdk/kit"
 import { c, Permission } from "zodiac-roles-sdk"
 import ethInfo from "./_ethInfo"
-import { BigNumber } from "ethers"
 import { NotFoundError } from "../../../errors"
 
-const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
+const zeroAddress = "0x0000000000000000000000000000000000000000"
 
 const FeeMapping: { [key: string]: number } = {
   "0.01%": 100,
@@ -44,9 +43,9 @@ export const eth = {
       targets &&
       targets.map((target) => {
         try {
-          return BigNumber.from(target)
+          return BigInt(target)
         } catch (e) {
-          // could not be parsed as BigNumber
+          // could not be parsed as BigInt
           throw new NotFoundError(`Invalid NFT ID: ${target}`)
         }
       })
@@ -59,27 +58,28 @@ export const eth = {
 
     const permissions: Permission[] = [
       ...allowErc20Approve(tokensForTargets || [], [
-        contracts.mainnet.uniswap_v3.positions_nft,
+        contracts.mainnet.uniswapV3.positionsNft,
       ]),
       ...allowErc20Approve(mintTokenAddresses, [
-        contracts.mainnet.uniswap_v3.positions_nft,
+        contracts.mainnet.uniswapV3.positionsNft,
       ]),
-      allow.mainnet.uniswap_v3.positions_nft.increaseLiquidity(
+      allow.mainnet.uniswapV3.positionsNft.increaseLiquidity(
         {
           tokenId: nftIds ? oneOf(nftIds) : c.avatarIsOwnerOfErc721,
-        },
-        {
-          send: true,
         }
+        // No ETH sending allowed.
+        // {
+        //   send: true,
+        // }
       ),
-      allow.mainnet.uniswap_v3.positions_nft.decreaseLiquidity(
+      allow.mainnet.uniswapV3.positionsNft.decreaseLiquidity(
         nftIds
           ? {
               tokenId: oneOf(nftIds),
             }
           : undefined
       ),
-      allow.mainnet.uniswap_v3.positions_nft.collect({
+      allow.mainnet.uniswapV3.positionsNft.collect({
         tokenId: nftIds ? oneOf(nftIds) : undefined,
         recipient: c.avatar,
       }),
@@ -87,38 +87,40 @@ export const eth = {
 
     if (mintTokenAddresses && mintTokenAddresses.length > 0) {
       permissions.push(
-        allow.mainnet.uniswap_v3.positions_nft.mint(
+        allow.mainnet.uniswapV3.positionsNft.mint(
           {
             recipient: c.avatar,
             token0: oneOf(mintTokenAddresses),
             token1: oneOf(mintTokenAddresses),
             fee: mintFees && mintFees.length > 0 ? oneOf(mintFees) : undefined,
-          },
-          {
-            send: true,
           }
+          // No ETH sending allowed
+          // {
+          //   send: true,
+          // }
         )
       )
     }
 
-    if (
+    // No ETH sending allowed
+    /* if (
       mintTokenAddresses.includes(contracts.mainnet.weth) ||
       tokensForTargets?.includes(contracts.mainnet.weth)
     ) {
       permissions.push(
-        allow.mainnet.uniswap_v3.positions_nft.refundETH(),
-        allow.mainnet.uniswap_v3.positions_nft.unwrapWETH9(undefined, c.avatar),
-        allow.mainnet.uniswap_v3.positions_nft.collect({
+        allow.mainnet.uniswapV3.positionsNft.refundETH({ send: true }),
+        allow.mainnet.uniswapV3.positionsNft.unwrapWETH9(undefined, c.avatar),
+        allow.mainnet.uniswapV3.positionsNft.collect({
           tokenId: nftIds ? oneOf(nftIds) : undefined,
-          recipient: ZERO_ADDRESS,
+          recipient: zeroAddress,
         }),
-        allow.mainnet.uniswap_v3.positions_nft.sweepToken(
+        allow.mainnet.uniswapV3.positionsNft.sweepToken(
           undefined,
           undefined,
           c.avatar
         )
       )
-    }
+    } */
 
     return permissions
   },

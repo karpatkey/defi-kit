@@ -1,8 +1,9 @@
+import os
 import time
 # thegraph queries
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
-from defyes.functions import get_node
+from karpatkit.functions import get_node
 from defabipedia import Chain
 from lib.dump import dump
 
@@ -12,7 +13,9 @@ from lib.dump import dump
 def subgraph_query_all_pools(blockchain, min_tvl_usd=0, min_volume_usd=0):
 
     # Initialize subgraph
-    subgraph_url = "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3"
+    the_graph_apikey = os.getenv('THE_GRAPH_APIKEY')
+    # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3"
+    subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV"
     uniswapv3_transport = RequestsHTTPTransport(
         url=subgraph_url, verify=True, retries=3
     )
@@ -149,4 +152,4 @@ def protocol_data(blockchain, min_tvl_usd=0, min_volume_usd=0):
         dump(tokens, 'uniswap/v3', '_ethInfo.ts')
 
 
-protocol_data("ethereum", min_tvl_usd=1000000, min_volume_usd=1000000)
+protocol_data(Chain.ETHEREUM, min_tvl_usd=1000000, min_volume_usd=1000000)

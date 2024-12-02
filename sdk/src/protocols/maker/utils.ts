@@ -1,8 +1,6 @@
-import { getMainnetSdk } from "@dethcrypto/eth-sdk-client"
-import { BigNumber } from "ethers"
+import { getMainnetSdk } from "@gnosis-guild/eth-sdk-client"
 import { NotFoundError } from "../../errors"
 import ilks from "./_info"
-import { Ilk } from "./types"
 import { ethProvider } from "../../provider"
 import { getProvider } from "../../../test/provider"
 
@@ -11,29 +9,29 @@ const sdk = getMainnetSdk(
 )
 
 export const queryProxy = async (avatar: `0x${string}`) => {
-  return (await sdk.maker.ProxyRegistry.proxies(avatar)) as `0x${string}`
+  return (await sdk.maker.proxyRegistry.proxies(avatar)) as `0x${string}`
 }
 
 export const queryCdps = async (proxy: `0x${string}`, targets?: string[]) => {
   // fetch all cdps
-  const cdps: BigNumber[] = []
-  let cdp = await sdk.maker.CdpManager.first(proxy)
+  const cdps: bigint[] = []
+  let cdp = await sdk.maker.cdpManager.first(proxy)
   console.log({ first: cdp, proxy })
-  while (!cdp.isZero()) {
+  while (cdp !== 0n) {
     cdps.push(cdp)
-    cdp = (await sdk.maker.CdpManager.list(cdp)).next
+    cdp = (await sdk.maker.cdpManager.list(cdp)).next
   }
 
   const targetCdps = targets?.map((target) => {
     try {
-      return BigNumber.from(target)
+      return BigInt(target)
     } catch (e) {
-      // could not be parsed as BigNumber
+      // could not be parsed as BigInt
       throw new NotFoundError(`Cdp not found: ${target}`)
     }
   })
   targetCdps?.forEach((target) => {
-    if (!cdps.some((cdp) => cdp.eq(target))) {
+    if (!cdps.some((cdp) => cdp === target)) {
       throw new NotFoundError(`Cdp not found: ${target}`)
     }
   })
@@ -41,11 +39,11 @@ export const queryCdps = async (proxy: `0x${string}`, targets?: string[]) => {
   return targetCdps || cdps
 }
 
-export const queryIlk = async (cdp: BigNumber) => {
-  const ilkId = await sdk.maker.CdpManager.ilks(cdp)
+export const queryIlk = async (cdp: bigint) => {
+  const ilkId = await sdk.maker.cdpManager.ilks(cdp)
   const ilk = ilks.find((ilk) => ilk.ilk === ilkId)
   if (!ilk) {
-    throw new Error(`Unexpected ilk ${ilkId} of cdp ${cdp.toNumber()}`)
+    throw new Error(`Unexpected ilk ${ilkId} of cdp ${Number(cdp)}`)
   }
   return ilk
 }

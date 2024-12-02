@@ -1,20 +1,32 @@
+from karpatkit.functions import get_contract, get_node
+from defabipedia import Chain, tokens
+from lib.dump import dump
 import os
 import sys
 lib_path = os.path.abspath(os.path.join(__file__, '..'))
 sys.path.append(lib_path)
 
-from defyes.functions import get_contract, get_node
-from defabipedia import Chain
-from lib.dump import dump
-
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # PROTOCOL DATA PROVIDER
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Protocol Data Provider - Ethereum
-PDP_ETHEREUM = "0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d"
-
-# Protocol Data Provider V3 - Ethereum
-PDPV3_ETHEREUM = '0x7B4EB56E7CD4b454BA8ff71E4518426369a138a3'
+PROTOCOL_DATA_PROVIDER = {
+    Chain.ETHEREUM: {
+        'v2': '0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d',
+        'v3': '0x41393e5e337606dc3821075Af65AeE84D7688CBD'
+    },
+    Chain.GNOSIS: {
+        'v3': '0x57038C3e3Fe0a170BB72DE2fD56E98e4d1a69717',
+    },
+    Chain.ARBITRUM: {
+        'v3': '0x7F23D86Ee20D869112572136221e173428DD740B',
+    },
+    Chain.OPTIMISM: {
+        'v3': "0x7F23D86Ee20D869112572136221e173428DD740B",
+    },
+    Chain.BASE: {
+        'v3': '0xd82a47fdebB5bf5329b09441C3DaB4b5df2153Ad',
+    }
+}
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ABIs
@@ -26,24 +38,29 @@ ABI_PDP = '[{"inputs":[],"name":"getAllReservesTokens","outputs":[{"components":
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # reserves_tokens_data
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def reserves_tokens_data(version=2):
+def reserves_tokens_data(chain, version=3):
     reserves_tokens_data = []
     
-    web3 = get_node(Chain.ETHEREUM)
+    web3 = get_node(chain)
 
-    if version == 2:
-        pdp_contract = get_contract(PDP_ETHEREUM, Chain.ETHEREUM, web3=web3, abi=ABI_PDP)
-    elif version == 3:
-        pdp_contract = get_contract(PDPV3_ETHEREUM, Chain.ETHEREUM, web3=web3, abi=ABI_PDP)
-    else:
-        return "Error: wrong version!"
+    try:
+        pdp_address = PROTOCOL_DATA_PROVIDER[chain]['v' + str(version)]
+        pdp_contract = get_contract(pdp_address, chain, web3=web3, abi=ABI_PDP)
+    except KeyError:
+        return "Error: wrong chain or version!"
 
     reserves_tokens = pdp_contract.functions.getAllReservesTokens().call()
     
     for reserve_token in reserves_tokens:
         token_data = {}
 
-        token_data['symbol'] = reserve_token[0]
+        if chain == Chain.ARBITRUM and reserve_token[1] == tokens.ArbitrumTokenAddr.USDCe:
+            token_data['symbol'] = "USDC.e"
+        elif chain == Chain.OPTIMISM and reserve_token[1] == tokens.OptimismTokenAddr.USDCe:
+            token_data['symbol'] = "USDC.e"
+        else:
+            token_data['symbol'] = reserve_token[0]
+        
         token_data['token'] = reserve_token[1]
 
         token_config = pdp_contract.functions.getReserveConfigurationData(token_data['token']).call()
@@ -57,10 +74,18 @@ def reserves_tokens_data(version=2):
         token_addresses = pdp_contract.functions.getReserveTokensAddresses(token_data['token']).call()
 
         token_data['aTokenAddress'] = token_addresses[0]
-        token_data['stableDebtTokenAddress'] = token_addresses[1]
         token_data['variableDebtTokenAddress'] = token_addresses[2]
 
         reserves_tokens_data.append(token_data)
 
-    dump(reserves_tokens_data, 'aave/v' + str(version))
+    if chain == Chain.ETHEREUM:
+        dump(reserves_tokens_data, 'aave/v' + str(version), "_ethInfo.ts")
+    elif chain == Chain.GNOSIS:
+        dump(reserves_tokens_data, 'aave/v' + str(version), "_gnoInfo.ts")
+    elif chain == Chain.ARBITRUM:
+        dump(reserves_tokens_data, 'aave/v' + str(version), "_arb1Info.ts")
+    elif chain == Chain.OPTIMISM:
+        dump(reserves_tokens_data, 'aave/v' + str(version), "_oethInfo.ts")
+    elif chain == Chain.BASE:
+        dump(reserves_tokens_data, 'aave/v' + str(version), "_baseInfo.ts")
 

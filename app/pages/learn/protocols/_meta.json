@@ -1,16 +1,17 @@
 {
-  "aave-v2": "Aave v2",
-  "aave-v3": "Aave v3",
+  "aave_v2": "Aave v2",
+  "aave_v3": "Aave v3",
   "ankr": "Ankr",
   "aura": "Aura",
   "balancer": "Balancer",
-  "compound-v2": "Compound v2",
+  "compound_v2": "Compound v2",
   "convex": "Convex",
   "cowswap": "CowSwap",
   "lido": "Lido",
-  "rocket-pool": "Rocket Pool",
+  "rocket_pool": "Rocket Pool",
   "spark": "Spark",
   "stader": "Stader",
-  "stakewise-v2": "StakeWise v2",
-  "uniswap-v3": "Uniswap v3"
+  "stakewise_v2": "StakeWise v2",
+  "stakewise_v3": "StakeWise v3",
+  "uniswap_v3": "Uniswap v3"
 }

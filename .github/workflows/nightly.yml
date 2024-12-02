@@ -30,6 +30,7 @@ jobs:
         run: |
           cd scripts
           python -m pip install --upgrade pip
+          git config --global url."https://${{ secrets.GH_TOKEN }}@github.com/".insteadOf "https://github.com/"
           pip install -r requirements.txt
 
       - name: Run aave_v2.py
@@ -39,6 +40,8 @@ jobs:
       - name: Run aura.py
         run: python scripts/aura.py
       - name: Run balancer.py
+        env:
+          THE_GRAPH_APIKEY: ${{ secrets.THE_GRAPH_APIKEY }}
         run: python scripts/balancer.py
       - name: Run compound_v2
         run: python scripts/compound_v2.py
@@ -50,12 +53,16 @@ jobs:
         run: python scripts/maker.py
       - name: Run spark
         run: python scripts/spark.py
+      - name: Run stakewise_v3
+        run: python scripts/stakewise_v3.py
       - name: Run uniswap_v3
+        env:
+          THE_GRAPH_APIKEY: ${{ secrets.THE_GRAPH_APIKEY }}
         run: python scripts/uniswap_v3.py
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - uses: actions/cache@v3
         with:
           path: |
@@ -73,8 +80,8 @@ jobs:
         uses: peter-evans/create-pull-request@v3.10.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "fix: protocol updates"
-          title: "[nightly] Protocol updates"
+          commit-message: "fix: protocol updates [nightly]"
+          title: "fix: protocol updates [nightly]"
           body: >
             The nightly job detected updates to the protocol configs
           labels: bot

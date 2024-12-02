@@ -6,20 +6,20 @@ import { contracts } from "../../../eth-sdk/config"
 export const eth = {
   deposit: async () => [
     ...allowErc20Approve(
-      [contracts.mainnet.stader.ETHx],
-      [contracts.mainnet.stader.user_withdraw_manager]
+      [contracts.mainnet.stader.ethx],
+      [contracts.mainnet.stader.userWithdrawManager]
     ),
-    allow.mainnet.stader.staking_pool_manager["deposit(address)"](c.avatar, {
+    allow.mainnet.stader.stakingPoolManager["deposit(address)"](c.avatar, {
       send: true,
     }),
-    allow.mainnet.stader.staking_pool_manager["deposit(address,string)"](
+    allow.mainnet.stader.stakingPoolManager["deposit(address,string)"](
       c.avatar,
       undefined,
       { send: true }
     ),
-    allow.mainnet.stader.user_withdraw_manager[
+    allow.mainnet.stader.userWithdrawManager[
       "requestWithdraw(uint256,address)"
     ](undefined, c.avatar),
-    allow.mainnet.stader.user_withdraw_manager.claim(),
+    allow.mainnet.stader.userWithdrawManager.claim(),
   ],
 }

@@ -2,17 +2,17 @@ import { allow } from "zodiac-roles-sdk/kit"
 import { Permission, c } from "zodiac-roles-sdk"
 import { Pool, StakeToken, Token } from "./types"
 import { allowErc20Approve } from "../../conditions"
-import { contracts, contractAddressOverrides } from "../../../eth-sdk/config"
+import { contracts } from "../../../eth-sdk/config"
 import balancerEthPools from "../balancer/_ethPools"
 import balancerGnoPools from "../balancer/_gnoPools"
 import { findPool as findBalancerPool } from "../balancer/index"
 import { Chain } from "../../types"
 
-export const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
-export const AURA = "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF"
+export const zeroAddress = "0x0000000000000000000000000000000000000000"
+export const aura = "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF"
 
 export const deposit = (
-  chain: Chain,
+  chain: Chain.eth | Chain.gno,
   pool: Pool,
   tokens: readonly Token[] = pool.tokens
 ) => {
@@ -21,22 +21,22 @@ export const deposit = (
     .filter((address) => tokens.some((token) => token.address === address))
 
   let booster: `0x${string}`
-  let reward_pool_deposit_wrapper: `0x${string}`
-  let balancer_pools
+  let rewardPoolDepositWrapper: `0x${string}`
+  let balancerPools
   switch (chain) {
     case Chain.eth:
       booster = contracts.mainnet.aura.booster as `0x${string}`
-      reward_pool_deposit_wrapper = contracts.mainnet.aura
-        .reward_pool_deposit_wrapper as `0x${string}`
-      balancer_pools = balancerEthPools
+      rewardPoolDepositWrapper = contracts.mainnet.aura
+        .rewardPoolDepositWrapper as `0x${string}`
+      balancerPools = balancerEthPools
 
       break
 
     case Chain.gno:
-      booster = contractAddressOverrides.gnosis.aura.booster as `0x${string}`
-      reward_pool_deposit_wrapper = contractAddressOverrides.gnosis.aura
-        .reward_pool_deposit_wrapper as `0x${string}`
-      balancer_pools = balancerGnoPools
+      booster = contracts.gnosis.aura.booster as `0x${string}`
+      rewardPoolDepositWrapper = contracts.gnosis.aura
+        .rewardPoolDepositWrapper as `0x${string}`
+      balancerPools = balancerGnoPools
 
       break
   }
@@ -64,15 +64,15 @@ export const deposit = (
 
   if (tokenAddresses.length > 0) {
     permissions.push(
-      ...allowErc20Approve(tokenAddresses, [reward_pool_deposit_wrapper]),
+      ...allowErc20Approve(tokenAddresses, [rewardPoolDepositWrapper]),
       {
-        ...allow.mainnet.aura.reward_pool_deposit_wrapper.depositSingle(
+        ...allow.mainnet.aura.rewardPoolDepositWrapper.depositSingle(
           pool.rewarder,
           c.or(...(tokenAddresses as [string, string, ...string[]])),
           undefined,
-          findBalancerPool(balancer_pools, pool.bpt).id
+          findBalancerPool(balancerPools, pool.bpt).id
         ),
-        targetAddress: reward_pool_deposit_wrapper,
+        targetAddress: rewardPoolDepositWrapper,
       }
     )
   }
@@ -89,20 +89,20 @@ export const stake = (token: StakeToken): Permission[] => {
       permissions.push(
         ...allowErc20Approve(
           [token.address],
-          [contracts.mainnet.aura.bal_depositor_wrapper]
+          [contracts.mainnet.aura.balDepositorWrapper]
         ),
         {
-          ...allow.mainnet.aura.bal_depositor_wrapper.deposit(
+          ...allow.mainnet.aura.balDepositorWrapper.deposit(
             undefined,
             undefined,
             undefined,
             c.or(
               // mint auraBAL
-              ZERO_ADDRESS,
+              zeroAddress,
               // Classic auraBAL staking
-              contracts.mainnet.aura.aurabal_staking_rewarder,
+              contracts.mainnet.aura.auraBalStakingRewarder,
               // Compounder auraBAL
-              contracts.mainnet.aura.aurabal_staker
+              contracts.mainnet.aura.auraBalStaker
             )
           ),
         }
@@ -112,21 +112,21 @@ export const stake = (token: StakeToken): Permission[] => {
       permissions.push(
         ...allowErc20Approve(
           [token.address],
-          [contracts.mainnet.aura.b_80bal_20weth_depositor_wrapper]
+          [contracts.mainnet.aura.b80Bal20WethDepositorWrapper]
         ),
         {
-          ...allow.mainnet.aura.b_80bal_20weth_depositor_wrapper[
+          ...allow.mainnet.aura.b80Bal20WethDepositorWrapper[
             "deposit(uint256,bool,address)"
           ](
             undefined,
             undefined,
             c.or(
               // mint auraBAL
-              ZERO_ADDRESS,
+              zeroAddress,
               // Classic auraBAL staking
-              contracts.mainnet.aura.aurabal_staking_rewarder,
+              contracts.mainnet.aura.auraBalStakingRewarder,
               // Compounder auraBAL
-              contracts.mainnet.aura.aurabal_staker
+              contracts.mainnet.aura.auraBalStaker
             )
           ),
         }
@@ -137,105 +137,44 @@ export const stake = (token: StakeToken): Permission[] => {
       permissions.push(
         ...allowErc20Approve(
           [token.address],
-          [contracts.mainnet.aura.aurabal_staking_rewarder]
+          [contracts.mainnet.aura.auraBalStakingRewarder]
         ),
-        allow.mainnet.aura.aurabal_staking_rewarder.stake()
+        allow.mainnet.aura.auraBalStakingRewarder.stake()
       )
 
       // Compounder auraBAL
       permissions.push(
         ...allowErc20Approve(
           [token.address],
-          [contracts.mainnet.aura.stkaurabal]
+          [contracts.mainnet.aura.stkauraBal]
         ),
-        allow.mainnet.aura.stkaurabal.deposit(undefined, c.avatar)
+        allow.mainnet.aura.stkauraBal.deposit(undefined, c.avatar)
       )
       break
   }
 
   // Classic auraBAL staking
-  permissions.push(allow.mainnet.aura.aurabal_staking_rewarder.withdraw())
-  permissions.push(allow.mainnet.aura.aurabal_staking_rewarder["getReward()"]())
+  permissions.push(allow.mainnet.aura.auraBalStakingRewarder.withdraw())
+  permissions.push(allow.mainnet.aura.auraBalStakingRewarder["getReward()"]())
 
   // Compounder auraBAL
   permissions.push(
-    allow.mainnet.aura.stkaurabal.withdraw(undefined, c.avatar, c.avatar),
+    allow.mainnet.aura.stkauraBal.withdraw(undefined, c.avatar, c.avatar),
     // When the MAX amount is unstaked
-    allow.mainnet.aura.stkaurabal.redeem(undefined, c.avatar, c.avatar)
+    allow.mainnet.aura.stkauraBal.redeem(undefined, c.avatar, c.avatar)
   )
   permissions.push(
-    allow.mainnet.aura.aurabal_compounding_rewarder["getReward()"]()
+    allow.mainnet.aura.auraBalCompoundingRewarder["getReward()"]()
   )
 
   return permissions
 }
 
-// Included in stake() action
-// export const compound = (token: StakeToken) => {
-//   const permissions: Permission[] = []
-
-//   switch (token.symbol) {
-//     case "BAL":
-//       permissions.push(
-//         ...allowErc20Approve(
-//           [token.address],
-//           [contracts.mainnet.aura.bal_depositor_wrapper]
-//         ),
-//         {
-//           ...allow.mainnet.aura.bal_depositor_wrapper.deposit(
-//             undefined,
-//             undefined,
-//             undefined,
-//             c.or(ZERO_ADDRESS, contracts.mainnet.aura.aurabal_staker)
-//           ),
-//         }
-//       )
-//       break
-//     case "B-80BAL-20WETH":
-//       permissions.push(
-//         ...allowErc20Approve(
-//           [token.address],
-//           [contracts.mainnet.aura.b_80bal_20weth_depositor_wrapper]
-//         ),
-//         {
-//           ...allow.mainnet.aura.b_80bal_20weth_depositor_wrapper[
-//             "deposit(uint256,bool,address)"
-//           ](
-//             undefined,
-//             undefined,
-//             c.or(ZERO_ADDRESS, contracts.mainnet.aura.aurabal_staker)
-//           ),
-//         }
-//       )
-//       break
-//     case "auraBAL":
-//       permissions.push(
-//         ...allowErc20Approve(
-//           [token.address],
-//           [contracts.mainnet.aura.stkaurabal]
-//         ),
-//         allow.mainnet.aura.stkaurabal.deposit(undefined, c.avatar)
-//       )
-//       break
-//   }
-
-//   permissions.push(
-//     allow.mainnet.aura.stkaurabal.withdraw(undefined, c.avatar, c.avatar),
-//     // When the MAX amount is unstaked
-//     allow.mainnet.aura.stkaurabal.redeem(undefined, c.avatar, c.avatar)
-//   )
-//   permissions.push(
-//     allow.mainnet.aura.aurabal_compounding_rewarder["getReward()"]()
-//   )
-
-//   return permissions
-// }
-
 export const lock = (): Permission[] => {
   return [
-    ...allowErc20Approve([AURA], [contracts.mainnet.aura.aura_locker]),
-    allow.mainnet.aura.aura_locker.lock(c.avatar),
-    allow.mainnet.aura.aura_locker.processExpiredLocks(),
-    allow.mainnet.aura.aura_locker["getReward(address)"](c.avatar),
+    ...allowErc20Approve([aura], [contracts.mainnet.aura.vlAura]),
+    allow.mainnet.aura.vlAura.lock(c.avatar),
+    allow.mainnet.aura.vlAura.processExpiredLocks(),
+    allow.mainnet.aura.vlAura["getReward(address)"](c.avatar),
   ]
 }

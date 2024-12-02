@@ -1,5 +1,5 @@
 import { Chain, encodeBytes32String, zx } from "defi-kit"
-import { arrayify } from "ethers/lib/utils"
+import { getBytes } from "ethers"
 import z from "zod"
 import { extendZodWithOpenApi } from "@asteasolutions/zod-to-openapi"
 
@@ -11,7 +11,7 @@ export const roleKey = z.string().transform((val, ctx) => {
   } catch (e1) {
     // string is too long to be encoded as bytes32, check if it's a bytes32 already
     try {
-      const data = arrayify(val)
+      const data = getBytes(val)
       if (data.length === 32 && data[31] === 0) {
         return val as `0x${string}`
       }
@@ -161,7 +161,7 @@ const baseCondition = z.object({
 })
 
 type Condition = z.infer<typeof baseCondition> & {
-  children?: Condition[]
+  children?: readonly Condition[]
 }
 
 export const condition: z.ZodType<Condition> = baseCondition

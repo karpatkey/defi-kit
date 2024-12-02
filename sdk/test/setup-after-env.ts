@@ -80,10 +80,7 @@ expect.extend({
         throw error
       }
 
-      if (
-        !error.errorSignature ||
-        error.errorSignature !== "ConditionViolation(uint8,bytes32)"
-      ) {
+      if (error.revert?.signature !== "ConditionViolation(uint8,bytes32)") {
         console.warn(error)
 
         // if we get here, it's not a permission error
@@ -94,7 +91,7 @@ expect.extend({
         }
       }
 
-      const receivedStatus = error.errorArgs.status
+      const receivedStatus = Number(error.revert.args.status)
 
       return {
         message: () =>
@@ -119,10 +116,7 @@ expect.extend({
         throw error
       }
 
-      if (
-        !error.errorSignature ||
-        error.errorSignature !== "ConditionViolation(uint8,bytes32)"
-      ) {
+      if (error.revert?.signature !== "ConditionViolation(uint8,bytes32)") {
         // if we get here, it's not a permission error
         console.warn(error)
 
@@ -133,8 +127,8 @@ expect.extend({
         }
       }
 
-      const receivedStatus = error.errorArgs.status
-      const receivedInfo = error.errorArgs.info
+      const receivedStatus = Number(error.revert.args.status)
+      const receivedInfo = error.revert.args.info
 
       if (status !== undefined) {
         if (receivedStatus !== status) {
@@ -184,12 +178,3 @@ expect.extend({
     }
   },
 })
-
-const getErrorSignature = (error: any) => {
-  if (error.errorSignature) {
-    return {
-      signature: error.errorSignature,
-      args: error.errorArgs,
-    }
-  }
-}

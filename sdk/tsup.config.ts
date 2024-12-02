@@ -4,14 +4,21 @@ export default defineConfig({
   name: "tsup",
   target: "node14",
   sourcemap: true,
-  entry: ["./src/index.ts", "./src/eth.ts", "./src/gno.ts"],
+  entry: [
+    "./src/index.ts",
+    "./src/eth.ts",
+    "./src/gno.ts",
+    "./src/arb1.ts",
+    "./src/oeth.ts",
+    "./src/base.ts",
+  ],
   dts: {
     resolve: true,
   },
   noExternal: [
     "zodiac-roles-sdk/kit",
-    "@dethcrypto/eth-sdk-client",
-    ".dethcrypto/eth-sdk-client",
+    "@gnosis-guild/eth-sdk-client",
+    ".gnosis-guild/eth-sdk-client",
   ],
   external: ["zodiac-roles-sdk"],
 })
