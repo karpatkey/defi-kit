@@ -224,7 +224,7 @@ const setStory = (html: string | HTMLElement, sandbox: Sandbox) => {
   // We need to hijack internal links
   for (const a of Array.from(story.getElementsByTagName("a"))) {
     if (!a.pathname.startsWith("/play")) continue
-    // Note the the header generated links also count in here
+    // Note the header generated links also count in here
 
     // overwrite playground links
     if (a.hash.includes("#code/")) {

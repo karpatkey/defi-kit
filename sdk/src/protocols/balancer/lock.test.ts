@@ -64,7 +64,7 @@ describe("balancer", () => {
 
       // The create_lock() reverts because it checks if the call
       // is from a whitelisted smart contract (like a Safe), revert if not.
-      // To check if the the smart contract is whitelisted you can query
+      // To check if the smart contract is whitelisted you can query
       // the check() in https://etherscan.io/address/0x7869296Efd0a76872fEE62A058C8fBca5c1c826C
       await expect(
         kit.asMember.balancer.veBal.create_lock(
