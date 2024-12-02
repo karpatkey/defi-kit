@@ -2647,4 +2647,32 @@ export default [
     cvxDepositToken: "0x53c0968d20124458717d52f931f315166AA4e24e",
     rewarder: "0xdC50b178A93406BC6057c2D4fEd85023F2bb2510",
   },
+  {
+    name: "ETHASF",
+    id: "405",
+    crvLPToken: "0x3D0d331390D14DF42c16FC20700F7e6Ad4849c50",
+    cvxDepositToken: "0x422dda056F8c7a88AaDb1445B805A6099871Ce43",
+    rewarder: "0x992D16CB19a1b0a354B8C9748473C5667fDe654b",
+  },
+  {
+    name: "USD3USDM",
+    id: "406",
+    crvLPToken: "0x8999EB39237DD9E3C184fb2f10780a95a34A14ef",
+    cvxDepositToken: "0x5C0cf07866F0B479E80cBf953DDa2C379208c142",
+    rewarder: "0xD4d62998B4013c57195170c67A9b03a1618874F0",
+  },
+  {
+    name: "USD3sDAI",
+    id: "407",
+    crvLPToken: "0x0E84996AC18fcF6Fe18C372520798CE0cdf892D4",
+    cvxDepositToken: "0x3A1c5c92a29AeF96359ECefA3D6F404327Ee4F27",
+    rewarder: "0x3A203D91F7E87b4dFFC82103CC4F2089EDF971B7",
+  },
+  {
+    name: "USD3sUSDe",
+    id: "408",
+    crvLPToken: "0x964573B560DA1cE5b10dd09a4723c5ccBE9f9688",
+    cvxDepositToken: "0x9ae89593C2f35EaC799e59ab54a68e55e0c03324",
+    rewarder: "0xb516FE0CaDC13F2dD86E734694cF307f22A43B3a",
+  },
 ] as const
