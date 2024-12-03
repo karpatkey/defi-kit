@@ -1,16 +1,16 @@
 import { PermissionSet } from "zodiac-roles-sdk"
-import { AllowFunction, Strategies } from "../types"
+import { StrategyActions, AllowFunction } from "../types"
 
 type Annotated<F extends AllowFunction> = (
   ...args: Parameters<F>
 ) => Promise<PermissionSet>
 
 const annotate = <F extends AllowFunction>(
-  strategyFunction: F,
+  actionFunction: F,
   path: string[]
 ): Annotated<F> => {
   const annotated = async (params: any) => {
-    const result = await strategyFunction(params)
+    const result = await actionFunction(params)
 
     const queryString = new URLSearchParams(params).toString()
     const joinedPath = path.join("/")
@@ -27,35 +27,29 @@ const annotate = <F extends AllowFunction>(
   return annotated as (params: Parameters<F>[0]) => Promise<PermissionSet>
 }
 
-type AllAnnotated<S extends Strategies> = {
-  exit: {
-    [C in keyof S["exit"]]: {
-      [K in keyof S["exit"][C]]: Annotated<S["exit"][C][K]>
-    }
-  }
+type AllAnnotated<R extends Record<string, StrategyActions>> = {
+  [P in keyof R]: R[P] extends StrategyActions
+    ? {
+        [Key in keyof R[P]]: R[P][Key] extends AllowFunction
+          ? Annotated<R[P][Key]>
+          : undefined
+      }
+    : undefined
 }
 
-export const annotateAll = <S extends Strategies>(
-  strategies: S,
+export const annotateAll = <R extends Record<string, StrategyActions>>(
+  actions: R,
   chainPrefix: string
-): AllAnnotated<S> => {
+): AllAnnotated<R> => {
   const annotated: any = {}
-  for (const [type, strategiesOfType] of Object.entries(strategies)) {
-    annotated[type] = {}
-    for (const [category, strategiesInCategory] of Object.entries(
-      strategiesOfType
-    )) {
-      annotated[type][category] = {}
-      for (const [strategyName, strategy] of Object.entries(
-        strategiesInCategory
-      )) {
-        annotated[type][category][strategyName] = annotate(strategy, [
-          chainPrefix,
-          type,
-          category,
-          strategyName,
-        ])
-      }
+  for (const [protocolKey, strategyActions] of Object.entries(actions)) {
+    annotated[protocolKey] = {}
+    for (const [actionKey, action] of Object.entries(strategyActions)) {
+      annotated[protocolKey][actionKey] = annotate(action, [
+        chainPrefix,
+        protocolKey,
+        actionKey,
+      ])
     }
   }
   return annotated

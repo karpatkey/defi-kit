@@ -1,5 +1,5 @@
 import { z } from "zod"
-import { zEthPool, zGnoPool } from "../../../protocols/aura/schema"
+import { zEthPool, zGnoPool } from "../../protocols/aura/schema"
 
 export const eth = {
   bpt: z.object({
