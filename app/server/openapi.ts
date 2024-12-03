@@ -78,16 +78,15 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
     })
   })
 
-  Object.entries(sdk.allowStrategy).forEach(([type, strategiesOfType]) => {
-    Object.entries(strategiesOfType).forEach(
-      ([category, strategiesInCategory]) => {
-        Object.keys(strategiesInCategory).forEach((name) => {
-          registerAllowStrategy(registry, chainPrefix, type, category, name)
+  Object.entries(sdk.allowStrategy).forEach(([protocol, strategiesOfProtocol]) => {
+    Object.entries(strategiesOfProtocol).forEach(
+      ([_, strategyNames]) => {
+        Object.keys(strategyNames).forEach((name) => {
+          registerAllowStrategy(registry, chainPrefix, protocol, name)
           registerStrategyPermissions(
             registry,
             chainPrefix,
-            type,
-            category,
+            protocol,
             name
           )
         })

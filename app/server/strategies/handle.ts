@@ -11,14 +11,12 @@ export const allowStrategy: TransactionsHandler = async (query) => {
   const {
     mod: { address, chain },
     role,
-    type,
-    category,
+    protocol,
     name,
   } = strategyTransactionsQueryBase.parse(query)
   const permissions = await queryStrategyPermissionSet({
     chain,
-    type,
-    category,
+    protocol,
     name,
     query,
   })
@@ -31,7 +29,7 @@ export const allowStrategy: TransactionsHandler = async (query) => {
 
   return exportToSafeTransactionBuilder(calls, {
     name: `Extend permissions of "${decodeBytes32String(role)}" role`,
-    description: `Allow executing ${type} strategy '${category} / ${name}'`,
+    description: `Allow executing strategy '${protocol} / ${name}'`,
   })
 }
 

@@ -5,19 +5,18 @@ import { permission, transactionsDocParams, transactionsJson } from "../schema"
 export const registerAllowStrategy = (
   registry: OpenAPIRegistry,
   chainPrefix: ChainPrefix,
-  type: string,
-  category: string,
+  protocol: string,
   name: string
 ) => {
   const { strategiesSchema } = sdks[chainPrefix] as any
   console.log({ strategiesSchema })
-  const querySchema = strategiesSchema[type][category][name]
+  const querySchema = strategiesSchema[protocol][name]
 
   registry.registerPath({
     method: "get",
-    path: `/strategy/${chainPrefix}:{mod}/{role}/allow/${type}/${category}/${name}`,
-    summary: `Transactions for granting permissions to run the '${category} / ${name}' ${type} strategy`,
-    tags: [`${category} ${type} strategies`],
+    path: `/strategy/${chainPrefix}:{mod}/{role}/allow/${protocol}/${name}`,
+    summary: `Transactions for granting permissions to run the '${protocol} / ${name}' strategy`,
+    tags: [`${protocol} ${name} strategies`],
     request: {
       params: transactionsDocParams,
       query: querySchema,
@@ -39,25 +38,24 @@ export const registerAllowStrategy = (
 export const registerStrategyPermissions = (
   registry: OpenAPIRegistry,
   chainPrefix: ChainPrefix,
-  type: string,
-  category: string,
+  protocol: string,
   name: string
 ) => {
   const { strategiesSchema } = sdks[chainPrefix] as any
-  const querySchema = strategiesSchema[type][category][name]
+  const querySchema = strategiesSchema[protocol][name]
 
   registry.registerPath({
     method: "get",
-    path: `/strategy/permissions/${chainPrefix}/${type}/${category}/${name}`,
-    summary: `Run the '${category} / ${name}' ${type} strategy`,
-    tags: [`${category} ${type} strategy permissions`],
+    path: `/strategy/permissions/${chainPrefix}/${protocol}/${name}`,
+    summary: `Run the '${protocol} / ${name}' strategy`,
+    tags: [`${protocol} ${name} strategy permissions`],
     request: {
       query: querySchema,
     },
 
     responses: {
       200: {
-        description: `Permissions for running the '${category} / ${name}' ${type} strategy`,
+        description: `Permissions for running the '${protocol} / ${name}' strategy`,
         content: {
           "application/json": {
             schema: permission.array(),

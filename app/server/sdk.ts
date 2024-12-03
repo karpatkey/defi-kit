@@ -5,11 +5,9 @@ import * as oeth from "defi-kit/oeth"
 import * as base from "defi-kit/base"
 import {
   ActionName,
-  StrategyType,
   Chain,
   NotFoundError,
   AllowFunction,
-  ProtocolActions,
 } from "defi-kit"
 import { parseQuery } from "./parse"
 
@@ -58,15 +56,13 @@ export const queryActionPermissionSet = ({
 }
 
 export const queryStrategyPermissionSet = ({
-  type,
   chain,
-  category,
+  protocol,
   name,
   query,
 }: {
-  type: StrategyType
   chain: Chain
-  category: string
+  protocol: string
   name: string
   query: Partial<{
     [key: string]: string | string[]
@@ -75,18 +71,18 @@ export const queryStrategyPermissionSet = ({
   const sdk = sdks[chain]
   const { allowStrategy, strategiesSchema } = sdk
 
-  if (!(type in strategiesSchema) || !(type in allowStrategy)) {
-    throw new NotFoundError(`${type} strategies are not supported on ${chain}`)
+  if (!(protocol in strategiesSchema) || !(protocol in allowStrategy)) {
+    throw new NotFoundError(`${protocol} strategies are not supported on ${chain}`)
   }
 
-  const allowStrategyFn = (allowStrategy as any)[type][category]?.[name] as
+  const allowStrategyFn = (allowStrategy as any)[protocol]?.[name] as
     | AllowFunction
     | undefined
-  const paramsSchema = (strategiesSchema as any)[type][category]?.[name]
+  const paramsSchema = (strategiesSchema as any)[protocol]?.[name]
 
   if (!allowStrategyFn || !paramsSchema) {
     throw new NotFoundError(
-      `${type} strategy '${category} / ${name}' does not exist`
+      `${protocol} strategy '$${name}' does not exist`
     )
   }
 

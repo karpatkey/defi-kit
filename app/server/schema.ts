@@ -72,8 +72,7 @@ export const actionTransactionsQueryBase = z.object({
 // request query params used by all strategy permissions endpoints (strategy/permissions/...) , used for parsing next.js request query params
 export const strategyPermissionsQueryBase = z.object({
   chain: chain,
-  type: z.literal("exit"),
-  category: z.string(),
+  protocol: z.string(),
   name: z.string(),
 })
 
@@ -81,8 +80,7 @@ export const strategyPermissionsQueryBase = z.object({
 export const strategyTransactionsQueryBase = z.object({
   mod: prefixedAddress, // in next.js routes we can only extract full path components, so the `mod` param includes the chain prefix
   role: roleKey,
-  type: z.literal("exit"),
-  category: z.string(),
+  protocol: z.string(),
   name: z.string(),
 })
 
