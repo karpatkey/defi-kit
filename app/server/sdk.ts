@@ -3,12 +3,7 @@ import * as gno from "defi-kit/gno"
 import * as arb1 from "defi-kit/arb1"
 import * as oeth from "defi-kit/oeth"
 import * as base from "defi-kit/base"
-import {
-  ActionName,
-  Chain,
-  NotFoundError,
-  AllowFunction,
-} from "defi-kit"
+import { ActionName, Chain, NotFoundError, AllowFunction } from "defi-kit"
 import { parseQuery } from "./parse"
 
 export const sdks = {
@@ -72,7 +67,9 @@ export const queryStrategyPermissionSet = ({
   const { allowStrategy, strategiesSchema } = sdk
 
   if (!(protocol in strategiesSchema) || !(protocol in allowStrategy)) {
-    throw new NotFoundError(`${protocol} strategies are not supported on ${chain}`)
+    throw new NotFoundError(
+      `${protocol} strategies are not supported on ${chain}`
+    )
   }
 
   const allowStrategyFn = (allowStrategy as any)[protocol]?.[name] as
@@ -81,9 +78,7 @@ export const queryStrategyPermissionSet = ({
   const paramsSchema = (strategiesSchema as any)[protocol]?.[name]
 
   if (!allowStrategyFn || !paramsSchema) {
-    throw new NotFoundError(
-      `${protocol} strategy '$${name}' does not exist`
-    )
+    throw new NotFoundError(`${protocol} strategy '$${name}' does not exist`)
   }
 
   return allowStrategyFn(parseQuery(query, paramsSchema))
