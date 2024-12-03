@@ -11,14 +11,8 @@ export const gno = {
   aura: aura.gno,
 } satisfies StrategySchemas
 
-export const arb1 = {
-  
-} satisfies StrategySchemas
+export const arb1 = {} satisfies StrategySchemas
 
-export const oeth = {
-  
-} satisfies StrategySchemas
+export const oeth = {} satisfies StrategySchemas
 
-export const base = {
- 
-} satisfies StrategySchemas
+export const base = {} satisfies StrategySchemas

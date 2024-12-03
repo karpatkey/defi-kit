@@ -17,22 +17,7 @@ export const gno = annotateAll(
   "gno"
 )
 
-export const arb1 = annotateAll(
-  {
-    
-  },
-  "arb1"
-)
-export const oeth = annotateAll(
-  {
-   
-  },
-  "oeth"
-)
+export const arb1 = annotateAll({}, "arb1")
+export const oeth = annotateAll({}, "oeth")
 
-export const base = annotateAll(
-  {
-    
-  },
-  "base"
-)
+export const base = annotateAll({}, "base")
