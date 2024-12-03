@@ -38,16 +38,16 @@ export default [
       "Independent Ethereum validators with owned hardware, MEV boost, and minority clients for robust decentralization. Empowering the Ethereum network with integrity.",
   },
   {
-    id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
-    name: "Blockscape Super Early Bird",
-    description:
-      "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
-  },
-  {
     id: "0x663580b3edad914d0b59cea88616f06278d42bb2",
     name: "𓃵 onchainaustria.at",
     description:
       "onchainaustria is a registered Austrian association and thriving crypto community. We operate as a node operator with a low fee structure and a highly redundant technical setup.\n\nWe are offering native crypto staking. Our members benefit from a collaborative environment where we share knowledge and optimize crypto investments.\n\nhttps://onchainaustria.at/",
+  },
+  {
+    id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
+    name: "Blockscape Super Early Bird",
+    description:
+      "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
   },
   {
     id: "0x5610297eb32542b8f13378fe7d783dcb1ac3b1a1",
@@ -144,16 +144,22 @@ export default [
       "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
   },
   {
+    id: "0xe2d8f982708ce1e3814c8986cbab624ca926288a",
+    name: "KysenPool Zen 🧘",
+    description:
+      "Unlock the Power of Staking with Our Trusted Blockchain Infrastructure Services!  We are a Stakewise-verified validator.  Operating since 2019 as a qualified and elected validator in over a dozen mainnet chains, we have expanded our staking infrastructure into 3 continents.  This vault is managed by a multisig wallet and limited to 500 validators (16,000 ETH).  Visit our Website @ https://kysenpool.io -or- Web3 Guidebooks @ https://docs.kysenpool.io for more information.\n\nFor institutional ETH holders looking to have your own private Stakewise pool, you can establish a commercial agreement with us to have a custom vault fee, set up operational and reporting procedures, manage jurisdictional requirements, uphold security standards and maintain compliance with regulations.  Please reach out to our business development team at bizdev@kysenpool.io",
+  },
+  {
     id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
     name: "Stakesaurus SEA Home Nodes",
     description:
       "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community\n\nCentralised infrastructure is bad for both the network and your own ETH (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service!\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws — e.g. Most slashing events are due to institutions over-engineering their setups.\n\nAt Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
   },
   {
-    id: "0xe2d8f982708ce1e3814c8986cbab624ca926288a",
-    name: "KysenPool Zen 🧘",
+    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
+    name: "Big Euler's e-Stake",
     description:
-      "Unlock the Power of Staking with Our Trusted Blockchain Infrastructure Services!  We are a Stakewise-verified validator.  Operating since 2019 as a qualified and elected validator in over a dozen mainnet chains, we have expanded our staking infrastructure into 3 continents.  This vault is managed by a multisig wallet and limited to 500 validators (16,000 ETH).  Visit our Website @ https://kysenpool.io -or- Web3 Guidebooks @ https://docs.kysenpool.io for more information.\n\nFor institutional ETH holders looking to have your own private Stakewise pool, you can establish a commercial agreement with us to have a custom vault fee, set up operational and reporting procedures, manage jurisdictional requirements, uphold security standards and maintain compliance with regulations.  Please reach out to our business development team at bizdev@kysenpool.io",
+      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
   },
   {
     id: "0x30c13e93c170885e9969ae2e4ff5f020807e0d74",
@@ -174,16 +180,16 @@ export default [
       "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
   },
   {
-    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
-    name: "Big Euler's e-Stake",
-    description:
-      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
-  },
-  {
     id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
     name: "DSRV",
     description:
       "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
+  },
+  {
+    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
+    name: "Meria",
+    description:
+      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
@@ -208,12 +214,6 @@ export default [
     name: "BRAZILPRACIMA",
     description:
       "Contributing to Ethereum's geographic decentralization and censorship resistance. Always running minority clients, reducing the risk of being slashed to a minimum.\nIndependent validator experience since Beacon Chain's genesis block in December 2020, never missed a proposal.\nProof of reputation https://beaconcha.in/slots?q=brazilpracima",
-  },
-  {
-    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
-    name: "Meria",
-    description:
-      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0x475064d69be1933c3ec0301a7397b0a667993f95",
@@ -330,6 +330,11 @@ export default [
   {
     id: "0xcb75149e58235f4551819df0c599acf0c1c9b5f8",
     name: "TBD",
+    description: null,
+  },
+  {
+    id: "0xcb1d4c9834c7ee489830ff43802685d14f4c177b",
+    name: "DFB Network",
     description: null,
   },
   {

@@ -73,11 +73,6 @@ export default [
       "Home Dappnode staker based in Greece since 2022.\nProviding your worst possible vault choice. If there is a power outage then we are both in pain.\nEnjoy!",
   },
   {
-    id: "0x0ca22f2d5ad17142bb1065ae828d9db28f86ca1c",
-    name: "Thot",
-    description: "Testing vaults ",
-  },
-  {
     id: "0x27b7cb7bc376c0798651238ce5294f70b283bc61",
     name: "Blockscape Gnosis Vault ",
     description:
@@ -120,6 +115,11 @@ export default [
     id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",
     name: "Test No Deposit",
     description: null,
+  },
+  {
+    id: "0x0ca22f2d5ad17142bb1065ae828d9db28f86ca1c",
+    name: "Thot",
+    description: "Testing vaults ",
   },
   {
     id: "0xb1208506ac11f342dd63656f0a8c2803e89a87ba",
