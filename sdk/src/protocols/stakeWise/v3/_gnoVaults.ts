@@ -32,6 +32,12 @@ export default [
       "Node operators, securing and decentralizing Ethereum |  AVS operator: http://avs.stakecat.space\n \nWe provide greater decentralization for networks with our own infrastructure for validators and high availability to compete with centralized data center performance.\n\nmore about Stakecat here: https://www.stakecat.space/",
   },
   {
+    id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
+    name: "IP Stake",
+    description:
+      "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
+  },
+  {
     id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
     name: "H2O Nodes",
     description:
@@ -67,22 +73,10 @@ export default [
     description: "Deprecated",
   },
   {
-    id: "0x2435992a2bf5feaa535d16edaad3d525dc94e0e8",
-    name: "Forsaken",
-    description:
-      "Home Dappnode staker based in Greece since 2022.\nProviding your worst possible vault choice. If there is a power outage then we are both in pain.\nEnjoy!",
-  },
-  {
     id: "0x27b7cb7bc376c0798651238ce5294f70b283bc61",
     name: "Blockscape Gnosis Vault ",
     description:
       "Institutional-grade staking for everyone made by Blockscape in Switzerland. As staker, you benefit from a low commission fee of just 12.5%, while still enjoying the same levels of security and reliability. Our unique setup provides highest standards in security and reliability. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world. Moreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network or visit https://blockscape.network for more information.",
-  },
-  {
-    id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
-    name: "IP Stake",
-    description:
-      "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
   },
   {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
@@ -117,6 +111,12 @@ export default [
     description: null,
   },
   {
+    id: "0x2435992a2bf5feaa535d16edaad3d525dc94e0e8",
+    name: "Forsaken",
+    description:
+      "Home Dappnode staker based in Greece since 2022.\nProviding your worst possible vault choice. If there is a power outage then we are both in pain.\nEnjoy!",
+  },
+  {
     id: "0x0ca22f2d5ad17142bb1065ae828d9db28f86ca1c",
     name: "Thot",
     description: "Testing vaults ",
@@ -133,12 +133,6 @@ export default [
     description: "High uptime and resilience for your staked GNO",
   },
   {
-    id: "0xdb57ca4f12ad6b3f962103ba5c00b6d967b9b8ac",
-    name: "NotMyVault",
-    description:
-      "Just exploring the possibilities !\n\nPLease don't put your GNO in here. Just testing!",
-  },
-  {
     id: "0xec41cac36e16caaa74a8c4fb29cc34ed30d75868",
     name: "STOPPED VAULT",
     description:
@@ -149,6 +143,12 @@ export default [
     name: "Fox & Yaga Gnosis",
     description:
       "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Gnosis while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
+  },
+  {
+    id: "0xdb57ca4f12ad6b3f962103ba5c00b6d967b9b8ac",
+    name: "NotMyVault",
+    description:
+      "Just exploring the possibilities !\n\nPLease don't put your GNO in here. Just testing!",
   },
   {
     id: "0xf2148884af9d980a1f16de20966bacfc691708b6",

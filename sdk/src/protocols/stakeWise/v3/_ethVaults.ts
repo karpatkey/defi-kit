@@ -186,12 +186,6 @@ export default [
       "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
   },
   {
-    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
-    name: "Meria",
-    description:
-      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
-  },
-  {
     id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
     name: "Peer Ventures",
     description:
@@ -204,16 +198,26 @@ export default [
       "Orangefin Ventures is one of the world's leading node operators with nearly $100M assets under delegation. Having almost a decade of experience in the cryptocurrency space, Orangefin Ventures operates some of the most technically sophisticated infrastructure that secures several blockchains and spans across public clouds and our own datacenters (including our own ASN and public IPv4 range). To learn more, visit https://www.orangefin.ventures!",
   },
   {
+    id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
+    name: "BRAZILPRACIMA",
+    description: "Independent solo operator since genesis",
+  },
+  {
     id: "0xa1e229db735f7aa3882bfd22fa6b89734225a3d1",
     name: "Amamu.io",
     description:
       "Amamu is an independent, secure, and reliable staking provider founded in 2020 with the primary aim of accelerating decentralization throughout the blockchain landscape. ",
   },
   {
-    id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
-    name: "BRAZILPRACIMA",
+    id: "0x41adbf980d09e6e50afffe606e5c259dcec0af27",
+    name: "Luganodes - Stakekit",
+    description: null,
+  },
+  {
+    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
+    name: "Meria",
     description:
-      "Contributing to Ethereum's geographic decentralization and censorship resistance. Always running minority clients, reducing the risk of being slashed to a minimum.\nIndependent validator experience since Beacon Chain's genesis block in December 2020, never missed a proposal.\nProof of reputation https://beaconcha.in/slots?q=brazilpracima",
+      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0x475064d69be1933c3ec0301a7397b0a667993f95",
@@ -515,11 +519,6 @@ export default [
     name: "Leopard Vault (1% Fee Forever)",
     description:
       "Leopard Vault is a non-volatile vault with a permanently set 1% fee.",
-  },
-  {
-    id: "0x41adbf980d09e6e50afffe606e5c259dcec0af27",
-    name: "Luganodes - Stakekit",
-    description: null,
   },
   {
     id: "0x3f36cf451f99d0f9801d26bda2926336c03fc8c1",

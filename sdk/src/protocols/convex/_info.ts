@@ -2675,4 +2675,18 @@ export default [
     cvxDepositToken: "0x9ae89593C2f35EaC799e59ab54a68e55e0c03324",
     rewarder: "0xb516FE0CaDC13F2dD86E734694cF307f22A43B3a",
   },
+  {
+    name: "BTCGHOETH",
+    id: "409",
+    crvLPToken: "0x8a4f252812dFF2A8636E4F7EB249d8FC2E3bd77f",
+    cvxDepositToken: "0x952A316330705AC7B2116aa3dECaB4Dd211340c7",
+    rewarder: "0x4d10e7FC03dE065Aef3dfbc0394CbEd1e4d36D6E",
+  },
+  {
+    name: "AIOZETH",
+    id: "410",
+    crvLPToken: "0x8D688646ebB400f7DE2b713B80b6a58fCF35d2d9",
+    cvxDepositToken: "0xF844260cD2788BfDF2ca6D623C681066F0528C30",
+    rewarder: "0x7292586Fd198C8a2fB92652457224965B10cFd2D",
+  },
 ] as const
