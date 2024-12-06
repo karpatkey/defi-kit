@@ -152,4 +152,4 @@ def protocol_data(blockchain, min_tvl_usd=0, min_volume_usd=0):
         dump(tokens, 'uniswap/v3', '_ethInfo.ts')
 
 
-protocol_data("ethereum", min_tvl_usd=1000000, min_volume_usd=1000000)
+protocol_data(Chain.ETHEREUM, min_tvl_usd=1000000, min_volume_usd=1000000)

@@ -1,5 +1,40 @@
 # Changelog
 
+## [2.6.3](https://github.com/karpatkey/defi-kit/compare/v2.6.2...v2.6.3) (2024-12-05)
+
+
+### Bug Fixes
+
+* config file ([#324](https://github.com/karpatkey/defi-kit/issues/324)) ([ada999c](https://github.com/karpatkey/defi-kit/commit/ada999c99185ad4e8215206a68598b2280f28c5c))
+
+## [2.6.2](https://github.com/karpatkey/defi-kit/compare/v2.6.1...v2.6.2) (2024-12-05)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#322](https://github.com/karpatkey/defi-kit/issues/322)) ([ecbc1a6](https://github.com/karpatkey/defi-kit/commit/ecbc1a61c39010dd8658bd93944c2a9c9787fcd0))
+
+## [2.6.1](https://github.com/karpatkey/defi-kit/compare/v2.6.0...v2.6.1) (2024-12-02)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#318](https://github.com/karpatkey/defi-kit/issues/318)) ([8c37002](https://github.com/karpatkey/defi-kit/commit/8c37002ce5d83cf667dee26c8311a1f18f8b0b7e))
+
+## [2.6.0](https://github.com/karpatkey/defi-kit/compare/v2.5.1...v2.6.0) (2024-11-27)
+
+
+### Features
+
+* Add StakeWise v3 on Mainnet and Gnosis Chain ([#311](https://github.com/karpatkey/defi-kit/issues/311)) ([7352c3d](https://github.com/karpatkey/defi-kit/commit/7352c3dd0b3df54c4804ac126bfbf65251959c80))
+
+## [2.5.1](https://github.com/karpatkey/defi-kit/compare/v2.5.0...v2.5.1) (2024-11-27)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#312](https://github.com/karpatkey/defi-kit/issues/312)) ([befcc35](https://github.com/karpatkey/defi-kit/commit/befcc35f5b9e223a12031666f8c9da7f489a2b36))
+
 ## [2.5.0](https://github.com/karpatkey/defi-kit/compare/v2.4.0...v2.5.0) (2024-11-26)
 
 
