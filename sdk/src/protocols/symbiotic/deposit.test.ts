@@ -19,9 +19,9 @@ describe("symbiotic", () => {
 
     it("deposit", async () => {
       const amount = parseEther("10")
-      await stealErc20(underlying, amount, stealAddress) //impersonate as an address with money
+      await stealErc20(underlying, amount, stealAddress)
       await kit.asAvatar.weth
-        .attach(underlying) // replace weth by underlying address
+        .attach(underlying)
         .approve(defaultCollateral, amount)
       await expect(
         kit.asMember.symbiotic.defaultCollateral
@@ -36,15 +36,13 @@ describe("symbiotic", () => {
       await expect(
         kit.asMember.lido.stEth.approve(underlying, amount)
       ).not.toRevert()
-      await expect(
-        kit.asMember.lido.wstEth.wrap(amount)
-      ).not.toRevert()
+      await expect(kit.asMember.lido.wstEth.wrap(amount)).not.toRevert()
     })
 
     it("withdraw", async () => {
       const amount = parseEther("10")
       await kit.asAvatar.weth
-        .attach(underlying) // replace weth by underlying address
+        .attach(underlying)
         .approve(defaultCollateral, amount)
       await expect(
         kit.asMember.symbiotic.defaultCollateral
