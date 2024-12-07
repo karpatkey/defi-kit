@@ -116,5 +116,3 @@ export const withdraw_balancer = (
 
   return permissions
 }
-
-

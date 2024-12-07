@@ -82,7 +82,12 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
     ([protocol, strategiesOfProtocol]) => {
       Object.keys(strategiesOfProtocol).forEach((strategyName) => {
         registerAllowStrategy(registry, chainPrefix, protocol, strategyName)
-        registerStrategyPermissions(registry, chainPrefix, protocol, strategyName)
+        registerStrategyPermissions(
+          registry,
+          chainPrefix,
+          protocol,
+          strategyName
+        )
       })
     }
   )

@@ -2,11 +2,11 @@ import { SomeZodObject } from "zod"
 import { Permission } from "zodiac-roles-sdk"
 
 export enum Chain {
-  eth = 1,
-  oeth = 10,
-  gno = 100,
-  base = 8453,
-  arb1 = 42161,
+  eth = "eth",
+  gno = "gno",
+  arb1 = "arb1",
+  oeth = "oeth",
+  base = "base",
 }
 
 export type AllowFunction = (options: any) => Promise<Permission[]>

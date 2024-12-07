@@ -24,6 +24,11 @@ export type GnoRewarder = (typeof gnoPools)[number]["rewarder"]
 export type Arb1Rewarder = (typeof arb1Pools)[number]["rewarder"]
 export type OethRewarder = (typeof oethPools)[number]["rewarder"]
 export type BaseRewarder = (typeof basePools)[number]["rewarder"]
-export type Rewarder = EthRewarder | GnoRewarder | Arb1Rewarder | OethRewarder | BaseRewarder
+export type Rewarder =
+  | EthRewarder
+  | GnoRewarder
+  | Arb1Rewarder
+  | OethRewarder
+  | BaseRewarder
 
 export type StakeToken = (typeof stakeTokens)[number]
