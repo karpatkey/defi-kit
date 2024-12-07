@@ -91,6 +91,15 @@ def protocol_data(blockchain = Chain.ETHEREUM):
         dump(result, 'aura', '_ethPools.ts')
     elif blockchain == Chain.GNOSIS:
         dump(result, 'aura', '_gnoPools.ts')
+    elif blockchain == Chain.ARBITRUM:
+        dump(result, 'aura', '_arb1Pools.ts')
+    elif blockchain == Chain.OPTIMISM:
+        dump(result, 'aura', '_oethPools.ts')
+    elif blockchain == Chain.BASE:
+        dump(result, 'aura', '_basePools.ts')
 
 protocol_data()
 protocol_data(Chain.GNOSIS)
+protocol_data(Chain.ARBITRUM)
+protocol_data(Chain.OPTIMISM)
+protocol_data(Chain.BASE)

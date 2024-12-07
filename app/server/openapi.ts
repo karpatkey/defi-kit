@@ -27,6 +27,10 @@ import {
   transactionsJson,
   contractInput,
 } from "./schema"
+import {
+  registerAllowStrategy,
+  registerStrategyPermissions,
+} from "./strategies/register"
 
 extendZodWithOpenApi(zod)
 
@@ -73,4 +77,18 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
       }
     })
   })
+
+  Object.entries(sdk.allowStrategy).forEach(
+    ([protocol, strategiesOfProtocol]) => {
+      Object.keys(strategiesOfProtocol).forEach((strategyName) => {
+        registerAllowStrategy(registry, chainPrefix, protocol, strategyName)
+        registerStrategyPermissions(
+          registry,
+          chainPrefix,
+          protocol,
+          strategyName
+        )
+      })
+    }
+  )
 })
