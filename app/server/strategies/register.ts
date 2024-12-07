@@ -1,5 +1,5 @@
 import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
-import { ChainPrefix, queryActionPermissionSet, sdks } from "../sdk"
+import { ChainPrefix, sdks } from "../sdk"
 import { permission, transactionsDocParams, transactionsJson } from "../schema"
 
 export const registerAllowStrategy = (
@@ -9,14 +9,13 @@ export const registerAllowStrategy = (
   name: string
 ) => {
   const { strategiesSchema } = sdks[chainPrefix] as any
-  console.log({ strategiesSchema })
   const querySchema = strategiesSchema[protocol][name]
 
   registry.registerPath({
     method: "get",
     path: `/strategy/${chainPrefix}:{mod}/{role}/allow/${protocol}/${name}`,
-    summary: `Transactions for granting permissions to run the '${protocol} / ${name}' strategy`,
-    tags: [`${protocol} ${name} strategies`],
+    summary: `Transactions for granting permissions to run the ${protocol} '${name}' strategy`,
+    tags: [`${protocol} strategies`],
     request: {
       params: transactionsDocParams,
       query: querySchema,
@@ -47,15 +46,15 @@ export const registerStrategyPermissions = (
   registry.registerPath({
     method: "get",
     path: `/strategy/permissions/${chainPrefix}/${protocol}/${name}`,
-    summary: `Run the '${protocol} / ${name}' strategy`,
-    tags: [`${protocol} ${name} strategy permissions`],
+    summary: `Permissions for running the ${protocol} '${name}' strategy`,
+    tags: [`${protocol} strategy permissions`],
     request: {
       query: querySchema,
     },
 
     responses: {
       200: {
-        description: `Permissions for running the '${protocol} / ${name}' strategy`,
+        description: `Permissions for running the ${protocol} '${name}' strategy`,
         content: {
           "application/json": {
             schema: permission.array(),

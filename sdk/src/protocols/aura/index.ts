@@ -6,16 +6,17 @@ import { Chain } from "../../types"
 import { deposit, stake, lock } from "./actions"
 import stakeTokens from "./stakeTokens"
 
-export const findPool = (pools: readonly Pool[], nameOrAddressOrId: string) => {
-  const nameOrAddressOrIdLower = nameOrAddressOrId.toLowerCase()
+export const findPool = (pools: readonly Pool[], nameOrAddressOrIdOrRewarder: string) => {
+  const nameOrAddressOrIdOrRewarderLower = nameOrAddressOrIdOrRewarder.toLowerCase()
   const pool = pools.find(
     (pool) =>
-      pool.name.toLowerCase() === nameOrAddressOrIdLower ||
-      pool.bpt.toLowerCase() === nameOrAddressOrIdLower ||
-      pool.id.toLowerCase() === nameOrAddressOrIdLower
+      pool.name.toLowerCase() === nameOrAddressOrIdOrRewarderLower ||
+      pool.bpt.toLowerCase() === nameOrAddressOrIdOrRewarderLower ||
+      pool.id.toLowerCase() === nameOrAddressOrIdOrRewarderLower ||
+      pool.rewarder.toLowerCase() === nameOrAddressOrIdOrRewarderLower
   )
   if (!pool) {
-    throw new NotFoundError(`Pool not found: ${nameOrAddressOrId}`)
+    throw new NotFoundError(`Pool not found`)
   }
   return pool
 }

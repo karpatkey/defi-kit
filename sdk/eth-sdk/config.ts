@@ -301,6 +301,7 @@ export const contracts = {
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
       rewardPoolDepositWrapper: "0x0Fec3d212BcC29eF3E505B555D7a7343DF0B7F76",
+      rewarder: "0x14A81C9283CC16897DaA3f466847Baa260b770eB",
     },
     azuro: {
       lpAzrXdai: "0x204e7371Ade792c5C006fb52711c50a7efC843ed",
@@ -375,6 +376,10 @@ export const contracts = {
       aArbWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
     },
+    aura: {
+      booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
+      rewarder: "0x40bF10900a55c69c9dADdc3dC52465e01AcEF4A4",
+    },
     balancer: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       gauge: "0x260cbb867359a1084eC97de4157d06ca74e89415",
@@ -408,6 +413,10 @@ export const contracts = {
       aOptWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
     },
+    aura: {
+      booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
+      rewarder: "0xe350DFC963445F3B64a4229d019787491a58F8B9",
+    },
     balancer: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       gauge: "0xA30992B40a0cb4B2Da081ddBd843f9CcE25c2fe3",
@@ -437,6 +446,10 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x729b3EA8C005AbC58c9150fb57Ec161296F06766",
       aBasWeth: "0xD4a0e0b9149BCee3C920d2E00b5dE09138fd8bb7",
       variableDebtWeth: "0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E",
+    },
+    aura: {
+      booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
+      rewarder: "0xcCAC11368BDD522fc4DD23F98897712391ab1E00",
     },
     balancer: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",

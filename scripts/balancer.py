@@ -20,7 +20,10 @@ VAULT = "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 BALANCER_QUERIES = {
     Chain.ETHEREUM: "0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5",
-    Chain.GNOSIS: "0x0F3e0c4218b7b0108a3643cFe9D3ec0d4F57c54e"
+    Chain.GNOSIS: "0x0F3e0c4218b7b0108a3643cFe9D3ec0d4F57c54e",
+    Chain.ARBITRUM: "0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5",
+    Chain.OPTIMISM: "0xE39B5e3B6D74016b2F6A9673D7d7493B6DF549d5",
+    Chain.BASE: "0x300Ab2038EAc391f26D9F895dc61F8F66a548833",
 }
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -46,11 +49,16 @@ def subgraph_query_pools(blockchain):
 
     the_graph_apikey = os.getenv('THE_GRAPH_APIKEY')
     if blockchain == Chain.ETHEREUM:
-        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
         subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/C4ayEZP2yTXRAB8vSaTrgN4m9anTe9Mdm2ViyiAuV9TV"
     elif blockchain == Chain.GNOSIS:
-        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
         subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/EJezH1Cp31QkKPaBDerhVPRWsKVZLrDfzjrLqpmv6cGg"
+    elif blockchain == Chain.ARBITRUM:
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/98cQDy6tufTJtshDCuhh9z2kWXsQWBHVh2bqnLHsGAeS"
+    elif blockchain == Chain.OPTIMISM:
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/FsmdxmvBJLGjUQPxKMRtcWKzuCNpomKuMTbSbtRtggZ7"
+    elif blockchain == Chain.BASE:
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/E7XyutxXVLrp8njmjF16Hh38PCJuHm12RRyMt5ma4ctX"
+
 
     while True:
     # Initialize subgraph
@@ -92,11 +100,15 @@ def subgraph_query_pool_type(blockchain, pool_id):
     
     the_graph_apikey = os.getenv('THE_GRAPH_APIKEY')
     if blockchain == Chain.ETHEREUM:
-        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-v2"
         subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/C4ayEZP2yTXRAB8vSaTrgN4m9anTe9Mdm2ViyiAuV9TV"
     elif blockchain == Chain.GNOSIS:
-        # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/balancer-labs/balancer-gnosis-chain-v2"
         subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/EJezH1Cp31QkKPaBDerhVPRWsKVZLrDfzjrLqpmv6cGg"
+    elif blockchain == Chain.ARBITRUM:
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/98cQDy6tufTJtshDCuhh9z2kWXsQWBHVh2bqnLHsGAeS"
+    elif blockchain == Chain.OPTIMISM:
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/FsmdxmvBJLGjUQPxKMRtcWKzuCNpomKuMTbSbtRtggZ7"
+    elif blockchain == Chain.BASE:
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/E7XyutxXVLrp8njmjF16Hh38PCJuHm12RRyMt5ma4ctX"
 
     # Initialize subgraph
     balancer_transport=RequestsHTTPTransport(
@@ -280,7 +292,16 @@ def protocol_data(blockchain):
         dump(result, 'balancer', '_ethPools.ts')
     elif blockchain == Chain.GNOSIS:
         dump(result, 'balancer', '_gnoPools.ts')
+    elif blockchain == Chain.ARBITRUM:
+        dump(result, 'balancer', '_arb1Pools.ts')
+    elif blockchain == Chain.OPTIMISM:
+        dump(result, 'balancer', '_oethPools.ts')
+    elif blockchain == Chain.BASE:
+        dump(result, 'balancer', '_basePools.ts')
 
-protocol_data(Chain.ETHEREUM)
-protocol_data(Chain.GNOSIS)
+# protocol_data(Chain.ETHEREUM)
+# protocol_data(Chain.GNOSIS)
+# protocol_data(Chain.ARBITRUM)
+# protocol_data(Chain.OPTIMISM)
+protocol_data(Chain.BASE)
 

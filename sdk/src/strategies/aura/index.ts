@@ -1,53 +1,103 @@
-import { findPool } from "../../protocols/aura"
-import { findPool as findBalancerPool } from "../../protocols/balancer"
-import ethPools from "../../protocols/aura/_ethPools"
-import gnoPools from "../../protocols/aura/_gnoPools"
-import ethBalancerPools from "../../protocols/balancer/_ethPools"
-import gnoBalancerPools from "../../protocols/balancer/_gnoPools"
-import { EthPool, GnoPool } from "../../protocols/aura/types"
-import { underlying_single } from "./underlying_single"
-import { bpt } from "./bpt"
+import { EthRewarder, GnoRewarder, Arb1Rewarder, OethRewarder, BaseRewarder } from "../../protocols/aura/types"
+import { Chain } from "../../types"
+import { withdraw, withdraw_balancer, ExitKind }  from "./strategies"
 
 export const eth = {
-  /**
-   * Withdraw BPT from the specified Aura pool
-   */
-  bpt: async ({
-    pools,
+  withdraw: async ({
+    rewarder,
   }: {
-    pools: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
-  }) => pools.flatMap((pool) => bpt(findPool(ethPools, pool))),
+    rewarder: EthRewarder
+  }) => withdraw(rewarder),
 
-  underlying_single: async ({
-    pools,
+  withdraw_proportional: async ({
+    rewarder,
   }: {
-    pools: (EthPool["name"] | EthPool["bpt"] | EthPool["id"])[]
-  }) =>
-    pools.flatMap((pool) => {
-      const auraPool = findPool(ethPools, pool)
-      const balancerPool = findBalancerPool(ethBalancerPools, auraPool.bpt)
-      return underlying_single(auraPool, balancerPool.id)
-    }),
+    rewarder: EthRewarder
+  }) => withdraw_balancer(Chain.eth, rewarder, ExitKind.proportional),
+
+  withdraw_single_token: async ({
+    rewarder,
+  }: {
+    rewarder: EthRewarder
+  }) => withdraw_balancer(Chain.eth, rewarder, ExitKind.single),
 }
 
 export const gno = {
-  /**
-   * Withdraw BPT from the specified Aura pool
-   */
-  bpt: async ({
-    pools,
+  withdraw: async ({
+    rewarder,
   }: {
-    pools: (GnoPool["name"] | GnoPool["bpt"] | GnoPool["id"])[]
-  }) => pools.flatMap((pool) => bpt(findPool(gnoPools, pool))),
+    rewarder: GnoRewarder
+  }) => withdraw(rewarder),
 
-  underlying_single: async ({
-    pools,
+  withdraw_proportional: async ({
+    rewarder,
   }: {
-    pools: (GnoPool["name"] | GnoPool["bpt"] | GnoPool["id"])[]
-  }) =>
-    pools.flatMap((pool) => {
-      const auraPool = findPool(gnoPools, pool)
-      const balancerPool = findBalancerPool(gnoBalancerPools, auraPool.bpt)
-      return underlying_single(auraPool, balancerPool.id)
-    }),
+    rewarder: GnoRewarder
+  }) => withdraw_balancer(Chain.gno, rewarder, ExitKind.proportional),
+
+  withdraw_single_token: async ({
+    rewarder,
+  }: {
+    rewarder: GnoRewarder
+  }) => withdraw_balancer(Chain.gno, rewarder, ExitKind.single),
+}
+
+export const arb1 = {
+  withdraw: async ({
+    rewarder,
+  }: {
+    rewarder: Arb1Rewarder
+  }) => withdraw(rewarder),
+
+  withdraw_proportional: async ({
+    rewarder,
+  }: {
+    rewarder: Arb1Rewarder
+  }) => withdraw_balancer(Chain.arb1, rewarder, ExitKind.proportional),
+
+  withdraw_single_token: async ({
+    rewarder,
+  }: {
+    rewarder: Arb1Rewarder
+  }) => withdraw_balancer(Chain.arb1, rewarder, ExitKind.single),
+}
+
+export const oeth = {
+  withdraw: async ({
+    rewarder,
+  }: {
+    rewarder: OethRewarder
+  }) => withdraw(rewarder),
+
+  withdraw_proportional: async ({
+    rewarder,
+  }: {
+    rewarder: OethRewarder
+  }) => withdraw_balancer(Chain.oeth, rewarder, ExitKind.proportional),
+
+  withdraw_single_token: async ({
+    rewarder,
+  }: {
+    rewarder: OethRewarder
+  }) => withdraw_balancer(Chain.oeth, rewarder, ExitKind.single),
+}
+
+export const base = {
+  withdraw: async ({
+    rewarder,
+  }: {
+    rewarder: BaseRewarder
+  }) => withdraw(rewarder),
+
+  withdraw_proportional: async ({
+    rewarder,
+  }: {
+    rewarder: BaseRewarder
+  }) => withdraw_balancer(Chain.base, rewarder, ExitKind.proportional),
+
+  withdraw_single_token: async ({
+    rewarder,
+  }: {
+    rewarder: BaseRewarder
+  }) => withdraw_balancer(Chain.base, rewarder, ExitKind.single),
 }
