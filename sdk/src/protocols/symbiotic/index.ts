@@ -31,7 +31,7 @@ export const eth = {
     return targets.flatMap((target) => {
       const pool = findPool(target)
       const permissions: Permission[] = []
-      if (pool.name === "wstETHPool") {
+      if (pool.token.symbol === "wstETH") {
         permissions.push(
           allow.mainnet.lido.stEth.approve(WSTETH),
           allow.mainnet.lido.wstEth.wrap()
