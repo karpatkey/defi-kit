@@ -138,7 +138,6 @@ export const contracts = {
     },
     lido: {
       stEth: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
-      // stETH: "0x17144556fd3424EDC8Fc8A4C940B2D04936d17eb",//implementation to get the logic
       wstEth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       unstEth: "0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1",
     },

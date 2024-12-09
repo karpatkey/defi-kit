@@ -1,5 +1,4 @@
 export default [
-  //defaultCollateral (implementation) = "0xa301ea1E3CAB036AbE8fa70e5526A51Cb41799B6"
   {
     name: "wstETHPool",
     address: "0xC329400492c6ff2438472D4651Ad17389fCb843a",

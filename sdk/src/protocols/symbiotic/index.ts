@@ -5,8 +5,9 @@ import _ethPools from "./_ethPools"
 import { Permission } from "zodiac-roles-sdk/."
 import { allowErc20Approve } from "../../conditions"
 import { c } from "zodiac-roles-sdk"
+import { contracts } from "../../../eth-sdk/config"
 
-const WSTETH = "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"
+const WSTETH = contracts.mainnet.lido.wstEth;
 
 const findPool = (nameOrAddress: string) => {
   const pools = _ethPools
