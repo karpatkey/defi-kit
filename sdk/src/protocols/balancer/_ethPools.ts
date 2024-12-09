@@ -1935,7 +1935,7 @@ export default [
       },
       {
         address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
-        symbol: "InETH",
+        symbol: "genETH",
         id: "0x",
       },
     ],
@@ -2445,6 +2445,25 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x8461537a9BfC5A1dF57cF825F8A58049eF61557B",
+    id: "0x8461537a9bfc5a1df57cf825f8a58049ef61557b0002000000000000000006ea",
+    name: "ECLP-USR-GYD",
+    type: "GyroE",
+    gauge: "0xF8150d9599a9c994A9528d7a28AF1262BE4e3ebd",
+    tokens: [
+      {
+        address: "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
+        symbol: "USR",
+        id: "0x",
+      },
+      {
+        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
+        symbol: "GYD",
         id: "0x",
       },
     ],
@@ -3506,6 +3525,25 @@ export default [
     ],
   },
   {
+    bpt: "0xBaeEC99c90E3420Ec6c1e7A769d2A856d2898e4D",
+    id: "0xbaeec99c90e3420ec6c1e7a769d2a856d2898e4d00020000000000000000008a",
+    name: "B-50VITA-50WETH",
+    type: "Weighted",
+    gauge: "0x777C45BD0a2AF1dA5fe4a532AD6B207D3CEd8b2d",
+    tokens: [
+      {
+        address: "0x81f8f0bb1cB2A06649E51913A151F0E7Ef6FA321",
+        symbol: "VITA",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xBb31b8EEBB9C71001562AE56Aa5751Af313e6d89",
     id: "0xbb31b8eebb9c71001562ae56aa5751af313e6d8900020000000000000000002e",
     name: "B-80TRU-20WETH",
@@ -4372,6 +4410,25 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xEA8886a24b6e01Fba88A9e98d794e8D1F29eD863",
+    id: "0xea8886a24b6e01fba88a9e98d794e8d1f29ed863000200000000000000000010",
+    name: "B-75ZRX-25WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
+        symbol: "ZRX",
         id: "0x",
       },
     ],
