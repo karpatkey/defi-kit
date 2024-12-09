@@ -299,9 +299,9 @@ def protocol_data(blockchain):
     elif blockchain == Chain.BASE:
         dump(result, 'balancer', '_basePools.ts')
 
-# protocol_data(Chain.ETHEREUM)
-# protocol_data(Chain.GNOSIS)
-# protocol_data(Chain.ARBITRUM)
-# protocol_data(Chain.OPTIMISM)
+protocol_data(Chain.ETHEREUM)
+protocol_data(Chain.GNOSIS)
+protocol_data(Chain.ARBITRUM)
+protocol_data(Chain.OPTIMISM)
 protocol_data(Chain.BASE)
 

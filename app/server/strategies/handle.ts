@@ -29,7 +29,7 @@ export const allowStrategy: TransactionsHandler = async (query) => {
 
   return exportToSafeTransactionBuilder(calls, {
     name: `Extend permissions of "${decodeBytes32String(role)}" role`,
-    description: `Allow executing strategy '${protocol} / ${name}'`,
+    description: `Allow executing strategy ${protocol} '${name}'`,
   })
 }
 

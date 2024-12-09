@@ -19,70 +19,70 @@ const zBaseRewarder = z.enum(baseRewarders as [string, string, ...string[]])
 
 export const eth = {
   withdraw: z.object({
-    rewarder: z.array(zEthRewarder),
+    rewarder: zEthRewarder,
   }),
 
   withdraw_proportional: z.object({
-    rewarder: z.array(zEthRewarder),
+    rewarder: zEthRewarder,
   }),
 
   withdraw_single_token: z.object({
-    rewarder: z.array(zEthRewarder),
+    rewarder: zEthRewarder,
   }),
 }
 
 export const gno = {
   withdraw: z.object({
-    rewarder: z.array(zGnoRewarder),
+    rewarder: zGnoRewarder,
   }),
 
   withdraw_proportional: z.object({
-    rewarder: z.array(zGnoRewarder),
+    rewarder: zGnoRewarder,
   }),
 
   withdraw_single_token: z.object({
-    rewarder: z.array(zGnoRewarder),
+    rewarder: zGnoRewarder,
   }),
 }
 
 export const arb1 = {
   withdraw: z.object({
-    rewarder: z.array(zArb1Rewarder),
+    rewarder: zArb1Rewarder,
   }),
 
   withdraw_proportional: z.object({
-    rewarder: z.array(zArb1Rewarder),
+    rewarder: zArb1Rewarder,
   }),
 
   withdraw_single_token: z.object({
-    rewarder: z.array(zArb1Rewarder),
+    rewarder: zArb1Rewarder,
   }),
 }
 
 export const oeth = {
   withdraw: z.object({
-    rewarder: z.array(zOethRewarder),
+    rewarder: zOethRewarder,
   }),
 
   withdraw_proportional: z.object({
-    rewarder: z.array(zOethRewarder),
+    rewarder: zOethRewarder,
   }),
 
   withdraw_single_token: z.object({
-    rewarder: z.array(zOethRewarder),
+    rewarder: zOethRewarder,
   }),
 }
 
 export const base = {
   withdraw: z.object({
-    rewarder: z.array(zBaseRewarder),
+    rewarder: zBaseRewarder,
   }),
 
   withdraw_proportional: z.object({
-    rewarder: z.array(zBaseRewarder),
+    rewarder: zBaseRewarder,
   }),
 
   withdraw_single_token: z.object({
-    rewarder: z.array(zBaseRewarder),
+    rewarder: zBaseRewarder,
   }),
 }
