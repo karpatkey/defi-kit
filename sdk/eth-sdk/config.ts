@@ -135,24 +135,10 @@ export const contracts = {
       merkleDistributor: "0xA3F21010e8b9a3930996C8849Df38f9Ca3647c20",
     },
     stakeWiseV3: {
-      chrorusOneMevMax: "0xe6d8d8aC54461b1C5eD15740EEe322043F696C08",
-      genesis: "0xAC0F906E433d58FA868F936E8A43230473652885",
-    },
-    sushiSwap: {
-      router: "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F",
-      routeProcessor3: "0x827179dD56d07A7eeA32e3873493835da2866976",
-      routeProcessor32: "0x5550D13389bB70F45fCeF58f19f6b6e87F6e747d",
+      vault: "0xba0B5ba961B108BFf8D761A256e9763a4FccFF23", // EthVault (Implementation)
     },
     symbiotic: {
       defaultCollateral: "0xa301ea1E3CAB036AbE8fa70e5526A51Cb41799B6",
-    },
-    theGraph: {
-      staking: "0xF55041E37E12cD407ad00CE2910B8269B01263b9",
-      proxy: "0x01cDC91B0A9bA741903aA3699BF4CE31d6C5cC06",
-    },
-    uniswapV2: {
-      router2: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
-      vault: "0xba0B5ba961B108BFf8D761A256e9763a4FccFF23", // EthVault (Implementation)
     },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",

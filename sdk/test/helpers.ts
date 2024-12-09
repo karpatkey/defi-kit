@@ -167,6 +167,8 @@ export const applyPermissions = async (
       }
     })
   )
+
+  console.log("Permissions applied")
 }
 
 export const execThroughRole = async (
