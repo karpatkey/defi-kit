@@ -14,6 +14,7 @@ import * as spark from "./spark/schema"
 import * as stader from "./stader/schema"
 import * as stakeWiseV2 from "./stakeWise/v2/schema"
 import * as symbiotic from "./symbiotic/schema"
+import * as stakeWiseV3 from "./stakeWise/v3/schema"
 import * as uniswapV3 from "./uniswap/v3/schema"
 import { ProtocolSchemas } from "../types"
 
@@ -36,6 +37,7 @@ export const eth = {
   stader: stader.eth,
   stakewise_v2: stakeWiseV2.eth,
   symbiotic: symbiotic.eth,
+  stakewise_v3: stakeWiseV3.eth,
   uniswap_v3: uniswapV3.eth,
 } satisfies Record<string, ProtocolSchemas>
 
@@ -45,6 +47,7 @@ export const gno = {
   balancer: balancer.gno,
   cowswap: cowSwap.gno,
   spark: spark.gno,
+  stakewise_v3: stakeWiseV3.gno,
 } satisfies Record<string, ProtocolSchemas>
 
 export const arb1 = {

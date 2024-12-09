@@ -230,9 +230,9 @@ def add_pool_tokens(vault_contract, pool_id, lptoken_address, pool_tokens_array,
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# transactions_data
+# protocol_data
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def transactions_data(blockchain):
+def protocol_data(blockchain):
 
     result = []
 
@@ -281,5 +281,6 @@ def transactions_data(blockchain):
     elif blockchain == Chain.GNOSIS:
         dump(result, 'balancer', '_gnoPools.ts')
 
-transactions_data(Chain.GNOSIS)
-transactions_data(Chain.ETHEREUM)
+protocol_data(Chain.ETHEREUM)
+protocol_data(Chain.GNOSIS)
+

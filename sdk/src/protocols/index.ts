@@ -13,6 +13,7 @@ import * as rocketPool from "./rocketPool"
 import * as spark from "./spark"
 import * as stader from "./stader"
 import * as stakeWiseV2 from "./stakeWise/v2"
+import * as stakeWiseV3 from "./stakeWise/v3"
 import * as uniswapV3 from "./uniswap/v3"
 import * as symbiotic from "./symbiotic"
 
@@ -38,6 +39,7 @@ export const eth = annotateAll(
     stader: stader.eth,
     stakewise_v2: stakeWiseV2.eth,
     symbiotic: symbiotic.eth,
+    stakewise_v3: stakeWiseV3.eth,
     uniswap_v3: uniswapV3.eth,
   },
   "eth"
@@ -50,6 +52,7 @@ export const gno = annotateAll(
     balancer: balancer.gno,
     cowswap: cowSwap.gno,
     spark: spark.gno,
+    stakewise_v3: stakeWiseV3.gno,
   },
   "gno"
 )
