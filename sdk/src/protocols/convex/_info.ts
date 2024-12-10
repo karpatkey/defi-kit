@@ -2689,4 +2689,11 @@ export default [
     cvxDepositToken: "0xF844260cD2788BfDF2ca6D623C681066F0528C30",
     rewarder: "0x7292586Fd198C8a2fB92652457224965B10cFd2D",
   },
+  {
+    name: "SkySaver",
+    id: "411",
+    crvLPToken: "0xfD1627E3f3469C8392C8c3A261D8F0677586e5e1",
+    cvxDepositToken: "0x785b7A336021c7022fB3cf73EE4D455ce7055e46",
+    rewarder: "0x1319C366FEd9B37D1CFd9a84b75eE04671a4c6E1",
+  },
 ] as const
