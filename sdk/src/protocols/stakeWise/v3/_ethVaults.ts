@@ -68,14 +68,14 @@ export default [
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
   {
-    id: "0x481afcd21a3447a7a04c4afd968df877b76d2310",
-    name: "Sun and Moon Collection",
-    description: "Celestial gains for celestial bodies.",
-  },
-  {
     id: "0x089a97a8bc0c0f016f89f9cf42181ff06afb2daf",
     name: "validator service",
     description: "reliable validation",
+  },
+  {
+    id: "0x481afcd21a3447a7a04c4afd968df877b76d2310",
+    name: "Sun and Moon Collection",
+    description: "Celestial gains for celestial bodies.",
   },
   {
     id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
@@ -192,17 +192,6 @@ export default [
       "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
-    id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
-    name: "BRAZILPRACIMA",
-    description: "Independent solo operator since genesis",
-  },
-  {
-    id: "0xa1e229db735f7aa3882bfd22fa6b89734225a3d1",
-    name: "Amamu.io",
-    description:
-      "Amamu is an independent, secure, and reliable staking provider founded in 2020 with the primary aim of accelerating decentralization throughout the blockchain landscape. ",
-  },
-  {
     id: "0x41adbf980d09e6e50afffe606e5c259dcec0af27",
     name: "Luganodes - Stakekit",
     description: null,
@@ -212,5 +201,11 @@ export default [
     name: "Orangefin Ventures",
     description:
       "Orangefin Ventures is one of the world's leading node operators with nearly $100M assets under delegation. Having almost a decade of experience in the cryptocurrency space, Orangefin Ventures operates some of the most technically sophisticated infrastructure that secures several blockchains and spans across public clouds and our own datacenters (including our own ASN and public IPv4 range). To learn more, visit https://www.orangefin.ventures!",
+  },
+  {
+    id: "0xa1e229db735f7aa3882bfd22fa6b89734225a3d1",
+    name: "Amamu.io",
+    description:
+      "Amamu is an independent, secure, and reliable staking provider founded in 2020 with the primary aim of accelerating decentralization throughout the blockchain landscape. ",
   },
 ] as const
