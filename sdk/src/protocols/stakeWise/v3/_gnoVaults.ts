@@ -32,6 +32,12 @@ export default [
       "Node operators, securing and decentralizing Ethereum |  AVS operator: http://avs.stakecat.space\n \nWe provide greater decentralization for networks with our own infrastructure for validators and high availability to compete with centralized data center performance.\n\nmore about Stakecat here: https://www.stakecat.space/",
   },
   {
+    id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
+    name: "IP Stake",
+    description:
+      "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
+  },
+  {
     id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
     name: "H2O Nodes",
     description:
@@ -62,27 +68,10 @@ export default [
       "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
   },
   {
-    id: "0x9eeb6be79899cfe45018866a2113c6b77fa96f35",
-    name: "SEEDNode No Deposit",
-    description: "Deprecated",
-  },
-  {
-    id: "0x2435992a2bf5feaa535d16edaad3d525dc94e0e8",
-    name: "Forsaken",
-    description:
-      "Home Dappnode staker based in Greece since 2022.\nProviding your worst possible vault choice. If there is a power outage then we are both in pain.\nEnjoy!",
-  },
-  {
     id: "0x27b7cb7bc376c0798651238ce5294f70b283bc61",
     name: "Blockscape Gnosis Vault ",
     description:
       "Institutional-grade staking for everyone made by Blockscape in Switzerland. As staker, you benefit from a low commission fee of just 12.5%, while still enjoying the same levels of security and reliability. Our unique setup provides highest standards in security and reliability. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world. Moreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network or visit https://blockscape.network for more information.",
-  },
-  {
-    id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
-    name: "IP Stake",
-    description:
-      "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
   },
   {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
@@ -112,108 +101,20 @@ export default [
       "Whispers of Sophia's Gnosis\n\nIn realms beyond the veil of sight,\nI dance with truths both dark and light.\nSophia's wisdom, my guiding star,\nGnosis beckons from afar.\n\nThrough winding paths of mystic lore,\nI seek the keys to cosmic doors.\nEach step unveils a sacred sign,\nAs mortal flesh and soul entwine.\n\nIn silence deep, I hear the call,\nOf hidden knowledge, one and all.\nThe serpent's whisper, soft and low,\nReveals the truths I've come to know.\n\nIllumination floods my mind,\nAs earthly shackles fall behind.\nIn gnosis found, both pure and bright,\nI rise, transformed, into the light.\n\nFor wisdom's flame burns ever true,\nIn hearts that dare to see anew.\nAnd in this knowing, vast and free,\nI find the cosmic self that sleeps in me.",
   },
   {
-    id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",
-    name: "Test No Deposit",
-    description: null,
-  },
-  {
     id: "0x0ca22f2d5ad17142bb1065ae828d9db28f86ca1c",
     name: "Thot",
     description: "Testing vaults ",
   },
   {
-    id: "0xb1208506ac11f342dd63656f0a8c2803e89a87ba",
-    name: "Stakingverse - Gnosis ENDED",
+    id: "0x2435992a2bf5feaa535d16edaad3d525dc94e0e8",
+    name: "Forsaken",
     description:
-      "Our Gnosis pool stopped, you can still stake your ETH with us!",
-  },
-  {
-    id: "0xc949c85b91df06941727ae477c875a791d077ed2",
-    name: "0NEinfra - deprecated",
-    description: "High uptime and resilience for your staked GNO",
+      "Home Dappnode staker based in Greece since 2022.\nProviding your worst possible vault choice. If there is a power outage then we are both in pain.\nEnjoy!",
   },
   {
     id: "0xdb57ca4f12ad6b3f962103ba5c00b6d967b9b8ac",
     name: "NotMyVault",
     description:
       "Just exploring the possibilities !\n\nPLease don't put your GNO in here. Just testing!",
-  },
-  {
-    id: "0xec41cac36e16caaa74a8c4fb29cc34ed30d75868",
-    name: "STOPPED VAULT",
-    description:
-      "VAULT IS NOT OPERATIONAL\npublic test vault was running from a dappnode on a VPS\n15% vault fee; smoothed rewards",
-  },
-  {
-    id: "0x0254baf8c2500b581785ae8fe9dbf422411f7256",
-    name: "Fox & Yaga Gnosis",
-    description:
-      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Gnosis while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
-  },
-  {
-    id: "0xf2148884af9d980a1f16de20966bacfc691708b6",
-    name: "❤️",
-    description: "A pool for the lovers of gnosis’s decentralization",
-  },
-  {
-    id: "0xe0e56b8cc3539262a41f578a262922cb1a6de9e3",
-    name: "Kadyr New Stake test",
-    description: null,
-  },
-  {
-    id: "0xded1eb6a2c4b8f34dfda788e03f14da2cf806fee",
-    name: "31415",
-    description: null,
-  },
-  {
-    id: "0xd5f95b151d9c3afb51972370876f8b7b9699d126",
-    name: "Abandoned",
-    description: "-",
-  },
-  {
-    id: "0x910838804ff78608007b8d08322676dd804ae912",
-    name: "Stakecat (test)",
-    description: "Test Vault (Do Not Deposit)",
-  },
-  {
-    id: "0x69c1f77c92d8e2dfb6f2f36916ce4d3c17f5d4be",
-    name: "Kadyr Own MEV - Gnosis",
-    description: null,
-  },
-  {
-    id: "0x4078e3b7733f352a695d6385797a3c47319d99f4",
-    name: "Reward splitter Vault",
-    description: null,
-  },
-  {
-    id: "0x337bad16fcb4f1385bb7a46ace21ebc2009daef5",
-    name: "Aave DAO Frontier",
-    description: null,
-  },
-  {
-    id: "0x2e89e32d9083dd9af5f05b789f37043f2173ebce",
-    name: "Kadyr New Stake Test",
-    description: null,
-  },
-  {
-    id: "0x256218e70f3deea02bef332933a97d115b59082e",
-    name: "Test",
-    description: "test",
-  },
-  {
-    id: "0x1e41d8fa981fb1fa9e3a66357b0e0db089b97b08",
-    name: "Kadyr Gnosis",
-    description: null,
-  },
-  {
-    id: "0x00749c049fd05458b38c1e3b9818cc05b98d1522",
-    name: "test",
-    description: null,
-  },
-  {
-    id: "0x456e1e2cf2f25d451c1603892f8485701cc88189",
-    name: "redelegate-a-lotl alert",
-    description:
-      "redelegate to https://app.stakewise.io/vault/gnosis/0x33c346928ed9249cf1d5fc16ae32a8cffa1671ad ",
   },
 ] as const
