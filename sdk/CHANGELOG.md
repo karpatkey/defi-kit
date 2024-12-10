@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.4](https://github.com/karpatkey/defi-kit/compare/v2.6.3...v2.6.4) (2024-12-10)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#326](https://github.com/karpatkey/defi-kit/issues/326)) ([e422877](https://github.com/karpatkey/defi-kit/commit/e422877c4991abf003ff09001c4207d504d83b82))
+
 ## [2.6.3](https://github.com/karpatkey/defi-kit/compare/v2.6.2...v2.6.3) (2024-12-05)
 
 
