@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.5](https://github.com/karpatkey/defi-kit/compare/v2.6.4...v2.6.5) (2024-12-10)
+
+
+### Bug Fixes
+
+* roles-sdk bump ([#329](https://github.com/karpatkey/defi-kit/issues/329)) ([dcf2a9c](https://github.com/karpatkey/defi-kit/commit/dcf2a9c84e84401cbf3fb8a997f9aed661722382))
+
 ## [2.6.4](https://github.com/karpatkey/defi-kit/compare/v2.6.3...v2.6.4) (2024-12-10)
 
 
