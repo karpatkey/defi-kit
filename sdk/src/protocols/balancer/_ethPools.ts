@@ -732,6 +732,25 @@ export default [
     ],
   },
   {
+    bpt: "0x2b6Af1B557c4f81A238a38f1C2DC51Cda0cEb45b",
+    id: "0x2b6af1b557c4f81a238a38f1c2dc51cda0ceb45b0002000000000000000006ec",
+    name: "LP-LNDX-ETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x08A1C30BBB26425c1031ee9E43FA0B9960742539",
+        symbol: "LNDX",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x2d011aDf89f0576C9B722c28269FcB5D50C2d179",
     id: "0x2d011adf89f0576c9b722c28269fcb5d50c2d17900020000000000000000024d",
     name: "B-sdBAL-STABLE",
@@ -2009,30 +2028,6 @@ export default [
     ],
   },
   {
-    bpt: "0x70d5E3234F6329c1D5a26796dcf4e109d69A3488",
-    id: "0x70d5e3234f6329c1d5a26796dcf4e109d69a34880000000000000000000005e7",
-    name: "uniETH/wstETH/rETH",
-    type: "ComposableStable",
-    gauge: "0xe6281Fc01607366794597d7fA6b32931fF986969",
-    tokens: [
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
-        id: "0x",
-      },
-      {
-        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
-        symbol: "rETH",
-        id: "0x",
-      },
-      {
-        address: "0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4",
-        symbol: "uniETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x7173b184525feAD2fFbde5FBe6FCB65Ea8246eE7",
     id: "0x7173b184525fead2ffbde5fbe6fcb65ea8246ee70002000000000000000000c7",
     name: "LPeYyvUSDC-29APR22",
@@ -2104,25 +2099,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x76FCf0e8C7Ff37A47a799FA2cd4c13cDe0D981C9",
-    id: "0x76fcf0e8c7ff37a47a799fa2cd4c13cde0d981c90002000000000000000003d2",
-    name: "50OHM-50DAI",
-    type: "Weighted",
-    gauge: "0x107A2209883621aFe2968da31C03190e0B2782C2",
-    tokens: [
-      {
-        address: "0x64aa3364F17a4D01c6f1751Fd97C2BD3D7e7f1D5",
-        symbol: "OHM",
-        id: "0x",
-      },
-      {
-        address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-        symbol: "DAI",
         id: "0x",
       },
     ],
@@ -4421,25 +4397,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xEA8886a24b6e01Fba88A9e98d794e8D1F29eD863",
-    id: "0xea8886a24b6e01fba88a9e98d794e8d1f29ed863000200000000000000000010",
-    name: "B-75ZRX-25WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
-        symbol: "ZRX",
         id: "0x",
       },
     ],

@@ -202,10 +202,4 @@ export default [
     description:
       "Orangefin Ventures is one of the world's leading node operators with nearly $100M assets under delegation. Having almost a decade of experience in the cryptocurrency space, Orangefin Ventures operates some of the most technically sophisticated infrastructure that secures several blockchains and spans across public clouds and our own datacenters (including our own ASN and public IPv4 range). To learn more, visit https://www.orangefin.ventures!",
   },
-  {
-    id: "0xa1e229db735f7aa3882bfd22fa6b89734225a3d1",
-    name: "Amamu.io",
-    description:
-      "Amamu is an independent, secure, and reliable staking provider founded in 2020 with the primary aim of accelerating decentralization throughout the blockchain landscape. ",
-  },
 ] as const
