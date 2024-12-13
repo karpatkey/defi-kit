@@ -23,29 +23,25 @@ export const eth = {
   }: {
     targets: ((typeof tokens)[number]["name"] | { address: `0x${string}` })[]
   }) => {
-    return targets.flatMap((target) => {
-      if (target === "stETH" || target === contracts.mainnet.lido.stEth) {
-        console.log("COUCOUUU stETH")
-        return [
-          allow.mainnet.lido.stEth.approve(
-            contracts.mainnet.kelp.LRTDepositPool
-          ),
-          allow.mainnet.kelp.LRTDepositPool.depositAsset(
-            contracts.mainnet.lido.stEth,
-            undefined,
-            undefined,
-            undefined
-          ),
-          allow.mainnet.kelp.rseth.approve(
-            contracts.mainnet.kelp.LRTWithdrawalManager
-          ),
-          allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
-            undefined, //contracts.mainnet.lido.stEth,
-            undefined,
-            undefined
-          ),
-        ]
-      }
+    return [
+      allow.mainnet.lido.stEth.approve(contracts.mainnet.kelp.LRTDepositPool),
+      allow.mainnet.kelp.LRTDepositPool.depositAsset(
+        contracts.mainnet.lido.stEth,
+        undefined,
+        undefined,
+        undefined
+      ),
+      allow.mainnet.kelp.rseth.approve(
+        contracts.mainnet.kelp.LRTWithdrawalManager
+      ),
+      allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
+        undefined, //contracts.mainnet.lido.stEth,
+        undefined,
+        undefined
+      ),
+    ]
+    // if (target === "stETH" || target === contracts.mainnet.lido.stEth) {
+    // }
     //   if (target === "ETHx" || target === contracts.mainnet.kelp.ethx) {
     //     return [
     //       allow.mainnet.kelp.ethx.approve(
@@ -84,7 +80,8 @@ export const eth = {
     //     ]
     //   }
 
-      throw new NotFoundError(`Token not found: ${target}`)
-    })
+    // throw new NotFoundError(`Token not found: ${target}`)
+    // return targets.flatMap((target) => {
+    // })
   },
 }
