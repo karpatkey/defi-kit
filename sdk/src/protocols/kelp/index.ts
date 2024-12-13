@@ -25,6 +25,7 @@ export const eth = {
   }) => {
     return targets.flatMap((target) => {
       if (target === "stETH" || target === contracts.mainnet.lido.stEth) {
+        console.log("COUCOUUU stETH")
         return [
           allow.mainnet.lido.stEth.approve(
             contracts.mainnet.kelp.LRTDepositPool
@@ -39,49 +40,49 @@ export const eth = {
             contracts.mainnet.kelp.LRTWithdrawalManager
           ),
           allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
-            contracts.mainnet.lido.stEth,
+            undefined, //contracts.mainnet.lido.stEth,
             undefined,
             undefined
           ),
         ]
       }
-      if (target === "ETHx" || target === contracts.mainnet.kelp.ethx) {
-        return [
-          allow.mainnet.kelp.ethx.approve(
-            contracts.mainnet.kelp.LRTDepositPool
-          ),
-          allow.mainnet.kelp.LRTDepositPool.depositAsset(
-            contracts.mainnet.kelp.ethx,
-            undefined,
-            undefined,
-            undefined
-          ),
-          allow.mainnet.kelp.rseth.approve(
-            contracts.mainnet.kelp.LRTWithdrawalManager
-          ),
-          allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
-            contracts.mainnet.kelp.ethx,
-            undefined,
-            undefined
-          ),
-        ]
-      }
-      if (
-        target === "ETH" ||
-        target === "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-      ) {
-        return [
-          allow.mainnet.kelp.LRTDepositPool.depositETH(undefined, undefined),
-          allow.mainnet.kelp.rseth.approve(
-            contracts.mainnet.kelp.LRTWithdrawalManager
-          ),
-          allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
-            "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
-            undefined,
-            undefined
-          ),
-        ]
-      }
+    //   if (target === "ETHx" || target === contracts.mainnet.kelp.ethx) {
+    //     return [
+    //       allow.mainnet.kelp.ethx.approve(
+    //         contracts.mainnet.kelp.LRTDepositPool
+    //       ),
+    //       allow.mainnet.kelp.LRTDepositPool.depositAsset(
+    //         contracts.mainnet.kelp.ethx,
+    //         undefined,
+    //         undefined,
+    //         undefined
+    //       ),
+    //       allow.mainnet.kelp.rseth.approve(
+    //         contracts.mainnet.kelp.LRTWithdrawalManager
+    //       ),
+    //       allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
+    //         contracts.mainnet.kelp.ethx,
+    //         undefined,
+    //         undefined
+    //       ),
+    //     ]
+    //   }
+    //   if (
+    //     target === "ETH" ||
+    //     target === "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+    //   ) {
+    //     return [
+    //       allow.mainnet.kelp.LRTDepositPool.depositETH(undefined, undefined),
+    //       allow.mainnet.kelp.rseth.approve(
+    //         contracts.mainnet.kelp.LRTWithdrawalManager
+    //       ),
+    //       allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
+    //         "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+    //         undefined,
+    //         undefined
+    //       ),
+    //     ]
+    //   }
 
       throw new NotFoundError(`Token not found: ${target}`)
     })
