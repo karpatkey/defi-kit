@@ -23,7 +23,14 @@ export const eth = {
   }: {
     rewarder: Address
     exitTokenAddress: Address
-  }) => withdrawOptions(rewarder, true, Chain.eth, ExitKind.single, exitTokenAddress),
+  }) =>
+    withdrawOptions(
+      rewarder,
+      true,
+      Chain.eth,
+      ExitKind.single,
+      exitTokenAddress
+    ),
 }
 
 export const gno = {
@@ -39,7 +46,14 @@ export const gno = {
   }: {
     rewarder: Address
     exitTokenAddress: Address
-  }) => withdrawOptions(rewarder, true, Chain.gno, ExitKind.single, exitTokenAddress),
+  }) =>
+    withdrawOptions(
+      rewarder,
+      true,
+      Chain.gno,
+      ExitKind.single,
+      exitTokenAddress
+    ),
 }
 
 export const arb1 = {
@@ -56,7 +70,13 @@ export const arb1 = {
     rewarder: Address
     exitTokenAddress: Address
   }) =>
-    withdrawOptions(rewarder, true, Chain.arb1, ExitKind.single, exitTokenAddress),
+    withdrawOptions(
+      rewarder,
+      true,
+      Chain.arb1,
+      ExitKind.single,
+      exitTokenAddress
+    ),
 }
 
 export const oeth = {
@@ -73,7 +93,13 @@ export const oeth = {
     rewarder: Address
     exitTokenAddress: Address
   }) =>
-    withdrawOptions(rewarder, true, Chain.oeth, ExitKind.single, exitTokenAddress),
+    withdrawOptions(
+      rewarder,
+      true,
+      Chain.oeth,
+      ExitKind.single,
+      exitTokenAddress
+    ),
 }
 
 export const base = {
@@ -90,5 +116,11 @@ export const base = {
     rewarder: Address
     exitTokenAddress: Address
   }) =>
-    withdrawOptions(rewarder, true, Chain.base, ExitKind.single, exitTokenAddress),
+    withdrawOptions(
+      rewarder,
+      true,
+      Chain.base,
+      ExitKind.single,
+      exitTokenAddress
+    ),
 }

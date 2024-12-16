@@ -8,7 +8,10 @@ import arb1AuraPools from "../../protocols/aura/_arb1Pools"
 import oethAuraPools from "../../protocols/aura/_oethPools"
 import baseAuraPools from "../../protocols/aura/_basePools"
 import { findPool as findAuraPool } from "../../protocols/aura"
-import { ExitKind, withdrawOptions as balancerWithdrawOptions } from "../balancer/strategies"
+import {
+  ExitKind,
+  withdrawOptions as balancerWithdrawOptions,
+} from "../balancer/strategies"
 import { Address } from "@gnosis-guild/eth-sdk"
 
 export const withdrawOptions = (
@@ -45,19 +48,34 @@ export const withdrawOptions = (
       case Chain.arb1:
         bpt = findAuraPool(arb1AuraPools, rewarder).bpt
         permissions.push(
-          ...balancerWithdrawOptions(Chain.arb1, bpt, exitKind, exitTokenAddress)
+          ...balancerWithdrawOptions(
+            Chain.arb1,
+            bpt,
+            exitKind,
+            exitTokenAddress
+          )
         )
         break
       case Chain.oeth:
         bpt = findAuraPool(oethAuraPools, rewarder).bpt
         permissions.push(
-          ...balancerWithdrawOptions(Chain.oeth, bpt, exitKind, exitTokenAddress)
+          ...balancerWithdrawOptions(
+            Chain.oeth,
+            bpt,
+            exitKind,
+            exitTokenAddress
+          )
         )
         break
       case Chain.base:
         bpt = findAuraPool(baseAuraPools, rewarder).bpt
         permissions.push(
-          ...balancerWithdrawOptions(Chain.base, bpt, exitKind, exitTokenAddress)
+          ...balancerWithdrawOptions(
+            Chain.base,
+            bpt,
+            exitKind,
+            exitTokenAddress
+          )
         )
         break
     }

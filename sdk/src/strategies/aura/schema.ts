@@ -17,17 +17,47 @@ const zArb1Rewarder = z.enum(arb1Rewarders as [string, string, ...string[]])
 const zOethRewarder = z.enum(oethRewarders as [string, string, ...string[]])
 const zBaseRewarder = z.enum(baseRewarders as [string, string, ...string[]])
 
-const ethTokenAddresses = [...new Set(ethPools.flatMap((pool) => pool.tokens.map((token) => token.address)))]
-const gnoTokenAddresses = [...new Set(gnoPools.flatMap((pool) => pool.tokens.map((token) => token.address)))]
-const arb1TokenAddresses = [...new Set(arb1Pools.flatMap((pool) => pool.tokens.map((token) => token.address)))]
-const oethTokenAddresses = [...new Set(oethPools.flatMap((pool) => pool.tokens.map((token) => token.address)))]
-const baseTokenAddresses = [...new Set(basePools.flatMap((pool) => pool.tokens.map((token) => token.address)))]
+const ethTokenAddresses = [
+  ...new Set(
+    ethPools.flatMap((pool) => pool.tokens.map((token) => token.address))
+  ),
+]
+const gnoTokenAddresses = [
+  ...new Set(
+    gnoPools.flatMap((pool) => pool.tokens.map((token) => token.address))
+  ),
+]
+const arb1TokenAddresses = [
+  ...new Set(
+    arb1Pools.flatMap((pool) => pool.tokens.map((token) => token.address))
+  ),
+]
+const oethTokenAddresses = [
+  ...new Set(
+    oethPools.flatMap((pool) => pool.tokens.map((token) => token.address))
+  ),
+]
+const baseTokenAddresses = [
+  ...new Set(
+    basePools.flatMap((pool) => pool.tokens.map((token) => token.address))
+  ),
+]
 
-const zEthTokenAddress = z.enum(ethTokenAddresses as [string, string, ...string[]])
-const zGnoTokenAddress = z.enum(gnoTokenAddresses as [string, string, ...string[]])
-const zArb1TokenAddress = z.enum(arb1TokenAddresses as [string, string, ...string[]])
-const zOethTokenAddress = z.enum(oethTokenAddresses as [string, string, ...string[]])
-const zBaseTokenAddress = z.enum(baseTokenAddresses as [string, string, ...string[]])
+const zEthTokenAddress = z.enum(
+  ethTokenAddresses as [string, string, ...string[]]
+)
+const zGnoTokenAddress = z.enum(
+  gnoTokenAddresses as [string, string, ...string[]]
+)
+const zArb1TokenAddress = z.enum(
+  arb1TokenAddresses as [string, string, ...string[]]
+)
+const zOethTokenAddress = z.enum(
+  oethTokenAddresses as [string, string, ...string[]]
+)
+const zBaseTokenAddress = z.enum(
+  baseTokenAddresses as [string, string, ...string[]]
+)
 
 export const eth = {
   withdraw: z.object({

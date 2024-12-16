@@ -7,7 +7,7 @@ import gnoPools from "../../protocols/balancer/_gnoPools"
 import arb1Pools from "../../protocols/balancer/_arb1Pools"
 import oethPools from "../../protocols/balancer/_oethPools"
 import basePools from "../../protocols/balancer/_basePools"
-import { findPool ,findTokenIndexInPool } from "../../protocols/balancer"
+import { findPool, findTokenIndexInPool } from "../../protocols/balancer"
 import { Address } from "@gnosis-guild/eth-sdk"
 
 export enum ExitKind {
@@ -34,34 +34,19 @@ export const withdrawOptions = (
 
   switch (chain) {
     case Chain.eth:
-      ({ id: balancerPid, type: balancerPoolType } = findPool(
-        ethPools,
-        bpt
-      ))
+      ;({ id: balancerPid, type: balancerPoolType } = findPool(ethPools, bpt))
       break
     case Chain.gno:
-      ({ id: balancerPid, type: balancerPoolType } = findPool(
-        gnoPools,
-        bpt
-      ))
+      ;({ id: balancerPid, type: balancerPoolType } = findPool(gnoPools, bpt))
       break
     case Chain.arb1:
-      ({ id: balancerPid, type: balancerPoolType } = findPool(
-        arb1Pools,
-        bpt
-      ))
+      ;({ id: balancerPid, type: balancerPoolType } = findPool(arb1Pools, bpt))
       break
     case Chain.oeth:
-      ({ id: balancerPid, type: balancerPoolType } = findPool(
-        oethPools,
-        bpt
-      ))
+      ;({ id: balancerPid, type: balancerPoolType } = findPool(oethPools, bpt))
       break
     case Chain.base:
-      ({ id: balancerPid, type: balancerPoolType } = findPool(
-        basePools,
-        bpt
-      ))
+      ;({ id: balancerPid, type: balancerPoolType } = findPool(basePools, bpt))
       break
   }
 
@@ -69,14 +54,20 @@ export const withdrawOptions = (
 
   if (exitKind === ExitKind.single) {
     if (!exitTokenAddress) {
-      throw new Error("exitTokenAddress must be specified for single token exits.");
+      throw new Error(
+        "exitTokenAddress must be specified for single token exits."
+      )
     }
 
     permissions.push(
       // It doesn't matter the blockchain we use, as the Vault address remains the same
       allow.mainnet.balancer.vault.exitPool(balancerPid, c.avatar, c.avatar, {
         userData: c.abiEncodedMatches(
-          [0, undefined, findTokenIndexInPool(chainPoolsMap[chain], bpt, exitTokenAddress)],
+          [
+            0,
+            undefined,
+            findTokenIndexInPool(chainPoolsMap[chain], bpt, exitTokenAddress),
+          ],
           ["uint256", "uint256", "uint256"]
         ),
       })
