@@ -32,7 +32,8 @@ export const withdraw = (rewarder: Rewarder) => {
 export const withdraw_balancer = (
   chain: Chain,
   rewarder: Rewarder,
-  exitKind?: ExitKind
+  exitKind?: ExitKind,
+  exitTokenIndex?: number
 ): PermissionSet => {
   let bpt
   let balancerPid
@@ -84,33 +85,30 @@ export const withdraw_balancer = (
     },
   ]
 
-  if (balancerPoolType === "ComposableStable") {
+  if (exitKind === ExitKind.single) {
     permissions.push(
       // It doesn't matter the blockchain we use, as the Vault address remains the same
       allow.mainnet.balancer.vault.exitPool(balancerPid, c.avatar, c.avatar, {
         userData: c.abiEncodedMatches(
-          exitKind === ExitKind.single
-            ? [0]
-            : exitKind === ExitKind.proportional
-            ? [2]
-            : [undefined],
+          [0, undefined, exitTokenIndex],
+          ["uint256", "uint256", "uint256"]
+        ),
+      })
+    )
+  } else if (exitKind === ExitKind.proportional) {
+    permissions.push(
+      // It doesn't matter the blockchain we use, as the Vault address remains the same
+      allow.mainnet.balancer.vault.exitPool(balancerPid, c.avatar, c.avatar, {
+        userData: c.abiEncodedMatches(
+          balancerPoolType === "ComposableStable" ? [2] : [1],
           ["uint256"]
         ),
       })
     )
   } else {
+    // Default case when `exitKind` is not specified
     permissions.push(
-      // It doesn't matter the blockchain we use, as the Vault address remains the same
-      allow.mainnet.balancer.vault.exitPool(balancerPid, c.avatar, c.avatar, {
-        userData: c.abiEncodedMatches(
-          exitKind === ExitKind.single
-            ? [0]
-            : exitKind === ExitKind.proportional
-            ? [1]
-            : [undefined],
-          ["uint256"]
-        ),
-      })
+      allow.mainnet.balancer.vault.exitPool(balancerPid, c.avatar, c.avatar)
     )
   }
 

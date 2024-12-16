@@ -28,6 +28,7 @@ export const eth = {
 
   withdraw_single_token: z.object({
     rewarder: zEthRewarder,
+    exitTokenIndex: z.number().nonnegative().int().optional(),
   }),
 }
 
@@ -42,6 +43,7 @@ export const gno = {
 
   withdraw_single_token: z.object({
     rewarder: zGnoRewarder,
+    exitTokenIndex: z.number().nonnegative().int().optional(),
   }),
 }
 
@@ -56,6 +58,7 @@ export const arb1 = {
 
   withdraw_single_token: z.object({
     rewarder: zArb1Rewarder,
+    exitTokenIndex: z.number().nonnegative().int().optional(),
   }),
 }
 
@@ -70,6 +73,7 @@ export const oeth = {
 
   withdraw_single_token: z.object({
     rewarder: zOethRewarder,
+    exitTokenIndex: z.number().nonnegative().int().optional(),
   }),
 }
 
@@ -84,5 +88,6 @@ export const base = {
 
   withdraw_single_token: z.object({
     rewarder: zBaseRewarder,
+    exitTokenIndex: z.number().nonnegative().int().optional(),
   }),
 }
