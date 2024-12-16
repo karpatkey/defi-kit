@@ -1,92 +1,94 @@
-import {
-  EthRewarder,
-  GnoRewarder,
-  Arb1Rewarder,
-  OethRewarder,
-  BaseRewarder,
-} from "../../protocols/aura/types"
+// import {
+//   EthRewarder,
+//   GnoRewarder,
+//   Arb1Rewarder,
+//   OethRewarder,
+//   BaseRewarder,
+// } from "../../protocols/aura/types"
 import { Chain } from "../../types"
-import { withdraw, withdraw_balancer, ExitKind } from "./strategies"
+import { withdrawOptions } from "./strategies"
+import { ExitKind } from "../balancer/strategies"
+import { Address } from "@gnosis-guild/eth-sdk"
 
 export const eth = {
-  withdraw: async ({ rewarder }: { rewarder: EthRewarder }) =>
-    withdraw(rewarder),
+  withdraw: async ({ rewarder }: { rewarder: Address }) =>
+    withdrawOptions(rewarder),
 
-  withdraw_proportional: async ({ rewarder }: { rewarder: EthRewarder }) =>
-    withdraw_balancer(Chain.eth, rewarder, ExitKind.proportional),
+  withdraw_proportional: async ({ rewarder }: { rewarder: Address }) =>
+    withdrawOptions(rewarder, true, Chain.eth, ExitKind.proportional),
 
   withdraw_single_token: async ({
     rewarder,
-    exitTokenIndex,
+    exitTokenAddress,
   }: {
-    rewarder: EthRewarder
-    exitTokenIndex: number
-  }) => withdraw_balancer(Chain.eth, rewarder, ExitKind.single, exitTokenIndex),
+    rewarder: Address
+    exitTokenAddress: Address
+  }) => withdrawOptions(rewarder, true, Chain.eth, ExitKind.single, exitTokenAddress),
 }
 
 export const gno = {
-  withdraw: async ({ rewarder }: { rewarder: GnoRewarder }) =>
-    withdraw(rewarder),
+  withdraw: async ({ rewarder }: { rewarder: Address }) =>
+    withdrawOptions(rewarder),
 
-  withdraw_proportional: async ({ rewarder }: { rewarder: GnoRewarder }) =>
-    withdraw_balancer(Chain.gno, rewarder, ExitKind.proportional),
+  withdraw_proportional: async ({ rewarder }: { rewarder: Address }) =>
+    withdrawOptions(rewarder, true, Chain.gno, ExitKind.proportional),
 
   withdraw_single_token: async ({
     rewarder,
-    exitTokenIndex,
+    exitTokenAddress,
   }: {
-    rewarder: GnoRewarder
-    exitTokenIndex: number
-  }) => withdraw_balancer(Chain.gno, rewarder, ExitKind.single, exitTokenIndex),
+    rewarder: Address
+    exitTokenAddress: Address
+  }) => withdrawOptions(rewarder, true, Chain.gno, ExitKind.single, exitTokenAddress),
 }
 
 export const arb1 = {
-  withdraw: async ({ rewarder }: { rewarder: Arb1Rewarder }) =>
-    withdraw(rewarder),
+  withdraw: async ({ rewarder }: { rewarder: Address }) =>
+    withdrawOptions(rewarder),
 
-  withdraw_proportional: async ({ rewarder }: { rewarder: Arb1Rewarder }) =>
-    withdraw_balancer(Chain.arb1, rewarder, ExitKind.proportional),
+  withdraw_proportional: async ({ rewarder }: { rewarder: Address }) =>
+    withdrawOptions(rewarder, true, Chain.arb1, ExitKind.proportional),
 
   withdraw_single_token: async ({
     rewarder,
-    exitTokenIndex,
+    exitTokenAddress,
   }: {
-    rewarder: Arb1Rewarder
-    exitTokenIndex: number
+    rewarder: Address
+    exitTokenAddress: Address
   }) =>
-    withdraw_balancer(Chain.arb1, rewarder, ExitKind.single, exitTokenIndex),
+    withdrawOptions(rewarder, true, Chain.arb1, ExitKind.single, exitTokenAddress),
 }
 
 export const oeth = {
-  withdraw: async ({ rewarder }: { rewarder: OethRewarder }) =>
-    withdraw(rewarder),
+  withdraw: async ({ rewarder }: { rewarder: Address }) =>
+    withdrawOptions(rewarder),
 
-  withdraw_proportional: async ({ rewarder }: { rewarder: OethRewarder }) =>
-    withdraw_balancer(Chain.oeth, rewarder, ExitKind.proportional),
+  withdraw_proportional: async ({ rewarder }: { rewarder: Address }) =>
+    withdrawOptions(rewarder, true, Chain.oeth, ExitKind.proportional),
 
   withdraw_single_token: async ({
     rewarder,
-    exitTokenIndex,
+    exitTokenAddress,
   }: {
-    rewarder: OethRewarder
-    exitTokenIndex: number
+    rewarder: Address
+    exitTokenAddress: Address
   }) =>
-    withdraw_balancer(Chain.oeth, rewarder, ExitKind.single, exitTokenIndex),
+    withdrawOptions(rewarder, true, Chain.oeth, ExitKind.single, exitTokenAddress),
 }
 
 export const base = {
-  withdraw: async ({ rewarder }: { rewarder: BaseRewarder }) =>
-    withdraw(rewarder),
+  withdraw: async ({ rewarder }: { rewarder: Address }) =>
+    withdrawOptions(rewarder),
 
-  withdraw_proportional: async ({ rewarder }: { rewarder: BaseRewarder }) =>
-    withdraw_balancer(Chain.base, rewarder, ExitKind.proportional),
+  withdraw_proportional: async ({ rewarder }: { rewarder: Address }) =>
+    withdrawOptions(rewarder, true, Chain.base, ExitKind.proportional),
 
   withdraw_single_token: async ({
     rewarder,
-    exitTokenIndex,
+    exitTokenAddress,
   }: {
-    rewarder: BaseRewarder
-    exitTokenIndex: number
+    rewarder: Address
+    exitTokenAddress: Address
   }) =>
-    withdraw_balancer(Chain.base, rewarder, ExitKind.single, exitTokenIndex),
+    withdrawOptions(rewarder, true, Chain.base, ExitKind.single, exitTokenAddress),
 }

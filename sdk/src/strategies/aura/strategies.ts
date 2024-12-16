@@ -1,81 +1,23 @@
 import { allow } from "zodiac-roles-sdk/kit"
-import { c, PermissionSet } from "zodiac-roles-sdk"
+import { PermissionSet } from "zodiac-roles-sdk"
 import { Chain } from "../../types"
-import { Rewarder } from "../../protocols/aura/types"
+//import { Rewarder } from "../../protocols/aura/types"
 import ethAuraPools from "../../protocols/aura/_ethPools"
 import gnoAuraPools from "../../protocols/aura/_gnoPools"
 import arb1AuraPools from "../../protocols/aura/_arb1Pools"
 import oethAuraPools from "../../protocols/aura/_oethPools"
 import baseAuraPools from "../../protocols/aura/_basePools"
-import ethBalancerPools from "../../protocols/balancer/_ethPools"
-import gnoBalancerPools from "../../protocols/balancer/_gnoPools"
-import arb1BalancerPools from "../../protocols/balancer/_arb1Pools"
-import oethBalancerPools from "../../protocols/balancer/_oethPools"
-import baseBalancerPools from "../../protocols/balancer/_basePools"
 import { findPool as findAuraPool } from "../../protocols/aura"
-import { findPool as findBalancerPool } from "../../protocols/balancer"
+import { ExitKind, withdrawOptions as balancerWithdrawOptions } from "../balancer/strategies"
+import { Address } from "@gnosis-guild/eth-sdk"
 
-export enum ExitKind {
-  single,
-  proportional,
-}
-
-export const withdraw = (rewarder: Rewarder) => {
-  return [
-    {
-      ...allow.mainnet.aura.rewarder.withdrawAndUnwrap(),
-      targetAddress: rewarder,
-    },
-  ]
-}
-
-export const withdraw_balancer = (
-  chain: Chain,
-  rewarder: Rewarder,
+export const withdrawOptions = (
+  rewarder: Address,
+  exitBalancer: boolean = false,
+  chain?: Chain,
   exitKind?: ExitKind,
-  exitTokenIndex?: number
+  exitTokenAddress?: Address
 ): PermissionSet => {
-  let bpt
-  let balancerPid
-  let balancerPoolType
-  switch (chain) {
-    case Chain.eth:
-      bpt = findAuraPool(ethAuraPools, rewarder).bpt
-      ;({ id: balancerPid, type: balancerPoolType } = findBalancerPool(
-        ethBalancerPools,
-        bpt
-      ))
-      break
-    case Chain.gno:
-      bpt = findAuraPool(gnoAuraPools, rewarder).bpt
-      ;({ id: balancerPid, type: balancerPoolType } = findBalancerPool(
-        gnoBalancerPools,
-        bpt
-      ))
-      break
-    case Chain.arb1:
-      bpt = findAuraPool(arb1AuraPools, rewarder).bpt
-      ;({ id: balancerPid, type: balancerPoolType } = findBalancerPool(
-        arb1BalancerPools,
-        bpt
-      ))
-      break
-    case Chain.oeth:
-      bpt = findAuraPool(oethAuraPools, rewarder).bpt
-      ;({ id: balancerPid, type: balancerPoolType } = findBalancerPool(
-        oethBalancerPools,
-        bpt
-      ))
-      break
-    case Chain.base:
-      bpt = findAuraPool(baseAuraPools, rewarder).bpt
-      ;({ id: balancerPid, type: balancerPoolType } = findBalancerPool(
-        baseBalancerPools,
-        bpt
-      ))
-      break
-  }
-
   const permissions: PermissionSet = [
     // It doesn't matter the blockchain we use, since we are overwriting
     // the address of the rewarder (abis are the same indistinctively of the blockchain)
@@ -85,31 +27,40 @@ export const withdraw_balancer = (
     },
   ]
 
-  if (exitKind === ExitKind.single) {
-    permissions.push(
-      // It doesn't matter the blockchain we use, as the Vault address remains the same
-      allow.mainnet.balancer.vault.exitPool(balancerPid, c.avatar, c.avatar, {
-        userData: c.abiEncodedMatches(
-          [0, undefined, exitTokenIndex],
-          ["uint256", "uint256", "uint256"]
-        ),
-      })
-    )
-  } else if (exitKind === ExitKind.proportional) {
-    permissions.push(
-      // It doesn't matter the blockchain we use, as the Vault address remains the same
-      allow.mainnet.balancer.vault.exitPool(balancerPid, c.avatar, c.avatar, {
-        userData: c.abiEncodedMatches(
-          balancerPoolType === "ComposableStable" ? [2] : [1],
-          ["uint256"]
-        ),
-      })
-    )
-  } else {
-    // Default case when `exitKind` is not specified
-    permissions.push(
-      allow.mainnet.balancer.vault.exitPool(balancerPid, c.avatar, c.avatar)
-    )
+  if (exitBalancer) {
+    let bpt
+    switch (chain) {
+      case Chain.eth:
+        bpt = findAuraPool(ethAuraPools, rewarder).bpt
+        permissions.push(
+          ...balancerWithdrawOptions(Chain.eth, bpt, exitKind, exitTokenAddress)
+        )
+        break
+      case Chain.gno:
+        bpt = findAuraPool(gnoAuraPools, rewarder).bpt
+        permissions.push(
+          ...balancerWithdrawOptions(Chain.gno, bpt, exitKind, exitTokenAddress)
+        )
+        break
+      case Chain.arb1:
+        bpt = findAuraPool(arb1AuraPools, rewarder).bpt
+        permissions.push(
+          ...balancerWithdrawOptions(Chain.arb1, bpt, exitKind, exitTokenAddress)
+        )
+        break
+      case Chain.oeth:
+        bpt = findAuraPool(oethAuraPools, rewarder).bpt
+        permissions.push(
+          ...balancerWithdrawOptions(Chain.oeth, bpt, exitKind, exitTokenAddress)
+        )
+        break
+      case Chain.base:
+        bpt = findAuraPool(baseAuraPools, rewarder).bpt
+        permissions.push(
+          ...balancerWithdrawOptions(Chain.base, bpt, exitKind, exitTokenAddress)
+        )
+        break
+    }
   }
 
   return permissions
