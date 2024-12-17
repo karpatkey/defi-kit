@@ -28,7 +28,10 @@ export const withdrawOptions = (
     [Chain.base]: basePools,
   }
 
-  const { id: balancerPid, type: balancerPoolType } = findPool(chainPoolsMap[chain], bpt)
+  const { id: balancerPid, type: balancerPoolType } = findPool(
+    chainPoolsMap[chain],
+    bpt
+  )
 
   const permissions: PermissionSet = []
 
