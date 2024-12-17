@@ -16,6 +16,10 @@ env:
   DOCKER_REGISTRY: ${{ secrets.DOCKER_URL }}
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  GITHUB_PAT: ${{ secrets.GIT_PAT }}
+  DOCKER_IMAGE_NAME: registry.digitalocean.com/karpatkey/${{ github.event.repository.name }} 
+  DOCKERFILE: './Dockerfile'
+
 
 jobs:
   docker:
@@ -25,8 +29,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Build and push
-        run: ./.github/scripts/build_and_push.sh
-        env:
-          DOCKER_IMAGE_NAME: "registry.digitalocean.com/karpatkey/defi-kit"
-          DOCKERFILE: "./Dockerfile"
+      - name: Build Docker image using composite action
+        uses: karpatkey/build-actions/build-docker-image@main
