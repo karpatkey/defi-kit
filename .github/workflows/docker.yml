@@ -1,56 +1,33 @@
-name: Build and Push to Docker Registry
+name: Docker Build push
 
-# Controls when the action will run.
-on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+on: 
   push:
     branches:
       - main
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
+
+env:
+  GIT_REF: ${{ github.head_ref || github.ref_name }}
+  DOCKER_REGISTRY: ${{ secrets.DOCKER_URL }}
+  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+  GITHUB_PAT: ${{ secrets.GIT_PAT }}
+  DOCKER_IMAGE_NAME: registry.digitalocean.com/karpatkey/${{ github.event.repository.name }} 
+  DOCKERFILE: './Dockerfile'
+
+
 jobs:
   docker:
     runs-on: ubuntu-latest
-
+    env:
+      DOCKER_BUILDKIT: 1
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Docker meta
-        id: docker_meta
-        uses: docker/metadata-action@v3
-        with:
-          images: registry.digitalocean.com/karpatkey/defi-kit
-          tags: |
-            type=ref,event=branch
-            type=sha,prefix={{branch}}
-            latest
-
-      - name: Login to Docker
-        uses: docker/login-action@v1
-        with:
-          registry: ${{ secrets.DOCKER_URL }}
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-
-      - name: Setup Docker Buildx
-        uses: docker/setup-buildx-action@v1
-
-      - name: Build and Push image
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: ${{ steps.docker_meta.outputs.tags }}
-          file: ./Dockerfile
-
-  update-deployment:
-    needs: docker
-    runs-on: self-hosted
-    timeout-minutes: 10
-    steps:
-      - uses: tale/kubectl-action@v1
-        with:
-          base64-kube-config: ${{ secrets.KUBE_CONFIG }}
-      - run: kubectl delete pod -n karpatkey-defi-kit -l app=karpatkey-defi-kit --force
+      - uses: actions/checkout@v4
+      
+      - name: Build Docker image using composite action
+        uses: karpatkey/build-actions/build-docker-image@main
