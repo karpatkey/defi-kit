@@ -23,65 +23,67 @@ export const eth = {
   }: {
     targets: ((typeof tokens)[number]["name"] | { address: `0x${string}` })[]
   }) => {
-    return [
-      allow.mainnet.lido.stEth.approve(contracts.mainnet.kelp.LRTDepositPool),
-      allow.mainnet.kelp.LRTDepositPool.depositAsset(
-        contracts.mainnet.lido.stEth,
-        undefined,
-        undefined,
-        undefined
-      ),
-      allow.mainnet.kelp.rseth.approve(
-        contracts.mainnet.kelp.LRTWithdrawalManager
-      ),
-      allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
-        undefined, //contracts.mainnet.lido.stEth,
-        undefined,
-        undefined
-      ),
-    ]
-    // if (target === "stETH" || target === contracts.mainnet.lido.stEth) {
-    // }
-    //   if (target === "ETHx" || target === contracts.mainnet.kelp.ethx) {
-    //     return [
-    //       allow.mainnet.kelp.ethx.approve(
-    //         contracts.mainnet.kelp.LRTDepositPool
-    //       ),
-    //       allow.mainnet.kelp.LRTDepositPool.depositAsset(
-    //         contracts.mainnet.kelp.ethx,
-    //         undefined,
-    //         undefined,
-    //         undefined
-    //       ),
-    //       allow.mainnet.kelp.rseth.approve(
-    //         contracts.mainnet.kelp.LRTWithdrawalManager
-    //       ),
-    //       allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
-    //         contracts.mainnet.kelp.ethx,
-    //         undefined,
-    //         undefined
-    //       ),
-    //     ]
-    //   }
-    //   if (
-    //     target === "ETH" ||
-    //     target === "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-    //   ) {
-    //     return [
-    //       allow.mainnet.kelp.LRTDepositPool.depositETH(undefined, undefined),
-    //       allow.mainnet.kelp.rseth.approve(
-    //         contracts.mainnet.kelp.LRTWithdrawalManager
-    //       ),
-    //       allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
-    //         "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
-    //         undefined,
-    //         undefined
-    //       ),
-    //     ]
-    //   }
+    return targets.flatMap((target) => {
+      if (target === "stETH" || target === contracts.mainnet.lido.stEth) {
+        return [
+          allow.mainnet.lido.stEth.approve(
+            contracts.mainnet.kelp.LRTDepositPool
+          ),
+          allow.mainnet.kelp.LRTDepositPool.depositAsset(
+            contracts.mainnet.lido.stEth,
+            undefined,
+            undefined,
+            undefined
+          ),
+          allow.mainnet.kelp.rseth.approve(
+            contracts.mainnet.kelp.LRTWithdrawalManager
+          ),
+          allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
+            contracts.mainnet.lido.stEth,
+            undefined,
+            undefined
+          ),
+        ]
+      }
+      if (target === "ETHx" || target === contracts.mainnet.kelp.ethx) {
+        return [
+          allow.mainnet.kelp.ethx.approve(
+            contracts.mainnet.kelp.LRTDepositPool
+          ),
+          allow.mainnet.kelp.LRTDepositPool.depositAsset(
+            contracts.mainnet.kelp.ethx,
+            undefined,
+            undefined,
+            undefined
+          ),
+          allow.mainnet.kelp.rseth.approve(
+            contracts.mainnet.kelp.LRTWithdrawalManager
+          ),
+          allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
+            contracts.mainnet.kelp.ethx,
+            undefined,
+            undefined
+          ),
+        ]
+      }
+      if (
+        target === "ETH" ||
+        target === "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+      ) {
+        return [
+          allow.mainnet.kelp.LRTDepositPool.depositETH(undefined, undefined),
+          allow.mainnet.kelp.rseth.approve(
+            contracts.mainnet.kelp.LRTWithdrawalManager
+          ),
+          allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
+            "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+            undefined,
+            undefined
+          ),
+        ]
+      }
 
-    // throw new NotFoundError(`Token not found: ${target}`)
-    // return targets.flatMap((target) => {
-    // })
+      throw new NotFoundError(`Token not found: ${target}`)
+    })
   },
 }

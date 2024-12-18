@@ -1,11 +1,7 @@
 import { getIndexedAccountPath, MaxUint256, parseEther } from "ethers"
 import { eth } from "."
 import { eth as kit } from "../../../test/kit"
-import {
-  advanceTime,
-  applyPermissions,
-  stealErc20,
-} from "../../../test/helpers"
+import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { bigint } from "zod"
 import { avatar } from "../../../test/wallets"
@@ -24,72 +20,70 @@ describe("kelp", () => {
       // })
       //   steal stETH -> check if stETH is approved -> deposit stETH -> check if rseth is approved -> initiate withdrawal
       //   check balance of stETH -> check balance of rseth
-      it(
-        "stake stETH",
-        async () => {
-          await applyPermissions(
-            await eth.stake({
-              targets: ["stETH"],
-            })
+      it("stake stETH", async () => {
+        await applyPermissions(
+          await eth.stake({
+            targets: ["stETH"],
+          })
+        )
+        const amount = parseEther("1")
+        let balance = await kit.asMember.lido.stEth.balanceOf(avatar.address)
+        console.log("[1.0] balance before stealing stEth = ", balance)
+
+        await stealErc20(stETH, amount, stealAddressStEth)
+        balance = await kit.asMember.lido.stEth.balanceOf(avatar.address)
+        console.log("[1.1] balance after stealing stEth = ", balance)
+
+        await expect(
+          kit.asMember.lido.stEth.approve(
+            contracts.mainnet.kelp.LRTDepositPool,
+            amount
           )
-          const amount = parseEther("1")
-          let balance = await kit.asMember.lido.stEth.balanceOf(avatar.address)
-          console.log("balance before = ", balance)
+        ).not.toRevert()
+        await expect(
+          kit.asMember.kelp.LRTDepositPool.depositAsset(
+            "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+            amount,
+            0,
+            "0xd05723c7b17b4e4c722ca4fb95e64ffc54a70131c75e2b2548a456c51ed7cdaf"
+          )
+        ).not.toRevert()
 
-          await stealErc20(stETH, amount, stealAddressStEth)
-          balance = await kit.asMember.lido.stEth.balanceOf(avatar.address)
-          console.log("balance after = ", balance)
+        // //////////////////////////////////////////////////////////////////////////////////
+        balance = await kit.asMember.kelp.rseth.balanceOf(avatar.address)
+        console.log("[2.0] balance rseth before = ", balance)
+        const minRsEthAmountToWithdraw =
+          await kit.asMember.kelp.LRTWithdrawalManager.minRsEthAmountToWithdraw(
+            contracts.mainnet.lido.stEth
+          )
+        console.log("minRsETH amount to withdraw = ", minRsEthAmountToWithdraw)
 
-          await expect(
-            kit.asMember.lido.stEth.approve(
-              contracts.mainnet.kelp.LRTDepositPool,
-              amount
-            )
-          ).not.toRevert()
-          await expect(
-            kit.asMember.kelp.LRTDepositPool.depositAsset(
-              "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
-              amount,
-              0,
-              "0xd05723c7b17b4e4c722ca4fb95e64ffc54a70131c75e2b2548a456c51ed7cdaf"
-            )
-          ).not.toRevert()
+        // const getExpectedAssetAmount =
+        //   await kit.asMember.kelp.LRTWithdrawalManager.getExpectedAssetAmount(
+        //     "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+        //     balance
+        //   )
+        // console.log("getExpectedRsEthAmount = ", getExpectedAssetAmount)
+        // //////////////////////////////////////////////////////////////////////////////////
 
-          // //////////////////////////////////////////////////////////////////////////////////
-          balance = await kit.asMember.kelp.rseth.balanceOf(avatar.address)
-          console.log("balance before = ", balance)
-          // const minRsEthAmountToWithdraw =
-          //   await kit.asMember.kelp.LRTWithdrawalManager.minRsEthAmountToWithdraw(
-          //     contracts.mainnet.lido.stEth
-          //   )
-          // console.log("minRsETH = ", minRsEthAmountToWithdraw)
-          // const getExpectedAssetAmount =
-          //   await kit.asMember.kelp.LRTWithdrawalManager.getExpectedAssetAmount(
-          //     "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
-          //     balance
-          //   )
-          // console.log("getExpectedRsEthAmount = ", getExpectedAssetAmount)
-          // //////////////////////////////////////////////////////////////////////////////////
+        await expect(
+          kit.asMember.kelp.rseth.approve(
+            contracts.mainnet.kelp.LRTWithdrawalManager,
+            balance
+          )
+        ).not.toRevert()
 
-          await expect(
-            kit.asMember.kelp.rseth.approve(
-              contracts.mainnet.kelp.LRTWithdrawalManager,
-              balance
-            )
-          ).not.toRevert()
+        await expect(
+          kit.asMember.kelp.LRTWithdrawalManager.initiateWithdrawal(
+            "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+            balance,
+            "0xd05723c7b17b4e4c722ca4fb95e64ffc54a70131c75e2b2548a456c51ed7cdaf"
+          )
+        ).not.toRevert()
 
-          await expect(
-            kit.asMember.kelp.LRTWithdrawalManager.initiateWithdrawal(
-              "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
-              balance,
-              "0xd05723c7b17b4e4c722ca4fb95e64ffc54a70131c75e2b2548a456c51ed7cdaf"
-            )
-          ).not.toRevert()
-          balance = await kit.asMember.kelp.rseth.balanceOf(avatar.address)
-          console.log("balance after = ", balance)
-        },
-        50 * 1000
-      )
+        balance = await kit.asMember.kelp.rseth.balanceOf(avatar.address)
+        console.log("[2.1] balance rseth after = ", balance)
+      })
       //   it("unstake stETH", async () => {
       //     const amount = parseEther("10")
       //     await stealErc20(stETH, amount, stealAddressStEth)
