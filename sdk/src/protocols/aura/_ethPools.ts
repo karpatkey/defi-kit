@@ -2065,4 +2065,20 @@ export default [
     ],
     rewarder: "0x848fb625aa9ae1F56bdAc8c892Df5246E2c84b61",
   },
+  {
+    name: "B-kaiAURA-AURA-WEIGHTED",
+    id: "236",
+    bpt: "0x62E57e37E3185871c13a422A363293780D17305B",
+    tokens: [
+      {
+        address: "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+        symbol: "AURA",
+      },
+      {
+        address: "0xFFd9c960bC303b8d3aAED58229ce8a7310bCc5b8",
+        symbol: "kaiAURA",
+      },
+    ],
+    rewarder: "0x2508F0f5230085c9A42f703012e453B56C037A92",
+  },
 ] as const

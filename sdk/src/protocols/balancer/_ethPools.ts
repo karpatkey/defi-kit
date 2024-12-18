@@ -25,7 +25,7 @@ export default [
     id: "0x02ca8086498552c071451724d3a34caa3922b65a000200000000000000000613",
     name: "80ROOT-20WETH",
     type: "Weighted",
-    gauge: "0xd639e7fAe7a8d0233d416bfd5dA2ae4f917D2E77",
+    gauge: null,
     tokens: [
       {
         address: "0x8d2658E0F52dF7875A7b3e58FC12F82F5e34dd61",
@@ -245,7 +245,7 @@ export default [
     id: "0x0aaba3d6a05a606b7a794877dd0befda47474db00002000000000000000006d2",
     name: "B-KAI-WETH-WEIGHTED",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x80CD37A62A8A58C4Cbf64003410c5cCC4d01519f",
     tokens: [
       {
         address: "0x63e5dC7C071C1F18d44b69bc86f4c80F24851388",
@@ -321,7 +321,7 @@ export default [
     id: "0x127ecc2318d002664cc4515c9f2b22b09b6aea85000200000000000000000602",
     name: "ECLP-swETH-wstETH",
     type: "GyroE",
-    gauge: "0x17748Aa07A6a1Be2ACE8bCC546919C006B40De34",
+    gauge: null,
     tokens: [
       {
         address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
@@ -722,6 +722,25 @@ export default [
       {
         address: "0x68037790A0229e9Ce6EaA8A99ea92964106C4703",
         symbol: "PAR",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x2b6Af1B557c4f81A238a38f1C2DC51Cda0cEb45b",
+    id: "0x2b6af1b557c4f81a238a38f1c2dc51cda0ceb45b0002000000000000000006ec",
+    name: "LP-LNDX-ETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x08A1C30BBB26425c1031ee9E43FA0B9960742539",
+        symbol: "LNDX",
         id: "0x",
       },
       {
@@ -1971,25 +1990,6 @@ export default [
     ],
   },
   {
-    bpt: "0x6f4906c181e6aCb096908238c5ffD088cca6Ba9f",
-    id: "0x6f4906c181e6acb096908238c5ffd088cca6ba9f00020000000000000000053a",
-    name: "CPEPE",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
-        symbol: "PEPE",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x702605F43471183158938C1a3e5f5A359d7b31ba",
     id: "0x702605f43471183158938c1a3e5f5a359d7b31ba00020000000000000000009f",
     name: "B-80BAL-20WETH",
@@ -2004,30 +2004,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x70d5E3234F6329c1D5a26796dcf4e109d69A3488",
-    id: "0x70d5e3234f6329c1d5a26796dcf4e109d69a34880000000000000000000005e7",
-    name: "uniETH/wstETH/rETH",
-    type: "ComposableStable",
-    gauge: "0xe6281Fc01607366794597d7fA6b32931fF986969",
-    tokens: [
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
-        id: "0x",
-      },
-      {
-        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
-        symbol: "rETH",
-        id: "0x",
-      },
-      {
-        address: "0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4",
-        symbol: "uniETH",
         id: "0x",
       },
     ],
@@ -2104,25 +2080,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x76FCf0e8C7Ff37A47a799FA2cd4c13cDe0D981C9",
-    id: "0x76fcf0e8c7ff37a47a799fa2cd4c13cde0d981c90002000000000000000003d2",
-    name: "50OHM-50DAI",
-    type: "Weighted",
-    gauge: "0x107A2209883621aFe2968da31C03190e0B2782C2",
-    tokens: [
-      {
-        address: "0x64aa3364F17a4D01c6f1751Fd97C2BD3D7e7f1D5",
-        symbol: "OHM",
-        id: "0x",
-      },
-      {
-        address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-        symbol: "DAI",
         id: "0x",
       },
     ],
@@ -2280,25 +2237,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x7D98f308Db99FDD04BbF4217a4be8809F38fAa64",
-    id: "0x7d98f308db99fdd04bbf4217a4be8809f38faa6400020000000000000000059b",
-    name: "80wstETH/20GHO",
-    type: "Weighted",
-    gauge: "0x6EE63656BbF5BE3fdF9Be4982BF9466F6a921b83",
-    tokens: [
-      {
-        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
-        symbol: "GHO",
-        id: "0x",
-      },
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
         id: "0x",
       },
     ],
@@ -3350,25 +3288,6 @@ export default [
     ],
   },
   {
-    bpt: "0xb3b675a9A3CB0DF8F66Caf08549371BfB76A9867",
-    id: "0xb3b675a9a3cb0df8f66caf08549371bfb76a9867000200000000000000000611",
-    name: "ECLP-mevETH-wETH",
-    type: "GyroE",
-    gauge: "0x70754AB20c63cc65Ea12206CF28342723d731aC6",
-    tokens: [
-      {
-        address: "0x24Ae2dA0f361AA4BE46b48EB19C91e02c5e4f27E",
-        symbol: "mevETH",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xb460DAa847c45f1C4a41cb05BFB3b51c92e41B36",
     id: "0xb460daa847c45f1c4a41cb05bfb3b51c92e41b36000200000000000000000194",
     name: "20WBTC-80BADGER",
@@ -3550,25 +3469,6 @@ export default [
       {
         address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
         symbol: "weETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xBaeEC99c90E3420Ec6c1e7A769d2A856d2898e4D",
-    id: "0xbaeec99c90e3420ec6c1e7a769d2a856d2898e4d00020000000000000000008a",
-    name: "B-50VITA-50WETH",
-    type: "Weighted",
-    gauge: "0x777C45BD0a2AF1dA5fe4a532AD6B207D3CEd8b2d",
-    tokens: [
-      {
-        address: "0x81f8f0bb1cB2A06649E51913A151F0E7Ef6FA321",
-        symbol: "VITA",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
         id: "0x",
       },
     ],
@@ -4069,25 +3969,6 @@ export default [
     ],
   },
   {
-    bpt: "0xdCb5ED405a9b11250deF047AE8016008Fae7D69b",
-    id: "0xdcb5ed405a9b11250def047ae8016008fae7d69b0000000000000000000006d8",
-    name: "WETH-lpETH",
-    type: "ComposableStable",
-    gauge: "0xB7Bb16B58b04fE4f8d270430cE57d2A4753993de",
-    tokens: [
-      {
-        address: "0xa684EAf215ad323452e2B2bF6F817d4aa5C116ab",
-        symbol: "lpETH",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xdD59f89B5B07B7844d72996fC9d83D81acC82196",
     id: "0xdd59f89b5b07b7844d72996fc9d83d81acc8219600000000000000000000059e",
     name: "uniETH-WETH",
@@ -4121,25 +4002,6 @@ export default [
       {
         address: "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
         symbol: "COW",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xdEdb11A6a23263469567C2881A9b9F8629eE0041",
-    id: "0xdedb11a6a23263469567c2881a9b9f8629ee0041000000000000000000000669",
-    name: "svETH/wstETH",
-    type: "ComposableStable",
-    gauge: "0xD98ed0426D18B115d6388923803e33ad8aaF11F8",
-    tokens: [
-      {
-        address: "0x6733F0283711F225A447e759D859a70b0c0Fd2bC",
-        symbol: "svETH",
-        id: "0x",
-      },
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
         id: "0x",
       },
     ],
@@ -4421,25 +4283,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xEA8886a24b6e01Fba88A9e98d794e8D1F29eD863",
-    id: "0xea8886a24b6e01fba88a9e98d794e8d1f29ed863000200000000000000000010",
-    name: "B-75ZRX-25WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
-        symbol: "ZRX",
         id: "0x",
       },
     ],

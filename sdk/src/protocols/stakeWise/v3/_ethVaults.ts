@@ -114,6 +114,11 @@ export default [
       "Independent Ethereum validator utilizing Nethermind+Teku, uncensored MEV relays, owned hardware, and the smoothing pool. Support decentralization and spread risk by staking with me. Learn more: https://vincenttaglia.eth.limo",
   },
   {
+    id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
+    name: "BRAZILPRACIMA",
+    description: "Independent solo operator since genesis",
+  },
+  {
     id: "0x64f2907f92631619ed7ea510982835f9e1024767",
     name: "AutoStake ⚡️ 1% fee forever",
     description:
@@ -156,16 +161,16 @@ export default [
       "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community\n\nCentralised infrastructure is bad for both the network and your own ETH (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service!\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws — e.g. Most slashing events are due to institutions over-engineering their setups.\n\nAt Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
   },
   {
-    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
-    name: "Big Euler's e-Stake",
-    description:
-      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
-  },
-  {
     id: "0x30c13e93c170885e9969ae2e4ff5f020807e0d74",
     name: "Simply Staking: Premium",
     description:
       "Minimum Fee - Unrestricted Maximum MEV - Zero-Cloud - Private Datacentre - 24/7 Engineering Support - All included in Simply Staking's Premium Vault...\n\n\n- Fee: Competitive 3.75%.\n- MEV: Extensive list of MEV relays, free of restrictions, with the ultimate goal of using a global set of relays to maximise profit.\n- Private Data Centre Operation: Your ETH is securely managed in our privately operated data center in Malta, prioritising security and reliability, free from the dependencies of cloud services.",
+  },
+  {
+    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
+    name: "Big Euler's e-Stake",
+    description:
+      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
   },
   {
     id: "0x5fe23da0835ecf01f4faf9b07fdcfd603dfbd146",
@@ -192,20 +197,14 @@ export default [
       "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
-    id: "0x41adbf980d09e6e50afffe606e5c259dcec0af27",
-    name: "Luganodes - Stakekit",
-    description: null,
-  },
-  {
     id: "0xf124ef4e47eefa1d6b1cb5f835ef1669e9a29a7c",
-    name: "Orangefin Ventures",
+    name: "Deprecated: Orangefin Ventures",
     description:
       "Orangefin Ventures is one of the world's leading node operators with nearly $100M assets under delegation. Having almost a decade of experience in the cryptocurrency space, Orangefin Ventures operates some of the most technically sophisticated infrastructure that secures several blockchains and spans across public clouds and our own datacenters (including our own ASN and public IPv4 range). To learn more, visit https://www.orangefin.ventures!",
   },
   {
-    id: "0xa1e229db735f7aa3882bfd22fa6b89734225a3d1",
-    name: "Amamu.io",
-    description:
-      "Amamu is an independent, secure, and reliable staking provider founded in 2020 with the primary aim of accelerating decentralization throughout the blockchain landscape. ",
+    id: "0x41adbf980d09e6e50afffe606e5c259dcec0af27",
+    name: "Luganodes - Stakekit",
+    description: null,
   },
 ] as const
