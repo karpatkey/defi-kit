@@ -1,4 +1,5 @@
 import * as aura from "./aura"
+import * as balancer from "./balancer"
 import { annotateAll } from "./annotate"
 
 // group all strategies by chain
@@ -6,6 +7,7 @@ import { annotateAll } from "./annotate"
 export const eth = annotateAll(
   {
     aura: aura.eth,
+    balancer: balancer.eth,
   },
   "eth"
 )
@@ -13,6 +15,7 @@ export const eth = annotateAll(
 export const gno = annotateAll(
   {
     aura: aura.gno,
+    balancer: balancer.gno,
   },
   "gno"
 )
@@ -20,6 +23,7 @@ export const gno = annotateAll(
 export const arb1 = annotateAll(
   {
     aura: aura.arb1,
+    balancer: balancer.arb1,
   },
   "arb1"
 )
@@ -27,6 +31,7 @@ export const arb1 = annotateAll(
 export const oeth = annotateAll(
   {
     aura: aura.oeth,
+    balancer: balancer.oeth,
   },
   "oeth"
 )
@@ -34,6 +39,7 @@ export const oeth = annotateAll(
 export const base = annotateAll(
   {
     aura: aura.base,
+    balancer: balancer.base,
   },
   "base"
 )

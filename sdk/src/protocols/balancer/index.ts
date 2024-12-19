@@ -19,6 +19,18 @@ export const findPool = (pools: readonly Pool[], nameIdOrBpt: string) => {
   return pool
 }
 
+export const findPoolByGauge = (pools: readonly Pool[], gauge: string) => {
+  const gaugeLower = gauge.toLowerCase()
+  const pool = pools.find(
+    (pool) =>
+      pool.gauge?.toLowerCase() === gaugeLower
+  )
+  if (!pool) {
+    throw new NotFoundError(`Pool not found for gauge: ${gauge}`)
+  }
+  return pool
+}
+
 const filterPoolsByTokens = (
   sell: EthToken[] | undefined,
   buy: EthToken[] | undefined,

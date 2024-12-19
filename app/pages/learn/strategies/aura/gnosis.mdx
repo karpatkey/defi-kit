@@ -56,6 +56,7 @@ Withdraw funds from Aura and then from the Balancer pool withdrawing all assets 
 <Callout type="info">
   `TOKEN` below refers to the ERC-20 token address of the corresponding pool.
 </Callout>
+<Callout type="info">`PID` below refers to the Balancer pool ID.</Callout>
 
 #### `REWARDER · withdrawAndUnwrap`
 
@@ -78,7 +79,7 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
 
   | Parameter                   | Constraint                      |
   | :-------------------------- | :------------------------------ |
-  | `poolId`                    | equal to `TARGET_ID`            |
+  | `poolId`                    | equal to `PID`                  |
   | `sender`                    | equal to `AVATAR`               |
   | `recipient`                 | equal to `AVATAR`               |
   | `request.assets`            | -                               |
@@ -99,7 +100,7 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
   - [Balancer documentation](https://docs.balancer.fi/reference/joins-and-exits/pool-exits.html#userdata) for `userData` structure.  
 </Callout>
 
-## Strategy: `withdraw_sigle_token`
+## Strategy: `withdraw_single_token`
 
 **Parameters**
 
@@ -119,6 +120,7 @@ Withdraw funds from the Balancer pool withdrawing a single asset specified by th
 <Callout type="info">
   `TOKEN` below refers to the ERC-20 token address of the corresponding pool.
 </Callout>
+<Callout type="info">`PID` below refers to the Balancer pool ID.</Callout>
 
 #### `REWARDER · withdrawAndUnwrap`
 
@@ -141,7 +143,7 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
 
   | Parameter                   | Constraint                      |
   | :-------------------------- | :------------------------------ |
-  | `poolId`                    | equal to `TARGET_ID`            |
+  | `poolId`                    | equal to `PID`                  |
   | `sender`                    | equal to `AVATAR`               |
   | `recipient`                 | equal to `AVATAR`               |
   | `request.assets`            | -                               |
