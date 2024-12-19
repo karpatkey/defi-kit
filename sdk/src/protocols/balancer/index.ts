@@ -21,10 +21,7 @@ export const findPool = (pools: readonly Pool[], nameIdOrBpt: string) => {
 
 export const findPoolByGauge = (pools: readonly Pool[], gauge: string) => {
   const gaugeLower = gauge.toLowerCase()
-  const pool = pools.find(
-    (pool) =>
-      pool.gauge?.toLowerCase() === gaugeLower
-  )
+  const pool = pools.find((pool) => pool.gauge?.toLowerCase() === gaugeLower)
   if (!pool) {
     throw new NotFoundError(`Pool not found for gauge: ${gauge}`)
   }

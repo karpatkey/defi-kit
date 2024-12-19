@@ -12,16 +12,16 @@ export const eth = {
   }: {
     bpt: `0x${string}`
     exitTokenAddress: `0x${string}`
-  }) =>
+  }) => withdrawOptions(Chain.eth, bpt, ExitKind.single, exitTokenAddress),
+
+  unstake_withdraw_proportional: async ({ gauge }: { gauge: `0x${string}` }) =>
     withdrawOptions(
       Chain.eth,
-      bpt,
-      ExitKind.single,
-      exitTokenAddress
+      undefined,
+      ExitKind.proportional,
+      undefined,
+      gauge
     ),
-  
-  unstake_withdraw_proportional: async ({ gauge }: { gauge: `0x${string}` }) =>
-    withdrawOptions(Chain.eth, undefined, ExitKind.proportional, undefined, gauge),
 
   unstake_withdraw_single: async ({ gauge }: { gauge: `0x${string}` }) =>
     withdrawOptions(Chain.eth, undefined, ExitKind.single, undefined, gauge),
@@ -37,16 +37,16 @@ export const gno = {
   }: {
     bpt: `0x${string}`
     exitTokenAddress: `0x${string}`
-  }) =>
+  }) => withdrawOptions(Chain.gno, bpt, ExitKind.single, exitTokenAddress),
+
+  unstake_withdraw_proportional: async ({ gauge }: { gauge: `0x${string}` }) =>
     withdrawOptions(
       Chain.gno,
-      bpt,
-      ExitKind.single,
-      exitTokenAddress
+      undefined,
+      ExitKind.proportional,
+      undefined,
+      gauge
     ),
-  
-  unstake_withdraw_proportional: async ({ gauge }: { gauge: `0x${string}` }) =>
-    withdrawOptions(Chain.gno, undefined, ExitKind.proportional, undefined, gauge),
 
   unstake_withdraw_single: async ({ gauge }: { gauge: `0x${string}` }) =>
     withdrawOptions(Chain.gno, undefined, ExitKind.single, undefined, gauge),
@@ -62,16 +62,16 @@ export const arb1 = {
   }: {
     bpt: `0x${string}`
     exitTokenAddress: `0x${string}`
-  }) =>
-    withdrawOptions(
-      Chain.arb1,
-      bpt,
-      ExitKind.single,
-      exitTokenAddress
-    ),
+  }) => withdrawOptions(Chain.arb1, bpt, ExitKind.single, exitTokenAddress),
 
   unstake_withdraw_proportional: async ({ gauge }: { gauge: `0x${string}` }) =>
-    withdrawOptions(Chain.arb1, undefined, ExitKind.proportional, undefined, gauge),
+    withdrawOptions(
+      Chain.arb1,
+      undefined,
+      ExitKind.proportional,
+      undefined,
+      gauge
+    ),
 
   unstake_withdraw_single: async ({ gauge }: { gauge: `0x${string}` }) =>
     withdrawOptions(Chain.arb1, undefined, ExitKind.single, undefined, gauge),
@@ -87,16 +87,16 @@ export const oeth = {
   }: {
     bpt: `0x${string}`
     exitTokenAddress: `0x${string}`
-  }) =>
-    withdrawOptions(
-      Chain.oeth,
-      bpt,
-      ExitKind.single,
-      exitTokenAddress
-    ),
+  }) => withdrawOptions(Chain.oeth, bpt, ExitKind.single, exitTokenAddress),
 
   unstake_withdraw_proportional: async ({ gauge }: { gauge: `0x${string}` }) =>
-    withdrawOptions(Chain.oeth, undefined, ExitKind.proportional, undefined, gauge),
+    withdrawOptions(
+      Chain.oeth,
+      undefined,
+      ExitKind.proportional,
+      undefined,
+      gauge
+    ),
 
   unstake_withdraw_single: async ({ gauge }: { gauge: `0x${string}` }) =>
     withdrawOptions(Chain.oeth, undefined, ExitKind.single, undefined, gauge),
@@ -112,16 +112,16 @@ export const base = {
   }: {
     bpt: `0x${string}`
     exitTokenAddress: `0x${string}`
-  }) =>
+  }) => withdrawOptions(Chain.base, bpt, ExitKind.single, exitTokenAddress),
+
+  unstake_withdraw_proportional: async ({ gauge }: { gauge: `0x${string}` }) =>
     withdrawOptions(
       Chain.base,
-      bpt,
-      ExitKind.single,
-      exitTokenAddress
+      undefined,
+      ExitKind.proportional,
+      undefined,
+      gauge
     ),
-  
-  unstake_withdraw_proportional: async ({ gauge }: { gauge: `0x${string}` }) =>
-    withdrawOptions(Chain.base, undefined, ExitKind.proportional, undefined, gauge),
 
   unstake_withdraw_single: async ({ gauge }: { gauge: `0x${string}` }) =>
     withdrawOptions(Chain.base, undefined, ExitKind.single, undefined, gauge),
