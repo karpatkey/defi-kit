@@ -19,6 +19,15 @@ export const findPool = (pools: readonly Pool[], nameIdOrBpt: string) => {
   return pool
 }
 
+export const findPoolByGauge = (pools: readonly Pool[], gauge: string) => {
+  const gaugeLower = gauge.toLowerCase()
+  const pool = pools.find((pool) => pool.gauge?.toLowerCase() === gaugeLower)
+  if (!pool) {
+    throw new NotFoundError(`Pool not found for gauge: ${gauge}`)
+  }
+  return pool
+}
+
 const filterPoolsByTokens = (
   sell: EthToken[] | undefined,
   buy: EthToken[] | undefined,
@@ -56,6 +65,34 @@ const findToken = (pools: readonly Pool[], symbolOrAddress: string) => {
     throw new NotFoundError(`Token not found: ${symbolOrAddress}`)
   }
   return token
+}
+
+export const findTokenIndexInPool = (
+  pools: readonly Pool[],
+  bpt: string,
+  tokenAddress: string
+): number => {
+  const bptLower = bpt.toLowerCase()
+  const tokenAddressLower = tokenAddress.toLowerCase()
+
+  // Find the pool based on the BPT address
+  const pool = pools.find((pool) => pool.bpt.toLowerCase() === bptLower)
+  if (!pool) {
+    throw new NotFoundError(`Pool not found for BPT: ${bpt}`)
+  }
+
+  // Find the index of the token within the pool
+  const tokenIndex = pool.tokens.findIndex(
+    (token) => token.address.toLowerCase() === tokenAddressLower
+  )
+  if (tokenIndex === -1) {
+    throw new NotFoundError(
+      `Token with address ${tokenAddress} not found in pool: ${bpt}`
+    )
+  }
+
+  // Ensure the function always returns a number
+  return tokenIndex
 }
 
 export const eth = {
