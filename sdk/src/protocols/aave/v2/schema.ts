@@ -1,5 +1,5 @@
 import { z } from "zod"
-import ethTokens from "./_info"
+import ethTokens from "./_ethCoreInfo"
 import ethStakeTokens from "./stakeTokens"
 import ethDelegateTokens from "./delegateTokens"
 import { zx } from "../../../zx"

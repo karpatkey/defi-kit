@@ -1,4 +1,4 @@
-import tokens from "./_info"
+import tokens from "./_ethCoreInfo"
 import delegateTokens from "./delegateTokens"
 import stakeTokens from "./stakeTokens"
 

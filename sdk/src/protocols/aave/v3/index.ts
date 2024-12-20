@@ -1,9 +1,9 @@
 import { NotFoundError } from "../../../errors"
-import ethTokens from "./_ethInfo"
-import gnoTokens from "./_gnoInfo"
-import arb1Tokens from "./_arb1Info"
-import oethTokens from "./_oethInfo"
-import baseTokens from "./_baseInfo"
+import ethTokens from "./_ethCoreInfo"
+import gnoTokens from "./_gnoCoreInfo"
+import arb1Tokens from "./_arb1CoreInfo"
+import oethTokens from "./_oethCoreInfo"
+import baseTokens from "./_baseCoreInfo"
 import {
   EthToken,
   GnoToken,

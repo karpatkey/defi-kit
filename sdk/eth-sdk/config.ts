@@ -218,6 +218,7 @@ export const contracts = {
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
+      rewardPoolDepositWrapper: "0x6b02fEFd2F2e06f51E17b7d5b8B20D75fd6916be",
       rewarder: "0x40bF10900a55c69c9dADdc3dC52465e01AcEF4A4",
     },
     balancer: {
@@ -251,12 +252,16 @@ export const contracts = {
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
+      rewardPoolDepositWrapper: "0x51b6e0ac6D6435650748513C71db453F96749fe1",
       rewarder: "0xe350DFC963445F3B64a4229d019787491a58F8B9",
     },
     balancer: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       gauge: "0xA30992B40a0cb4B2Da081ddBd843f9CcE25c2fe3",
       bpt: "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2",
+      minter: "0x4fb47126Fa83A8734991E41B942Ac29A3266C968",
+      relayer: "0x015ACA20a1422F3c729086c17f15F10e0CfbC75A",
+      relayerLibrary: "0xA69E0Ccf150a29369D8Bbc0B3f510849dB7E8EEE",
     },
     compoundV3: {
       cUsdcV3: "0x2e44e174f7D53F0212823acC11C01A11d58c5bCB",
@@ -279,12 +284,16 @@ export const contracts = {
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
+      rewardPoolDepositWrapper: "0xa9952C914D86f896c53Bf17125c4104Cc058008E",
       rewarder: "0xcCAC11368BDD522fc4DD23F98897712391ab1E00",
     },
     balancer: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       gauge: "0x8D118063B521e0CB9947A934BE90f7e32d02b158",
       bpt: "0xC771c1a5905420DAEc317b154EB13e4198BA97D0",
+      minter: "0x0c5538098EBe88175078972F514C9e101D325D4F",
+      relayer: "0x7C3C773C878d2238a9b64d8CEE02377BF07ED06a",
+      relayerLibrary: "0x82416Ce6eA7dD4923d4A3ED70a79B4A432a382C4",
     },
     compoundV3: {
       cUsdcV3: "0xb125E6687d4313864e53df431d5425969c15Eb2F",

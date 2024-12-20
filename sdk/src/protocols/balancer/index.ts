@@ -1,6 +1,21 @@
-import { EthPool, EthToken, GnoToken, GnoPool, Pool } from "./types"
+import { 
+  EthPool,
+  EthToken,
+  GnoToken,
+  GnoPool,
+  Arb1Pool,
+  Arb1Token,
+  OethPool,
+  OethToken,
+  BasePool,
+  BaseToken,
+  Pool,
+} from "./types"
 import ethPools from "./_ethPools"
 import gnoPools from "./_gnoPools"
+import arb1Pools from "./_arb1Pools"
+import oethPools from "./_oethPools"
+import basePools from "./_basePools"
 import { NotFoundError } from "../../errors"
 import { deposit, stake, lock } from "./actions"
 import { Chain } from "../../types"
@@ -164,3 +179,76 @@ export const gno = {
       stake(Chain.gno, findPool(gnoPools, target))
     ),
 }
+
+export const arb1 = {
+  deposit: async ({
+    targets,
+    tokens,
+  }: {
+    // "targets" is a mandatory parameter
+    targets: (Arb1Pool["name"] | Arb1Pool["bpt"] | Arb1Pool["id"])[]
+    tokens?: (Arb1Token["address"] | Arb1Token["symbol"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      deposit(
+        findPool(arb1Pools, target),
+        tokens?.map((addressOrSymbol) => findToken(arb1Pools, addressOrSymbol))
+      )
+    )
+  },
+  stake: async (options: {
+    targets: (Arb1Pool["name"] | Arb1Pool["bpt"] | Arb1Pool["id"])[]
+  }) =>
+    options.targets.flatMap((target) =>
+      stake(Chain.arb1, findPool(arb1Pools, target))
+    ),
+}
+
+export const oeth = {
+  deposit: async ({
+    targets,
+    tokens,
+  }: {
+    // "targets" is a mandatory parameter
+    targets: (OethPool["name"] | OethPool["bpt"] | OethPool["id"])[]
+    tokens?: (OethToken["address"] | OethToken["symbol"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      deposit(
+        findPool(oethPools, target),
+        tokens?.map((addressOrSymbol) => findToken(oethPools, addressOrSymbol))
+      )
+    )
+  },
+  stake: async (options: {
+    targets: (OethPool["name"] | OethPool["bpt"] | OethPool["id"])[]
+  }) =>
+    options.targets.flatMap((target) =>
+      stake(Chain.oeth, findPool(oethPools, target))
+    ),
+}
+
+export const base = {
+  deposit: async ({
+    targets,
+    tokens,
+  }: {
+    // "targets" is a mandatory parameter
+    targets: (BasePool["name"] | BasePool["bpt"] | BasePool["id"])[]
+    tokens?: (BaseToken["address"] | BaseToken["symbol"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      deposit(
+        findPool(basePools, target),
+        tokens?.map((addressOrSymbol) => findToken(basePools, addressOrSymbol))
+      )
+    )
+  },
+  stake: async (options: {
+    targets: (BasePool["name"] | BasePool["bpt"] | BasePool["id"])[]
+  }) =>
+    options.targets.flatMap((target) =>
+      stake(Chain.base, findPool(basePools, target))
+    ),
+}
+

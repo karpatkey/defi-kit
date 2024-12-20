@@ -5,6 +5,9 @@ import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 import balancerEthPools from "../balancer/_ethPools"
 import balancerGnoPools from "../balancer/_gnoPools"
+import balancerArb1Pools from "../balancer/_arb1Pools"
+import balancerOethPools from "../balancer/_oethPools"
+import balancerBasePools from "../balancer/_basePools"
 import { findPool as findBalancerPool } from "../balancer/index"
 import { Chain } from "../../types"
 
@@ -12,7 +15,7 @@ export const zeroAddress = "0x0000000000000000000000000000000000000000"
 export const aura = "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF"
 
 export const deposit = (
-  chain: Chain.eth | Chain.gno,
+  chain: Chain,
   pool: Pool,
   tokens: readonly Token[] = pool.tokens
 ) => {
@@ -29,7 +32,6 @@ export const deposit = (
       rewardPoolDepositWrapper = contracts.mainnet.aura
         .rewardPoolDepositWrapper as `0x${string}`
       balancerPools = balancerEthPools
-
       break
 
     case Chain.gno:
@@ -37,8 +39,28 @@ export const deposit = (
       rewardPoolDepositWrapper = contracts.gnosis.aura
         .rewardPoolDepositWrapper as `0x${string}`
       balancerPools = balancerGnoPools
-
       break
+    
+    case Chain.arb1:
+    booster = contracts.arbitrumOne.aura.booster as `0x${string}`
+    rewardPoolDepositWrapper = contracts.arbitrumOne.aura
+      .rewardPoolDepositWrapper as `0x${string}`
+    balancerPools = balancerArb1Pools
+    break
+
+    case Chain.oeth:
+    booster = contracts.optimism.aura.booster as `0x${string}`
+    rewardPoolDepositWrapper = contracts.optimism.aura
+      .rewardPoolDepositWrapper as `0x${string}`
+    balancerPools = balancerOethPools
+    break
+
+    case Chain.base:
+    booster = contracts.base.aura.booster as `0x${string}`
+    rewardPoolDepositWrapper = contracts.base.aura
+      .rewardPoolDepositWrapper as `0x${string}`
+    balancerPools = balancerBasePools
+    break
   }
 
   const permissions: Permission[] = [

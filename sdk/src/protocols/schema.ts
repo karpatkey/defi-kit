@@ -50,13 +50,19 @@ export const gno = {
 
 export const arb1 = {
   aave_v3: aaveV3.arb1,
+  aura: aura.arb1,
+  balancer: balancer.arb1,
   cowswap: cowSwap.arb1,
 } satisfies ProtocolSchemas
 
 export const oeth = {
   aave_v3: aaveV3.oeth,
+  aura: aura.oeth,
+  balancer: balancer.oeth,
 } satisfies ProtocolSchemas
 
 export const base = {
   aave_v3: aaveV3.base,
+  aura: aura.base,
+  balancer: balancer.base,
 } satisfies ProtocolSchemas

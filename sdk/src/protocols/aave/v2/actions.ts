@@ -82,7 +82,6 @@ export const borrowToken = (token: Token) => {
       undefined,
       c.avatar
     ),
-    allow.mainnet.aaveV2.lendingPoolV2.swapBorrowRateMode(token.token),
   ]
 }
 
@@ -103,9 +102,6 @@ export const borrowEther = () => {
       undefined,
       c.avatar,
       { send: true }
-    ),
-    allow.mainnet.aaveV2.lendingPoolV2.swapBorrowRateMode(
-      contracts.mainnet.weth
     ),
   ]
 }
