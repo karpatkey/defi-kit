@@ -80,6 +80,10 @@ export const eth = {
             undefined,
             undefined
           ),
+          allow.mainnet.kelp.LRTWithdrawalManager.completeWithdrawal(
+            "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+            undefined
+          ),
         ]
       }
 
