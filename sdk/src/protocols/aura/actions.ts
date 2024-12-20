@@ -40,27 +40,27 @@ export const deposit = (
         .rewardPoolDepositWrapper as `0x${string}`
       balancerPools = balancerGnoPools
       break
-    
+
     case Chain.arb1:
-    booster = contracts.arbitrumOne.aura.booster as `0x${string}`
-    rewardPoolDepositWrapper = contracts.arbitrumOne.aura
-      .rewardPoolDepositWrapper as `0x${string}`
-    balancerPools = balancerArb1Pools
-    break
+      booster = contracts.arbitrumOne.aura.booster as `0x${string}`
+      rewardPoolDepositWrapper = contracts.arbitrumOne.aura
+        .rewardPoolDepositWrapper as `0x${string}`
+      balancerPools = balancerArb1Pools
+      break
 
     case Chain.oeth:
-    booster = contracts.optimism.aura.booster as `0x${string}`
-    rewardPoolDepositWrapper = contracts.optimism.aura
-      .rewardPoolDepositWrapper as `0x${string}`
-    balancerPools = balancerOethPools
-    break
+      booster = contracts.optimism.aura.booster as `0x${string}`
+      rewardPoolDepositWrapper = contracts.optimism.aura
+        .rewardPoolDepositWrapper as `0x${string}`
+      balancerPools = balancerOethPools
+      break
 
     case Chain.base:
-    booster = contracts.base.aura.booster as `0x${string}`
-    rewardPoolDepositWrapper = contracts.base.aura
-      .rewardPoolDepositWrapper as `0x${string}`
-    balancerPools = balancerBasePools
-    break
+      booster = contracts.base.aura.booster as `0x${string}`
+      rewardPoolDepositWrapper = contracts.base.aura
+        .rewardPoolDepositWrapper as `0x${string}`
+      balancerPools = balancerBasePools
+      break
   }
 
   const permissions: Permission[] = [

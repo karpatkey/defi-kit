@@ -1,4 +1,4 @@
-import { 
+import {
   EthPool,
   EthToken,
   GnoToken,
@@ -251,4 +251,3 @@ export const base = {
       stake(Chain.base, findPool(basePools, target))
     ),
 }
-

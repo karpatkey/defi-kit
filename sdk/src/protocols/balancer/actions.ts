@@ -61,12 +61,12 @@ export const stake = (chain: Chain, pool: Pool) => {
       minter = contracts.arbitrumOne.balancer.minter as `0x${string}`
       relayer = contracts.arbitrumOne.balancer.relayer as `0x${string}`
       break
-    
+
     case Chain.oeth:
       minter = contracts.optimism.balancer.minter as `0x${string}`
       relayer = contracts.optimism.balancer.relayer as `0x${string}`
       break
-    
+
     case Chain.base:
       minter = contracts.base.balancer.minter as `0x${string}`
       relayer = contracts.base.balancer.relayer as `0x${string}`

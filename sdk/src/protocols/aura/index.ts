@@ -1,4 +1,4 @@
-import { 
+import {
   EthPool,
   EthToken,
   StakeToken,
