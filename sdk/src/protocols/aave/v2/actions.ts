@@ -18,23 +18,23 @@ export const depositToken = (token: Token) => {
     permissions.push(
       ...allowErc20Approve(
         [token.token],
-        [contracts.mainnet.aaveV2.lendingPoolV2]
+        [contracts.mainnet.aaveV2.poolV2]
       )
     )
   }
 
   permissions.push(
-    allow.mainnet.aaveV2.lendingPoolV2.deposit(
+    allow.mainnet.aaveV2.poolV2.deposit(
       token.token,
       undefined,
       c.avatar
     ),
-    allow.mainnet.aaveV2.lendingPoolV2.withdraw(
+    allow.mainnet.aaveV2.poolV2.withdraw(
       token.token,
       undefined,
       c.avatar
     ),
-    allow.mainnet.aaveV2.lendingPoolV2.setUserUseReserveAsCollateral(
+    allow.mainnet.aaveV2.poolV2.setUserUseReserveAsCollateral(
       token.token
     )
   )
@@ -44,7 +44,7 @@ export const depositToken = (token: Token) => {
 
 export const depositEther = () => [
   allow.mainnet.aaveV2.wrappedTokenGatewayV2.depositETH(
-    contracts.mainnet.aaveV2.lendingPoolV2,
+    contracts.mainnet.aaveV2.poolV2,
     c.avatar,
     undefined,
     { send: true }
@@ -54,11 +54,11 @@ export const depositEther = () => [
     [contracts.mainnet.aaveV2.wrappedTokenGatewayV2]
   ),
   allow.mainnet.aaveV2.wrappedTokenGatewayV2.withdrawETH(
-    contracts.mainnet.aaveV2.lendingPoolV2,
+    contracts.mainnet.aaveV2.poolV2,
     undefined,
     c.avatar
   ),
-  allow.mainnet.aaveV2.lendingPoolV2.setUserUseReserveAsCollateral(
+  allow.mainnet.aaveV2.poolV2.setUserUseReserveAsCollateral(
     contracts.mainnet.weth
   ),
 ]
@@ -67,16 +67,16 @@ export const borrowToken = (token: Token) => {
   return [
     ...allowErc20Approve(
       [token.token],
-      [contracts.mainnet.aaveV2.lendingPoolV2]
+      [contracts.mainnet.aaveV2.poolV2]
     ),
-    allow.mainnet.aaveV2.lendingPoolV2.borrow(
+    allow.mainnet.aaveV2.poolV2.borrow(
       token.token,
       undefined,
       undefined,
       undefined,
       c.avatar
     ),
-    allow.mainnet.aaveV2.lendingPoolV2.repay(
+    allow.mainnet.aaveV2.poolV2.repay(
       token.token,
       undefined,
       undefined,
@@ -94,10 +94,10 @@ export const borrowEther = () => {
       contracts.mainnet.aaveV2.wrappedTokenGatewayV2
     ),
     allow.mainnet.aaveV2.wrappedTokenGatewayV2.borrowETH(
-      contracts.mainnet.aaveV2.lendingPoolV2
+      contracts.mainnet.aaveV2.poolV2
     ),
     allow.mainnet.aaveV2.wrappedTokenGatewayV2.repayETH(
-      contracts.mainnet.aaveV2.lendingPoolV2,
+      contracts.mainnet.aaveV2.poolV2,
       undefined,
       undefined,
       c.avatar,

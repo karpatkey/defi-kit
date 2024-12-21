@@ -12,7 +12,7 @@ export const _getAllAddresses = (chain: Chain) => {
         spNativeToken: contracts.mainnet.spark.spWeth as `0x${string}`,
         wrappedTokenGatewayV3: contracts.mainnet.spark
           .wrappedTokenGatewayV3 as `0x${string}`,
-        lendingPoolV3: contracts.mainnet.spark.lendingPoolV3 as `0x${string}`,
+        poolV3: contracts.mainnet.spark.poolV3 as `0x${string}`,
         wrappedNativeToken: contracts.mainnet.weth as `0x${string}`,
         variableDebtWrappedNativeToken: contracts.mainnet.spark
           .variableDebtWeth as `0x${string}`,
@@ -27,7 +27,7 @@ export const _getAllAddresses = (chain: Chain) => {
         spNativeToken: contracts.gnosis.spark.spWxdai as `0x${string}`,
         wrappedTokenGatewayV3: contracts.gnosis.spark
           .wrappedTokenGatewayV3 as `0x${string}`,
-        lendingPoolV3: contracts.gnosis.spark.lendingPoolV3 as `0x${string}`,
+        poolV3: contracts.gnosis.spark.poolV3 as `0x${string}`,
         wrappedNativeToken: contracts.gnosis.wxdai as `0x${string}`,
         variableDebtWrappedNativeToken: contracts.gnosis.spark
           .variableDebtWxdai as `0x${string}`,
@@ -104,31 +104,31 @@ export const depositUSDS = (): Permission[] => {
 }
 
 export const depositToken = (chain: Chain, token: Token) => {
-  const { lendingPoolV3, rewardsController } = _getAllAddresses(chain)
+  const { poolV3, rewardsController } = _getAllAddresses(chain)
 
   return [
-    ...allowErc20Approve([token.token], [lendingPoolV3]),
+    ...allowErc20Approve([token.token], [poolV3]),
     {
-      ...allow.mainnet.spark.lendingPoolV3.supply(
+      ...allow.mainnet.spark.poolV3.supply(
         token.token,
         undefined,
         c.avatar
       ),
-      targetAddress: lendingPoolV3,
+      targetAddress: poolV3,
     },
     {
-      ...allow.mainnet.spark.lendingPoolV3.withdraw(
+      ...allow.mainnet.spark.poolV3.withdraw(
         token.token,
         undefined,
         c.avatar
       ),
-      targetAddress: lendingPoolV3,
+      targetAddress: poolV3,
     },
     {
-      ...allow.mainnet.spark.lendingPoolV3.setUserUseReserveAsCollateral(
+      ...allow.mainnet.spark.poolV3.setUserUseReserveAsCollateral(
         token.token
       ),
-      targetAddress: lendingPoolV3,
+      targetAddress: poolV3,
     },
     {
       ...allow.mainnet.spark.rewardsController.claimRewards(
@@ -152,7 +152,7 @@ export const depositEther = (chain: Chain) => {
   const {
     spNativeToken,
     wrappedTokenGatewayV3,
-    lendingPoolV3,
+    poolV3,
     wrappedNativeToken,
     rewardsController,
   } = _getAllAddresses(chain)
@@ -161,7 +161,7 @@ export const depositEther = (chain: Chain) => {
     ...allowErc20Approve([spNativeToken], [wrappedTokenGatewayV3]),
     {
       ...allow.mainnet.spark.wrappedTokenGatewayV3.depositETH(
-        lendingPoolV3,
+        poolV3,
         c.avatar,
         undefined,
         { send: true }
@@ -170,17 +170,17 @@ export const depositEther = (chain: Chain) => {
     },
     {
       ...allow.mainnet.spark.wrappedTokenGatewayV3.withdrawETH(
-        lendingPoolV3,
+        poolV3,
         undefined,
         c.avatar
       ),
       targetAddress: wrappedTokenGatewayV3,
     },
     {
-      ...allow.mainnet.spark.lendingPoolV3.setUserUseReserveAsCollateral(
+      ...allow.mainnet.spark.poolV3.setUserUseReserveAsCollateral(
         wrappedNativeToken
       ),
-      targetAddress: lendingPoolV3,
+      targetAddress: poolV3,
     },
     {
       ...allow.mainnet.spark.rewardsController.claimRewards(
@@ -201,38 +201,38 @@ export const depositEther = (chain: Chain) => {
 }
 
 export const borrowToken = (chain: Chain, token: Token) => {
-  const { lendingPoolV3 } = _getAllAddresses(chain)
+  const { poolV3 } = _getAllAddresses(chain)
 
   return [
-    ...allowErc20Approve([token.token], [lendingPoolV3]),
+    ...allowErc20Approve([token.token], [poolV3]),
     {
-      ...allow.mainnet.spark.lendingPoolV3.borrow(
+      ...allow.mainnet.spark.poolV3.borrow(
         token.token,
         undefined,
         undefined,
         undefined,
         c.avatar
       ),
-      targetAddress: lendingPoolV3,
+      targetAddress: poolV3,
     },
     {
-      ...allow.mainnet.spark.lendingPoolV3.repay(
+      ...allow.mainnet.spark.poolV3.repay(
         token.token,
         undefined,
         undefined,
         c.avatar
       ),
-      targetAddress: lendingPoolV3,
+      targetAddress: poolV3,
     },
     // Spark has only made available the borrow action with interestRateModel = 2 (Variable Debt)
-    // allow.mainnet.spark.lendingPoolV3.swapBorrowRateMode(token.token),
+    // allow.mainnet.spark.poolV3.swapBorrowRateMode(token.token),
   ]
 }
 
 export const borrowEther = (chain: Chain) => {
   const {
     wrappedTokenGatewayV3,
-    lendingPoolV3,
+    poolV3,
     variableDebtWrappedNativeToken,
     stableDebtWrappedNativeToken,
   } = _getAllAddresses(chain)
@@ -257,12 +257,12 @@ export const borrowEther = (chain: Chain) => {
         ]
       : []),
     {
-      ...allow.mainnet.spark.wrappedTokenGatewayV3.borrowETH(lendingPoolV3),
+      ...allow.mainnet.spark.wrappedTokenGatewayV3.borrowETH(poolV3),
       targetAddress: wrappedTokenGatewayV3,
     },
     {
       ...allow.mainnet.spark.wrappedTokenGatewayV3.repayETH(
-        lendingPoolV3,
+        poolV3,
         undefined,
         undefined,
         c.avatar,
@@ -271,6 +271,6 @@ export const borrowEther = (chain: Chain) => {
       targetAddress: wrappedTokenGatewayV3,
     },
     // Spark has only made available the borrow action with interestRateModel = 2 (Variable Debt)
-    // allow.mainnet.spark.lendingPoolV3.swapBorrowRateMode(WETH),
+    // allow.mainnet.spark.poolV3.swapBorrowRateMode(WETH),
   ]
 }

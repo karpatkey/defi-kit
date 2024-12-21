@@ -1,5 +1,5 @@
 import pools from "./_info"
-import stakeTokens from "./stakeTokens"
+import stakeTokens from "./_stakeTokens"
 
 export type Pool = (typeof pools)[number]
 

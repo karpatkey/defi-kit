@@ -17,11 +17,11 @@ const zArb1Bpt = z.enum(arb1Bpts as [string, string, ...string[]])
 const zOethBpt = z.enum(oethBpts as [string, string, ...string[]])
 const zBaseBpt = z.enum(baseBpts as [string, string, ...string[]])
 
-const ethGauges = [...new Set(ethPools.map((pool) => pool.gauge))]
-const gnoGauges = [...new Set(gnoPools.map((pool) => pool.gauge))]
-const arb1Gauges = [...new Set(arb1Pools.map((pool) => pool.gauge))]
-const oethGauges = [...new Set(oethPools.map((pool) => pool.gauge))]
-const baseGauges = [...new Set(basePools.map((pool) => pool.gauge))]
+const ethGauges = [...new Set(ethPools.map((pool) => pool.gauge).filter((gauge) => gauge != null))]
+const gnoGauges = [...new Set(gnoPools.map((pool) => pool.gauge).filter((gauge) => gauge != null))]
+const arb1Gauges = [...new Set(arb1Pools.map((pool) => pool.gauge).filter((gauge) => gauge != null))]
+const oethGauges = [...new Set(oethPools.map((pool) => pool.gauge).filter((gauge) => gauge != null))]
+const baseGauges = [...new Set(basePools.map((pool) => pool.gauge).filter((gauge) => gauge != null))]
 
 const zEthGauge = z.enum(ethGauges as [string, string, ...string[]])
 const zGnoGauge = z.enum(gnoGauges as [string, string, ...string[]])
@@ -34,7 +34,7 @@ export const eth = {
     bpt: zEthBpt,
   }),
 
-  withdraw_single_token: z.object({
+  withdraw_single: z.object({
     bpt: zEthBpt,
   }),
 
@@ -52,7 +52,7 @@ export const gno = {
     bpt: zGnoBpt,
   }),
 
-  withdraw_single_token: z.object({
+  withdraw_single: z.object({
     bpt: zGnoBpt,
   }),
 
@@ -70,7 +70,7 @@ export const arb1 = {
     bpt: zArb1Bpt,
   }),
 
-  withdraw_single_token: z.object({
+  withdraw_single: z.object({
     bpt: zArb1Bpt,
   }),
 
@@ -88,7 +88,7 @@ export const oeth = {
     bpt: zOethBpt,
   }),
 
-  withdraw_single_token: z.object({
+  withdraw_single: z.object({
     bpt: zOethBpt,
   }),
 
@@ -106,7 +106,7 @@ export const base = {
     bpt: zBaseBpt,
   }),
 
-  withdraw_single_token: z.object({
+  withdraw_single: z.object({
     bpt: zBaseBpt,
   }),
 

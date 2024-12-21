@@ -4,7 +4,7 @@ export const contracts = {
   mainnet: {
     aaveV2: {
       protocolDataProviderV2: "0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d",
-      lendingPoolV2: "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9",
+      poolV2: "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9",
       wrappedTokenGatewayV2: "0xEFFC18fC3b7eb8E676dac549E0c693ad50D1Ce31",
       aWeth: "0x030bA81f1c18d280636F32af80b9AAd02Cf0854e",
       variableDebtWeth: "0xF63B34710400CAd3e044cFfDcAb00a0f32E33eCf",
@@ -18,13 +18,17 @@ export const contracts = {
       stkGho: "0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d",
     },
     aaveV3: {
-      protocolDataProviderV3: "0x41393e5e337606dc3821075Af65AeE84D7688CBD",
-      lendingPoolV3: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
-      wrappedTokenGatewayV3: "0xA434D495249abE33E031Fe71a969B81f3c07950D",
+      protocolDataProviderCoreV3: "0x41393e5e337606dc3821075Af65AeE84D7688CBD",
+      poolCoreV3: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
+      wrappedTokenGatewayCoreV3: "0xA434D495249abE33E031Fe71a969B81f3c07950D",
       aEthWeth: "0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8",
       variableDebtWeth: "0xeA51d7853EEFb32b6ee06b1C12E6dcCA88Be0fFE",
-      lendingPoolLidoV3: "0x4e033931ad43597d96D6bcc25c280717730B58B1",
-      wrappedTokenGatewayLidoV3: "0x0B8C700917a6991FEa7198dDFC80bc8962b5055D",
+      poolPrimeV3: "0x4e033931ad43597d96D6bcc25c280717730B58B1",
+      wrappedTokenGatewayPrimeV3: "0x0B8C700917a6991FEa7198dDFC80bc8962b5055D",
+      variableDebtEthLidoWeth: "0x91b7d78BF92db564221f6B5AeE744D1727d1Dd1e",
+      aEthLidoWeth: "0xfA1fDbBD71B0aA16162D76914d69cD8CB3Ef92da",
+      poolEtherFiV3: "0x0AA97c284e98396202b6A04024F5E2c65026F3c0",
+      wrappedTokenGatewayEtherFiV3: "0xAB911dFB2bB9e264EE836F30D3367618f8Aef965",
       meritDistributor: "0x3Ef3D8bA38EBe18DB133cEc108f4D14CE00Dd9Ae",
     },
     ankr: {
@@ -113,8 +117,8 @@ export const contracts = {
       swapRouter: "0x16D5A408e807db8eF7c578279BEeEe6b228f1c1C",
     },
     spark: {
-      dataProvider: "0xFc21d6d146E6086B8359705C8b28512a983db0cb",
-      lendingPoolV3: "0xC13e21B648A5Ee794902342038FF3aDAB66BE987",
+      protocolDataProviderV3: "0xFc21d6d146E6086B8359705C8b28512a983db0cb",
+      poolV3: "0xC13e21B648A5Ee794902342038FF3aDAB66BE987",
       wrappedTokenGatewayV3: "0xBD7D6a9ad7865463DE44B05F04559f65e3B11704",
       variableDebtWeth: "0x2e7576042566f8D6990e07A1B61Ad1efd86Ae70d",
       stableDebtWeth: "0x3c6b93D38ffA15ea995D1BC950d5D0Fa6b22bD05",
@@ -162,8 +166,7 @@ export const contracts = {
   },
   gnosis: {
     aaveV3: {
-      dataProvider: "0x57038C3e3Fe0a170BB72DE2fD56E98e4d1a69717",
-      lendingPoolV3: "0xb50201558B00496A145fE76f7424749556E326D8",
+      poolV3: "0xb50201558B00496A145fE76f7424749556E326D8",
       wrappedTokenGatewayV3: "0x90127A46207e97e4205db5CCC1Ec9D6D43633FD4",
       aGnoWXDAI: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
       variableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
@@ -188,7 +191,7 @@ export const contracts = {
     },
     spark: {
       sDai: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
-      lendingPoolV3: "0x2Dae5307c5E3FD1CF5A72Cb6F698f915860607e0",
+      poolV3: "0x2Dae5307c5E3FD1CF5A72Cb6F698f915860607e0",
       wrappedTokenGatewayV3: "0xBD7D6a9ad7865463DE44B05F04559f65e3B11704",
       spWxdai: "0xC9Fe2D32E96Bb364c7d29f3663ed3b27E30767bB",
       variableDebtWxdai: "0x868ADfDf12A86422524EaB6978beAE08A0008F37",
@@ -210,8 +213,7 @@ export const contracts = {
   },
   arbitrumOne: {
     aaveV3: {
-      dataProvider: "0x7F23D86Ee20D869112572136221e173428DD740B",
-      lendingPoolV3: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
+      poolV3: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
       wrappedTokenGatewayV3: "0x5760E34c4003752329bC77790B1De44C2799F8C3",
       aArbWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
@@ -245,7 +247,7 @@ export const contracts = {
   },
   optimism: {
     aaveV3: {
-      lendingPoolV3: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
+      poolV3: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
       wrappedTokenGatewayV3: "0x60eE8b61a13c67d0191c851BEC8F0bc850160710",
       aOptWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
@@ -277,7 +279,7 @@ export const contracts = {
   },
   base: {
     aaveV3: {
-      lendingPoolV3: "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5",
+      poolV3: "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5",
       wrappedTokenGatewayV3: "0x729b3EA8C005AbC58c9150fb57Ec161296F06766",
       aBasWeth: "0xD4a0e0b9149BCee3C920d2E00b5dE09138fd8bb7",
       variableDebtWeth: "0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E",

@@ -3,7 +3,7 @@ import gnoPools from "./_gnoPools"
 import arb1Pools from "./_arb1Pools"
 import oethPools from "./_oethPools"
 import basePools from "./_basePools"
-import stakeTokens from "./stakeTokens"
+import stakeTokens from "./_stakeTokens"
 
 export type EthPool = (typeof ethPools)[number]
 export type GnoPool = (typeof gnoPools)[number]

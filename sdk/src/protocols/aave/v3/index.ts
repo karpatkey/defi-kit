@@ -1,11 +1,15 @@
 import { NotFoundError } from "../../../errors"
-import ethTokens from "./_ethCoreInfo"
+import ethCoreTokens from "./_ethCoreInfo"
+import ethPrimeTokens from "./_ethPrimeInfo"
+import ethEtherFiTokens from "./_ethEtherFiInfo"
+import ethMarkets from "./_ethMarketInfo"
 import gnoTokens from "./_gnoCoreInfo"
 import arb1Tokens from "./_arb1CoreInfo"
 import oethTokens from "./_oethCoreInfo"
 import baseTokens from "./_baseCoreInfo"
 import {
   EthToken,
+  EthMarket,
   GnoToken,
   Arb1Token,
   OethToken,
@@ -34,28 +38,68 @@ const findToken = (
   return token
 }
 
+
+const findMarket = (nameOrPoolAddress: string) => {
+  const nameOrPoolAddressLower = nameOrPoolAddress.toLowerCase()
+
+  const market = ethMarkets.find(
+    (market) =>
+      market.name.toLowerCase() === nameOrPoolAddressLower ||
+      market.poolAddress.toLowerCase() === nameOrPoolAddressLower
+  )
+
+  if (!market) {
+    throw new NotFoundError(`Market not found: ${nameOrPoolAddress}`)
+  }
+
+  return market
+}
+
+const getEthMarketTokens = (marketName: string): readonly EthToken[] => {
+  switch (marketName) {
+    case "Core":
+      return ethCoreTokens
+    case "Prime":
+      return ethPrimeTokens
+    case "EtherFi":
+      return ethEtherFiTokens
+    default:
+      throw new NotFoundError(`Unsupported Ethereum market: ${marketName}`)
+  }
+}
+
 export const eth = {
   deposit: async ({
+    market,
     targets,
   }: {
+    market: (EthMarket["name"] | EthMarket["poolAddress"])
     targets: ("ETH" | EthToken["symbol"] | EthToken["token"])[]
   }) => {
+    const selectedMarket = findMarket(market)
+    const tokens = getEthMarketTokens(selectedMarket.name)
+
     return targets.flatMap((target) =>
       target === "ETH"
-        ? depositEther(Chain.eth)
-        : depositToken(Chain.eth, findToken(ethTokens, target))
+        ? depositEther(Chain.eth, market)
+        : depositToken(Chain.eth, findToken(tokens, target), market)
     )
   },
 
   borrow: async ({
+    market,
     targets,
   }: {
+    market: EthMarket["name"] | EthMarket["poolAddress"]
     targets: ("ETH" | EthToken["symbol"] | EthToken["token"])[]
   }) => {
+    const selectedMarket = findMarket(market)
+    const tokens = getEthMarketTokens(selectedMarket.name)
+
     return targets.flatMap((target) =>
       target === "ETH"
         ? borrowEther(Chain.eth)
-        : borrowToken(Chain.eth, findToken(ethTokens, target))
+        : borrowToken(Chain.eth, findToken(tokens, target))
     )
   },
 

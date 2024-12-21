@@ -16,7 +16,7 @@ describe("aaveV3", () => {
     it("only allows depositing ETH on behalf of avatar", async () => {
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.depositETH(
-          contracts.arbitrumOne.aaveV3.lendingPoolV3,
+          contracts.arbitrumOne.aaveV3.poolV3,
           avatar.address,
           0,
           { value: parseEther("1") }
@@ -25,7 +25,7 @@ describe("aaveV3", () => {
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.depositETH(
-          contracts.arbitrumOne.aaveV3.lendingPoolV3,
+          contracts.arbitrumOne.aaveV3.poolV3,
           member.address,
           0,
           { value: parseEther("1") }
@@ -43,7 +43,7 @@ describe("aaveV3", () => {
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.withdrawETH(
-          contracts.arbitrumOne.aaveV3.lendingPoolV3,
+          contracts.arbitrumOne.aaveV3.poolV3,
           parseEther("1"),
           avatar.address
         )
@@ -51,7 +51,7 @@ describe("aaveV3", () => {
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.withdrawETH(
-          contracts.arbitrumOne.aaveV3.lendingPoolV3,
+          contracts.arbitrumOne.aaveV3.poolV3,
           parseEther("1"),
           member.address
         )
@@ -62,13 +62,13 @@ describe("aaveV3", () => {
     it("only allows depositing WETH on behalf of avatar", async () => {
       await expect(
         kit.asMember.weth.approve(
-          contracts.arbitrumOne.aaveV3.lendingPoolV3,
+          contracts.arbitrumOne.aaveV3.poolV3,
           parseEther("1")
         )
       ).toBeAllowed()
 
       await expect(
-        kit.asMember.aaveV3.lendingPoolV3.supply(
+        kit.asMember.aaveV3.poolV3.supply(
           contracts.arbitrumOne.weth,
           parseEther("1"),
           avatar.address,
@@ -77,7 +77,7 @@ describe("aaveV3", () => {
       ).toBeAllowed()
 
       await expect(
-        kit.asMember.aaveV3.lendingPoolV3.supply(
+        kit.asMember.aaveV3.poolV3.supply(
           contracts.arbitrumOne.weth,
           parseEther("1"),
           member.address,
@@ -88,7 +88,7 @@ describe("aaveV3", () => {
 
     it("allow withdrawing WETH", async () => {
       await expect(
-        kit.asMember.aaveV3.lendingPoolV3["withdraw(bytes32)"](
+        kit.asMember.aaveV3.poolV3["withdraw(bytes32)"](
           "0x0000000000000000000000000000ffffffffffffffffffffffffffffffff0004"
         )
       ).toBeAllowed()

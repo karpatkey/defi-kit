@@ -13,7 +13,7 @@ import {
   Pool,
 } from "./types"
 import ethPools from "./_ethPools"
-import stakeTokens from "./stakeTokens"
+import stakeTokens from "./_stakeTokens"
 import gnoPools from "./_gnoPools"
 import arb1Pools from "./_arb1Pools"
 import oethPools from "./_oethPools"
