@@ -9,8 +9,12 @@ import { parseEther, parseUnits } from "ethers"
 describe("aaveV3", () => {
   describe("borrow", () => {
     beforeAll(async () => {
-      await applyPermissions(await eth.deposit({ market: "Core", targets: ["ETH", "USDC"] }))
-      await applyPermissions(await eth.borrow({ market: "Core", targets: ["ETH", "USDC"] }))
+      await applyPermissions(
+        await eth.deposit({ market: "Core", targets: ["ETH", "USDC"] })
+      )
+      await applyPermissions(
+        await eth.borrow({ market: "Core", targets: ["ETH", "USDC"] })
+      )
     })
 
     it("deposit USDC", async () => {

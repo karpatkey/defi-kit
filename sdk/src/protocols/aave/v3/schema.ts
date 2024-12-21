@@ -14,11 +14,10 @@ import { zx } from "../../../zx"
 // Combine tokens from all Ethereum markets into a single list
 const allEthTokens = Array.from(
   new Map(
-    [
-      ...ethCoreTokens,
-      ...ethPrimeTokens,
-      ...ethEtherFiTokens,
-    ].map((token) => [token.symbol, token]) // Use symbol as a unique key
+    [...ethCoreTokens, ...ethPrimeTokens, ...ethEtherFiTokens].map((token) => [
+      token.symbol,
+      token,
+    ]) // Use symbol as a unique key
   ).values()
 )
 
@@ -49,10 +48,10 @@ const marketNames = ethMarkets.map((market) => market.name)
 const marketPoolAddresses = ethMarkets.map((market) => market.poolAddress)
 
 // Create a Zod schema for markets
-export const zMarket = z.enum([
-  ...marketNames,
-  ...marketPoolAddresses,
-] as [string, ...string[]])
+export const zMarket = z.enum([...marketNames, ...marketPoolAddresses] as [
+  string,
+  ...string[]
+])
 
 // Ethereum schema
 export const eth = {
@@ -79,68 +78,84 @@ export const eth = {
 // Side chain schemas remain unchanged
 export const gno = {
   deposit: z.object({
-    targets: z.enum([
-      "XDAI",
-      ...gnoTokens.map((token) => token.symbol),
-      ...gnoTokens.map((token) => token.token),
-    ] as [string, string, ...string[]]).array(),
+    targets: z
+      .enum([
+        "XDAI",
+        ...gnoTokens.map((token) => token.symbol),
+        ...gnoTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
   borrow: z.object({
-    targets: z.enum([
-      "XDAI",
-      ...gnoTokens.map((token) => token.symbol),
-      ...gnoTokens.map((token) => token.token),
-    ] as [string, string, ...string[]]).array(),
+    targets: z
+      .enum([
+        "XDAI",
+        ...gnoTokens.map((token) => token.symbol),
+        ...gnoTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
 }
 
 export const arb1 = {
   deposit: z.object({
-    targets: z.enum([
-      "ETH",
-      ...arb1Tokens.map((token) => token.symbol),
-      ...arb1Tokens.map((token) => token.token),
-    ] as [string, string, ...string[]]).array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...arb1Tokens.map((token) => token.symbol),
+        ...arb1Tokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
   borrow: z.object({
-    targets: z.enum([
-      "ETH",
-      ...arb1Tokens.map((token) => token.symbol),
-      ...arb1Tokens.map((token) => token.token),
-    ] as [string, string, ...string[]]).array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...arb1Tokens.map((token) => token.symbol),
+        ...arb1Tokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
 }
 
 export const oeth = {
   deposit: z.object({
-    targets: z.enum([
-      "ETH",
-      ...oethTokens.map((token) => token.symbol),
-      ...oethTokens.map((token) => token.token),
-    ] as [string, string, ...string[]]).array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...oethTokens.map((token) => token.symbol),
+        ...oethTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
   borrow: z.object({
-    targets: z.enum([
-      "ETH",
-      ...oethTokens.map((token) => token.symbol),
-      ...oethTokens.map((token) => token.token),
-    ] as [string, string, ...string[]]).array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...oethTokens.map((token) => token.symbol),
+        ...oethTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
 }
 
 export const base = {
   deposit: z.object({
-    targets: z.enum([
-      "ETH",
-      ...baseTokens.map((token) => token.symbol),
-      ...baseTokens.map((token) => token.token),
-    ] as [string, string, ...string[]]).array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...baseTokens.map((token) => token.symbol),
+        ...baseTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
   borrow: z.object({
-    targets: z.enum([
-      "ETH",
-      ...baseTokens.map((token) => token.symbol),
-      ...baseTokens.map((token) => token.token),
-    ] as [string, string, ...string[]]).array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...baseTokens.map((token) => token.symbol),
+        ...baseTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
 }

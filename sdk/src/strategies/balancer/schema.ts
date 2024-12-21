@@ -17,11 +17,31 @@ const zArb1Bpt = z.enum(arb1Bpts as [string, string, ...string[]])
 const zOethBpt = z.enum(oethBpts as [string, string, ...string[]])
 const zBaseBpt = z.enum(baseBpts as [string, string, ...string[]])
 
-const ethGauges = [...new Set(ethPools.map((pool) => pool.gauge).filter((gauge) => gauge != null))]
-const gnoGauges = [...new Set(gnoPools.map((pool) => pool.gauge).filter((gauge) => gauge != null))]
-const arb1Gauges = [...new Set(arb1Pools.map((pool) => pool.gauge).filter((gauge) => gauge != null))]
-const oethGauges = [...new Set(oethPools.map((pool) => pool.gauge).filter((gauge) => gauge != null))]
-const baseGauges = [...new Set(basePools.map((pool) => pool.gauge).filter((gauge) => gauge != null))]
+const ethGauges = [
+  ...new Set(
+    ethPools.map((pool) => pool.gauge).filter((gauge) => gauge != null)
+  ),
+]
+const gnoGauges = [
+  ...new Set(
+    gnoPools.map((pool) => pool.gauge).filter((gauge) => gauge != null)
+  ),
+]
+const arb1Gauges = [
+  ...new Set(
+    arb1Pools.map((pool) => pool.gauge).filter((gauge) => gauge != null)
+  ),
+]
+const oethGauges = [
+  ...new Set(
+    oethPools.map((pool) => pool.gauge).filter((gauge) => gauge != null)
+  ),
+]
+const baseGauges = [
+  ...new Set(
+    basePools.map((pool) => pool.gauge).filter((gauge) => gauge != null)
+  ),
+]
 
 const zEthGauge = z.enum(ethGauges as [string, string, ...string[]])
 const zGnoGauge = z.enum(gnoGauges as [string, string, ...string[]])

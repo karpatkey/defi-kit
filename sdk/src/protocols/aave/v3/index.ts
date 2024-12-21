@@ -38,7 +38,6 @@ const findToken = (
   return token
 }
 
-
 const findMarket = (nameOrPoolAddress: string) => {
   const nameOrPoolAddressLower = nameOrPoolAddress.toLowerCase()
 
@@ -73,7 +72,7 @@ export const eth = {
     market,
     targets,
   }: {
-    market: (EthMarket["name"] | EthMarket["poolAddress"])
+    market: EthMarket["name"] | EthMarket["poolAddress"]
     targets: ("ETH" | EthToken["symbol"] | EthToken["token"])[]
   }) => {
     const selectedMarket = findMarket(market)

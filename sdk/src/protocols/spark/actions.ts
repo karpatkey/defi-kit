@@ -109,25 +109,15 @@ export const depositToken = (chain: Chain, token: Token) => {
   return [
     ...allowErc20Approve([token.token], [poolV3]),
     {
-      ...allow.mainnet.spark.poolV3.supply(
-        token.token,
-        undefined,
-        c.avatar
-      ),
+      ...allow.mainnet.spark.poolV3.supply(token.token, undefined, c.avatar),
       targetAddress: poolV3,
     },
     {
-      ...allow.mainnet.spark.poolV3.withdraw(
-        token.token,
-        undefined,
-        c.avatar
-      ),
+      ...allow.mainnet.spark.poolV3.withdraw(token.token, undefined, c.avatar),
       targetAddress: poolV3,
     },
     {
-      ...allow.mainnet.spark.poolV3.setUserUseReserveAsCollateral(
-        token.token
-      ),
+      ...allow.mainnet.spark.poolV3.setUserUseReserveAsCollateral(token.token),
       targetAddress: poolV3,
     },
     {

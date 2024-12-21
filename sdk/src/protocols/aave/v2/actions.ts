@@ -16,27 +16,14 @@ export const depositToken = (token: Token) => {
     )
   } else {
     permissions.push(
-      ...allowErc20Approve(
-        [token.token],
-        [contracts.mainnet.aaveV2.poolV2]
-      )
+      ...allowErc20Approve([token.token], [contracts.mainnet.aaveV2.poolV2])
     )
   }
 
   permissions.push(
-    allow.mainnet.aaveV2.poolV2.deposit(
-      token.token,
-      undefined,
-      c.avatar
-    ),
-    allow.mainnet.aaveV2.poolV2.withdraw(
-      token.token,
-      undefined,
-      c.avatar
-    ),
-    allow.mainnet.aaveV2.poolV2.setUserUseReserveAsCollateral(
-      token.token
-    )
+    allow.mainnet.aaveV2.poolV2.deposit(token.token, undefined, c.avatar),
+    allow.mainnet.aaveV2.poolV2.withdraw(token.token, undefined, c.avatar),
+    allow.mainnet.aaveV2.poolV2.setUserUseReserveAsCollateral(token.token)
   )
 
   return permissions
@@ -65,10 +52,7 @@ export const depositEther = () => [
 
 export const borrowToken = (token: Token) => {
   return [
-    ...allowErc20Approve(
-      [token.token],
-      [contracts.mainnet.aaveV2.poolV2]
-    ),
+    ...allowErc20Approve([token.token], [contracts.mainnet.aaveV2.poolV2]),
     allow.mainnet.aaveV2.poolV2.borrow(
       token.token,
       undefined,

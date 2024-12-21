@@ -28,7 +28,8 @@ export const contracts = {
       variableDebtEthLidoWeth: "0x91b7d78BF92db564221f6B5AeE744D1727d1Dd1e",
       aEthLidoWeth: "0xfA1fDbBD71B0aA16162D76914d69cD8CB3Ef92da",
       poolEtherFiV3: "0x0AA97c284e98396202b6A04024F5E2c65026F3c0",
-      wrappedTokenGatewayEtherFiV3: "0xAB911dFB2bB9e264EE836F30D3367618f8Aef965",
+      wrappedTokenGatewayEtherFiV3:
+        "0xAB911dFB2bB9e264EE836F30D3367618f8Aef965",
       meritDistributor: "0x3Ef3D8bA38EBe18DB133cEc108f4D14CE00Dd9Ae",
     },
     ankr: {

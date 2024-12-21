@@ -144,10 +144,7 @@ describe("aaveV2", () => {
 
     it("allows swapping the ETH borrow rate mode", async () => {
       await expect(
-        kit.asMember.aaveV2.poolV2.swapBorrowRateMode(
-          contracts.mainnet.weth,
-          1
-        )
+        kit.asMember.aaveV2.poolV2.swapBorrowRateMode(contracts.mainnet.weth, 1)
       ).toRevert()
     })
 
@@ -209,10 +206,7 @@ describe("aaveV2", () => {
 
     it("allows swapping the USDC borrow rate mode", async () => {
       await expect(
-        kit.asMember.aaveV2.poolV2.swapBorrowRateMode(
-          contracts.mainnet.usdc,
-          1
-        )
+        kit.asMember.aaveV2.poolV2.swapBorrowRateMode(contracts.mainnet.usdc, 1)
       ).toRevert()
     })
   })

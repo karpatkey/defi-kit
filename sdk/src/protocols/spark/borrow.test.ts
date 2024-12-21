@@ -148,10 +148,7 @@ describe("spark", () => {
 
     it("allows swapping the ETH borrow rate mode", async () => {
       await expect(
-        kit.asMember.spark.poolV3.swapBorrowRateMode(
-          contracts.mainnet.weth,
-          1
-        )
+        kit.asMember.spark.poolV3.swapBorrowRateMode(contracts.mainnet.weth, 1)
       ).toRevert()
     })
 
@@ -213,10 +210,7 @@ describe("spark", () => {
 
     it("allows swapping the DAI borrow rate mode", async () => {
       await expect(
-        kit.asMember.spark.poolV3.swapBorrowRateMode(
-          contracts.mainnet.dai,
-          1
-        )
+        kit.asMember.spark.poolV3.swapBorrowRateMode(contracts.mainnet.dai, 1)
       ).toRevert()
     })
   })

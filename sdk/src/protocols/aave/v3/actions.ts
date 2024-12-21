@@ -135,7 +135,11 @@ const _getAssetId = (chain: Chain, token: Token): string => {
   return `0x${hexIndex}`
 }
 
-export const depositToken = (chain: Chain, token: Token, market: string = "Core") => {
+export const depositToken = (
+  chain: Chain,
+  token: Token,
+  market: string = "Core"
+) => {
   const { poolV3 } = _getAllAddresses(chain, market)
 
   const permissions: Permission[] = [
@@ -182,7 +186,6 @@ export const depositToken = (chain: Chain, token: Token, market: string = "Core"
   return permissions
 }
 
-
 export const depositEther = (chain: Chain, market: string = "Core") => {
   const addresses = _getAllAddresses(chain, market)
 
@@ -190,15 +193,13 @@ export const depositEther = (chain: Chain, market: string = "Core") => {
     throw new Error("EtherFi market does not support ETH deposits.")
   }
 
-  const {
-    aNativeToken,
-    wrappedTokenGatewayV3,
-    poolV3,
-    wrappedNativeToken,
-  } = addresses
+  const { aNativeToken, wrappedTokenGatewayV3, poolV3, wrappedNativeToken } =
+    addresses
 
   if (!wrappedTokenGatewayV3) {
-    throw new Error(`wrappedTokenGatewayV3 is not defined for market: ${market}`)
+    throw new Error(
+      `wrappedTokenGatewayV3 is not defined for market: ${market}`
+    )
   }
 
   return [
@@ -229,7 +230,11 @@ export const depositEther = (chain: Chain, market: string = "Core") => {
   ]
 }
 
-export const borrowToken = (chain: Chain, token: Token, market: string = "Core") => {
+export const borrowToken = (
+  chain: Chain,
+  token: Token,
+  market: string = "Core"
+) => {
   const { poolV3 } = _getAllAddresses(chain, market)
 
   return [
@@ -261,14 +266,13 @@ export const borrowEther = (chain: Chain, market: string = "Core") => {
     throw new Error("EtherFi market does not support ETH deposits.")
   }
 
-  const {
-    wrappedTokenGatewayV3,
-    poolV3,
-    variableDebtWrappedNativeToken,
-  } = _getAllAddresses(chain, market)
+  const { wrappedTokenGatewayV3, poolV3, variableDebtWrappedNativeToken } =
+    _getAllAddresses(chain, market)
 
   if (!wrappedTokenGatewayV3) {
-    throw new Error(`wrappedTokenGatewayV3 is not defined for market: ${market}`)
+    throw new Error(
+      `wrappedTokenGatewayV3 is not defined for market: ${market}`
+    )
   }
 
   return [
