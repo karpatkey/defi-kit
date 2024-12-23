@@ -71,7 +71,9 @@ export const eth = {
         target === "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
       ) {
         return [
-          allow.mainnet.kelp.LRTDepositPool.depositETH(undefined, undefined),
+          allow.mainnet.kelp.LRTDepositPool.depositETH(undefined, undefined, {
+            send: true,
+          }),
           allow.mainnet.kelp.rseth.approve(
             contracts.mainnet.kelp.LRTWithdrawalManager
           ),
