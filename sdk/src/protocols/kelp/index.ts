@@ -43,6 +43,10 @@ export const eth = {
             undefined,
             undefined
           ),
+          allow.mainnet.kelp.LRTWithdrawalManager.completeWithdrawal(
+            contracts.mainnet.lido.stEth,
+            undefined
+          ),
         ]
       }
       if (target === "ETHx" || target === contracts.mainnet.kelp.ethx) {
@@ -62,6 +66,10 @@ export const eth = {
           allow.mainnet.kelp.LRTWithdrawalManager.initiateWithdrawal(
             contracts.mainnet.kelp.ethx,
             undefined,
+            undefined
+          ),
+          allow.mainnet.kelp.LRTWithdrawalManager.completeWithdrawal(
+            contracts.mainnet.kelp.ethx,
             undefined
           ),
         ]
