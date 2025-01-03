@@ -8,7 +8,7 @@ import { Callout } from "nextra/components"
 | :-------------- | :--------------------------------------------------------------------------------------------------------------------- |
 | `BalancerVault` | [0xBA12222222228d8Ba445958a75a0704d566BF2C8](https://gnosisscan.io/address/0xBA12222222228d8Ba445958a75a0704d566BF2C8) |
 
-## Action: `withdraw`
+## Strategy: `withdraw`
 
 **Parameters**
 
@@ -37,7 +37,7 @@ Redeem `REWARDER` tokens and withdraw and unwrap `BPT` tokens.
   | `amount`  | -          |
   | `claim`   | -          |
 
-## Action: `withdraw_proportional`
+## Strategy: `withdraw_proportional`
 
 **Parameters**
 
@@ -88,20 +88,19 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
   | `request.toInternalBalance` | -                               |
 
 <Callout type="info">
-  **Note on `userData`:** - `userData` is a **bytes-like** parameter that must
-  be **ABI-encoded**. - Scoping details: - For `ComposableStable` Pools:
-  `userData` is scoped as **[2]**, encoded as **["uint256"]**. - For all other
-  pool types: `userData` is scoped as **[1]**, encoded as **["uint256"]**.
+  **Note on `userData`:**  
+  - `userData` is a **bytes-like** parameter that must be **ABI-encoded**.  
+  - Scoping details:  
+    - For `ComposableStable` Pools: `userData` is scoped as **[2]**, encoded as **["uint256"]**.  
+    - For all other pool types: `userData` is scoped as **[1]**, encoded as **["uint256"]**.
 </Callout>
 <Callout type="info">
-  **Additional Resources:** - [Balancer
-  subgraphs](https://docs.balancer.fi/reference/subgraph/) for obtaining
-  `PoolType`. - [Balancer
-  documentation](https://docs.balancer.fi/reference/joins-and-exits/pool-exits.html#userdata)
-  for `userData` structure.
+ **Additional Resources:** 
+  - [Balancer subgraphs](https://docs.balancer.fi/reference/subgraph/) for obtaining `PoolType`.  
+  - [Balancer documentation](https://docs.balancer.fi/reference/joins-and-exits/pool-exits.html#userdata) for `userData` structure.  
 </Callout>
 
-## Action: `withdraw_single_token`
+## Strategy: `withdraw_single_token`
 
 **Parameters**
 
@@ -153,16 +152,14 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
   | `request.toInternalBalance` | -                               |
 
 <Callout type="info">
-  **Note on `userData`:** - `userData` is a **bytes-like** parameter that must
-  be **ABI-encoded**. - Scoping details: - For all pool types, `userData` is
-  scoped as `[0, undefined, exitTokenIndex]`, encoded as `["uint256", "uint256",
-  "uint256"]`. - Where `exitTokenIndex` is determined by the position of
-  `exitTokenAddress` within the pool's tokens.
+  **Note on `userData`:**  
+  - `userData` is a **bytes-like** parameter that must be **ABI-encoded**.  
+  - Scoping details:  
+    - For all pool types, `userData` is scoped as `[0, undefined, exitTokenIndex]`, encoded as `["uint256", "uint256", "uint256"]`.
+    - Where `exitTokenIndex` is determined by the position of `exitTokenAddress` within the pool's tokens.
 </Callout>
 <Callout type="info">
-  **Additional Resources:** - [Balancer
-  subgraphs](https://docs.balancer.fi/reference/subgraph/) for obtaining
-  `PoolType`. - [Balancer
-  documentation](https://docs.balancer.fi/reference/joins-and-exits/pool-exits.html#userdata)
-  for `userData` structure.
+ **Additional Resources:** 
+  - [Balancer subgraphs](https://docs.balancer.fi/reference/subgraph/) for obtaining `PoolType`.  
+  - [Balancer documentation](https://docs.balancer.fi/reference/joins-and-exits/pool-exits.html#userdata) for `userData` structure.  
 </Callout>
