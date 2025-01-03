@@ -50,7 +50,7 @@ export const queryActionPermissionSet = ({
   return allowAction(parseQuery(query, paramsSchema))
 }
 
-export const queryStrategyPermissionSet = ({
+export const queryRepertoirePermissionSet = ({
   chain,
   protocol,
   name,
@@ -64,22 +64,24 @@ export const queryStrategyPermissionSet = ({
   }>
 }) => {
   const sdk = sdks[chain]
-  const { allowStrategy, strategiesSchema } = sdk
+  const {
+    repertoire: { allow, schema },
+  } = sdk
 
-  if (!(protocol in strategiesSchema) || !(protocol in allowStrategy)) {
+  if (!(protocol in schema) || !(protocol in allow)) {
     throw new NotFoundError(
-      `${protocol} strategies are not supported on ${chain}`
+      `${protocol} repertoire actions are not supported on ${chain}`
     )
   }
 
-  const allowStrategyFn = (allowStrategy as any)[protocol]?.[name] as
-    | AllowFunction
-    | undefined
-  const paramsSchema = (strategiesSchema as any)[protocol]?.[name]
+  const allowFn = (allow as any)[protocol]?.[name] as AllowFunction | undefined
+  const paramsSchema = (schema as any)[protocol]?.[name]
 
-  if (!allowStrategyFn || !paramsSchema) {
-    throw new NotFoundError(`${protocol} strategy '$${name}' does not exist`)
+  if (!allowFn || !paramsSchema) {
+    throw new NotFoundError(
+      `${protocol} '$${name}' repertoire action does not exist`
+    )
   }
 
-  return allowStrategyFn(parseQuery(query, paramsSchema))
+  return allowFn(parseQuery(query, paramsSchema))
 }
