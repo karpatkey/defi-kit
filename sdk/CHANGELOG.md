@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/karpatkey/defi-kit/compare/v2.6.5...v2.7.0) (2025-01-06)
+
+
+### Features
+
+* Repertoire Actions / Extend Aura, Aave v3, and Balancer to Side-Chains / Add Aave v3 Prime and EtherFi Markets ([#335](https://github.com/karpatkey/defi-kit/issues/335)) ([9aad6ad](https://github.com/karpatkey/defi-kit/commit/9aad6ad1308e3f53992a4555b55e344d879a932f))
+
 ## [2.6.5](https://github.com/karpatkey/defi-kit/compare/v2.6.4...v2.6.5) (2024-12-10)
 
 
