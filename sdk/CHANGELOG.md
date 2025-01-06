@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.1](https://github.com/karpatkey/defi-kit/compare/v2.7.0...v2.7.1) (2025-01-06)
+
+
+### Bug Fixes
+
+* permissions for StakeWise on Gnosis Chain ([#337](https://github.com/karpatkey/defi-kit/issues/337)) ([f1847de](https://github.com/karpatkey/defi-kit/commit/f1847defca7f4eb4a3ff8904d86544c2a6ccc974))
+
 ## [2.7.0](https://github.com/karpatkey/defi-kit/compare/v2.6.5...v2.7.0) (2025-01-06)
 
 
