@@ -1584,7 +1584,7 @@ export default [
       },
       {
         address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
-        symbol: "genETH",
+        symbol: "InETH",
       },
     ],
     rewarder: "0x772359B46FaA01cbe08fB0d34907A72F593D0fcE",
@@ -2064,5 +2064,53 @@ export default [
       },
     ],
     rewarder: "0x848fb625aa9ae1F56bdAc8c892Df5246E2c84b61",
+  },
+  {
+    name: "B-kaiAURA-AURA-WEIGHTED",
+    id: "236",
+    bpt: "0x62E57e37E3185871c13a422A363293780D17305B",
+    tokens: [
+      {
+        address: "0xC0c293ce456fF0ED870ADd98a0828Dd4d2903DBF",
+        symbol: "AURA",
+      },
+      {
+        address: "0xFFd9c960bC303b8d3aAED58229ce8a7310bCc5b8",
+        symbol: "kaiAURA",
+      },
+    ],
+    rewarder: "0x2508F0f5230085c9A42f703012e453B56C037A92",
+  },
+  {
+    name: "80OETH/20WETH",
+    id: "237",
+    bpt: "0x7056C8DFa8182859eD0d4Fb0eF0886fdf3d2edCF",
+    tokens: [
+      {
+        address: "0x856c4Efb76C1D1AE02e20CEB03A2A6a08b0b8dC3",
+        symbol: "OETH",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0x0A8C3DD48B65B3DA05efdC3fd1E58a2220329438",
+  },
+  {
+    name: "B-KAI-WETH-WEIGHTED",
+    id: "238",
+    bpt: "0x0AAba3D6a05a606b7A794877Dd0beFDa47474dB0",
+    tokens: [
+      {
+        address: "0x63e5dC7C071C1F18d44b69bc86f4c80F24851388",
+        symbol: "KAI",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0x3ab2BC49BacF9564EC0a2a8B06908CE3DAC90Af4",
   },
 ] as const

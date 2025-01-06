@@ -49,7 +49,7 @@ export default [
     id: "0x0dce7d1e1fbfc85c31bd04f890027738f00e580b000100000000000000000163",
     name: "33WETH-33KABOSUCHAN-33DOG",
     type: "Weighted",
-    gauge: null,
+    gauge: "0xf13aabFA433F0E5aC662fD9CD05B1C00802470B8",
     tokens: [
       {
         address: "0x4200000000000000000000000000000000000006",
@@ -193,7 +193,7 @@ export default [
     id: "0x4c42b5057a8663e2b1ac21685d1502c937a0381700020000000000000000019c",
     name: "ECLP-WETH-USDC",
     type: "GyroE",
-    gauge: null,
+    gauge: "0xEdf537FFbc7C5ED4042AEdE5c0d2E14a41FdC121",
     tokens: [
       {
         address: "0x4200000000000000000000000000000000000006",
@@ -231,7 +231,7 @@ export default [
     id: "0x54d86e177cdc664b5f9b17eb5fd6a76fa529e466000200000000000000000199",
     name: "ECLP-cbETH-wstETH",
     type: "GyroE",
-    gauge: null,
+    gauge: "0x0Cb9e522cA688C88af547A119279764F00F677C7",
     tokens: [
       {
         address: "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
@@ -364,7 +364,7 @@ export default [
     id: "0x990a0f03c3ee397cafda61cad277de18280751fd0002000000000000000000b6",
     name: "50WETH-50TAG",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x8d16A8C9173c1e0044d07F976a15F90aBd9A1090",
     tokens: [
       {
         address: "0x4200000000000000000000000000000000000006",
@@ -412,6 +412,25 @@ export default [
       {
         address: "0x4200000000000000000000000000000000000006",
         symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xAfF50d3bab005853BAc6357618688c811D641e22",
+    id: "0xaff50d3bab005853bac6357618688c811d641e220002000000000000000001aa",
+    name: "ECLP-cbBTC-WETH",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4200000000000000000000000000000000000006",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        symbol: "cbBTC",
         id: "0x",
       },
     ],
@@ -550,7 +569,7 @@ export default [
     id: "0xfb4c2e6e6e27b5b4a07a36360c89ede29bb3c9b6000000000000000000000026",
     name: "cbETH/WETH",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0x1E8448976bD7D403e32304aEbe8b64c4A1fa7Ee8",
     tokens: [
       {
         address: "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
