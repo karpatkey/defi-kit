@@ -1965,7 +1965,7 @@ export default [
       },
       {
         address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
-        symbol: "InETH",
+        symbol: "genETH",
         id: "0x",
       },
     ],

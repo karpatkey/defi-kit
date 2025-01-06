@@ -58,6 +58,8 @@ export const gno = annotateAll(
 export const arb1 = annotateAll(
   {
     aave_v3: aaveV3.arb1,
+    aura: aura.arb1,
+    balancer: balancer.arb1,
     cowswap: cowSwap.arb1,
   },
   "arb1"
@@ -66,6 +68,8 @@ export const arb1 = annotateAll(
 export const oeth = annotateAll(
   {
     aave_v3: aaveV3.oeth,
+    aura: aura.oeth,
+    balancer: balancer.oeth,
   },
   "oeth"
 )
@@ -73,6 +77,8 @@ export const oeth = annotateAll(
 export const base = annotateAll(
   {
     aave_v3: aaveV3.base,
+    aura: aura.base,
+    balancer: balancer.base,
   },
   "base"
 )

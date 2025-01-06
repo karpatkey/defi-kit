@@ -2,7 +2,7 @@ import { NotFoundError } from "../../errors"
 import pools from "./_info"
 import { Pool, StakeToken } from "./types"
 import { deposit, stake, lock } from "./actions"
-import stakeTokens from "./stakeTokens"
+import stakeTokens from "./_stakeTokens"
 
 const findPool = (nameOrAddressOrId: string): Pool => {
   const symbolAddressLower = nameOrAddressOrId.toLowerCase()

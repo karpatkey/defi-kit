@@ -1,21 +1,42 @@
-import { NotFoundError } from "../../errors"
+import {
+  EthPool,
+  EthToken,
+  StakeToken,
+  GnoToken,
+  GnoPool,
+  Arb1Pool,
+  Arb1Token,
+  OethPool,
+  OethToken,
+  BasePool,
+  BaseToken,
+  Pool,
+} from "./types"
 import ethPools from "./_ethPools"
+import stakeTokens from "./_stakeTokens"
 import gnoPools from "./_gnoPools"
-import { EthPool, StakeToken, EthToken, GnoToken, GnoPool, Pool } from "./types"
-import { Chain } from "../../types"
+import arb1Pools from "./_arb1Pools"
+import oethPools from "./_oethPools"
+import basePools from "./_basePools"
+import { NotFoundError } from "../../errors"
 import { deposit, stake, lock } from "./actions"
-import stakeTokens from "./stakeTokens"
+import { Chain } from "../../types"
 
-const findPool = (pools: readonly Pool[], nameOrAddressOrId: string) => {
-  const nameOrAddressOrIdLower = nameOrAddressOrId.toLowerCase()
+export const findPool = (
+  pools: readonly Pool[],
+  nameOrAddressOrIdOrRewarder: string
+) => {
+  const nameOrAddressOrIdOrRewarderLower =
+    nameOrAddressOrIdOrRewarder.toLowerCase()
   const pool = pools.find(
     (pool) =>
-      pool.name.toLowerCase() === nameOrAddressOrIdLower ||
-      pool.bpt.toLowerCase() === nameOrAddressOrIdLower ||
-      pool.id.toLowerCase() === nameOrAddressOrIdLower
+      pool.name.toLowerCase() === nameOrAddressOrIdOrRewarderLower ||
+      pool.bpt.toLowerCase() === nameOrAddressOrIdOrRewarderLower ||
+      pool.id.toLowerCase() === nameOrAddressOrIdOrRewarderLower ||
+      pool.rewarder.toLowerCase() === nameOrAddressOrIdOrRewarderLower
   )
   if (!pool) {
-    throw new NotFoundError(`Pool not found: ${nameOrAddressOrId}`)
+    throw new NotFoundError(`Pool not found`)
   }
   return pool
 }
@@ -75,15 +96,6 @@ export const eth = {
     return targets.flatMap((token) => stake(findStakeToken(token)))
   },
 
-  // Included in stake() action
-  // compound: async({
-  //   targets,
-  // }: {
-  //   targets: (StakeToken["address"] | StakeToken["symbol"])[]
-  // }) => {
-  //   return targets.flatMap((target) => compound(findStakeToken(target)))
-  // },
-
   lock: async () => {
     return lock()
   },
@@ -105,6 +117,69 @@ export const gno = {
         Chain.gno,
         findPool(gnoPools, target),
         tokens?.map((addressOrSymbol) => findToken(gnoPools, addressOrSymbol))
+      )
+    )
+  },
+}
+
+export const arb1 = {
+  deposit: async ({
+    targets,
+    tokens,
+  }: {
+    // "targets" is a mandatory parameter
+    targets: (Arb1Pool["name"] | Arb1Pool["bpt"] | Arb1Pool["id"])[]
+    // "tokens" is an optional parameter since the user might want to allow (or not) the depositSingle() function
+    // If "tokens" is not specified then we allow all the pool.tokens[]
+    tokens?: (Arb1Token["address"] | Arb1Token["symbol"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      deposit(
+        Chain.arb1,
+        findPool(arb1Pools, target),
+        tokens?.map((addressOrSymbol) => findToken(arb1Pools, addressOrSymbol))
+      )
+    )
+  },
+}
+
+export const oeth = {
+  deposit: async ({
+    targets,
+    tokens,
+  }: {
+    // "targets" is a mandatory parameter
+    targets: (OethPool["name"] | OethPool["bpt"] | OethPool["id"])[]
+    // "tokens" is an optional parameter since the user might want to allow (or not) the depositSingle() function
+    // If "tokens" is not specified then we allow all the pool.tokens[]
+    tokens?: (OethToken["address"] | OethToken["symbol"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      deposit(
+        Chain.oeth,
+        findPool(oethPools, target),
+        tokens?.map((addressOrSymbol) => findToken(oethPools, addressOrSymbol))
+      )
+    )
+  },
+}
+
+export const base = {
+  deposit: async ({
+    targets,
+    tokens,
+  }: {
+    // "targets" is a mandatory parameter
+    targets: (BasePool["name"] | BasePool["bpt"] | BasePool["id"])[]
+    // "tokens" is an optional parameter since the user might want to allow (or not) the depositSingle() function
+    // If "tokens" is not specified then we allow all the pool.tokens[]
+    tokens?: (BaseToken["address"] | BaseToken["symbol"])[]
+  }) => {
+    return targets.flatMap((target) =>
+      deposit(
+        Chain.base,
+        findPool(basePools, target),
+        tokens?.map((addressOrSymbol) => findToken(basePools, addressOrSymbol))
       )
     )
   },

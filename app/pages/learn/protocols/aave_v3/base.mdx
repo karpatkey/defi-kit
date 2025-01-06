@@ -6,7 +6,7 @@ import { Callout } from "nextra/components"
 
 | Name                    | Address                                                                                                               |
 | :---------------------- | :-------------------------------------------------------------------------------------------------------------------- |
-| `AaveLendingPoolV3`     | [0xA238Dd80C259a72e81d7e4664a9801593F98d1c5](https://basescan.org/address/0xA238Dd80C259a72e81d7e4664a9801593F98d1c5) |
+| `PoolV3`                | [0xA238Dd80C259a72e81d7e4664a9801593F98d1c5](https://basescan.org/address/0xA238Dd80C259a72e81d7e4664a9801593F98d1c5) |
 | `WrappedTokenGatewayV3` | [0x729b3EA8C005AbC58c9150fb57Ec161296F06766](https://basescan.org/address/0x729b3EA8C005AbC58c9150fb57Ec161296F06766) |
 | `aBasWETH`              | [0xD4a0e0b9149BCee3C920d2E00b5dE09138fd8bb7](https://basescan.org/address/0xD4a0e0b9149BCee3C920d2E00b5dE09138fd8bb7) |
 | `variableDebtWETH`      | [0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E](https://basescan.org/address/0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E) |
@@ -30,21 +30,21 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 
 #### `TARGET · approve`
 
-Approve `AaveLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar.
+Approve `PoolV3` to spend `TARGET` tokens on behalf of the avatar.
 
 - **Contract:** `TARGET`
 - **Function:** `approve(address,uint256)`
 
-  | Parameter | Constraint                   |
-  | :-------- | :--------------------------- |
-  | `spender` | equal to `AaveLendingPoolV3` |
-  | `amount`  | -                            |
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `spender` | equal to `PoolV3` |
+  | `amount`  | -                 |
 
-#### `AaveLendingPoolV3 · supply`
+#### `PoolV3 · supply`
 
 Deposit `TARGET` and receive `aToken` tokens in exchange.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `supply(address,uint256,address,uint16)`
 
   | Parameter      | Constraint        |
@@ -54,11 +54,11 @@ Deposit `TARGET` and receive `aToken` tokens in exchange.
   | `onBehalfOf`   | equal to `AVATAR` |
   | `referralCode` | -                 |
 
-#### `AaveLendingPoolV3 · setUserUseReserveAsCollateral`
+#### `PoolV3 · setUserUseReserveAsCollateral`
 
 Set/unset deposited asset as collateral.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
 
   | Parameter         | Constraint        |
@@ -66,11 +66,11 @@ Set/unset deposited asset as collateral.
   | `asset`           | equal to `TARGET` |
   | `useAsCollateral` | -                 |
 
-#### `AaveLendingPoolV3 · withdraw`
+#### `PoolV3 · withdraw`
 
 Redeem `aToken` and withdraw `TARGET` tokens.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `withdraw(address,uint256,address)`
 
   | Parameter | Constraint        |
@@ -102,17 +102,17 @@ Deposit ETH and receive `aBasWETH` tokens in exchange.
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `depositETH(address,address,uint16)` Ξ _allow sending ETH_
 
-  | Parameter      | Constraint                   |
-  | :------------- | :--------------------------- |
-  | `address`      | equal to `AaveLendingPoolV3` |
-  | `onBehalfOf`   | equal to `AVATAR`            |
-  | `referralCode` | -                            |
+  | Parameter      | Constraint        |
+  | :------------- | :---------------- |
+  | `address`      | equal to `PoolV3` |
+  | `onBehalfOf`   | equal to `AVATAR` |
+  | `referralCode` | -                 |
 
-#### `AaveLendingPoolV3 · setUserUseReserveAsCollateral`
+#### `PoolV3 · setUserUseReserveAsCollateral`
 
 Set/unset deposited asset as collateral.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
 
   | Parameter         | Constraint        |
@@ -127,11 +127,11 @@ Redeem `aBasWETH` and withdraw ETH tokens.
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `withdrawETH(address,uint256,address)`
 
-  | Parameter | Constraint                   |
-  | :-------- | :--------------------------- |
-  | `address` | equal to `AaveLendingPoolV3` |
-  | `amount`  | -                            |
-  | `to`      | equal to `AVATAR`            |
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `address` | equal to `PoolV3` |
+  | `amount`  | -                 |
+  | `to`      | equal to `AVATAR` |
 
 ## Action: `borrow`
 
@@ -152,21 +152,21 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 
 #### `TARGET · approve`
 
-Approve `AaveLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar.
+Approve `PoolV3` to spend `TARGET` tokens on behalf of the avatar.
 
 - **Contract:** `TARGET`
 - **Function:** `approve(address,uint256)`
 
-  | Parameter | Constraint                   |
-  | :-------- | :--------------------------- |
-  | `spender` | equal to `AaveLendingPoolV3` |
-  | `amount`  | -                            |
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `spender` | equal to `PoolV3` |
+  | `amount`  | -                 |
 
-#### `AaveLendingPoolV3 · borrow`
+#### `PoolV3 · borrow`
 
 Receive `TARGET` and `variableDebtToken` tokens.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `borrow(address,uint256,uint256,uint16,address)`
 
   | Parameter          | Constraint        |
@@ -177,11 +177,11 @@ Receive `TARGET` and `variableDebtToken` tokens.
   | `referralCode`     | -                 |
   | `onBehalfOf`       | equal to `AVATAR` |
 
-#### `AaveLendingPoolV3 · repay`
+#### `PoolV3 · repay`
 
 Repay borrowed `TARGET` tokens.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `repay(address,uint256,uint256,address)`
 
   | Parameter    | Constraint        |
@@ -214,12 +214,12 @@ Receive ETH and `variableDebtWETH` tokens.
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `borrowETH(address,uint256,uint256,uint16)`
 
-  | Parameter          | Constraint                   |
-  | :----------------- | :--------------------------- |
-  | `address`          | equal to `AaveLendingPoolV3` |
-  | `amount`           | -                            |
-  | `interestRateMode` | -                            |
-  | `referralCode`     | -                            |
+  | Parameter          | Constraint        |
+  | :----------------- | :---------------- |
+  | `address`          | equal to `PoolV3` |
+  | `amount`           | -                 |
+  | `interestRateMode` | -                 |
+  | `referralCode`     | -                 |
 
 #### `WrappedTokenGatewayV3 · repayETH`
 
@@ -228,9 +228,9 @@ Repay borrowed ETH.
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `repayETH(address,uint256,uint256,address)` Ξ _allow sending ETH_
 
-  | Parameter    | Constraint                   |
-  | :----------- | :--------------------------- |
-  | `address`    | equal to `AaveLendingPoolV3` |
-  | `amount`     | -                            |
-  | `rateMode`   | -                            |
-  | `onBehalfOf` | equal to `AVATAR`            |
+  | Parameter    | Constraint        |
+  | :----------- | :---------------- |
+  | `address`    | equal to `PoolV3` |
+  | `amount`     | -                 |
+  | `rateMode`   | -                 |
+  | `onBehalfOf` | equal to `AVATAR` |
