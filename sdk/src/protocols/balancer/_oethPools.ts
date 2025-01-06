@@ -40,30 +40,6 @@ export default [
     ],
   },
   {
-    bpt: "0x025dB202Cba62A0d804CF337Df055ee6daBDe843",
-    id: "0x025db202cba62a0d804cf337df055ee6dabde843000100000000000000000121",
-    name: "20BEETS-40BAL-40OP",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x4200000000000000000000000000000000000042",
-        symbol: "OP",
-        id: "0x",
-      },
-      {
-        address: "0xb4Bc46bc6cB217B59ea8F4530BaE26Bf69F677f0",
-        symbol: "BEETS",
-        id: "0x",
-      },
-      {
-        address: "0xFE8B128bA8C78aabC59d4c64cEE7fF28e9379921",
-        symbol: "BAL",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x11f0b5CCA01B0F0A9Fe6265aD6E8ee3419c68440",
     id: "0x11f0b5cca01b0f0a9fe6265ad6e8ee3419c684400002000000000000000000d4",
     name: "BPT-BREV",
