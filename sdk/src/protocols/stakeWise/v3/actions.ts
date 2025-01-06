@@ -53,11 +53,13 @@ export const stake = (chain: Chain, vault: Vault) => {
       break
 
     case Chain.gno:
-      allowErc20Approve([contracts.gnosis.gno], [vault.id]),
-        permissions.push({
+      permissions.push(
+        ...allowErc20Approve([contracts.gnosis.gno], [vault.id]),
+        {
           ...allow.gnosis.stakeWiseV3.vault.deposit(undefined, c.avatar),
           targetAddress: vault.id,
-        })
+        }
+      )
       break
 
     default:
