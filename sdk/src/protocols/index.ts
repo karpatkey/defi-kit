@@ -9,6 +9,7 @@ import * as convex from "./convex"
 import * as cowSwap from "./cowSwap"
 import * as lido from "./lido"
 import * as maker from "./maker"
+import * as morpho from "./morpho"
 import * as rocketPool from "./rocketPool"
 import * as spark from "./spark"
 import * as stader from "./stader"
@@ -34,6 +35,7 @@ export const eth = annotateAll(
     cowswap: cowSwap.eth,
     lido: lido.eth,
     maker: maker.eth,
+    morpho: morpho.eth,
     rocket_pool: rocketPool.eth,
     spark: spark.eth,
     stader: stader.eth,
