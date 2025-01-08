@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.4](https://github.com/karpatkey/defi-kit/compare/v2.7.3...v2.7.4) (2025-01-08)
+
+
+### Bug Fixes
+
+* minor fix in Aave ([#344](https://github.com/karpatkey/defi-kit/issues/344)) ([6b90b47](https://github.com/karpatkey/defi-kit/commit/6b90b47e0a29beebd06cd11e8b42fa3d59c2c69a))
+
 ## [2.7.3](https://github.com/karpatkey/defi-kit/compare/v2.7.2...v2.7.3) (2025-01-08)
 
 
