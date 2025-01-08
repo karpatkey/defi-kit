@@ -88,6 +88,25 @@ export default [
     ],
   },
   {
+    bpt: "0x1A63b425600D775a1E1bFc212F021273812c3b16",
+    id: "0x1a63b425600d775a1e1bfc212f021273812c3b160002000000000000000001a7",
+    name: "ECLP-WETH-USDC",
+    type: "GyroE",
+    gauge: "0xABC0372e689933e70EadeE8945488Bf2570D0d9A",
+    tokens: [
+      {
+        address: "0x4200000000000000000000000000000000000006",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x2A5757b60987FF10385De1D4D923792f6fdCfFf1",
     id: "0x2a5757b60987ff10385de1d4d923792f6fdcfff100010000000000000000019e",
     name: "25cbETH-25SNUT-25NUT-25cbBTC",
