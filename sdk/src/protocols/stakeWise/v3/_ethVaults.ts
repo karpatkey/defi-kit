@@ -125,16 +125,16 @@ export default [
       "Slash insurance backed by a SAFU fund.\nDecentralized infrastructure powered by Distributed Validator Technology. \nConnect with us at: https://linktr.ee/autostake",
   },
   {
-    id: "0x302be829c61c287787030888bbcf11115ecd5773",
-    name: "Swiss Liquid Staking",
-    description:
-      "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
-  },
-  {
     id: "0x9c29c571847a68a947acec8bacd303e36bc72ec5",
     name: "01node StakeWise V3 Vault",
     description:
       "01node operarated Vault, 1% commision; read more on  https://staking.01node.com/",
+  },
+  {
+    id: "0x302be829c61c287787030888bbcf11115ecd5773",
+    name: "Swiss Liquid Staking",
+    description:
+      "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
   },
   {
     id: "0x2a14b47e551288f3f5e35842970cc2bc78ceb47d",
@@ -201,11 +201,5 @@ export default [
     name: "GlobalStake",
     description:
       "With decades of infrastructure experience, GlobalStake's enterprise-grade Web3 data centers, equipment, and protocols are specifically engineered to secure Proof-of-Stake networks. We believe that if you are going to do something, do it right!",
-  },
-  {
-    id: "0xf124ef4e47eefa1d6b1cb5f835ef1669e9a29a7c",
-    name: "Deprecated: Orangefin Ventures",
-    description:
-      "Orangefin Ventures is one of the world's leading node operators with nearly $100M assets under delegation. Having almost a decade of experience in the cryptocurrency space, Orangefin Ventures operates some of the most technically sophisticated infrastructure that secures several blockchains and spans across public clouds and our own datacenters (including our own ASN and public IPv4 range). To learn more, visit https://www.orangefin.ventures!",
   },
 ] as const

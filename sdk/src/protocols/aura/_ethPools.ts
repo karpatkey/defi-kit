@@ -2113,4 +2113,20 @@ export default [
     ],
     rewarder: "0x3ab2BC49BacF9564EC0a2a8B06908CE3DAC90Af4",
   },
+  {
+    name: "eBTC/wBTC",
+    id: "239",
+    bpt: "0xda17f3663C5D04C0B316cfA1A04Aa53eBBC8c12C",
+    tokens: [
+      {
+        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        symbol: "WBTC",
+      },
+      {
+        address: "0x657e8C867D8B37dCC18fA4Caead9C45EB088C642",
+        symbol: "eBTC",
+      },
+    ],
+    rewarder: "0x6C9d0252811c7213c2a8D7Ecf9797A7bA8Ad50a6",
+  },
 ] as const
