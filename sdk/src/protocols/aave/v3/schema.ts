@@ -8,7 +8,7 @@ import arb1Tokens from "./_arb1CoreInfo"
 import oethTokens from "./_oethCoreInfo"
 import baseTokens from "./_baseCoreInfo"
 import ethStakeTokens from "../v2/_stakeTokens"
-import ethDelegateTokens from "../v2/delegateTokens"
+import ethDelegateTokens from "../v2/_delegateTokens"
 import { zx } from "../../../zx"
 
 // Combine tokens from all Ethereum markets into a single list

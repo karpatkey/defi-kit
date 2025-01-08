@@ -1,5 +1,5 @@
 import tokens from "./_ethCoreInfo"
-import delegateTokens from "./delegateTokens"
+import delegateTokens from "./_delegateTokens"
 import stakeTokens from "./_stakeTokens"
 
 export type Token = (typeof tokens)[number]
