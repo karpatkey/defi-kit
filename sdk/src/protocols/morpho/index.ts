@@ -5,7 +5,7 @@ import { c } from "zodiac-roles-sdk";
 import { contracts } from "../../../eth-sdk/config";
 import { EthPool } from "./types";
 import { NotFoundError } from "../../errors";
-// import _ethPools from "./_ethPools";
+import _ethPools from "./_ethPools";
 
 // Constants for Morpho Protocol
 const WETH = contracts.mainnet.weth;
@@ -14,17 +14,17 @@ const METAMORPHO_VAULT = "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658"; // Replac
 
 // Utility to find the pool
 const findPool = (nameOrAddress: string) => {
-    const pool = METAMORPHO_VAULT;
-//   const pools = _ethPools;
-//   const nameOrAddressLower = nameOrAddress.toLowerCase();
-//   const pool = pools.find(
-//     (pool) =>
-//       pool.name.toLowerCase() === nameOrAddressLower ||
-//       pool.address.toLowerCase() === nameOrAddressLower
-//   );
-//   if (!pool) {
-//     throw new NotFoundError(`Pool not found: ${nameOrAddress}`);
-//   }
+    // const pool = METAMORPHO_VAULT;
+  const pools = _ethPools;
+  const nameOrAddressLower = nameOrAddress.toLowerCase();
+  const pool = pools.find(
+    (pool) =>
+      pool.name.toLowerCase() === nameOrAddressLower ||
+      pool.address.toLowerCase() === nameOrAddressLower
+  );
+  if (!pool) {
+    throw new NotFoundError(`Pool not found: ${nameOrAddress}`);
+  }
   return pool;
 };
 

@@ -23,7 +23,7 @@ describe("Morpho Protocol", () => {
       // Approve the vault to spend WETH
       await kit.asAvatar.weth.attach(WETH).approve(METAMORPHO_VAULT, amount);
       await expect(
-        kit.asMember.morpho.morphoBlue
+        kit.asMember.morpho.metaMorpho
           .attach(METAMORPHO_VAULT)
           ["deposit(address,uint256)"](avatar.address, amount)
       ).not.toRevert();
