@@ -105,6 +105,9 @@ export const contracts = {
     },
     morpho: {
       morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
+      weth9: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      metaMorpho: "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658",
+
 
     },
     rocketPool: {
@@ -281,6 +284,9 @@ export const contracts = {
     compoundV3: {
       cUsdcV3: "0xb125E6687d4313864e53df431d5425969c15Eb2F",
       cometRewards: "0x123964802e6ABabBE1Bc9547D72Ef1B69B00A6b1",
+    },
+    morpho: {
+      morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
     },
     weth: "0x4200000000000000000000000000000000000006",
     circleTokenMessenger: "0x1682Ae6375C4E4A97e4B583BC394c861A46D8962",
