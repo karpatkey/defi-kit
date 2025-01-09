@@ -53,4 +53,4 @@ jobs:
       - uses: tale/kubectl-action@v1
         with:
           base64-kube-config: ${{ secrets.KUBE_CONFIG }}
-      - run: kubectl delete pod -n karpatkey-defi-kit -l app=karpatkey-defi-kit --force
+      - run: kubectl delete pod -n defi-kit -l app=defi-kit --force
