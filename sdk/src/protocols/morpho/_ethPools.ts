@@ -746,4 +746,4 @@ export default [
     name: "MEV Capital M^0 Vault",
     symbol: "MC.wM",
   },
-] as const
+] as const;
