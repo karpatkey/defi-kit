@@ -7,7 +7,6 @@ import { EthPool } from "./types"
 import { NotFoundError } from "../../errors"
 import _ethPools from "./_ethPools"
 
-// Constants for Morpho Protocol
 const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" //underlying asset
 const METAMORPHO_VAULT = "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658" // Replace with the actual vault address
 
@@ -82,7 +81,7 @@ export const eth = {
         // - contract: MetaMorpho = vault: 0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658
         // - amount (ETH) 0.0
         // - **assets** (uint256): 769037620761548058 → gei
-        // - receiver (address):  0x0EFcCBb9E2C09Ea29551879bd9Da32362b32fc89
+        // - receiver (address): pilote Safe 0x0EFcCBb9E2C09Ea29551879bd9Da32362b32fc89
         {
           ...allow.mainnet.morpho.metaMorpho.deposit(
             undefined,
