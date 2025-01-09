@@ -17,7 +17,7 @@ describe("Morpho Protocol", () => {
       await applyPermissions(await eth.deposit({ targets: ["gtLRTcore"] }))
     })
 
-    it("approuve 0.76 WETH for the bundler", async () => {
+    it("approuve 0.76 WETH for the bundler + deposit", async () => {
       const amount = parseEther("0.76") // Test with 0.76 WETH
       await stealErc20(WETH, amount, STEAL_ADDRESS)
 
@@ -31,6 +31,14 @@ describe("Morpho Protocol", () => {
           ETHEREUM_BUNDLER
         )
       ).not.toRevert()
+
+      // Deposit WETH into the vault
+      await expect(
+        kit.asMember.morpho.metaMorpho
+          .attach(METAMORPHO_VAULT)
+          .deposit(amount, avatar.address)
+      ).not.toRevert()
+      
     })
 
     // it("deposit 2 WETH into the vault", async () => {

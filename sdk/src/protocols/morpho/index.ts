@@ -55,14 +55,14 @@ export const eth = {
       // - wad (uni265):  769037620761548058 → gei?
       permissions.push(
         ...allowErc20Approve([WETH], [ETHEREUM_BUNDLER]),
-        //Step 1: approuve 0.76 WETH for the bundler
-        {
-          ...allow.mainnet.morpho.weth9.approve(
-            ETHEREUM_BUNDLER,
-            undefined,
-            undefined
-          ),
-        },
+        // //Step 1: approuve 0.76 WETH for the bundler
+        // {
+        //   ...allow.mainnet.morpho.weth9.approve(
+        //     ETHEREUM_BUNDLER,
+        //     undefined,
+        //     undefined
+        //   ),
+        // },
 
         //Step 2: appouve - approve WETH9 metaMorpho
         // - contract: WETH9: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
