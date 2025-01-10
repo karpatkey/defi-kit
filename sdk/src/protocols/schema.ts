@@ -8,7 +8,7 @@ import * as compoundV2 from "./compound/v2/schema"
 import * as convex from "./convex/schema"
 import * as cowSwap from "./cowSwap/schema"
 import * as lido from "./lido/schema"
-import * as maker from "./maker/schema"
+import * as sky from "./sky/schema"
 import * as rocketPool from "./rocketPool/schema"
 import * as spark from "./spark/schema"
 import * as stader from "./stader/schema"
@@ -30,7 +30,7 @@ export const eth = {
   convex: convex.eth,
   cowswap: cowSwap.eth,
   lido: lido.eth,
-  maker: maker.eth,
+  sky: sky.eth,
   rocket_pool: rocketPool.eth,
   spark: spark.eth,
   stader: stader.eth,

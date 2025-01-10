@@ -98,7 +98,7 @@ export const contracts = {
       wstEth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       unstEth: "0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1",
     },
-    maker: {
+    sky: {
       dsProxy: "0xD758500ddEc05172aaA035911387C8E0e789CF6a", // GnosisDAO DSProxy
       proxyActions: "0x82ecd135dce65fbc6dbdd0e4237e0af93ffd5038",
       proxyRegistry: "0x4678f0a6958e4D2Bc4F1BAF7Bc52E8F3564f3fE4",
