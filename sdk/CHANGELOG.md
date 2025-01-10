@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.5](https://github.com/karpatkey/defi-kit/compare/v2.7.4...v2.7.5) (2025-01-10)
+
+
+### Bug Fixes
+
+* Maker rebranding to Sky ([#349](https://github.com/karpatkey/defi-kit/issues/349)) ([0041abf](https://github.com/karpatkey/defi-kit/commit/0041abf26246536fca46206c653e7222f9acb0ce))
+
 ## [2.7.4](https://github.com/karpatkey/defi-kit/compare/v2.7.3...v2.7.4) (2025-01-08)
 
 
