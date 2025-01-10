@@ -27,9 +27,9 @@ export default [
   },
   {
     id: "0xb36fc5e542cb4fc562a624912f55da2758998113",
-    name: "Serenita - Powered by SSV",
+    name: "Serenita - Powered by Vero",
     description:
-      "Serenita provides enterprise-grade staking services, prioritizing optimal performance while mitigating the risks associated with using majority clients. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nThe validators in this Vault are powered by ssv.network's DVT technology, which ensures resiliency against client bugs and reduces validator downtime. Additionally, validators are eligible for SSV's Incentivized Mainnet Program, boosting rewards by up to 30%! The program rewards will be retroactively distributed among Vault depositors at the program's conclusion at the end of 2024.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
+      "Serenita provides enterprise-grade staking services with a focus on top-tier performance and minimal risk. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nThe validators in this Vault are powered by Vero, our custom-built multi-node validator client software. Similar to DVT technology, Vero verifies the chain’s latest state across multiple independent client implementations—shielding our validators from single-client bugs and downtime.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
   },
   {
     id: "0x8216e50b1dd76faeb1ff4cafaba6790ea71910df",
@@ -90,6 +90,12 @@ export default [
       "Reliable non-custodial Validator run by the industry leader - Allnodes",
   },
   {
+    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
+    name: "Fox & Yaga",
+    description:
+      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
+  },
+  {
     id: "0xdbdee04c72a02a740b9f26ada9203582c8a99daf",
     name: "Chorus One - Obol DV vault",
     description:
@@ -100,12 +106,6 @@ export default [
     name: "Verse ETH Staking",
     description:
       "Earn rewards by staking your ETH in the Verse Ecosystem vault",
-  },
-  {
-    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
-    name: "Fox & Yaga",
-    description:
-      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
   },
   {
     id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",

@@ -1201,4 +1201,36 @@ export default [
     ],
     rewarder: "0x0420b6c777A51F570DF2F1c60802ee0771Ac6111",
   },
+  {
+    name: "sUSDX/USDX",
+    id: "93",
+    bpt: "0xb3047330c1CB5eb1a3670FabfB99bDc106D631EB",
+    tokens: [
+      {
+        address: "0x7788A3538C5fc7F9c7C8A74EAC4c898fC8d87d92",
+        symbol: "sUSDX",
+      },
+      {
+        address: "0xf3527ef8dE265eAa3716FB312c12847bFBA66Cef",
+        symbol: "USDX",
+      },
+    ],
+    rewarder: "0xf8563539595EE61e4d9aeD19956189b574daF251",
+  },
+  {
+    name: "USDX/USDT",
+    id: "94",
+    bpt: "0x85564aF67760063B994599B640552614238C9Ee6",
+    tokens: [
+      {
+        address: "0xf3527ef8dE265eAa3716FB312c12847bFBA66Cef",
+        symbol: "USDX",
+      },
+      {
+        address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+        symbol: "USDT",
+      },
+    ],
+    rewarder: "0x3F2dE59CE051c75621AC9D9a6487C01e60cF6988",
+  },
 ] as const
