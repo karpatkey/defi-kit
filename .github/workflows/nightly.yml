@@ -49,8 +49,8 @@ jobs:
         run: python scripts/compound_v3.py
       - name: Run convex
         run: python scripts/convex.py
-      - name: Run maker
-        run: python scripts/maker.py
+      - name: Run sky
+        run: python scripts/sky.py
       - name: Run spark
         run: python scripts/spark.py
       - name: Run stakewise_v3
