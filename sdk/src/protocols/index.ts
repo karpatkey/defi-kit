@@ -15,6 +15,7 @@ import * as stader from "./stader"
 import * as stakeWiseV2 from "./stakeWise/v2"
 import * as stakeWiseV3 from "./stakeWise/v3"
 import * as uniswapV3 from "./uniswap/v3"
+import * as symbiotic from "./symbiotic"
 
 import { annotateAll } from "./annotate"
 
@@ -37,6 +38,7 @@ export const eth = annotateAll(
     spark: spark.eth,
     stader: stader.eth,
     stakewise_v2: stakeWiseV2.eth,
+    symbiotic: symbiotic.eth,
     stakewise_v3: stakeWiseV3.eth,
     uniswap_v3: uniswapV3.eth,
   },
