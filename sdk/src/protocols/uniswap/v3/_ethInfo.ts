@@ -306,10 +306,6 @@ export default [
     symbol: "MOONEY",
   },
   {
-    address: "0xADe6FDAba1643E4D1eeF68Da7170F234470938c6",
-    symbol: "HARAMBE",
-  },
-  {
     address: "0x3819f64f282bf135d62168C1e513280dAF905e06",
     symbol: "HDRN",
   },
@@ -542,10 +538,6 @@ export default [
     symbol: "TITANX",
   },
   {
-    address: "0x1a2EB478FA07125C9935A77b3C03a82470801E30",
-    symbol: "AMO",
-  },
-  {
     address: "0xb131f4A55907B10d1F0A50d8ab8FA09EC342cd74",
     symbol: "MEME",
   },
@@ -584,10 +576,6 @@ export default [
   {
     address: "0xda31D0d1Bc934fC34F7189E38A413ca0A5e8b44F",
     symbol: "BSSB",
-  },
-  {
-    address: "0xA4fFdf3208F46898CE063e25c1C43056FA754739",
-    symbol: "ATH",
   },
   {
     address: "0x9Ce84F6A69986a83d92C324df10bC8E64771030f",
@@ -806,6 +794,10 @@ export default [
     symbol: "CAI",
   },
   {
+    address: "0x94a8b4EE5CD64C79D0Ee816f467EA73009f51aA0",
+    symbol: "RIO",
+  },
+  {
     address: "0xcAb254f1a32343f11aB41fbdE90eCB410cDe348a",
     symbol: "FROGE",
   },
@@ -852,6 +844,10 @@ export default [
   {
     address: "0x018DD3A0Dd7F213cc822076b3800816d3CE1ED86",
     symbol: "HOTKEY",
+  },
+  {
+    address: "0x4CfFdB91e04d698470930f71DA4b6021F420B642",
+    symbol: "HMN",
   },
   {
     address: "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",

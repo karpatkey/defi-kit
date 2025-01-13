@@ -455,30 +455,6 @@ export default [
     ],
   },
   {
-    bpt: "0xb328B50F1f7d97EE8ea391Ab5096DD7657555F49",
-    id: "0xb328b50f1f7d97ee8ea391ab5096dd7657555f49000100000000000000000048",
-    name: "GOLD/BAL/USDC",
-    type: "Weighted",
-    gauge: "0x7B3EF4cAD077d871499285A2A8a1Cee0Ee122137",
-    tokens: [
-      {
-        address: "0x4158734D47Fc9692176B5085E0F52ee0Da5d47F1",
-        symbol: "BAL",
-        id: "0x",
-      },
-      {
-        address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xbeFD5C25A59ef2C1316c5A4944931171F30Cd3E4",
-        symbol: "GOLD",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xC3889F9764d68BDF2e16f237206746344172A147",
     id: "0xc3889f9764d68bdf2e16f237206746344172a14700020000000000000000018e",
     name: "20ZBU-80USDC OLP",
