@@ -7,15 +7,15 @@ import { allowErc20Approve } from "../../conditions"
 import { c } from "zodiac-roles-sdk"
 import { contracts } from "../../../eth-sdk/config"
 
-const WSTETH = contracts.mainnet.lido.wstEth;
+const WSTETH = contracts.mainnet.lido.wstEth
 
 const findPool = (nameOrAddress: string) => {
   const pools = _ethPools
   const nameOrAddressLower = nameOrAddress.toLowerCase()
   const pool = pools.find(
     (pool) =>
-      pool.name.toLowerCase() === nameOrAddressLower ||
-      pool.address.toLowerCase() === nameOrAddressLower
+      pool.tokenAddress.toLowerCase() === nameOrAddressLower ||
+      pool.tokenSymbol.toLowerCase() === nameOrAddressLower
   )
   if (!pool) {
     throw new NotFoundError(`Pool not found: ${nameOrAddress}`)
@@ -27,19 +27,19 @@ export const eth = {
   deposit: async ({
     targets,
   }: {
-    targets: (EthPool["name"] | EthPool["address"])[]
+    targets: (EthPool["tokenAddress"] | EthPool["tokenSymbol"])[]
   }) => {
     return targets.flatMap((target) => {
       const pool = findPool(target)
       const permissions: Permission[] = []
-      if (pool.token.symbol === "wstETH") {
+      if (pool.tokenSymbol === "wstETH") {
         permissions.push(
           allow.mainnet.lido.stEth.approve(WSTETH),
           allow.mainnet.lido.wstEth.wrap()
         )
       }
       permissions.push(
-        ...allowErc20Approve([pool.token.address], [pool.address]),
+        ...allowErc20Approve([pool.tokenAddress], [pool.address]),
         {
           ...allow.mainnet.symbiotic.defaultCollateral[
             "deposit(address,uint256)"
