@@ -1,13 +1,13 @@
 import { decodeBytes32String } from "defi-kit"
 import { OpenAPIRegistry } from "@asteasolutions/zod-to-openapi"
 import { coercePermission } from "zodiac-roles-sdk"
-import { ChainPrefix, queryPermissionSet, sdks } from "../sdk"
+import { ChainPrefix, queryActionPermissionSet, sdks } from "../sdk"
 import {
   transactionsDocParams,
   permission,
-  permissionsQueryBase,
+  actionPermissionsQueryBase,
   transactionsJson,
-  transactionsQueryBase,
+  actionTransactionsQueryBase,
 } from "../schema"
 import { PermissionsHandler, TransactionsHandler } from "../handle"
 
@@ -16,8 +16,8 @@ export const allowStake: TransactionsHandler = async (query) => {
     mod: { address, chain },
     role,
     protocol,
-  } = transactionsQueryBase.parse(query)
-  const permissions = await queryPermissionSet({
+  } = actionTransactionsQueryBase.parse(query)
+  const permissions = await queryActionPermissionSet({
     action: "stake",
     chain,
     protocol,
@@ -68,9 +68,9 @@ export const registerAllowStake = (
 }
 
 export const stakePermissions: PermissionsHandler = async (query) => {
-  const permissions = await queryPermissionSet({
+  const permissions = await queryActionPermissionSet({
     action: "stake",
-    ...permissionsQueryBase.parse(query),
+    ...actionPermissionsQueryBase.parse(query),
     query,
   })
   return permissions.map(coercePermission)

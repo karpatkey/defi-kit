@@ -526,7 +526,7 @@ export default [
     id: "0xae2a38545167be5a2eba9b931b28de5a7d95315e0002000000000000000000cc",
     name: "50bCSPX-50sDAI",
     type: "Weighted",
-    gauge: null,
+    gauge: "0xF81c47609E19B1456dDC6acb730F8F5b64840429",
     tokens: [
       {
         address: "0x1e2C4fb7eDE391d116E6B41cD0608260e8801D59",
