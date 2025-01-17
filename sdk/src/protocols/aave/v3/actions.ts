@@ -183,6 +183,16 @@ export const depositToken = (
     })
   }
 
+  if (chain === Chain.eth) {
+    permissions.push(
+      allow.mainnet.aaveV3.incentivesV3.claimRewards(
+        undefined,
+        undefined,
+        c.avatar
+      )
+    )
+  }
+
   return permissions
 }
 
@@ -202,7 +212,7 @@ export const depositEther = (chain: Chain, market: string = "Core") => {
     )
   }
 
-  return [
+  const permissions: Permission[] = [
     ...allowErc20Approve([aNativeToken], [wrappedTokenGatewayV3]),
     {
       ...allow.mainnet.aaveV3.wrappedTokenGatewayCoreV3.depositETH(
@@ -228,6 +238,18 @@ export const depositEther = (chain: Chain, market: string = "Core") => {
       targetAddress: poolV3,
     },
   ]
+
+  if (chain === Chain.eth) {
+    permissions.push(
+      allow.mainnet.aaveV3.incentivesV3.claimRewards(
+        undefined,
+        undefined,
+        c.avatar
+      )
+    )
+  }
+
+  return permissions
 }
 
 export const borrowToken = (
