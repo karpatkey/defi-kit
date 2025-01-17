@@ -267,7 +267,10 @@ export const borrowEther = (chain: Chain) => {
 
 export const stake = () => {
   return [
-    ...allowErc20Approve([contracts.mainnet.spark.usds], [contracts.mainnet.spark.stakingRewards]),
+    ...allowErc20Approve(
+      [contracts.mainnet.spark.usds],
+      [contracts.mainnet.spark.stakingRewards]
+    ),
     allow.mainnet.spark.stakingRewards["stake(uint256,uint16)"](),
     allow.mainnet.spark.stakingRewards.withdraw(),
     allow.mainnet.spark.stakingRewards.exit(),
