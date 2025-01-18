@@ -170,7 +170,7 @@ export const contracts = {
   gnosis: {
     aaveV3: {
       poolV3: "0xb50201558B00496A145fE76f7424749556E326D8",
-      wrappedTokenGatewayV3: "0x90127A46207e97e4205db5CCC1Ec9D6D43633FD4",
+      wrappedTokenGatewayV3: "0x7B9c12915c594a68dE96201Cbdc79147F09da278",
       aGnoWXDAI: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
       variableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
     },
