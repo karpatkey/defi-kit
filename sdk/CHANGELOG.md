@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.0](https://github.com/karpatkey/defi-kit/compare/v2.7.6...v2.8.0) (2025-01-18)
+
+
+### Features
+
+* Spark USDS farming / Aave v3 incentives claiming ([#354](https://github.com/karpatkey/defi-kit/issues/354)) ([e9eaac9](https://github.com/karpatkey/defi-kit/commit/e9eaac9a7879fb2be92bdecb922304538e3a8e55))
+
 ## [2.7.6](https://github.com/karpatkey/defi-kit/compare/v2.7.5...v2.7.6) (2025-01-10)
 
 
