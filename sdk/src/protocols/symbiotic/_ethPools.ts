@@ -48,24 +48,6 @@ export default [
     tokenAddress: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
   },
   {
-    name: "DC_uniETH",
-    address: "0x1C57ea879dd3e8C9fefa8224fdD1fa20dd54211E",
-    tokenSymbol: "uniETH",
-    tokenAddress: "0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4",
-  },
-  {
-    name: "DC_PEPE",
-    address: "0x95C17e3D3950a3ef5bc128ddFBC60f885cEfb0Dc",
-    tokenSymbol: "PEPE",
-    tokenAddress: "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
-  },
-  {
-    name: "DC_SHIB",
-    address: "0x4999D54320af7B1F88B2829363c0F32aC7bB9928",
-    tokenSymbol: "SHIB",
-    tokenAddress: "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
-  },
-  {
     name: "DC_ENA",
     address: "0xe39B5f5638a209c1A6b6cDFfE5d37F7Ac99fCC84",
     tokenSymbol: "ENA",
@@ -118,12 +100,6 @@ export default [
     address: "0x9C0823D3A1172F9DdF672d438dec79c39a64f448",
     tokenSymbol: "LBTC",
     tokenAddress: "0x8236a87084f8B84306f72007F36F2618A5634494",
-  },
-  {
-    name: "DC_hETH",
-    address: "0x852463974AEe1d6155ce3e3d936e76A101A4aF19",
-    tokenSymbol: "hETH",
-    tokenAddress: "0x270B7748CdF8243bFe68FaCE7230ef0fCE695389",
   },
   {
     name: "DC_SWELL",
