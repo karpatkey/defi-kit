@@ -21,6 +21,7 @@ import { Callout } from "nextra/components"
 | `stkABPTv2`                  | [0x9eDA81C21C273a82BE9Bbc19B6A6182212068101](https://etherscan.io/address/0x9eDA81C21C273a82BE9Bbc19B6A6182212068101) |
 | `GHO`                        | [0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f](https://etherscan.io/address/0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f) |
 | `stkGHO`                     | [0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d](https://etherscan.io/address/0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d) |
+| `IncentivesV3`               | [0x8164Cc65827dcFe994AB23944CBC90e0aa80bFcb](https://etherscan.io/address/0x8164Cc65827dcFe994AB23944CBC90e0aa80bFcb) |
 
 ## Action: `deposit`
 
@@ -103,6 +104,20 @@ Redeem `aToken` and withdraw `TARGET` tokens.
   | `amount`  | -                 |
   | `to`      | equal to `AVATAR` |
 
+#### `IncentivesV3 · claimRewards`
+
+Claim incentive rewards for supplying specific tokens.
+
+- **Contract:** `IncentivesV3`
+- **Function:** `claimRewards(address[],uint256,address,address)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `assets`  | -                 |
+  | `amount`  | -                 |
+  | `to`      | equal to `AVATAR` |
+  | `reward`  | -                 |
+
 ### Target: ETH
 
 For `"ETH"` as an element of `targets`, the following functions are allowed:
@@ -164,6 +179,20 @@ Redeem `aEthWETH` and withdraw ETH tokens.
   | `address` | equal to `POOLV3` |
   | `amount`  | -                 |
   | `to`      | equal to `AVATAR` |
+
+#### `IncentivesV3 · claimRewards`
+
+Claim incentive rewards for supplying specific tokens.
+
+- **Contract:** `IncentivesV3`
+- **Function:** `claimRewards(address[],uint256,address,address)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `assets`  | -                 |
+  | `amount`  | -                 |
+  | `to`      | equal to `AVATAR` |
+  | `reward`  | -                 |
 
 ## Action: `borrow`
 

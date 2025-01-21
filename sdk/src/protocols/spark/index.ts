@@ -9,6 +9,7 @@ import {
   depositUSDS,
   borrowEther,
   borrowToken,
+  stake,
 } from "./actions"
 import { Chain } from "../../types"
 
@@ -61,6 +62,10 @@ export const eth = {
         ? borrowEther(Chain.eth)
         : borrowToken(Chain.eth, findToken(ethTokens, target))
     )
+  },
+
+  stake: async () => {
+    return stake()
   },
 }
 

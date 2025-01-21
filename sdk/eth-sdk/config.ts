@@ -31,6 +31,7 @@ export const contracts = {
       wrappedTokenGatewayEtherFiV3:
         "0xAB911dFB2bB9e264EE836F30D3367618f8Aef965",
       meritDistributor: "0x3Ef3D8bA38EBe18DB133cEc108f4D14CE00Dd9Ae",
+      incentivesV3: "0x8164Cc65827dcFe994AB23944CBC90e0aa80bFcb",
     },
     ankr: {
       eth2Staking: "0x84db6ee82b7cf3b47e8f19270abde5718b936670",
@@ -135,6 +136,7 @@ export const contracts = {
       migrationActions: "0xf86141a5657Cf52AEB3E30eBccA5Ad3a8f714B89",
       usds: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
       sUsds: "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
+      stakingRewards: "0x0650CAF159C5A49f711e8169D4336ECB9b950275",
     },
     stader: {
       stakingPoolManager: "0xcf5EA1b38380f6aF39068375516Daf40Ed70D299",
@@ -178,7 +180,7 @@ export const contracts = {
   gnosis: {
     aaveV3: {
       poolV3: "0xb50201558B00496A145fE76f7424749556E326D8",
-      wrappedTokenGatewayV3: "0x90127A46207e97e4205db5CCC1Ec9D6D43633FD4",
+      wrappedTokenGatewayV3: "0x7B9c12915c594a68dE96201Cbdc79147F09da278",
       aGnoWXDAI: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
       variableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
     },

@@ -37,6 +37,8 @@ export const eth = {
   borrow: z.object({
     targets: zEthTokenBorrow.array(),
   }),
+
+  stake: z.object({}),
 }
 
 export const gno = {
