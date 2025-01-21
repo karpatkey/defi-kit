@@ -7,7 +7,7 @@ import { EthPool } from "./types"
 import { NotFoundError } from "../../errors"
 import _ethPools from "./_ethPools"
 
-const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" //underlying asset
+// const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" //underlying asset
 const METAMORPHO_VAULT = "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658" // Replace with the actual vault address
 
 const ETHEREUM_BUNDLER = "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077" // EthereumBundlerV2
@@ -54,7 +54,7 @@ export const eth = {
       // - guy (address): EthereumBundlerV2: 0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077
       // - wad (uni265):  769037620761548058 → gei?
       permissions.push(
-        ...allowErc20Approve([WETH], [ETHEREUM_BUNDLER]),
+        ...allowErc20Approve([contracts.mainnet.weth], [ETHEREUM_BUNDLER]),
         // //Step 1: approuve 0.76 WETH for the bundler
         // {
         //   ...allow.mainnet.morpho.weth9.approve(
@@ -70,7 +70,7 @@ export const eth = {
         // - guy (address): MetaMorpho address: (vault [Gauntlet LRT Core (gtLRTcore)](https://etherscan.io/token/0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658) 0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658
         // - wad (uni265):  769037620761548058 → gei?
         {
-          ...allow.mainnet.morpho.weth9.approve(
+          ...allow.mainnet.weth.approve(
             METAMORPHO_VAULT, //gtLRTcore vault
             undefined,
           ),
@@ -94,7 +94,6 @@ export const eth = {
         //   ...allow.mainnet.morpho.metaMorpho.as,
         // }
       )
-
       return permissions
     })
   },

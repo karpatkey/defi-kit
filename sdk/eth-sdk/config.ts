@@ -105,7 +105,7 @@ export const contracts = {
     },
     morpho: {
       morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
-      weth9: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      // weth9: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",//weth = weth9
       metaMorpho: "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658",
     },
     rocketPool: {
