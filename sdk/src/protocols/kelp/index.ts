@@ -21,7 +21,7 @@ export const eth = {
   stake: async ({
     targets,
   }: {
-    targets: ((typeof tokens)[number]["name"] | { address: `0x${string}` })[]
+    targets: ((typeof tokens)[number]["name"] | (typeof tokens)[number]["address"])[]
   }) => {
     return targets.flatMap((target) => {
       if (target === "stETH" || target === contracts.mainnet.lido.stEth) {
