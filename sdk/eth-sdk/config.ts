@@ -93,6 +93,12 @@ export const contracts = {
       crvMinter: "0xd061D61a4d941c39E5453435B6345Dc261C2fcE0",
       stakeDepositZap: "0x56C526b0159a258887e0d79ec3a80dfb940d0cD7",
     },
+    kelp: {
+      LRTDepositPool: "0x036676389e48133B63a802f8635AD39E752D375D",
+      ethx: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+      rseth: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+      LRTWithdrawalManager: "0x62De59c08eB5dAE4b7E6F7a8cAd3006d6965ec16",
+    },
     lido: {
       stEth: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
       wstEth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
