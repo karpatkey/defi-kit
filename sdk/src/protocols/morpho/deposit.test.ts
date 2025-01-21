@@ -6,10 +6,9 @@ import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 
 // Test constants
-const ETHEREUM_BUNDLER = "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077" // Bundler address
-const METAMORPHO_VAULT = "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658" // Vault address
-const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2" // WETH token address
+const METAMORPHO_VAULT = "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658" // gtLRTcore Vault address 
 const STEAL_ADDRESS = "0xD48573cDA0fed7144f2455c5270FFa16Be389d04" // Address to fund test WETH
+const underlying = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" // WETH
 
 describe("Morpho Protocol", () => {
   describe("Deposit Action", () => {
@@ -17,44 +16,60 @@ describe("Morpho Protocol", () => {
       await applyPermissions(await eth.deposit({ targets: ["gtLRTcore"] }))
     })
 
-    it("approuve 0.76 WETH for the bundler + deposit", async () => {
-      const amount = parseEther("0.76") // Test with 0.76 WETH
-      await stealErc20(contracts.mainnet.weth, amount, STEAL_ADDRESS)
+    it("deposit WETH", async () => {
+      const amount = parseEther("2")
 
-      // Approve WETH for the Ethereum Bundler
-      // kit.asMember.morpho.weth9.attach(WETH).approve(ETHEREUM_BUNDLER, amount)
-
-      // Check that the approval was successful
-      expect(
-        await kit.asMember.morpho.metaMorpho.allowance(
-          STEAL_ADDRESS,
-          ETHEREUM_BUNDLER
-        )
+      await stealErc20(underlying, amount, STEAL_ADDRESS)
+      await kit.asAvatar.weth
+        .attach(underlying)
+        .approve(METAMORPHO_VAULT, amount)
+      await expect(
+        kit.asMember.morpho.metaMorpho.attach(METAMORPHO_VAULT).
+        deposit(amount, avatar.address)
       ).not.toRevert()
-
-      // Deposit WETH into the vault
-      // await expect(
-      //   kit.asMember.morpho.metaMorpho
-      //     .attach(METAMORPHO_VAULT)
-      //     .deposit(amount, avatar.address)
-      // ).not.toRevert()
-      
     })
 
-    // it("deposit 2 WETH into the vault", async () => {
-    //   const amount = parseEther("2") // Test with 2 WETH
-    //   // await stealErc20(WETH, amount, STEAL_ADDRESS)
+    it("mint ", async () => {
+      const amount = parseEther("1")
+      const shareAmount = await kit.asAvatar.morpho.metaMorpho.convertToShares(amount/2n)// Test with 0.76 WETH
 
-    //   // Approve WETH for the vault
-    //   kit.asMember.morpho.weth9.attach(WETH).approve(METAMORPHO_VAULT, amount)
+      await stealErc20(underlying, amount, STEAL_ADDRESS)
+      await kit.asAvatar.weth
+        .attach(underlying)
+        .approve(METAMORPHO_VAULT, amount)
+      await expect(
+        kit.asMember.morpho.metaMorpho.attach(METAMORPHO_VAULT).
+        mint(shareAmount, avatar.address)
+      ).not.toRevert()
+    })
 
-    //   // Deposit WETH into the vault
-    //   await expect(
-    //     kit.asMember.morpho.metaMorpho
-    //       .attach(METAMORPHO_VAULT)
-    //       .deposit(amount, avatar.address)
-    //   ).not.toRevert()
-    // })
-    // why it can't work hereeeeee whyyyyyyy
+    it("withdraw ", async () => {
+      const amount = parseEther("1")
+
+      await stealErc20(underlying, amount, STEAL_ADDRESS)
+      await kit.asAvatar.weth
+        .attach(underlying)
+        .approve(METAMORPHO_VAULT, amount)
+      console.log("address avatar = ", avatar.address)
+      console.log("balance before withdraw = ", await kit.asAvatar.morpho.metaMorpho.attach(METAMORPHO_VAULT).balanceOf(avatar.address))
+      await expect(
+        kit.asMember.morpho.metaMorpho.attach(METAMORPHO_VAULT).
+        withdraw(amount, avatar.address, avatar.address)
+      ).not.toRevert()
+    })
+
+    it("redeem ", async () => {
+      const amount = parseEther("1")
+      const shareAmount = await kit.asAvatar.morpho.metaMorpho.convertToShares(amount/2n)// Test with 0.76 WETH
+
+      await stealErc20(underlying, amount, STEAL_ADDRESS)
+      await kit.asAvatar.weth
+        .attach(underlying)
+        .approve(METAMORPHO_VAULT, amount)
+      await expect(
+        kit.asMember.morpho.metaMorpho.attach(METAMORPHO_VAULT).
+        redeem(shareAmount, avatar.address, avatar.address)
+      ).not.toRevert()
+    })
   })
 })
