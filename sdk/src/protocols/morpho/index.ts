@@ -6,6 +6,7 @@ import { contracts } from "../../../eth-sdk/config"
 import { EthPool } from "./types"
 import { NotFoundError } from "../../errors"
 import _ethPools from "./_ethPools"
+import { borrow } from "../maker/actions"
 
 const METAMORPHO_VAULT = "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658" // Replace with the actual vault address
 // const ETHEREUM_BUNDLER = "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077" // EthereumBundlerV2
@@ -36,6 +37,7 @@ export const eth = {
       const permissions: Permission[] = []
 
       permissions.push(
+        // *** metaMorpho *** //
         {
           ...allow.mainnet.weth.approve(
             pool.address, //gtLRTcore vault
@@ -73,8 +75,120 @@ export const eth = {
           ),
           targetAddress: pool.address,
         },
+
+       
       )
       return permissions
     })
   },
+  borrow: async ({
+    targets,
+  }: {
+    targets: (EthPool["symbol"] | EthPool["address"])[]
+  }) => {
+    return targets.flatMap((target) => {
+      const pool = findPool(target)
+      const permissions: Permission[] = []
+
+      permissions.push(
+       // *** Morpho Blue *** //
+
+       //Step0: appove: wstETH 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0
+       //amount : 0.0 -> spender: 0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077
+       //-> amount: 238442112376260655301
+
+        //Step0: appove: wstETH 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0
+       //amount : 0.0 -> spender: 0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb
+       //-> amount: 238442112376260655301
+
+        //- Step1: supplyCollateral**
+        //   loanToken: pool.asset.address,
+        //   collateralToken: pool.address,
+        //   oracle: contracts.mainnet.oracle.address,
+        //   irm: contracts.mainnet.interestRateModel.address,
+        //   lltv: pool.lltv,
+        //0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,
+        // 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0,
+        // 0xbD60A6770b27E084E8617335ddE769241B0e71D8,
+        // 0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
+        // },
+        // asset: pool.asset.address,
+        // onBehalf: c.avatar, 0x0EFcCBb9E2C09Ea29551879bd9Da32362b32fc89
+        // {
+        //   ...allow.mainnet.morpho.morphoBlue.supplyCollateral(
+        //       {
+        //         //marketParams:
+        //       //   loanToken: pool.asset.address,
+        //       //   collateralToken: pool.address,
+        //       //   oracle: contracts.mainnet.oracle.address,
+        //       //   irm: contracts.mainnet.interestRateModel.address,
+        //       //   lltv: pool.lltv,
+        //       // },
+        //       // asset: pool.asset.address,
+        //       // onBehalf: c.avatar,
+        //     }
+        //   )
+        // },
+        
+        //Step 1.1: reallocateTo
+        //contract: publicAllocator 0xfd32fA2ca22c76dD6E550706Ad913FC6CE91c75D
+        //vault: 0x2371e134e3455e0593363cBF89d3b6cf53740618
+        //withdrawls [tuple]:0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,
+        // 0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599,
+        // 0xc29B3Bc033640baE31ca53F8a0Eb892AdF68e663,
+        // 0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
+        //supplyMarketParams: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,
+        // 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0,
+        // 0xbD60A6770b27E084E8617335ddE769241B0e71D8,
+        // 0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
+
+        //Step2: borrow
+        //contract: morpho 0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb
+          //marketParams:0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0,0xbD60A6770b27E084E8617335ddE769241B0e71D8,0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
+
+        //   loanToken: pool.asset.address,
+        //   collateralToken: pool.address,
+        //   oracle: contracts.mainnet.oracle.address,
+        //   irm: contracts.mainnet.interestRateModel.address,
+        //   lltv: pool.lltv,
+        // },
+        // asset: 25944520971279508434
+        // onBehalf: c.avatar, 0x0EFcCBb9E2C09Ea29551879bd9Da32362b32fc89
+        // - receiver (address) 0x0EFcCBb9E2C09Ea29551879bd9Da32362b32fc89
+        // - data (optional)?
+        // **Results:**
+        // _0: The amount of assets borrowed.
+        // _1: The amount of shares minted.
+
+        //Step3: withdraw
+          //marketParams:
+        //   loanToken: pool.asset.address,
+        //   collateralToken: pool.address,
+        //   oracle: contracts.mainnet.oracle.address,
+        //   irm: contracts.mainnet.interestRateModel.address,
+        //   lltv: pool.lltv,
+        // },
+        // asset: pool.asset.address,
+        // onBehalf: c.avatar,
+        // - receiver (address)
+        // - data (optional)?
+        // **Results:**
+        // _0: The amount of assets withdrawn.
+        // _1: The amount of shares burned.
+
+
+        //Step4: withdrawCollateral
+          //marketParams:
+        //   loanToken: pool.asset.address,
+        //   collateralToken: pool.address,
+        //   oracle: contracts.mainnet.oracle.address,
+        //   irm: contracts.mainnet.interestRateModel.address,
+        //   lltv: pool.lltv,
+        // },
+        // asset: pool.asset.address,
+        // onBehalf: c.avatar,
+        // - receiver (address)
+      )
+    },
+  )
 }
