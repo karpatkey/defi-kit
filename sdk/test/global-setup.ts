@@ -7,7 +7,9 @@ import { ANVIL_PORTS } from "./chains"
 import { Chain } from "../src/types"
 
 export default async () => {
-  await Promise.all(Object.values(Chain).map(chainId => prepareChain(chainId)))
+  await Promise.all(
+    Object.values(Chain).map((chainId) => prepareChain(chainId))
+  )
 }
 
 async function prepareChain(chain: Chain) {

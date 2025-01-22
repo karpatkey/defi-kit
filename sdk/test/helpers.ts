@@ -181,7 +181,8 @@ export const execThroughRole = async (
     data,
     value,
     operation = 0,
-  }: {chain: Chain,
+  }: {
+    chain: Chain
     to: `0x${string}`
     data?: `0x${string}`
     value?: `0x${string}`

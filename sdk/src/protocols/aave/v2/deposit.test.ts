@@ -10,7 +10,10 @@ import { Chain } from "../../../../src"
 describe("aaveV2", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await applyPermissions(Chain.eth, await eth.deposit({ targets: ["ETH", "USDC"] }))
+      await applyPermissions(
+        Chain.eth,
+        await eth.deposit({ targets: ["ETH", "USDC"] })
+      )
     })
 
     // Test with ETH

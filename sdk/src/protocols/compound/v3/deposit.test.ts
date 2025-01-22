@@ -9,7 +9,10 @@ import { Chain } from "../../../../src"
 describe.skip("compoundV3", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await applyPermissions(Chain.eth, await eth.deposit({ targets: ["cUSDCv3"] }))
+      await applyPermissions(
+        Chain.eth,
+        await eth.deposit({ targets: ["cUSDCv3"] })
+      )
     })
 
     // Deposit USDC

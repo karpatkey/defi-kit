@@ -9,7 +9,6 @@ export const CHAIN_ID = {
   [Chain.base]: 8453,
 } as const
 
-
 export const ethProvider = new JsonRpcProvider("https://rpc.eth.gateway.fm", {
   chainId: CHAIN_ID[Chain.eth],
   name: "Ethereum",
@@ -34,7 +33,7 @@ export const arb1Provider = new JsonRpcProvider(
 export const oethProvider = new JsonRpcProvider(
   "https://optimism.llamarpc.com",
   {
-    chainId:CHAIN_ID[Chain.oeth],
+    chainId: CHAIN_ID[Chain.oeth],
     name: "Optimism",
   }
 )

@@ -10,7 +10,10 @@ const eAddress = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 describe("stakeWiseV2", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await applyPermissions(Chain.eth, await eth.deposit({ targets: ["ETH-sETH2 0.3%"] }))
+      await applyPermissions(
+        Chain.eth,
+        await eth.deposit({ targets: ["ETH-sETH2 0.3%"] })
+      )
     })
 
     // TODO: fix this test

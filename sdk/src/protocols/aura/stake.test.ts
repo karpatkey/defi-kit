@@ -21,7 +21,12 @@ describe("aura", () => {
       )
     })
     it("mint auraBAL using BAL, stake and compound", async () => {
-      await stealErc20(Chain.eth, bal, parseEther("3"), contracts.mainnet.balancer.vault)
+      await stealErc20(
+        Chain.eth,
+        bal,
+        parseEther("3"),
+        contracts.mainnet.balancer.vault
+      )
       await expect(
         kit.asMember.usdc
           .attach(bal)

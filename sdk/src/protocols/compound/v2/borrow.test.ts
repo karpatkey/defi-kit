@@ -9,8 +9,14 @@ import { Chain } from "../../../../src"
 describe("compoundV2", () => {
   describe("borrow", () => {
     beforeAll(async () => {
-      await applyPermissions(Chain.eth, await eth.deposit({ targets: ["ETH", "USDC"] }))
-      await applyPermissions(Chain.eth, await eth.borrow({ tokens: ["ETH", "USDC"] }))
+      await applyPermissions(
+        Chain.eth,
+        await eth.deposit({ targets: ["ETH", "USDC"] })
+      )
+      await applyPermissions(
+        Chain.eth,
+        await eth.borrow({ tokens: ["ETH", "USDC"] })
+      )
     })
 
     it("deposit USDC", async () => {

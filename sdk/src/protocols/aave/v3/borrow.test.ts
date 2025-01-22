@@ -11,11 +11,11 @@ describe("aaveV3", () => {
   describe("borrow", () => {
     beforeAll(async () => {
       await applyPermissions(
-        Chain.eth, 
+        Chain.eth,
         await eth.deposit({ market: "Core", targets: ["ETH", "USDC"] })
       )
       await applyPermissions(
-        Chain.eth, 
+        Chain.eth,
         await eth.borrow({ market: "Core", targets: ["ETH", "USDC"] })
       )
     })

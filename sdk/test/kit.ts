@@ -19,7 +19,6 @@ import { execThroughRole } from "./helpers"
 import { ContractFactories, KnownContracts } from "@gnosis-guild/zodiac"
 import { Chain } from "../src"
 
-
 /** We need to skip over functions with "view" state mutability. We do this by matching the ethers ContractMethod type  */
 interface StateMutatingContractMethod {
   (): Promise<ContractTransactionResponse>
@@ -199,13 +198,17 @@ const initGnoKits = async () => {
 }
 
 const initArb1Kits = async () => {
-  const avatarSdk = getArbitrumOneSdk(await createSigner(Chain.arb1, wallets.avatar))
+  const avatarSdk = getArbitrumOneSdk(
+    await createSigner(Chain.arb1, wallets.avatar)
+  )
   const memberSdk = mapSdk(avatarSdk, Chain.arb1)
   return { asAvatar: avatarSdk, asMember: memberSdk }
 }
 
 const initOethKits = async () => {
-  const avatarSdk = getOptimismSdk(await createSigner(Chain.oeth, wallets.avatar))
+  const avatarSdk = getOptimismSdk(
+    await createSigner(Chain.oeth, wallets.avatar)
+  )
   const memberSdk = mapSdk(avatarSdk, Chain.oeth)
   return { asAvatar: avatarSdk, asMember: memberSdk }
 }

@@ -18,7 +18,12 @@ describe("convex", () => {
       await applyPermissions(Chain.eth, await eth.lock())
     })
     it("only allow lock, process expired locks and claim to avatar", async () => {
-      await stealErc20(Chain.eth, cvx, parseEther("1"), contracts.mainnet.balancer.vault)
+      await stealErc20(
+        Chain.eth,
+        cvx,
+        parseEther("1"),
+        contracts.mainnet.balancer.vault
+      )
       await expect(
         kit.asMember.usdc
           .attach(cvx)

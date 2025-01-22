@@ -13,10 +13,18 @@ const cvxCrv = "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7"
 describe("convex", () => {
   describe("stake", () => {
     beforeAll(async () => {
-      await applyPermissions(Chain.eth, await eth.stake({ targets: ["CVX", "cvxCRV"] }))
+      await applyPermissions(
+        Chain.eth,
+        await eth.stake({ targets: ["CVX", "cvxCRV"] })
+      )
     })
     it("convert CRV to cvxCRV", async () => {
-      await stealErc20(Chain.eth, crv, parseEther("2"), contracts.mainnet.balancer.vault)
+      await stealErc20(
+        Chain.eth,
+        crv,
+        parseEther("2"),
+        contracts.mainnet.balancer.vault
+      )
       await expect(
         kit.asMember.usdc
           .attach(crv)
@@ -51,7 +59,12 @@ describe("convex", () => {
         kit.asMember.convex.stkCvxCrv.stake(parseEther("1"), wallets.avatar)
       ).not.toRevert()
 
-      await stealErc20(Chain.eth, crv, parseEther("1"), contracts.mainnet.balancer.vault)
+      await stealErc20(
+        Chain.eth,
+        crv,
+        parseEther("1"),
+        contracts.mainnet.balancer.vault
+      )
       await expect(
         kit.asMember.usdc
           .attach(crv)
@@ -84,7 +97,12 @@ describe("convex", () => {
     }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
 
     it("stake and withdraw CVX / claim rewards", async () => {
-      await stealErc20(Chain.eth, cvx, parseEther("1"), contracts.mainnet.balancer.vault)
+      await stealErc20(
+        Chain.eth,
+        cvx,
+        parseEther("1"),
+        contracts.mainnet.balancer.vault
+      )
       await expect(
         kit.asMember.usdc
           .attach(cvx)
