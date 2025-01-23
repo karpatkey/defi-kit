@@ -7,10 +7,9 @@ import { parseEther } from "ethers"
 
 // Test constants
 const MorphoBluePool = "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb" // gtLRTcore Vault address
-const STEAL_ADDRESS = "0xD48573cDA0fed7144f2455c5270FFa16Be389d04" // Address to fund test WETH
+const STEAL_ADDRESS = "0xacB7027f271B03B502D65fEBa617a0d817D62b8e" // Address wstETH
 const underlying_wsteth = "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0" // WstETH
-const marketId =
-  "0xb8fc70e82bc5bb53e773626fcc6a23f7eefa036918d7ef216ecfb1950a94a85e"
+const marketId = "0xb8fc70e82bc5bb53e773626fcc6a23f7eefa036918d7ef216ecfb1950a94a85e"
 // const loanToken = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"//WETH9
 // const collateralToken = "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"//WstETH
 // const oracle = "0xbD60A6770b27E084E8617335ddE769241B0e71D8"//MorphoChainlinkOracleV2
@@ -28,12 +27,12 @@ describe("Morpho Blue borrow", () => {
         })
       )
     })
-    
-    it("supplyCollateral WstETH", async () => {
-      const amount = parseEther("2")
-      const shareAmount = BigInt(amount.toString())
 
-      await stealErc20(underlying_wsteth, amount, STEAL_ADDRESS)
+    it("supplyCollateral WstETH", async () => {
+      const amount = BigInt(parseEther("2").toString())
+      const shareAmount = BigInt((amount/2n).toString())
+
+      await stealErc20(underlying_wsteth, parseEther("10"), STEAL_ADDRESS)
       await kit.asAvatar.weth
         .attach(underlying_wsteth)
         .approve(MorphoBluePool, amount)
@@ -45,7 +44,7 @@ describe("Morpho Blue borrow", () => {
             amount,
             shareAmount,
             avatar.address,
-            "0x"
+            avatar.address,
           )
       ).not.toRevert()
     })

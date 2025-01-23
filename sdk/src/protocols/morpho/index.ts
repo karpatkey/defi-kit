@@ -148,7 +148,7 @@ export const eth = {
             c.avatar, //onBehalf
             "0x",
           ),
-          targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
+          // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
         },
 
         //Step 1.1: reallocateTo
@@ -165,7 +165,7 @@ export const eth = {
         {
           ...allow.mainnet.morpho.publicAllocator.reallocateTo(
           ),
-          targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
+          // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
         },
 
         //Step2: borrow
@@ -193,7 +193,7 @@ export const eth = {
             c.avatar,
             c.avatar,
           ),
-          targetAddress: pool.marketId, //TO CHANGE WITH NEW MORPHO BLUE POOL
+          // targetAddress: pool.marketId, //TO CHANGE WITH NEW MORPHO BLUE POOL
         },
 
         //Step3: withdraw
@@ -227,7 +227,7 @@ export const eth = {
             c.avatar,
             // "0x",
           ),
-          targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
+          // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
         },
 
         //Step4: withdrawCollateral
@@ -248,7 +248,7 @@ export const eth = {
             c.avatar,
             c.avatar,
           ),
-          targetAddress: pool.marketId, //TO CHANGE WITH NEW MORPHO BLUE POOL
+          // targetAddress: pool.marketId, //TO CHANGE WITH NEW MORPHO BLUE POOL
         },
       )
       return permissions
