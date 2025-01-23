@@ -4,20 +4,26 @@ import { allowErc20Approve } from "../../conditions"
 import { c } from "zodiac-roles-sdk"
 import { contracts } from "../../../eth-sdk/config"
 import { EthPool } from "./types"
+import { EthBluePool } from "./types"
 import { NotFoundError } from "../../errors"
 import _ethPools from "./_ethPools"
-import { borrow } from "../maker/actions"
+import _ethBluePools from "./_ethBluePools"
 
 const METAMORPHO_VAULT = "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658" // Replace with the actual vault address
 // const ETHEREUM_BUNDLER = "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077" // EthereumBundlerV2
-const morphoBluePoolTest = {
-  loanToken: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-  collateralToken: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-  irm: "0xbD60A6770b27E084E8617335ddE769241B0e71D8",
-  lltv: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-}
+const morphoBluePoolTest = [
+  "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", //loanToken
+  "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0", //collateralToken
+  "0xbD60A6770b27E084E8617335ddE769241B0e71D8", //oracle
+  "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC", //irm
+  "965000000000000000" //lltv
+]
+//0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,
+// 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0,
+// 0xbD60A6770b27E084E8617335ddE769241B0e71D8,
+// 0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
 
-const asset: ""
+// const asset: ""
 
 const findPool = (nameOrAddress: string) => {
   const pools = _ethPools
@@ -27,6 +33,19 @@ const findPool = (nameOrAddress: string) => {
       pool.name.toLowerCase() === nameOrAddressLower ||
       pool.address.toLowerCase() === nameOrAddressLower ||
       pool.symbol.toLowerCase() === nameOrAddressLower
+  )
+  if (!pool) {
+    throw new NotFoundError(`Pool not found: ${nameOrAddress}`)
+  }
+  return pool
+}
+
+const findBluePool = (nameOrAddress: string) => {
+  const pools = _ethBluePools
+  const nameOrAddressLower = nameOrAddress.toLowerCase()
+  const pool = pools.find(
+    (pool) =>
+      pool.marketId.toLowerCase() === nameOrAddressLower
   )
   if (!pool) {
     throw new NotFoundError(`Pool not found: ${nameOrAddress}`)
@@ -82,12 +101,12 @@ export const eth = {
     })
   },
   borrow: async ({
-    targets,
+    blueTargets,
   }: {
-    targets: (EthPool["symbol"] | EthPool["address"])[]
+    blueTargets: (EthBluePool["marketId"])[]
   }) => {
-    return targets.flatMap((target) => {
-      const pool = findPool(target)
+    return blueTargets.flatMap((blueTarget) => {
+      const pool = findBluePool(blueTarget)
       const permissions: Permission[] = []
 
       permissions.push(
@@ -117,7 +136,7 @@ export const eth = {
         {
           ...allow.mainnet.morpho.morphoBlue.supplyCollateral(
             //marketParams:
-            morphoBluePoolTest,
+            undefined,//morphoBluePoolTest,
             // [
             //   undefined, // -> loanToken
             //   undefined, // -> collateralToken
@@ -128,7 +147,7 @@ export const eth = {
             c.avatar, //onBehalf
             "0x",
           ),
-          targetAddress: pool.address,//TO CHANGE WITH NEW MORPHO BLUE POOL
+          targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
         },
 
         //Step 1.1: reallocateTo
@@ -145,7 +164,7 @@ export const eth = {
         {
           ...allow.mainnet.morpho.publicAllocator.reallocateTo(
           ),
-          targetAddress: pool.address,//TO CHANGE WITH NEW MORPHO BLUE POOL
+          targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
         },
 
         //Step2: borrow
@@ -167,13 +186,14 @@ export const eth = {
 
         {
           ...allow.mainnet.morpho.morphoBlue.borrow(
-            morphoBluePoolTest,
+            undefined,//morphoBluePoolTest,
             undefined,
             undefined,
             c.avatar,
             c.avatar,
-          )
-        }
+          ),
+          targetAddress: pool.marketId, //TO CHANGE WITH NEW MORPHO BLUE POOL
+        },
 
         //Step3: withdraw
         //marketParams:
@@ -190,6 +210,24 @@ export const eth = {
         // **Results:**
         // _0: The amount of assets withdrawn.
         // _1: The amount of shares burned.
+        {
+          ...allow.mainnet.morpho.morphoBlue.withdraw(
+            //marketParams:
+            undefined,//morphoBluePoolTest,
+            undefined,
+            // [
+            //   undefined, // -> loanToken
+            //   undefined, // -> collateralToken
+            //   undefined, //irm
+            //   undefined, //-> lltv
+            // ],
+            undefined, //asset
+            c.avatar, //onBehalf
+            c.avatar,
+            // "0x",
+          ),
+          targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
+        },
 
         //Step4: withdrawCollateral
         //marketParams:
@@ -202,7 +240,17 @@ export const eth = {
         // asset: pool.asset.address,
         // onBehalf: c.avatar,
         // - receiver (address)
+        {
+          ...allow.mainnet.morpho.morphoBlue.withdrawCollateral(
+            undefined,//morphoBluePoolTest,
+            undefined,
+            c.avatar,
+            c.avatar,
+          ),
+          targetAddress: pool.marketId, //TO CHANGE WITH NEW MORPHO BLUE POOL
+        },
       )
+      return permissions
     })
   },
 }
