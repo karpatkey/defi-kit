@@ -39,12 +39,11 @@ describe("Morpho Blue borrow", () => {
       await expect(
         kit.asMember.morpho.morphoBlue
           .attach(MorphoBluePool)
-          .borrow(
+          .supplyCollateral(
             await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
             amount,
-            shareAmount,
             avatar.address,
-            avatar.address,
+            "0x",
           )
       ).not.toRevert()
     })

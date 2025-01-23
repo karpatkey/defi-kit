@@ -117,9 +117,23 @@ export const eth = {
         //amount : 0.0 -> spender: 0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077
         //-> amount: 238442112376260655301
 
-        //Step0: appove: wstETH 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0
+        //Step0: appove for morphoBlue: wstETH 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0
         //amount : 0.0 -> spender: 0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb
         //-> amount: 238442112376260655301
+
+
+        // [ **** NECESSARY TO DO ??? **** ]
+        //Authorize the bundler to manage your Morpho positions
+        // allow.mainnet.morpho.morphoBlue.setAuthorization(
+        //     "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077",
+        //     true,
+        // ),
+        //Approve spending of 284,06 stETH for Bundler → approve
+        // allow.mainnet.lido.stEth.approve(
+        //     "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077",
+        //     "284069668060028402805",
+        //   ),
+        // **** [END] **** //
 
         //- Step1: supplyCollateral**
         //   loanToken: pool.asset.address,
