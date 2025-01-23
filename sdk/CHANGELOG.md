@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.2](https://github.com/karpatkey/defi-kit/compare/v2.8.1...v2.8.2) (2025-01-23)
+
+
+### Bug Fixes
+
+* Balancer Repertoire Actions / Aura Repertoire Actions renaming ([#360](https://github.com/karpatkey/defi-kit/issues/360)) ([68d13e7](https://github.com/karpatkey/defi-kit/commit/68d13e7541dea1f2ab8c1d91a533ab51de486284))
+
 ## [2.8.1](https://github.com/karpatkey/defi-kit/compare/v2.8.0...v2.8.1) (2025-01-23)
 
 
