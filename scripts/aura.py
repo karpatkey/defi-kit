@@ -57,10 +57,10 @@ def protocol_data(blockchain = Chain.ETHEREUM):
 
             try:
                 pool_id = lptoken_contract.functions.getPoolId().call()
-            except ContractLogicError:
+            except (ContractLogicError, ValueError):
                 try:
                     pool_id = lptoken_contract.functions.POOL_ID().call()
-                except ContractLogicError:
+                except (ContractLogicError, ValueError):
                     pool_id = None
             
             if pool_id is not None:
