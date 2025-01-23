@@ -93,7 +93,7 @@ describe("aaveV2", () => {
       await advanceTime(2)
       await expect(
         kit.asMember.aaveV2.stkAbptV2.claimRewards(avatar.address, 1)
-      ).not.toRevert()
+      ).toBeAllowed() // Replaced not.toRevert() with toBeAllowed().
 
       await expect(kit.asMember.aaveV2.stkAbptV2.cooldown()).not.toRevert()
 
@@ -104,7 +104,7 @@ describe("aaveV2", () => {
       ).not.toRevert()
       await expect(
         kit.asMember.aaveV2.stkAbptV2.claimRewards(avatar.address, 1)
-      ).not.toRevert()
+      ).toBeAllowed() // Replaced not.toRevert() with toBeAllowed().
     })
 
     it("only allows staking ABPT and claiming AAVE from avatar", async () => {
@@ -137,7 +137,7 @@ describe("aaveV2", () => {
       await advanceTime(2)
       await expect(
         kit.asMember.aaveV2.stkGho.claimRewards(avatar.address, 1)
-      ).toBeAllowed() // Replaced not.toRevert() with toBeAllowed() because it was failing for an unknown reason.
+      ).toBeAllowed() // Replaced not.toRevert() with toBeAllowed().
 
       await expect(kit.asMember.aaveV2.stkGho.cooldown()).not.toRevert()
 
@@ -148,7 +148,7 @@ describe("aaveV2", () => {
       ).not.toRevert()
       await expect(
         kit.asMember.aaveV2.stkGho.claimRewards(avatar.address, 1)
-      ).toBeAllowed() // Replaced not.toRevert() with toBeAllowed() because it was failing for an unknown reason.
+      ).toBeAllowed() // Replaced not.toRevert() with toBeAllowed().
     })
 
     it("only allows staking GHO and claiming AAVE from avatar", async () => {
