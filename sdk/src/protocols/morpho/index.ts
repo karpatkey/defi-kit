@@ -201,7 +201,13 @@ export const eth = {
 
         {
           ...allow.mainnet.morpho.morphoBlue.borrow(
-            undefined,//morphoBluePoolTest,
+            {
+              loanToken: pool.loanToken,
+              collateralToken: pool.collateralToken,
+              oracle: pool.oracle,
+              irm: pool.irm,
+              lltv: pool.lltv,
+            },
             undefined,
             undefined,
             c.avatar,
