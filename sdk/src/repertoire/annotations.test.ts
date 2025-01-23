@@ -2,7 +2,7 @@ import { eth } from "."
 
 describe("annotations", () => {
   it("should annotate all repertoire functions", async () => {
-    const permissionSet = await eth.aura.withdraw({
+    const permissionSet = await eth.aura.unstake({
       rewarder: "0xB9D6ED734Ccbdd0b9CadFED712Cf8AC6D0917EcD",
     })
     expect(permissionSet).toHaveProperty("annotation", {

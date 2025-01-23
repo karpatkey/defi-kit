@@ -6,8 +6,11 @@ export const eth = {
   unstake: async ({ rewarder }: { rewarder: `0x${string}` }) =>
     withdrawOptions(rewarder),
 
-  unstake_withdraw_proportional: async ({ rewarder }: { rewarder: `0x${string}` }) =>
-    withdrawOptions(rewarder, true, Chain.eth, ExitKind.proportional),
+  unstake_withdraw_proportional: async ({
+    rewarder,
+  }: {
+    rewarder: `0x${string}`
+  }) => withdrawOptions(rewarder, true, Chain.eth, ExitKind.proportional),
 
   unstake_withdraw_single_token: async ({
     rewarder,
@@ -29,8 +32,11 @@ export const gno = {
   unstake: async ({ rewarder }: { rewarder: `0x${string}` }) =>
     withdrawOptions(rewarder),
 
-  unstake_withdraw_proportional: async ({ rewarder }: { rewarder: `0x${string}` }) =>
-    withdrawOptions(rewarder, true, Chain.gno, ExitKind.proportional),
+  unstake_withdraw_proportional: async ({
+    rewarder,
+  }: {
+    rewarder: `0x${string}`
+  }) => withdrawOptions(rewarder, true, Chain.gno, ExitKind.proportional),
 
   unstake_withdraw_single_token: async ({
     rewarder,
@@ -52,8 +58,11 @@ export const arb1 = {
   unstake: async ({ rewarder }: { rewarder: `0x${string}` }) =>
     withdrawOptions(rewarder),
 
-  unstake_withdraw_proportional: async ({ rewarder }: { rewarder: `0x${string}` }) =>
-    withdrawOptions(rewarder, true, Chain.arb1, ExitKind.proportional),
+  unstake_withdraw_proportional: async ({
+    rewarder,
+  }: {
+    rewarder: `0x${string}`
+  }) => withdrawOptions(rewarder, true, Chain.arb1, ExitKind.proportional),
 
   unstake_withdraw_single_token: async ({
     rewarder,
@@ -75,8 +84,11 @@ export const oeth = {
   unstake: async ({ rewarder }: { rewarder: `0x${string}` }) =>
     withdrawOptions(rewarder),
 
-  unstake_withdraw_proportional: async ({ rewarder }: { rewarder: `0x${string}` }) =>
-    withdrawOptions(rewarder, true, Chain.oeth, ExitKind.proportional),
+  unstake_withdraw_proportional: async ({
+    rewarder,
+  }: {
+    rewarder: `0x${string}`
+  }) => withdrawOptions(rewarder, true, Chain.oeth, ExitKind.proportional),
 
   unstake_withdraw_single_token: async ({
     rewarder,
@@ -98,8 +110,11 @@ export const base = {
   unstake: async ({ rewarder }: { rewarder: `0x${string}` }) =>
     withdrawOptions(rewarder),
 
-  unstake_withdraw_proportional: async ({ rewarder }: { rewarder: `0x${string}` }) =>
-    withdrawOptions(rewarder, true, Chain.base, ExitKind.proportional),
+  unstake_withdraw_proportional: async ({
+    rewarder,
+  }: {
+    rewarder: `0x${string}`
+  }) => withdrawOptions(rewarder, true, Chain.base, ExitKind.proportional),
 
   unstake_withdraw_single_token: async ({
     rewarder,
