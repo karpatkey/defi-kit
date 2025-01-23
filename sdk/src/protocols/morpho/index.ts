@@ -8,6 +8,7 @@ import { EthBluePool } from "./types"
 import { NotFoundError } from "../../errors"
 import _ethPools from "./_ethPools"
 import _ethBluePools from "./_ethBluePools"
+import { isAddress } from "ethers"
 
 const METAMORPHO_VAULT = "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658" // Replace with the actual vault address
 // const ETHEREUM_BUNDLER = "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077" // EthereumBundlerV2
@@ -39,16 +40,16 @@ const findPool = (nameOrAddress: string) => {
   }
   return pool
 }
-
-const findBluePool = (nameOrAddress: string) => {
+//bytes32
+const findBluePool = (marketIdAddress: string) => {
   const pools = _ethBluePools
-  const nameOrAddressLower = nameOrAddress.toLowerCase()
+  const marketIdLower = marketIdAddress.toLowerCase()
   const pool = pools.find(
     (pool) =>
-      pool.marketId.toLowerCase() === nameOrAddressLower
+      pool.marketId.toLowerCase() === marketIdLower
   )
   if (!pool) {
-    throw new NotFoundError(`Pool not found: ${nameOrAddress}`)
+    throw new NotFoundError(`Pool not found: ${marketIdAddress}`)
   }
   return pool
 }
