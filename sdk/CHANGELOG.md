@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.1](https://github.com/karpatkey/defi-kit/compare/v2.8.0...v2.8.1) (2025-01-23)
+
+
+### Bug Fixes
+
+* Aura nightly job ([#357](https://github.com/karpatkey/defi-kit/issues/357)) ([c4dbe04](https://github.com/karpatkey/defi-kit/commit/c4dbe04bcb544de40f14bb31f7c49c93a4d0e49b))
+
 ## [2.8.0](https://github.com/karpatkey/defi-kit/compare/v2.7.6...v2.8.0) (2025-01-18)
 
 
