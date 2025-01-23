@@ -23,8 +23,14 @@ export const eth = {
       gauge
     ),
 
-  unstake_withdraw_single: async ({ gauge }: { gauge: `0x${string}` }) =>
-    withdrawOptions(Chain.eth, undefined, ExitKind.single, undefined, gauge),
+  unstake_withdraw_single: async ({ 
+    gauge,
+    exitTokenAddress,
+   }: { 
+    gauge: `0x${string}`,
+    exitTokenAddress: `0x${string}`
+  }) =>
+    withdrawOptions(Chain.eth, undefined, ExitKind.single, exitTokenAddress, gauge),
 }
 
 export const gno = {
@@ -48,8 +54,14 @@ export const gno = {
       gauge
     ),
 
-  unstake_withdraw_single: async ({ gauge }: { gauge: `0x${string}` }) =>
-    withdrawOptions(Chain.gno, undefined, ExitKind.single, undefined, gauge),
+    unstake_withdraw_single: async ({ 
+      gauge,
+      exitTokenAddress,
+     }: { 
+      gauge: `0x${string}`,
+      exitTokenAddress: `0x${string}`
+    }) =>
+      withdrawOptions(Chain.gno, undefined, ExitKind.single, exitTokenAddress, gauge),
 }
 
 export const arb1 = {
@@ -73,8 +85,14 @@ export const arb1 = {
       gauge
     ),
 
-  unstake_withdraw_single: async ({ gauge }: { gauge: `0x${string}` }) =>
-    withdrawOptions(Chain.arb1, undefined, ExitKind.single, undefined, gauge),
+    unstake_withdraw_single: async ({ 
+      gauge,
+      exitTokenAddress,
+     }: { 
+      gauge: `0x${string}`,
+      exitTokenAddress: `0x${string}`
+    }) =>
+      withdrawOptions(Chain.arb1, undefined, ExitKind.single, exitTokenAddress, gauge),
 }
 
 export const oeth = {
@@ -98,8 +116,14 @@ export const oeth = {
       gauge
     ),
 
-  unstake_withdraw_single: async ({ gauge }: { gauge: `0x${string}` }) =>
-    withdrawOptions(Chain.oeth, undefined, ExitKind.single, undefined, gauge),
+    unstake_withdraw_single: async ({ 
+      gauge,
+      exitTokenAddress,
+     }: { 
+      gauge: `0x${string}`,
+      exitTokenAddress: `0x${string}`
+    }) =>
+      withdrawOptions(Chain.oeth, undefined, ExitKind.single, exitTokenAddress, gauge),
 }
 
 export const base = {
@@ -123,6 +147,12 @@ export const base = {
       gauge
     ),
 
-  unstake_withdraw_single: async ({ gauge }: { gauge: `0x${string}` }) =>
-    withdrawOptions(Chain.base, undefined, ExitKind.single, undefined, gauge),
+    unstake_withdraw_single: async ({ 
+      gauge,
+      exitTokenAddress,
+     }: { 
+      gauge: `0x${string}`,
+      exitTokenAddress: `0x${string}`
+    }) =>
+      withdrawOptions(Chain.base, undefined, ExitKind.single, exitTokenAddress, gauge),
 }

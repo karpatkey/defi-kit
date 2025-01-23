@@ -12,9 +12,9 @@ import { Callout } from "nextra/components"
 
 **Parameters**
 
-| Name  | Type                  | Description   |
-| :---- | :-------------------- | :------------ |
-| `bpt` | _string[] (required)_ | `Address` bpt |
+| Name  | Type                | Description   |
+| :---- | :------------------ | :------------ |
+| `bpt` | _string (required)_ | `Address` bpt |
 
 Withdraw funds from the Balancer pool withdrawing all assets in proportional way.
 
@@ -62,9 +62,10 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
 
 **Parameters**
 
-| Name  | Type                  | Description   |
-| :---- | :-------------------- | :------------ |
-| `bpt` | _string[] (required)_ | `Address` bpt |
+| Name               | Type                | Description                |
+| :----------------- | :------------------ | :------------------------- |
+| `bpt`              | _string (required)_ | `Address` bpt              |
+| `exitTokenAddress` | _string (required)_ | `Address` exitTokenAddress |
 
 Withdraw funds from the Balancer pool withdrawing a single asset specified by the token address.
 
@@ -112,9 +113,9 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
 
 **Parameters**
 
-| Name    | Type                  | Description     |
-| :------ | :-------------------- | :-------------- |
-| `gauge` | _string[] (required)_ | `Address` gauge |
+| Name    | Type                | Description     |
+| :------ | :------------------ | :-------------- |
+| `gauge` | _string (required)_ | `Address` gauge |
 
 Unstake from gauge and withdraw funds from the Balancer pool withdrawing all assets in proportional way.
 
@@ -177,9 +178,10 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
 
 **Parameters**
 
-| Name    | Type                  | Description     |
-| :------ | :-------------------- | :-------------- |
-| `gauge` | _string[] (required)_ | `Address` gauge |
+| Name               | Type                | Description                |
+| :----------------- | :------------------ | :------------------------- |
+| `gauge`            | _string (required)_ | `Address` gauge            |
+| `exitTokenAddress` | _string (required)_ | `Address` exitTokenAddress |
 
 Unstake from gauge and withdraw funds from the Balancer pool withdrawing a single asset specified by the token address.
 

@@ -60,75 +60,75 @@ const zBaseTokenAddress = z.enum(
 )
 
 export const eth = {
-  withdraw: z.object({
+  unstake: z.object({
     rewarder: zEthRewarder,
   }),
 
-  withdraw_proportional: z.object({
+  unstake_withdraw_proportional: z.object({
     rewarder: zEthRewarder,
   }),
 
-  withdraw_single_token: z.object({
+  unstake_withdraw_single_token: z.object({
     rewarder: zEthRewarder,
     exitTokenAddress: zEthTokenAddress,
   }),
 }
 
 export const gno = {
-  withdraw: z.object({
+  unstake: z.object({
     rewarder: zGnoRewarder,
   }),
 
-  withdraw_proportional: z.object({
+  unstake_withdraw_proportional: z.object({
     rewarder: zGnoRewarder,
   }),
 
-  withdraw_single_token: z.object({
+  unstake_withdraw_single_token: z.object({
     rewarder: zGnoRewarder,
     exitTokenAddress: zGnoTokenAddress,
   }),
 }
 
 export const arb1 = {
-  withdraw: z.object({
+  unstake: z.object({
     rewarder: zArb1Rewarder,
   }),
 
-  withdraw_proportional: z.object({
+  unstake_withdraw_proportional: z.object({
     rewarder: zArb1Rewarder,
   }),
 
-  withdraw_single_token: z.object({
+  unstake_withdraw_single_token: z.object({
     rewarder: zArb1Rewarder,
     exitTokenAddress: zArb1TokenAddress,
   }),
 }
 
 export const oeth = {
-  withdraw: z.object({
+  unstake: z.object({
     rewarder: zOethRewarder,
   }),
 
-  withdraw_proportional: z.object({
+  unstake_withdraw_proportional: z.object({
     rewarder: zOethRewarder,
   }),
 
-  withdraw_single_token: z.object({
+  unstake_withdraw_single_token: z.object({
     rewarder: zOethRewarder,
     exitTokenAddress: zOethTokenAddress,
   }),
 }
 
 export const base = {
-  withdraw: z.object({
+  unstake: z.object({
     rewarder: zBaseRewarder,
   }),
 
-  withdraw_proportional: z.object({
+  unstake_withdraw_proportional: z.object({
     rewarder: zBaseRewarder,
   }),
 
-  withdraw_single_token: z.object({
+  unstake_withdraw_single_token: z.object({
     rewarder: zBaseRewarder,
     exitTokenAddress: zBaseTokenAddress,
   }),
