@@ -1,15 +1,15 @@
 import { getProvider } from "./provider"
 import { Chain } from "../src"
 
-export const createSigner = async (chainId: Chain, address: string) => {
-  const provider = getProvider(chainId)
+export const createSigner = async (chain: Chain, address: string) => {
+  const provider = getProvider(chain)
   return await provider.getSigner(address)
 }
 
-export const createWallets = async (chainId: Chain) => {
+export const createWallets = async (chain: Chain) => {
   await Promise.all(
     Object.values(wallets).map(async (address) => {
-      const provider = getProvider(chainId)
+      const provider = getProvider(chain)
       await provider.send("anvil_impersonateAccount", [address])
       await provider.send("anvil_setBalance", [
         address,

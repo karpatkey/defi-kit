@@ -38,8 +38,8 @@ const predictRolesModAddress = async () => {
   )
 }
 
-export async function deployRolesMod(chainId: Chain) {
-  const deployerSigner = await createSigner(chainId, wallets.deployer)
+export async function deployRolesMod(chain: Chain) {
+  const deployerSigner = await createSigner(chain, wallets.deployer)
   const { expectedModuleAddress, transaction } = await deployAndSetUpModule(
     KnownContracts.ROLES_V2,
     {
@@ -47,7 +47,7 @@ export async function deployRolesMod(chainId: Chain) {
       values: [wallets.owner, wallets.avatar, wallets.avatar],
     },
     deployerSigner.provider,
-    Number((await getProvider(chainId).getNetwork()).chainId),
+    Number((await getProvider(chain).getNetwork()).chainId),
     SALT
   )
 
@@ -66,15 +66,15 @@ export async function deployRolesMod(chainId: Chain) {
   console.log("Roles mod deployed at", expectedModuleAddress)
 }
 
-export const getRolesMod = async (chainId: Chain) => {
+export const getRolesMod = async (chain: Chain) => {
   return ContractFactories[KnownContracts.ROLES_V2].connect(
     await predictRolesModAddress(),
     await createSigner(Chain.eth, wallets.owner)
   )
 }
 
-export async function setupRole(chainId: Chain) {
-  const rolesMod = await getRolesMod(chainId)
+export async function setupRole(chain: Chain) {
+  const rolesMod = await getRolesMod(chain)
   await rolesMod.assignRoles(
     wallets.member,
     [encodeBytes32String("TEST-ROLE")],
