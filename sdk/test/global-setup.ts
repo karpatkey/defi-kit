@@ -7,9 +7,7 @@ import { ANVIL_PORTS } from "./chains"
 import { Chain } from "../src/types"
 
 export default async () => {
-  await Promise.all(
-    Object.values(Chain).map((chainId) => prepareChain(chainId))
-  )
+  await Promise.all(Object.values(Chain).map((chain) => prepareChain(chain)))
 }
 
 async function prepareChain(chain: Chain) {
@@ -28,7 +26,7 @@ async function prepareChain(chain: Chain) {
 }
 
 async function waitForNetwork(chain: Chain) {
-  console.log(`\nWaiting for network #${chain} to be ready...`)
+  console.log(`\nWaiting for ${chain} fork to be ready...`)
   await waitOn({
     interval: 100,
     timeout: 10000,
@@ -37,7 +35,7 @@ async function waitForNetwork(chain: Chain) {
       return status === 405
     },
   })
-  console.log(`Network #${chain} is ready!`)
+  console.log(`${chain} fork is ready!`)
 }
 
 /** sets the bytecode at the avatar address to allow executing transactions via the Roles mod */

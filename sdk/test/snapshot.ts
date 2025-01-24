@@ -12,9 +12,10 @@ export const baseSnapshot = async (chain: Chain) => {
   const snapshotId = await snapshot(chain)
   if (snapshotId !== BASE_SNAPSHOT_ID) {
     throw new Error(
-      `Expected base snapshot ID ${BASE_SNAPSHOT_ID} but got ${snapshotId}`
+      `Error taking base snapshot on ${chain} fork: expected base snapshot ID ${BASE_SNAPSHOT_ID} but got ${snapshotId}`
     )
   }
+  console.log("Base snapshot taken on", chain)
 }
 
 const revertToBase = async (chain: Chain) => {
