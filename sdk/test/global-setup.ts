@@ -16,7 +16,7 @@ async function prepareChain(chain: Chain) {
   await waitForNetwork(chain)
 
   if (await isAlreadySetup(chain)) {
-    console.log("Test setup already present")
+    console.log(`Test setup already present on ${chain}`)
     return
   }
 
@@ -52,7 +52,7 @@ async function setupAvatar(chain: Chain) {
     testAvatarDeployedBytecode,
   ])
 
-  console.log(`Successfully initilized avatar at ${wallets.avatar}`)
+  console.log(`Successfully initilized avatar on ${chain} at ${wallets.avatar}`)
 }
 
 async function isAlreadySetup(chain: Chain) {

@@ -63,7 +63,7 @@ export async function deployRolesMod(chain: Chain) {
     console.error(e)
   }
 
-  console.log("Roles mod deployed at", expectedModuleAddress)
+  console.log(`Roles mod deployed on ${chain} at ${expectedModuleAddress}`)
 }
 
 export const getRolesMod = async (chain: Chain) => {
@@ -80,5 +80,5 @@ export async function setupRole(chain: Chain) {
     [encodeBytes32String("TEST-ROLE")],
     [true]
   )
-  console.log("Created TEST-ROLE role with member:", wallets.member)
+  console.log(`Created TEST-ROLE on ${chain} role with member:`, wallets.member)
 }
