@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.8.4](https://github.com/karpatkey/defi-kit/compare/v2.8.3...v2.8.4) (2025-01-27)
+
+
+### Bug Fixes
+
+* Spark sUSDS deposit function ([#363](https://github.com/karpatkey/defi-kit/issues/363)) ([713161b](https://github.com/karpatkey/defi-kit/commit/713161be8e1ce906cf2b7d00797a97bcdda3e02e))
+
 ## [2.8.2](https://github.com/karpatkey/defi-kit/compare/v2.8.1...v2.8.2) (2025-01-23)
 
 
