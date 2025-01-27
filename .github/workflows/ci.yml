@@ -3,7 +3,11 @@ name: Continuous integration checks
 on: [push]
 
 env:
-  FORK_RPC: ${{ secrets.FORK_RPC }}
+  ETH_FORK_RPC: ${{ secrets.ETH_FORK_RPC }}
+  ARB1_FORK_RPC: ${{ secrets.ARB1_FORK_RPC }}
+  GNO_FORK_RPC: ${{ secrets.GNO_FORK_RPC }}
+  OETH_FORK_RPC: ${{ secrets.OETH_FORK_RPC }}
+  BASE_FORK_RPC: ${{ secrets.BASE_FORK_RPC }}
 
 jobs:
   checks:
