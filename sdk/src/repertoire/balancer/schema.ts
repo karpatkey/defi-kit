@@ -49,6 +49,48 @@ const zArb1Gauge = z.enum(arb1Gauges as [string, string, ...string[]])
 const zOethGauge = z.enum(oethGauges as [string, string, ...string[]])
 const zBaseGauge = z.enum(baseGauges as [string, string, ...string[]])
 
+const ethTokenAddresses = [
+  ...new Set(
+    ethPools.flatMap((pool) => pool.tokens.map((token) => token.address))
+  ),
+]
+const gnoTokenAddresses = [
+  ...new Set(
+    gnoPools.flatMap((pool) => pool.tokens.map((token) => token.address))
+  ),
+]
+const arb1TokenAddresses = [
+  ...new Set(
+    arb1Pools.flatMap((pool) => pool.tokens.map((token) => token.address))
+  ),
+]
+const oethTokenAddresses = [
+  ...new Set(
+    oethPools.flatMap((pool) => pool.tokens.map((token) => token.address))
+  ),
+]
+const baseTokenAddresses = [
+  ...new Set(
+    basePools.flatMap((pool) => pool.tokens.map((token) => token.address))
+  ),
+]
+
+const zEthTokenAddress = z.enum(
+  ethTokenAddresses as [string, string, ...string[]]
+)
+const zGnoTokenAddress = z.enum(
+  gnoTokenAddresses as [string, string, ...string[]]
+)
+const zArb1TokenAddress = z.enum(
+  arb1TokenAddresses as [string, string, ...string[]]
+)
+const zOethTokenAddress = z.enum(
+  oethTokenAddresses as [string, string, ...string[]]
+)
+const zBaseTokenAddress = z.enum(
+  baseTokenAddresses as [string, string, ...string[]]
+)
+
 export const eth = {
   withdraw_proportional: z.object({
     bpt: zEthBpt,
@@ -56,6 +98,7 @@ export const eth = {
 
   withdraw_single: z.object({
     bpt: zEthBpt,
+    exitTokenAddress: zEthTokenAddress,
   }),
 
   unstake_withdraw_proportional: z.object({
@@ -64,6 +107,7 @@ export const eth = {
 
   unstake_withdraw_single: z.object({
     gauge: zEthGauge,
+    exitTokenAddress: zEthTokenAddress,
   }),
 }
 
@@ -74,6 +118,7 @@ export const gno = {
 
   withdraw_single: z.object({
     bpt: zGnoBpt,
+    exitTokenAddress: zGnoTokenAddress,
   }),
 
   unstake_withdraw_proportional: z.object({
@@ -82,6 +127,7 @@ export const gno = {
 
   unstake_withdraw_single: z.object({
     gauge: zGnoGauge,
+    exitTokenAddress: zGnoTokenAddress,
   }),
 }
 
@@ -92,6 +138,7 @@ export const arb1 = {
 
   withdraw_single: z.object({
     bpt: zArb1Bpt,
+    exitTokenAddress: zArb1TokenAddress,
   }),
 
   unstake_withdraw_proportional: z.object({
@@ -100,6 +147,7 @@ export const arb1 = {
 
   unstake_withdraw_single: z.object({
     gauge: zArb1Gauge,
+    exitTokenAddress: zArb1TokenAddress,
   }),
 }
 
@@ -110,6 +158,7 @@ export const oeth = {
 
   withdraw_single: z.object({
     bpt: zOethBpt,
+    exitTokenAddress: zOethTokenAddress,
   }),
 
   unstake_withdraw_proportional: z.object({
@@ -118,6 +167,7 @@ export const oeth = {
 
   unstake_withdraw_single: z.object({
     gauge: zOethGauge,
+    exitTokenAddress: zOethTokenAddress,
   }),
 }
 
@@ -128,6 +178,7 @@ export const base = {
 
   withdraw_single: z.object({
     bpt: zBaseBpt,
+    exitTokenAddress: zBaseTokenAddress,
   }),
 
   unstake_withdraw_proportional: z.object({
@@ -136,5 +187,6 @@ export const base = {
 
   unstake_withdraw_single: z.object({
     gauge: zBaseGauge,
+    exitTokenAddress: zBaseTokenAddress,
   }),
 }

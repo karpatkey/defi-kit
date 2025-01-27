@@ -8,13 +8,13 @@ import { Callout } from "nextra/components"
 | :-------------- | :-------------------------------------------------------------------------------------------------------------------- |
 | `BalancerVault` | [0xBA12222222228d8Ba445958a75a0704d566BF2C8](https://basescan.org/address/0xBA12222222228d8Ba445958a75a0704d566BF2C8) |
 
-## Strategy: `withdraw`
+## Strategy: `unstake`
 
 **Parameters**
 
-| Name       | Type                  | Description        |
-| :--------- | :-------------------- | :----------------- |
-| `rewarder` | _string[] (required)_ | `Address` rewarder |
+| Name       | Type                | Description        |
+| :--------- | :------------------ | :----------------- |
+| `rewarder` | _string (required)_ | `Address` rewarder |
 
 Withdraw funds from Aura.
 
@@ -37,13 +37,13 @@ Redeem `REWARDER` tokens and withdraw and unwrap `BPT` tokens.
   | `amount`  | -          |
   | `claim`   | -          |
 
-## Strategy: `withdraw_proportional`
+## Strategy: `unstake_withdraw_proportional`
 
 **Parameters**
 
-| Name       | Type                  | Description        |
-| :--------- | :-------------------- | :----------------- |
-| `rewarder` | _string[] (required)_ | `Address` rewarder |
+| Name       | Type                | Description        |
+| :--------- | :------------------ | :----------------- |
+| `rewarder` | _string (required)_ | `Address` rewarder |
 
 Withdraw funds from Aura and then from the Balancer pool withdrawing all assets in proportional way.
 
@@ -100,7 +100,7 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
   - [Balancer documentation](https://docs.balancer.fi/reference/joins-and-exits/pool-exits.html#userdata) for `userData` structure.  
 </Callout>
 
-## Strategy: `withdraw_single_token`
+## Strategy: `unstake_withdraw_single_token`
 
 **Parameters**
 
