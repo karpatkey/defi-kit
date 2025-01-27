@@ -69,7 +69,7 @@ export async function deployRolesMod(chain: Chain) {
 export const getRolesMod = async (chain: Chain) => {
   return ContractFactories[KnownContracts.ROLES_V2].connect(
     await predictRolesModAddress(),
-    await createSigner(Chain.eth, wallets.owner)
+    await createSigner(chain, wallets.owner)
   )
 }
 
