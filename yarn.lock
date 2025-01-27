@@ -4745,7 +4745,7 @@ __metadata:
     typescript: ^5.3.3
     zod: ^3.22.2
     zod-validation-error: ^1.5.0
-    zodiac-roles-sdk: ^2.21.0
+    zodiac-roles-sdk: ^2.21.1
   languageName: unknown
   linkType: soft
 
@@ -4781,7 +4781,7 @@ __metadata:
     typescript: ^5.3.3
     wait-on: ^7.0.1
     zod: ^3.22.2
-    zodiac-roles-sdk: ^2.21.0
+    zodiac-roles-sdk: ^2.21.1
   languageName: unknown
   linkType: soft
 
@@ -13616,19 +13616,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zodiac-roles-deployments@npm:^2.3.4":
+"zodiac-roles-deployments@npm:^2.4.0":
   version: 2.4.0
   resolution: "zodiac-roles-deployments@npm:2.4.0"
   checksum: dd0e1800d4f8ccee165279c38afe166d94dbeb24a5f3bb6ff0f16ebf0dabc7e37db23ac0914e78552ab02a7380b8cb66c109af9cb94005c3ade416a4723187dd
   languageName: node
   linkType: hard
 
-"zodiac-roles-sdk@npm:^2.21.0":
-  version: 2.21.0
-  resolution: "zodiac-roles-sdk@npm:2.21.0"
+"zodiac-roles-sdk@npm:^2.21.1":
+  version: 2.21.1
+  resolution: "zodiac-roles-sdk@npm:2.21.1"
   dependencies:
     ethers: ^6.13.2
-    zodiac-roles-deployments: ^2.3.4
+    zodiac-roles-deployments: ^2.4.0
   peerDependencies:
     "@gnosis-guild/eth-sdk-client": ^0.1.6
     openapi-backend: ^5.11.0
@@ -13640,7 +13640,7 @@ __metadata:
       optional: true
     openapi-types:
       optional: true
-  checksum: 11985f0a1a5a75ed1d503c7f0978896ae8668c04f2d74c7a4718b0a3a7d41a0dcf3a22a62e2891a08b58324a8c1284794eae74d8353f6194b84cd6a3bd6ea7f3
+  checksum: cc5e5549b351a2cc6981fd183245ebfbd4aed71b0e91f2a199d59a48ffae85965e7844a0e4fcd294a79542ccb943ed806c253e2e21d7c572c0aa5e32a99d3a1d
   languageName: node
   linkType: hard
 
