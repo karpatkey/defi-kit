@@ -178,6 +178,10 @@ export const eth = {
         // 0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
         {
           ...allow.mainnet.morpho.publicAllocator.reallocateTo(
+            //vault
+            contracts.mainnet.morpho.morphoBlue,
+            undefined, //withdrawl [tuple]
+            undefined, //supplyMarketParams
           ),
           // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
         },
