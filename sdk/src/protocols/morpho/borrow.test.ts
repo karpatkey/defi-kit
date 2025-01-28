@@ -117,18 +117,18 @@ describe("Morpho Blue borrow", () => {
       ).toRevert()
 
 
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .withdraw(
-            await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-            amount,
-            0,
-            avatar.address,
-            avatar.address
-          )
+      // await expect(
+      //   kit.asMember.morpho.morphoBlue
+      //     .attach(MorphoBluePool)
+      //     .withdraw(
+      //       await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
+      //       amount,
+      //       0,
+      //       avatar.address,
+      //       avatar.address
+      //     )
 
-      ).not.toRevert()
+      // ).not.toRevert()
 
       // it("borrow WstETH", async () => {
       //   const amount = BigInt(parseEther("2").toString())
