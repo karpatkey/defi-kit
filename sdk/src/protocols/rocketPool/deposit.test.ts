@@ -21,13 +21,18 @@ describe("rocketPool", () => {
       const depositAmount =
         await kit.asAvatar.rocketPool.depositPool.getMaximumDepositAmount()
 
+      const burnAmount =
+        await kit.asAvatar.rocketPool.depositPool.getExcessBalance()
+
       if (depositAmount > 0n) {
         await expect(
           kit.asMember.rocketPool.depositPool.deposit({
             value: parseEther("1"),
           })
         ).not.toRevert()
+      }
 
+      if (burnAmount > 0n) {
         await expect(
           kit.asMember.rocketPool.rEth.burn(parseEther("0.0001"))
         ).not.toRevert()
