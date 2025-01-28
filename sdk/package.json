@@ -71,11 +71,11 @@
     "anvil:gno": "anvil --silent --fork-url ${GNO_FORK_RPC:-https://rpc.gnosischain.com/} --timeout 60000 -p 8547",
     "anvil:oeth": "anvil --silent --fork-url ${OETH_FORK_RPC:-https://rpc.ankr.com/optimism} --timeout 60000 -p 8548",
     "anvil:base": "anvil --silent --fork-url ${BASE_FORK_RPC:-https://base-rpc.publicnode.com} --timeout 60000 -p 8549",
-    "anvil": "concurrently --kill-others-on-fail --success first \"yarn anvil:eth\" \"yarn anvil:arb1\" \"yarn anvil:gno\" \"yarn anvil:oeth\" \"yarn anvil:base\"",
+    "anvil": "concurrently \"yarn anvil:eth\" \"yarn anvil:arb1\" \"yarn anvil:gno\" \"yarn anvil:oeth\" \"yarn anvil:base\"",
     "jest": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:watch-only": "yarn jest --runInBand --watch",
-    "test": "env-cmd --silent concurrently --kill-others-on-fail --raw \"yarn anvil\" \"yarn jest --runInBand -t {@}\"",
-    "test:watch": "env-cmd --silent concurrently --kill-others-on-fail --raw --handle-input \"yarn anvil\" \"yarn jest --runInBand --watch {@}\"",
+    "test": "env-cmd --silent concurrently --raw --kill-others --passthrough-arguments --success first \"yarn anvil\" \"yarn jest --runInBand -t {@}\" --",
+    "test:watch": "env-cmd --silent concurrently --raw --kill-others --handle-input --passthrough-arguments \"yarn anvil\" \"yarn jest --runInBand --watch {@}\" --",
     "check:types": "tsc --noEmit"
   },
   "dependencies": {
