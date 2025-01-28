@@ -50,6 +50,6 @@ describe("stakeWiseV2", () => {
           stealAddress
         )
       ).toBeForbidden()
-    }, 30000)
+    })
   })
 })

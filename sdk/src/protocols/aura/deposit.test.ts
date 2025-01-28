@@ -55,7 +55,7 @@ describe("aura", () => {
           .attach(aura50Weth50AuraRewarder)
           ["getReward(address,bool)"](wallets.member, true)
       ).toBeForbidden(Status.ParameterNotAllowed)
-    }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
+    })
 
     it("deposit single token, withdraw bpt from pool", async () => {
       await kit.asAvatar.weth.deposit({ value: parseEther("1") })

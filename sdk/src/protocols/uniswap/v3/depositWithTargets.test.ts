@@ -37,7 +37,7 @@ describe("uniswapV3", () => {
           fees: ["0.01%"],
         })
       )
-    }, 30000)
+    })
 
     it("mint new position only with `tokens` and `fees`", async () => {
       await expect(
@@ -70,7 +70,7 @@ describe("uniswapV3", () => {
           true
         )
       ).toBeForbidden()
-    }, 30000)
+    })
 
     it("only increase liquidity of the avatars' NFT", async () => {
       await stealErc20(

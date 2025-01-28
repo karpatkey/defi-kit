@@ -94,7 +94,7 @@ describe("convex", () => {
       await expect(
         kit.asMember.convex.stkCvxCrv.withdraw(parseEther("1"))
       ).not.toRevert()
-    }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
+    })
 
     it("stake and withdraw CVX / claim rewards", async () => {
       await stealErc20(

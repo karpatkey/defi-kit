@@ -54,6 +54,6 @@ describe("convex", () => {
       await expect(
         kit.asMember.convex.vlCvx.processExpiredLocks(true)
       ).not.toRevert()
-    }, 90000) // Added 90 seconds of timeout because the lock takes too long and the test fails.
+    })
   })
 })

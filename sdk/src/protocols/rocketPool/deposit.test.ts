@@ -63,6 +63,6 @@ describe("rocketPool", () => {
           parseEther("50000")
         )
       ).toBeAllowed()
-    }, 120000)
+    })
   })
 })

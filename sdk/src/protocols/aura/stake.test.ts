@@ -77,7 +77,7 @@ describe("aura", () => {
       await expect(
         kit.asMember.aura.stkauraBal.withdraw(1, wallets.member, wallets.member)
       ).toBeForbidden(Status.ParameterNotAllowed)
-    }, 90000) // Added 90 seconds of timeout because the deposit takes too long and the test fails.
+    })
 
     it("mint auraBAL using B-80BAL-20WETH, stake and compound", async () => {
       await stealErc20(
@@ -134,7 +134,7 @@ describe("aura", () => {
       await expect(
         kit.asMember.aura.stkauraBal.withdraw(1, wallets.member, wallets.member)
       ).toBeForbidden(Status.ParameterNotAllowed)
-    }, 30000) // Added 30 seconds of timeout because the deposit takes too long and the test fails.
+    })
 
     it("stake and compound auraBAL", async () => {
       await stealErc20(

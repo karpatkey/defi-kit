@@ -35,7 +35,7 @@ describe("aaveV2", () => {
           { value: parseEther("1") }
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
-    }, 30000) // Added 30 seconds of timeout because the deposit takes too long and the test fails.
+    })
 
     it("only allows withdrawing ETH from avatars' position", async () => {
       await expect(

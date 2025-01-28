@@ -39,7 +39,7 @@ describe("convex", () => {
       await expect(
         kit.asMember.convex.booster.withdraw(24, parseEther("1"))
       ).toBeForbidden(Status.ParameterNotAllowed)
-    }, 60000) // Added 60 seconds of timeout because the deposit takes too long and the test fails.
+    })
 
     it("stake and withdraw cvxDepositToken / withdraw and unwrap cvxDepositToken", async () => {
       await stealErc20(Chain.eth, cvxsteCrv, parseEther("2"), cvxsteCrvRewarder)

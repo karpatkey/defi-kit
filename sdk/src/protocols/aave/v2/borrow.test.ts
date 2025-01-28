@@ -41,7 +41,7 @@ describe("aaveV2", () => {
           0
         )
       ).not.toRevert()
-    }, 30000) // Added 30 seconds of timeout because the deposit takes too long and the test fails.
+    })
 
     it("borrow ETH and repay", async () => {
       await expect(
@@ -69,7 +69,7 @@ describe("aaveV2", () => {
           { value: parseEther("0.5") }
         )
       ).not.toRevert()
-    }, 30000) // Added 30 seconds of timeout because the borrowETH takes too long and the test fails.
+    })
 
     it("deposit ETH, borrow USDC and repay", async () => {
       await expect(

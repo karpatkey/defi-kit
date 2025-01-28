@@ -50,6 +50,6 @@ describe("balancer", () => {
       await expect(
         kit.asMember.balancer.minter.mint(bRethStableGauge)
       ).not.toRevert()
-    }, 300000) // Added 300 seconds of timeout because the deposit takes too long and the test fails.
+    })
   })
 })
