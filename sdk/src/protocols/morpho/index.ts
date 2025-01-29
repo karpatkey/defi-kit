@@ -117,6 +117,10 @@ export const eth = {
         //amount : 0.0 -> spender: 0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077
         //-> amount: 238442112376260655301
 
+
+        //TODO:
+        //approve loanToken + collateralToken
+
         //Step0: appove for morphoBlue: wstETH 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0
         //amount : 0.0 -> spender: 0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb
         //-> amount: 238442112376260655301
@@ -235,23 +239,39 @@ export const eth = {
         // **Results:**
         // _0: The amount of assets withdrawn.
         // _1: The amount of shares burned.
+        // {
+        //   ...allow.mainnet.morpho.morphoBlue.withdraw(
+        //     //marketParams:
+        //     undefined,//marketParams
+        //     undefined,//assets
+        //     // [
+        //     //   undefined, // -> loanToken
+        //     //   undefined, // -> collateralToken
+        //     //   undefined, //irm
+        //     //   undefined, //-> lltv
+        //     // ],
+        //     undefined, //shares
+        //     c.avatar, //onBehalf
+        //     c.avatar,//receiver
+        //     // "0x",//options
+        //   ),
+        //   // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
+        // },
+
         {
-          ...allow.mainnet.morpho.morphoBlue.withdraw(
-            //marketParams:
-            undefined,//morphoBluePoolTest,
+          ...allow.mainnet.morpho.morphoBlue.repay(
+            {
+              loanToken: pool.loanToken,
+              collateralToken: pool.collateralToken,
+              oracle: pool.oracle,
+              irm: pool.irm,
+              lltv: pool.lltv,
+            },
             undefined,
-            // [
-            //   undefined, // -> loanToken
-            //   undefined, // -> collateralToken
-            //   undefined, //irm
-            //   undefined, //-> lltv
-            // ],
-            undefined, //asset
-            c.avatar, //onBehalf
+            undefined,
             c.avatar,
-            // "0x",
-          ),
-          // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
+            "0x",
+          )
         },
 
         //Step4: withdrawCollateral

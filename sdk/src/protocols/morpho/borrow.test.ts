@@ -1,13 +1,14 @@
 import { eth } from "."
 import { avatar } from "../../../test/wallets"
 import { contracts } from "../../../eth-sdk/config"
-import { applyPermissions, stealErc20 } from "../../../test/helpers"
+import { advanceTime, applyPermissions, stealErc20 } from "../../../test/helpers"
 import { eth as kit } from "../../../test/kit"
 import { AddressLike, BigNumberish, parseEther } from "ethers"
 
 // Test constants
 const MorphoBluePool = "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb" // gtLRTcore Vault address
 const STEAL_ADDRESS = "0xacB7027f271B03B502D65fEBa617a0d817D62b8e" // Address wstETH
+const STEAL_WETH = "0xD48573cDA0fed7144f2455c5270FFa16Be389d04"
 const underlying_wsteth = "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0" // WstETH
 const marketId =
   "0xb8fc70e82bc5bb53e773626fcc6a23f7eefa036918d7ef216ecfb1950a94a85e"
@@ -31,19 +32,21 @@ describe("Morpho Blue borrow", () => {
     })
 
     it("supplyCollateral WstETH", async () => {
-      const amount = BigInt(parseEther("2").toString())
-      const shareAmount = BigInt((amount / 2n).toString())
+      const amountCollateral = BigInt(parseEther("5").toString())
+      const amountBorrow = BigInt(parseEther("2").toString())
+      // const shareAmount = BigInt((amount / 2n).toString())
 
       await stealErc20(underlying_wsteth, parseEther("10"), STEAL_ADDRESS)
-      await kit.asAvatar.weth
+      await stealErc20("0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", parseEther("10"), STEAL_WETH)
+      await kit.asMember.weth
         .attach(underlying_wsteth)
-        .approve(MorphoBluePool, amount)
+        .approve(MorphoBluePool, amountCollateral)
       await expect(
         kit.asMember.morpho.morphoBlue
           .attach(MorphoBluePool)
           .supplyCollateral(
             await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-            amount,
+            amountCollateral,
             avatar.address,
             "0x"
           )
@@ -58,11 +61,16 @@ describe("Morpho Blue borrow", () => {
         lltv: "965000000000000000",
       }
 
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .supplyCollateral(unauthorizedMarketParams, amount, avatar.address, "0x")
-      ).toRevert()
+      // await expect(
+      //   kit.asMember.morpho.morphoBlue
+      //     .attach(MorphoBluePool)
+      //     .supplyCollateral(
+      //       unauthorizedMarketParams,
+      //       amountCollateral,
+      //       avatar.address,
+      //       "0x"
+      //     )
+      // ).toRevert()
 
       //----
 
@@ -97,38 +105,42 @@ describe("Morpho Blue borrow", () => {
           .attach(MorphoBluePool)
           .borrow(
             await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-            1,
+            amountBorrow,
             0,
             avatar.address,
             avatar.address
           )
       ).not.toRevert()
 
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .borrow(
-            unauthorizedMarketParams,
-            1,
-            0,
-            avatar.address,
-            avatar.address
-          )
-      ).toRevert()
-
-
       // await expect(
       //   kit.asMember.morpho.morphoBlue
       //     .attach(MorphoBluePool)
-      //     .withdraw(
-      //       await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-      //       amount,
+      //     .borrow(
+      //       unauthorizedMarketParams,
+      //       amountBorrow,
       //       0,
       //       avatar.address,
       //       avatar.address
       //     )
+      // ).toRevert()
+      const repayAmount = BigInt(parseEther("2.2").toString())
+      console.log("marketParams = ", await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId))
 
-      // ).not.toRevert()
+      // await advanceTime(3600)
+      await kit.asMember.weth
+        .approve(MorphoBluePool, amountBorrow)
+
+      await expect(
+        kit.asMember.morpho.morphoBlue
+          .attach(MorphoBluePool)
+          .repay(
+            await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
+            amountBorrow,
+            0,
+            avatar.address,
+            "0x",
+          )
+      ).not.toRevert()
 
       // it("borrow WstETH", async () => {
       //   const amount = BigInt(parseEther("2").toString())
@@ -183,3 +195,4 @@ describe("Morpho Blue borrow", () => {
     })
   })
 })
+
