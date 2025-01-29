@@ -17,7 +17,7 @@ const morphoBluePoolTest = [
   "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0", //collateralToken
   "0xbD60A6770b27E084E8617335ddE769241B0e71D8", //oracle
   "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC", //irm
-  "965000000000000000" //lltv
+  "965000000000000000", //lltv
 ]
 //0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,
 // 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0,
@@ -45,8 +45,7 @@ const findBluePool = (marketIdAddress: string) => {
   const pools = _ethBluePools
   const marketIdLower = marketIdAddress.toLowerCase()
   const pool = pools.find(
-    (pool) =>
-      pool.marketId.toLowerCase() === marketIdLower
+    (pool) => pool.marketId.toLowerCase() === marketIdLower
   )
   if (!pool) {
     throw new NotFoundError(`Pool not found: ${marketIdAddress}`)
@@ -104,7 +103,7 @@ export const eth = {
   borrow: async ({
     blueTargets,
   }: {
-    blueTargets: (EthBluePool["marketId"])[]
+    blueTargets: EthBluePool["marketId"][]
   }) => {
     return blueTargets.flatMap((blueTarget) => {
       const pool = findBluePool(blueTarget)
@@ -117,14 +116,27 @@ export const eth = {
         //amount : 0.0 -> spender: 0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077
         //-> amount: 238442112376260655301
 
-
         //TODO:
         //approve loanToken + collateralToken
-
+        ...allowErc20Approve([pool.loanToken], [pool.collateralToken]),
+        {
+          ...allow.mainnet.weth.approve(
+            contracts.mainnet.morpho.morphoBlue, //gtLRTcore vault
+            undefined
+          ),
+          targetAddress: pool.collateralToken,
+        },
+        {
+          ...allow.mainnet.lido.wstEth.approve(
+            contracts.mainnet.morpho.morphoBlue, //gtLRTcore vault
+            undefined
+          ),
+          targetAddress: pool.loanToken,
+        },
+        
         //Step0: appove for morphoBlue: wstETH 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0
         //amount : 0.0 -> spender: 0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb
         //-> amount: 238442112376260655301
-
 
         // [ **** NECESSARY TO DO ??? **** ]
         //Authorize the bundler to manage your Morpho positions
@@ -155,7 +167,7 @@ export const eth = {
         {
           ...allow.mainnet.morpho.morphoBlue.supplyCollateral(
             //marketParams:
-            undefined,//morphoBluePoolTest,
+            undefined, //morphoBluePoolTest,
             // [
             //   undefined, // -> loanToken
             //   undefined, // -> collateralToken
@@ -164,7 +176,7 @@ export const eth = {
             // ],
             undefined, //asset
             c.avatar, //onBehalf
-            "0x",
+            "0x"
           ),
           // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
         },
@@ -185,7 +197,7 @@ export const eth = {
             //vault
             contracts.mainnet.morpho.morphoBlue,
             undefined, //withdrawl [tuple]
-            undefined, //supplyMarketParams
+            undefined //supplyMarketParams
           ),
           // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
         },
@@ -219,7 +231,7 @@ export const eth = {
             undefined,
             undefined,
             c.avatar,
-            c.avatar,
+            c.avatar
           ),
           // targetAddress: pool.marketId, //TO CHANGE WITH NEW MORPHO BLUE POOL
         },
@@ -270,8 +282,8 @@ export const eth = {
             undefined,
             undefined,
             c.avatar,
-            "0x",
-          )
+            "0x"
+          ),
         },
 
         //Step4: withdrawCollateral
@@ -287,13 +299,13 @@ export const eth = {
         // - receiver (address)
         {
           ...allow.mainnet.morpho.morphoBlue.withdrawCollateral(
-            undefined,//morphoBluePoolTest,
+            undefined, //morphoBluePoolTest,
             undefined,
             c.avatar,
-            c.avatar,
+            c.avatar
           ),
           // targetAddress: pool.marketId, //TO CHANGE WITH NEW MORPHO BLUE POOL
-        },
+        }
       )
       return permissions
     })
