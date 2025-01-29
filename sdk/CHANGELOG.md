@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.0](https://github.com/karpatkey/defi-kit/compare/v2.8.5...v2.9.0) (2025-01-29)
+
+
+### Features
+
+* Build Setup For Testing on Sidechains ([#362](https://github.com/karpatkey/defi-kit/issues/362)) ([d6efa00](https://github.com/karpatkey/defi-kit/commit/d6efa00d3ffad49a953f519963d2289382626da3))
+
 ## [2.8.5](https://github.com/karpatkey/defi-kit/compare/v2.8.4...v2.8.5) (2025-01-29)
 
 
