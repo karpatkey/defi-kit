@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.9.1](https://github.com/karpatkey/defi-kit/compare/v2.9.0...v2.9.1) (2025-01-29)
+
+
+### Bug Fixes
+
+* package.json mismatch ([#368](https://github.com/karpatkey/defi-kit/issues/368)) ([09d07d5](https://github.com/karpatkey/defi-kit/commit/09d07d5fd965cfc540a7b166c9f3b47876189c81))
+
 ## [2.9.0](https://github.com/karpatkey/defi-kit/compare/v2.8.5...v2.9.0) (2025-01-29)
 
 
