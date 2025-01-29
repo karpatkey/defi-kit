@@ -49,10 +49,7 @@ export const eth = {
       permissions.push(
         // *** metaMorpho *** //
         {
-          ...allow.mainnet.weth.approve(
-            pool.address,
-            undefined
-          ),
+          ...allow.mainnet.weth.approve(pool.address, undefined),
           targetAddress: pool.asset.address,
         },
         {
@@ -109,16 +106,14 @@ export const eth = {
           ),
           targetAddress: pool.loanToken,
         },
-        //- Step1: supplyCollateral**
         {
           ...allow.mainnet.morpho.morphoBlue.supplyCollateral(
-            undefined, //marketParams
-            undefined, //asset
-            c.avatar, //onBehalf
+            undefined,
+            undefined,
+            c.avatar,
             "0x"
           ),
         },
-        //Step2: borrow
         {
           ...allow.mainnet.morpho.morphoBlue.borrow(
             {
@@ -134,7 +129,6 @@ export const eth = {
             c.avatar
           ),
         },
-        //Step3: withdraw
         {
           ...allow.mainnet.morpho.morphoBlue.repay(
             {
@@ -150,11 +144,9 @@ export const eth = {
             "0x"
           ),
         },
-
-        //Step4: withdrawCollateral
         {
           ...allow.mainnet.morpho.morphoBlue.withdrawCollateral(
-            undefined, //morphoBluePoolTest,
+            undefined,
             undefined,
             c.avatar,
             c.avatar
