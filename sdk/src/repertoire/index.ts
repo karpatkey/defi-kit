@@ -1,5 +1,6 @@
 import * as aura from "./aura"
 import * as balancer from "./balancer"
+import * as lido from "./lido"
 import { annotateAll } from "./annotate"
 
 // group all repertoire actions by chain
@@ -8,6 +9,7 @@ export const eth = annotateAll(
   {
     aura: aura.eth,
     balancer: balancer.eth,
+    lido: lido.eth,
   },
   "eth"
 )

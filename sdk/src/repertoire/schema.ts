@@ -1,12 +1,14 @@
 import { RepertoireSchemas } from "../types"
 import * as aura from "./aura/schema"
 import * as balancer from "./balancer/schema"
+import * as lido from "./lido/schema"
 
 // group all repertoire schemas by chain
 
 export const eth = {
   aura: aura.eth,
   balancer: balancer.eth,
+  lido: lido.eth,
 } satisfies RepertoireSchemas
 
 export const gno = {
