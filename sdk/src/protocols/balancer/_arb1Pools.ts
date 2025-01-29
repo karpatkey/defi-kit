@@ -145,25 +145,6 @@ export default [
     ],
   },
   {
-    bpt: "0x14ABD18d1FA335E9F630a658a2799B33208763Fa",
-    id: "0x14abd18d1fa335e9f630a658a2799b33208763fa00020000000000000000051f",
-    name: "2CLP-AUSDT-USDT",
-    type: "Gyro2",
-    gauge: "0x1C8D981BBc56B7C65289FE34d7FF692ABDe9c8D5",
-    tokens: [
-      {
-        address: "0xb165a74407fE1e519d6bCbDeC1Ed3202B35a4140",
-        symbol: "stataArbUSDT",
-        id: "0x",
-      },
-      {
-        address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x1533A3278f3F9141d5F820A184EA4B017fce2382",
     id: "0x1533a3278f3f9141d5f820a184ea4b017fce2382000000000000000000000016",
     name: "B-staBAL-3",
@@ -303,6 +284,25 @@ export default [
       {
         address: "0x83e1d2310Ade410676B1733d16e89f91822FD5c3",
         symbol: "JitoSOL",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x2C045C222BD603b9F1D6fb8Af077D705efe83d4A",
+    id: "0x2c045c222bd603b9f1d6fb8af077d705efe83d4a0002000000000000000005e6",
+    name: "ECLP-WETH-USDC",
+    type: "GyroE",
+    gauge: "0x50927cC8E5F6DdC4c5302df0158bCdF16E7E9833",
+    tokens: [
+      {
+        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        symbol: "USDC",
         id: "0x",
       },
     ],
@@ -801,25 +801,6 @@ export default [
     ],
   },
   {
-    bpt: "0x507f8456Aa170285fe33b80757FEca82b8103e77",
-    id: "0x507f8456aa170285fe33b80757feca82b8103e77000200000000000000000045",
-    name: "50LEVR-50dEth",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x77De4df6F2d87Cc7708959bCEa45d58B0E8b8315",
-        symbol: "LEVR",
-        id: "0x",
-      },
-      {
-        address: "0xBA98da6EF5EeB1a66B91B6608E0e2Bb6E9020607",
-        symbol: "dEth",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x542F16DA0efB162D20bF4358EfA095B70A100f9E",
     id: "0x542f16da0efb162d20bf4358efa095b70a100f9e000000000000000000000436",
     name: "2BTC",
@@ -958,6 +939,25 @@ export default [
       {
         address: "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
         symbol: "LINK",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x65c2d90b33F7bf693A7EF54662435f2Cf3251C21",
+    id: "0x65c2d90b33f7bf693a7ef54662435f2cf3251c210000000000000000000005e7",
+    name: "tETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0xc7995A4bA51574Ecd93e777cded6900ce42ff805",
+    tokens: [
+      {
+        address: "0x5979D7b546E38E414F7E9822514be443A4800529",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xd09ACb80C1E8f2291862c4978A008791c9167003",
+        symbol: "tETH",
         id: "0x",
       },
     ],
@@ -1924,6 +1924,25 @@ export default [
     ],
   },
   {
+    bpt: "0xe8e800d94C2D1c2e7778115724cf49E811f60A46",
+    id: "0xe8e800d94c2d1c2e7778115724cf49e811f60a460002000000000000000005e8",
+    name: "ECLP-WETH-GYD",
+    type: "GyroE",
+    gauge: "0x6350e7a5CFAaF8b694F8291760015ebB1Fe94bA0",
+    tokens: [
+      {
+        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xEB3E64Ad9314D20bf943ac72Fb69F272603f9cce",
     id: "0xeb3e64ad9314d20bf943ac72fb69f272603f9cce0002000000000000000004f5",
     name: "80SYNO-20WETH",
@@ -1995,30 +2014,6 @@ export default [
       {
         address: "0x8d7c2588c365b9e98Ea464b63DBCCDf13ECd9809",
         symbol: "AI",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xF890360473c12d8015DA8DBf7Af11dA87337A065",
-    id: "0xf890360473c12d8015da8dbf7af11da87337a065000000000000000000000570",
-    name: "GHO/USDC/USDT",
-    type: "ComposableStable",
-    gauge: "0x7d907D8D66B6CAd285D4349F507EcdfD11FD23D2",
-    tokens: [
-      {
-        address: "0x7dfF72693f6A4149b17e7C6314655f6A9F7c8B33",
-        symbol: "GHO",
-        id: "0x",
-      },
-      {
-        address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
         id: "0x",
       },
     ],

@@ -2724,4 +2724,18 @@ export default [
     cvxDepositToken: "0xbF8ECcdf66547ecBFa15B035aD724aDE9013e9B8",
     rewarder: "0x726E52aBB10597E28D9Ad4C0969b1DfC31092b52",
   },
+  {
+    name: "INV/WETH",
+    id: "416",
+    crvLPToken: "0x6bD88c57523bF138A19b263E8ebC8661c836B171",
+    cvxDepositToken: "0xE5d593C4625Baef241139F9503c9F18c19e5a725",
+    rewarder: "0x31e8accEEbAC3DB72D99C32FbBDbFb1e93cD1F91",
+  },
+  {
+    name: "yn-ETH/LSD",
+    id: "417",
+    crvLPToken: "0x1f59cC10c6360DA918B0235c98E58008452816EB",
+    cvxDepositToken: "0xE3e8C77b63f6099790145E14F1f50b9aD271e800",
+    rewarder: "0x310E864768884C0b9033a393B01C2EE5A1f14e70",
+  },
 ] as const
