@@ -22,9 +22,9 @@ jobs:
 
       - name: Write config file
         env:
-          DEFI_PROTOCOLS_CONFIG_JSON: ${{ secrets.DEFI_PROTOCOLS_CONFIG_JSON }}
+          DEFYES_CONFIG_JSON: ${{ secrets.DEFYES_CONFIG_JSON }}
         run: |
-          echo $DEFI_PROTOCOLS_CONFIG_JSON >> $CONFIG_PATH
+          echo $DEFYES_CONFIG_JSON >> $CONFIG_PATH
 
       - name: Install python dependencies
         run: |
