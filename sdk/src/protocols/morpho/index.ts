@@ -8,23 +8,6 @@ import { EthBluePool } from "./types"
 import { NotFoundError } from "../../errors"
 import _ethPools from "./_ethPools"
 import _ethBluePools from "./_ethBluePools"
-import { isAddress } from "ethers"
-
-const METAMORPHO_VAULT = "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658" // Replace with the actual vault address
-// const ETHEREUM_BUNDLER = "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077" // EthereumBundlerV2
-const morphoBluePoolTest = [
-  "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", //loanToken
-  "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0", //collateralToken
-  "0xbD60A6770b27E084E8617335ddE769241B0e71D8", //oracle
-  "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC", //irm
-  "965000000000000000", //lltv
-]
-//0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,
-// 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0,
-// 0xbD60A6770b27E084E8617335ddE769241B0e71D8,
-// 0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
-
-// const asset: ""
 
 const findPool = (nameOrAddress: string) => {
   const pools = _ethPools
@@ -40,7 +23,7 @@ const findPool = (nameOrAddress: string) => {
   }
   return pool
 }
-//bytes32
+
 const findBluePool = (marketIdAddress: string) => {
   const pools = _ethBluePools
   const marketIdLower = marketIdAddress.toLowerCase()
@@ -67,7 +50,7 @@ export const eth = {
         // *** metaMorpho *** //
         {
           ...allow.mainnet.weth.approve(
-            pool.address, //gtLRTcore vault
+            pool.address,
             undefined
           ),
           targetAddress: pool.asset.address,
@@ -111,114 +94,31 @@ export const eth = {
 
       permissions.push(
         // *** Morpho Blue *** //
-
-        //Step0: appove: wstETH 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0
-        //amount : 0.0 -> spender: 0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077
-        //-> amount: 238442112376260655301
-
-        //TODO:
-        //approve loanToken + collateralToken
         ...allowErc20Approve([pool.loanToken], [pool.collateralToken]),
         {
           ...allow.mainnet.weth.approve(
-            contracts.mainnet.morpho.morphoBlue, //gtLRTcore vault
+            contracts.mainnet.morpho.morphoBlue,
             undefined
           ),
           targetAddress: pool.collateralToken,
         },
         {
           ...allow.mainnet.lido.wstEth.approve(
-            contracts.mainnet.morpho.morphoBlue, //gtLRTcore vault
+            contracts.mainnet.morpho.morphoBlue,
             undefined
           ),
           targetAddress: pool.loanToken,
         },
-        
-        //Step0: appove for morphoBlue: wstETH 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0
-        //amount : 0.0 -> spender: 0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb
-        //-> amount: 238442112376260655301
-
-        // [ **** NECESSARY TO DO ??? **** ]
-        //Authorize the bundler to manage your Morpho positions
-        // allow.mainnet.morpho.morphoBlue.setAuthorization(
-        //     "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077",
-        //     true,
-        // ),
-        //Approve spending of 284,06 stETH for Bundler → approve
-        // allow.mainnet.lido.stEth.approve(
-        //     "0x4095F064B8d3c3548A3bebfd0Bbfd04750E30077",
-        //     "284069668060028402805",
-        //   ),
-        // **** [END] **** //
-
         //- Step1: supplyCollateral**
-        //   loanToken: pool.asset.address,
-        //   collateralToken: pool.address,
-        //   oracle: contracts.mainnet.oracle.address,
-        //   irm: contracts.mainnet.interestRateModel.address,
-        //   lltv: pool.lltv,
-        //  0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,
-        // 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0,
-        // 0xbD60A6770b27E084E8617335ddE769241B0e71D8,
-        // 0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
-        // },
-        // asset: pool.asset.address,
-        // onBehalf: c.avatar, 0x0EFcCBb9E2C09Ea29551879bd9Da32362b32fc89
         {
           ...allow.mainnet.morpho.morphoBlue.supplyCollateral(
-            //marketParams:
-            undefined, //morphoBluePoolTest,
-            // [
-            //   undefined, // -> loanToken
-            //   undefined, // -> collateralToken
-            //   undefined, //irm
-            //   undefined, //-> lltv
-            // ],
+            undefined, //marketParams
             undefined, //asset
             c.avatar, //onBehalf
             "0x"
           ),
-          // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
         },
-
-        //Step 1.1: reallocateTo
-        //contract: publicAllocator 0xfd32fA2ca22c76dD6E550706Ad913FC6CE91c75D
-        //vault: 0x2371e134e3455e0593363cBF89d3b6cf53740618 //(gtWETH) Gauntlet WETH Prime
-        //withdrawls [tuple]:0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,
-        // 0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599,
-        // 0xc29B3Bc033640baE31ca53F8a0Eb892AdF68e663,
-        // 0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
-        //supplyMarketParams: 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,
-        // 0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0,
-        // 0xbD60A6770b27E084E8617335ddE769241B0e71D8,
-        // 0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
-        {
-          ...allow.mainnet.morpho.publicAllocator.reallocateTo(
-            //vault
-            contracts.mainnet.morpho.morphoBlue,
-            undefined, //withdrawl [tuple]
-            undefined //supplyMarketParams
-          ),
-          // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
-        },
-
         //Step2: borrow
-        //contract: morpho 0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb
-        //marketParams:0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2,0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0,0xbD60A6770b27E084E8617335ddE769241B0e71D8,0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC
-
-        //   loanToken: pool.asset.address,
-        //   collateralToken: pool.address,
-        //   oracle: contracts.mainnet.oracle.address,
-        //   irm: contracts.mainnet.interestRateModel.address,
-        //   lltv: pool.lltv,
-        // },
-        // asset: 25944520971279508434
-        // onBehalf: c.avatar, 0x0EFcCBb9E2C09Ea29551879bd9Da32362b32fc89
-        // - receiver (address) 0x0EFcCBb9E2C09Ea29551879bd9Da32362b32fc89
-        // **Results:**
-        // _0: The amount of assets borrowed.
-        // _1: The amount of shares minted.
-
         {
           ...allow.mainnet.morpho.morphoBlue.borrow(
             {
@@ -233,43 +133,8 @@ export const eth = {
             c.avatar,
             c.avatar
           ),
-          // targetAddress: pool.marketId, //TO CHANGE WITH NEW MORPHO BLUE POOL
         },
-
         //Step3: withdraw
-        //marketParams:
-        //   loanToken: pool.asset.address,
-        //   collateralToken: pool.address,
-        //   oracle: contracts.mainnet.oracle.address,
-        //   irm: contracts.mainnet.interestRateModel.address,
-        //   lltv: pool.lltv,
-        // },
-        // asset: pool.asset.address,
-        // onBehalf: c.avatar,
-        // - receiver (address)
-        // - data (optional)?
-        // **Results:**
-        // _0: The amount of assets withdrawn.
-        // _1: The amount of shares burned.
-        // {
-        //   ...allow.mainnet.morpho.morphoBlue.withdraw(
-        //     //marketParams:
-        //     undefined,//marketParams
-        //     undefined,//assets
-        //     // [
-        //     //   undefined, // -> loanToken
-        //     //   undefined, // -> collateralToken
-        //     //   undefined, //irm
-        //     //   undefined, //-> lltv
-        //     // ],
-        //     undefined, //shares
-        //     c.avatar, //onBehalf
-        //     c.avatar,//receiver
-        //     // "0x",//options
-        //   ),
-        //   // targetAddress: pool.marketId,//TO CHANGE WITH NEW MORPHO BLUE POOL
-        // },
-
         {
           ...allow.mainnet.morpho.morphoBlue.repay(
             {
@@ -287,16 +152,6 @@ export const eth = {
         },
 
         //Step4: withdrawCollateral
-        //marketParams:
-        //   loanToken: pool.asset.address,
-        //   collateralToken: pool.address,
-        //   oracle: contracts.mainnet.oracle.address,
-        //   irm: contracts.mainnet.interestRateModel.address,
-        //   lltv: pool.lltv,
-        // },
-        // asset: pool.asset.address,
-        // onBehalf: c.avatar,
-        // - receiver (address)
         {
           ...allow.mainnet.morpho.morphoBlue.withdrawCollateral(
             undefined, //morphoBluePoolTest,
@@ -304,7 +159,6 @@ export const eth = {
             c.avatar,
             c.avatar
           ),
-          // targetAddress: pool.marketId, //TO CHANGE WITH NEW MORPHO BLUE POOL
         }
       )
       return permissions
