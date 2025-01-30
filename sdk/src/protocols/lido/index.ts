@@ -1,4 +1,4 @@
-import { PermissionSet, c } from "zodiac-roles-sdk"
+import { c } from "zodiac-roles-sdk"
 import { allow } from "zodiac-roles-sdk/kit"
 import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
@@ -19,20 +19,10 @@ export const eth = {
     // Request stETH Withdrawal - Locks your stETH in the queue. In exchange you receive an NFT, that represents your position
     // in the queue
     allow.mainnet.lido.unstEth.requestWithdrawals(undefined, c.avatar),
-    // When the unstETH has no allowance over the owner's stETH
-    allow.mainnet.lido.unstEth.requestWithdrawalsWithPermit(
-      undefined,
-      c.avatar
-    ),
 
     // Request wstETH Withdrawal - Transfers the wstETH to the unstETH to be burned in exchange for stETH. Then it locks your stETH
     // in the queue. In exchange you receive an NFT, that represents your position in the queue
     allow.mainnet.lido.unstEth.requestWithdrawalsWstETH(undefined, c.avatar),
-    // When the unstETH has no allowance over the owner's wstETH
-    allow.mainnet.lido.unstEth.requestWithdrawalsWstETHWithPermit(
-      undefined,
-      c.avatar
-    ),
 
     // Claim ETH - Once the request is finalized by the oracle report and becomes claimable,
     // this function claims your ether and burns the NFT

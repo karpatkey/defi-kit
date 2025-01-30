@@ -95,23 +95,6 @@ Locks your `stETH` in the queue. In exchange you receive an NFT, that represents
   | `amounts` | -                 |
   | `owner`   | equal to `AVATAR` |
 
-### `unstETH · requestWithdrawalsWithPermit`
-
-When the `unstETH` has no allowance over the owner's `stETH`, locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue.
-
-- **Contract:** `unstETH`
-- **Function:** `requestWithdrawalsWithPermit(uint256[],address,(uint256,uint256,uint8,bytes32,bytes32))`
-
-  | Parameter         | Constraint        |
-  | :---------------- | :---------------- |
-  | `amounts`         | -                 |
-  | `owner`           | equal to `AVATAR` |
-  | `permit.value`    | -                 |
-  | `permit.deadline` | -                 |
-  | `permit.v`        | -                 |
-  | `permit.r`        | -                 |
-  | `permit.s`        | -                 |
-
 ### `unstETH · requestWithdrawalsWstETH`
 
 Transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Then it locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue.
@@ -124,23 +107,6 @@ Transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Th
   | `amounts` | -                 |
   | `owner`   | equal to `AVATAR` |
 
-### `unstETH · requestWithdrawalsWithPermitWstETH`
-
-When the `unstETH` has no allowance over the owner's `wstETH`, transfers the `wstETH` to the `unstETH` to be burned in exchange for `stETH`. Then it locks your `stETH` in the queue. In exchange you receive an NFT, that represents your position in the queue.
-
-- **Contract:** `unstETH`
-- **Function:** `requestWithdrawalsWithPermitWstETH(uint256[],address,(uint256,uint256,uint8,bytes32,bytes32))`
-
-  | Parameter         | Constraint        |
-  | :---------------- | :---------------- |
-  | `amounts`         | -                 |
-  | `owner`           | equal to `AVATAR` |
-  | `permit.value`    | -                 |
-  | `permit.deadline` | -                 |
-  | `permit.v`        | -                 |
-  | `permit.r`        | -                 |
-  | `permit.s`        | -                 |
-
 ### `unstETH · claimWithdrawal`
 
 Once the request is finalized by the oracle report and becomes claimable, this function claims your ether and burns the NFT.
@@ -152,7 +118,7 @@ Once the request is finalized by the oracle report and becomes claimable, this f
   | :---------- | :--------- |
   | `requestId` | -          |
 
-### `unstETH · claimWithdrawal`
+### `unstETH · claimWithdrawals`
 
 Claim multiple withdrawals in batches or optimize on hint search.
 
