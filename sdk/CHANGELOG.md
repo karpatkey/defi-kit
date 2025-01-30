@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.10.0](https://github.com/karpatkey/defi-kit/compare/v2.9.1...v2.10.0) (2025-01-30)
+
+
+### Features
+
+* Lido Repertoire Actions ([#365](https://github.com/karpatkey/defi-kit/issues/365)) ([3fdeca9](https://github.com/karpatkey/defi-kit/commit/3fdeca923de433f44474b1795e6fa5abf6017fee))
+
 ## [2.9.1](https://github.com/karpatkey/defi-kit/compare/v2.9.0...v2.9.1) (2025-01-29)
 
 
