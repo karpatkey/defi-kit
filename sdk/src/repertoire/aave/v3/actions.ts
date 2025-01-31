@@ -21,7 +21,9 @@ const depositEther = (chain: Chain, market: string = "Core") => {
 
   const addresses = _getAllAddresses(chain, market)
   if (!addresses?.wrappedTokenGatewayV3) {
-    throw new Error(`wrappedTokenGatewayV3 is not defined for market: ${market}`)
+    throw new Error(
+      `wrappedTokenGatewayV3 is not defined for market: ${market}`
+    )
   }
 
   const { aNativeToken, wrappedTokenGatewayV3, poolV3 } = addresses
@@ -46,7 +48,11 @@ const depositToken = (chain: Chain, token: Token, market: string = "Core") => {
   return [
     ...allowErc20Approve([token.token], [poolV3]),
     {
-      ...allow.mainnet.aaveV3.poolCoreV3.supply(token.token, undefined, c.avatar),
+      ...allow.mainnet.aaveV3.poolCoreV3.supply(
+        token.token,
+        undefined,
+        c.avatar
+      ),
       targetAddress: poolV3,
     },
   ]
@@ -60,12 +66,17 @@ export const depositOptions = (
   let selectedMarket = chain === Chain.eth ? findMarket(market) : undefined
 
   const tokens =
-    chain === Chain.eth ? getEthMarketTokens(selectedMarket!.name) :
-    chain === Chain.gno ? gnoTokens :
-    chain === Chain.arb1 ? arb1Tokens :
-    chain === Chain.oeth ? oethTokens :
-    chain === Chain.base ? baseTokens :
-    undefined
+    chain === Chain.eth
+      ? getEthMarketTokens(selectedMarket!.name)
+      : chain === Chain.gno
+      ? gnoTokens
+      : chain === Chain.arb1
+      ? arb1Tokens
+      : chain === Chain.oeth
+      ? oethTokens
+      : chain === Chain.base
+      ? baseTokens
+      : undefined
 
   if (!tokens) {
     throw new Error(`Unsupported chain: ${chain}`)
@@ -73,5 +84,9 @@ export const depositOptions = (
 
   return token === "ETH" || token === "XDAI"
     ? depositEther(chain, selectedMarket?.name || "Core")
-    : depositToken(chain, findToken(tokens, token), selectedMarket?.name || "Core")
+    : depositToken(
+        chain,
+        findToken(tokens, token),
+        selectedMarket?.name || "Core"
+      )
 }

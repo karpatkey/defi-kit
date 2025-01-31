@@ -14,9 +14,9 @@ export const eth = {
     token,
     market,
   }: {
-    token: ("ETH" | EthToken["symbol"] | EthToken["token"]),
+    token: "ETH" | EthToken["symbol"] | EthToken["token"]
     market?: EthMarket["name"] | EthMarket["poolAddress"]
-  }) => depositOptions(Chain.eth, token, market)
+  }) => depositOptions(Chain.eth, token, market),
 }
 
 export const gno = {
@@ -24,7 +24,7 @@ export const gno = {
     token,
   }: {
     token: "XDAI" | GnoToken["symbol"] | GnoToken["token"]
-  }) => depositOptions(Chain.gno, token)
+  }) => depositOptions(Chain.gno, token),
 }
 
 export const arb1 = {
@@ -32,7 +32,7 @@ export const arb1 = {
     token,
   }: {
     token: "ETH" | Arb1Token["symbol"] | Arb1Token["token"]
-  }) => depositOptions(Chain.arb1, token)
+  }) => depositOptions(Chain.arb1, token),
 }
 
 export const oeth = {
@@ -40,7 +40,7 @@ export const oeth = {
     token,
   }: {
     token: "ETH" | OethToken["symbol"] | OethToken["token"]
-  }) => depositOptions(Chain.oeth, token)
+  }) => depositOptions(Chain.oeth, token),
 }
 
 export const base = {
@@ -48,5 +48,5 @@ export const base = {
     token,
   }: {
     token: "ETH" | BaseToken["symbol"] | BaseToken["token"]
-  }) => depositOptions(Chain.base, token)
+  }) => depositOptions(Chain.base, token),
 }

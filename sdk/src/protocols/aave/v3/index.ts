@@ -81,7 +81,11 @@ export const eth = {
     return targets.flatMap((target) =>
       target === "ETH"
         ? depositEther(Chain.eth, selectedMarket.name)
-        : depositToken(Chain.eth, findToken(tokens, target), selectedMarket.name)
+        : depositToken(
+            Chain.eth,
+            findToken(tokens, target),
+            selectedMarket.name
+          )
     )
   },
 
