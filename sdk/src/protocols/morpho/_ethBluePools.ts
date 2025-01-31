@@ -1,4 +1,5 @@
 export default [
+    //
   {
     marketId:
       "0xb8fc70e82bc5bb53e773626fcc6a23f7eefa036918d7ef216ecfb1950a94a85e",
@@ -25,12 +26,12 @@ export default [
     marketId: "0xfd3e5c20340aeba93f78f7dc4657dc1e11b553c68c545acc836321a14b47e457",
   },
   {
-    collateralToken: "eBTC",//eBTC
-    loanToken: "LBTC",// LBTC
+    collateralToken: "0x657e8C867D8B37dCC18fA4Caead9C45EB088C642",//eBTC
+    loanToken: "0x8236a87084f8B84306f72007F36F2618A5634494",// LBTC
     lltv: "915000000000000000",//91.5%
-    oracle: "0xD64A...09B6",
+    oracle: "0xD64A781af8A188AA4AB63fb6aE929026054d09B6",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    marketId: "0xfad6...18b6",
+    marketId: "0xfad6df5845f5e298fd64f574ffc4024e487856663c535a31bb9c366473aa18b6",
   },
   {
     collateralToken: "WETH",//WETH
@@ -49,7 +50,7 @@ export default [
     marketId: "0xf78b...4fb6",
   },
   {
-    collateralToken: "LBTC",//LBTC
+    collateralToken: "0x8236a87084f8B84306f72007F36F2618A5634494",//LBTC
     loanToken: "WBTC",//WBTC
     lltv: "945000000000000000",//94.5%
     oracle: "0xa981...4F80",
