@@ -20,17 +20,28 @@ export const handle =
     res: NextApiResponse<ResponseJson | ErrorJson>
   ) => {
     try {
-      const result = await handler(req.query)
+      // Convert boolean query parameters (fixing the true/false combobox issue)
+      const normalizedQuery = Object.fromEntries(
+        Object.entries(req.query).map(([key, value]) => {
+          if (value === "true") return [key, true] // Convert "true" to boolean true
+          if (value === "false") return [key, false] // Convert "false" to boolean false
+          return [key, value] // Leave other values unchanged
+        })
+      )
+
+      const result = await handler(normalizedQuery) // Pass the updated query to the handler
       res.status(200).json(result as any)
     } catch (e) {
       console.error(e)
 
       if (e instanceof NotFoundError) {
         res.status(404).json({ error: e.message })
+        return
       }
 
       if (e instanceof Error && "errors" in e) {
         res.status(400).json({ error: fromZodError(e as ZodError).message })
+        return
       }
 
       res.status(500).json({ error: "Internal Server Error" })

@@ -101,7 +101,7 @@ export const _getAllAddresses = (chain: Chain, market: string) => {
 }
 
 // Function to get the 2-byte hexadecimal representation of the assetId
-const _getAssetId = (chain: Chain, token: Token): string => {
+export const _getAssetId = (chain: Chain, token: Token): string => {
   // Select the appropriate token list based on the chain
   let tokens
   switch (chain) {
