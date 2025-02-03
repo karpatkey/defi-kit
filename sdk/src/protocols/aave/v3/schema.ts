@@ -86,7 +86,7 @@ export const gno = {
       ] as [string, string, ...string[]])
       .array(),
   }),
-  
+
   borrow: z.object({
     targets: z
       .enum([

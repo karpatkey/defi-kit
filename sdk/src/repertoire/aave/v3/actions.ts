@@ -98,7 +98,7 @@ export const withdrawEther = (chain: Chain, market: string = "Core") => {
 const setCollateralisationEther = (
   chain: Chain,
   useAsCollateral: boolean,
-  market: string = "Core",
+  market: string = "Core"
 ) => {
   const { poolV3, wrappedNativeToken } = getValidatedMarketAddresses(
     chain,
@@ -172,7 +172,7 @@ const setCollateralisationToken = (
   chain: Chain,
   token: Token,
   useAsCollateral: boolean,
-  market: string = "Core",
+  market: string = "Core"
 ) => {
   const { poolV3 } = _getAllAddresses(chain, market)
 
@@ -231,12 +231,12 @@ export const collateralisationOptions = (
     ? setCollateralisationEther(
         chain,
         useAsCollateral,
-        selectedMarket?.name || "Core",
+        selectedMarket?.name || "Core"
       )
     : setCollateralisationToken(
         chain,
         findToken(tokens, token),
         useAsCollateral,
-        selectedMarket?.name || "Core",
+        selectedMarket?.name || "Core"
       )
 }
