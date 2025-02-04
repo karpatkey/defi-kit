@@ -1,26 +1,26 @@
-import { eth } from "."
-import { wallets } from "../../../../test/wallets"
-import { applyPermissions, stealErc20 } from "../../../../test/helpers"
-import { contracts } from "../../../../eth-sdk/config"
-import { Status } from "../../../../test/types"
-import { eth as kit } from "../../../../test/kit"
+import { eth } from "../../index"
+import { wallets } from "../../../../../../test/wallets"
+import { applyPermissions, stealErc20 } from "../../../../../../test/helpers"
+import { contracts } from "../../../../../../eth-sdk/config"
+import { Status } from "../../../../../../test/types"
+import { eth as kit } from "../../../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
-import { Chain } from "../../../../src"
+import { Chain } from "../../../../../index"
 
-describe("aaveV3", () => {
+describe("aaveV2", () => {
   describe("deposit", () => {
     beforeAll(async () => {
       await applyPermissions(
         Chain.eth,
-        await eth.deposit({ market: "Core", targets: ["ETH", "USDC", "WETH"] })
+        await eth.deposit({ targets: ["ETH", "USDC"] })
       )
     })
 
     // Test with ETH
     it("only allows depositing ETH on behalf of avatar", async () => {
       await expect(
-        kit.asMember.aaveV3.wrappedTokenGatewayCoreV3.depositETH(
-          contracts.mainnet.aaveV3.poolCoreV3,
+        kit.asMember.aaveV2.wrappedTokenGatewayV2.depositETH(
+          contracts.mainnet.aaveV2.poolV2,
           wallets.avatar,
           0,
           { value: parseEther("1") }
@@ -28,8 +28,8 @@ describe("aaveV3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.wrappedTokenGatewayCoreV3.depositETH(
-          contracts.mainnet.aaveV3.poolCoreV3,
+        kit.asMember.aaveV2.wrappedTokenGatewayV2.depositETH(
+          contracts.mainnet.aaveV2.poolV2,
           wallets.member,
           0,
           { value: parseEther("1") }
@@ -39,23 +39,23 @@ describe("aaveV3", () => {
 
     it("only allows withdrawing ETH from avatars' position", async () => {
       await expect(
-        kit.asMember.aaveV3.aEthWeth.approve(
-          contracts.mainnet.aaveV3.wrappedTokenGatewayCoreV3,
+        kit.asMember.aaveV2.aWeth.approve(
+          contracts.mainnet.aaveV2.wrappedTokenGatewayV2,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.wrappedTokenGatewayCoreV3.withdrawETH(
-          contracts.mainnet.aaveV3.poolCoreV3,
+        kit.asMember.aaveV2.wrappedTokenGatewayV2.withdrawETH(
+          contracts.mainnet.aaveV2.poolV2,
           parseEther("1"),
           wallets.avatar
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.wrappedTokenGatewayCoreV3.withdrawETH(
-          contracts.mainnet.aaveV3.poolCoreV3,
+        kit.asMember.aaveV2.wrappedTokenGatewayV2.withdrawETH(
+          contracts.mainnet.aaveV2.poolV2,
           parseEther("1"),
           wallets.member
         )
@@ -64,78 +64,26 @@ describe("aaveV3", () => {
 
     it("allow setting the deposited ETH as collateral", async () => {
       let reserveConfig: Array<any> =
-        await kit.asAvatar.aaveV3.protocolDataProviderCoreV3.getReserveConfigurationData(
+        await kit.asAvatar.aaveV2.protocolDataProviderV2.getReserveConfigurationData(
           contracts.mainnet.weth
         )
       const collateralizable: boolean = reserveConfig[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(
-          kit.asMember.aaveV3.poolCoreV3.setUserUseReserveAsCollateral(
+          kit.asMember.aaveV2.poolV2.setUserUseReserveAsCollateral(
             contracts.mainnet.weth,
             true
           )
         ).not.toRevert()
       } else {
         await expect(
-          kit.asMember.aaveV3.poolCoreV3.setUserUseReserveAsCollateral(
+          kit.asMember.aaveV2.poolV2.setUserUseReserveAsCollateral(
             contracts.mainnet.weth,
             true
           )
         ).toRevert()
       }
-    })
-
-    // Test with WETH
-    it("only allows depositing WETH on behalf of avatar", async () => {
-      await stealErc20(
-        Chain.eth,
-        contracts.mainnet.weth,
-        parseEther("1"),
-        contracts.mainnet.balancer.vault
-      )
-      await expect(
-        kit.asMember.weth.approve(
-          contracts.mainnet.aaveV3.poolCoreV3,
-          parseEther("1")
-        )
-      ).not.toRevert()
-
-      await expect(
-        kit.asMember.aaveV3.poolCoreV3.supply(
-          contracts.mainnet.weth,
-          parseEther("1"),
-          wallets.avatar,
-          0
-        )
-      ).not.toRevert()
-
-      await expect(
-        kit.asMember.aaveV3.poolCoreV3.supply(
-          contracts.mainnet.weth,
-          parseEther("1"),
-          wallets.member,
-          0
-        )
-      ).toBeForbidden(Status.ParameterNotAllowed)
-    })
-
-    it("only allows withdrawing WETH from avatars' position", async () => {
-      await expect(
-        kit.asMember.aaveV3.poolCoreV3.withdraw(
-          contracts.mainnet.weth,
-          parseEther("1"),
-          wallets.avatar
-        )
-      ).not.toRevert()
-
-      await expect(
-        kit.asMember.aaveV3.poolCoreV3.withdraw(
-          contracts.mainnet.weth,
-          parseEther("1"),
-          wallets.member
-        )
-      ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     // Test with USDC
@@ -148,13 +96,13 @@ describe("aaveV3", () => {
       )
       await expect(
         kit.asMember.usdc.approve(
-          contracts.mainnet.aaveV3.poolCoreV3,
+          contracts.mainnet.aaveV2.poolV2,
           parseUnits("1000", 6)
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.poolCoreV3.supply(
+        kit.asMember.aaveV2.poolV2.deposit(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
           wallets.avatar,
@@ -163,7 +111,7 @@ describe("aaveV3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.poolCoreV3.supply(
+        kit.asMember.aaveV2.poolV2.deposit(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
           wallets.member,
@@ -174,7 +122,7 @@ describe("aaveV3", () => {
 
     it("only allows withdrawing USDC from avatars' position", async () => {
       await expect(
-        kit.asMember.aaveV3.poolCoreV3.withdraw(
+        kit.asMember.aaveV2.poolV2.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
           wallets.avatar
@@ -182,7 +130,7 @@ describe("aaveV3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.poolCoreV3.withdraw(
+        kit.asMember.aaveV2.poolV2.withdraw(
           contracts.mainnet.usdc,
           parseUnits("1000", 6),
           wallets.member
@@ -192,21 +140,21 @@ describe("aaveV3", () => {
 
     it("allow setting the deposited USDC as collateral", async () => {
       let reserveConfig: Array<any> =
-        await kit.asAvatar.aaveV3.protocolDataProviderCoreV3.getReserveConfigurationData(
+        await kit.asAvatar.aaveV2.protocolDataProviderV2.getReserveConfigurationData(
           contracts.mainnet.usdc
         )
       const collateralizable: boolean = reserveConfig[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(
-          kit.asMember.aaveV3.poolCoreV3.setUserUseReserveAsCollateral(
+          kit.asMember.aaveV2.poolV2.setUserUseReserveAsCollateral(
             contracts.mainnet.usdc,
             true
           )
         ).not.toRevert()
       } else {
         await expect(
-          kit.asMember.aaveV3.poolCoreV3.setUserUseReserveAsCollateral(
+          kit.asMember.aaveV2.poolV2.setUserUseReserveAsCollateral(
             contracts.mainnet.usdc,
             true
           )

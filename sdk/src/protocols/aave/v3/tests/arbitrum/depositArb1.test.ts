@@ -1,11 +1,11 @@
-import { arb1 } from "."
-import { wallets } from "../../../../test/wallets"
-import { applyPermissions } from "../../../../test/helpers"
-import { contracts } from "../../../../eth-sdk/config"
-import { Status } from "../../../../test/types"
-import { arb1 as kit } from "../../../../test/kit"
+import { arb1 } from "../../index"
+import { wallets } from "../../../../../../test/wallets"
+import { applyPermissions } from "../../../../../../test/helpers"
+import { contracts } from "../../../../../../eth-sdk/config"
+import { Status } from "../../../../../../test/types"
+import { arb1 as kit } from "../../../../../../test/kit"
 import { parseEther } from "ethers"
-import { Chain } from "../../../../src"
+import { Chain } from "../../../../../index"
 
 describe("aaveV3", () => {
   describe("deposit", () => {
