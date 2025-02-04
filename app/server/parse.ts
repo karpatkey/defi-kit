@@ -23,6 +23,10 @@ export function parseQuery<T extends AnyZodObject>(
         return [key, Number(value)]
       }
 
+      if (hasType(fieldSchema, z.ZodFirstPartyTypeKind.ZodBoolean)) {
+        return [key, value === "true"]
+      }
+
       return [key, value]
     })
   )

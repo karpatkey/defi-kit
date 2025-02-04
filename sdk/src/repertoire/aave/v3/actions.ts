@@ -60,11 +60,12 @@ const getValidatedMarketAddresses = (chain: Chain, market: string) => {
 }
 
 const depositEther = (chain: Chain, market: string = "Core") => {
-  const { aNativeToken, wrappedTokenGatewayV3, poolV3 } =
-    getValidatedMarketAddresses(chain, market)
+  const { wrappedTokenGatewayV3, poolV3 } = getValidatedMarketAddresses(
+    chain,
+    market
+  )
 
   return [
-    ...allowErc20Approve([aNativeToken], [wrappedTokenGatewayV3]),
     {
       ...allow.mainnet.aaveV3.wrappedTokenGatewayCoreV3.depositETH(
         poolV3,
@@ -78,12 +79,11 @@ const depositEther = (chain: Chain, market: string = "Core") => {
 }
 
 export const withdrawEther = (chain: Chain, market: string = "Core") => {
-  const { wrappedTokenGatewayV3, poolV3 } = getValidatedMarketAddresses(
-    chain,
-    market
-  )
+  const { aNativeToken, wrappedTokenGatewayV3, poolV3 } =
+    getValidatedMarketAddresses(chain, market)
 
   return [
+    ...allowErc20Approve([aNativeToken], [wrappedTokenGatewayV3]),
     {
       ...allow.mainnet.aaveV3.wrappedTokenGatewayCoreV3.withdrawETH(
         poolV3,

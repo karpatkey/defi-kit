@@ -27,6 +27,9 @@ For targets that are ERC-20 tokens, the following functions are allowed:
   `TARGET` below refers to the ERC-20 token address of each element given in
   `targets`.
 </Callout>
+<Callout type="error">
+  If a token provided in the `targets` parameter is not supported, an error will be thrown.
+</Callout>
 
 #### `TARGET · approve`
 
@@ -56,7 +59,7 @@ Deposit `TARGET` and receive `aToken` tokens in exchange.
 
 #### `PoolV3 · setUserUseReserveAsCollateral`
 
-Set/unset deposited asset as collateral.
+Enable or disable `TARGET` as collateral.
 
 - **Contract:** `PoolV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
@@ -81,7 +84,7 @@ Redeem `aToken` and withdraw `TARGET` tokens.
 
 ### Target: XDAI
 
-For `"XDAI"` as an element of `targets`, the following functions are allowed:
+For XDAI as an element of `targets`, the following functions are allowed:
 
 #### `aGnoWXDAI · approve`
 
@@ -110,7 +113,7 @@ Deposit XDAI and receive `aGnoWXDAI` tokens in exchange.
 
 #### `PoolV3 · setUserUseReserveAsCollateral`
 
-Set/unset deposited asset as collateral.
+Enable or disable `TARGET` as collateral.
 
 - **Contract:** `PoolV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
@@ -148,6 +151,9 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 <Callout type="info">
   `TARGET` below refers to the ERC-20 token address of each element given in
   `targets`.
+</Callout>
+<Callout type="error">
+  If a token provided in the `targets` parameter is not supported, an error will be thrown.
 </Callout>
 
 #### `TARGET · approve`
@@ -193,7 +199,7 @@ Repay borrowed `TARGET` tokens.
 
 ### Target: XDAI
 
-For `"XDAI"` as an element of `targets`, the following functions are allowed:
+For XDAI as an element of `targets`, the following functions are allowed:
 
 #### `variableDebtWXDAI · approveDelegation`
 
