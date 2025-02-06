@@ -1,749 +1,1037 @@
 export default [
   {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
+    tokenAddress: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    tokenSymbol: "USDC",
     address: "0x0f359fd18bda75e9c49bc027e7da59a4b01bf32a",
     name: "Relend USDC",
     symbol: "reUSDC",
   },
-  {
-    asset: {
-      address: "0x0000206329b97db379d5e1bf586bbdb969c63274",
-      symbol: "USDA",
-    },
-    address: "0x125d41a6e5dbf455cd9df8f80bcc6fd172d52cc6",
-    name: "Gauntlet USDA Core",
-    symbol: "gtUSDAcore",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x1265a81d42d513df40d0031f8f2e1346954d665a",
-    name: "MEV Capital Elixir USDC",
-    symbol: "MC.eUSDC",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x186514400e52270cef3d80e1c6f8d10a75d47344",
-    name: "Flagship USDC",
-    symbol: "bbUSDC",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x19f91632ba0367cd7b1fc8816071cb31519e5d8a",
-    name: "testMorphoVault",
-    symbol: "testMM",
-  },
-  {
-    asset: {
-      address: "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
-      symbol: "AUSD",
-    },
-    address: "0x1b4cd53a1a8e5f50ab6320ef34e5fb4d3df7b6f6",
-    name: "Gauntlet AUSD Core",
-    symbol: "gtAUSDc",
-  },
-  {
-    asset: {
-      address: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      symbol: "WBTC",
-    },
-    address: "0x1c530d6de70c05a81bf1670157b9d928e9699089",
-    name: "MEV Capital WBTC",
-    symbol: "MCwBTC",
-  },
-  {
-    asset: {
-      address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      symbol: "USDT",
-    },
-    address: "0x225c119ffaf1caddcfcdb493283edf4b816bf773",
-    name: "MEV Capital Usual Boosted USDT",
-    symbol: "USUALUSDT",
-  },
-  {
-    asset: {
-      address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      symbol: "WETH",
-    },
-    address: "0x2371e134e3455e0593363cbf89d3b6cf53740618",
-    name: "Gauntlet WETH Prime",
-    symbol: "gtWETH",
-  },
-  {
-    asset: {
-      address: "0x73a15fed60bf67631dc6cd7bc5b6e8da8190acf5",
-      symbol: "USD0",
-    },
-    address: "0x2a79e2c69ff4d3a50bf335153e4c09fa360f3386",
-    name: "Morpho USD0",
-    symbol: "mUSD0",
-  },
-  {
-    asset: {
-      address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      symbol: "USDT",
-    },
-    address: "0x2c25f6c25770ffec5959d34b94bf898865e5d6b1",
-    name: "Flagship USDT",
-    symbol: "bbUSDT",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x2e52efab5be3c4aacdb832386f5a670fe1c60555",
-    name: "Flagship USDC",
-    symbol: "bbETH",
-  },
-  {
-    asset: {
-      address: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      symbol: "WBTC",
-    },
-    address: "0x2f1abb81ed86be95bcf8178ba62c8e72d6834775",
-    name: "Pendle WBTC",
-    symbol: "pWBTC",
-  },
-  {
-    asset: {
-      address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      symbol: "WETH",
-    },
-    address: "0x38989bba00bdf8181f4082995b3deae96163ac5d",
-    name: "Flagship ETH",
-    symbol: "bbETH",
-  },
-  {
-    asset: {
-      address: "0x18084fba666a33d37592fa2633fd49a74dd93a88",
-      symbol: "tBTC",
-    },
-    address: "0x43fd147d5319b8cf39a6e57143684efca9cf3613",
-    name: "Re7 tBTC",
-    symbol: "Re7tBTC",
-  },
-  {
-    asset: {
-      address: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      symbol: "WBTC",
-    },
-    address: "0x443df5eee3196e9b2dd77cabd3ea76c3dee8f9b2",
-    name: "Gauntlet WBTC Core",
-    symbol: "gtWBTCc",
-  },
-  {
-    asset: {
-      address: "0x2103e845c5e135493bb6c2a4f0b8651956ea8682",
-      symbol: "XAUM",
-    },
-    address: "0x45c1875f1c48622b3d9740af2d7dc62bc9a72422",
-    name: "Relend Gold",
-    symbol: "reGOLD",
-  },
-  {
-    asset: {
-      address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      symbol: "WETH",
-    },
-    address: "0x4881ef0bf6d2365d3dd6499ccd7532bcdbce0658",
-    name: "Gauntlet LRT Core",
-    symbol: "gtLRTcore",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x4ca0e178c94f039d7f202e09d8d1a655ed3fb6b6",
-    name: "LeadBlock USDC RWA",
-    symbol: "USDC RWA",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x4f460bb11cf958606c69a963b4a17f9daeeea8b6",
-    name: "f(x) Protocol Morpho USDC",
-    symbol: "fxUSDC",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x4fbb60166199d36dd2fb09005154f0938b6d717b",
-    name: "Anzen Boosted USDC",
-    symbol: "AnzenUSDC",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x4ff4186188f8406917293a9e01a1ca16d3cf9e59",
-    name: "SwissBorg Morpho USDC",
-    symbol: "sbMorphoUSDC",
-  },
-  {
-    asset: {
-      address: "0x6b175474e89094c44da98b954eedeac495271d0f",
-      symbol: "DAI",
-    },
-    address: "0x500331c9ff24d9d11aee6b07734aa72343ea74a5",
-    name: "Gauntlet DAI Core",
-    symbol: "gtDAIcore",
-  },
-  {
-    asset: {
-      address: "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2",
-      symbol: "MKR",
-    },
-    address: "0x53675a75a0d6e5c13dbfb0d691ea679357ca5dda",
-    name: "Gauntlet MKR Blended",
-    symbol: "gtUSDCmkr",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x60d715515d4411f7f43e4206dc5d4a3677f0ec78",
-    name: "Re7 USDC",
-    symbol: "Re7USDC",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x6188c18cb1c9ef246adf4454cc184a84a4fc5465",
-    name: "Vertex USDC Investment Grade",
-    symbol: "vertexUSDCig",
-  },
-  {
-    asset: {
-      address: "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
-      symbol: "crvUSD",
-    },
-    address: "0x67315dd969b8cd3a3520c245837bf71f54579c75",
-    name: "LlamaRisk crvUSD Vault",
-    symbol: "llama-crvUSD",
-  },
-  {
-    asset: {
-      address: "0xab5eb14c09d416f0ac63661e57edb7aecdb9befa",
-      symbol: "msUSD",
-    },
-    address: "0x6859b34a9379122d25a9fa46f0882d434fee36c3",
-    name: "Metronome msUSD Vault",
-    symbol: "gtmsUSDc",
-  },
-  {
-    asset: {
-      address: "0x6b175474e89094c44da98b954eedeac495271d0f",
-      symbol: "DAI",
-    },
-    address: "0x73e65dbd630f90604062f6e02fab9138e713edd9",
-    name: "Spark DAI Vault",
-    symbol: "spDAI",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x7526e974d8a8469d29ee606630215245287a07bf",
-    name: "Caramila Capital USDC",
-    symbol: "ccmUSDC",
-  },
-  {
-    asset: {
-      address: "0x64351fc9810adad17a690e4e1717df5e7e085160",
-      symbol: "msETH",
-    },
-    address: "0x78b18e07dc43017fceaabad0751d6464c0f56b25",
-    name: "Metronome msETH Vault",
-    symbol: "gtmsETHc",
-  },
-  {
-    asset: {
-      address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      symbol: "WETH",
-    },
-    address: "0x78fc2c2ed1a4cdb5402365934ae5648adad094d0",
-    name: "Re7 WETH",
-    symbol: "Re7WETH",
-  },
-  {
-    asset: {
-      address: "0x6900057428c99fb373397d657beb40d92d8ac97f",
-      symbol: "USDz",
-    },
-    address: "0x7f172587b13f85992e8d36c1d8723dfd1bdd931e",
-    name: "MAHA.xyz ZAI Vault",
-    symbol: "MZAI",
-  },
-  {
-    asset: {
-      address: "0x0000206329b97db379d5e1bf586bbdb969c63274",
-      symbol: "USDA",
-    },
-    address: "0x89d80f5e9bc88d8021b352064ae73f0eaf79ebd8",
-    name: "Re7 USDA",
-    symbol: "Re7USDA",
-  },
-  {
-    asset: {
-      address: "0x69000405f9dce69bd4cbf4f2865b79144a69bfe0",
-      symbol: "USDz",
-    },
-    address: "0x8a0d114b72a5ba5abf37283ef98708945db4423e",
-    name: "ZAI Stablecoin Vault",
-    symbol: "ZAI-MM-VAULT",
-  },
-  {
-    asset: {
-      address: "0x6b175474e89094c44da98b954eedeac495271d0f",
-      symbol: "DAI",
-    },
-    address: "0x8be3f517a3382ec57a730c41b739717b214b375d",
-    name: "Scented DAI",
-    symbol: "smellDAI",
-  },
-  {
-    asset: {
-      address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      symbol: "USDT",
-    },
-    address: "0x8cb3649114051ca5119141a34c200d65dc0faa73",
-    name: "Gauntlet USDT Prime",
-    symbol: "gtUSDT",
-  },
-  {
-    asset: {
-      address: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      symbol: "WBTC",
-    },
-    address: "0x8e3c0a68f8065dc666065f16cf902596a60d540e",
-    name: "MEV Capital WBTC",
-    symbol: "MCwBTC",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0x8eb67a509616cd6a7c1b3c8c21d48ff57df3d458",
-    name: "Gauntlet USDC Core",
-    symbol: "gtUSDCcore",
-  },
-  {
-    asset: {
-      address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      symbol: "USDT",
-    },
-    address: "0x95eef579155cd2c5510f312c8fa39208c3be01a8",
-    name: "Re7 USDT",
-    symbol: "Re7USDT",
-  },
-  {
-    asset: {
-      address: "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
-      symbol: "cbBTC",
-    },
-    address: "0x98cf0b67da0f16e1f8f1a1d23ad8dc64c0c70e0b",
-    name: "MEV Capital cbBTC",
-    symbol: "MCcbBTC",
-  },
-  {
-    asset: {
-      address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      symbol: "WETH",
-    },
-    address: "0x9a8bc3b04b7f3d87cfc09ba407dced575f2d61d8",
-    name: "MEV Capital wETH",
-    symbol: "MCwETH",
-  },
-  {
-    asset: {
-      address: "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
-      symbol: "cbBTC",
-    },
-    address: "0xa02f5e93f783baf150aa1f8b341ae90fe0a772f7",
-    name: "Re7 cbBTC",
-    symbol: "Re7cbBTC",
-  },
-  {
-    asset: {
-      address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      symbol: "WETH",
-    },
-    address: "0xb1a757a68d4a04a6b5a0f06d0cb4fd739048f614",
-    name: "Apostro WETH",
-    symbol: "apWETH",
-  },
-  {
-    asset: {
-      address: "0x6b175474e89094c44da98b954eedeac495271d0f",
-      symbol: "DAI",
-    },
-    address: "0xb8c7f2a4b3bf76cc04bd55ebc259b33a67b3b36d",
-    name: "Spark DAI Vault",
-    symbol: "spDAI",
-  },
-  {
-    asset: {
-      address: "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
-      symbol: "cbBTC",
-    },
-    address: "0xb9c9158ab81f90996cad891ffbadfbaad733c8c6",
-    name: "Relend cbBTC",
-    symbol: "recbBTC",
-  },
-  {
-    asset: {
-      address: "0x69000dfd5025e82f48eb28325a2b88a241182ced",
-      symbol: "ZAI",
-    },
-    address: "0xbd4073e6e929f197a9d18e22a68c276e8b400375",
-    name: "ZAI Vault (MAHA.xyz)",
-    symbol: "ZAIMorpho",
-  },
-  {
-    asset: {
-      address: "0x853d955acef822db058eb8505911ed77f175b99e",
-      symbol: "FRAX",
-    },
-    address: "0xbe40491f3261fd42724f1aeb465796eb11c06ddf",
-    name: "Re7 FRAX",
-    symbol: "Re7FRAX",
-  },
-  {
-    asset: {
-      address: "0x437cc33344a0b27a429f795ff6b469c72698b291",
-      symbol: "wM",
-    },
-    address: "0xbeef0075e03a5ce0d84d4accf3481363e0584f5c",
-    name: "Steakhouse M",
-    symbol: "steakM",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0xbeef01735c132ada46aa9aa4c54623caa92a64cb",
-    name: "Steakhouse USDC",
-    symbol: "steakUSDC",
-  },
-  {
-    asset: {
-      address: "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
-      symbol: "PYUSD",
-    },
-    address: "0xbeef02e5e13584ab96848af90261f0c8ee04722a",
-    name: "Steakhouse PYUSD",
-    symbol: "steakPYUSD",
-  },
-  {
-    asset: {
-      address: "0x57f5e098cad7a3d1eed53991d4d66c45c9af7812",
-      symbol: "wUSDM",
-    },
-    address: "0xbeef033b4520267c5acfcb45414117b633fcb3dd",
-    name: "Steakhouse USDM",
-    symbol: "steakUSDM",
-  },
-  {
-    asset: {
-      address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
-      symbol: "USDT",
-    },
-    address: "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
-    name: "Steakhouse USDT",
-    symbol: "steakUSDT",
-  },
-  {
-    asset: {
-      address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      symbol: "WETH",
-    },
-    address: "0xbeef050ecd6a16c4e7bffbb52ebba7846c4b8cd4",
-    name: "Steakhouse ETH",
-    symbol: "steakETH",
-  },
-  {
-    asset: {
-      address: "0x3231cb76718cdef2155fc47b5286d82e6eda273f",
-      symbol: "EURe",
-    },
-    address: "0xbeef06e7027eb8a1f0ab6cef743542ea31b8492b",
-    name: "Steakhouse EURe",
-    symbol: "steakEURe",
-  },
-  {
-    asset: {
-      address: "0x5f7827fdeb7c20b443265fc2f40845b715385ff2",
-      symbol: "EURCV",
-    },
-    address: "0xbeef07e929f84466a591de130e4154667214f491",
-    name: "Steakhouse EURCV",
-    symbol: "steakEURCV",
-  },
-  {
-    asset: {
-      address: "0x1abaea1f7c830bd89acc67ec4af516284b1bc33c",
-      symbol: "EURC",
-    },
-    address: "0xbeef087c8430c0f9dcba39ba866eb7c22200599b",
-    name: "Steakhouse EURC",
-    symbol: "steakEURC",
-  },
-  {
-    asset: {
-      address: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      symbol: "WBTC",
-    },
-    address: "0xbeef094333aedd535c130958c204e84f681fd9fa",
-    name: "Steakhouse WBTC",
-    symbol: "steakWBTC",
-  },
-  {
-    asset: {
-      address: "0x09d4214c03d01f49544c0448dbe3a27f768f2b34",
-      symbol: "rUSD",
-    },
-    address: "0xbeef11ecb698f4b5378685c05a210bdf71093521",
-    name: "Steakhouse RUSD",
-    symbol: "steakRUSD",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0xbeef6806363b51a90ffd1a632a8de32873b63a9e",
-    name: "Steakhouse USDC RWA",
-    symbol: "steakUSDCrwa",
-  },
-  {
-    asset: {
-      address: "0x45804880de22913dafe09f4980848ece6ecbaf78",
-      symbol: "PAXG",
-    },
-    address: "0xbeef796ae50ba5423857cac27dd36369cfc8241b",
-    name: "Steakhouse PAXG",
-    symbol: "steakPAXG",
-  },
-  {
-    asset: {
-      address: "0x0000206329b97db379d5e1bf586bbdb969c63274",
-      symbol: "USDA",
-    },
-    address: "0xbeefa1abfebe621df50ceaef9f54fdb73648c92c",
-    name: "Steakhouse USDA",
-    symbol: "steakUSDA",
-  },
-  {
-    asset: {
-      address: "0x1a7e4e63778b4f12a199c062f3efdd288afcbce8",
-      symbol: "EURA",
-    },
-    address: "0xbeefa260c2ce39122367ceab0b4f94e6068cacb6",
-    name: "Steakhouse EURA",
-    symbol: "steakEURA",
-  },
-  {
-    asset: {
-      address: "0x7751e2f4b8ae93ef6b79d86419d42fe3295a4559",
-      symbol: "wUSDL",
-    },
-    address: "0xbeefc01767ed5086f35decb6c00e6c12bc7476c1",
-    name: "Coinshift USDL",
-    symbol: "csUSDL",
-  },
-  {
-    asset: {
-      address: "0x7751e2f4b8ae93ef6b79d86419d42fe3295a4559",
-      symbol: "wUSDL",
-    },
-    address: "0xbeefd1c0c6c1f7c94dc6b989dba2e983a47a26a8",
-    name: "Steakhouse USDL",
-    symbol: "steakUSDL",
-  },
-  {
-    asset: {
-      address: "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
-      symbol: "USDS",
-    },
-    address: "0xbeefda19bc6114633fc17e6d074a6a2b472c756f",
-    name: "Steakhouse USDS",
-    symbol: "steakUSDS",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0xbeefff209270748ddd194831b3fa287a5386f5bc",
-    name: "Smokehouse USDC",
-    symbol: "bbqUSDC",
-  },
-  {
-    asset: {
-      address: "0x6b175474e89094c44da98b954eedeac495271d0f",
-      symbol: "DAI",
-    },
-    address: "0xbeefff68cc520d68f82641eff84330c631e2490e",
-    name: "Smokehouse DAI",
-    symbol: "bbqDAI",
-  },
-  {
-    asset: {
-      address: "0xa0d69e286b938e21cbf7e51d71f6a4c8918f482f",
-      symbol: "eUSD",
-    },
-    address: "0xc080f56504e0278828a403269db945f6c6d6e014",
-    name: "Gauntlet eUSD Core",
-    symbol: "gteUSDc",
-  },
-  {
-    asset: {
-      address: "0x73a15fed60bf67631dc6cd7bc5b6e8da8190acf5",
-      symbol: "USD0",
-    },
-    address: "0xc0a14627d6a23f70c809777ced873238581c1032",
-    name: "MEV Capital USD0",
-    symbol: "MC.USD0",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0xc1d3e596984982bfbaefc85387107c26c319e465",
-    name: "testUSDCVault2",
-    symbol: "XXtestUSDc",
-  },
-  {
-    asset: {
-      address: "0x3231cb76718cdef2155fc47b5286d82e6eda273f",
-      symbol: "EURe",
-    },
-    address: "0xc21db71648b18c5b9e038d88393c9b254cf8eac8",
-    name: "EUR Real Yield",
-    symbol: "ERY",
-  },
-  {
-    asset: {
-      address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      symbol: "WETH",
-    },
-    address: "0xc554929a61d862f2741077f8aafa147479c0b308",
-    name: "IndexCoop hyETH",
-    symbol: "hyETH",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0xd63070114470f685b75b74d60eec7c1113d33a3d",
-    name: " Usual Boosted USDC",
-    symbol: "USUALUSDC+",
-  },
-  {
-    asset: {
-      address: "0x6b175474e89094c44da98b954eedeac495271d0f",
-      symbol: "DAI",
-    },
-    address: "0xda1f00d47054a1807f6bf2403ce48a14d894a18b",
-    name: "RiskDAO DAI Core",
-    symbol: "rdcDAI",
-  },
-  {
-    asset: {
-      address: "0x8236a87084f8b84306f72007f36f2618a5634494",
-      symbol: "LBTC",
-    },
-    address: "0xdc94785959b73f7a168452b3654e44fec6a750e4",
-    name: "Gauntlet LBTC Core",
-    symbol: "gtLBTCc",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0xdd0f28e19c1780eb6396170735d45153d261490d",
-    name: "Gauntlet USDC Prime",
-    symbol: "gtUSDC",
-  },
-  {
-    asset: {
-      address: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-      symbol: "WBTC",
-    },
-    address: "0xe0c98605f279e4d7946d25b75869c69802823763",
-    name: "Re7 WBTC",
-    symbol: "Re7WBTC",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0xebfa750279defa89b8d99bdd145a016f6292757b",
-    name: "Gauntlet MKR Blended",
-    symbol: "gtUSDCmkr",
-  },
-  {
-    asset: {
-      address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-      symbol: "WETH",
-    },
-    address: "0xec3b2cc4c6a8fc9a13620a91622483b56e2e6fd9",
-    name: "PufEthWeth Market 86 lltv",
-    symbol: "pufethweth86lltv",
-  },
-  {
-    asset: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-      symbol: "USDC",
-    },
-    address: "0xf2efebe45180c8c04edfdbff3d88e58c9d61a03e",
-    name: "Apostro USDC",
-    symbol: "apUSDC",
-  },
-  {
-    asset: {
-      address: "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
-      symbol: "cbBTC",
-    },
-    address: "0xf587f2e8aff7d76618d3b6b4626621860fbd54e3",
-    name: "Gauntlet cbBTC Core",
-    symbol: "gtcbBTCc",
-  },
-  {
-    asset: {
-      address: "0x437cc33344a0b27a429f795ff6b469c72698b291",
-      symbol: "wM",
-    },
-    address: "0xfbdee8670b273e12b019210426e70091464b02ab",
-    name: "MEV Capital M^0 Vault",
-    symbol: "MC.wM",
-  },
+  //------------//
+    {
+      "address": "0xF587f2e8AfF7D76618d3B6B4626621860FbD54e3",
+      tokenAddress: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      tokenSymbol: "cbBTC",
+      name: "Gauntlet cbBTC Core",
+      "symbol": "gtcbBTCc"
+    },
+    {
+      "address": "0xf24608E0CCb972b0b0f4A6446a0BBf58c701a026",
+      tokenAddress: "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+      tokenSymbol: "EURC",
+      name: "Moonwell Flagship EURC",
+      "symbol": "mwEURC"
+    },
+    {
+      "address": "0xeE8F4eC5672F09119b96Ab6fB59C27E1b7e44b61",
+      tokenAddress: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      tokenSymbol: "USDC",
+      name: "Gauntlet USDC Prime",
+      "symbol": "gtUSDCp"
+    },
+    {
+      "address": "0xE0C98605f279e4D7946d25B75869c69802823763",
+      tokenAddress: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      tokenSymbol: "WBTC",
+      name: "Re7 WBTC",
+      "symbol": "Re7WBTC"
+    },
+    {
+      "address": "0xdd0f28e19C1780eb6396170735D45153D261490d",
+      tokenAddress: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      tokenSymbol: "USDC",
+      name: "Gauntlet USDC Prime",
+      "symbol": "gtUSDC"
+    },
+    {
+      "address": "0xdC94785959B73F7A168452b3654E44fEc6A750e4",
+      tokenAddress: "0x8236a87084f8B84306f72007F36F2618A5634494",
+      tokenSymbol: "LBTC",
+      name: "Gauntlet LBTC Core",
+      "symbol": "gtLBTCc"
+    },
+    {
+      "address": "0xd63070114470f685b75B74D60EEc7c1113d33a3D",
+      tokenAddress: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      tokenSymbol: "USDC",
+      name: " Usual Boosted USDC",
+      "symbol": "USUALUSDC+"
+    },
+    {
+      "address": "0xD5Ac156319f2491d4ad1Ec4aA5ed0ED48C0fa173",
+      tokenAddress: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      tokenSymbol: "USDC",
+      name: "9Summits USDC Core",
+      "symbol": "9SUSDCcore"
+    },
+    {
+      "address": "0xc1256Ae5FF1cf2719D4937adb3bbCCab2E00A2Ca",
+      tokenAddress: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      tokenSymbol: "USDC",
+      name: "Moonwell Flagship USDC",
+      "symbol": "mwUSDC"
+    },
+    {
+      "address": "0xc0c5689e6f4D256E861F65465b691aeEcC0dEb12",
+      tokenAddress: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      tokenSymbol: "USDC",
+      name: "Gauntlet USDC Core",
+      "symbol": "gtUSDCc"
+    },
+    {
+      "address": "0xc080f56504e0278828A403269DB945F6c6D6E014",
+      tokenAddress: "0xA0d69E286B938e21CBf7E51D71F6A4c8918f482F",
+      tokenSymbol: "eUSD",
+      name: "Gauntlet eUSD Core",
+      "symbol": "gteUSDc"
+    },
+    {
+      "address": "0xBEeFFF209270748ddd194831b3fa287a5386f5bC",
+      tokenAddress: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      tokenSymbol: "USDC",
+      name: "Smokehouse USDC",
+      "symbol": "bbqUSDC"
+    },
+    {
+      "address": "0xbEeFc011e94f43b8B7b455eBaB290C7Ab4E216f1",
+      tokenAddress: "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
+      tokenSymbol: "wUSDL",
+      name: "Coinshift USDL",
+      "symbol": "csUSDL"
+    },
+    {
+      "address": "0xBeEf11eCb698f4B5378685C05A210bdF71093521",
+      tokenAddress: "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
+      tokenSymbol: "rUSD",
+      name: "Steakhouse RUSD",
+      "symbol": "steakRUSD"
+    },
+    {
+      "address": "0xBEEf050ecd6a16c4e7bfFbB52Ebba7846C4b8cD4",
+      tokenAddress: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      tokenSymbol: "WETH",
+      name: "Steakhouse ETH",
+      "symbol": "steakETH"
+    },
+    {
+      "address": "0xbEef047a543E45807105E51A8BBEFCc5950fcfBa",
+      tokenAddress: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      tokenSymbol: "USDT",
+      name: "Steakhouse USDT",
+      "symbol": "steakUSDT"
+    },
+    {
+      "address": "0xbEEF02e5E13584ab96848af90261f0C8Ee04722a",
+      tokenAddress: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+      tokenSymbol: "PYUSD",
+      name: "Steakhouse PYUSD",
+      "symbol": "steakPYUSD"
+    },
+    {
+      "address": "0xBEEF01735c132Ada46AA9aA4c54623cAA92A64CB",
+      tokenAddress: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      tokenSymbol: "USDC",
+      name: "Steakhouse USDC",
+      "symbol": "steakUSDC"
+    },
+    {
+      "address": "0xbeeF010f9cb27031ad51e3333f9aF9C6B1228183",
+      tokenAddress: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      tokenSymbol: "USDC",
+      name: "Steakhouse USDC",
+      "symbol": "steakUSDC"
+    },
+    {
+      "address": "0xbb819D845b573B5D7C538F5b85057160cfb5f313",
+      tokenAddress: "0xCfA3Ef56d303AE4fAabA0592388F19d7C3399FB4",
+      tokenSymbol: "eUSD",
+      name: "Morpho eUSD",
+      "symbol": "meUSD"
+    },
+    {
+      "address": "0xB9C9158aB81f90996cAD891fFbAdfBaad733c8C6",
+      tokenAddress: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      tokenSymbol: "cbBTC",
+      name: "Relend cbBTC",
+      "symbol": "recbBTC"
+    },
+    {
+      "address": "0xA2Cac0023a4797b4729Db94783405189a4203AFc",
+      tokenAddress: "0x4200000000000000000000000000000000000006",
+      tokenSymbol: "WETH",
+      name: "Re7 WETH",
+      "symbol": "Re7WETH"
+    },
+    {
+      "address": "0xa0E430870c4604CcfC7B38Ca7845B1FF653D0ff1",
+      tokenAddress: "0x4200000000000000000000000000000000000006",
+      tokenSymbol: "WETH",
+      name: "Moonwell Flagship ETH",
+      "symbol": "mwETH"
+    },
+    {
+      "address": "0xA0804346780b4c2e3bE118ac957D1DB82F9d7484",
+      tokenAddress: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      tokenSymbol: "USDT",
+      name: "Smokehouse USDT",
+      "symbol": "bbqUSDT"
+    },
+    {
+      "address": "0x9a8bC3B04b7f3D87cfC09ba407dCED575f2d61D8",
+      tokenAddress: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      tokenSymbol: "WETH",
+      name: "MEV Capital wETH",
+      "symbol": "MCwETH"
+    },
+    {
+      "address": "0x98cF0B67Da0F16E1F8f1a1D23ad8Dc64c0c70E0b",
+      tokenAddress: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      tokenSymbol: "cbBTC",
+      name: "MEV Capital cbBTC",
+      "symbol": "MCcbBTC"
+    },
+    {
+      "address": "0x8eB67A509616cd6A7c1B3c8C21D48FF57df3d458",
+      tokenAddress: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      tokenSymbol: "USDC",
+      name: "Gauntlet USDC Core",
+      "symbol": "gtUSDCcore"
+    },
+    {
+      "address": "0x8CB3649114051cA5119141a34C200D65dc0Faa73",
+      tokenAddress: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      tokenSymbol: "USDT",
+      name: "Gauntlet USDT Prime",
+      "symbol": "gtUSDT"
+    },
+    {
+      "address": "0x80D9964fEb4A507dD697b4437Fc5b25b618CE446",
+      tokenAddress: "0x4200000000000000000000000000000000000006",
+      tokenSymbol: "WETH",
+      name: "Pyth ETH",
+      "symbol": "pythETH"
+    },
+    {
+      "address": "0x7BfA7C4f149E7415b73bdeDfe609237e29CBF34A",
+      tokenAddress: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      tokenSymbol: "USDC",
+      name: "Spark USDC Vault",
+      "symbol": "sparkUSDC"
+    },
+
+
+
+
+
+  //------ raw ------//
+  // {
+  //   "address": "0xF587f2e8AfF7D76618d3B6B4626621860FbD54e3",
+  //   "asset": {
+  //     "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  //     "symbol": "cbBTC"
+  //   },
+  //   name: "Gauntlet cbBTC Core",
+  //   "symbol": "gtcbBTCc"
+  // },
+  // {
+  //   "address": "0xf24608E0CCb972b0b0f4A6446a0BBf58c701a026",
+  //   "asset": {
+  //     "address": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
+  //     "symbol": "EURC"
+  //   },
+  //   name: "Moonwell Flagship EURC",
+  //   "symbol": "mwEURC"
+  // },
+  // {
+  //   "address": "0xeE8F4eC5672F09119b96Ab6fB59C27E1b7e44b61",
+  //   "asset": {
+  //     "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Gauntlet USDC Prime",
+  //   "symbol": "gtUSDCp"
+  // },
+  // {
+  //   "address": "0xE0C98605f279e4D7946d25B75869c69802823763",
+  //   "asset": {
+  //     "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  //     "symbol": "WBTC"
+  //   },
+  //   name: "Re7 WBTC",
+  //   "symbol": "Re7WBTC"
+  // },
+  // {
+  //   "address": "0xdd0f28e19C1780eb6396170735D45153D261490d",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Gauntlet USDC Prime",
+  //   "symbol": "gtUSDC"
+  // },
+  // {
+  //   "address": "0xdC94785959B73F7A168452b3654E44fEc6A750e4",
+  //   "asset": {
+  //     "address": "0x8236a87084f8B84306f72007F36F2618A5634494",
+  //     "symbol": "LBTC"
+  //   },
+  //   name: "Gauntlet LBTC Core",
+  //   "symbol": "gtLBTCc"
+  // },
+  // {
+  //   "address": "0xd63070114470f685b75B74D60EEc7c1113d33a3D",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: " Usual Boosted USDC",
+  //   "symbol": "USUALUSDC+"
+  // },
+  // {
+  //   "address": "0xD5Ac156319f2491d4ad1Ec4aA5ed0ED48C0fa173",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "9Summits USDC Core",
+  //   "symbol": "9SUSDCcore"
+  // },
+  // {
+  //   "address": "0xc1256Ae5FF1cf2719D4937adb3bbCCab2E00A2Ca",
+  //   "asset": {
+  //     "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Moonwell Flagship USDC",
+  //   "symbol": "mwUSDC"
+  // },
+  // {
+  //   "address": "0xc0c5689e6f4D256E861F65465b691aeEcC0dEb12",
+  //   "asset": {
+  //     "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Gauntlet USDC Core",
+  //   "symbol": "gtUSDCc"
+  // },
+  // {
+  //   "address": "0xc080f56504e0278828A403269DB945F6c6D6E014",
+  //   "asset": {
+  //     "address": "0xA0d69E286B938e21CBf7E51D71F6A4c8918f482F",
+  //     "symbol": "eUSD"
+  //   },
+  //   name: "Gauntlet eUSD Core",
+  //   "symbol": "gteUSDc"
+  // },
+  // {
+  //   "address": "0xBEeFFF209270748ddd194831b3fa287a5386f5bC",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Smokehouse USDC",
+  //   "symbol": "bbqUSDC"
+  // },
+  // {
+  //   "address": "0xbEeFc011e94f43b8B7b455eBaB290C7Ab4E216f1",
+  //   "asset": {
+  //     "address": "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
+  //     "symbol": "wUSDL"
+  //   },
+  //   name: "Coinshift USDL",
+  //   "symbol": "csUSDL"
+  // },
+  // {
+  //   "address": "0xBeEf11eCb698f4B5378685C05A210bdF71093521",
+  //   "asset": {
+  //     "address": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
+  //     "symbol": "rUSD"
+  //   },
+  //   name: "Steakhouse RUSD",
+  //   "symbol": "steakRUSD"
+  // },
+  // {
+  //   "address": "0xBEEf050ecd6a16c4e7bfFbB52Ebba7846C4b8cD4",
+  //   "asset": {
+  //     "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Steakhouse ETH",
+  //   "symbol": "steakETH"
+  // },
+  // {
+  //   "address": "0xbEef047a543E45807105E51A8BBEFCc5950fcfBa",
+  //   "asset": {
+  //     "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  //     "symbol": "USDT"
+  //   },
+  //   name: "Steakhouse USDT",
+  //   "symbol": "steakUSDT"
+  // },
+  // {
+  //   "address": "0xbEEF02e5E13584ab96848af90261f0C8Ee04722a",
+  //   "asset": {
+  //     "address": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+  //     "symbol": "PYUSD"
+  //   },
+  //   name: "Steakhouse PYUSD",
+  //   "symbol": "steakPYUSD"
+  // },
+  // {
+  //   "address": "0xBEEF01735c132Ada46AA9aA4c54623cAA92A64CB",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Steakhouse USDC",
+  //   "symbol": "steakUSDC"
+  // },
+  // {
+  //   "address": "0xbeeF010f9cb27031ad51e3333f9aF9C6B1228183",
+  //   "asset": {
+  //     "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Steakhouse USDC",
+  //   "symbol": "steakUSDC"
+  // },
+  // {
+  //   "address": "0xbb819D845b573B5D7C538F5b85057160cfb5f313",
+  //   "asset": {
+  //     "address": "0xCfA3Ef56d303AE4fAabA0592388F19d7C3399FB4",
+  //     "symbol": "eUSD"
+  //   },
+  //   name: "Morpho eUSD",
+  //   "symbol": "meUSD"
+  // },
+  // {
+  //   "address": "0xB9C9158aB81f90996cAD891fFbAdfBaad733c8C6",
+  //   "asset": {
+  //     "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  //     "symbol": "cbBTC"
+  //   },
+  //   name: "Relend cbBTC",
+  //   "symbol": "recbBTC"
+  // },
+  // {
+  //   "address": "0xA2Cac0023a4797b4729Db94783405189a4203AFc",
+  //   "asset": {
+  //     "address": "0x4200000000000000000000000000000000000006",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Re7 WETH",
+  //   "symbol": "Re7WETH"
+  // },
+  // {
+  //   "address": "0xa0E430870c4604CcfC7B38Ca7845B1FF653D0ff1",
+  //   "asset": {
+  //     "address": "0x4200000000000000000000000000000000000006",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Moonwell Flagship ETH",
+  //   "symbol": "mwETH"
+  // },
+  // {
+  //   "address": "0xA0804346780b4c2e3bE118ac957D1DB82F9d7484",
+  //   "asset": {
+  //     "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  //     "symbol": "USDT"
+  //   },
+  //   name: "Smokehouse USDT",
+  //   "symbol": "bbqUSDT"
+  // },
+  // {
+  //   "address": "0x9a8bC3B04b7f3D87cfC09ba407dCED575f2d61D8",
+  //   "asset": {
+  //     "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "MEV Capital wETH",
+  //   "symbol": "MCwETH"
+  // },
+  // {
+  //   "address": "0x98cF0B67Da0F16E1F8f1a1D23ad8Dc64c0c70E0b",
+  //   "asset": {
+  //     "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  //     "symbol": "cbBTC"
+  //   },
+  //   name: "MEV Capital cbBTC",
+  //   "symbol": "MCcbBTC"
+  // },
+  // {
+  //   "address": "0x8eB67A509616cd6A7c1B3c8C21D48FF57df3d458",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Gauntlet USDC Core",
+  //   "symbol": "gtUSDCcore"
+  // },
+  // {
+  //   "address": "0x8CB3649114051cA5119141a34C200D65dc0Faa73",
+  //   "asset": {
+  //     "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  //     "symbol": "USDT"
+  //   },
+  //   name: "Gauntlet USDT Prime",
+  //   "symbol": "gtUSDT"
+  // },
+  // {
+  //   "address": "0x80D9964fEb4A507dD697b4437Fc5b25b618CE446",
+  //   "asset": {
+  //     "address": "0x4200000000000000000000000000000000000006",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Pyth ETH",
+  //   "symbol": "pythETH"
+  // },
+  // {
+  //   "address": "0x7BfA7C4f149E7415b73bdeDfe609237e29CBF34A",
+  //   "asset": {
+  //     "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Spark USDC Vault",
+  //   "symbol": "sparkUSDC"
+  // },
+
+
+
+  //------ second batch ------//
+
+    {
+      "address": "0x78Fc2c2eD1A4cDb5402365934aE5648aDAd094d0",
+      "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "tokenSymbol": "WETH",
+      "name": "Re7 WETH",
+      "symbol": "Re7WETH"
+    },
+    {
+      "address": "0x78B18E07dc43017fcEaabaD0751d6464c0F56b25",
+      "tokenAddress": "0x64351fC9810aDAd17A690E4e1717Df5e7e085160",
+      "tokenSymbol": "msETH",
+      "name": "Metronome msETH Vault",
+      "symbol": "gtmsETHc"
+    },
+    {
+      "address": "0x73e65DBD630f90604062f6E02fAb9138e713edD9",
+      "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "tokenSymbol": "DAI",
+      "name": "Spark DAI Vault",
+      "symbol": "spDAI"
+    },
+    {
+      "address": "0x7204B7Dbf9412567835633B6F00C3Edc3a8D6330",
+      "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "tokenSymbol": "USDC",
+      "name": "Coinshift USDC",
+      "symbol": "csUSDC"
+    },
+    {
+      "address": "0x701907283a57FF77E255C3f1aAD790466B8CE4ef",
+      "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "tokenSymbol": "WETH",
+      "name": "Index Coop hyETH",
+      "symbol": "mhyETH"
+    },
+    {
+      "address": "0x6D4e530B8431a52FFDA4516BA4Aadc0951897F8C",
+      "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "tokenSymbol": "USDC",
+      "name": "Steakhouse USDC RWA",
+      "symbol": "steakUSDCrwa"
+    },
+    {
+      "address": "0x6b13c060F13Af1fdB319F52315BbbF3fb1D88844",
+      "tokenAddress": "0x4200000000000000000000000000000000000006",
+      "tokenSymbol": "WETH",
+      "name": "Gauntlet WETH Core",
+      "symbol": "gtWETHc"
+    },
+    {
+      "address": "0x6859B34a9379122d25A9FA46f0882d434fee36c3",
+      "tokenAddress": "0xab5eB14c09D416F0aC63661E57EDB7AEcDb9BEfA",
+      "tokenSymbol": "msUSD",
+      "name": "Metronome msUSD Vault",
+      "symbol": "gtmsUSDc"
+    },
+    {
+      "address": "0x6770216aC60F634483Ec073cBABC4011c94307Cb",
+      "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "tokenSymbol": "cbBTC",
+      "name": "Gauntlet cbBTC Core",
+      "symbol": "gtcbBTCc"
+    },
+    {
+      "address": "0x616a4E1db48e22028f6bbf20444Cd3b8e3273738",
+      "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "tokenSymbol": "USDC",
+      "name": "Seamless USDC Vault",
+      "symbol": "smUSDC"
+    },
+    {
+      "address": "0x5a47C803488FE2BB0A0EAaf346b420e4dF22F3C7",
+      "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "tokenSymbol": "cbBTC",
+      "name": "Seamless cbBTC Vault",
+      "symbol": "smcbBTC"
+    },
+    {
+      "address": "0x5A32099837D89E3a794a44fb131CBbAD41f87a8C",
+      "tokenAddress": "0x4200000000000000000000000000000000000006",
+      "tokenSymbol": "WETH",
+      "name": "Ionic Ecosystem WETH",
+      "symbol": "ionicWETH"
+    },
+    {
+      "address": "0x5496b42ad0deCebFab0db944D83260e60D54f667",
+      "tokenAddress": "0x4200000000000000000000000000000000000006",
+      "tokenSymbol": "WETH",
+      "name": "9Summits WETH Core 1.1",
+      "symbol": "9SETHcore"
+    },
+    {
+      "address": "0x543257eF2161176D7C8cD90BA65C2d4CaEF5a796",
+      "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "tokenSymbol": "cbBTC",
+      "name": "Moonwell Frontier cbBTC",
+      "symbol": "mwcbBTC"
+    },
+    {
+      "address": "0x500331c9fF24D9d11aee6B07734Aa72343EA74a5",
+      "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "tokenSymbol": "DAI",
+      "name": "Gauntlet DAI Core",
+      "symbol": "gtDAIcore"
+    },
+    {
+      "address": "0x4Ff4186188f8406917293A9e01A1ca16d3cf9E59",
+      "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "tokenSymbol": "USDC",
+      "name": "SwissBorg Morpho USDC",
+      "symbol": "sbMorphoUSDC"
+    },
+    {
+      "address": "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658",
+      "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "tokenSymbol": "WETH",
+      "name": "Gauntlet LRT Core",
+      "symbol": "gtLRTcore"
+    },
+    {
+      "address": "0x443df5eEE3196e9b2Dd77CaBd3eA76C3dee8f9b2",
+      "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "tokenSymbol": "WBTC",
+      "name": "Gauntlet WBTC Core",
+      "symbol": "gtWBTCc"
+    },
+    {
+      "address": "0x43Cd00De63485618A5CEEBE0de364cD6cBeB26E7",
+      "tokenAddress": "0x7Ba6F01772924a82D9626c126347A28299E98c98",
+      "tokenSymbol": "msETH",
+      "name": "Metronome msETH Vault",
+      "symbol": "gtmsETHc"
+    },
+    {
+      "address": "0x38989BBA00BDF8181F4082995b3DEAe96163aC5D",
+      "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "tokenSymbol": "WETH",
+      "name": "Flagship ETH",
+      "symbol": "bbETH"
+    },
+    {
+      "address": "0x2f1aBb81ed86Be95bcf8178bA62C8e72D6834775",
+      "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "tokenSymbol": "WBTC",
+      "name": "Pendle WBTC",
+      "symbol": "pWBTC"
+    },
+    {
+      "address": "0x2C25f6C25770fFEC5959D34B94Bf898865e5D6b1",
+      "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "tokenSymbol": "USDT",
+      "name": "Flagship USDT",
+      "symbol": "bbUSDT"
+    },
+    {
+      "address": "0x2371e134e3455e0593363cBF89d3b6cf53740618",
+      "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "tokenSymbol": "WETH",
+      "name": "Gauntlet WETH Prime",
+      "symbol": "gtWETH"
+    },
+    {
+      "address": "0x23479229e52Ab6aaD312D0B03DF9F33B46753B5e",
+      "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "tokenSymbol": "USDC",
+      "name": "Ionic Ecosystem USDC",
+      "symbol": "ionicUSDC"
+    },
+    {
+      "address": "0x214B47C50057eFaa7adc1B1C2608C3751Cd77D78",
+      "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "tokenSymbol": "USDC",
+      "name": "Apostro Resolv USDC",
+      "symbol": "aprUSDC"
+    },
+    {
+      "address": "0x1c530D6de70c05A81bF1670157b9d928e9699089",
+      "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "tokenSymbol": "WBTC",
+      "name": "MEV Capital WBTC",
+      "symbol": "MCwBTC"
+    },
+    {
+      "address": "0x1B4cd53a1A8e5F50aB6320EF34E5fB4D3df7B6f6",
+      "tokenAddress": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      "tokenSymbol": "AUSD",
+      "name": "Gauntlet AUSD Core",
+      "symbol": "gtAUSDc"
+    },
+    {
+      "address": "0x132E6C9C33A62D7727cd359b1f51e5B566E485Eb",
+      "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "tokenSymbol": "USDC",
+      "name": "Resolv USDC",
+      "symbol": "resolvUSDC"
+    },
+    {
+      "address": "0x12AFDeFb2237a5963e7BAb3e2D46ad0eee70406e",
+      "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "tokenSymbol": "USDC",
+      "name": "Re7 USDC",
+      "symbol": "Re7USDC"
+    },
+    {
+      "address": "0x1265a81d42d513Df40d0031f8f2e1346954d665a",
+      "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "tokenSymbol": "USDC",
+      "name": "MEV Capital Elixir USDC",
+      "symbol": "MC.eUSDC"
+    },
+    {
+      "address": "0x0F359FD18BDa75e9c49bC027E7da59a4b01BF32a",
+      "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "tokenSymbol": "USDC",
+      "name": "Relend USDC",
+      "symbol": "reUSDC"
+    },
+    {
+      "address": "0x0D05e6ec0A10f9fFE9229EAA785c11606a1d13Fb",
+      "tokenAddress": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+      "tokenSymbol": "LBTC",
+      "name": "Gauntlet LBTC Core",
+      "symbol": "gtLBTCc"
+    },
+    {
+      "address": "0x0B4b91a95C9AC6d2DA6e7b7a91123f5A5bAEB44A",
+      "tokenAddress": "0xcDBBEe4b1c5E0F30b86e88faFB17b6A5d19De67d",
+      "tokenSymbol": "LEND",
+      "name": "Gauntlet LEND Core",
+      "symbol": "gtLENDc"
+    },  
+
+
+
+
+//------ raw for the second batch ------//
+  // {
+  //   "address": "0x78Fc2c2eD1A4cDb5402365934aE5648aDAd094d0",
+  //   "asset": {
+  //     "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Re7 WETH",
+  //   "symbol": "Re7WETH"
+  // },
+  // {
+  //   "address": "0x78B18E07dc43017fcEaabaD0751d6464c0F56b25",
+  //   "asset": {
+  //     "address": "0x64351fC9810aDAd17A690E4e1717Df5e7e085160",
+  //     "symbol": "msETH"
+  //   },
+  //   name: "Metronome msETH Vault",
+  //   "symbol": "gtmsETHc"
+  // },
+  // {
+  //   "address": "0x73e65DBD630f90604062f6E02fAb9138e713edD9",
+  //   "asset": {
+  //     "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+  //     "symbol": "DAI"
+  //   },
+  //   name: "Spark DAI Vault",
+  //   "symbol": "spDAI"
+  // },
+  // {
+  //   "address": "0x7204B7Dbf9412567835633B6F00C3Edc3a8D6330",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Coinshift USDC",
+  //   "symbol": "csUSDC"
+  // },
+  // {
+  //   "address": "0x701907283a57FF77E255C3f1aAD790466B8CE4ef",
+  //   "asset": {
+  //     "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Index Coop hyETH",
+  //   "symbol": "mhyETH"
+  // },
+  // {
+  //   "address": "0x6D4e530B8431a52FFDA4516BA4Aadc0951897F8C",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Steakhouse USDC RWA",
+  //   "symbol": "steakUSDCrwa"
+  // },
+  // {
+  //   "address": "0x6b13c060F13Af1fdB319F52315BbbF3fb1D88844",
+  //   "asset": {
+  //     "address": "0x4200000000000000000000000000000000000006",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Gauntlet WETH Core",
+  //   "symbol": "gtWETHc"
+  // },
+  // {
+  //   "address": "0x6859B34a9379122d25A9FA46f0882d434fee36c3",
+  //   "asset": {
+  //     "address": "0xab5eB14c09D416F0aC63661E57EDB7AEcDb9BEfA",
+  //     "symbol": "msUSD"
+  //   },
+  //   name: "Metronome msUSD Vault",
+  //   "symbol": "gtmsUSDc"
+  // },
+  // {
+  //   "address": "0x6770216aC60F634483Ec073cBABC4011c94307Cb",
+  //   "asset": {
+  //     "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  //     "symbol": "cbBTC"
+  //   },
+  //   name: "Gauntlet cbBTC Core",
+  //   "symbol": "gtcbBTCc"
+  // },
+  // {
+  //   "address": "0x616a4E1db48e22028f6bbf20444Cd3b8e3273738",
+  //   "asset": {
+  //     "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Seamless USDC Vault",
+  //   "symbol": "smUSDC"
+  // },
+  // {
+  //   "address": "0x5a47C803488FE2BB0A0EAaf346b420e4dF22F3C7",
+  //   "asset": {
+  //     "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  //     "symbol": "cbBTC"
+  //   },
+  //   name: "Seamless cbBTC Vault",
+  //   "symbol": "smcbBTC"
+  // },
+  // {
+  //   "address": "0x5A32099837D89E3a794a44fb131CBbAD41f87a8C",
+  //   "asset": {
+  //     "address": "0x4200000000000000000000000000000000000006",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Ionic Ecosystem WETH",
+  //   "symbol": "ionicWETH"
+  // },
+  // {
+  //   "address": "0x5496b42ad0deCebFab0db944D83260e60D54f667",
+  //   "asset": {
+  //     "address": "0x4200000000000000000000000000000000000006",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "9Summits WETH Core 1.1",
+  //   "symbol": "9SETHcore"
+  // },
+  // {
+  //   "address": "0x543257eF2161176D7C8cD90BA65C2d4CaEF5a796",
+  //   "asset": {
+  //     "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  //     "symbol": "cbBTC"
+  //   },
+  //   name: "Moonwell Frontier cbBTC",
+  //   "symbol": "mwcbBTC"
+  // },
+  // {
+  //   "address": "0x500331c9fF24D9d11aee6B07734Aa72343EA74a5",
+  //   "asset": {
+  //     "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+  //     "symbol": "DAI"
+  //   },
+  //   name: "Gauntlet DAI Core",
+  //   "symbol": "gtDAIcore"
+  // },
+  // {
+  //   "address": "0x4Ff4186188f8406917293A9e01A1ca16d3cf9E59",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "SwissBorg Morpho USDC",
+  //   "symbol": "sbMorphoUSDC"
+  // },
+  // {
+  //   "address": "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658",
+  //   "asset": {
+  //     "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Gauntlet LRT Core",
+  //   "symbol": "gtLRTcore"
+  // },
+  // {
+  //   "address": "0x443df5eEE3196e9b2Dd77CaBd3eA76C3dee8f9b2",
+  //   "asset": {
+  //     "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  //     "symbol": "WBTC"
+  //   },
+  //   name: "Gauntlet WBTC Core",
+  //   "symbol": "gtWBTCc"
+  // },
+  // {
+  //   "address": "0x43Cd00De63485618A5CEEBE0de364cD6cBeB26E7",
+  //   "asset": {
+  //     "address": "0x7Ba6F01772924a82D9626c126347A28299E98c98",
+  //     "symbol": "msETH"
+  //   },
+  //   name: "Metronome msETH Vault",
+  //   "symbol": "gtmsETHc"
+  // },
+  // {
+  //   "address": "0x38989BBA00BDF8181F4082995b3DEAe96163aC5D",
+  //   "asset": {
+  //     "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Flagship ETH",
+  //   "symbol": "bbETH"
+  // },
+  // {
+  //   "address": "0x2f1aBb81ed86Be95bcf8178bA62C8e72D6834775",
+  //   "asset": {
+  //     "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  //     "symbol": "WBTC"
+  //   },
+  //   name: "Pendle WBTC",
+  //   "symbol": "pWBTC"
+  // },
+  // {
+  //   "address": "0x2C25f6C25770fFEC5959D34B94Bf898865e5D6b1",
+  //   "asset": {
+  //     "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  //     "symbol": "USDT"
+  //   },
+  //   name: "Flagship USDT",
+  //   "symbol": "bbUSDT"
+  // },
+  // {
+  //   "address": "0x2371e134e3455e0593363cBF89d3b6cf53740618",
+  //   "asset": {
+  //     "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  //     "symbol": "WETH"
+  //   },
+  //   name: "Gauntlet WETH Prime",
+  //   "symbol": "gtWETH"
+  // },
+  // {
+  //   "address": "0x23479229e52Ab6aaD312D0B03DF9F33B46753B5e",
+  //   "asset": {
+  //     "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Ionic Ecosystem USDC",
+  //   "symbol": "ionicUSDC"
+  // },
+  // {
+  //   "address": "0x214B47C50057eFaa7adc1B1C2608C3751Cd77D78",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Apostro Resolv USDC",
+  //   "symbol": "aprUSDC"
+  // },
+  // {
+  //   "address": "0x1c530D6de70c05A81bF1670157b9d928e9699089",
+  //   "asset": {
+  //     "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  //     "symbol": "WBTC"
+  //   },
+  //   name: "MEV Capital WBTC",
+  //   "symbol": "MCwBTC"
+  // },
+  // {
+  //   "address": "0x1B4cd53a1A8e5F50aB6320EF34E5fB4D3df7B6f6",
+  //   "asset": {
+  //     "address": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+  //     "symbol": "AUSD"
+  //   },
+  //   name: "Gauntlet AUSD Core",
+  //   "symbol": "gtAUSDc"
+  // },
+  // {
+  //   "address": "0x132E6C9C33A62D7727cd359b1f51e5B566E485Eb",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Resolv USDC",
+  //   "symbol": "resolvUSDC"
+  // },
+  // {
+  //   "address": "0x12AFDeFb2237a5963e7BAb3e2D46ad0eee70406e",
+  //   "asset": {
+  //     "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Re7 USDC",
+  //   "symbol": "Re7USDC"
+  // },
+  // {
+  //   "address": "0x1265a81d42d513Df40d0031f8f2e1346954d665a",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "MEV Capital Elixir USDC",
+  //   "symbol": "MC.eUSDC"
+  // },
+  // {
+  //   "address": "0x0F359FD18BDa75e9c49bC027E7da59a4b01BF32a",
+  //   "asset": {
+  //     "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  //     "symbol": "USDC"
+  //   },
+  //   name: "Relend USDC",
+  //   "symbol": "reUSDC"
+  // },
+  // {
+  //   "address": "0x0D05e6ec0A10f9fFE9229EAA785c11606a1d13Fb",
+  //   "asset": {
+  //     "address": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+  //     "symbol": "LBTC"
+  //   },
+  //   name: "Gauntlet LBTC Core",
+  //   "symbol": "gtLBTCc"
+  // },
+
+
+  //------ last batch ------//
+  {
+    "address": "0x059Fc6723b9bF77DbF4283C8d7C90eA8Af44EF10",
+    "asset": {
+      "address": "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
+      "symbol": "tBTC"
+    },
+    name: "SwissBorg tBTC",
+    "symbol": "sbMorphotBTC"
+  }
 ] as const
