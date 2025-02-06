@@ -57,7 +57,7 @@ export default [
     variableDebtTokenAddress: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
   },
   {
-    symbol: "USDT",
+    symbol: "USD₮0",
     token: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
     usageAsCollateralEnabled: true,
     borrowingEnabled: true,

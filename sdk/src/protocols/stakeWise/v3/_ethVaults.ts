@@ -14,16 +14,16 @@ export default [
       "Chorus One’s ground-breaking MEV research ensures the highest yields with top-tier security and enterprise-level infrastructure. Start staking ETH today.",
   },
   {
-    id: "0xa8cb2e35f594b308726b242136f0a8995bf19e97",
-    name: "Easy Stake - Powered by SSV",
-    description:
-      "3 out of 4 Fault Tolerance  - SSV Operators 491, 770, 1002, 1003 - Solo node runner since April 2023 -  Minority clients Nethermind/Nimbus, Besu/Teku, Erigon/Lodestar, Nethermind/Prysm - MEV enabled - High-end NUC with UPS",
-  },
-  {
     id: "0xb36fc5e542cb4fc562a624912f55da2758998113",
     name: "Serenita - Powered by Vero",
     description:
       "Serenita provides enterprise-grade staking services with a focus on top-tier performance and minimal risk. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nThe validators in this Vault are powered by Vero, our custom-built multi-node validator client software. Similar to DVT technology, Vero verifies the chain’s latest state across multiple independent client implementations—shielding our validators from single-client bugs and downtime.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
+  },
+  {
+    id: "0xa8cb2e35f594b308726b242136f0a8995bf19e97",
+    name: "Easy Stake - Powered by SSV",
+    description:
+      "3 out of 4 Fault Tolerance  - SSV Operators 491, 770, 1002, 1003 - Solo node runner since April 2023 -  Minority clients Nethermind/Nimbus, Besu/Teku, Erigon/Lodestar, Nethermind/Prysm - MEV enabled - High-end NUC with UPS",
   },
   {
     id: "0x8a93a876912c9f03f88bc9114847cf5b63c89f56",
@@ -72,12 +72,6 @@ export default [
     description: "Celestial gains for celestial bodies.",
   },
   {
-    id: "0x05e393ec11d0197a88d84457908edd4ff235f323",
-    name: "Stakin - No MEV",
-    description:
-      "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
-  },
-  {
     id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
     name: "Blockshard Pioneers Vault ",
     description:
@@ -88,6 +82,12 @@ export default [
     name: "Allnodes",
     description:
       "Reliable non-custodial Validator run by the industry leader - Allnodes",
+  },
+  {
+    id: "0x05e393ec11d0197a88d84457908edd4ff235f323",
+    name: "Stakin - No MEV",
+    description:
+      "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
   {
     id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
@@ -161,12 +161,6 @@ export default [
       "Minimum Fee - Unrestricted Maximum MEV - Zero-Cloud - Private Datacentre - 24/7 Engineering Support - All included in Simply Staking's Premium Vault...\n\n\n- Fee: Competitive 3.75%.\n- MEV: Extensive list of MEV relays, free of restrictions, with the ultimate goal of using a global set of relays to maximise profit.\n- Private Data Centre Operation: Your ETH is securely managed in our privately operated data center in Malta, prioritising security and reliability, free from the dependencies of cloud services.",
   },
   {
-    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
-    name: "Big Euler's e-Stake",
-    description:
-      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
-  },
-  {
     id: "0x5fe23da0835ecf01f4faf9b07fdcfd603dfbd146",
     name: "Lavender.Five Nodes",
     description:
@@ -185,6 +179,12 @@ export default [
       "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
   },
   {
+    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
+    name: "Big Euler's e-Stake",
+    description:
+      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
+  },
+  {
     id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
     name: "Peer Ventures",
     description:
@@ -201,5 +201,11 @@ export default [
     name: "GlobalStake",
     description:
       "With decades of infrastructure experience, GlobalStake's enterprise-grade Web3 data centers, equipment, and protocols are specifically engineered to secure Proof-of-Stake networks. We believe that if you are going to do something, do it right!",
+  },
+  {
+    id: "0xc502a1008cae7ad560294ac987355dfdb287e597",
+    name: "Stakin - Full MEV",
+    description:
+      "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
 ] as const
