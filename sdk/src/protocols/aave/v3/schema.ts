@@ -86,6 +86,7 @@ export const gno = {
       ] as [string, string, ...string[]])
       .array(),
   }),
+
   borrow: z.object({
     targets: z
       .enum([
@@ -107,6 +108,7 @@ export const arb1 = {
       ] as [string, string, ...string[]])
       .array(),
   }),
+
   borrow: z.object({
     targets: z
       .enum([
@@ -128,6 +130,7 @@ export const oeth = {
       ] as [string, string, ...string[]])
       .array(),
   }),
+
   borrow: z.object({
     targets: z
       .enum([
@@ -149,6 +152,7 @@ export const base = {
       ] as [string, string, ...string[]])
       .array(),
   }),
+
   borrow: z.object({
     targets: z
       .enum([

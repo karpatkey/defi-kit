@@ -42,7 +42,7 @@ For targets that are ERC-20 tokens, the following functions are allowed:
   omitted, the default market is `Core`.
 </Callout>
 <Callout type="info">
-  The `POOLV3` contract corresponds to the pool of the selected `MARKET`.
+  The `POOLV3` placeholder represents the pool of the selected `MARKET`.
 </Callout>
 <Callout type="info">
   `TARGET` below refers to the ERC-20 token address of each element given in
@@ -81,7 +81,7 @@ Deposit `TARGET` and receive `aToken` tokens in exchange.
 
 #### `POOLV3 · setUserUseReserveAsCollateral`
 
-Set/unset deposited asset as collateral.
+Enable or disable `TARGET` as collateral.
 
 - **Contract:** `POOLV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
@@ -120,21 +120,24 @@ Claim incentive rewards for supplying specific tokens.
 
 ### Target: ETH
 
-For `"ETH"` as an element of `targets`, the following functions are allowed:
+For ETH as an element of `targets`, the following functions are allowed:
 
 <Callout type="info">
-  The `POOLV3` contract corresponds to the pool of the selected `MARKET`.
+  The `aETH` placeholder represents the aToken for ETH in the selected `market`.
 </Callout>
 <Callout type="info">
-  The `WRAPPEDTOKENGATEWAYV3` contract corresponds to the Wrapped Token Gateway
+  The `POOLV3` placeholder represents the pool of the selected `MARKET`.
+</Callout>
+<Callout type="info">
+  The `WRAPPEDTOKENGATEWAYV3` placeholder represents the Wrapped Token Gateway
   of the selected `MARKET`.
 </Callout>
 
-#### `aEthWETH · approve`
+#### `aETH · approve`
 
-Approve `WRAPPEDTOKENGATEWAYV3` to spend `aEthWETH` tokens on behalf of the avatar.
+Approve `WRAPPEDTOKENGATEWAYV3` to spend `aETH` tokens on behalf of the avatar.
 
-- **Contract:** `aEthWETH`
+- **Contract:** `aETH`
 - **Function:** `approve(address,uint256)`
 
   | Parameter | Constraint                       |
@@ -144,7 +147,7 @@ Approve `WRAPPEDTOKENGATEWAYV3` to spend `aEthWETH` tokens on behalf of the avat
 
 #### `WRAPPEDTOKENGATEWAYV3 · depositETH`
 
-Deposit ETH and receive `aEthWETH` tokens in exchange.
+Deposit ETH and receive `aETH` tokens in exchange.
 
 - **Contract:** `WRAPPEDTOKENGATEWAYV3`
 - **Function:** `depositETH(address,address,uint16)` Ξ _allow sending ETH_
@@ -157,7 +160,7 @@ Deposit ETH and receive `aEthWETH` tokens in exchange.
 
 #### `POOLV3 · setUserUseReserveAsCollateral`
 
-Set/unset deposited asset as collateral.
+Enable or disable `TARGET` as collateral.
 
 - **Contract:** `POOLV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
@@ -169,7 +172,7 @@ Set/unset deposited asset as collateral.
 
 #### `WRAPPEDTOKENGATEWAYV3 · withdrawETH`
 
-Redeem `aEthWETH` and withdraw ETH tokens.
+Redeem `aETH` and withdraw ETH tokens.
 
 - **Contract:** `WRAPPEDTOKENGATEWAYV3`
 - **Function:** `withdrawETH(address,uint256,address)`
@@ -213,11 +216,14 @@ For targets that are ERC-20 tokens, the following functions are allowed:
   omitted, the default market is `Core`.
 </Callout>
 <Callout type="info">
-  The `POOLV3` contract corresponds to the pool of the selected `MARKET`.
+  The `POOLV3` placeholder represents the pool of the selected `MARKET`.
 </Callout>
 <Callout type="info">
   `TARGET` below refers to the ERC-20 token address of each element given in
   `targets`.
+</Callout>
+<Callout type="info">
+  The `aVARIABLEDEBTETH` placeholder represents the aVariableDebt for ETH in the selected `market`.
 </Callout>
 <Callout type="error">
   If a token provided in the `targets` parameter is not supported by the
@@ -238,7 +244,7 @@ Approve `POOLV3` to spend `TARGET` tokens on behalf of the avatar.
 
 #### `POOLV3 · borrow`
 
-Receive `TARGET` and `variableDebtToken` tokens.
+Receive `TARGET` and `aVARIABLEDEBTETH` tokens.
 
 - **Contract:** `POOLV3`
 - **Function:** `borrow(address,uint256,uint256,uint16,address)`
@@ -267,18 +273,21 @@ Repay borrowed `TARGET` tokens.
 
 ### Target: ETH
 
-For `"ETH"` as an element of `targets`, the following functions are allowed:
+For ETH as an element of `targets`, the following functions are allowed:
 
 <Callout type="info">
-  The `WRAPPEDTOKENGATEWAYV3` contract corresponds to the Wrapped Token Gateway
+  The `WRAPPEDTOKENGATEWAYV3` placeholder represents the Wrapped Token Gateway
   of the selected `MARKET`.
 </Callout>
+<Callout type="info">
+  The `aVARIABLEDEBTETH` placeholder represents the aVariableDebt for ETH in the selected `market`.
+</Callout>
 
-#### `variableDebtWETH · approveDelegation`
+#### `aVARIABLEDEBTETH · approveDelegation`
 
-Set the amount of allowance for `WRAPPEDTOKENGATEWAYV3` to borrow `variableDebtWETH` tokens.
+Set the amount of allowance for `WRAPPEDTOKENGATEWAYV3` to borrow `aVARIABLEDEBTETH` tokens.
 
-- **Contract:** `variableDebtWETH`
+- **Contract:** `aVARIABLEDEBTETH`
 - **Function:** `approveDelegation(address,uint256)`
 
   | Parameter   | Constraint                       |
@@ -288,7 +297,7 @@ Set the amount of allowance for `WRAPPEDTOKENGATEWAYV3` to borrow `variableDebtW
 
 #### `WRAPPEDTOKENGATEWAYV3 · borrowETH`
 
-Receive ETH and `variableDebtWETH` tokens.
+Receive ETH and `aVARIABLEDEBTETH` tokens.
 
 - **Contract:** `WRAPPEDTOKENGATEWAYV3`
 - **Function:** `borrowETH(address,uint256,uint256,uint16)`
