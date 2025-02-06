@@ -7,9 +7,11 @@ const zEthPool = z.enum([
   ..._ethPools.map((pool) => pool.address),
 ] as [string, string, ...string[]])
 
-const zEthBluePool = z.enum([
-  ..._ethBluePools.map((pool) => pool.marketId),
-] as [string, string, ...string[]])
+const zEthBluePool = z.enum([..._ethBluePools.map((pool) => pool.marketId)] as [
+  string,
+  string,
+  ...string[]
+])
 
 export const eth = {
   deposit: z.object({
