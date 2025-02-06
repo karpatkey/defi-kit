@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.11.0](https://github.com/karpatkey/defi-kit/compare/v2.10.1...v2.11.0) (2025-02-06)
+
+
+### Features
+
+* Aave v3 Repertoire Actions ([#372](https://github.com/karpatkey/defi-kit/issues/372)) ([bf3121d](https://github.com/karpatkey/defi-kit/commit/bf3121d0b4338c9aaf2e43ab32cf51bc3c00c981))
+
 ## [2.10.1](https://github.com/karpatkey/defi-kit/compare/v2.10.0...v2.10.1) (2025-02-06)
 
 
