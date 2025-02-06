@@ -34,7 +34,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
       {
@@ -158,7 +158,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
       {
@@ -226,7 +226,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],
@@ -331,7 +331,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
       {
@@ -528,45 +528,6 @@ export default [
     ],
   },
   {
-    bpt: "0x3CdF30e36154a66A4478e15ED41659b5BB0738f1",
-    id: "0x3cdf30e36154a66a4478e15ed41659b5bb0738f100000000000000000000049b",
-    name: "DUSD-4POOL-BPT",
-    type: "ComposableStable",
-    gauge: "0xc3522B0A58d9f12f33E542FC3c3C051b4AF01c83",
-    tokens: [
-      {
-        address: "0x423A1323c871aBC9d89EB06855bF5347048Fc4A5",
-        symbol: "4POOL-BPT",
-        id: "0x423a1323c871abc9d89eb06855bf5347048fc4a5000000000000000000000496",
-      },
-      {
-        address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
-        symbol: "DAI",
-        id: "0x",
-      },
-      {
-        address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
-        id: "0x",
-      },
-      {
-        address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0x8EC1877698ACF262Fe8Ad8a295ad94D6ea258988",
-        symbol: "DUSD",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x3f09C77B19AD8Bb527355ec32d5ce98421fec2E3",
     id: "0x3f09c77b19ad8bb527355ec32d5ce98421fec2e30000000000000000000004b2",
     name: "axlBAL/BAL",
@@ -623,7 +584,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
       {
@@ -1195,7 +1156,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],
@@ -1434,6 +1395,25 @@ export default [
     ],
   },
   {
+    bpt: "0x9D48A5084a2317CDa57A2b21851bF9Bc56F00613",
+    id: "0x9d48a5084a2317cda57a2b21851bf9bc56f006130002000000000000000005e1",
+    name: "ECLP-GYD-MONEY",
+    type: "GyroE",
+    gauge: "0x0BCDc8186c0201A29a7daD1D3e4Fe7a9bf92a0a8",
+    tokens: [
+      {
+        address: "0x69420f9E38a4e60a62224C489be4BF7a94402496",
+        symbol: "MONEY",
+        id: "0x",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xA83B8D30F61D7554aD425D8067D8bA6EaeB6b042",
     id: "0xa83b8d30f61d7554ad425d8067d8ba6eaeb6b042000200000000000000000525",
     name: "70WETH-30ARB",
@@ -1618,7 +1598,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],
@@ -2032,7 +2012,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],

@@ -87,7 +87,7 @@ export default [
     id: "0x2086f52651837600180de173b09470f54ef7491000000000000000000000004f",
     name: "staBAL3",
     type: "ComposableStable",
-    gauge: "0xaD46e3C1C55241261aFe5751384eEDCf6db6e0a8",
+    gauge: null,
     tokens: [
       {
         address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
@@ -244,7 +244,7 @@ export default [
     id: "0x4cdabe9e07ca393943acfb9286bbbd0d0a310ff600020000000000000000005c",
     name: "B-50wstETH-50COW",
     type: "Weighted",
-    gauge: "0xce18A3d0D928aB8883F355B5009D2de07D5C1d83",
+    gauge: null,
     tokens: [
       {
         address: "0x177127622c4A00F3d409B75571e12cB3c8973d3c",
@@ -282,7 +282,7 @@ export default [
     id: "0x66888e4f35063ad8bb11506a6fde5024fb4f1db0000100000000000000000053",
     name: "staBAL3-WETH-WBTC-BPT",
     type: "Weighted",
-    gauge: "0x9fF4e3925B88B6885083A88c2283a21CD504D3d4",
+    gauge: null,
     tokens: [
       {
         address: "0x2086f52651837600180dE173B09470F54EF74910",
@@ -321,7 +321,7 @@ export default [
     id: "0x71e1179c5e197fa551beec85ca2ef8693c61b85b0002000000000000000000a0",
     name: "ECLP-rETH-WETH",
     type: "GyroE",
-    gauge: "0x25F822EB509177e393a32181182ae3981eeE6E53",
+    gauge: null,
     tokens: [
       {
         address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
@@ -340,7 +340,7 @@ export default [
     id: "0x7644fa5d0ea14fcf3e813fdf93ca9544f8567655000000000000000000000066",
     name: "sBAL3",
     type: "ComposableStable",
-    gauge: "0xDec0362b3229690fBe4f88c57472610588Bb9A2E",
+    gauge: null,
     tokens: [
       {
         address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
@@ -507,7 +507,7 @@ export default [
     id: "0xaa56989be5e6267fc579919576948db3e1f108070002000000000000000000ca",
     name: "ECLP-sDAI-USDC.e-rh",
     type: "GyroE",
-    gauge: "0x9ED250d67c4E5F5B2b5F982a678eD1c0ba011207",
+    gauge: null,
     tokens: [
       {
         address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
@@ -602,7 +602,7 @@ export default [
     id: "0xc9f00c3a713008ddf69b768d90d4978549bfdf9400000000000000000000006d",
     name: "crvUSD/sDAI",
     type: "ComposableStable",
-    gauge: "0xB079bD76dD9b5F9a8d3954E4250FC25BE0549Ac0",
+    gauge: null,
     tokens: [
       {
         address: "0xaBEf652195F98A91E490f047A5006B71c85f058d",

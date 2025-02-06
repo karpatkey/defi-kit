@@ -44,16 +44,16 @@ export default [
       "Gnosis v3 Vault 🦉\n\nAt SEEDNode, we promote and strengthen decentralization globally by providing best-in-class node infrastructure and actively participating in multiple networks.\n\nPowered by SEED Org.\nseedlatam.org",
   },
   {
-    id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
-    name: "IP Stake",
-    description:
-      "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
-  },
-  {
     id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
     name: "H2O Nodes",
     description:
       "Help decentralize Ethereum by staking with us - we run minority clients (usually Nimbus + Nethermind) running on bare metal servers in minority data centers. \n\nRead more at www.h2o-nodes.com\n\nHappy staking! ",
+  },
+  {
+    id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
+    name: "IP Stake",
+    description:
+      "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
   },
   {
     id: "0x3cb4692177525db38d983da0445d4eb25c3826de",
@@ -78,6 +78,12 @@ export default [
     name: "Deprecated: Orangefin Ventures",
     description:
       "Orangefin Ventures has been acquired and we will be sunsetting our support for Gnosis. We will be exiting all of our validators so users don't incur any penalties. Please unstake at your earliest convenience.",
+  },
+  {
+    id: "0x79dbec2d18a758c62d410f9763956d52fbd4a3cc",
+    name: "Stakers.space",
+    description:
+      "Gnosis Vault by Stakers.space. Learn more about Gnosis staking at https://stakers.space/gnosis-staking.",
   },
   {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
