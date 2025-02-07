@@ -6,8 +6,8 @@ import { Callout } from "nextra/components"
 
 | Name                    | Address                                                                                                                |
 | :---------------------- | :--------------------------------------------------------------------------------------------------------------------- |
-| `AaveLendingPoolV3`     | [0xb50201558B00496A145fE76f7424749556E326D8](https://gnosisscan.io/address/0xb50201558B00496A145fE76f7424749556E326D8) |
-| `WrappedTokenGatewayV3` | [0x90127A46207e97e4205db5CCC1Ec9D6D43633FD4](https://gnosisscan.io/address/0x90127A46207e97e4205db5CCC1Ec9D6D43633FD4) |
+| `PoolV3`                | [0xb50201558B00496A145fE76f7424749556E326D8](https://gnosisscan.io/address/0xb50201558B00496A145fE76f7424749556E326D8) |
+| `WrappedTokenGatewayV3` | [0x7B9c12915c594a68dE96201Cbdc79147F09da278](https://gnosisscan.io/address/0x7B9c12915c594a68dE96201Cbdc79147F09da278) |
 | `aGnoWXDAI`             | [0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533](https://gnosisscan.io/address/0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533) |
 | `variableDebtWXDAI`     | [0x281963D7471eCdC3A2Bd4503e24e89691cfe420D](https://gnosisscan.io/address/0x281963D7471eCdC3A2Bd4503e24e89691cfe420D) |
 
@@ -30,21 +30,21 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 
 #### `TARGET · approve`
 
-Approve `AaveLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar.
+Approve `PoolV3` to spend `TARGET` tokens on behalf of the avatar.
 
 - **Contract:** `TARGET`
 - **Function:** `approve(address,uint256)`
 
-  | Parameter | Constraint                   |
-  | :-------- | :--------------------------- |
-  | `spender` | equal to `AaveLendingPoolV3` |
-  | `amount`  | -                            |
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `spender` | equal to `PoolV3` |
+  | `amount`  | -                 |
 
-#### `AaveLendingPoolV3 · supply`
+#### `PoolV3 · supply`
 
 Deposit `TARGET` and receive `aToken` tokens in exchange.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `supply(address,uint256,address,uint16)`
 
   | Parameter      | Constraint        |
@@ -54,11 +54,11 @@ Deposit `TARGET` and receive `aToken` tokens in exchange.
   | `onBehalfOf`   | equal to `AVATAR` |
   | `referralCode` | -                 |
 
-#### `AaveLendingPoolV3 · setUserUseReserveAsCollateral`
+#### `PoolV3 · setUserUseReserveAsCollateral`
 
 Set/unset deposited asset as collateral.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
 
   | Parameter         | Constraint        |
@@ -66,11 +66,11 @@ Set/unset deposited asset as collateral.
   | `asset`           | equal to `TARGET` |
   | `useAsCollateral` | -                 |
 
-#### `AaveLendingPoolV3 · withdraw`
+#### `PoolV3 · withdraw`
 
 Redeem `aToken` and withdraw `TARGET` tokens.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `withdraw(address,uint256,address)`
 
   | Parameter | Constraint        |
@@ -102,17 +102,17 @@ Deposit XDAI and receive `aGnoWXDAI` tokens in exchange.
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `depositETH(address,address,uint16)` Ξ _allow sending XDAI_
 
-  | Parameter      | Constraint                   |
-  | :------------- | :--------------------------- |
-  | `address`      | equal to `AaveLendingPoolV3` |
-  | `onBehalfOf`   | equal to `AVATAR`            |
-  | `referralCode` | -                            |
+  | Parameter      | Constraint        |
+  | :------------- | :---------------- |
+  | `address`      | equal to `PoolV3` |
+  | `onBehalfOf`   | equal to `AVATAR` |
+  | `referralCode` | -                 |
 
-#### `AaveLendingPoolV3 · setUserUseReserveAsCollateral`
+#### `PoolV3 · setUserUseReserveAsCollateral`
 
 Set/unset deposited asset as collateral.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
 
   | Parameter         | Constraint        |
@@ -127,18 +127,18 @@ Redeem `aGnoWXDAI` and withdraw XDAI tokens.
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `withdrawETH(address,uint256,address)`
 
-  | Parameter | Constraint                   |
-  | :-------- | :--------------------------- |
-  | `address` | equal to `AaveLendingPoolV3` |
-  | `amount`  | -                            |
-  | `to`      | equal to `AVATAR`            |
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `address` | equal to `PoolV3` |
+  | `amount`  | -                 |
+  | `to`      | equal to `AVATAR` |
 
 ## Action: `borrow`
 
 **Parameters:**
 
-| Name      | Type                  | Description                                 |
-| :-------- | :-------------------- | :------------------------------------------ |
+| Name      | Type                  | Description                                  |
+| :-------- | :-------------------- | :------------------------------------------- |
 | `targets` | _string[] (required)_ | XDAI \| `Token` symbols \| `Token` addresses |
 
 ### Target: ERC-20
@@ -152,21 +152,21 @@ For targets that are ERC-20 tokens, the following functions are allowed:
 
 #### `TARGET · approve`
 
-Approve `AaveLendingPoolV3` to spend `TARGET` tokens on behalf of the avatar.
+Approve `PoolV3` to spend `TARGET` tokens on behalf of the avatar.
 
 - **Contract:** `TARGET`
 - **Function:** `approve(address,uint256)`
 
-  | Parameter | Constraint                   |
-  | :-------- | :--------------------------- |
-  | `spender` | equal to `AaveLendingPoolV3` |
-  | `amount`  | -                            |
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `spender` | equal to `PoolV3` |
+  | `amount`  | -                 |
 
-#### `AaveLendingPoolV3 · borrow`
+#### `PoolV3 · borrow`
 
 Receive `TARGET` and `variableDebtWXDAI` tokens.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `borrow(address,uint256,uint256,uint16,address)`
 
   | Parameter          | Constraint        |
@@ -177,11 +177,11 @@ Receive `TARGET` and `variableDebtWXDAI` tokens.
   | `referralCode`     | -                 |
   | `onBehalfOf`       | equal to `AVATAR` |
 
-#### `AaveLendingPoolV3 · repay`
+#### `PoolV3 · repay`
 
 Repay borrowed `TARGET` tokens.
 
-- **Contract:** `AaveLendingPoolV3`
+- **Contract:** `PoolV3`
 - **Function:** `repay(address,uint256,uint256,address)`
 
   | Parameter    | Constraint        |
@@ -214,12 +214,12 @@ Receive XDAI and `variableDebtWXDAI` token.
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `borrowETH(address,uint256,uint256,uint16)`
 
-  | Parameter          | Constraint                   |
-  | :----------------- | :--------------------------- |
-  | `address`          | equal to `AaveLendingPoolV3` |
-  | `amount`           | -                            |
-  | `interestRateMode` | -                            |
-  | `referralCode`     | -                            |
+  | Parameter          | Constraint        |
+  | :----------------- | :---------------- |
+  | `address`          | equal to `PoolV3` |
+  | `amount`           | -                 |
+  | `interestRateMode` | -                 |
+  | `referralCode`     | -                 |
 
 #### `WrappedTokenGatewayV3 · repayETH`
 
@@ -228,9 +228,9 @@ Repay borrowed XDAI.
 - **Contract:** `WrappedTokenGatewayV3`
 - **Function:** `repayETH(address,uint256,uint256,address)` Ξ _allow sending XDAI_
 
-  | Parameter    | Constraint                   |
-  | :----------- | :--------------------------- |
-  | `address`    | equal to `AaveLendingPoolV3` |
-  | `amount`     | -                            |
-  | `rateMode`   | -                            |
-  | `onBehalfOf` | equal to `AVATAR`            |
+  | Parameter    | Constraint        |
+  | :----------- | :---------------- |
+  | `address`    | equal to `PoolV3` |
+  | `amount`     | -                 |
+  | `rateMode`   | -                 |
+  | `onBehalfOf` | equal to `AVATAR` |

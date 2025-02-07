@@ -1,6 +1,6 @@
 import { z } from "zod"
 import ethPools from "./_info"
-import ethStakeTokens from "./stakeTokens"
+import ethStakeTokens from "./_stakeTokens"
 
 const zPool = z.enum([
   ...ethPools.map((pool) => pool.name),

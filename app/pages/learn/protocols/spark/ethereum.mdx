@@ -15,6 +15,7 @@ import { Callout } from "nextra/components"
 | `MigrationActions`      | [0xf86141a5657Cf52AEB3E30eBccA5Ad3a8f714B89](https://etherscan.io/address/0xf86141a5657Cf52AEB3E30eBccA5Ad3a8f714B89) |
 | `USDS`                  | [0xdC035D45d973E3EC169d2276DDab16f1e407384F](https://etherscan.io/address/0xdC035D45d973E3EC169d2276DDab16f1e407384F) |
 | `sUSDS`                 | [0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD](https://etherscan.io/address/0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD) |
+| `StakingRewards`        | [0x0650CAF159C5A49f711e8169D4336ECB9b950275](https://etherscan.io/address/0x0650CAF159C5A49f711e8169D4336ECB9b950275) |
 
 ## Action: `deposit`
 
@@ -192,7 +193,7 @@ Claim all rewards.
 
 ### Target: DSR_sDAI
 
-#### `DAI · approve`
+#### `DAI · approve - sDAI as spender`
 
 Approve `sDAI` to spend `DAI` tokens on behalf of the avatar.
 
@@ -244,7 +245,7 @@ Redeem `sDAI` and withdraw `DAI` tokens.
 
 ### Target: SKY_USDS
 
-#### `DAI · approve`
+#### `DAI · approve - MigrationActions as spender`
 
 Approve `MigrationActions` to spend `DAI` tokens on behalf of the avatar.
 
@@ -455,3 +456,66 @@ Repay borrowed ETH.
   | `amount`     | -                            |
   | `rateMode`   | -                            |
   | `onBehalfOf` | equal to `AVATAR`            |
+
+## Action: `stake`
+
+**Parameters:**
+
+N/A.
+
+#### `USDS · approve - StakingRewards as spender`
+
+Approve `StakingRewards` to spend `USDS` tokens on behalf of the avatar.
+
+- **Contract:** `USDS`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint                |
+  | :-------- | :------------------------ |
+  | `spender` | equal to `StakingRewards` |
+  | `amount`  | -                         |
+
+#### `StakingRewards · stake`
+
+Stake `USDS` tokens in the `SKY Farm`.
+
+- **Contract:** `StakingRewards`
+- **Function:** `stake(uint256,uint16)`
+
+  | Parameter  | Constraint |
+  | :--------- | :--------- |
+  | `amount`   | -          |
+  | `referral` | -          |
+
+#### `StakingRewards · withdraw`
+
+Unstake `USDS` tokens from the `SKY Farm`.
+
+- **Contract:** `StakingRewards`
+- **Function:** `withdraw(uint256)`
+
+  | Parameter | Constraint |
+  | :-------- | :--------- |
+  | `amount`  | -          |
+
+#### `StakingRewards · exit`
+
+Unstake `USDS` tokens from the `SKY Farm` and claim `SKY` token rewards.
+
+- **Contract:** `StakingRewards`
+- **Function:** `exit()`
+
+  | Parameter | Constraint |
+  | :-------- | :--------- |
+  | N/A       | N/A        |
+
+#### `StakingRewards · getReward`
+
+Claim `SKY` token rewards.
+
+- **Contract:** `StakingRewards`
+- **Function:** `getReward()`
+
+  | Parameter | Constraint |
+  | :-------- | :--------- |
+  | N/A       | N/A        |

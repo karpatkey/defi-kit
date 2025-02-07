@@ -1,5 +1,75 @@
 # Changelog
 
+## [2.8.2](https://github.com/karpatkey/defi-kit/compare/v2.8.1...v2.8.2) (2025-01-23)
+
+
+### Bug Fixes
+
+* Balancer Repertoire Actions / Aura Repertoire Actions renaming ([#360](https://github.com/karpatkey/defi-kit/issues/360)) ([68d13e7](https://github.com/karpatkey/defi-kit/commit/68d13e7541dea1f2ab8c1d91a533ab51de486284))
+
+## [2.8.1](https://github.com/karpatkey/defi-kit/compare/v2.8.0...v2.8.1) (2025-01-23)
+
+
+### Bug Fixes
+
+* Aura nightly job ([#357](https://github.com/karpatkey/defi-kit/issues/357)) ([c4dbe04](https://github.com/karpatkey/defi-kit/commit/c4dbe04bcb544de40f14bb31f7c49c93a4d0e49b))
+
+## [2.8.0](https://github.com/karpatkey/defi-kit/compare/v2.7.6...v2.8.0) (2025-01-18)
+
+
+### Features
+
+* Spark USDS farming / Aave v3 incentives claiming ([#354](https://github.com/karpatkey/defi-kit/issues/354)) ([e9eaac9](https://github.com/karpatkey/defi-kit/commit/e9eaac9a7879fb2be92bdecb922304538e3a8e55))
+
+## [2.7.6](https://github.com/karpatkey/defi-kit/compare/v2.7.5...v2.7.6) (2025-01-10)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#346](https://github.com/karpatkey/defi-kit/issues/346)) ([24bb523](https://github.com/karpatkey/defi-kit/commit/24bb523a8a1c989a40f23ef4a0868045784fc39e))
+
+## [2.7.5](https://github.com/karpatkey/defi-kit/compare/v2.7.4...v2.7.5) (2025-01-10)
+
+
+### Bug Fixes
+
+* Maker rebranding to Sky ([#349](https://github.com/karpatkey/defi-kit/issues/349)) ([0041abf](https://github.com/karpatkey/defi-kit/commit/0041abf26246536fca46206c653e7222f9acb0ce))
+
+## [2.7.4](https://github.com/karpatkey/defi-kit/compare/v2.7.3...v2.7.4) (2025-01-08)
+
+
+### Bug Fixes
+
+* minor fix in Aave ([#344](https://github.com/karpatkey/defi-kit/issues/344)) ([6b90b47](https://github.com/karpatkey/defi-kit/commit/6b90b47e0a29beebd06cd11e8b42fa3d59c2c69a))
+
+## [2.7.3](https://github.com/karpatkey/defi-kit/compare/v2.7.2...v2.7.3) (2025-01-08)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#340](https://github.com/karpatkey/defi-kit/issues/340)) ([601c41c](https://github.com/karpatkey/defi-kit/commit/601c41cb7c1e2d22917fb55e6d25bc1362c09a16))
+
+## [2.7.2](https://github.com/karpatkey/defi-kit/compare/v2.7.1...v2.7.2) (2025-01-06)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#331](https://github.com/karpatkey/defi-kit/issues/331)) ([613bb42](https://github.com/karpatkey/defi-kit/commit/613bb420264b150adfe73124df72a09d5c07a487))
+
+## [2.7.1](https://github.com/karpatkey/defi-kit/compare/v2.7.0...v2.7.1) (2025-01-06)
+
+
+### Bug Fixes
+
+* permissions for StakeWise on Gnosis Chain ([#337](https://github.com/karpatkey/defi-kit/issues/337)) ([f1847de](https://github.com/karpatkey/defi-kit/commit/f1847defca7f4eb4a3ff8904d86544c2a6ccc974))
+
+## [2.7.0](https://github.com/karpatkey/defi-kit/compare/v2.6.5...v2.7.0) (2025-01-06)
+
+
+### Features
+
+* Repertoire Actions / Extend Aura, Aave v3, and Balancer to Side-Chains / Add Aave v3 Prime and EtherFi Markets ([#335](https://github.com/karpatkey/defi-kit/issues/335)) ([9aad6ad](https://github.com/karpatkey/defi-kit/commit/9aad6ad1308e3f53992a4555b55e344d879a932f))
+
 ## [2.6.5](https://github.com/karpatkey/defi-kit/compare/v2.6.4...v2.6.5) (2024-12-10)
 
 

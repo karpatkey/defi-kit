@@ -26,6 +26,12 @@ export default [
       "Sustainable nodes for gnosis, ran by the LATAM team at Axol.io",
   },
   {
+    id: "0x0686f6bbb28fd0642aebf5b89654aeba9cc73dea",
+    name: "Chorus One",
+    description:
+      "Chorus One is a trusted staking provider, offering secure and reliable services to individual and institutional stakers alike. Operating on 60+ blockchain networks, we're the choice of over 150,000 delegators worldwide, including leading institutions like BitGo, Ledger, and Hex Trust.\n\nKnown for our enterprise-grade infrastructure and research-driven approach, we've never been slashed and consistently strive to deliver the highest possible yields for our stakers.\n\nStake your GNO with confidence today. Learn more at chorus.one",
+  },
+  {
     id: "0xe0a342ed4e0f0dbe97c4810534cfcb6550ea017d",
     name: "Stakecat",
     description:
@@ -57,15 +63,21 @@ export default [
   },
   {
     id: "0xe32773a0f6fa8ebf2a32c040dacd031a1ad1e530",
-    name: "Orangefin Ventures",
+    name: "Deprecated: Orangefin Ventures",
     description:
-      "Orangefin Ventures is one of the world's leading node operators with nearly $100M assets under delegation. Having almost a decade of experience in the cryptocurrency space, Orangefin Ventures operates some of the most technically sophisticated infrastructure that secures several blockchains and spans across public clouds and our own datacenters (including our own ASN and public IPv4 range). To learn more, visit https://www.orangefin.ventures!",
+      "Orangefin Ventures has been acquired and we will be sunsetting our support for Gnosis. We will be exiting all of our validators so users don't incur any penalties. Please unstake at your earliest convenience.",
   },
   {
     id: "0x0f6f727421ed6229fcac821147ae104c9326229e",
     name: "Dappnode vault",
     description:
       "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
+  },
+  {
+    id: "0x9eeb6be79899cfe45018866a2113c6b77fa96f35",
+    name: "SEEDNode",
+    description:
+      "Gnosis v3 Vault 🦉\n\nAt SEEDNode, we promote and strengthen decentralization globally by providing best-in-class node infrastructure and actively participating in multiple networks.\n\nPowered by SEED Org.\nseedlatam.org",
   },
   {
     id: "0x27b7cb7bc376c0798651238ce5294f70b283bc61",
@@ -101,20 +113,13 @@ export default [
       "Whispers of Sophia's Gnosis\n\nIn realms beyond the veil of sight,\nI dance with truths both dark and light.\nSophia's wisdom, my guiding star,\nGnosis beckons from afar.\n\nThrough winding paths of mystic lore,\nI seek the keys to cosmic doors.\nEach step unveils a sacred sign,\nAs mortal flesh and soul entwine.\n\nIn silence deep, I hear the call,\nOf hidden knowledge, one and all.\nThe serpent's whisper, soft and low,\nReveals the truths I've come to know.\n\nIllumination floods my mind,\nAs earthly shackles fall behind.\nIn gnosis found, both pure and bright,\nI rise, transformed, into the light.\n\nFor wisdom's flame burns ever true,\nIn hearts that dare to see anew.\nAnd in this knowing, vast and free,\nI find the cosmic self that sleeps in me.",
   },
   {
-    id: "0x2435992a2bf5feaa535d16edaad3d525dc94e0e8",
-    name: "Forsaken",
-    description:
-      "Home Dappnode staker based in Greece since 2022.\nProviding your worst possible vault choice. If there is a power outage then we are both in pain.\nEnjoy!",
+    id: "0x5f07fa4f2f9173d6d9a3dbcf24c0933213cef7b7",
+    name: "Portugal Vault",
+    description: null,
   },
   {
-    id: "0x0ca22f2d5ad17142bb1065ae828d9db28f86ca1c",
-    name: "Thot",
-    description: "Testing vaults ",
-  },
-  {
-    id: "0xdb57ca4f12ad6b3f962103ba5c00b6d967b9b8ac",
-    name: "NotMyVault",
-    description:
-      "Just exploring the possibilities !\n\nPLease don't put your GNO in here. Just testing!",
+    id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",
+    name: "Test No Deposit",
+    description: null,
   },
 ] as const

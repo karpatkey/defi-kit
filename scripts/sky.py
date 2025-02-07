@@ -14,7 +14,7 @@ ABI_GEM_JOIN = '[{"constant":true,"inputs":[],"name":"gem","outputs":[{"internal
 # protocol_data
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def protocol_data():
-    chainlog_data = requests.get("https://chainlog.makerdao.com/api/mainnet/active.json").json()
+    chainlog_data = requests.get("https://chainlog.sky.money/api/mainnet/active.json").json()
 
     web3 = get_node(Chain.ETHEREUM)
     result = []
@@ -32,6 +32,6 @@ def protocol_data():
                 }
             )
     
-    dump(result, 'maker')
+    dump(result, 'sky')
 
 protocol_data()

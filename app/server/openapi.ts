@@ -27,6 +27,10 @@ import {
   transactionsJson,
   contractInput,
 } from "./schema"
+import {
+  registerRepertoireAllow,
+  registerRepertoirePermissions,
+} from "./repertoire/register"
 
 extendZodWithOpenApi(zod)
 
@@ -73,4 +77,13 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
       }
     })
   })
+
+  Object.entries(sdk.repertoire.allow).forEach(
+    ([protocol, repertoireActions]) => {
+      Object.keys(repertoireActions).forEach((action) => {
+        registerRepertoireAllow(registry, chainPrefix, protocol, action)
+        registerRepertoirePermissions(registry, chainPrefix, protocol, action)
+      })
+    }
+  )
 })

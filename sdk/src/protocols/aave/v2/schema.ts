@@ -1,7 +1,7 @@
 import { z } from "zod"
-import ethTokens from "./_info"
-import ethStakeTokens from "./stakeTokens"
-import ethDelegateTokens from "./delegateTokens"
+import ethTokens from "./_ethCoreInfo"
+import ethStakeTokens from "./_stakeTokens"
+import ethDelegateTokens from "./_delegateTokens"
 import { zx } from "../../../zx"
 
 const zToken = z.enum([

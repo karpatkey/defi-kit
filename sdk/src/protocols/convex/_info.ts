@@ -2696,4 +2696,32 @@ export default [
     cvxDepositToken: "0x785b7A336021c7022fB3cf73EE4D455ce7055e46",
     rewarder: "0x1319C366FEd9B37D1CFd9a84b75eE04671a4c6E1",
   },
+  {
+    name: "USD3scrvUS",
+    id: "412",
+    crvLPToken: "0xE99810Cd5AdCD7b13455aE1BE678B382d61f2d1E",
+    cvxDepositToken: "0x87F738bF73e4406c92d4fe2c859471261718A474",
+    rewarder: "0x14Ff472b31b550E709bF15ADB7a4F052F00BF14b",
+  },
+  {
+    name: "alUSDsDOLA",
+    id: "413",
+    crvLPToken: "0x460638e6F7605B866736e38045C0DE8294d7D87f",
+    cvxDepositToken: "0x6a601eE54f96470D74F159249C90701Db1405e1C",
+    rewarder: "0x7Ee5f33E36988070A8E265A0f28a91514f45f630",
+  },
+  {
+    name: "WBETHSTETH",
+    id: "414",
+    crvLPToken: "0x525e99f743EE495F3b032baa737BC590dc1C85b5",
+    cvxDepositToken: "0xe4900ca526c2324956a962e0921DA10B6F632200",
+    rewarder: "0xCD071b81fa9a559EaBC0235779DCb58a1EfCeDd7",
+  },
+  {
+    name: "cvcrvUSD",
+    id: "415",
+    crvLPToken: "0x52036c9046247C3358c987A2389FFDe6Ef8564c9",
+    cvxDepositToken: "0xbF8ECcdf66547ecBFa15B035aD724aDE9013e9B8",
+    rewarder: "0x726E52aBB10597E28D9Ad4C0969b1DfC31092b52",
+  },
 ] as const

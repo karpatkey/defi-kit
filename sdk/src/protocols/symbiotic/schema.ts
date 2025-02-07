@@ -1,9 +1,9 @@
 import { z } from "zod"
-import _ethPools from "./_ethPools"
+import ethPools from "./_ethPools"
 
 const zEthPool = z.enum([
-  ..._ethPools.map((pool) => pool.name),
-  ..._ethPools.map((pool) => pool.address),
+  ...ethPools.map((pool) => pool.tokenSymbol),
+  ...ethPools.map((pool) => pool.tokenAddress),
 ] as [string, string, ...string[]])
 
 export const eth = {

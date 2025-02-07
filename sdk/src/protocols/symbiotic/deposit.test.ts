@@ -14,7 +14,7 @@ const stealAddress1 = "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"
 describe("symbiotic", () => {
   describe("deposit action", () => {
     beforeAll(async () => {
-      await applyPermissions(await eth.deposit({ targets: ["wstETHPool"] }))
+      await applyPermissions(await eth.deposit({ targets: ["wstETH"] }))
     })
 
     it("deposit", async () => {

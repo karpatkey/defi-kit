@@ -1,17 +1,35 @@
 import { z } from "zod"
-import ethTokens from "./_ethInfo"
-import gnoTokens from "./_ethInfo"
-import arb1Tokens from "./_arb1Info"
-import oethTokens from "./_oethInfo"
-import baseTokens from "./_baseInfo"
-import ethStakeTokens from "../v2/stakeTokens"
-import ethDelegateTokens from "../v2/delegateTokens"
+import ethCoreTokens from "./_ethCoreInfo"
+import ethPrimeTokens from "./_ethPrimeInfo"
+import ethEtherFiTokens from "./_ethEtherFiInfo"
+import ethMarkets from "./_ethMarketInfo"
+import gnoTokens from "./_gnoCoreInfo"
+import arb1Tokens from "./_arb1CoreInfo"
+import oethTokens from "./_oethCoreInfo"
+import baseTokens from "./_baseCoreInfo"
+import ethStakeTokens from "../v2/_stakeTokens"
+import ethDelegateTokens from "../v2/_delegateTokens"
 import { zx } from "../../../zx"
 
+// Combine tokens from all Ethereum markets into a single list
+const allEthTokens = Array.from(
+  new Map(
+    [...ethCoreTokens, ...ethPrimeTokens, ...ethEtherFiTokens].map((token) => [
+      token.symbol,
+      token,
+    ]) // Use symbol as a unique key
+  ).values()
+)
+
+// Extract token symbols and addresses
+const allEthTokenSymbols = allEthTokens.map((token) => token.symbol)
+const allEthTokenAddresses = allEthTokens.map((token) => token.token)
+
+// Token schemas
 const zEthToken = z.enum([
-  "ETH",
-  ...ethTokens.map((token) => token.symbol),
-  ...ethTokens.map((token) => token.token),
+  "ETH", // Include native ETH
+  ...allEthTokenSymbols,
+  ...allEthTokenAddresses,
 ] as [string, string, ...string[]])
 
 const zStakeToken = z.enum([
@@ -26,36 +44,24 @@ const zDelegateToken = z.enum([
 
 const zDelegatee = zx.address()
 
-const zGnoToken = z.enum([
-  "XDAI",
-  ...gnoTokens.map((token) => token.symbol),
-  ...gnoTokens.map((token) => token.token),
-] as [string, string, ...string[]])
+const marketNames = ethMarkets.map((market) => market.name)
+const marketPoolAddresses = ethMarkets.map((market) => market.poolAddress)
 
-const zArb1Token = z.enum([
-  "ETH",
-  ...arb1Tokens.map((token) => token.symbol),
-  ...arb1Tokens.map((token) => token.token),
-] as [string, string, ...string[]])
+// Create a Zod schema for markets
+export const zMarket = z.enum([...marketNames, ...marketPoolAddresses] as [
+  string,
+  ...string[]
+])
 
-const zOethToken = z.enum([
-  "ETH",
-  ...oethTokens.map((token) => token.symbol),
-  ...oethTokens.map((token) => token.token),
-] as [string, string, ...string[]])
-
-const zBaseToken = z.enum([
-  "ETH",
-  ...baseTokens.map((token) => token.symbol),
-  ...baseTokens.map((token) => token.token),
-] as [string, string, ...string[]])
-
+// Ethereum schema
 export const eth = {
   deposit: z.object({
+    market: zMarket.optional().default("Core"), // Default to "Core"
     targets: zEthToken.array(),
   }),
 
   borrow: z.object({
+    market: zMarket.optional().default("Core"), // Default to "Core"
     targets: zEthToken.array(),
   }),
 
@@ -69,42 +75,87 @@ export const eth = {
   }),
 }
 
+// Side chain schemas remain unchanged
 export const gno = {
   deposit: z.object({
-    targets: zGnoToken.array(),
+    targets: z
+      .enum([
+        "XDAI",
+        ...gnoTokens.map((token) => token.symbol),
+        ...gnoTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
-
   borrow: z.object({
-    targets: zGnoToken.array(),
+    targets: z
+      .enum([
+        "XDAI",
+        ...gnoTokens.map((token) => token.symbol),
+        ...gnoTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
 }
 
 export const arb1 = {
   deposit: z.object({
-    targets: zArb1Token.array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...arb1Tokens.map((token) => token.symbol),
+        ...arb1Tokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
-
   borrow: z.object({
-    targets: zArb1Token.array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...arb1Tokens.map((token) => token.symbol),
+        ...arb1Tokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
 }
 
 export const oeth = {
   deposit: z.object({
-    targets: zOethToken.array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...oethTokens.map((token) => token.symbol),
+        ...oethTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
-
   borrow: z.object({
-    targets: zOethToken.array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...oethTokens.map((token) => token.symbol),
+        ...oethTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
 }
 
 export const base = {
   deposit: z.object({
-    targets: zBaseToken.array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...baseTokens.map((token) => token.symbol),
+        ...baseTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
-
   borrow: z.object({
-    targets: zBaseToken.array(),
+    targets: z
+      .enum([
+        "ETH",
+        ...baseTokens.map((token) => token.symbol),
+        ...baseTokens.map((token) => token.token),
+      ] as [string, string, ...string[]])
+      .array(),
   }),
 }
