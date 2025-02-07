@@ -8,7 +8,7 @@ import baseTokens from "./_baseCoreInfo"
 import { Token } from "./types"
 import { allowErc20Approve } from "../../../conditions"
 import { contracts } from "../../../../eth-sdk/config"
-import { Chain } from "../../../types"
+import { Chain } from "../../../../src"
 
 export const _getAllAddresses = (chain: Chain, market: string) => {
   if (chain === Chain.eth) {
@@ -101,7 +101,7 @@ export const _getAllAddresses = (chain: Chain, market: string) => {
 }
 
 // Function to get the 2-byte hexadecimal representation of the assetId
-const _getAssetId = (chain: Chain, token: Token): string => {
+export const _getAssetId = (chain: Chain, token: Token): string => {
   // Select the appropriate token list based on the chain
   let tokens
   switch (chain) {

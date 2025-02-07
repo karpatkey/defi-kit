@@ -34,7 +34,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
       {
@@ -145,25 +145,6 @@ export default [
     ],
   },
   {
-    bpt: "0x14ABD18d1FA335E9F630a658a2799B33208763Fa",
-    id: "0x14abd18d1fa335e9f630a658a2799b33208763fa00020000000000000000051f",
-    name: "2CLP-AUSDT-USDT",
-    type: "Gyro2",
-    gauge: "0x1C8D981BBc56B7C65289FE34d7FF692ABDe9c8D5",
-    tokens: [
-      {
-        address: "0xb165a74407fE1e519d6bCbDeC1Ed3202B35a4140",
-        symbol: "stataArbUSDT",
-        id: "0x",
-      },
-      {
-        address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x1533A3278f3F9141d5F820A184EA4B017fce2382",
     id: "0x1533a3278f3f9141d5f820a184ea4b017fce2382000000000000000000000016",
     name: "B-staBAL-3",
@@ -177,7 +158,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
       {
@@ -245,7 +226,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],
@@ -308,6 +289,25 @@ export default [
     ],
   },
   {
+    bpt: "0x2C045C222BD603b9F1D6fb8Af077D705efe83d4A",
+    id: "0x2c045c222bd603b9f1d6fb8af077d705efe83d4a0002000000000000000005e6",
+    name: "ECLP-WETH-USDC",
+    type: "GyroE",
+    gauge: "0x50927cC8E5F6DdC4c5302df0158bCdF16E7E9833",
+    tokens: [
+      {
+        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x2CE4457aCac29dA4736aE6f5Cd9F583a6b335c27",
     id: "0x2ce4457acac29da4736ae6f5cd9f583a6b335c270000000000000000000004dc",
     name: "sFRAX/4POOL",
@@ -331,7 +331,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
       {
@@ -528,45 +528,6 @@ export default [
     ],
   },
   {
-    bpt: "0x3CdF30e36154a66A4478e15ED41659b5BB0738f1",
-    id: "0x3cdf30e36154a66a4478e15ed41659b5bb0738f100000000000000000000049b",
-    name: "DUSD-4POOL-BPT",
-    type: "ComposableStable",
-    gauge: "0xc3522B0A58d9f12f33E542FC3c3C051b4AF01c83",
-    tokens: [
-      {
-        address: "0x423A1323c871aBC9d89EB06855bF5347048Fc4A5",
-        symbol: "4POOL-BPT",
-        id: "0x423a1323c871abc9d89eb06855bf5347048fc4a5000000000000000000000496",
-      },
-      {
-        address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
-        symbol: "DAI",
-        id: "0x",
-      },
-      {
-        address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
-        id: "0x",
-      },
-      {
-        address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0x8EC1877698ACF262Fe8Ad8a295ad94D6ea258988",
-        symbol: "DUSD",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x3f09C77B19AD8Bb527355ec32d5ce98421fec2E3",
     id: "0x3f09c77b19ad8bb527355ec32d5ce98421fec2e30000000000000000000004b2",
     name: "axlBAL/BAL",
@@ -623,7 +584,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
       {
@@ -801,25 +762,6 @@ export default [
     ],
   },
   {
-    bpt: "0x507f8456Aa170285fe33b80757FEca82b8103e77",
-    id: "0x507f8456aa170285fe33b80757feca82b8103e77000200000000000000000045",
-    name: "50LEVR-50dEth",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x77De4df6F2d87Cc7708959bCEa45d58B0E8b8315",
-        symbol: "LEVR",
-        id: "0x",
-      },
-      {
-        address: "0xBA98da6EF5EeB1a66B91B6608E0e2Bb6E9020607",
-        symbol: "dEth",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x542F16DA0efB162D20bF4358EfA095B70A100f9E",
     id: "0x542f16da0efb162d20bf4358efa095b70a100f9e000000000000000000000436",
     name: "2BTC",
@@ -958,6 +900,25 @@ export default [
       {
         address: "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
         symbol: "LINK",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x65c2d90b33F7bf693A7EF54662435f2Cf3251C21",
+    id: "0x65c2d90b33f7bf693a7ef54662435f2cf3251c210000000000000000000005e7",
+    name: "tETH/wstETH",
+    type: "ComposableStable",
+    gauge: "0xc7995A4bA51574Ecd93e777cded6900ce42ff805",
+    tokens: [
+      {
+        address: "0x5979D7b546E38E414F7E9822514be443A4800529",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xd09ACb80C1E8f2291862c4978A008791c9167003",
+        symbol: "tETH",
         id: "0x",
       },
     ],
@@ -1195,7 +1156,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],
@@ -1434,6 +1395,25 @@ export default [
     ],
   },
   {
+    bpt: "0x9D48A5084a2317CDa57A2b21851bF9Bc56F00613",
+    id: "0x9d48a5084a2317cda57a2b21851bf9bc56f006130002000000000000000005e1",
+    name: "ECLP-GYD-MONEY",
+    type: "GyroE",
+    gauge: "0x0BCDc8186c0201A29a7daD1D3e4Fe7a9bf92a0a8",
+    tokens: [
+      {
+        address: "0x69420f9E38a4e60a62224C489be4BF7a94402496",
+        symbol: "MONEY",
+        id: "0x",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xA83B8D30F61D7554aD425D8067D8bA6EaeB6b042",
     id: "0xa83b8d30f61d7554ad425d8067d8ba6eaeb6b042000200000000000000000525",
     name: "70WETH-30ARB",
@@ -1618,7 +1598,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],
@@ -1924,6 +1904,25 @@ export default [
     ],
   },
   {
+    bpt: "0xe8e800d94C2D1c2e7778115724cf49E811f60A46",
+    id: "0xe8e800d94c2d1c2e7778115724cf49e811f60a460002000000000000000005e8",
+    name: "ECLP-WETH-GYD",
+    type: "GyroE",
+    gauge: "0x6350e7a5CFAaF8b694F8291760015ebB1Fe94bA0",
+    tokens: [
+      {
+        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xEB3E64Ad9314D20bf943ac72Fb69F272603f9cce",
     id: "0xeb3e64ad9314d20bf943ac72fb69f272603f9cce0002000000000000000004f5",
     name: "80SYNO-20WETH",
@@ -2000,30 +1999,6 @@ export default [
     ],
   },
   {
-    bpt: "0xF890360473c12d8015DA8DBf7Af11dA87337A065",
-    id: "0xf890360473c12d8015da8dbf7af11da87337a065000000000000000000000570",
-    name: "GHO/USDC/USDT",
-    type: "ComposableStable",
-    gauge: "0x7d907D8D66B6CAd285D4349F507EcdfD11FD23D2",
-    tokens: [
-      {
-        address: "0x7dfF72693f6A4149b17e7C6314655f6A9F7c8B33",
-        symbol: "GHO",
-        id: "0x",
-      },
-      {
-        address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xfeD111077E0905eF2B2fbf3060cFa9a34BaB4383",
     id: "0xfed111077e0905ef2b2fbf3060cfa9a34bab4383000200000000000000000544",
     name: "50MOLANDAK-50USDT",
@@ -2037,7 +2012,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],

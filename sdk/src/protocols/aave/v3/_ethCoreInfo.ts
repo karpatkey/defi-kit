@@ -408,4 +408,15 @@ export default [
     aTokenAddress: "0x2D62109243b87C4bA3EE7bA1D91B0dD0A074d7b1",
     variableDebtTokenAddress: "0x6De3E52A1B7294A34e271a508082b1Ff4a37E30e",
   },
+  {
+    symbol: "LBTC",
+    token: "0x8236a87084f8B84306f72007F36F2618A5634494",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: true,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x65906988ADEe75306021C417a1A3458040239602",
+    variableDebtTokenAddress: "0x68aeB290C7727D899B47c56d1c96AEAC475cD0dD",
+  },
 ] as const

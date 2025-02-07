@@ -20,9 +20,9 @@ import { DelegateToken, StakeToken } from "../v2/types"
 import { findDelegateToken, findStakeToken } from "../v2/index"
 import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
 import { stake, delegate } from "../v2/actions"
-import { Chain } from "../../../types"
+import { Chain } from "../../../../src"
 
-const findToken = (
+export const findToken = (
   tokens: readonly Token[],
   symbolOrAddress: string
 ): Token => {
@@ -38,7 +38,7 @@ const findToken = (
   return token
 }
 
-const findMarket = (nameOrPoolAddress: string) => {
+export const findMarket = (nameOrPoolAddress: string) => {
   const nameOrPoolAddressLower = nameOrPoolAddress.toLowerCase()
 
   const market = ethMarkets.find(
@@ -54,7 +54,7 @@ const findMarket = (nameOrPoolAddress: string) => {
   return market
 }
 
-const getEthMarketTokens = (marketName: string): readonly EthToken[] => {
+export const getEthMarketTokens = (marketName: string): readonly EthToken[] => {
   switch (marketName) {
     case "Core":
       return ethCoreTokens
@@ -80,8 +80,12 @@ export const eth = {
 
     return targets.flatMap((target) =>
       target === "ETH"
-        ? depositEther(Chain.eth, market)
-        : depositToken(Chain.eth, findToken(tokens, target), market)
+        ? depositEther(Chain.eth, selectedMarket.name)
+        : depositToken(
+            Chain.eth,
+            findToken(tokens, target),
+            selectedMarket.name
+          )
     )
   },
 

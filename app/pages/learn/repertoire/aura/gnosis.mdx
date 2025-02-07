@@ -8,7 +8,7 @@ import { Callout } from "nextra/components"
 | :-------------- | :--------------------------------------------------------------------------------------------------------------------- |
 | `BalancerVault` | [0xBA12222222228d8Ba445958a75a0704d566BF2C8](https://gnosisscan.io/address/0xBA12222222228d8Ba445958a75a0704d566BF2C8) |
 
-## Strategy: `unstake`
+## Action: `unstake`
 
 **Parameters**
 
@@ -27,7 +27,7 @@ Withdraw funds from Aura.
 
 #### `REWARDER · withdrawAndUnwrap`
 
-Redeem `REWARDER` tokens and withdraw and unwrap `BPT` tokens.
+Redeem `REWARDER` tokens, then withdraw and unwrap `BPT` tokens.
 
 - **Contract:** `REWARDER`
 - **Function:** `withdrawAndUnwrap(uint256,bool)`
@@ -37,7 +37,7 @@ Redeem `REWARDER` tokens and withdraw and unwrap `BPT` tokens.
   | `amount`  | -          |
   | `claim`   | -          |
 
-## Strategy: `unstake_withdraw_proportional`
+## Action: `unstake_withdraw_proportional`
 
 **Parameters**
 
@@ -45,7 +45,7 @@ Redeem `REWARDER` tokens and withdraw and unwrap `BPT` tokens.
 | :--------- | :------------------ | :----------------- |
 | `rewarder` | _string (required)_ | `Address` rewarder |
 
-Withdraw funds from Aura and then from the Balancer pool withdrawing all assets in proportional way.
+Withdraw funds from Aura, then from the Balancer pool, withdrawing all assets proportionally.
 
 ### Permissions:
 
@@ -60,7 +60,7 @@ Withdraw funds from Aura and then from the Balancer pool withdrawing all assets 
 
 #### `REWARDER · withdrawAndUnwrap`
 
-Redeem `REWARDER` tokens and withdraw and unwrap `BPT` tokens.
+Redeem `REWARDER` tokens, then withdraw and unwrap `BPT` tokens.
 
 - **Contract:** `REWARDER`
 - **Function:** `withdrawAndUnwrap(uint256,bool)`
@@ -72,7 +72,7 @@ Redeem `REWARDER` tokens and withdraw and unwrap `BPT` tokens.
 
 #### `BalancerVault · exitPool`
 
-Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional amounts of `TOKEN` tokens in exchange.
+Redeem `BPT` tokens from the corresponding Balancer pool and receive proportional amounts of `TOKEN` tokens in exchange.
 
 - **Contract:** `BalancerVault`
 - **Function:** `exitPool(bytes32,address,address,(address[],uint256[],bytes,bool))`
@@ -100,7 +100,7 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
   - [Balancer documentation](https://docs.balancer.fi/reference/joins-and-exits/pool-exits.html#userdata) for `userData` structure.  
 </Callout>
 
-## Strategy: `unstake_withdraw_single_token`
+## Action: `unstake_withdraw_single_token`
 
 **Parameters**
 
@@ -109,7 +109,7 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
 | `rewarder`         | _string (required)_ | `Address` rewarder         |
 | `exitTokenAddress` | _string (required)_ | `Address` exitTokenAddress |
 
-Withdraw funds from the Balancer pool withdrawing a single asset specified by the token address.
+Withdraw funds from Aura, then from the Balancer pool, receiving a single asset specified by the `exitTokenAddress`.
 
 ### Permissions:
 
@@ -117,14 +117,11 @@ Withdraw funds from the Balancer pool withdrawing a single asset specified by th
   `REWARDER` below refers to the `auraBaseRewardPool` contract address for the
   corresponding Aura pool.
 </Callout>
-<Callout type="info">
-  `TOKEN` below refers to the ERC-20 token address of the corresponding pool.
-</Callout>
 <Callout type="info">`PID` below refers to the Balancer pool ID.</Callout>
 
 #### `REWARDER · withdrawAndUnwrap`
 
-Redeem `REWARDER` tokens and withdraw and unwrap `BPT` tokens.
+Redeem `REWARDER` tokens, then withdraw and unwrap `BPT` tokens.
 
 - **Contract:** `REWARDER`
 - **Function:** `withdrawAndUnwrap(uint256,bool)`
@@ -136,7 +133,7 @@ Redeem `REWARDER` tokens and withdraw and unwrap `BPT` tokens.
 
 #### `BalancerVault · exitPool`
 
-Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional amounts of `TOKEN` tokens in exchange.
+Redeem `BPT` tokens from the corresponding Balancer pool and receive `exitTokenAddress` tokens in exchange.
 
 - **Contract:** `BalancerVault`
 - **Function:** `exitPool(bytes32,address,address,(address[],uint256[],bytes,bool))`

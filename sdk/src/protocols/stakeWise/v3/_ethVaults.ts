@@ -14,6 +14,12 @@ export default [
       "Chorus One’s ground-breaking MEV research ensures the highest yields with top-tier security and enterprise-level infrastructure. Start staking ETH today.",
   },
   {
+    id: "0xb36fc5e542cb4fc562a624912f55da2758998113",
+    name: "Serenita - Powered by Vero",
+    description:
+      "Serenita provides enterprise-grade staking services with a focus on top-tier performance and minimal risk. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nThe validators in this Vault are powered by Vero, our custom-built multi-node validator client software. Similar to DVT technology, Vero verifies the chain’s latest state across multiple independent client implementations—shielding our validators from single-client bugs and downtime.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
+  },
+  {
     id: "0xa8cb2e35f594b308726b242136f0a8995bf19e97",
     name: "Easy Stake - Powered by SSV",
     description:
@@ -24,12 +30,6 @@ export default [
     name: "Stakingverse - Max MEV Boost",
     description:
       "Welcome to The Stakingverse!\n\nA premier staking provider with competitive fees, MEV boost and state-of-the-art infrastructure.\n\nAs an official StakeWise partner, we are dedicated to perfecting the secure and decentralized nature of the V3 Protocol to multiple chains. And with a team of highly-experienced professionals, who have been on the front-line of blockchain technology for many years now, you will get the best service, APY and security in liquid staking.\n\nStake your LYX and ETH with The Best at stakingverse.io",
-  },
-  {
-    id: "0xb36fc5e542cb4fc562a624912f55da2758998113",
-    name: "Serenita - Powered by Vero",
-    description:
-      "Serenita provides enterprise-grade staking services with a focus on top-tier performance and minimal risk. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nThe validators in this Vault are powered by Vero, our custom-built multi-node validator client software. Similar to DVT technology, Vero verifies the chain’s latest state across multiple independent client implementations—shielding our validators from single-client bugs and downtime.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
   },
   {
     id: "0x8216e50b1dd76faeb1ff4cafaba6790ea71910df",
@@ -62,12 +62,6 @@ export default [
       "Stakely is a top Staking-as-a-Service provider specialized in Proof-of-Stake blockchains. With over 40 supported networks, we offer reliable and secure staking services for the best staking experience.\n",
   },
   {
-    id: "0x05e393ec11d0197a88d84457908edd4ff235f323",
-    name: "Stakin - 0% Fee",
-    description:
-      "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
-  },
-  {
     id: "0x089a97a8bc0c0f016f89f9cf42181ff06afb2daf",
     name: "validator service",
     description: "reliable validation",
@@ -90,22 +84,28 @@ export default [
       "Reliable non-custodial Validator run by the industry leader - Allnodes",
   },
   {
+    id: "0x05e393ec11d0197a88d84457908edd4ff235f323",
+    name: "Stakin - No MEV",
+    description:
+      "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
+  },
+  {
     id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
     name: "Fox & Yaga",
     description:
       "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
   },
   {
-    id: "0xdbdee04c72a02a740b9f26ada9203582c8a99daf",
-    name: "Chorus One - Obol DV vault",
-    description:
-      'This vault represents a distributed validator cluster , using Obol\'s DV technology to run the validators across multiple nodes. As a staker, you can expect higher uptime, decreased slashing risk, and a meaningful contribution to the decentralization of the Ethereum network.\n\nBy staking with an Obol DV, you automatically participate in the Obol Contributions initiative, contributing 1% of staking rewards to the "1% for Decentralization" retroactive funding model. Your contributions will be tracked and recognized by Obol and can be viewed on our staking dApp, OPUS Pool.',
-  },
-  {
     id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
     name: "Verse ETH Staking",
     description:
       "Earn rewards by staking your ETH in the Verse Ecosystem vault",
+  },
+  {
+    id: "0xdbdee04c72a02a740b9f26ada9203582c8a99daf",
+    name: "Chorus One - Obol DV vault",
+    description:
+      'This vault represents a distributed validator cluster , using Obol\'s DV technology to run the validators across multiple nodes. As a staker, you can expect higher uptime, decreased slashing risk, and a meaningful contribution to the decentralization of the Ethereum network.\n\nBy staking with an Obol DV, you automatically participate in the Obol Contributions initiative, contributing 1% of staking rewards to the "1% for Decentralization" retroactive funding model. Your contributions will be tracked and recognized by Obol and can be viewed on our staking dApp, OPUS Pool.',
   },
   {
     id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
@@ -149,12 +149,6 @@ export default [
       "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
   },
   {
-    id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
-    name: "DSRV",
-    description:
-      "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
-  },
-  {
     id: "0xe2d8f982708ce1e3814c8986cbab624ca926288a",
     name: "KysenPool Zen 🧘",
     description:
@@ -167,12 +161,6 @@ export default [
       "Minimum Fee - Unrestricted Maximum MEV - Zero-Cloud - Private Datacentre - 24/7 Engineering Support - All included in Simply Staking's Premium Vault...\n\n\n- Fee: Competitive 3.75%.\n- MEV: Extensive list of MEV relays, free of restrictions, with the ultimate goal of using a global set of relays to maximise profit.\n- Private Data Centre Operation: Your ETH is securely managed in our privately operated data center in Malta, prioritising security and reliability, free from the dependencies of cloud services.",
   },
   {
-    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
-    name: "Big Euler's e-Stake",
-    description:
-      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
-  },
-  {
     id: "0x5fe23da0835ecf01f4faf9b07fdcfd603dfbd146",
     name: "Lavender.Five Nodes",
     description:
@@ -183,6 +171,18 @@ export default [
     name: "A41",
     description:
       "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
+  },
+  {
+    id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
+    name: "DSRV",
+    description:
+      "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
+  },
+  {
+    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
+    name: "Big Euler's e-Stake",
+    description:
+      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
   },
   {
     id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
@@ -201,5 +201,11 @@ export default [
     name: "GlobalStake",
     description:
       "With decades of infrastructure experience, GlobalStake's enterprise-grade Web3 data centers, equipment, and protocols are specifically engineered to secure Proof-of-Stake networks. We believe that if you are going to do something, do it right!",
+  },
+  {
+    id: "0xc502a1008cae7ad560294ac987355dfdb287e597",
+    name: "Stakin - Full MEV",
+    description:
+      "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
 ] as const

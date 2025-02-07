@@ -8,7 +8,7 @@ import { Callout } from "nextra/components"
 | :------ | :------------------------------------------------------------------------------------------------------------------- |
 | `Vault` | [0xBA12222222228d8Ba445958a75a0704d566BF2C8](https://arbiscan.io/address/0xBA12222222228d8Ba445958a75a0704d566BF2C8) |
 
-## Strategy: `withdraw_proportional`
+## Action: `withdraw_proportional`
 
 **Parameters**
 
@@ -16,7 +16,7 @@ import { Callout } from "nextra/components"
 | :---- | :------------------ | :------------ |
 | `bpt` | _string (required)_ | `Address` bpt |
 
-Withdraw funds from the Balancer pool withdrawing all assets in proportional way.
+Withdraw funds from the Balancer pool, receiving all assets proportionally.
 
 ### Permissions:
 
@@ -30,7 +30,7 @@ Withdraw funds from the Balancer pool withdrawing all assets in proportional way
 
 #### `Vault · exitPool`
 
-Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional amounts of `TOKEN` tokens in exchange.
+Redeem `BPT` tokens from the corresponding Balancer pool and receive proportional amounts of `TOKEN` tokens in exchange.
 
 - **Contract:** `Vault`
 - **Function:** `exitPool(bytes32,address,address,(address[],uint256[],bytes,bool))`
@@ -58,7 +58,7 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
   - [Balancer documentation](https://docs.balancer.fi/reference/joins-and-exits/pool-exits.html#userdata) for `userData` structure.  
 </Callout>
 
-## Strategy: `withdraw_single_token`
+## Action: `withdraw_single_token`
 
 **Parameters**
 
@@ -67,21 +67,18 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
 | `bpt`              | _string (required)_ | `Address` bpt              |
 | `exitTokenAddress` | _string (required)_ | `Address` exitTokenAddress |
 
-Withdraw funds from the Balancer pool withdrawing a single asset specified by the token address.
+Withdraw funds from the Balancer pool, receiving a single asset specified by the `exitTokenAddress`.
 
 ### Permissions:
 
 <Callout type="info">
   `BPT` below refers to the address of the BPT (Balancer Pool Token).
 </Callout>
-<Callout type="info">
-  `TOKEN` below refers to the ERC-20 token address of the corresponding pool.
-</Callout>
 <Callout type="info">`PID` below refers to the Balancer pool ID.</Callout>
 
 #### `Vault · exitPool`
 
-Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional amounts of `TOKEN` tokens in exchange.
+Redeem `BPT` tokens from the corresponding Balancer pool and receive `exitTokenAddress` tokens in exchange.
 
 - **Contract:** `Vault`
 - **Function:** `exitPool(bytes32,address,address,(address[],uint256[],bytes,bool))`
@@ -109,7 +106,7 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
   - [Balancer documentation](https://docs.balancer.fi/reference/joins-and-exits/pool-exits.html#userdata) for `userData` structure.  
 </Callout>
 
-## Strategy: `unstake_withdraw_proportional`
+## Action: `unstake_withdraw_proportional`
 
 **Parameters**
 
@@ -117,7 +114,7 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
 | :------ | :------------------ | :-------------- |
 | `gauge` | _string (required)_ | `Address` gauge |
 
-Unstake from gauge and withdraw funds from the Balancer pool withdrawing all assets in proportional way.
+Unstake from the gauge and withdraw funds from the Balancer pool, receiving all assets proportionally.
 
 ### Permissions:
 
@@ -135,7 +132,7 @@ Unstake from gauge and withdraw funds from the Balancer pool withdrawing all ass
 
 #### `GAUGE · withdraw`
 
-Redeem `GAUGE` tokens and receive `BPT` tokens in exchange.
+Redeem `GAUGE` tokens to receive `BPT` tokens in exchange.
 
 - **Contract:** `GAUGE`
 - **Function:** `withdraw(uint256)`
@@ -146,7 +143,7 @@ Redeem `GAUGE` tokens and receive `BPT` tokens in exchange.
 
 #### `Vault · exitPool`
 
-Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional amounts of `TOKEN` tokens in exchange.
+Redeem `BPT` tokens from the corresponding Balancer pool and receive proportional amounts of `TOKEN` tokens in exchange.
 
 - **Contract:** `Vault`
 - **Function:** `exitPool(bytes32,address,address,(address[],uint256[],bytes,bool))`
@@ -174,7 +171,7 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
   - [Balancer documentation](https://docs.balancer.fi/reference/joins-and-exits/pool-exits.html#userdata) for `userData` structure.  
 </Callout>
 
-## Strategy: `unstake_withdraw_single`
+## Action: `unstake_withdraw_single`
 
 **Parameters**
 
@@ -183,15 +180,12 @@ Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional 
 | `gauge`            | _string (required)_ | `Address` gauge            |
 | `exitTokenAddress` | _string (required)_ | `Address` exitTokenAddress |
 
-Unstake from gauge and withdraw funds from the Balancer pool withdrawing a single asset specified by the token address.
+Unstake from the gauge, then withdraw funds from the Balancer pool, receiving a single asset specified by the `exitTokenAddress`.
 
 ### Permissions:
 
 <Callout type="info">
   `BPT` below refers to the address of the BPT (Balancer Pool Token).
-</Callout>
-<Callout type="info">
-  `TOKEN` below refers to the ERC-20 token address of the corresponding pool.
 </Callout>
 <Callout type="info">
   `GAUGE` below refers to the `BalancerGaugeDeposit` contract address for
@@ -212,7 +206,7 @@ Redeem `GAUGE` tokens and receive `BPT` tokens in exchange.
 
 #### `Vault · exitPool`
 
-Redeem `BPT` tokens to the corresponding Balancer pool and receive proportional amounts of `TOKEN` tokens in exchange.
+Redeem `BPT` tokens from the corresponding Balancer pool and receive `exitTokenAddress` tokens in exchange.
 
 - **Contract:** `Vault`
 - **Function:** `exitPool(bytes32,address,address,(address[],uint256[],bytes,bool))`

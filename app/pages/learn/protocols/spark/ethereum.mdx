@@ -62,7 +62,7 @@ Deposit `TARGET` and receive `spToken` tokens in exchange.
 
 #### `SparkLendingPoolV3 · setUserUseReserveAsCollateral`
 
-Set/unset deposited asset as collateral.
+Enable or disable `TARGET` as collateral.
 
 - **Contract:** `SparkLendingPoolV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
@@ -113,7 +113,7 @@ Claim all rewards.
 
 ### Target: ETH
 
-For `"ETH"` as an element of `targets`, the following functions are allowed:
+For ETH as an element of `targets`, the following functions are allowed:
 
 #### `spWETH · approve`
 
@@ -142,7 +142,7 @@ Deposit ETH and receive `spWETH` tokens in exchange.
 
 #### `SparkLendingPoolV3 · setUserUseReserveAsCollateral`
 
-Set/unset deposited asset as collateral.
+Enable or disable `TARGET` as collateral.
 
 - **Contract:** `SparkLendingPoolV3`
 - **Function:** `setUserUseReserveAsCollateral(address,bool)`
@@ -322,12 +322,13 @@ Burns `USDS` and mints `DAI` tokens for the receiver.
 Deposit `USDS` and receive `sUSDS` tokens in exchange.
 
 - **Contract:** `sUSDS`
-- **Function:** `deposit(uint256,address)`
+- **Function:** `deposit(uint256,address,uint16)`
 
   | Parameter  | Constraint        |
   | :--------- | :---------------- |
   | `assets`   | -                 |
   | `receiver` | equal to `AVATAR` |
+  | `referral` | -                 |
 
 #### `sUSDS · withdraw`
 
@@ -415,7 +416,7 @@ Repay borrowed `TARGET` tokens.
 
 ### Target: ETH
 
-For `"ETH"` as an element of `targets`, the following functions are allowed:
+For ETH as an element of `targets`, the following functions are allowed:
 
 #### `variableDebtWETH · approveDelegation`
 

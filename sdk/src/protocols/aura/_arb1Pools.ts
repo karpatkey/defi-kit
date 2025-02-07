@@ -176,7 +176,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
       },
       {
         address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
@@ -276,7 +276,7 @@ export default [
       },
       {
         address: "0xB86fb1047A955C0186c77ff6263819b37B32440D",
-        symbol: "wUSD+",
+        symbol: "wxUSD",
       },
     ],
     rewarder: "0x182a05eb019eEdA0bAbFa5D8feAad5d81C348bff",
@@ -632,7 +632,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
       },
     ],
     rewarder: "0x49A0213Bb5Eea803aCdEDD7a3d9D044b84fD918F",
@@ -844,7 +844,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
       },
     ],
     rewarder: "0x869d2D3C242A4082F000672686698a3Bbe26539C",
@@ -988,7 +988,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
       },
     ],
     rewarder: "0x2a433d0227FB9c6eFA39D4534374d21848072fb9",
@@ -1228,9 +1228,25 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
       },
     ],
     rewarder: "0x3F2dE59CE051c75621AC9D9a6487C01e60cF6988",
+  },
+  {
+    name: "tETH/wstETH",
+    id: "95",
+    bpt: "0x65c2d90b33F7bf693A7EF54662435f2Cf3251C21",
+    tokens: [
+      {
+        address: "0x5979D7b546E38E414F7E9822514be443A4800529",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xd09ACb80C1E8f2291862c4978A008791c9167003",
+        symbol: "tETH",
+      },
+    ],
+    rewarder: "0x967105C31C27205A0CA1b0917Ee6FDBa26542868",
   },
 ] as const

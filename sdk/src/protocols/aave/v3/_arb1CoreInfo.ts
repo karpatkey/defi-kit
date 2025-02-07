@@ -57,7 +57,7 @@ export default [
     variableDebtTokenAddress: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
   },
   {
-    symbol: "USDT",
+    symbol: "USD₮0",
     token: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
     usageAsCollateralEnabled: true,
     borrowingEnabled: true,
@@ -187,5 +187,16 @@ export default [
     isFrozen: false,
     aTokenAddress: "0xeBe517846d0F36eCEd99C735cbF6131e1fEB775D",
     variableDebtTokenAddress: "0x18248226C16BF76c032817854E7C83a2113B4f06",
+  },
+  {
+    symbol: "ezETH",
+    token: "0x2416092f143378750bb29b79eD961ab195CcEea5",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: false,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0xEA1132120ddcDDA2F119e99Fa7A27a0d036F7Ac9",
+    variableDebtTokenAddress: "0x1fFD28689DA7d0148ff0fCB669e9f9f0Fc13a219",
   },
 ] as const

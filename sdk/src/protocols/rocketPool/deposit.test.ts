@@ -4,11 +4,12 @@ import { applyPermissions } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
+import { Chain } from "../../../src"
 
 describe("rocketPool", () => {
   describe("deposit", () => {
     beforeAll(async () => {
-      await applyPermissions(await eth.deposit())
+      await applyPermissions(Chain.eth, await eth.deposit())
     })
 
     it("query pool", async () => {
@@ -20,13 +21,18 @@ describe("rocketPool", () => {
       const depositAmount =
         await kit.asAvatar.rocketPool.depositPool.getMaximumDepositAmount()
 
+      const burnAmount =
+        await kit.asAvatar.rocketPool.depositPool.getExcessBalance()
+
       if (depositAmount > 0n) {
         await expect(
           kit.asMember.rocketPool.depositPool.deposit({
             value: parseEther("1"),
           })
         ).not.toRevert()
+      }
 
+      if (burnAmount > 0n) {
         await expect(
           kit.asMember.rocketPool.rEth.burn(parseEther("0.0001"))
         ).not.toRevert()
@@ -62,6 +68,6 @@ describe("rocketPool", () => {
           parseEther("50000")
         )
       ).toBeAllowed()
-    }, 120000)
+    })
   })
 })

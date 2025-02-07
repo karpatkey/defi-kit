@@ -1,5 +1,54 @@
 # Changelog
 
+## [2.11.0](https://github.com/karpatkey/defi-kit/compare/v2.10.1...v2.11.0) (2025-02-06)
+
+
+### Features
+
+* Aave v3 Repertoire Actions ([#372](https://github.com/karpatkey/defi-kit/issues/372)) ([bf3121d](https://github.com/karpatkey/defi-kit/commit/bf3121d0b4338c9aaf2e43ab32cf51bc3c00c981))
+
+## [2.10.1](https://github.com/karpatkey/defi-kit/compare/v2.10.0...v2.10.1) (2025-02-06)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#370](https://github.com/karpatkey/defi-kit/issues/370)) ([ecda36f](https://github.com/karpatkey/defi-kit/commit/ecda36f459731baaf1ca3d55bf6874b097441399))
+
+## [2.10.0](https://github.com/karpatkey/defi-kit/compare/v2.9.1...v2.10.0) (2025-01-30)
+
+
+### Features
+
+* Lido Repertoire Actions ([#365](https://github.com/karpatkey/defi-kit/issues/365)) ([3fdeca9](https://github.com/karpatkey/defi-kit/commit/3fdeca923de433f44474b1795e6fa5abf6017fee))
+
+## [2.9.1](https://github.com/karpatkey/defi-kit/compare/v2.9.0...v2.9.1) (2025-01-29)
+
+
+### Bug Fixes
+
+* package.json mismatch ([#368](https://github.com/karpatkey/defi-kit/issues/368)) ([09d07d5](https://github.com/karpatkey/defi-kit/commit/09d07d5fd965cfc540a7b166c9f3b47876189c81))
+
+## [2.9.0](https://github.com/karpatkey/defi-kit/compare/v2.8.5...v2.9.0) (2025-01-29)
+
+
+### Features
+
+* Build Setup For Testing on Sidechains ([#362](https://github.com/karpatkey/defi-kit/issues/362)) ([d6efa00](https://github.com/karpatkey/defi-kit/commit/d6efa00d3ffad49a953f519963d2289382626da3))
+
+## [2.8.5](https://github.com/karpatkey/defi-kit/compare/v2.8.4...v2.8.5) (2025-01-29)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#353](https://github.com/karpatkey/defi-kit/issues/353)) ([e158b82](https://github.com/karpatkey/defi-kit/commit/e158b82a396774a405c558232515337287fe01e8))
+
+## [2.8.4](https://github.com/karpatkey/defi-kit/compare/v2.8.3...v2.8.4) (2025-01-27)
+
+
+### Bug Fixes
+
+* Spark sUSDS deposit function ([#363](https://github.com/karpatkey/defi-kit/issues/363)) ([713161b](https://github.com/karpatkey/defi-kit/commit/713161be8e1ce906cf2b7d00797a97bcdda3e02e))
+
 ## [2.8.2](https://github.com/karpatkey/defi-kit/compare/v2.8.1...v2.8.2) (2025-01-23)
 
 
