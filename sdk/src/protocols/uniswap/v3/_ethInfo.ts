@@ -22,10 +22,6 @@ export default [
     symbol: "GLQ",
   },
   {
-    address: "0x77FbA179C79De5B7653F68b5039Af940AdA60ce0",
-    symbol: "FORTH",
-  },
-  {
     address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     symbol: "USDT",
   },
@@ -186,10 +182,6 @@ export default [
     symbol: "RAIL",
   },
   {
-    address: "0xEd04915c23f00A313a544955524EB7DBD823143d",
-    symbol: "ACH",
-  },
-  {
     address: "0xd2877702675e6cEb975b4A1dFf9fb7BAF4C91ea9",
     symbol: "LUNA",
   },
@@ -256,10 +248,6 @@ export default [
   {
     address: "0x8355DBE8B0e275ABAd27eB843F3eaF3FC855e525",
     symbol: "WOOL",
-  },
-  {
-    address: "0xC5b3D3231001a776123194Cf1290068e8b0C783b",
-    symbol: "LIT",
   },
   {
     address: "0x33349B282065b0284d756F0577FB39c158F935e6",
@@ -390,20 +378,12 @@ export default [
     symbol: "PRIME",
   },
   {
-    address: "0x9Ce115f0341ae5daBC8B477b74E83db2018A6f42",
-    symbol: "HAIR",
-  },
-  {
     address: "0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429",
     symbol: "GLM",
   },
   {
     address: "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
     symbol: "PEPE",
-  },
-  {
-    address: "0x5026F006B85729a8b14553FAE6af249aD16c9aaB",
-    symbol: "WOJAK",
   },
   {
     address: "0xA9E8aCf069C58aEc8825542845Fd754e41a9489A",
@@ -474,8 +454,8 @@ export default [
     symbol: "CAL",
   },
   {
-    address: "0x102c776DDB30C754dEd4fDcC77A19230A60D4e4f",
-    symbol: "FLC",
+    address: "0xfA3E941D1F6B7b10eD84A0C211bfA8aeE907965e",
+    symbol: "HAY",
   },
   {
     address: "0xF19308F923582A6f7c465e5CE7a9Dc1BEC6665B1",
@@ -574,10 +554,6 @@ export default [
     symbol: "PANDORA",
   },
   {
-    address: "0x922D8563631B03C2c4cf817f4d18f6883AbA0109",
-    symbol: "LOCK",
-  },
-  {
     address: "0x038ed1383763D704d4271FE856ac96b4557E9D06",
     symbol: "ALPHABET",
   },
@@ -634,16 +610,8 @@ export default [
     symbol: "PEW",
   },
   {
-    address: "0x525574C899A7c877a11865339e57376092168258",
-    symbol: "GURU",
-  },
-  {
     address: "0x7613C48E0cd50E42dD9Bf0f6c235063145f6f8DC",
     symbol: "PIRATE",
-  },
-  {
-    address: "0xfaCa6611fca6dE09F726b8A0A1448253b6F748E5",
-    symbol: "DOLPHIN",
   },
   {
     address: "0xEDB171C18cE90B633DB442f2A6F72874093b49Ef",
@@ -660,10 +628,6 @@ export default [
   {
     address: "0x812Ba41e071C7b7fA4EBcFB62dF5F45f6fA853Ee",
     symbol: "Neiro",
-  },
-  {
-    address: "0xEE2a03Aa6Dacf51C18679C516ad5283d8E7C2637",
-    symbol: "NEIRO",
   },
   {
     address: "0x4D0528598F916Fd1D8dc80e5f54a8fEEDcFd4b18",
@@ -804,10 +768,6 @@ export default [
   {
     address: "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
     symbol: "ZRX",
-  },
-  {
-    address: "0x8207c1FfC5B6804F6024322CcF34F29c3541Ae26",
-    symbol: "OGN",
   },
   {
     address: "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
@@ -1034,6 +994,10 @@ export default [
     symbol: "ENA",
   },
   {
+    address: "0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
+    symbol: "SAFE",
+  },
+  {
     address: "0xa84f95eb3DaBdc1bbD613709ef5F2fD42CE5bE8d",
     symbol: "EAI",
   },
@@ -1052,10 +1016,6 @@ export default [
   {
     address: "0x6DF0E641FC9847c0c6Fde39bE6253045440c14d3",
     symbol: "DINERO",
-  },
-  {
-    address: "0xCE722f60F35C37aB295adc4E6bA45bCC7ca89Dd6",
-    symbol: "JPGD",
   },
   {
     address: "0xC96dE26018A54D51c097160568752c4E3BD6C364",
@@ -1100,6 +1060,10 @@ export default [
   {
     address: "0xcb1592591996765Ec0eFc1f92599A19767ee5ffA",
     symbol: "BIO",
+  },
+  {
+    address: "0xf34960d9d60be18cC1D5Afc1A6F012A723a28811",
+    symbol: "KCS",
   },
   {
     address: "0x853d955aCEf822Db058eb8505911ED77F175b99e",
@@ -1174,6 +1138,10 @@ export default [
     symbol: "LBTC",
   },
   {
+    address: "0x35D8949372D46B7a3D5A56006AE77B215fc69bC0",
+    symbol: "USD0++",
+  },
+  {
     address: "0x7A56E1C57C7475CCf742a1832B028F0456652F97",
     symbol: "SolvBTC",
   },
@@ -1224,10 +1192,6 @@ export default [
   {
     address: "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
     symbol: "pxETH",
-  },
-  {
-    address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
-    symbol: "ezETH",
   },
   {
     address: "0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",

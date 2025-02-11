@@ -38,12 +38,6 @@ export default [
       "Node operators, securing and decentralizing Ethereum |  AVS operator: http://avs.stakecat.space\n \nWe provide greater decentralization for networks with our own infrastructure for validators and high availability to compete with centralized data center performance.\n\nmore about Stakecat here: https://www.stakecat.space/",
   },
   {
-    id: "0x9eeb6be79899cfe45018866a2113c6b77fa96f35",
-    name: "SEEDNode",
-    description:
-      "Gnosis v3 Vault 🦉\n\nAt SEEDNode, we promote and strengthen decentralization globally by providing best-in-class node infrastructure and actively participating in multiple networks.\n\nPowered by SEED Org.\nseedlatam.org",
-  },
-  {
     id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
     name: "H2O Nodes",
     description:
@@ -74,16 +68,16 @@ export default [
       "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
   },
   {
+    id: "0x79dbec2d18a758c62d410f9763956d52fbd4a3cc",
+    name: "Stakers.space",
+    description:
+      "Gnosis Vault by Stakers.space | Fee 10% | Learn more about Gnosis staking at https://stakers.space/gnosis-staking.",
+  },
+  {
     id: "0xe32773a0f6fa8ebf2a32c040dacd031a1ad1e530",
     name: "Deprecated: Orangefin Ventures",
     description:
       "Orangefin Ventures has been acquired and we will be sunsetting our support for Gnosis. We will be exiting all of our validators so users don't incur any penalties. Please unstake at your earliest convenience.",
-  },
-  {
-    id: "0x79dbec2d18a758c62d410f9763956d52fbd4a3cc",
-    name: "Stakers.space",
-    description:
-      "Gnosis Vault by Stakers.space. Learn more about Gnosis staking at https://stakers.space/gnosis-staking.",
   },
   {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
@@ -100,11 +94,6 @@ export default [
     id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
     name: "Wunode",
     description: "Dappnode vault, fiber gigabit uplink, UPS",
-  },
-  {
-    id: "0x9cb24ec88fca91aff9def12989ab9274f3992d3e",
-    name: "Vespertine",
-    description: "Investing in a bankless future.",
   },
   {
     id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
@@ -124,8 +113,8 @@ export default [
     description: null,
   },
   {
-    id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",
-    name: "Test No Deposit",
-    description: null,
+    id: "0x9cb24ec88fca91aff9def12989ab9274f3992d3e",
+    name: "Vespertine",
+    description: "Investing in a bankless future.",
   },
 ] as const
