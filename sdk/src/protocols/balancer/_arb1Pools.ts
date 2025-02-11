@@ -1433,25 +1433,6 @@ export default [
     ],
   },
   {
-    bpt: "0xa899c63BA9ff275d6bfc83E43ee8E58fF6987584",
-    id: "0xa899c63ba9ff275d6bfc83e43ee8e58ff6987584000200000000000000000594",
-    name: "ECLP-rETH-wstETH",
-    type: "GyroE",
-    gauge: "0x7a45919ca9Cf2176833492B9D049B34312AF90fa",
-    tokens: [
-      {
-        address: "0x5979D7b546E38E414F7E9822514be443A4800529",
-        symbol: "wstETH",
-        id: "0x",
-      },
-      {
-        address: "0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8",
-        symbol: "rETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xab297f94235De777B85024eD1208Ff43852385D9",
     id: "0xab297f94235de777b85024ed1208ff43852385d90000000000000000000005bb",
     name: "wUSDL/GHO",

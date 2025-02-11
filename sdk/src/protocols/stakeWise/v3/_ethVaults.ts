@@ -108,6 +108,12 @@ export default [
       'This vault represents a distributed validator cluster , using Obol\'s DV technology to run the validators across multiple nodes. As a staker, you can expect higher uptime, decreased slashing risk, and a meaningful contribution to the decentralization of the Ethereum network.\n\nBy staking with an Obol DV, you automatically participate in the Obol Contributions initiative, contributing 1% of staking rewards to the "1% for Decentralization" retroactive funding model. Your contributions will be tracked and recognized by Obol and can be viewed on our staking dApp, OPUS Pool.',
   },
   {
+    id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
+    name: "CommonWealth",
+    description:
+      "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
+  },
+  {
     id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
     name: "VincentTaglia.eth",
     description:
@@ -141,12 +147,6 @@ export default [
     name: "Cryptoknight Vault",
     description:
       "Validator nodes operated by the leading Web3 education community for working professionals in Singapore - Cryptoknight Academy. Limited to 100 validator keys, we work with the Stakesaurus home staking community for diversification of our physical infrastructure and clients. DVTs will be implemented for additional performance and security boosts as we scale up!",
-  },
-  {
-    id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
-    name: "CommonWealth",
-    description:
-      "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
   },
   {
     id: "0xe2d8f982708ce1e3814c8986cbab624ca926288a",
