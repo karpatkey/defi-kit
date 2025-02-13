@@ -20,7 +20,7 @@ describe("symbiotic", () => {
     it("deposit", async () => {
       const amount = parseEther("10")
       await stealErc20(underlying, amount, stealAddress)
-      await kit.asMember.weth
+      await kit.asAvatar.weth
         .attach(underlying)
         .approve(defaultCollateral, amount)
       await expect(
@@ -42,7 +42,7 @@ describe("symbiotic", () => {
     it("withdraw", async () => {
       const amount = parseEther("10")
       await stealErc20(underlying, amount, stealAddress)
-      await kit.asMember.weth
+      await kit.asAvatar.weth
         .attach(underlying)
         .approve(defaultCollateral, amount)
       await expect(
