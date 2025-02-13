@@ -1837,6 +1837,25 @@ export default [
     ],
   },
   {
+    bpt: "0x6987633f18Ca0B4a10831331FcC57211941B6bA0",
+    id: "0x6987633f18ca0b4a10831331fcc57211941b6ba0000200000000000000000530",
+    name: "20AGI-80WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x5F18ea482ad5cc6BC65803817C99f477043DcE85",
+        symbol: "AGI",
+        id: "0x",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x702605F43471183158938C1a3e5f5A359d7b31ba",
     id: "0x702605f43471183158938c1a3e5f5a359d7b31ba00020000000000000000009f",
     name: "B-80BAL-20WETH",
@@ -2731,25 +2750,6 @@ export default [
       {
         address: "0xE0f63A424a4439cBE457D80E4f4b51aD25b2c56C",
         symbol: "SPX",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x9D73398C54be236da189d937EACE8E6dccaD3616",
-    id: "0x9d73398c54be236da189d937eace8e6dccad36160002000000000000000006e3",
-    name: "ECLP-cbBTC-WBTC",
-    type: "GyroE",
-    gauge: "0xF3E9A97e5fEddf961A3d431627561bbFc7cFb6cf",
-    tokens: [
-      {
-        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-        symbol: "WBTC",
-        id: "0x",
-      },
-      {
-        address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-        symbol: "cbBTC",
         id: "0x",
       },
     ],
@@ -3735,25 +3735,6 @@ export default [
       {
         address: "0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
         symbol: "COW",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xdEdb11A6a23263469567C2881A9b9F8629eE0041",
-    id: "0xdedb11a6a23263469567c2881a9b9f8629ee0041000000000000000000000669",
-    name: "svETH/wstETH",
-    type: "ComposableStable",
-    gauge: "0xD98ed0426D18B115d6388923803e33ad8aaF11F8",
-    tokens: [
-      {
-        address: "0x6733F0283711F225A447e759D859a70b0c0Fd2bC",
-        symbol: "svETH",
-        id: "0x",
-      },
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
         id: "0x",
       },
     ],
