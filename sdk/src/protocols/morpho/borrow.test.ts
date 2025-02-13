@@ -1,8 +1,9 @@
 import { eth } from "."
-import { avatar } from "../../../test/wallets"
+import { wallets } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
+import { Chain } from "../../../src"
 
 const MorphoBluePool = "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb" // gtLRTcore Vault address
 const STEAL_ADDRESS = "0xacB7027f271B03B502D65fEBa617a0d817D62b8e" // Address wstETH
@@ -15,6 +16,7 @@ describe("Morpho Blue borrow", () => {
   describe("Borrow Action", () => {
     beforeAll(async () => {
       await applyPermissions(
+        Chain.eth,
         await eth.borrow({
           blueTargets: [
             "0xb8fc70e82bc5bb53e773626fcc6a23f7eefa036918d7ef216ecfb1950a94a85e",
@@ -34,8 +36,14 @@ describe("Morpho Blue borrow", () => {
         lltv: "965000000000000000",
       }
 
-      await stealErc20(underlying_wsteth, parseEther("10"), STEAL_ADDRESS)
       await stealErc20(
+        Chain.eth,
+        underlying_wsteth,
+        parseEther("10"),
+        STEAL_ADDRESS
+      )
+      await stealErc20(
+        Chain.eth,
         "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         parseEther("10"),
         STEAL_WETH
@@ -51,7 +59,7 @@ describe("Morpho Blue borrow", () => {
           .supplyCollateral(
             await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
             amountCollateral,
-            avatar.address,
+            wallets.avatar,
             "0x"
           )
       ).not.toRevert()
@@ -62,7 +70,7 @@ describe("Morpho Blue borrow", () => {
           .supplyCollateral(
             unauthorizedMarketParams,
             amountCollateral,
-            avatar.address,
+            wallets.avatar,
             "0x"
           )
       ).toRevert()
@@ -75,8 +83,8 @@ describe("Morpho Blue borrow", () => {
             await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
             amountBorrow,
             0,
-            avatar.address,
-            avatar.address
+            wallets.avatar,
+            wallets.avatar
           )
       ).not.toRevert()
 
@@ -87,8 +95,8 @@ describe("Morpho Blue borrow", () => {
             unauthorizedMarketParams,
             amountBorrow,
             0,
-            avatar.address,
-            avatar.address
+            wallets.avatar,
+            wallets.avatar
           )
       ).toRevert()
 
@@ -102,7 +110,7 @@ describe("Morpho Blue borrow", () => {
             await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
             amountBorrow,
             0,
-            avatar.address,
+            wallets.avatar,
             "0x"
           )
       ).not.toRevert()
@@ -114,8 +122,8 @@ describe("Morpho Blue borrow", () => {
           .withdrawCollateral(
             await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
             amountCollateral,
-            avatar.address,
-            avatar.address
+            wallets.avatar,
+            wallets.avatar
           )
       ).not.toRevert()
     })

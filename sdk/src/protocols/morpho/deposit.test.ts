@@ -1,8 +1,9 @@
 import { eth } from "."
-import { avatar } from "../../../test/wallets"
+import { wallets } from "../../../test/wallets"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
+import { Chain } from "../../../src"
 
 const METAMORPHO_VAULT = "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658" // gtLRTcore Vault address
 const STEAL_ADDRESS = "0xD48573cDA0fed7144f2455c5270FFa16Be389d04" // Address to fund test WETH
@@ -11,20 +12,23 @@ const underlying = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" // WETH
 describe("Morpho Protocol", () => {
   describe("Deposit Action", () => {
     beforeAll(async () => {
-      await applyPermissions(await eth.deposit({ targets: ["gtLRTcore"] }))
+      await applyPermissions(
+        Chain.eth,
+        await eth.deposit({ targets: ["gtLRTcore"] })
+      )
     })
 
     it("deposit WETH", async () => {
       const amount = parseEther("2")
 
-      await stealErc20(underlying, amount, STEAL_ADDRESS)
+      await stealErc20(Chain.eth, underlying, amount, STEAL_ADDRESS)
       await kit.asAvatar.weth
         .attach(underlying)
         .approve(METAMORPHO_VAULT, amount)
       await expect(
         kit.asMember.morpho.metaMorpho
           .attach(METAMORPHO_VAULT)
-          .deposit(amount, avatar.address)
+          .deposit(amount, wallets.avatar)
       ).not.toRevert()
     })
 
@@ -33,36 +37,36 @@ describe("Morpho Protocol", () => {
       const shareAmount = await kit.asAvatar.morpho.metaMorpho.convertToShares(
         amount / 2n
       )
-      
-      await stealErc20(underlying, amount, STEAL_ADDRESS)
+
+      await stealErc20(Chain.eth, underlying, amount, STEAL_ADDRESS)
       await kit.asAvatar.weth
         .attach(underlying)
         .approve(METAMORPHO_VAULT, amount)
       await expect(
         kit.asMember.morpho.metaMorpho
           .attach(METAMORPHO_VAULT)
-          .mint(shareAmount, avatar.address)
+          .mint(shareAmount, wallets.avatar)
       ).not.toRevert()
     })
 
     it("withdraw ", async () => {
       const amount = parseEther("1")
 
-      await stealErc20(underlying, amount, STEAL_ADDRESS)
+      await stealErc20(Chain.eth, underlying, amount, STEAL_ADDRESS)
       await kit.asAvatar.weth
         .attach(underlying)
         .approve(METAMORPHO_VAULT, amount)
-      console.log("address avatar = ", avatar.address)
+      console.log("address avatar = ", wallets.avatar)
       console.log(
         "balance before withdraw = ",
         await kit.asAvatar.morpho.metaMorpho
           .attach(METAMORPHO_VAULT)
-          .balanceOf(avatar.address)
+          .balanceOf(wallets.avatar)
       )
       await expect(
         kit.asMember.morpho.metaMorpho
           .attach(METAMORPHO_VAULT)
-          .withdraw(amount, avatar.address, avatar.address)
+          .withdraw(amount, wallets.avatar, wallets.avatar)
       ).not.toRevert()
     })
 
@@ -72,14 +76,14 @@ describe("Morpho Protocol", () => {
         amount / 2n
       )
 
-      await stealErc20(underlying, amount, STEAL_ADDRESS)
+      await stealErc20(Chain.eth, underlying, amount, STEAL_ADDRESS)
       await kit.asAvatar.weth
         .attach(underlying)
         .approve(METAMORPHO_VAULT, amount)
       await expect(
         kit.asMember.morpho.metaMorpho
           .attach(METAMORPHO_VAULT)
-          .redeem(shareAmount, avatar.address, avatar.address)
+          .redeem(shareAmount, wallets.avatar, wallets.avatar)
       ).not.toRevert()
     })
   })
