@@ -1,10 +1,10 @@
-import { getIndexedAccountPath, MaxUint256, parseEther } from "ethers"
+import { parseEther } from "ethers"
 import { eth } from "."
 import { eth as kit } from "../../../test/kit"
 import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
-import { bigint } from "zod"
-import { avatar } from "../../../test/wallets"
+import { Chain } from "../../../src"
+import { wallets } from "../../../test/wallets"
 
 const ETH = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
 const ETHx = contracts.mainnet.kelp.ethx
@@ -18,6 +18,7 @@ describe("kelp", () => {
     describe("stake action", () => {
       beforeAll(async () => {
         await applyPermissions(
+          Chain.eth,
           await eth.stake({
             targets: ["stETH", "ETHx", "ETH"],
           })
@@ -26,15 +27,16 @@ describe("kelp", () => {
 
       it("stake + unstake stETH", async () => {
         const amount = parseEther("1")
-        let balance = await kit.asMember.lido.stEth.balanceOf(avatar.address)
+        let balance = await kit.asMember.lido.stEth.balanceOf(wallets.avatar)
         console.log("[1.0] balance before stealing stEth = ", balance)
 
         await stealErc20(
+          Chain.eth,
           contracts.mainnet.lido.stEth,
           amount,
           stealAddressStEth
         )
-        balance = await kit.asMember.lido.stEth.balanceOf(avatar.address)
+        balance = await kit.asMember.lido.stEth.balanceOf(wallets.avatar)
         console.log("[1.1] balance after stealing stEth = ", balance)
 
         await expect(
@@ -54,7 +56,7 @@ describe("kelp", () => {
 
         // //////////////////////////////////////////////////////////////////////////////////
 
-        balance = await kit.asMember.kelp.rseth.balanceOf(avatar.address)
+        balance = await kit.asMember.kelp.rseth.balanceOf(wallets.avatar)
         console.log("[2.0] balance rseth before unstake stETH = ", balance)
         await expect(
           kit.asMember.kelp.rseth.approve(
@@ -71,13 +73,13 @@ describe("kelp", () => {
           )
         ).not.toRevert()
 
-        balance = await kit.asMember.kelp.rseth.balanceOf(avatar.address)
+        balance = await kit.asMember.kelp.rseth.balanceOf(wallets.avatar)
         console.log("[2.1] balance rseth after unstake stETH = ", balance)
       })
 
       it("stake + unstake ETHx", async () => {
         const amount = parseEther("10")
-        await stealErc20(ETHx, amount, stealAddressEthx)
+        await stealErc20(Chain.eth, ETHx, amount, stealAddressEthx)
         await expect(
           kit.asMember.kelp.ethx.approve(
             contracts.mainnet.kelp.LRTDepositPool,
@@ -94,7 +96,7 @@ describe("kelp", () => {
         ).not.toRevert()
 
         // *** unstake ETHx *** //
-        const balance = await kit.asMember.kelp.rseth.balanceOf(avatar.address)
+        const balance = await kit.asMember.kelp.rseth.balanceOf(wallets.avatar)
         // console.log("balance before = ", balance)
 
         await expect(
@@ -123,7 +125,7 @@ describe("kelp", () => {
         ).not.toRevert()
       })
       it("unstake ETH", async () => {
-        const balance = await kit.asMember.kelp.rseth.balanceOf(avatar.address)
+        const balance = await kit.asMember.kelp.rseth.balanceOf(wallets.avatar)
         console.log("[3.0] balance rsETH before unstaking ETH = ", balance)
 
         await expect(
