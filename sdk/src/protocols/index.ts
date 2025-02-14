@@ -9,7 +9,6 @@ import * as convex from "./convex"
 import * as cowSwap from "./cowSwap"
 import * as kelp from "./kelp"
 import * as lido from "./lido"
-import * as maker from "./maker"
 import * as morpho from "./morpho"
 import * as sky from "./sky"
 import * as rocketPool from "./rocketPool"
@@ -37,7 +36,6 @@ export const eth = annotateAll(
     cowswap: cowSwap.eth,
     kelp: kelp.eth,
     lido: lido.eth,
-    maker: maker.eth,
     morpho: morpho.eth,
     sky: sky.eth,
     rocket_pool: rocketPool.eth,
