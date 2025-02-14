@@ -154,10 +154,6 @@ export default [
     symbol: "INST",
   },
   {
-    address: "0x340D2bdE5Eb28c1eed91B2f790723E3B160613B7",
-    symbol: "VEE",
-  },
-  {
     address: "0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39",
     symbol: "HEX",
   },
@@ -378,12 +374,20 @@ export default [
     symbol: "PRIME",
   },
   {
+    address: "0x9Ce115f0341ae5daBC8B477b74E83db2018A6f42",
+    symbol: "HAIR",
+  },
+  {
     address: "0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429",
     symbol: "GLM",
   },
   {
     address: "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
     symbol: "PEPE",
+  },
+  {
+    address: "0x5026F006B85729a8b14553FAE6af249aD16c9aaB",
+    symbol: "WOJAK",
   },
   {
     address: "0xA9E8aCf069C58aEc8825542845Fd754e41a9489A",
@@ -454,10 +458,6 @@ export default [
     symbol: "CAL",
   },
   {
-    address: "0xfA3E941D1F6B7b10eD84A0C211bfA8aeE907965e",
-    symbol: "HAY",
-  },
-  {
     address: "0xF19308F923582A6f7c465e5CE7a9Dc1BEC6665B1",
     symbol: "TITANX",
   },
@@ -468,6 +468,10 @@ export default [
   {
     address: "0x8390a1DA07E376ef7aDd4Be859BA74Fb83aA02D5",
     symbol: "GROK",
+  },
+  {
+    address: "0x62D0A8458eD7719FDAF978fe5929C6D342B0bFcE",
+    symbol: "BEAM",
   },
   {
     address: "0x27702a26126e0B3702af63Ee09aC4d1A084EF628",
@@ -554,8 +558,8 @@ export default [
     symbol: "PANDORA",
   },
   {
-    address: "0x038ed1383763D704d4271FE856ac96b4557E9D06",
-    symbol: "ALPHABET",
+    address: "0x922D8563631B03C2c4cf817f4d18f6883AbA0109",
+    symbol: "LOCK",
   },
   {
     address: "0xDd66781D0E9a08D4FBb5eC7BAc80B691BE27F21D",
@@ -614,6 +618,10 @@ export default [
     symbol: "PIRATE",
   },
   {
+    address: "0x340D2bdE5Eb28c1eed91B2f790723E3B160613B7",
+    symbol: "VEE",
+  },
+  {
     address: "0xEDB171C18cE90B633DB442f2A6F72874093b49Ef",
     symbol: "WAMPL",
   },
@@ -642,16 +650,16 @@ export default [
     symbol: "DOGE",
   },
   {
-    address: "0x28561B8A2360F463011c16b6Cc0B0cbEF8dbBcad",
-    symbol: "MOODENG",
-  },
-  {
     address: "0xF1A7000000950C7ad8Aff13118Bb7aB561A448ee",
     symbol: "FLAY",
   },
   {
     address: "0x4d1C297d39C5c1277964D0E3f8Aa901493664530",
     symbol: "PUFFER",
+  },
+  {
+    address: "0x8F08B70456eb22f6109F57b8fafE862ED28E6040",
+    symbol: "LRT2",
   },
   {
     address: "0xCA7Af58da871736994Ce360f51eC6cd28351A3Df",
@@ -1042,6 +1050,10 @@ export default [
     symbol: "NMT",
   },
   {
+    address: "0xfd418e42783382E86Ae91e445406600Ba144D162",
+    symbol: "ZRC",
+  },
+  {
     address: "0xdd3B11eF34cd511a2DA159034a05fcb94D806686",
     symbol: "REKT",
   },
@@ -1066,6 +1078,10 @@ export default [
     symbol: "KCS",
   },
   {
+    address: "0xbdF43ecAdC5ceF51B7D1772F722E40596BC1788B",
+    symbol: "SEI",
+  },
+  {
     address: "0x853d955aCEf822Db058eb8505911ED77F175b99e",
     symbol: "FRAX",
   },
@@ -1088,10 +1104,6 @@ export default [
   {
     address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
     symbol: "tBTC",
-  },
-  {
-    address: "0xf951E335afb289353dc249e82926178EaC7DEd78",
-    symbol: "swETH",
   },
   {
     address: "0xd0D56273290D339aaF1417D9bfa1bb8cFe8A0933",
@@ -1136,10 +1148,6 @@ export default [
   {
     address: "0x8236a87084f8B84306f72007F36F2618A5634494",
     symbol: "LBTC",
-  },
-  {
-    address: "0x35D8949372D46B7a3D5A56006AE77B215fc69bC0",
-    symbol: "USD0++",
   },
   {
     address: "0x7A56E1C57C7475CCf742a1832B028F0456652F97",
