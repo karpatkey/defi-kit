@@ -68,7 +68,7 @@ export default [
     id: "0x1e8b447129984d8a6b652c807dfc3bd1359731330002000000000000000000d6",
     name: "ECLP-GYD-sDAI",
     type: "GyroE",
-    gauge: "0xEA71b7FDAA3683D2d307e8AF3e236FB7a395e88d",
+    gauge: null,
     tokens: [
       {
         address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
@@ -321,7 +321,7 @@ export default [
     id: "0x71e1179c5e197fa551beec85ca2ef8693c61b85b0002000000000000000000a0",
     name: "ECLP-rETH-WETH",
     type: "GyroE",
-    gauge: "0x25F822EB509177e393a32181182ae3981eeE6E53",
+    gauge: null,
     tokens: [
       {
         address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
@@ -340,7 +340,7 @@ export default [
     id: "0x7644fa5d0ea14fcf3e813fdf93ca9544f8567655000000000000000000000066",
     name: "sBAL3",
     type: "ComposableStable",
-    gauge: "0xDec0362b3229690fBe4f88c57472610588Bb9A2E",
+    gauge: null,
     tokens: [
       {
         address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
@@ -421,7 +421,7 @@ export default [
     id: "0x8dd4df4ce580b9644437f3375e54f1ab0980822800020000000000000000009c",
     name: "ECLP-wstETH-WETH",
     type: "GyroE",
-    gauge: "0xa1fF1e44E4f8346398767f94ae7DbeAB71522164",
+    gauge: null,
     tokens: [
       {
         address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
@@ -697,7 +697,7 @@ export default [
     id: "0xfc095c811fe836ed12f247bcf042504342b73fb700000000000000000000009f",
     name: "sBAL3",
     type: "ComposableStable",
-    gauge: "0x306b2E81Fc7c6F73F2460E3974538D724a88f8a5",
+    gauge: null,
     tokens: [
       {
         address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",

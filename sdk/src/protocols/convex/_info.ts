@@ -2815,4 +2815,11 @@ export default [
     cvxDepositToken: "0x2A602ac02796Fb30AE960dbB40086a06CDbd1a95",
     rewarder: "0xe0523964509de264a6d57d7E3de0C0751ACD511B",
   },
+  {
+    name: "sUSDUSDe",
+    id: "429",
+    crvLPToken: "0x59a06b97b2d566B9Dee2a368EaC8787Cfa57f95D",
+    cvxDepositToken: "0xc399E1b3Ec21ddf5a88aF3ad7EFcF0df4bf99D69",
+    rewarder: "0x268ee43857694fe53FF8729b8171266ee2514c69",
+  },
 ] as const
