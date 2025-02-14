@@ -1395,25 +1395,6 @@ export default [
     ],
   },
   {
-    bpt: "0x9D48A5084a2317CDa57A2b21851bF9Bc56F00613",
-    id: "0x9d48a5084a2317cda57a2b21851bf9bc56f006130002000000000000000005e1",
-    name: "ECLP-GYD-MONEY",
-    type: "GyroE",
-    gauge: "0x0BCDc8186c0201A29a7daD1D3e4Fe7a9bf92a0a8",
-    tokens: [
-      {
-        address: "0x69420f9E38a4e60a62224C489be4BF7a94402496",
-        symbol: "MONEY",
-        id: "0x",
-      },
-      {
-        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
-        symbol: "GYD",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xA83B8D30F61D7554aD425D8067D8bA6EaeB6b042",
     id: "0xa83b8d30f61d7554ad425d8067d8ba6eaeb6b042000200000000000000000525",
     name: "70WETH-30ARB",
