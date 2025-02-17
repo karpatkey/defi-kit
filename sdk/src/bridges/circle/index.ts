@@ -4,7 +4,5 @@ import { allowErc20Approve } from "../../conditions"
 import { contracts } from "../../../eth-sdk/config"
 
 export const eth = {
-  bridge: async () => [
-    
-  ],
+  bridge: async () => [],
 }

@@ -37,7 +37,9 @@ type AllAnnotated<R extends Record<string, ProtocolActions | BridgeActions>> = {
     : undefined
 }
 
-export const annotateAll = <R extends Record<string, ProtocolActions | BridgeActions>>(
+export const annotateAll = <
+  R extends Record<string, ProtocolActions | BridgeActions>
+>(
   actions: R,
   chainPrefix: string
 ): AllAnnotated<R> => {
