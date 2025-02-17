@@ -40,6 +40,25 @@ export default [
     ],
   },
   {
+    bpt: "0x0Ccb0C34D4898dFA8de3ece9D814074E60aDEFd0",
+    id: "0x0ccb0c34d4898dfa8de3ece9d814074e60adefd0000000000000000000000142",
+    name: "bpt-ineth-wsteth",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0x5A7a183B6B44Dc4EC2E3d2eF43F98C5152b1d76d",
+        symbol: "inETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x11f0b5CCA01B0F0A9Fe6265aD6E8ee3419c68440",
     id: "0x11f0b5cca01b0f0a9fe6265ad6e8ee3419c684400002000000000000000000d4",
     name: "BPT-BREV",
@@ -375,25 +394,6 @@ export default [
     ],
   },
   {
-    bpt: "0x8BB826Afc0fF7d2c034a2883F4C461ffD238E1C3",
-    id: "0x8bb826afc0ff7d2c034a2883f4c461ffd238e1c300020000000000000000012b",
-    name: "RSB",
-    type: "GyroE",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x035c93db04E5aAea54E6cd0261C492a3e0638b37",
-        symbol: "stataOptUSDT",
-        id: "0x",
-      },
-      {
-        address: "0x4DD03dfD36548C840B563745e3FBeC320F37BA7e",
-        symbol: "stataOptUSDCn",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x9Da11Ff60bfc5aF527f58fd61679c3AC98d040d9",
     id: "0x9da11ff60bfc5af527f58fd61679c3ac98d040d9000000000000000000000100",
     name: "bpt-stablebeets",
@@ -475,6 +475,25 @@ export default [
       {
         address: "0xFE8B128bA8C78aabC59d4c64cEE7fF28e9379921",
         symbol: "BAL",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xC9Eb4b8ce914EE451360B315ffD1D1AF8df96bE9",
+    id: "0xc9eb4b8ce914ee451360b315ffd1d1af8df96be9000000000000000000000143",
+    name: "bpt-insteth-wsteth",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
+        symbol: "wstETH",
+        id: "0x",
+      },
+      {
+        address: "0xd08C3F25862077056cb1b710937576Af899a4959",
+        symbol: "InstETH",
         id: "0x",
       },
     ],
