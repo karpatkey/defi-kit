@@ -62,9 +62,7 @@ describe("aaveV3", () => {
 
     it("allow setting the deposited GNO as collateral", async () => {
       let reserveConfig: Array<any> =
-        await kit.asAvatar.aaveV3.poolV3.getReserveData(
-          contracts.gnosis.gno,
-        )
+        await kit.asAvatar.aaveV3.poolV3.getReserveData(contracts.gnosis.gno)
       const collateralizable: boolean = reserveConfig[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
@@ -86,75 +84,73 @@ describe("aaveV3", () => {
     //TEST WITH USDC
     it("only allows depositing USDC on behalf of avatar", async () => {
       await stealErc20(
-          Chain.gno,
-          contracts.gnosis.usdc,
-          parseUnits("1000", 6),
-          contracts.gnosis.balancer.vault
+        Chain.gno,
+        contracts.gnosis.usdc,
+        parseUnits("1000", 6),
+        contracts.gnosis.balancer.vault
       )
       await expect(
-          kit.asMember.usdc.approve(
-              contracts.gnosis.aaveV3.poolV3,
-              parseUnits("1000", 6)
-          )
+        kit.asMember.usdc.approve(
+          contracts.gnosis.aaveV3.poolV3,
+          parseUnits("1000", 6)
+        )
       ).not.toRevert()
 
       await expect(
-          kit.asMember.aaveV3.poolV3.supply(
-              contracts.gnosis.usdc,
-              parseUnits("1000", 6),
-              wallets.avatar,
-              0
-          )
+        kit.asMember.aaveV3.poolV3.supply(
+          contracts.gnosis.usdc,
+          parseUnits("1000", 6),
+          wallets.avatar,
+          0
+        )
       ).not.toRevert()
 
       await expect(
-          kit.asMember.aaveV3.poolV3.supply(
-              contracts.gnosis.usdc,
-              parseUnits("1000", 6),
-              wallets.member,
-              0
-          )
+        kit.asMember.aaveV3.poolV3.supply(
+          contracts.gnosis.usdc,
+          parseUnits("1000", 6),
+          wallets.member,
+          0
+        )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     it("only allows withdrawing USDC from avatars' position", async () => {
       await expect(
-          kit.asMember.aaveV3.poolV3.withdraw(
-              contracts.gnosis.usdc,
-              parseUnits("1000", 6),
-              wallets.avatar
-          )
+        kit.asMember.aaveV3.poolV3.withdraw(
+          contracts.gnosis.usdc,
+          parseUnits("1000", 6),
+          wallets.avatar
+        )
       ).not.toRevert()
 
       await expect(
-          kit.asMember.aaveV3.poolV3.withdraw(
-              contracts.gnosis.usdc,
-              parseUnits("1000", 6),
-              wallets.member
-          )
+        kit.asMember.aaveV3.poolV3.withdraw(
+          contracts.gnosis.usdc,
+          parseUnits("1000", 6),
+          wallets.member
+        )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
     it("allow setting the deposited USDC as collateral", async () => {
       let reserveConfig: Array<any> =
-          await kit.asAvatar.aaveV3.poolV3.getReserveData(
-              contracts.gnosis.usdc,
-          )
+        await kit.asAvatar.aaveV3.poolV3.getReserveData(contracts.gnosis.usdc)
       const collateralizable: boolean = reserveConfig[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(
-            kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
-                contracts.gnosis.usdc,
-                true
-            )
+          kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
+            contracts.gnosis.usdc,
+            true
+          )
         ).not.toRevert()
       } else {
         await expect(
-            kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
-                contracts.gnosis.usdc,
-                true
-            )
+          kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
+            contracts.gnosis.usdc,
+            true
+          )
         ).toRevert()
       }
     })
