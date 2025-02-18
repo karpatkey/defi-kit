@@ -724,25 +724,6 @@ export default [
     ],
   },
   {
-    bpt: "0x4B3af34eB1135D59df8b9CdC2FF07d30D05334C4",
-    id: "0x4b3af34eb1135d59df8b9cdc2ff07d30d05334c400000000000000000000050d",
-    name: "weETH/rETH",
-    type: "ComposableStable",
-    gauge: "0x8C206459a557aA736F698401BD6029fC0Db3f3c8",
-    tokens: [
-      {
-        address: "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe",
-        symbol: "weETH",
-        id: "0x",
-      },
-      {
-        address: "0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8",
-        symbol: "rETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x4f14D06CB1661cE1DC2A2f26A10A7Cd94393b29C",
     id: "0x4f14d06cb1661ce1dc2a2f26a10a7cd94393b29c000200000000000000000097",
     name: "20fxUSD-80FOREX",
