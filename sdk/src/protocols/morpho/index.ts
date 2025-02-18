@@ -4,10 +4,11 @@ import { allowErc20Approve } from "../../conditions"
 import { c } from "zodiac-roles-sdk"
 import { contracts } from "../../../eth-sdk/config"
 import { EthPool } from "./types"
-// import { EthBluePool } from "./types"
+import abi from "../../../eth-sdk/abis/mainnet/morpho/morphoBlue.json"
 import { NotFoundError } from "../../errors"
 import _ethPools from "./_ethPools"
-// import _ethBluePools from "./_ethBluePools"
+import { Contract } from "ethers"
+import { ethProvider } from "../../provider"
 
 const findPool = (nameOrAddress: string) => {
   const pools = _ethPools
@@ -26,11 +27,11 @@ const findPool = (nameOrAddress: string) => {
 
 //take a marketId and look for it on chain to get the marketParams
 const findBluePool = async (marketId: string) => {
-  // Get market params from MorphoBlue contract
-  // const marketParams = await contracts.mainnet.morpho.morphoBlue.idToMarketParams(marketId);
-  const marketParams = {
-    await 
-  }
+  const morphoBlue = new Contract(contracts.mainnet.morpho.morphoBlue, abi, ethProvider)
+  const marketParams = await morphoBlue.idToMarketParams(marketId)
+
+  console.log("marketParams: ", marketParams)
+
   
   // Create pool object from on-chain data
   const pool = {
@@ -118,10 +119,10 @@ export const eth = {
   borrow: async ({
     blueTargets,
   }: {
-    blueTargets: EthBluePool["marketId"][]
+    blueTargets: string[]
   }) => {
-    return blueTargets.flatMap((blueTarget) => {
-      const pool = findBluePool(blueTarget)
+    const promises = await Promise.all(blueTargets.map(async (blueTarget) => { 
+      const pool = await findBluePool(blueTarget)
       const permissions: Permission[] = []
 
       permissions.push(
@@ -189,6 +190,7 @@ export const eth = {
         }
       )
       return permissions
-    })
+    }))
+    return promises.flatMap(p => p)
   },
 }
