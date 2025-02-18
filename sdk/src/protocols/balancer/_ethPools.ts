@@ -890,25 +890,6 @@ export default [
     ],
   },
   {
-    bpt: "0x3932b187f440cE7703653b3908EDc5bB7676C283",
-    id: "0x3932b187f440ce7703653b3908edc5bb7676c283000200000000000000000664",
-    name: "ECLP-GHO-USDC-2",
-    type: "GyroE",
-    gauge: "0xa2F8bd6B95a0cB9094206075504CD0ED1Cc717Be",
-    tokens: [
-      {
-        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
-        symbol: "GHO",
-        id: "0x",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x39eB558131E5eBeb9f76a6cbf6898f6E6DCe5e4E",
     id: "0x39eb558131e5ebeb9f76a6cbf6898f6e6dce5e4e0002000000000000000005c8",
     name: "QI BPT",
@@ -1018,25 +999,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0x3f725ED5791b72554E9BEDf461eb76fC72dB8834",
-    id: "0x3f725ed5791b72554e9bedf461eb76fc72db883400020000000000000000017a",
-    name: "50QUA-50USDT",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x4dAeb4a06F70f4b1A5C329115731fE4b89C0B227",
-        symbol: "QUA",
-        id: "0x",
-      },
-      {
-        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        symbol: "USDT",
         id: "0x",
       },
     ],
@@ -3111,59 +3073,6 @@ export default [
       {
         address: "0xF6d2699b035FC8fD5E023D4a6Da216112ad8A985",
         symbol: "eYyvDAI-28JAN22",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xB721a3B209F8b598b926826f69280bee7A6bb796",
-    id: "0xb721a3b209f8b598b926826f69280bee7a6bb79600010000000000000000037c",
-    name: "10RAI-6FLX-3rETH-26WETH-55RPL",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x03ab458634910AaD20eF5f1C8ee96F1D6ac54919",
-        symbol: "RAI",
-        id: "0x",
-      },
-      {
-        address: "0x6243d8CEA23066d098a15582d81a598b4e8391F4",
-        symbol: "FLX",
-        id: "0x",
-      },
-      {
-        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
-        symbol: "rETH",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xD33526068D116cE69F19A9ee46F0bd304F21A51f",
-        symbol: "RPL",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xB757DdbC72155C0a41058E148969BA29BA071A2E",
-    id: "0xb757ddbc72155c0a41058e148969ba29ba071a2e0000000000000000000006ce",
-    name: "balETH/wstETH",
-    type: "ComposableStable",
-    gauge: "0xfc4BEBF1f33594be59Fdfb7e1c4a45759ECaEc5A",
-    tokens: [
-      {
-        address: "0x6dC3ce9C57b20131347FDc9089D740DAf6eB34c5",
-        symbol: "balETH",
-        id: "0x",
-      },
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
         id: "0x",
       },
     ],
