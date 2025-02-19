@@ -2129,4 +2129,20 @@ export default [
     ],
     rewarder: "0x6C9d0252811c7213c2a8D7Ecf9797A7bA8Ad50a6",
   },
+  {
+    name: "DVstETH/wstETH",
+    id: "247",
+    bpt: "0x632aafC2D3D2cA1764E702aa25c065c273Cd08eD",
+    tokens: [
+      {
+        address: "0x5E362eb2c0706Bd1d134689eC75176018385430B",
+        symbol: "DVstETH",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+    ],
+    rewarder: "0x53c21ED0B4dFD8Be6264717B831Ea9529bAc874d",
+  },
 ] as const
