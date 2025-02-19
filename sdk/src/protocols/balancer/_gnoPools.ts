@@ -6,7 +6,7 @@ export default [
     id: "0x00df7f58e1cf932ebe5f54de5970fb2bdf0ef06d00010000000000000000005b",
     name: "B-50wstETH-25BAL-25AURA",
     type: "Weighted",
-    gauge: null,
+    gauge: "0x64cee2356f959E78DB36A4C23a28f0454447C3dF",
     tokens: [
       {
         address: "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
@@ -30,7 +30,7 @@ export default [
     id: "0x06135a9ae830476d3a941bae9010b63732a055f4000000000000000000000065",
     name: "stEUR/EURe",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0x49b7C059bF0A71583918928D33C84Dcb2aa001f8",
     tokens: [
       {
         address: "0x004626A008B1aCdC4c74ab51644093b155e59A23",
@@ -68,7 +68,7 @@ export default [
     id: "0x1e8b447129984d8a6b652c807dfc3bd1359731330002000000000000000000d6",
     name: "ECLP-GYD-sDAI",
     type: "GyroE",
-    gauge: null,
+    gauge: "0xEA71b7FDAA3683D2d307e8AF3e236FB7a395e88d",
     tokens: [
       {
         address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
@@ -340,7 +340,7 @@ export default [
     id: "0x7644fa5d0ea14fcf3e813fdf93ca9544f8567655000000000000000000000066",
     name: "sBAL3",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xDec0362b3229690fBe4f88c57472610588Bb9A2E",
     tokens: [
       {
         address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
@@ -602,7 +602,7 @@ export default [
     id: "0xc9f00c3a713008ddf69b768d90d4978549bfdf9400000000000000000000006d",
     name: "crvUSD/sDAI",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0xB079bD76dD9b5F9a8d3954E4250FC25BE0549Ac0",
     tokens: [
       {
         address: "0xaBEf652195F98A91E490f047A5006B71c85f058d",
