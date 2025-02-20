@@ -4,9 +4,7 @@ import { NotFoundError } from "../../../errors"
 import { Chain } from "../../../types"
 import { bridge, receive } from "./actions"
 
-export const findChain = (
-  chainOrDescription: string
-) => {
+export const findChain = (chainOrDescription: string) => {
   const chainOrDescriptionLower = chainOrDescription.toLowerCase()
   const chain = circleChains.find(
     (chain) =>
@@ -47,16 +45,11 @@ export const eth = {
     sender,
   }: {
     targets: (CircleChain["chain"] | CircleChain["description"])[]
-    recipient: `0x${string}`,
-    sender: `0x${string}`,
+    recipient: `0x${string}`
+    sender: `0x${string}`
   }) => {
     return targets.flatMap((target) =>
-      receive(
-        findChain(target),
-        Chain.eth,
-        sender,
-        recipient,
-      )
+      receive(findChain(target), Chain.eth, sender, recipient)
     )
   },
 }
@@ -88,16 +81,11 @@ export const arb1 = {
     sender,
   }: {
     targets: (CircleChain["chain"] | CircleChain["description"])[]
-    recipient: `0x${string}`,
-    sender: `0x${string}`,
+    recipient: `0x${string}`
+    sender: `0x${string}`
   }) => {
     return targets.flatMap((target) =>
-      receive(
-        findChain(target),
-        Chain.arb1,
-        sender,
-        recipient,
-      )
+      receive(findChain(target), Chain.arb1, sender, recipient)
     )
   },
 }
@@ -129,16 +117,11 @@ export const oeth = {
     sender,
   }: {
     targets: (CircleChain["chain"] | CircleChain["description"])[]
-    recipient: `0x${string}`,
-    sender: `0x${string}`,
+    recipient: `0x${string}`
+    sender: `0x${string}`
   }) => {
     return targets.flatMap((target) =>
-      receive(
-        findChain(target),
-        Chain.oeth,
-        sender,
-        recipient,
-      )
+      receive(findChain(target), Chain.oeth, sender, recipient)
     )
   },
 }
@@ -170,16 +153,11 @@ export const base = {
     sender,
   }: {
     targets: (CircleChain["chain"] | CircleChain["description"])[]
-    recipient: `0x${string}`,
-    sender: `0x${string}`,
+    recipient: `0x${string}`
+    sender: `0x${string}`
   }) => {
     return targets.flatMap((target) =>
-      receive(
-        findChain(target),
-        Chain.base,
-        sender,
-        recipient,
-      )
+      receive(findChain(target), Chain.base, sender, recipient)
     )
   },
 }

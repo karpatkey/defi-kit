@@ -10,10 +10,7 @@ export const eth = annotateAll(
   "eth"
 )
 
-export const gno = annotateAll(
-  {},
-  "gno"
-)
+export const gno = annotateAll({}, "gno")
 
 export const arb1 = annotateAll(
   {

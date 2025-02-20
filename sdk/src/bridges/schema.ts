@@ -7,8 +7,7 @@ export const eth = {
   circle_v1: circleV1.eth,
 } satisfies BridgeSchemas
 
-export const gno = {
-} satisfies BridgeSchemas
+export const gno = {} satisfies BridgeSchemas
 
 export const arb1 = {
   circle_v1: circleV1.arb1,

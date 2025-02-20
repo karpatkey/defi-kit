@@ -10,32 +10,39 @@ const _getAddresses = (chain: Chain) => {
   switch (chain) {
     case Chain.eth:
       return {
-        tokenMessenger: contracts.mainnet.circleV1.tokenMessenger as `0x${string}`,
-        messageTransmitter: contracts.mainnet.circleV1.messageTransmitter as `0x${string}`,
+        tokenMessenger: contracts.mainnet.circleV1
+          .tokenMessenger as `0x${string}`,
+        messageTransmitter: contracts.mainnet.circleV1
+          .messageTransmitter as `0x${string}`,
         usdc: contracts.mainnet.usdc,
       }
-    
+
     case Chain.arb1:
       return {
-        tokenMessenger: contracts.arbitrumOne.circleV1.tokenMessenger as `0x${string}`,
-        messageTransmitter: contracts.arbitrumOne.circleV1.messageTransmitter as `0x${string}`,
+        tokenMessenger: contracts.arbitrumOne.circleV1
+          .tokenMessenger as `0x${string}`,
+        messageTransmitter: contracts.arbitrumOne.circleV1
+          .messageTransmitter as `0x${string}`,
         usdc: contracts.arbitrumOne.usdc,
       }
-    
+
     case Chain.oeth:
       return {
-        tokenMessenger: contracts.optimism.circleV1.tokenMessenger as `0x${string}`,
-        messageTransmitter: contracts.optimism.circleV1.messageTransmitter as `0x${string}`,
+        tokenMessenger: contracts.optimism.circleV1
+          .tokenMessenger as `0x${string}`,
+        messageTransmitter: contracts.optimism.circleV1
+          .messageTransmitter as `0x${string}`,
         usdc: contracts.optimism.usdc,
       }
-    
+
     case Chain.base:
       return {
         tokenMessenger: contracts.base.circleV1.tokenMessenger as `0x${string}`,
-        messageTransmitter: contracts.base.circleV1.messageTransmitter as `0x${string}`,
+        messageTransmitter: contracts.base.circleV1
+          .messageTransmitter as `0x${string}`,
         usdc: contracts.base.usdc,
       }
-    
+
     default:
       throw new Error(`Unsupported Chain: ${chain}`)
   }
@@ -44,21 +51,21 @@ const _getAddresses = (chain: Chain) => {
 export const bridge = (
   sourceChain: Chain,
   destinationChain: CircleChain,
-  recipient: `0x${string}`,
+  recipient: `0x${string}`
 ) => {
   const { tokenMessenger, usdc } = _getAddresses(sourceChain)
 
   const permissions: Permission[] = [
-      ...allowErc20Approve([usdc], [tokenMessenger]),
-      {
-        ...allow.mainnet.circleV1.tokenMessenger.depositForBurn(
-          undefined,
-          destinationChain.domain,
-          "0x" + recipient.slice(2).padStart(64, "0"),
-          usdc
-        ),
-        targetAddress: tokenMessenger,
-      },
+    ...allowErc20Approve([usdc], [tokenMessenger]),
+    {
+      ...allow.mainnet.circleV1.tokenMessenger.depositForBurn(
+        undefined,
+        destinationChain.domain,
+        "0x" + recipient.slice(2).padStart(64, "0"),
+        usdc
+      ),
+      targetAddress: tokenMessenger,
+    },
   ]
 
   return permissions
@@ -68,12 +75,10 @@ export const receive = (
   sourceChain: CircleChain,
   destinationChain: Chain,
   sender: `0x${string}`,
-  recipient: `0x${string}`,
+  recipient: `0x${string}`
 ) => {
-  const {
-    tokenMessenger: sourceTokenMessenger,
-    usdc: sourceUsdc,
-  } = _getAddresses(sourceChain.chain)
+  const { tokenMessenger: sourceTokenMessenger, usdc: sourceUsdc } =
+    _getAddresses(sourceChain.chain)
 
   const {
     tokenMessenger: destinationTokenMessenger,
@@ -103,8 +108,7 @@ export const receive = (
           c.bitmask({
             shift: 20 + 12 + 10,
             mask: "0xffffffffffffffffffff",
-            value:
-              "0x" + sourceTokenMessenger.slice(22, 42),
+            value: "0x" + sourceTokenMessenger.slice(22, 42),
           }),
           // recipient: 32 bytes
           // skip the first 12 bytes of the address with 0's
@@ -161,6 +165,6 @@ export const receive = (
         )
       ),
       targetAddress: destinationMessageTransmitter,
-    }
+    },
   ]
 }
