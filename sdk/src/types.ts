@@ -19,16 +19,11 @@ export type ProtocolActions = {
   swap?: AllowFunction
   lock?: AllowFunction
   delegate?: AllowFunction
-}
-
-export type BridgeActions = {
   bridge?: AllowFunction
   receive?: AllowFunction
 }
 
-export type ProtocolActionName = keyof ProtocolActions
-export type BridgeActionName = keyof BridgeActions
-export type ActionName = ProtocolActionName | BridgeActionName
+export type ActionName = keyof ProtocolActions
 
 export type RepertoireActions = {
   [name: string]: AllowFunction
@@ -41,14 +36,7 @@ export type Repertoire = {
 // For registering protocols in the REST API we need zod schemas for the specific parameters of each action
 export type ProtocolSchemas = {
   [protocol: string]: {
-    [key in ProtocolActionName]?: SomeZodObject
-  }
-}
-
-// For registering bridges in the REST API we need zod schemas for the specific parameters of each action
-export type BridgeSchemas = {
-  [protocol: string]: {
-    [key in BridgeActionName]?: SomeZodObject
+    [key in ActionName]?: SomeZodObject
   }
 }
 

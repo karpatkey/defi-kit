@@ -149,7 +149,7 @@ export const receive = (
             mask: "0xffffffffffffffffffff",
             value: "0x" + recipient.slice(22, 42), // Last 10 bytes of the avatar address
           }),
-          // skip 32 bytes chunk with 0
+          // skip 32 bytes chunk corresponding to the amount
           // skip the first 12 bytes (0's) of the address and scope the first 10 bytes
           // Sender
           c.bitmask({
