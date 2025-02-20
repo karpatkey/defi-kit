@@ -9,3 +9,29 @@ export const eth = annotateAll(
   },
   "eth"
 )
+
+export const gno = annotateAll(
+  {},
+  "gno"
+)
+
+export const arb1 = annotateAll(
+  {
+    circle_v1: circleV1.arb1,
+  },
+  "arb1"
+)
+
+export const oeth = annotateAll(
+  {
+    circle_v1: circleV1.oeth,
+  },
+  "oeth"
+)
+
+export const base = annotateAll(
+  {
+    circle_v1: circleV1.base,
+  },
+  "base"
+)

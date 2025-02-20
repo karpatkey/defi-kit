@@ -54,7 +54,7 @@ export const bridge = (
         ...allow.mainnet.circleV1.tokenMessenger.depositForBurn(
           undefined,
           destinationChain.domain,
-          recipient,
+          "0x" + recipient.slice(2).padStart(64, "0"),
           usdc
         ),
         targetAddress: tokenMessenger,

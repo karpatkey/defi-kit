@@ -28,6 +28,7 @@ export type BridgeActions = {
 
 export type ProtocolActionName = keyof ProtocolActions
 export type BridgeActionName = keyof BridgeActions
+export type ActionName = ProtocolActionName | BridgeActionName
 
 export type RepertoireActions = {
   [name: string]: AllowFunction

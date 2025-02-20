@@ -9,4 +9,49 @@ export const eth = {
     targets: z.array(zChainDescriptions),
     recipient: zAddress,
   }),
+
+  receive: z.object({
+    targets: z.array(zChainDescriptions),
+    recipient: zAddress,
+    sender: zAddress,
+  }),
+}
+
+export const arb1 = {
+  bridge: z.object({
+    targets: z.array(zChainDescriptions),
+    recipient: zAddress,
+  }),
+
+  receive: z.object({
+    targets: z.array(zChainDescriptions),
+    recipient: zAddress,
+    sender: zAddress,
+  }),
+}
+
+export const oeth = {
+  bridge: z.object({
+    targets: z.array(zChainDescriptions),
+    recipient: zAddress,
+  }),
+
+  receive: z.object({
+    targets: z.array(zChainDescriptions),
+    recipient: zAddress,
+    sender: zAddress,
+  }),
+}
+
+export const base = {
+  bridge: z.object({
+    targets: z.array(zChainDescriptions),
+    recipient: zAddress,
+  }),
+
+  receive: z.object({
+    targets: z.array(zChainDescriptions),
+    recipient: zAddress,
+    sender: zAddress,
+  }),
 }
