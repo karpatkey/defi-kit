@@ -11,7 +11,11 @@ describe("circleV1", () => {
     beforeAll(async () => {
       await applyPermissions(
         Chain.eth,
-        await eth.receive({ targets: ["Arbitrum"], sender: wallets.avatar as `0x${string}`, recipient: recipient })
+        await eth.receive({
+          targets: ["Arbitrum"],
+          sender: wallets.avatar as `0x${string}`,
+          recipient: recipient,
+        })
       )
     })
 
