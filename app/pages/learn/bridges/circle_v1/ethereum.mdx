@@ -1,0 +1,55 @@
+import { Callout } from "nextra/components"
+
+# Circle CCTP v1 on Ethereum
+
+**Deployments**
+
+| Name                 | Address                                                                                                               |
+| :------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| `TokenMessenger`     | [0xBd3fa81B58Ba92a82136038B25aDec7066af3155](https://etherscan.io/address/0xBd3fa81B58Ba92a82136038B25aDec7066af3155) |
+| `MessageTransmitter` | [0x0a992d191DEeC32aFe36203Ad87D7d289a738F81](https://etherscan.io/address/0x0a992d191DEeC32aFe36203Ad87D7d289a738F81) |
+| `USDC`               | [0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48](https://etherscan.io/address/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48) |
+
+## Action: `bridge`
+
+**Parameters**
+
+| Name        | Type                  | Description                                            |
+| :---------- | :-------------------- | :----------------------------------------------------- |
+| `targets`   | _string[] (required)_ | Destination `Chains` prefixes \| `Chains` descriptions |
+| `recipient` | _string[] (required)_ | Recipient address on the destination chain(s)          |
+
+### `USDC · approve`
+
+Approve `TokenMessenger` to spend `USDC` tokens on behalf of the avatar.
+
+- **Contract:** `USDC`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint                |
+  | :-------- | :------------------------ |
+  | `spender` | equal to `TokenMessenger` |
+  | `amount`  | -                         |
+
+### `TokenMessenger · depositForBurn`
+
+Bridge `USDC` tokens to the recipient address on the destination blockchain.
+
+- **Contract:** `TokenMessenger`
+- **Function:** `depositForBurn(uint256,uint32,bytes32,address)`
+
+  | Parameter           | Constraint                                                |
+  | :------------------ | :-------------------------------------------------------- |
+  | `amount`            | -                                                         |
+  | `destinationDomain` | equal to `DOMAIN` (see reference table below)             |
+  | `mintRecipient`     | equal to `recipient` (left-padded with zeros to 32 bytes) |
+  | `burnToken`         | equal to `USDC`                                           |
+
+**Blockchain-to-Domain Mapping:**
+
+| Blockchain | Domain |
+| ---------- | ------ |
+| Ethereum   | 0      |
+| Optimism   | 2      |
+| Arbitrum   | 3      |
+| Base       | 6      |
