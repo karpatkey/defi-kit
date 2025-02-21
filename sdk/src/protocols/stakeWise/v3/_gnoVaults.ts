@@ -38,16 +38,16 @@ export default [
       "Node operators, securing and decentralizing Ethereum |  AVS operator: http://avs.stakecat.space\n \nWe provide greater decentralization for networks with our own infrastructure for validators and high availability to compete with centralized data center performance.\n\nmore about Stakecat here: https://www.stakecat.space/",
   },
   {
-    id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
-    name: "H2O Nodes",
-    description:
-      "Help decentralize Ethereum by staking with us - we run minority clients (usually Nimbus + Nethermind) running on bare metal servers in minority data centers. \n\nRead more at www.h2o-nodes.com\n\nHappy staking! ",
-  },
-  {
     id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
     name: "IP Stake",
     description:
       "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
+  },
+  {
+    id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
+    name: "H2O Nodes",
+    description:
+      "Help decentralize Ethereum by staking with us - we run minority clients (usually Nimbus + Nethermind) running on bare metal servers in minority data centers. \n\nRead more at www.h2o-nodes.com\n\nHappy staking! ",
   },
   {
     id: "0x3cb4692177525db38d983da0445d4eb25c3826de",
