@@ -98,78 +98,74 @@ export const eth = {
     })
   },
   borrow: async ({ blueTargets }: { blueTargets: string[] }) => {
-    const promises = await Promise.all(
-      blueTargets.map(async (blueTarget) => {
-        const pool = await findBluePool(blueTarget)
-        const permissions: Permission[] = []
+    const promises = blueTargets.map(async (blueTarget) => {
+      const pool = await findBluePool(blueTarget)
 
-        permissions.push(
-          // *** Morpho Blue *** //
-          ...allowErc20Approve([pool.loanToken], [pool.collateralToken]),
-          {
-            ...allow.mainnet.weth.approve(
-              contracts.mainnet.morpho.morphoBlue,
-              undefined
-            ),
-            targetAddress: pool.collateralToken,
-          },
-          {
-            ...allow.mainnet.lido.wstEth.approve(
-              contracts.mainnet.morpho.morphoBlue,
-              undefined
-            ),
-            targetAddress: pool.loanToken,
-          },
-          {
-            ...allow.mainnet.morpho.morphoBlue.supplyCollateral(
-              undefined,
-              undefined,
-              c.avatar,
-              "0x"
-            ),
-          },
-          {
-            ...allow.mainnet.morpho.morphoBlue.borrow(
-              {
-                loanToken: pool.loanToken,
-                collateralToken: pool.collateralToken,
-                oracle: pool.oracle,
-                irm: pool.irm,
-                lltv: pool.lltv,
-              },
-              undefined,
-              undefined,
-              c.avatar,
-              c.avatar
-            ),
-          },
-          {
-            ...allow.mainnet.morpho.morphoBlue.repay(
-              {
-                loanToken: pool.loanToken,
-                collateralToken: pool.collateralToken,
-                oracle: pool.oracle,
-                irm: pool.irm,
-                lltv: pool.lltv,
-              },
-              undefined,
-              undefined,
-              c.avatar,
-              "0x"
-            ),
-          },
-          {
-            ...allow.mainnet.morpho.morphoBlue.withdrawCollateral(
-              undefined,
-              undefined,
-              c.avatar,
-              c.avatar
-            ),
-          }
-        )
-        return permissions
-      })
-    )
-    return promises.flatMap((p) => p)
+      return [
+        // *** Morpho Blue *** //
+        ...allowErc20Approve([pool.loanToken], [pool.collateralToken]),
+        {
+          ...allow.mainnet.weth.approve(
+            contracts.mainnet.morpho.morphoBlue,
+            undefined
+          ),
+          targetAddress: pool.collateralToken,
+        },
+        {
+          ...allow.mainnet.lido.wstEth.approve(
+            contracts.mainnet.morpho.morphoBlue,
+            undefined
+          ),
+          targetAddress: pool.loanToken,
+        },
+        {
+          ...allow.mainnet.morpho.morphoBlue.supplyCollateral(
+            undefined,
+            undefined,
+            c.avatar,
+            "0x"
+          ),
+        },
+        {
+          ...allow.mainnet.morpho.morphoBlue.borrow(
+            {
+              loanToken: pool.loanToken,
+              collateralToken: pool.collateralToken,
+              oracle: pool.oracle,
+              irm: pool.irm,
+              lltv: pool.lltv,
+            },
+            undefined,
+            undefined,
+            c.avatar,
+            c.avatar
+          ),
+        },
+        {
+          ...allow.mainnet.morpho.morphoBlue.repay(
+            {
+              loanToken: pool.loanToken,
+              collateralToken: pool.collateralToken,
+              oracle: pool.oracle,
+              irm: pool.irm,
+              lltv: pool.lltv,
+            },
+            undefined,
+            undefined,
+            c.avatar,
+            "0x"
+          ),
+        },
+        {
+          ...allow.mainnet.morpho.morphoBlue.withdrawCollateral(
+            undefined,
+            undefined,
+            c.avatar,
+            c.avatar
+          ),
+        },
+      ]
+    })
+    return (await Promise.all(promises)).flat()
   },
 }
