@@ -10,7 +10,4 @@ export const eth = {
   deposit: z.object({
     targets: zEthPool.array(),
   }),
-  withdraw: z.object({
-    targets: zEthPool.array(),
-  }),
 }
