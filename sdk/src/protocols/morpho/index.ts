@@ -170,12 +170,59 @@ export const eth = {
   },
 
   supply: async ({ supplyTargets }: { supplyTargets: string [] }) => {
-    const promises = supplyTargets.map(async (supplyTatget) => {
+    const promises = supplyTargets.map(async (supplyTarget) => {
       const pool = await findBluePool(supplyTarget)
+      const paramsMarketHere = {
+        collateralToken: pool.collateralToken,
+        irm: pool.irm,
+        lltv: pool.lltv,
+        loanToken: pool.loanToken,
+        oracle: pool.oracle,
+      }
       return [
-
+        // *** Monarch Lend *** //
+        ...allowErc20Approve([pool.loanToken], [pool.collateralToken]),
+        {
+          ...allow.mainnet.weth.approve(
+            contracts.mainnet.morpho.morphoBlue,
+            undefined
+          ),
+          targetAddress: pool.collateralToken,
+        },
+        // {
+        //   ...allow.mainnet.lido.wstEth.approve(
+        //     contracts.mainnet.morpho.morphoBlue,
+        //     undefined
+        //   ),
+        //   targetAddress: pool.loanToken,
+        // },
+        {
+          ...allow.mainnet.morpho.morphoBlue.supply(
+            paramsMarketHere,
+            undefined,
+            undefined,
+            c.avatar,
+            "0x"
+          ),
+        },
+        {
+          ...allow.mainnet.morpho.morphoBlue.withdraw(
+            {
+              loanToken: pool.loanToken,
+              collateralToken: pool.collateralToken,
+              oracle: pool.oracle,
+              irm: pool.irm,
+              lltv: pool.lltv,
+            },
+            undefined,
+            undefined,
+            c.avatar,
+            c.avatar
+          ),
+        },
       ]
     })
+    return (await Promise.all(promises)).flat()
   },
 
 }
