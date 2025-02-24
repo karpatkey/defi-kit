@@ -168,4 +168,15 @@ export const eth = {
     })
     return (await Promise.all(promises)).flat()
   },
+
+  supply: async ({ supplyTargets }: { supplyTargets: string [] }) => {
+    const promises = supplyTargets.map(async (supplyTatget) => {
+      const pool = await findBluePool(supplyTarget)
+      return [
+
+      ]
+    })
+  },
+
 }
+
