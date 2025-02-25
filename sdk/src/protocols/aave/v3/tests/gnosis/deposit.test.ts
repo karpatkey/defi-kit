@@ -135,7 +135,9 @@ describe("aaveV3", () => {
 
     it("allow setting the deposited USDC as collateral", async () => {
       let reserveConfig: Array<any> =
-        await kit.asAvatar.aaveV3.protocolDataProviderV3.getReserveConfigurationData(contracts.gnosis.usdc)
+        await kit.asAvatar.aaveV3.protocolDataProviderV3.getReserveConfigurationData(
+          contracts.gnosis.usdc
+        )
       const collateralizable: boolean = reserveConfig[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
