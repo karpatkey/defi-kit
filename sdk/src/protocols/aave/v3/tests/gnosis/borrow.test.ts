@@ -76,7 +76,7 @@ describe("aaveV3", () => {
           contracts.gnosis.aaveV3.poolV3,
           wallets.avatar,
           0,
-          { value: parseEther("1") }
+          { value: parseEther("1000") }
         )
       ).not.toRevert()
 
