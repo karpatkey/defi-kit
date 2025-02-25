@@ -72,16 +72,16 @@ export default [
     description: "Celestial gains for celestial bodies.",
   },
   {
-    id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
-    name: "Blockshard Pioneers Vault ",
-    description:
-      "Leading vault featuring a strategic blend of DVT and vanilla validators. Around 50% are managed with SSV and Obol, employing highly skilled and experienced operators. \n\nThe remaining 50% are run on our advanced, high-availability system. The validator client is connected to five Ethereum nodes and uses Web3Signer to protect validator keys, ensuring enhanced reliability and security.\n\nA competitive fee of only 3.5% on rewards makes this vault a prudent choice for stakers. ",
-  },
-  {
     id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
     name: "Allnodes",
     description:
       "Reliable non-custodial Validator run by the industry leader - Allnodes",
+  },
+  {
+    id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
+    name: "Blockshard Pioneers Vault ",
+    description:
+      "Leading vault featuring a strategic blend of DVT and vanilla validators. Around 50% are managed with SSV and Obol, employing highly skilled and experienced operators. \n\nThe remaining 50% are run on our advanced, high-availability system. The validator client is connected to five Ethereum nodes and uses Web3Signer to protect validator keys, ensuring enhanced reliability and security.\n\nA competitive fee of only 3.5% on rewards makes this vault a prudent choice for stakers. ",
   },
   {
     id: "0x05e393ec11d0197a88d84457908edd4ff235f323",
@@ -108,6 +108,12 @@ export default [
       'This vault represents a distributed validator cluster , using Obol\'s DV technology to run the validators across multiple nodes. As a staker, you can expect higher uptime, decreased slashing risk, and a meaningful contribution to the decentralization of the Ethereum network.\n\nBy staking with an Obol DV, you automatically participate in the Obol Contributions initiative, contributing 1% of staking rewards to the "1% for Decentralization" retroactive funding model. Your contributions will be tracked and recognized by Obol and can be viewed on our staking dApp, OPUS Pool.',
   },
   {
+    id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
+    name: "CommonWealth",
+    description:
+      "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
+  },
+  {
     id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
     name: "VincentTaglia.eth",
     description:
@@ -117,12 +123,6 @@ export default [
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
     name: "BRAZILPRACIMA",
     description: "Independent solo operator since genesis",
-  },
-  {
-    id: "0x64f2907f92631619ed7ea510982835f9e1024767",
-    name: "AutoStake ⚡️ 1% fee forever",
-    description:
-      "Slash insurance backed by a SAFU fund.\nDecentralized infrastructure powered by Distributed Validator Technology. \nConnect with us at: https://linktr.ee/autostake",
   },
   {
     id: "0x9c29c571847a68a947acec8bacd303e36bc72ec5",
@@ -141,12 +141,6 @@ export default [
     name: "Cryptoknight Vault",
     description:
       "Validator nodes operated by the leading Web3 education community for working professionals in Singapore - Cryptoknight Academy. Limited to 100 validator keys, we work with the Stakesaurus home staking community for diversification of our physical infrastructure and clients. DVTs will be implemented for additional performance and security boosts as we scale up!",
-  },
-  {
-    id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
-    name: "CommonWealth",
-    description:
-      "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
   },
   {
     id: "0xe2d8f982708ce1e3814c8986cbab624ca926288a",
@@ -207,5 +201,11 @@ export default [
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
+  },
+  {
+    id: "0x64f2907f92631619ed7ea510982835f9e1024767",
+    name: "AutoStake ⚡️ 1% fee forever",
+    description:
+      "Slash insurance backed by a SAFU fund.\nDecentralized infrastructure powered by Distributed Validator Technology. \nConnect with us at: https://linktr.ee/autostake",
   },
 ] as const
