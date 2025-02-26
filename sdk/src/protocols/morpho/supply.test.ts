@@ -28,8 +28,7 @@ describe("Morpho supply", () => {
 
     it("approuve -> supply -> withdraw", async () => {
       const amountCollateral = BigInt(parseEther("5").toString())
-      const amountRandom = BigInt(parseEther("3").toString())
-      const amountSupply = BigInt(parseEther("2").toString())
+      const amountSupply = BigInt(parseEther("3").toString())
 
       const unauthorizedMarketParams = {
         loanToken: "0x000000000000000000000000000000000000dEaD", //dead address
@@ -59,19 +58,57 @@ describe("Morpho supply", () => {
         .attach(WETH)
         .approve(MorphoBluePool, amountCollateral)
 
-      console.log("supply")
+      console.log("supply valid market params")
       await expect(
         kit.asMember.morpho.morphoBlue
           .attach(MorphoBluePool)
           .supply(
             await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-            amountRandom,
+            amountSupply,
             0,
             wallets.avatar,
             "0x"
           )
       ).not.toRevert()
 
+      console.log("supply invalid market params")
+      await expect(
+        kit.asMember.morpho.morphoBlue
+          .attach(MorphoBluePool)
+          .supply(
+            unauthorizedMarketParams,
+            amountSupply,
+            0,
+            wallets.avatar,
+            "0x"
+          )
+      ).toRevert()
+
+      console.log("withdraw valid")
+      await expect(
+        kit.asMember.morpho.morphoBlue
+          .attach(MorphoBluePool)
+          .withdraw(
+            await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
+            amountSupply,
+            0,
+            wallets.avatar,
+            wallets.avatar
+          )
+      ).not.toRevert()
+
+      console.log("withdraw NOT valid")
+      await expect(
+        kit.asMember.morpho.morphoBlue
+          .attach(MorphoBluePool)
+          .withdraw(
+            unauthorizedMarketParams,
+            amountSupply,
+            0,
+            wallets.avatar,
+            wallets.avatar
+          )
+      ).toRevert()
     })
   })
 })
