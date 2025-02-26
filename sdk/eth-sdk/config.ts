@@ -248,6 +248,7 @@ export const contracts = {
     circleMessageTransmitter: "0xC30362313FBBA5cf9163F0bb16a0e01f01A896ca",
     l2HopCctp: "0x6504BFcaB789c35325cA4329f1f41FaC340bf982",
     hopDaiWrapper: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
+    usdc: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
   },
   optimism: {
     aaveV3: {

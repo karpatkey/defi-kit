@@ -12,7 +12,10 @@ describe("aaveV3", () => {
     beforeAll(async () => {
       await applyPermissions(
         Chain.eth,
-        await eth.delegate({ targets: ["AAVE", "stkAAVE", "aEthAAVE"], delegatee: DELEGATEE })
+        await eth.delegate({
+          targets: ["AAVE", "stkAAVE", "aEthAAVE"],
+          delegatee: DELEGATEE,
+        })
       )
     })
 
@@ -33,7 +36,9 @@ describe("aaveV3", () => {
     })
 
     it("allow delegation of stkAAVE to delegatee", async () => {
-      await expect(kit.asMember.aaveV2.stkAave.delegate(DELEGATEE)).not.toRevert()
+      await expect(
+        kit.asMember.aaveV2.stkAave.delegate(DELEGATEE)
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV2.stkAave.delegate(wallets.member)
@@ -49,7 +54,9 @@ describe("aaveV3", () => {
     })
 
     it("allow delegation of aEthAAVE to delegatee", async () => {
-      await expect(kit.asMember.aaveV2.aEthAave.delegate(DELEGATEE)).not.toRevert()
+      await expect(
+        kit.asMember.aaveV2.aEthAave.delegate(DELEGATEE)
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV2.aEthAave.delegate(wallets.member)
