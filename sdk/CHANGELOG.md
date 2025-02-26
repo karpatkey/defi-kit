@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.12.0](https://github.com/karpatkey/defi-kit/compare/v2.11.5...v2.12.0) (2025-02-26)
+
+
+### Features
+
+* Bridges setup and add Circle CCTP v1 ([#385](https://github.com/karpatkey/defi-kit/issues/385)) ([0983c80](https://github.com/karpatkey/defi-kit/commit/0983c8031d2ae1bb3a223bf7787222d258c9f1dc))
+
 ## [2.11.5](https://github.com/karpatkey/defi-kit/compare/v2.11.4...v2.11.5) (2025-02-26)
 
 
