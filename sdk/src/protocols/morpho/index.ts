@@ -25,7 +25,6 @@ const findPool = (nameOrAddress: string) => {
   return pool
 }
 
-//take a marketId and look for it on chain to get the marketParams
 const findBluePool = async (marketId: string) => {
   const morphoBlue = new Contract(
     contracts.mainnet.morpho.morphoBlue,
@@ -36,7 +35,6 @@ const findBluePool = async (marketId: string) => {
 
   console.log("marketParams: ", marketParams)
 
-  // Create pool object from on-chain data
   const pool = {
     collateralToken: marketParams.collateralToken,
     loanToken: marketParams.loanToken,
