@@ -189,13 +189,13 @@ export const eth = {
           ),
           targetAddress: pool.collateralToken,
         },
-        // {
-        //   ...allow.mainnet.lido.wstEth.approve(
-        //     contracts.mainnet.morpho.morphoBlue,
-        //     undefined
-        //   ),
-        //   targetAddress: pool.loanToken,
-        // },
+        {
+          ...allow.mainnet.lido.wstEth.approve(
+            contracts.mainnet.morpho.morphoBlue,
+            undefined
+          ),
+          targetAddress: pool.loanToken,
+        },
         {
           ...allow.mainnet.morpho.morphoBlue.supply(
             paramsMarketHere,
