@@ -65,10 +65,7 @@ describe("aaveV3", () => {
     // Test with WETH
     it("only allows depositing WETH on behalf of avatar", async () => {
       await expect(
-        kit.asMember.weth.approve(
-          contracts.base.aaveV3.poolV3,
-          parseEther("1")
-        )
+        kit.asMember.weth.approve(contracts.base.aaveV3.poolV3, parseEther("1"))
       ).toBeAllowed()
 
       await expect(
