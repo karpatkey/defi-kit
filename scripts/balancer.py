@@ -14,6 +14,8 @@ from lib.dump import dump
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Balancer Vault Contract Address
 VAULT = "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
+# B-80BAL-20WETH
+B_80BAL_20WETH = "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56"
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # BALANCER QUERIES
@@ -38,6 +40,11 @@ ABI_VAULT = '[{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes
 # BPT ABI - getPoolId, POOL_ID, decimals, getMainToken, version, name
 ABI_BPT = '[{"inputs":[],"name":"getPoolId","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"POOL_ID","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"getMainToken","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"version","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"}]'
 
+# Gauge ABI - is_killed
+ABI_GAUGE = '[{"stateMutability":"view","type":"function","name":"is_killed","inputs":[],"outputs":[{"name":"","type":"bool"}]}]'
+
+class PoolNotFoundError(Exception):
+    pass
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # subgraph_query_pools
@@ -68,7 +75,7 @@ def subgraph_query_pools(blockchain):
             retries=3
         )
         client = Client(transport=balancer_transport)
-
+        # id_in: ["0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014", "0x2d011adf89f0576c9b722c28269fcb5d50c2d17900020000000000000000024d"]
         query_string = '''
         query {{
         pools(where: {{totalLiquidity_gte: 1000}}, first: {first}, skip: {skip}) {{
@@ -92,44 +99,55 @@ def subgraph_query_pools(blockchain):
 
     return result
 
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# subgraph_query_gauges
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def subgraph_query_gauges(blockchain):
 
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# subgraph_query_pool_type
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def subgraph_query_pool_type(blockchain, pool_id):
-    
+    result = []
+    skip = 0
     the_graph_apikey = os.getenv('THE_GRAPH_APIKEY')
     if blockchain == Chain.ETHEREUM:
-        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/C4ayEZP2yTXRAB8vSaTrgN4m9anTe9Mdm2ViyiAuV9TV"
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/4sESujoqmztX6pbichs4wZ1XXyYrkooMuHA8sKkYxpTn"
     elif blockchain == Chain.GNOSIS:
-        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/EJezH1Cp31QkKPaBDerhVPRWsKVZLrDfzjrLqpmv6cGg"
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/HW5XpZBi2iYDLBqqEEMiRJFx8ZJAQak9uu5TzyH9BBxy"
     elif blockchain == Chain.ARBITRUM:
-        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/98cQDy6tufTJtshDCuhh9z2kWXsQWBHVh2bqnLHsGAeS"
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/Bb1hVjJZ52kL23chZyyGWJKrGEg3S6euuNa1YA6XRU4J"
     elif blockchain == Chain.OPTIMISM:
-        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/FsmdxmvBJLGjUQPxKMRtcWKzuCNpomKuMTbSbtRtggZ7"
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/CbLt7GqU7sypjRaCfwissEBkFeCw3dUz2emrvBNJ7dZu"
     elif blockchain == Chain.BASE:
-        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/E7XyutxXVLrp8njmjF16Hh38PCJuHm12RRyMt5ma4ctX"
+        subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/CfBvJNYsbKZdxXzaCtNc6dUbHH6TjDupprjKKo9gnmwg"
 
+
+    while True:
     # Initialize subgraph
-    balancer_transport=RequestsHTTPTransport(
-        url=subgraph_url,
-        verify=True,
-        retries=3
-    )
-    client = Client(transport=balancer_transport)
+        balancer_transport=RequestsHTTPTransport(
+            url=subgraph_url,
+            verify=True,
+            retries=3
+        )
+        client = Client(transport=balancer_transport)
+        query_string = '''
+        query {{
+        gauges(where: {{liquidityGauge_: {{isKilled: false}}}}, first: {first}, skip: {skip}) {{
+            address
+            liquidityGauge {{
+              poolAddress
+            }}
+        }}
+        }}
+        '''
+        num_pools_to_query = 1000
+        formatted_query_string = query_string.format(first=num_pools_to_query, skip=skip)
+        response = client.execute(gql(formatted_query_string))
+        result.extend(response['gauges'])
 
-    query_string = '''
-    query {{
-    pool(id: {pool_id}) {{
-        poolType
-    }}
-    }}
-    '''
-    formatted_query_string = query_string.format(pool_id="\""+pool_id+"\"")
-    response = client.execute(gql(formatted_query_string))
+        if len(response['gauges']) < 1000:
+            break
+        else:
+            skip = 1000
 
-    return response['pool']['poolType']
-
+    return result
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # is_deprecated
@@ -171,11 +189,10 @@ def is_deprecated(pool_id, lptoken_address, pool_tokens, blockchain, web3):
     else:
         return False
 
-
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # add_pool_tokens
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def add_pool_tokens(vault_contract, pool_id, lptoken_address, pool_tokens_array, blockchain, web3):
+def add_pool_tokens(pools_dict, vault_contract, pool_id, lptoken_address, pool_tokens_array, blockchain, web3):
     
     pool_tokens_data = vault_contract.functions.getPoolTokens(pool_id).call()
     pool_tokens = pool_tokens_data[0]
@@ -198,48 +215,23 @@ def add_pool_tokens(vault_contract, pool_id, lptoken_address, pool_tokens_array,
                 token_pool_id = '0x'
         
         if token_pool_id != '0x':
-            pool_tokens_array.append({
+            # Particular case of B-80BAL-20WETH on Ethereum
+            if pool_token_address == B_80BAL_20WETH and blockchain == Chain.ETHEREUM:
+                pool_tokens_array.append({
                 'address': pool_token_address,
                 'symbol': pool_token_symbol,
                 'id': token_pool_id,
-            })
-
-            pool_token_type = subgraph_query_pool_type(blockchain, token_pool_id)
-            
-            try:
-                pool_token_version = pool_token_contract.functions.version().call()
-            except:
-                pool_token_version = None
-            
-            pool_token_name = pool_token_contract.functions.name().call()
-
-            # pool_token_version != None filters out old bb-a-USD pools and 'bao' not in pool_token_name.lower() filters out bao pools
-            if pool_token_type == 'ComposableStable' and pool_token_version != None and 'bao' not in pool_token_name.lower():
-                add_pool_tokens(vault_contract, token_pool_id, pool_token_address, pool_tokens_array, blockchain, web3)
-            else:
-                try:
-                    underlying_token = pool_token_contract.functions.getMainToken().call()
-                    underlying_token_contract = get_contract(underlying_token, blockchain, web3=web3, abi=ABI_BPT)
-                    try:
-                        underlying_token_pool_id = '0x' + underlying_token_contract.functions.getPoolId().call().hex()
-                    except:
-                        underlying_token_pool_id = None
-
-                    pool_tokens_array.append({
-                        'address': underlying_token,
-                        'symbol': get_symbol(underlying_token, blockchain, web3=web3),
-                        'id': underlying_token_pool_id
-                    })
-                
-                except:
-                    pass
+                })
+            if token_pool_id not in pools_dict:
+              raise PoolNotFoundError()   
+            if pools_dict[token_pool_id]["poolType"] == 'ComposableStable':
+                add_pool_tokens(pools_dict, vault_contract, token_pool_id, pool_token_address, pool_tokens_array, blockchain, web3)
         else:
             pool_tokens_array.append({
                 'address': pool_token_address,
                 'symbol': pool_token_symbol,
                 'id': token_pool_id,
             })
-
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # protocol_data
@@ -251,6 +243,18 @@ def protocol_data(blockchain):
     web3 = get_node(blockchain)
 
     pools = subgraph_query_pools(blockchain)
+    pools_dict = {pool["id"]: pool for pool in pools}
+
+    gauges = subgraph_query_gauges(blockchain)
+    gauges_dict = dict(
+    sorted(
+            {
+                web3.to_checksum_address(gauge["liquidityGauge"]["poolAddress"]): web3.to_checksum_address(gauge["address"])
+                for gauge in gauges
+                if gauge.get("liquidityGauge") and gauge["liquidityGauge"]["poolAddress"] is not None
+            }.items()
+        )
+    )
 
     vault_contract = get_contract(VAULT, blockchain, web3=web3, abi=ABI_VAULT)
     
@@ -270,14 +274,27 @@ def protocol_data(blockchain):
             continue
 
         try:
-            gauge_address = get_gauge_addresses(blockchain, 'latest', lptoken_address)[0]
+            gauge_address = gauges_dict[lptoken_address]
         except:
-            gauge_address = None
+            try:
+                gauge_address = get_gauge_addresses(blockchain, 'latest', lptoken_address)[0]
+                gauge_contract = get_contract(gauge_address, blockchain, web3=web3, abi=ABI_GAUGE)
+                try:
+                    if gauge_contract.functions.is_killed().call():
+                        gauge_address = None
+                except:
+                    continue
+            except:
+                gauge_address = None
         
         pool_name = get_symbol(lptoken_address, blockchain, web3=web3)
         
         pool_tokens_array = []
-        add_pool_tokens(vault_contract, pool['id'], lptoken_address, pool_tokens_array, blockchain, web3)
+
+        try:
+            add_pool_tokens(pools_dict, vault_contract, pool['id'], lptoken_address, pool_tokens_array, blockchain, web3)
+        except PoolNotFoundError:
+            continue
         
         result.append({
             'bpt': lptoken_address,
