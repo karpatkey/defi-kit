@@ -221,6 +221,7 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x5760E34c4003752329bC77790B1De44C2799F8C3",
       aArbWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
+      protocolDataProviderV3: "0x14496b405D62c24F91f04Cda1c69Dc526D56fDE5",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
@@ -256,6 +257,7 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x60eE8b61a13c67d0191c851BEC8F0bc850160710",
       aOptWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
+      protocolDataProviderV3: "0x14496b405D62c24F91f04Cda1c69Dc526D56fDE5",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
@@ -289,6 +291,7 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x729b3EA8C005AbC58c9150fb57Ec161296F06766",
       aBasWeth: "0xD4a0e0b9149BCee3C920d2E00b5dE09138fd8bb7",
       variableDebtWeth: "0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E",
+      protocolDataProviderV3: "0xC4Fcf9893072d61Cc2899C0054877Cb752587981",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
@@ -307,6 +310,7 @@ export const contracts = {
       cUsdcV3: "0xb125E6687d4313864e53df431d5425969c15Eb2F",
       cometRewards: "0x123964802e6ABabBE1Bc9547D72Ef1B69B00A6b1",
     },
+    usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     weth: "0x4200000000000000000000000000000000000006",
     circleTokenMessenger: "0x1682Ae6375C4E4A97e4B583BC394c861A46D8962",
     circleMessageTransmitter: "0xAD09780d193884d503182aD4588450C416D6F9D4",

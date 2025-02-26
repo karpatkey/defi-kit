@@ -97,5 +97,29 @@ describe("aaveV3", () => {
         )
       ).toBeAllowed()
     })
+
+    it("allow setting the deposited WETH as collateral", async () => {
+      let reserveConfig: Array<any> =
+        await kit.asAvatar.aaveV3.protocolDataProviderV3.getReserveConfigurationData(
+          contracts.base.weth
+        )
+      const collateralizable: boolean = reserveConfig[5]
+      console.log("is collateralizable: ", collateralizable)
+      if (collateralizable) {
+        await expect(
+          kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
+            contracts.base.weth,
+            true
+          )
+        ).not.toRevert()
+      } else {
+        await expect(
+          kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
+            contracts.base.weth,
+            true
+          )
+        ).toRevert()
+      }
+    })
   })
 })
