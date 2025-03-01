@@ -7,8 +7,9 @@ import { EthPool } from "./types"
 import abi from "../../../eth-sdk/abis/mainnet/morpho/morphoBlue.json"
 import { NotFoundError } from "../../errors"
 import _ethPools from "./_ethPools"
-import { Contract } from "ethers"
+import { Contract, BigNumberish, AddressLike } from "ethers"
 import { ethProvider } from "../../provider"
+import { Address } from "@gnosis-guild/eth-sdk"
 
 const findPool = (nameOrAddress: string) => {
   const pools = _ethPools
@@ -25,19 +26,30 @@ const findPool = (nameOrAddress: string) => {
   return pool
 }
 
+interface MarketParams {
+  loanToken: Address
+  collateralToken: Address
+  oracle: Address
+  irm: Address
+  lltv: BigNumberish
+}
+
 const findBlueMarketParams = async (marketId: string) => {
   try {
     const morphoBlue = new Contract(
       contracts.mainnet.morpho.morphoBlue,
       abi,
       ethProvider
-    );
+    )
 
-    const marketParams = await morphoBlue.idToMarketParams(marketId);
+    const marketParams: MarketParams | null = await morphoBlue.idToMarketParams(
+      marketId
+    )
 
-    // Ensure marketParams is valid before using it
     if (!marketParams) {
-      throw new NotFoundError(`Market parameters not found for marketId: ${marketId}`);
+      throw new NotFoundError(
+        `Market parameters not found for marketId: ${marketId}`
+      )
     }
 
     return {
@@ -46,13 +58,15 @@ const findBlueMarketParams = async (marketId: string) => {
       lltv: marketParams.lltv.toString(),
       oracle: marketParams.oracle,
       irm: marketParams.irm,
-    };
+    }
   } catch (error) {
-    console.error(`Error fetching market parameters for marketId: ${marketId}`, error);
-    throw new Error("Failed to retrieve market parameters");
+    console.error(
+      `Error fetching market parameters for marketId: ${marketId}`,
+      error
+    )
+    throw new Error("Failed to retrieve market parameters")
   }
-};
-
+}
 
 export const eth = {
   deposit: async ({
@@ -182,7 +196,7 @@ export const eth = {
       }
       return [
         // *** Monarch Lend *** //
-        
+
         ...allowErc20Approve([pool.loanToken], [pool.collateralToken]),
         {
           ...allow.mainnet.weth.approve(
