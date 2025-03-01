@@ -120,7 +120,7 @@ export const eth = {
         const erc20Approvals = await allowErc20Approve(
           [pool.loanToken],
           [pool.collateralToken]
-        ) // Await before spreading
+        )
 
         return [
           // *** Morpho Blue *** //
@@ -137,6 +137,7 @@ export const eth = {
               contracts.mainnet.morpho.morphoBlue,
               undefined
             ),
+
             targetAddress: pool.loanToken,
           },
           {
@@ -188,10 +189,10 @@ export const eth = {
         ]
       }
 
-      return [] // Instead of `undefined`, return an empty array
+      return []
     })
 
-    return (await Promise.all(promises)).flat() // No more `undefined` issues
+    return (await Promise.all(promises)).flat()
   },
 
   supply: async ({ supplyTargets }: { supplyTargets: string[] }) => {
