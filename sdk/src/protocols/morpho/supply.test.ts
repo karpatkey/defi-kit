@@ -27,7 +27,6 @@ describe("Morpho supply", () => {
     })
 
     it("approuve -> supply -> withdraw", async () => {
-      const amountCollateral = BigInt(parseEther("5").toString())
       const amountSupply = BigInt(parseEther("3").toString())
 
       const unauthorizedMarketParams = {
@@ -52,11 +51,11 @@ describe("Morpho supply", () => {
       )
       await kit.asMember.weth
         .attach(underlying_wsteth)
-        .approve(MorphoBluePool, amountCollateral)
+        .approve(MorphoBluePool, amountSupply)
 
       await kit.asMember.wsteth
         .attach(WETH)
-        .approve(MorphoBluePool, amountCollateral)
+        .approve(MorphoBluePool, amountSupply)
 
       console.log("supply valid market params")
       await expect(
