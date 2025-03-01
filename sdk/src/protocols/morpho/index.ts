@@ -25,7 +25,7 @@ const findPool = (nameOrAddress: string) => {
   return pool
 }
 
-const findBluePool = async (marketId: string) => {
+const findBlueMarketParams = async (marketId: string) => {
   const morphoBlue = new Contract(
     contracts.mainnet.morpho.morphoBlue,
     abi,
@@ -33,17 +33,14 @@ const findBluePool = async (marketId: string) => {
   )
   const marketParams = await morphoBlue.idToMarketParams(marketId)
 
-  console.log("marketParams: ", marketParams)
-
   const pool = {
     collateralToken: marketParams.collateralToken,
     loanToken: marketParams.loanToken,
     lltv: marketParams.lltv.toString(),
     oracle: marketParams.oracle,
     irm: marketParams.irm,
-    marketId: marketId,
   }
-
+//can it not be available? if marketParams is not found?
   if (!pool) {
     throw new NotFoundError(`Pool not found for marketId: ${marketId}`)
   }
@@ -97,7 +94,7 @@ export const eth = {
   },
   borrow: async ({ blueTargets }: { blueTargets: string[] }) => {
     const promises = blueTargets.map(async (blueTarget) => {
-      const pool = await findBluePool(blueTarget)
+      const pool = await findBlueMarketParams(blueTarget)
 
       return [
         // *** Morpho Blue *** //
@@ -169,7 +166,7 @@ export const eth = {
 
   supply: async ({ supplyTargets }: { supplyTargets: string[] }) => {
     const promises = supplyTargets.map(async (supplyTarget) => {
-      const pool = await findBluePool(supplyTarget)
+      const pool = await findBlueMarketParams(supplyTarget)
       const paramsMarketHere = {
         collateralToken: pool.collateralToken,
         irm: pool.irm,
@@ -179,6 +176,7 @@ export const eth = {
       }
       return [
         // *** Monarch Lend *** //
+        
         ...allowErc20Approve([pool.loanToken], [pool.collateralToken]),
         {
           ...allow.mainnet.weth.approve(
