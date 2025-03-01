@@ -26,27 +26,33 @@ const findPool = (nameOrAddress: string) => {
 }
 
 const findBlueMarketParams = async (marketId: string) => {
-  const morphoBlue = new Contract(
-    contracts.mainnet.morpho.morphoBlue,
-    abi,
-    ethProvider
-  )
-  const marketParams = await morphoBlue.idToMarketParams(marketId)
+  try {
+    const morphoBlue = new Contract(
+      contracts.mainnet.morpho.morphoBlue,
+      abi,
+      ethProvider
+    );
 
-  const pool = {
-    collateralToken: marketParams.collateralToken,
-    loanToken: marketParams.loanToken,
-    lltv: marketParams.lltv.toString(),
-    oracle: marketParams.oracle,
-    irm: marketParams.irm,
-  }
-//can it not be available? if marketParams is not found?
-  if (!pool) {
-    throw new NotFoundError(`Pool not found for marketId: ${marketId}`)
-  }
+    const marketParams = await morphoBlue.idToMarketParams(marketId);
 
-  return pool
-}
+    // Ensure marketParams is valid before using it
+    if (!marketParams) {
+      throw new NotFoundError(`Market parameters not found for marketId: ${marketId}`);
+    }
+
+    return {
+      collateralToken: marketParams.collateralToken,
+      loanToken: marketParams.loanToken,
+      lltv: marketParams.lltv.toString(),
+      oracle: marketParams.oracle,
+      irm: marketParams.irm,
+    };
+  } catch (error) {
+    console.error(`Error fetching market parameters for marketId: ${marketId}`, error);
+    throw new Error("Failed to retrieve market parameters");
+  }
+};
+
 
 export const eth = {
   deposit: async ({
