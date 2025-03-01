@@ -5,8 +5,8 @@ import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 import { Chain } from "../../../src"
 
-const MorphoBluePool = "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb" // gtLRTcore Vault address
-const STEAL_ADDRESS = "0xacB7027f271B03B502D65fEBa617a0d817D62b8e" // Address wstETH
+const MorphoBluePool = "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb"
+const STEAL_WSTETH = "0xacB7027f271B03B502D65fEBa617a0d817D62b8e" // Address wstETH
 const STEAL_WETH = "0xa1E2481a9CD0Cb0447EeB1cbc26F1b3fff3bec20"
 const underlying_wsteth = "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0" // WstETH
 const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
@@ -42,7 +42,7 @@ describe("Morpho supply", () => {
         Chain.eth,
         underlying_wsteth,
         parseEther("10"),
-        STEAL_ADDRESS
+        STEAL_WSTETH
       )
       await stealErc20(
         Chain.eth,
