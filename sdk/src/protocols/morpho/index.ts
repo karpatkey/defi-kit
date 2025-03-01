@@ -117,10 +117,14 @@ export const eth = {
       const pool = await findBlueMarketParams(blueTarget)
 
       if (c.matches(pool)) {
+        const erc20Approvals = await allowErc20Approve(
+          [pool.loanToken],
+          [pool.collateralToken]
+        ) // Await before spreading
+
         return [
-          
           // *** Morpho Blue *** //
-          ...allowErc20Approve([pool.loanToken], [pool.collateralToken]),
+          ...erc20Approvals, // Now it's an actual array, not a promise
           {
             ...allow.mainnet.weth.approve(
               contracts.mainnet.morpho.morphoBlue,
@@ -183,8 +187,11 @@ export const eth = {
           },
         ]
       }
+
+      return [] // Instead of `undefined`, return an empty array
     })
-    return (await Promise.all(promises)).flat()
+
+    return (await Promise.all(promises)).flat() // No more `undefined` issues
   },
 
   supply: async ({ supplyTargets }: { supplyTargets: string[] }) => {
