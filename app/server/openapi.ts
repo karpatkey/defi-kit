@@ -22,6 +22,14 @@ import {
   registerDelegatePermissions,
 } from "./actions/delegate"
 import {
+  registerAllowBridge,
+  registerBridgePermissions,
+} from "./actions/bridge"
+import {
+  registerAllowReceive,
+  registerReceivePermissions,
+} from "./actions/receive"
+import {
   permission,
   condition,
   transactionsJson,
@@ -71,6 +79,14 @@ Object.entries(sdks).forEach(([chain, sdk]) => {
         case "delegate":
           registerAllowDelegate(registry, chainPrefix, protocol)
           registerDelegatePermissions(registry, chainPrefix, protocol)
+          return
+        case "bridge":
+          registerAllowBridge(registry, chainPrefix, protocol)
+          registerBridgePermissions(registry, chainPrefix, protocol)
+          return
+        case "receive":
+          registerAllowReceive(registry, chainPrefix, protocol)
+          registerReceivePermissions(registry, chainPrefix, protocol)
           return
         default:
           throw new Error(`Unknown action: ${action}`)
