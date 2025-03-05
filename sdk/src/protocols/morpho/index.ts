@@ -223,30 +223,39 @@ export const eth = {
           ),
           targetAddress: pool.loanToken,
         },
-        {
-          ...allow.mainnet.morpho.morphoBlue.supply(
-            paramsMarketHere,
-            undefined,
-            undefined,
-            c.avatar,
-            "0x"
-          ),
-        },
-        {
-          ...allow.mainnet.morpho.morphoBlue.withdraw(
-            {
-              loanToken: pool.loanToken,
-              collateralToken: pool.collateralToken,
-              oracle: pool.oracle,
-              irm: pool.irm,
-              lltv: pool.lltv,
-            },
-            undefined,
-            undefined,
-            c.avatar,
-            c.avatar
-          ),
-        },
+        ...(c.matches(pool)
+          ? [
+              {
+                ...allow.mainnet.morpho.morphoBlue.supply(
+                  paramsMarketHere,
+                  undefined,
+                  undefined,
+                  c.avatar,
+                  "0x"
+                ),
+              },
+            ]
+          : []),
+
+        ...(c.matches(pool)
+          ? [
+              {
+                ...allow.mainnet.morpho.morphoBlue.withdraw(
+                  {
+                    loanToken: pool.loanToken,
+                    collateralToken: pool.collateralToken,
+                    oracle: pool.oracle,
+                    irm: pool.irm,
+                    lltv: pool.lltv,
+                  },
+                  undefined,
+                  undefined,
+                  c.avatar,
+                  c.avatar
+                ),
+              },
+            ]
+          : []),
       ]
     })
     return (await Promise.all(promises)).flat()
