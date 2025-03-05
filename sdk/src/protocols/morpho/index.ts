@@ -116,91 +116,76 @@ export const eth = {
     const promises = blueTargets.map(async (blueTarget) => {
       const pool = await findBlueMarketParams(blueTarget)
 
-      if (c.matches(pool)) {
-        const erc20Approvals = await allowErc20Approve(
-          [pool.loanToken],
-          [pool.collateralToken]
-        )
+      const erc20Approvals = await allowErc20Approve(
+        [pool.loanToken],
+        [pool.collateralToken]
+      )
 
-        return [
-          // *** Morpho Blue *** //
-          ...erc20Approvals, // Now it's an actual array, not a promise
-          {
-            ...allow.mainnet.weth.approve(
-              contracts.mainnet.morpho.morphoBlue,
-              undefined
-            ),
-            targetAddress: pool.collateralToken,
-          },
-          {
-            ...allow.mainnet.lido.wstEth.approve(
-              contracts.mainnet.morpho.morphoBlue,
-              undefined
-            ),
+      return [
+        // *** Morpho Blue *** //
+        ...erc20Approvals, // Now it's an actual array, not a promise
+        {
+          ...allow.mainnet.weth.approve(
+            contracts.mainnet.morpho.morphoBlue,
+            undefined
+          ),
+          targetAddress: pool.collateralToken,
+        },
+        {
+          ...allow.mainnet.lido.wstEth.approve(
+            contracts.mainnet.morpho.morphoBlue,
+            undefined
+          ),
 
-            targetAddress: pool.loanToken,
-          },
-          {
-            ...allow.mainnet.morpho.morphoBlue.supplyCollateral(
-              undefined,
-              undefined,
-              c.avatar,
-              "0x"
-            ),
-          },
-          ...(c.matches(pool)
-            ? [
-                {
-                  ...allow.mainnet.morpho.morphoBlue.borrow(
-                    {
-                      loanToken: pool.loanToken,
-                      collateralToken: pool.collateralToken,
-                      oracle: pool.oracle,
-                      irm: pool.irm,
-                      lltv: pool.lltv,
-                    },
-                    undefined,
-                    undefined,
-                    c.avatar,
-                    c.avatar
-                  ),
-                  
-                },
-              ]
-            : []),
-          ...(c.matches(pool)
-            ? [
-                {
-                  ...allow.mainnet.morpho.morphoBlue.repay(
-                    {
-                      loanToken: pool.loanToken,
-                      collateralToken: pool.collateralToken,
-                      oracle: pool.oracle,
-                      irm: pool.irm,
-                      lltv: pool.lltv,
-                    },
-                    undefined,
-                    undefined,
-                    c.avatar,
-                    "0x"
-                  ),
-                },
-              ]
-            : []),
-          ...(c.matches(pool)
-            ? [
-                {
-                  ...allow.mainnet.morpho.morphoBlue.withdrawCollateral(
-                    undefined,
-                    undefined,
-                    c.avatar,
-                    c.avatar
-                  ),
-                },
-              ]
-            : []),
-        ]
-      }
+          targetAddress: pool.loanToken,
+        },
+        {
+          ...allow.mainnet.morpho.morphoBlue.supplyCollateral(
+            undefined,
+            undefined,
+            c.avatar,
+            "0x"
+          ),
+        },
+        {
+          ...allow.mainnet.morpho.morphoBlue.borrow(
+            {
+              loanToken: pool.loanToken,
+              collateralToken: pool.collateralToken,
+              oracle: pool.oracle,
+              irm: pool.irm,
+              lltv: pool.lltv,
+            },
+            undefined,
+            undefined,
+            c.avatar,
+            c.avatar
+          ),
+        },
+        {
+          ...allow.mainnet.morpho.morphoBlue.repay(
+            {
+              loanToken: pool.loanToken,
+              collateralToken: pool.collateralToken,
+              oracle: pool.oracle,
+              irm: pool.irm,
+              lltv: pool.lltv,
+            },
+            undefined,
+            undefined,
+            c.avatar,
+            "0x"
+          ),
+        },
+        {
+          ...allow.mainnet.morpho.morphoBlue.withdrawCollateral(
+            undefined,
+            undefined,
+            c.avatar,
+            c.avatar
+          ),
+        },
+      ]
 
       return []
     })
