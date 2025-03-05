@@ -148,44 +148,57 @@ export const eth = {
               "0x"
             ),
           },
-          {
-            ...allow.mainnet.morpho.morphoBlue.borrow(
-              {
-                loanToken: pool.loanToken,
-                collateralToken: pool.collateralToken,
-                oracle: pool.oracle,
-                irm: pool.irm,
-                lltv: pool.lltv,
-              },
-              undefined,
-              undefined,
-              c.avatar,
-              c.avatar
-            ),
-          },
-          {
-            ...allow.mainnet.morpho.morphoBlue.repay(
-              {
-                loanToken: pool.loanToken,
-                collateralToken: pool.collateralToken,
-                oracle: pool.oracle,
-                irm: pool.irm,
-                lltv: pool.lltv,
-              },
-              undefined,
-              undefined,
-              c.avatar,
-              "0x"
-            ),
-          },
-          {
-            ...allow.mainnet.morpho.morphoBlue.withdrawCollateral(
-              undefined,
-              undefined,
-              c.avatar,
-              c.avatar
-            ),
-          },
+          ...(c.matches(pool)
+            ? [
+                {
+                  ...allow.mainnet.morpho.morphoBlue.borrow(
+                    {
+                      loanToken: pool.loanToken,
+                      collateralToken: pool.collateralToken,
+                      oracle: pool.oracle,
+                      irm: pool.irm,
+                      lltv: pool.lltv,
+                    },
+                    undefined,
+                    undefined,
+                    c.avatar,
+                    c.avatar
+                  ),
+                  
+                },
+              ]
+            : []),
+          ...(c.matches(pool)
+            ? [
+                {
+                  ...allow.mainnet.morpho.morphoBlue.repay(
+                    {
+                      loanToken: pool.loanToken,
+                      collateralToken: pool.collateralToken,
+                      oracle: pool.oracle,
+                      irm: pool.irm,
+                      lltv: pool.lltv,
+                    },
+                    undefined,
+                    undefined,
+                    c.avatar,
+                    "0x"
+                  ),
+                },
+              ]
+            : []),
+          ...(c.matches(pool)
+            ? [
+                {
+                  ...allow.mainnet.morpho.morphoBlue.withdrawCollateral(
+                    undefined,
+                    undefined,
+                    c.avatar,
+                    c.avatar
+                  ),
+                },
+              ]
+            : []),
         ]
       }
 
@@ -223,19 +236,16 @@ export const eth = {
           ),
           targetAddress: pool.loanToken,
         },
-        ...(c.matches(pool)
-          ? [
-              {
-                ...allow.mainnet.morpho.morphoBlue.supply(
-                  paramsMarketHere,
-                  undefined,
-                  undefined,
-                  c.avatar,
-                  "0x"
-                ),
-              },
-            ]
-          : []),
+
+        {
+          ...allow.mainnet.morpho.morphoBlue.supply(
+            paramsMarketHere,
+            undefined,
+            undefined,
+            c.avatar,
+            "0x"
+          ),
+        },
 
         ...(c.matches(pool)
           ? [
