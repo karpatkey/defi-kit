@@ -1,9 +1,9 @@
-import { eth } from "."
-import { wallets } from "../../../../test/wallets"
-import { applyPermissions } from "../../../../test/helpers"
-import { Status } from "../../../../test/types"
-import { eth as kit } from "../../../../test/kit"
-import { Chain } from "../../../../src"
+import { eth } from "../../index"
+import { wallets } from "../../../../../../test/wallets"
+import { applyPermissions } from "../../../../../../test/helpers"
+import { Status } from "../../../../../../test/types"
+import { eth as kit } from "../../../../../../test/kit"
+import { Chain } from "../../../../../index"
 
 const DELEGATEE = "0x849D52316331967b6fF1198e5E32A0eB168D039d"
 
