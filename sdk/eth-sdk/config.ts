@@ -323,7 +323,6 @@ export const contracts = {
     },
     usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     weth: "0x4200000000000000000000000000000000000006",
-    usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     l2HopCctp: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
   },
 } as const satisfies EthSdkConfig["contracts"]
