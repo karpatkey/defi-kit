@@ -285,11 +285,6 @@ export default [
     gauge: "0x9fF4e3925B88B6885083A88c2283a21CD504D3d4",
     tokens: [
       {
-        address: "0x2086f52651837600180dE173B09470F54EF74910",
-        symbol: "staBAL3",
-        id: "0x2086f52651837600180de173b09470f54ef7491000000000000000000000004f",
-      },
-      {
         address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
         symbol: "USDT",
         id: "0x",

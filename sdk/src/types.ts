@@ -20,6 +20,8 @@ export type ProtocolActions = {
   lock?: AllowFunction
   delegate?: AllowFunction
   supply?: AllowFunction
+  bridge?: AllowFunction
+  receive?: AllowFunction
 }
 
 export type ActionName = keyof ProtocolActions

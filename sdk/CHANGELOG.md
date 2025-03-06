@@ -1,5 +1,33 @@
 # Changelog
 
+## [2.12.0](https://github.com/karpatkey/defi-kit/compare/v2.11.5...v2.12.0) (2025-02-26)
+
+
+### Features
+
+* Bridges setup and add Circle CCTP v1 ([#385](https://github.com/karpatkey/defi-kit/issues/385)) ([0983c80](https://github.com/karpatkey/defi-kit/commit/0983c8031d2ae1bb3a223bf7787222d258c9f1dc))
+
+## [2.11.5](https://github.com/karpatkey/defi-kit/compare/v2.11.4...v2.11.5) (2025-02-26)
+
+
+### Bug Fixes
+
+* Balancer script ([#389](https://github.com/karpatkey/defi-kit/issues/389)) ([c08928c](https://github.com/karpatkey/defi-kit/commit/c08928cb6005e022940541e6d72fe29acd1b72e1))
+
+## [2.11.4](https://github.com/karpatkey/defi-kit/compare/v2.11.3...v2.11.4) (2025-02-19)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#383](https://github.com/karpatkey/defi-kit/issues/383)) ([42ca9bb](https://github.com/karpatkey/defi-kit/commit/42ca9bb4d7b8f361ebd1c3035a57f0ddf3bfc7ac))
+
+## [2.11.3](https://github.com/karpatkey/defi-kit/compare/v2.11.2...v2.11.3) (2025-02-14)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#381](https://github.com/karpatkey/defi-kit/issues/381)) ([3472ae2](https://github.com/karpatkey/defi-kit/commit/3472ae2961b9da9c54f2b360115efc0baad3e3c7))
+
 ## [2.11.2](https://github.com/karpatkey/defi-kit/compare/v2.11.1...v2.11.2) (2025-02-11)
 
 
