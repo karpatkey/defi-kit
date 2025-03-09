@@ -64,6 +64,25 @@ export default [
     ],
   },
   {
+    bpt: "0x1AcD5C5E69DC056649d698046486fb54545Ce7E4",
+    id: "0x1acd5c5e69dc056649d698046486fb54545ce7e4000200000000000000000117",
+    name: "ECLP-bCSPX-sDAI",
+    type: "GyroE",
+    gauge: "0xbcF4969d4dc6Cb86Ce0B8a101d220b558F14739C",
+    tokens: [
+      {
+        address: "0x1e2C4fb7eDE391d116E6B41cD0608260e8801D59",
+        symbol: "bCSPX",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x1e8b447129984d8A6B652C807DfC3bd135973133",
     id: "0x1e8b447129984d8a6b652c807dfc3bd1359731330002000000000000000000d6",
     name: "ECLP-GYD-sDAI",
