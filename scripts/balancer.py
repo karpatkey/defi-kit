@@ -75,10 +75,9 @@ def subgraph_query_pools(blockchain):
             retries=3
         )
         client = Client(transport=balancer_transport)
-        # id_in: ["0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014", "0x2d011adf89f0576c9b722c28269fcb5d50c2d17900020000000000000000024d"]
         query_string = '''
         query {{
-        pools(where: {{totalLiquidity_gte: 1000}}, first: {first}, skip: {skip}) {{
+        pools(first: {first}, skip: {skip}) {{
             id
             address
             poolTypeVersion
