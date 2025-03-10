@@ -60,12 +60,35 @@ Swap tokens on a DEX.
 
 #### Parameters
 
-| Name    | Type       | Description                                                                              |
-| :------ | :--------- | :--------------------------------------------------------------------------------------- |
-| `sell`  | _string[]_ | The set of tokens that can be sold, can be contract addresses or token symbols           |
-| `buy`   | _string[]_ | The set of tokens that can be bought, can be contract addresses or token symbols         |
+| Name   | Type       | Description                                                                      |
+| :----- | :--------- | :------------------------------------------------------------------------------- |
+| `sell` | _string[]_ | The set of tokens that can be sold, can be contract addresses or token symbols   |
+| `buy`  | _string[]_ | The set of tokens that can be bought, can be contract addresses or token symbols |
 
 <Callout type="info">
-  **Note:** Parameter requirements may vary depending on the DEX, as different exchanges may require specific formats or additional fields.
+  **Note:** Parameter requirements may vary depending on the DEX, as different
+  exchanges may require specific formats or additional fields.
 </Callout>
 
+## `bridge`
+
+Bridge tokens between blockchains.
+
+#### Parameters
+
+| Name        | Type                  | Description                                   |
+| :---------- | :-------------------- | :-------------------------------------------- |
+| `targets`   | _string[] (required)_ | Destination blockchains for bridging tokens   |
+| `recipient` | _string (required)_   | Recipient address on the destination chain(s) |
+
+## `receive`
+
+Claim received tokens on the destination blockchains.
+
+#### Parameters
+
+| Name        | Type                  | Description                                            |
+| :---------- | :-------------------- | :----------------------------------------------------- |
+| `targets`   | _string[] (required)_ | Source blockchains from which tokens are being bridged |
+| `sender`    | _string (required)_   | Sender address on the source chain(s)                  |
+| `recipient` | _string (required)_   | Recipient address on the destination chain(s)          |
