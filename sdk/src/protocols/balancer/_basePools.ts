@@ -564,20 +564,20 @@ export default [
     ],
   },
   {
-    bpt: "0xC049e05B6dc8Af133C4F0e141916Cd16E2B89405",
-    id: "0xc049e05b6dc8af133c4f0e141916cd16e2b894050002000000000000000001c1",
-    name: "ECLP-WETH-sUSDS",
+    bpt: "0xB924561a57Fc60041414B8471CBc99d3497097fA",
+    id: "0xb924561a57fc60041414b8471cbc99d3497097fa0002000000000000000001c2",
+    name: "ECLP-USR-GYD",
     type: "GyroE",
     gauge: null,
     tokens: [
       {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
+        address: "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
+        symbol: "USR",
         id: "0x",
       },
       {
-        address: "0x5875eEE11Cf8398102FdAd704C9E96607675467a",
-        symbol: "sUSDS",
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
         id: "0x",
       },
     ],

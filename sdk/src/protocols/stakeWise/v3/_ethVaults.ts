@@ -38,16 +38,16 @@ export default [
       "Independent Ethereum validators with owned hardware, MEV boost, and minority clients for robust decentralization. Empowering the Ethereum network with integrity.",
   },
   {
-    id: "0x663580b3edad914d0b59cea88616f06278d42bb2",
-    name: "𓃵 onchainaustria.at",
-    description:
-      "onchainaustria is a registered Austrian association and thriving crypto community. We operate as a node operator with a low fee structure and a highly redundant technical setup.\n\nWe are offering native crypto staking. Our members benefit from a collaborative environment where we share knowledge and optimize crypto investments.\n\nhttps://onchainaustria.at/",
-  },
-  {
     id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
     name: "Blockscape Super Early Bird",
     description:
       "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
+  },
+  {
+    id: "0x663580b3edad914d0b59cea88616f06278d42bb2",
+    name: "𓃵 onchainaustria.at",
+    description:
+      "onchainaustria is a registered Austrian association and thriving crypto community. We operate as a node operator with a low fee structure and a highly redundant technical setup.\n\nWe are offering native crypto staking. Our members benefit from a collaborative environment where we share knowledge and optimize crypto investments.\n\nhttps://onchainaustria.at/",
   },
   {
     id: "0x5610297eb32542b8f13378fe7d783dcb1ac3b1a1",
@@ -79,21 +79,15 @@ export default [
   },
   {
     id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
-    name: "Blockshard Pioneers Vault ",
+    name: "Blockshard DVT Pioneers Vault",
     description:
-      "Leading vault featuring a strategic blend of DVT and vanilla validators. Around 50% are managed with SSV and Obol, employing highly skilled and experienced operators. \n\nThe remaining 50% are run on our advanced, high-availability system. The validator client is connected to five Ethereum nodes and uses Web3Signer to protect validator keys, ensuring enhanced reliability and security.\n\nA competitive fee of only 3.5% on rewards makes this vault a prudent choice for stakers. ",
+      "A premier vault utilizing Distributed Validator Technology (DVT) for enhanced security and resilience. All validators are operated in-house using SSV, with plans to also incorporate Obol.\n\nOnce StakeWise enables the feature for distributing additional incentives for vault operators, we will share 90% of the rewards earned from SSV Network’s incentivized mainnet with our stakers - boosting the vault’s APR to over 10%. We anticipate similar incentives from Obol once its token becomes transferable, and we will add it as a DVT solution accordingly. \n\nAs the DVT ecosystem evolves, we remain committed to integrating promising new DVT solutions once they reach maturity and viability.\n\nWith a competitive 3.5% fee on rewards, this vault offers a secure, efficient, and high-reward staking solution for ETH holders.",
   },
   {
     id: "0x05e393ec11d0197a88d84457908edd4ff235f323",
     name: "Stakin - No MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
-  },
-  {
-    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
-    name: "Fox & Yaga",
-    description:
-      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
   },
   {
     id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
@@ -112,6 +106,12 @@ export default [
     name: "CommonWealth",
     description:
       "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
+  },
+  {
+    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
+    name: "Fox & Yaga",
+    description:
+      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
   },
   {
     id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
@@ -201,11 +201,5 @@ export default [
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
-  },
-  {
-    id: "0x64f2907f92631619ed7ea510982835f9e1024767",
-    name: "AutoStake ⚡️ 1% fee forever",
-    description:
-      "Slash insurance backed by a SAFU fund.\nDecentralized infrastructure powered by Distributed Validator Technology. \nConnect with us at: https://linktr.ee/autostake",
   },
 ] as const
