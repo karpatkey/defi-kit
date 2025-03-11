@@ -29,6 +29,17 @@ BALANCER_QUERIES = {
 }
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# BALANCER QUERIES
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MIN_TVL = {
+    Chain.ETHEREUM: 1000,
+    Chain.GNOSIS: 100,
+    Chain.ARBITRUM: 1000,
+    Chain.OPTIMISM: 1000,
+    Chain.BASE: 1000,
+}
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ABIs
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ABI Balancer Queries - queryExit, queryJoin
@@ -66,7 +77,7 @@ def subgraph_query_pools(blockchain):
     elif blockchain == Chain.BASE:
         subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/E7XyutxXVLrp8njmjF16Hh38PCJuHm12RRyMt5ma4ctX"
 
-
+    min_tvl = MIN_TVL[blockchain]
     while True:
     # Initialize subgraph
         balancer_transport=RequestsHTTPTransport(
@@ -77,7 +88,7 @@ def subgraph_query_pools(blockchain):
         client = Client(transport=balancer_transport)
         query_string = '''
         query {{
-        pools(first: {first}, skip: {skip}) {{
+        pools(where: {{totalLiquidity_gte: {min_tvl}}}, first: {first}, skip: {skip}) {{
             id
             address
             poolTypeVersion
@@ -87,7 +98,7 @@ def subgraph_query_pools(blockchain):
         }}
         '''
         num_pools_to_query = 1000
-        formatted_query_string = query_string.format(first=num_pools_to_query, skip=skip)
+        formatted_query_string = query_string.format(first=num_pools_to_query, skip=skip, min_tvl=min_tvl)
         response = client.execute(gql(formatted_query_string))
         result.extend(response['pools'])
 
