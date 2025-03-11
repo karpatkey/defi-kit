@@ -350,30 +350,6 @@ export default [
     ],
   },
   {
-    bpt: "0x19DF5BB37380186bC8EFc5Ad91516373A2C5459f",
-    id: "0x19df5bb37380186bc8efc5ad91516373a2c5459f000200000000000000000698",
-    name: "20B-baoETH-ETH-BPT-80BAO",
-    type: "Weighted",
-    gauge: "0x7C02ac2BAd481dC4E566D3D54359244f381d58dC",
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xf4edfad26EE0D23B69CA93112eccE52704E0006f",
-        symbol: "baoETH",
-        id: "0x",
-      },
-      {
-        address: "0xCe391315b414D4c7555956120461D21808A69F3A",
-        symbol: "BAO",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x1A44E35d5451E0b78621A1B3e7a53DFaA306B1D0",
     id: "0x1a44e35d5451e0b78621a1b3e7a53dfaa306b1d000000000000000000000051b",
     name: "B-baoETH-ETH-BPT",

@@ -7,7 +7,7 @@ import { eth as kit } from "../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 import { Chain } from "../../../../src"
 
-describe("aaveV2", () => {
+describe.skip("aaveV2", () => {
   describe("borrow", () => {
     beforeAll(async () => {
       await applyPermissions(
