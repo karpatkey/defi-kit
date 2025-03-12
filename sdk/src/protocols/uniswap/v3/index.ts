@@ -12,7 +12,12 @@ import { contracts } from "../../../../eth-sdk/config"
 import { allow } from "zodiac-roles-sdk/kit"
 import { c, Permission } from "zodiac-roles-sdk"
 import ethInfo from "./_ethInfo"
+import gnoInfo from "./_gnoInfo"
+import arb1Info from "./_arb1Info"
+import oethInfo from "./_oethInfo"
+import baseInfo from "./_baseInfo"
 import { NotFoundError } from "../../../errors"
+import { Chain } from "../../../types"
 
 const zeroAddress = "0x0000000000000000000000000000000000000000"
 
@@ -57,7 +62,7 @@ export const eth = {
         }
       })
 
-    const tokensForTargets = (nftIds && (await queryTokens(nftIds))) || []
+    const tokensForTargets = (nftIds && (await queryTokens(Chain.eth, nftIds))) || []
 
     const mintTokenAddresses =
       tokens?.map((addressOrSymbol) => findToken(ethInfo, addressOrSymbol)) ||
@@ -167,10 +172,10 @@ export const gno = {
         }
       })
 
-    const tokensForTargets = (nftIds && (await queryTokens(nftIds))) || []
+    const tokensForTargets = (nftIds && (await queryTokens(Chain.gno, nftIds))) || []
 
     const mintTokenAddresses =
-      tokens?.map((addressOrSymbol) => findToken(ethInfo, addressOrSymbol)) ||
+      tokens?.map((addressOrSymbol) => findToken(gnoInfo, addressOrSymbol)) ||
       []
 
     const permissions: Permission[] = [
@@ -277,10 +282,10 @@ export const arb1 = {
         }
       })
 
-    const tokensForTargets = (nftIds && (await queryTokens(nftIds))) || []
+    const tokensForTargets = (nftIds && (await queryTokens(Chain.arb1, nftIds))) || []
 
     const mintTokenAddresses =
-      tokens?.map((addressOrSymbol) => findToken(ethInfo, addressOrSymbol)) ||
+      tokens?.map((addressOrSymbol) => findToken(arb1Info, addressOrSymbol)) ||
       []
 
     const permissions: Permission[] = [
@@ -387,10 +392,10 @@ export const oeth = {
         }
       })
 
-    const tokensForTargets = (nftIds && (await queryTokens(nftIds))) || []
+    const tokensForTargets = (nftIds && (await queryTokens(Chain.oeth, nftIds))) || []
 
     const mintTokenAddresses =
-      tokens?.map((addressOrSymbol) => findToken(ethInfo, addressOrSymbol)) ||
+      tokens?.map((addressOrSymbol) => findToken(oethInfo, addressOrSymbol)) ||
       []
 
     const permissions: Permission[] = [
@@ -497,10 +502,10 @@ export const base = {
         }
       })
 
-    const tokensForTargets = (nftIds && (await queryTokens(nftIds))) || []
+    const tokensForTargets = (nftIds && (await queryTokens(Chain.base, nftIds))) || []
 
     const mintTokenAddresses =
-      tokens?.map((addressOrSymbol) => findToken(ethInfo, addressOrSymbol)) ||
+      tokens?.map((addressOrSymbol) => findToken(baseInfo, addressOrSymbol)) ||
       []
 
     const permissions: Permission[] = [

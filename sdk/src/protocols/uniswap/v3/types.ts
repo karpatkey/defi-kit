@@ -9,6 +9,7 @@ export type GnoToken = (typeof gnoInfo)[number]
 export type Arb1Token = (typeof arb1Info)[number]
 export type OethToken = (typeof oethInfo)[number]
 export type BaseToken = (typeof baseInfo)[number]
+export type Token = EthToken | GnoToken | Arb1Token | OethToken | BaseToken
 
 export const FEES = ["0.01%", "0.05%", "0.3%", "1%"] as const
 
