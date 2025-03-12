@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.0](https://github.com/karpatkey/defi-kit/compare/v2.12.1...v2.13.0) (2025-03-12)
+
+
+### Features
+
+* Extend Uniswap v3 to sidechains ([#394](https://github.com/karpatkey/defi-kit/issues/394)) ([5433c01](https://github.com/karpatkey/defi-kit/commit/5433c0158e1bbffb3ea9c98a139be4bf28ccd06f))
+
 ## [2.12.1](https://github.com/karpatkey/defi-kit/compare/v2.12.0...v2.12.1) (2025-03-11)
 
 
