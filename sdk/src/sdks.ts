@@ -15,4 +15,3 @@ export const sdks = {
   [Chain.base]: getBaseSdk(providers.baseProvider),
   [Chain.arb1]: getArbitrumOneSdk(providers.arb1Provider),
 }
-

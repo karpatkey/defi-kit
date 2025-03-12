@@ -62,7 +62,8 @@ export const eth = {
         }
       })
 
-    const tokensForTargets = (nftIds && (await queryTokens(Chain.eth, nftIds))) || []
+    const tokensForTargets =
+      (nftIds && (await queryTokens(Chain.eth, nftIds))) || []
 
     const mintTokenAddresses =
       tokens?.map((addressOrSymbol) => findToken(ethInfo, addressOrSymbol)) ||
@@ -172,7 +173,8 @@ export const gno = {
         }
       })
 
-    const tokensForTargets = (nftIds && (await queryTokens(Chain.gno, nftIds))) || []
+    const tokensForTargets =
+      (nftIds && (await queryTokens(Chain.gno, nftIds))) || []
 
     const mintTokenAddresses =
       tokens?.map((addressOrSymbol) => findToken(gnoInfo, addressOrSymbol)) ||
@@ -282,7 +284,8 @@ export const arb1 = {
         }
       })
 
-    const tokensForTargets = (nftIds && (await queryTokens(Chain.arb1, nftIds))) || []
+    const tokensForTargets =
+      (nftIds && (await queryTokens(Chain.arb1, nftIds))) || []
 
     const mintTokenAddresses =
       tokens?.map((addressOrSymbol) => findToken(arb1Info, addressOrSymbol)) ||
@@ -392,7 +395,8 @@ export const oeth = {
         }
       })
 
-    const tokensForTargets = (nftIds && (await queryTokens(Chain.oeth, nftIds))) || []
+    const tokensForTargets =
+      (nftIds && (await queryTokens(Chain.oeth, nftIds))) || []
 
     const mintTokenAddresses =
       tokens?.map((addressOrSymbol) => findToken(oethInfo, addressOrSymbol)) ||
@@ -502,7 +506,8 @@ export const base = {
         }
       })
 
-    const tokensForTargets = (nftIds && (await queryTokens(Chain.base, nftIds))) || []
+    const tokensForTargets =
+      (nftIds && (await queryTokens(Chain.base, nftIds))) || []
 
     const mintTokenAddresses =
       tokens?.map((addressOrSymbol) => findToken(baseInfo, addressOrSymbol)) ||
