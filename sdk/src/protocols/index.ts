@@ -51,6 +51,7 @@ export const gno = annotateAll(
     cowswap: cowSwap.gno,
     spark: spark.gno,
     stakewise_v3: stakeWiseV3.gno,
+    uniswap_v3: uniswapV3.gno,
   },
   "gno"
 )
@@ -61,6 +62,7 @@ export const arb1 = annotateAll(
     aura: aura.arb1,
     balancer: balancer.arb1,
     cowswap: cowSwap.arb1,
+    uniswap_v3: uniswapV3.arb1,
   },
   "arb1"
 )
@@ -70,6 +72,7 @@ export const oeth = annotateAll(
     aave_v3: aaveV3.oeth,
     aura: aura.oeth,
     balancer: balancer.oeth,
+    uniswap_v3: uniswapV3.oeth,
   },
   "oeth"
 )
@@ -79,6 +82,7 @@ export const base = annotateAll(
     aave_v3: aaveV3.base,
     aura: aura.base,
     balancer: balancer.base,
+    uniswap_v3: uniswapV3.base,
   },
   "base"
 )
