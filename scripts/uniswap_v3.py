@@ -20,7 +20,7 @@ MIN_TVL = {
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # subgraph_query_all_pools
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def subgraph_query_all_pools(blockchain, min_tvl_usd=0, min_volume_usd=0):
+def subgraph_query_all_pools(blockchain):
 
     # Initialize subgraph
     the_graph_apikey = os.getenv('THE_GRAPH_APIKEY')
@@ -69,7 +69,6 @@ def subgraph_query_all_pools(blockchain, min_tvl_usd=0, min_volume_usd=0):
                 volume_usd = float(pool["volumeUSD"])
                 tvl_usd = float(pool["totalValueLockedUSD"])
 
-                # if volume_usd >= min_volume_usd and tvl_usd >= min_tvl_usd:
                 pools[pool["id"]] = [
                     web3.to_checksum_address(pool["token0"]["id"]),
                     pool["token0"]["symbol"],
@@ -125,8 +124,8 @@ def protocol_data(blockchain, min_tvl_usd=0, min_volume_usd=0):
         dump(tokens, 'uniswap/v3', '_baseInfo.ts')
 
 
-protocol_data(Chain.ETHEREUM, min_tvl_usd=1_000_000, min_volume_usd=1_000_000)
-protocol_data(Chain.GNOSIS, min_tvl_usd=1, min_volume_usd=1)
-protocol_data(Chain.ARBITRUM, min_tvl_usd=1_000_000, min_volume_usd=1_000_000)
-protocol_data(Chain.OPTIMISM, min_tvl_usd=1_000_000, min_volume_usd=1_000_000)
-protocol_data(Chain.BASE, min_tvl_usd=1_000_000, min_volume_usd=1_000_000)
+protocol_data(Chain.ETHEREUM)
+protocol_data(Chain.GNOSIS)
+protocol_data(Chain.ARBITRUM)
+protocol_data(Chain.OPTIMISM)
+protocol_data(Chain.BASE)

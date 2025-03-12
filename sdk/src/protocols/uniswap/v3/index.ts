@@ -1,5 +1,12 @@
 import { queryTokens, findToken } from "./utils"
-import { EthToken, GnoToken, Arb1Token, OethToken, BaseToken, Fee } from "./types"
+import {
+  EthToken,
+  GnoToken,
+  Arb1Token,
+  OethToken,
+  BaseToken,
+  Fee,
+} from "./types"
 import { allowErc20Approve, oneOf } from "../../../conditions"
 import { contracts } from "../../../../eth-sdk/config"
 import { allow } from "zodiac-roles-sdk/kit"
