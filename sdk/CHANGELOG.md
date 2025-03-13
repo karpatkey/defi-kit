@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.1](https://github.com/karpatkey/defi-kit/compare/v2.13.0...v2.13.1) (2025-03-13)
+
+
+### Bug Fixes
+
+* Uniswap v3 script ([#396](https://github.com/karpatkey/defi-kit/issues/396)) ([a0263ef](https://github.com/karpatkey/defi-kit/commit/a0263ef18ba9467b94d25b96468e2c92a532194f))
+
 ## [2.13.0](https://github.com/karpatkey/defi-kit/compare/v2.12.1...v2.13.0) (2025-03-12)
 
 
