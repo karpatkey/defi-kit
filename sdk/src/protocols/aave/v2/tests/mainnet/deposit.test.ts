@@ -41,14 +41,14 @@ describe("aaveV2", () => {
       await expect(
         kit.asMember.aaveV2.aWeth.approve(
           contracts.mainnet.aaveV2.wrappedTokenGatewayV2,
-          parseEther("1")
+          parseEther("0.5")
         )
       ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.poolV2,
-          parseEther("1"),
+          parseEther("0.5"),
           wallets.avatar
         )
       ).not.toRevert()
@@ -56,7 +56,7 @@ describe("aaveV2", () => {
       await expect(
         kit.asMember.aaveV2.wrappedTokenGatewayV2.withdrawETH(
           contracts.mainnet.aaveV2.poolV2,
-          parseEther("1"),
+          parseEther("0.5"),
           wallets.member
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -124,7 +124,7 @@ describe("aaveV2", () => {
       await expect(
         kit.asMember.aaveV2.poolV2.withdraw(
           contracts.mainnet.usdc,
-          parseUnits("1000", 6),
+          parseUnits("500", 6),
           wallets.avatar
         )
       ).not.toRevert()
@@ -132,7 +132,7 @@ describe("aaveV2", () => {
       await expect(
         kit.asMember.aaveV2.poolV2.withdraw(
           contracts.mainnet.usdc,
-          parseUnits("1000", 6),
+          parseUnits("500", 6),
           wallets.member
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
