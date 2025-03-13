@@ -94,11 +94,11 @@ def subgraph_query_all_pools(blockchain):
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # protocol_data
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def protocol_data(blockchain, min_tvl_usd=0, min_volume_usd=0):
+def protocol_data(blockchain):
     
     tokens = []
 
-    pools = subgraph_query_all_pools(blockchain, min_tvl_usd=min_tvl_usd, min_volume_usd=min_volume_usd)
+    pools = subgraph_query_all_pools(blockchain)
 
     if pools:
         pools = dict(sorted(pools.items(), key=lambda item: item[1][4], reverse=True))
