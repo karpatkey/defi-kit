@@ -208,6 +208,9 @@ export const contracts = {
     stakeWiseV3: {
       vault: "0x00c3C5227402BC4cF383Ae2E6931394dD1e720B4", // GnoVault (Implementation)
     },
+    uniswapV3: {
+      positionsNft: "0xAE8fbE656a77519a7490054274910129c9244FA3",
+    },
     comp: "0xDf6FF92bfDC1e8bE45177DC1f4845d391D3ad8fD",
     gno: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
     usdc: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
@@ -249,6 +252,9 @@ export const contracts = {
     cowSwap: {
       orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
     },
+    uniswapV3: {
+      positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+    },
     weth: "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
     usdc: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
     gatewayRouter: "0x5288c571Fd7aD117beA99bF60FE0846C4E84F933",
@@ -283,6 +289,9 @@ export const contracts = {
     compoundV3: {
       cUsdcV3: "0x2e44e174f7D53F0212823acC11C01A11d58c5bCB",
       cometRewards: "0x443EA0340cb75a160F31A440722dec7b5bc3C2E9",
+    },
+    uniswapV3: {
+      positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
     },
     weth: "0x4200000000000000000000000000000000000006",
     usdc: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
@@ -319,6 +328,9 @@ export const contracts = {
     compoundV3: {
       cUsdcV3: "0xb125E6687d4313864e53df431d5425969c15Eb2F",
       cometRewards: "0x123964802e6ABabBE1Bc9547D72Ef1B69B00A6b1",
+    },
+    uniswapV3: {
+      positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
     },
     usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     weth: "0x4200000000000000000000000000000000000006",
