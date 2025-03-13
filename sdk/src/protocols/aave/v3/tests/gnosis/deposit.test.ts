@@ -12,7 +12,7 @@ describe("aaveV3", () => {
     beforeAll(async () => {
       await applyPermissions(
         Chain.gno,
-        await gno.deposit({ targets: ["XDAI", "USDC", "WETH"] })
+        await gno.deposit({ targets: ["XDAI", "USDC"] })
       )
     })
 
