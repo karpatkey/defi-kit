@@ -62,9 +62,9 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayCoreV3.repayETH(
           contracts.mainnet.aaveV3.poolCoreV3,
-          parseEther("0.5"),
+          parseEther("1"),
           wallets.avatar,
-          { value: parseEther("0.5") }
+          { value: parseEther("1") }
         )
       ).not.toRevert()
     })
@@ -92,21 +92,20 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.usdc.approve(
           contracts.mainnet.aaveV3.poolCoreV3,
-          parseUnits("50", 6)
+          parseUnits("100", 6)
         )
       ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolCoreV3.repay(
           contracts.mainnet.usdc,
-          parseUnits("50", 6),
+          parseUnits("100", 6),
           2,
           wallets.avatar
         )
       ).not.toRevert()
     })
 
-    // Roles Module testing without executing transactions
     // Test with ETH
     it("allows borrowing ETH from avatar", async () => {
       await expect(
@@ -114,7 +113,7 @@ describe("aaveV3", () => {
           contracts.mainnet.aaveV3.wrappedTokenGatewayCoreV3,
           parseEther("1")
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayCoreV3.borrowETH(
@@ -122,7 +121,7 @@ describe("aaveV3", () => {
           parseEther("1"),
           0
         )
-      ).toBeAllowed()
+      ).not.toRevert()
     })
 
     it("only allows repaying ETH from avatar", async () => {
@@ -133,7 +132,7 @@ describe("aaveV3", () => {
           wallets.avatar,
           { value: parseEther("1") }
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayCoreV3.repayETH(
@@ -150,17 +149,17 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.poolCoreV3.borrow(
           contracts.mainnet.usdc,
-          parseUnits("10000", 6),
+          parseUnits("100", 6),
           2,
           0,
           wallets.avatar
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolCoreV3.borrow(
           contracts.mainnet.usdc,
-          parseUnits("10000", 6),
+          parseUnits("100", 6),
           2,
           0,
           wallets.member
@@ -172,30 +171,30 @@ describe("aaveV3", () => {
       await stealErc20(
         Chain.eth,
         contracts.mainnet.usdc,
-        parseUnits("10000", 6),
+        parseUnits("100", 6),
         contracts.mainnet.balancer.vault
       )
 
       await expect(
         kit.asMember.usdc.approve(
           contracts.mainnet.aaveV3.poolCoreV3,
-          parseUnits("10000", 6)
+          parseUnits("100", 6)
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolCoreV3.repay(
           contracts.mainnet.usdc,
-          parseUnits("10000", 6),
+          parseUnits("100", 6),
           2,
           wallets.avatar
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolCoreV3.repay(
           contracts.mainnet.usdc,
-          parseUnits("10000", 6),
+          parseUnits("100", 6),
           2,
           wallets.member
         )

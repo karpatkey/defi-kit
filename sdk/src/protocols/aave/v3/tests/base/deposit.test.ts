@@ -1,10 +1,10 @@
 import { base } from "../../index"
 import { wallets } from "../../../../../../test/wallets"
-import { applyPermissions } from "../../../../../../test/helpers"
+import { applyPermissions, stealErc20 } from "../../../../../../test/helpers"
 import { contracts } from "../../../../../../eth-sdk/config"
 import { Status } from "../../../../../../test/types"
 import { base as kit } from "../../../../../../test/kit"
-import { parseEther, parseUnits } from "ethers"
+import { parseEther } from "ethers"
 import { Chain } from "../../../../../index"
 
 describe("aaveV3", () => {
@@ -25,7 +25,7 @@ describe("aaveV3", () => {
           0,
           { value: parseEther("1") }
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.depositETH(
@@ -41,22 +41,22 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.aBasWeth.approve(
           contracts.base.aaveV3.wrappedTokenGatewayV3,
-          parseEther("1")
+          parseEther("0.5")
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.withdrawETH(
           contracts.base.aaveV3.poolV3,
-          parseEther("1"),
+          parseEther("0.5"),
           wallets.avatar
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.withdrawETH(
           contracts.base.aaveV3.poolV3,
-          parseEther("1"),
+          parseEther("0.5"),
           wallets.member
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
@@ -64,9 +64,19 @@ describe("aaveV3", () => {
 
     // Test with WETH
     it("only allows depositing WETH on behalf of avatar", async () => {
+      await stealErc20(
+        Chain.base,
+        contracts.base.weth,
+        parseEther("1"),
+        contracts.base.balancer.vault
+      )
+
       await expect(
-        kit.asMember.weth.approve(contracts.base.aaveV3.poolV3, parseEther("1"))
-      ).toBeAllowed()
+        kit.asMember.weth.approve(
+          contracts.base.aaveV3.poolV3, 
+          parseEther("1")
+        )
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolV3.supply(
@@ -75,7 +85,7 @@ describe("aaveV3", () => {
           wallets.avatar,
           0
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolV3.supply(
@@ -91,7 +101,7 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.poolV3.withdraw(
           contracts.base.weth,
-          parseUnits("1", 6),
+          parseEther("0.5"),
           wallets.avatar
         )
       ).not.toRevert()
@@ -99,7 +109,7 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.poolV3.withdraw(
           contracts.base.weth,
-          parseUnits("1", 6),
+          parseEther("0.5"),
           wallets.member
         )
       ).toBeForbidden(Status.ParameterNotAllowed)

@@ -108,14 +108,14 @@ describe("aaveV3", () => {
     })
 
     // Roles Module testing without executing transactions
-    // Test with ETH
+    // Test with XDAI
     it("allows borrowing XDAI from avatar", async () => {
       await expect(
         kit.asMember.aaveV3.variableDebtWXDAI.approveDelegation(
           contracts.gnosis.aaveV3.wrappedTokenGatewayV3,
           parseEther("1")
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.borrowETH(
@@ -123,7 +123,7 @@ describe("aaveV3", () => {
           parseEther("1"),
           0
         )
-      ).toBeAllowed()
+      ).not.toRevert()
     })
 
     it("only allows repaying XDAI from avatar", async () => {
@@ -134,7 +134,7 @@ describe("aaveV3", () => {
           wallets.avatar,
           { value: parseEther("1") }
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.repayETH(
@@ -151,17 +151,17 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.poolV3.borrow(
           contracts.gnosis.usdc,
-          parseUnits("10000", 6),
+          parseUnits("100", 6),
           2,
           0,
           wallets.avatar
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolV3.borrow(
           contracts.gnosis.usdc,
-          parseUnits("10000", 6),
+          parseUnits("100", 6),
           2,
           0,
           wallets.member
@@ -173,29 +173,29 @@ describe("aaveV3", () => {
       await stealErc20(
         Chain.gno,
         contracts.gnosis.usdc,
-        parseUnits("1000", 6),
+        parseUnits("100", 6),
         contracts.gnosis.balancer.vault
       )
       await expect(
         kit.asMember.usdc.approve(
           contracts.gnosis.aaveV3.poolV3,
-          parseUnits("1000", 6)
+          parseUnits("100", 6)
         )
       ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolV3.repay(
           contracts.gnosis.usdc,
-          parseUnits("10000", 6),
+          parseUnits("100", 6),
           2,
           wallets.avatar
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolV3.repay(
           contracts.gnosis.usdc,
-          parseUnits("10000", 6),
+          parseUnits("100", 6),
           2,
           wallets.member
         )

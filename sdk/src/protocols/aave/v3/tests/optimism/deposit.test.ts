@@ -1,6 +1,6 @@
 import { oeth } from "../../index"
 import { wallets } from "../../../../../../test/wallets"
-import { applyPermissions } from "../../../../../../test/helpers"
+import { applyPermissions, stealErc20 } from "../../../../../../test/helpers"
 import { contracts } from "../../../../../../eth-sdk/config"
 import { Status } from "../../../../../../test/types"
 import { oeth as kit } from "../../../../../../test/kit"
@@ -25,7 +25,7 @@ describe("aaveV3", () => {
           0,
           { value: parseEther("1") }
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.depositETH(
@@ -43,7 +43,7 @@ describe("aaveV3", () => {
           contracts.optimism.aaveV3.wrappedTokenGatewayV3,
           parseEther("1")
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.withdrawETH(
@@ -51,7 +51,7 @@ describe("aaveV3", () => {
           parseEther("1"),
           wallets.avatar
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.withdrawETH(
@@ -64,12 +64,19 @@ describe("aaveV3", () => {
 
     // Test with WETH
     it("only allows depositing WETH on behalf of avatar", async () => {
+      await stealErc20(
+        Chain.oeth,
+        contracts.optimism.weth,
+        parseEther("1"),
+        contracts.optimism.balancer.vault
+      )
+
       await expect(
         kit.asMember.weth.approve(
           contracts.optimism.aaveV3.poolV3,
           parseEther("1")
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolV3.supply(
@@ -78,7 +85,7 @@ describe("aaveV3", () => {
           wallets.avatar,
           0
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolV3.supply(
@@ -119,7 +126,7 @@ describe("aaveV3", () => {
         kit.asMember.aaveV3.poolV3["withdraw(bytes32)"](
           "0x0000000000000000000000000000ffffffffffffffffffffffffffffffff0004"
         )
-      ).toBeAllowed()
+      ).not.toRevert()
     })
   })
 })

@@ -1,6 +1,6 @@
 import { arb1 } from "../../index"
 import { wallets } from "../../../../../../test/wallets"
-import { applyPermissions } from "../../../../../../test/helpers"
+import { applyPermissions, stealErc20 } from "../../../../../../test/helpers"
 import { contracts } from "../../../../../../eth-sdk/config"
 import { Status } from "../../../../../../test/types"
 import { arb1 as kit } from "../../../../../../test/kit"
@@ -25,7 +25,7 @@ describe("aaveV3", () => {
           0,
           { value: parseEther("1") }
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.depositETH(
@@ -43,7 +43,7 @@ describe("aaveV3", () => {
           contracts.arbitrumOne.aaveV3.wrappedTokenGatewayV3,
           parseEther("1")
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.withdrawETH(
@@ -51,7 +51,7 @@ describe("aaveV3", () => {
           parseEther("1"),
           wallets.avatar
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.withdrawETH(
@@ -64,12 +64,19 @@ describe("aaveV3", () => {
 
     // Test with WETH
     it("only allows depositing WETH on behalf of avatar", async () => {
+      await stealErc20(
+        Chain.arb1,
+        contracts.arbitrumOne.weth,
+        parseEther("1"),
+        contracts.arbitrumOne.balancer.vault
+      )
+      
       await expect(
         kit.asMember.weth.approve(
           contracts.arbitrumOne.aaveV3.poolV3,
           parseEther("1")
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolV3.supply(
@@ -78,7 +85,7 @@ describe("aaveV3", () => {
           wallets.avatar,
           0
         )
-      ).toBeAllowed()
+      ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.poolV3.supply(
@@ -90,36 +97,36 @@ describe("aaveV3", () => {
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
-    it("allow withdrawing WETH", async () => {
-      await expect(
-        kit.asMember.aaveV3.poolV3["withdraw(bytes32)"](
-          "0x0000000000000000000000000000ffffffffffffffffffffffffffffffff0004"
-        )
-      ).toBeAllowed()
-    })
-
     it("allow setting the deposited WETH as collateral", async () => {
       let reserveConfig: Array<any> =
         await kit.asAvatar.aaveV3.protocolDataProviderV3.getReserveConfigurationData(
-          contracts.base.weth
+          contracts.arbitrumOne.weth
         )
       const collateralizable: boolean = reserveConfig[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(
           kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
-            contracts.base.weth,
+            contracts.arbitrumOne.weth,
             true
           )
         ).not.toRevert()
       } else {
         await expect(
           kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
-            contracts.base.weth,
+            contracts.arbitrumOne.weth,
             true
           )
         ).toRevert()
       }
+    })
+
+    it("allow withdrawing WETH", async () => {
+      await expect(
+        kit.asMember.aaveV3.poolV3["withdraw(bytes32)"](
+          "0x0000000000000000000000000000ffffffffffffffffffffffffffffffff0004"
+        )
+      ).not.toRevert()
     })
   })
 })

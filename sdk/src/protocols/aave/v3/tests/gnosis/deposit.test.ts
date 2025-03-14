@@ -16,6 +16,7 @@ describe("aaveV3", () => {
       )
     })
 
+    // Test with XDAI
     it("only allows depositing XDAI on behalf of avatar", async () => {
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.depositETH(
@@ -60,28 +61,31 @@ describe("aaveV3", () => {
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
-    it("allow setting the deposited GNO as collateral", async () => {
+    it("allow setting the deposited XDAI as collateral", async () => {
       let reserveConfig: Array<any> =
-        await kit.asAvatar.aaveV3.poolV3.getReserveData(contracts.gnosis.gno)
+        await kit.asAvatar.aaveV3.protocolDataProviderV3.getReserveConfigurationData(
+          contracts.gnosis.wxdai
+        )
       const collateralizable: boolean = reserveConfig[5]
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(
           kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
-            contracts.gnosis.gno,
+            contracts.gnosis.wxdai,
             true
           )
         ).not.toRevert()
       } else {
         await expect(
           kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
-            contracts.gnosis.gno,
+            contracts.gnosis.wxdai,
             true
           )
         ).toRevert()
       }
     })
-    //TEST WITH USDC
+
+    // Test with USDC
     it("only allows depositing USDC on behalf of avatar", async () => {
       await stealErc20(
         Chain.gno,
