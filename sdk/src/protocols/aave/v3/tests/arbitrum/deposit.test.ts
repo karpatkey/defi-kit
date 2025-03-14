@@ -70,7 +70,7 @@ describe("aaveV3", () => {
         parseEther("1"),
         contracts.arbitrumOne.balancer.vault
       )
-      
+
       await expect(
         kit.asMember.weth.approve(
           contracts.arbitrumOne.aaveV3.poolV3,

@@ -50,7 +50,7 @@ describe("aaveV3", () => {
           parseEther("1")
         )
       ).not.toRevert()
-      
+
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.borrowETH(
           contracts.arbitrumOne.aaveV3.poolV3,

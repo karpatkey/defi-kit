@@ -72,10 +72,7 @@ describe("aaveV3", () => {
       )
 
       await expect(
-        kit.asMember.weth.approve(
-          contracts.base.aaveV3.poolV3, 
-          parseEther("1")
-        )
+        kit.asMember.weth.approve(contracts.base.aaveV3.poolV3, parseEther("1"))
       ).not.toRevert()
 
       await expect(
