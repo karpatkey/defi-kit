@@ -176,7 +176,7 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.poolCoreV3.withdraw(
           contracts.mainnet.usdc,
-          parseUnits("1000", 6),
+          parseUnits("500", 6),
           wallets.avatar
         )
       ).not.toRevert()
@@ -184,7 +184,7 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.poolCoreV3.withdraw(
           contracts.mainnet.usdc,
-          parseUnits("1000", 6),
+          parseUnits("500", 6),
           wallets.member
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
