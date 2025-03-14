@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.2](https://github.com/karpatkey/defi-kit/compare/v2.13.1...v2.13.2) (2025-03-14)
+
+
+### Bug Fixes
+
+* Add Aave v3 test for sidechains ([#388](https://github.com/karpatkey/defi-kit/issues/388)) ([0e8f405](https://github.com/karpatkey/defi-kit/commit/0e8f405f5c7989cedb5349fce8dfa130878f9061))
+
 ## [2.13.1](https://github.com/karpatkey/defi-kit/compare/v2.13.0...v2.13.1) (2025-03-13)
 
 
