@@ -70,10 +70,6 @@ export default [
     symbol: "HEGIC",
   },
   {
-    address: "0xe80772Eaf6e2E18B651F160Bc9158b2A5caFCA65",
-    symbol: "USD+",
-  },
-  {
     address: "0x5979D7b546E38E414F7E9822514be443A4800529",
     symbol: "wstETH",
   },

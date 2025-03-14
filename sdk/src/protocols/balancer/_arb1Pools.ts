@@ -220,7 +220,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
       {
@@ -416,7 +416,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
       {
@@ -446,6 +446,25 @@ export default [
     ],
   },
   {
+    bpt: "0x43837Db3216980957B5Af229E28DD532C6Cda520",
+    id: "0x43837db3216980957b5af229e28dd532c6cda5200002000000000000000005ed",
+    name: "ECLP-WETH-GYD",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x444E1C6A039Ea14adcAD5E4cAa73a12cC40D9Aa0",
     id: "0x444e1c6a039ea14adcad5e4caa73a12cc40d9aa00002000000000000000005e9",
     name: "ECLP-WETH-USDT",
@@ -459,7 +478,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],
@@ -908,30 +927,6 @@ export default [
     ],
   },
   {
-    bpt: "0x848a7ff84Cf73D2534c3Dac6ab381E177A1Cff24",
-    id: "0x848a7ff84cf73d2534c3dac6ab381e177a1cff240001000000000000000004bb",
-    name: "33108-33WETH-33USDC",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x09cCB590404C4784cce1AAED486280BC5Dc4750a",
-        symbol: "108",
-        id: "0x",
-      },
-      {
-        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-        symbol: "USDC",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x85564aF67760063B994599B640552614238C9Ee6",
     id: "0x85564af67760063b994599b640552614238c9ee60000000000000000000005e3",
     name: "USDX/USDT",
@@ -945,7 +940,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],
@@ -1203,6 +1198,25 @@ export default [
     ],
   },
   {
+    bpt: "0xa01364561eE7d9EC7f234Af070993Ee6baE9B2a4",
+    id: "0xa01364561ee7d9ec7f234af070993ee6bae9b2a40002000000000000000005ec",
+    name: "ECLP-WETH-USDT",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+        symbol: "USD₮0",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0xA83B8D30F61D7554aD425D8067D8bA6EaeB6b042",
     id: "0xa83b8d30f61d7554ad425d8067d8ba6eaeb6b042000200000000000000000525",
     name: "70WETH-30ARB",
@@ -1317,25 +1331,6 @@ export default [
     ],
   },
   {
-    bpt: "0xB61371Ab661B1ACec81C699854D2f911070C059E",
-    id: "0xb61371ab661b1acec81c699854d2f911070c059e000000000000000000000516",
-    name: "ezETH/wstETH",
-    type: "ComposableStable",
-    gauge: "0x7C4A6B0c16cA99e65822Cc531403cE2f8A20A912",
-    tokens: [
-      {
-        address: "0x2416092f143378750bb29b79eD961ab195CcEea5",
-        symbol: "ezETH",
-        id: "0x",
-      },
-      {
-        address: "0x5979D7b546E38E414F7E9822514be443A4800529",
-        symbol: "wstETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xb6911f80B1122f41C19B299a69dCa07100452bf9",
     id: "0xb6911f80b1122f41c19b299a69dca07100452bf90002000000000000000004ba",
     name: "ECLP-USDC-USDT",
@@ -1349,7 +1344,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],
@@ -1668,7 +1663,7 @@ export default [
       },
       {
         address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
+        symbol: "USD₮0",
         id: "0x",
       },
     ],

@@ -14,12 +14,24 @@ export default [
     symbol: "TOSHI",
   },
   {
+    address: "0xF6e932Ca12afa26665dC4dDE7e27be02A7c02e50",
+    symbol: "MOCHI",
+  },
+  {
     address: "0x6921B130D297cc43754afba22e5EAc0FBf8Db75b",
     symbol: "doginme",
   },
   {
+    address: "0x5baBfc2F240bc5De90Eb7e19D789412dB1dEc402",
+    symbol: "CIRCLE",
+  },
+  {
     address: "0x532f27101965dd16442E59d40670FaF5eBB142E4",
     symbol: "BRETT",
+  },
+  {
+    address: "0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe",
+    symbol: "HIGHER",
   },
   {
     address: "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
@@ -90,12 +102,20 @@ export default [
     symbol: "SIMMI",
   },
   {
+    address: "0x20DD04c17AFD5c9a8b3f2cdacaa8Ee7907385BEF",
+    symbol: "NATIVE",
+  },
+  {
     address: "0x20d704099B62aDa091028bcFc44445041eD16f09",
     symbol: "CHAOS",
   },
   {
     address: "0x22aF33FE49fD1Fa80c7149773dDe5890D3c76F3b",
     symbol: "BNKR",
+  },
+  {
+    address: "0x333333C465a19C85f85c6CfbED7B16b0B26E3333",
+    symbol: "ORA",
   },
   {
     address: "0x844C03892863B0e3E00E805E41B34527044d5c72",
@@ -122,18 +142,6 @@ export default [
     symbol: "FLAY",
   },
   {
-    address: "0x1B68244B100A6713ca7F540697b1bE12148a8bf9",
-    symbol: "YES",
-  },
-  {
-    address: "0x3ec2156D4c0A9CBdAB4a016633b7BcF6a8d68Ea2",
-    symbol: "DRB",
-  },
-  {
-    address: "0x937a1cFAF0A3d9f5Dc4D0927F72ee5e3e5F82a00",
-    symbol: "Cocoro",
-  },
-  {
     address: "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
     symbol: "AERO",
   },
@@ -144,6 +152,10 @@ export default [
   {
     address: "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
     symbol: "DEGEN",
+  },
+  {
+    address: "0x13741C5dF9aB03E7Aa9Fb3Bf1f714551dD5A5F8a",
+    symbol: "NOGS",
   },
   {
     address: "0xAB9b9608Ba2D9cc8CB50227a3814AF2C873B6F95",
@@ -522,16 +534,16 @@ export default [
     symbol: "ACT",
   },
   {
+    address: "0x2D99436Dea34a1c3B15D45db4394C8C01251EFd6",
+    symbol: "DOG",
+  },
+  {
     address: "0x8b9A1016fAE4028b93eBd440E5DEF2c750825c2b",
     symbol: "STAR10",
   },
   {
     address: "0x8d34d5273945e04c9465480f7737A07679B718e5",
     symbol: "BTRUMP",
-  },
-  {
-    address: "0xfDc6aBaA69f0df71FF4Bb6BdFeC34188796Ee07A",
-    symbol: "GrokCoin",
   },
   {
     address: "0xDF66508F76F97608DA6AE1b14c86eb3cB7b00ab4",
