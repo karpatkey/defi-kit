@@ -14,12 +14,20 @@ export default [
     symbol: "TOSHI",
   },
   {
+    address: "0xF6e932Ca12afa26665dC4dDE7e27be02A7c02e50",
+    symbol: "MOCHI",
+  },
+  {
     address: "0x6921B130D297cc43754afba22e5EAc0FBf8Db75b",
     symbol: "doginme",
   },
   {
     address: "0x532f27101965dd16442E59d40670FaF5eBB142E4",
     symbol: "BRETT",
+  },
+  {
+    address: "0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe",
+    symbol: "HIGHER",
   },
   {
     address: "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
@@ -90,6 +98,10 @@ export default [
     symbol: "SIMMI",
   },
   {
+    address: "0x20DD04c17AFD5c9a8b3f2cdacaa8Ee7907385BEF",
+    symbol: "NATIVE",
+  },
+  {
     address: "0x20d704099B62aDa091028bcFc44445041eD16f09",
     symbol: "CHAOS",
   },
@@ -124,14 +136,6 @@ export default [
   {
     address: "0x1B68244B100A6713ca7F540697b1bE12148a8bf9",
     symbol: "YES",
-  },
-  {
-    address: "0x3ec2156D4c0A9CBdAB4a016633b7BcF6a8d68Ea2",
-    symbol: "DRB",
-  },
-  {
-    address: "0x937a1cFAF0A3d9f5Dc4D0927F72ee5e3e5F82a00",
-    symbol: "Cocoro",
   },
   {
     address: "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
@@ -522,16 +526,16 @@ export default [
     symbol: "ACT",
   },
   {
+    address: "0x2D99436Dea34a1c3B15D45db4394C8C01251EFd6",
+    symbol: "DOG",
+  },
+  {
     address: "0x8b9A1016fAE4028b93eBd440E5DEF2c750825c2b",
     symbol: "STAR10",
   },
   {
     address: "0x8d34d5273945e04c9465480f7737A07679B718e5",
     symbol: "BTRUMP",
-  },
-  {
-    address: "0xfDc6aBaA69f0df71FF4Bb6BdFeC34188796Ee07A",
-    symbol: "GrokCoin",
   },
   {
     address: "0xDF66508F76F97608DA6AE1b14c86eb3cB7b00ab4",

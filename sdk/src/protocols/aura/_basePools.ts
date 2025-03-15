@@ -257,4 +257,20 @@ export default [
     ],
     rewarder: "0x636fCa3ADC5D614E15F5C5a574fFd2CAEE578126",
   },
+  {
+    name: "20WETH-80IMO",
+    id: "18",
+    bpt: "0x007bb7a4bfc214DF06474E39142288E99540f2b3",
+    tokens: [
+      {
+        address: "0x4200000000000000000000000000000000000006",
+        symbol: "WETH",
+      },
+      {
+        address: "0x5A7a2bf9fFae199f088B25837DcD7E115CF8E1bb",
+        symbol: "IMO",
+      },
+    ],
+    rewarder: "0x0Ec191f765C0a1611aB3A4cdB839A66D2033e476",
+  },
 ] as const
