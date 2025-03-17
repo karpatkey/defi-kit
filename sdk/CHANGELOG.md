@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.5](https://github.com/karpatkey/defi-kit/compare/v2.13.4...v2.13.5) (2025-03-17)
+
+
+### Bug Fixes
+
+* Circle v1 receive ([#402](https://github.com/karpatkey/defi-kit/issues/402)) ([884e548](https://github.com/karpatkey/defi-kit/commit/884e54822fb1e2b92de011940d3ef801fac8d8d9))
+
 ## [2.13.4](https://github.com/karpatkey/defi-kit/compare/v2.13.3...v2.13.4) (2025-03-17)
 
 
