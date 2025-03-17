@@ -2,7 +2,7 @@ import { eth } from "."
 import { wallets } from "../../../../test/wallets"
 import { applyPermissions } from "../../../../test/helpers"
 import { eth as kit } from "../../../../test/kit"
-import { Chain } from "../../../../src"
+import { Chain } from "../../../../src" 
 
 const recipient = "0xC01318baB7ee1f5ba734172bF7718b5DC6Ec90E1"
 
