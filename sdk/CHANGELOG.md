@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.13.4](https://github.com/karpatkey/defi-kit/compare/v2.13.3...v2.13.4) (2025-03-17)
+
+
+### Bug Fixes
+
+* protocol databases ([#400](https://github.com/karpatkey/defi-kit/issues/400)) ([d0eb20a](https://github.com/karpatkey/defi-kit/commit/d0eb20add1104cf1bf456c0e973b5e1160340b3d))
+
 ## [2.13.3](https://github.com/karpatkey/defi-kit/compare/v2.13.2...v2.13.3) (2025-03-17)
 
 
