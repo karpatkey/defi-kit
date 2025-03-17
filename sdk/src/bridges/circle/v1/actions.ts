@@ -94,7 +94,11 @@ export const receive = (
           c.bitmask({
             shift: 0,
             mask: "0xffffffffffffffffffffffff",
-             value: "0x" + "000000000000" + sourceChain.domain.padStart(8, "0") + destinationChain.domain.padStart(8, "0"),
+            value:
+              "0x" +
+              "000000000000" +
+              sourceChain.domain.padStart(8, "0") +
+              destinationChain.domain.padStart(8, "0"),
           }),
           // skip nonce 8 bytes
           // sender: 32 bytes
