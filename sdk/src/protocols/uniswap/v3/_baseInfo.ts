@@ -14,12 +14,24 @@ export default [
     symbol: "TOSHI",
   },
   {
+    address: "0xF6e932Ca12afa26665dC4dDE7e27be02A7c02e50",
+    symbol: "MOCHI",
+  },
+  {
     address: "0x6921B130D297cc43754afba22e5EAc0FBf8Db75b",
     symbol: "doginme",
   },
   {
+    address: "0x5baBfc2F240bc5De90Eb7e19D789412dB1dEc402",
+    symbol: "CIRCLE",
+  },
+  {
     address: "0x532f27101965dd16442E59d40670FaF5eBB142E4",
     symbol: "BRETT",
+  },
+  {
+    address: "0x0578d8A44db98B23BF096A382e016e29a5Ce0ffe",
+    symbol: "HIGHER",
   },
   {
     address: "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
@@ -528,10 +540,6 @@ export default [
   {
     address: "0x8d34d5273945e04c9465480f7737A07679B718e5",
     symbol: "BTRUMP",
-  },
-  {
-    address: "0xfDc6aBaA69f0df71FF4Bb6BdFeC34188796Ee07A",
-    symbol: "GrokCoin",
   },
   {
     address: "0xDF66508F76F97608DA6AE1b14c86eb3cB7b00ab4",

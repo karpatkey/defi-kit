@@ -350,6 +350,30 @@ export default [
     ],
   },
   {
+    bpt: "0x19DF5BB37380186bC8EFc5Ad91516373A2C5459f",
+    id: "0x19df5bb37380186bc8efc5ad91516373a2c5459f000200000000000000000698",
+    name: "20B-baoETH-ETH-BPT-80BAO",
+    type: "Weighted",
+    gauge: "0x7C02ac2BAd481dC4E566D3D54359244f381d58dC",
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0xf4edfad26EE0D23B69CA93112eccE52704E0006f",
+        symbol: "baoETH",
+        id: "0x",
+      },
+      {
+        address: "0xCe391315b414D4c7555956120461D21808A69F3A",
+        symbol: "BAO",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x1A44E35d5451E0b78621A1B3e7a53DFaA306B1D0",
     id: "0x1a44e35d5451e0b78621a1b3e7a53dfaa306b1d000000000000000000000051b",
     name: "B-baoETH-ETH-BPT",
@@ -1309,25 +1333,6 @@ export default [
     ],
   },
   {
-    bpt: "0x56bc9d9987edeC2fC6e1990e27AF4A0987b53096",
-    id: "0x56bc9d9987edec2fc6e1990e27af4a0987b53096000200000000000000000686",
-    name: "99goldCOMP-1WETH",
-    type: "Weighted",
-    gauge: "0x50BE312DFe134a3076f913d8E085c4055421DE3D",
-    tokens: [
-      {
-        address: "0x939CED8875d1Cd75D8b9aca439e6526e9A822A48",
-        symbol: "goldCOMP",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x57766212638c425e9CB0C6D6e1683dda369C0FFF",
     id: "0x57766212638c425e9cb0c6d6e1683dda369c0fff000200000000000000000678",
     name: "80GEM-20WETH",
@@ -2141,25 +2146,6 @@ export default [
     ],
   },
   {
-    bpt: "0x8405DC5Ed3789fDBEc5A7f9366b977cB0B023F9f",
-    id: "0x8405dc5ed3789fdbec5a7f9366b977cb0b023f9f0002000000000000000002b7",
-    name: "20USDC-80FLOAT",
-    type: "Weighted",
-    gauge: "0x9D5d7CF33758f92Fb0F79B7b4A90EFF37ba7f505",
-    tokens: [
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-        id: "0x",
-      },
-      {
-        address: "0xb05097849BCA421A3f51B249BA6CCa4aF4b97cb9",
-        symbol: "FLOAT",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x844Ba71D4902Ed3dE091112951b9c4B4D25A09DD",
     id: "0x844ba71d4902ed3de091112951b9c4b4d25a09dd00020000000000000000014b",
     name: "Balancer 90 EEFI 10 WETH",
@@ -2944,25 +2930,6 @@ export default [
       {
         address: "0x9559Aaa82d9649C7A7b220E7c461d2E74c9a3593",
         symbol: "rETH",
-        id: "0x",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xB209468FC8C99360657D48238e1a7cf0B13362b6",
-    id: "0xb209468fc8c99360657d48238e1a7cf0b13362b60002000000000000000005f6",
-    name: "80SWIV-20WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0xbf30461210b37012783957D90dC26B95Ce3b6f2d",
-        symbol: "SWIV",
         id: "0x",
       },
       {
@@ -4110,25 +4077,6 @@ export default [
       {
         address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         symbol: "USDC",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xf8C4CD95c7496cB7c8d97202Cf7e5b8DA2204C2b",
-    id: "0xf8c4cd95c7496cb7c8d97202cf7e5b8da2204c2b00020000000000000000039e",
-    name: "80psdnOCEAN-20OCEAN",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x51Fa2efd62ee56a493f24AE963eAce7D0051929E",
-        symbol: "psdnOCEAN",
-        id: "0x",
-      },
-      {
-        address: "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
-        symbol: "OCEAN",
         id: "0x",
       },
     ],
