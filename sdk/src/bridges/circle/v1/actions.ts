@@ -73,17 +73,17 @@ export const bridge = (
 
 export const receive = (
   sourceChain: CircleChain,
-  destinationChain: Chain,
+  destinationChain: CircleChain,
   sender: `0x${string}`,
   recipient: `0x${string}`
 ) => {
   const { tokenMessenger: sourceTokenMessenger, usdc: sourceUsdc } =
-    _getAddresses(sourceChain.chain)
+    _getAddresses(sourceChain.chain as Chain)
 
   const {
     tokenMessenger: destinationTokenMessenger,
     messageTransmitter: destinationMessageTransmitter,
-  } = _getAddresses(destinationChain)
+  } = _getAddresses(destinationChain.chain as Chain)
   return [
     {
       ...allow.mainnet.circleV1.messageTransmitter.receiveMessage(
@@ -94,7 +94,11 @@ export const receive = (
           c.bitmask({
             shift: 0,
             mask: "0xffffffffffffffffffffffff",
-            value: "0x000000000000000300000000",
+            value:
+              "0x" +
+              "000000000000" +
+              sourceChain.domain.padStart(8, "0") +
+              destinationChain.domain.padStart(8, "0"),
           }),
           // skip nonce 8 bytes
           // sender: 32 bytes
