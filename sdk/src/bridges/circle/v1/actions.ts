@@ -96,7 +96,7 @@ export const receive = (
             mask: "0xffffffffffffffffffffffff",
             value:
               "0x" +
-              "000000000000" +
+              "00000000" +
               sourceChain.domain.padStart(8, "0") +
               destinationChain.domain.padStart(8, "0"),
           }),
