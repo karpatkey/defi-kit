@@ -49,7 +49,7 @@ export const eth = {
     sender: `0x${string}`
   }) => {
     return targets.flatMap((target) =>
-      receive(findChain(target), Chain.eth, sender, recipient)
+      receive(findChain(target), findChain(Chain.eth), sender, recipient)
     )
   },
 }
@@ -85,7 +85,7 @@ export const arb1 = {
     sender: `0x${string}`
   }) => {
     return targets.flatMap((target) =>
-      receive(findChain(target), Chain.arb1, sender, recipient)
+      receive(findChain(target), findChain(Chain.arb1), sender, recipient)
     )
   },
 }
@@ -121,7 +121,7 @@ export const oeth = {
     sender: `0x${string}`
   }) => {
     return targets.flatMap((target) =>
-      receive(findChain(target), Chain.oeth, sender, recipient)
+      receive(findChain(target), findChain(Chain.oeth), sender, recipient)
     )
   },
 }
@@ -157,7 +157,7 @@ export const base = {
     sender: `0x${string}`
   }) => {
     return targets.flatMap((target) =>
-      receive(findChain(target), Chain.base, sender, recipient)
+      receive(findChain(target), findChain(Chain.base), sender, recipient)
     )
   },
 }

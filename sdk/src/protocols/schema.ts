@@ -48,6 +48,7 @@ export const gno = {
   cowswap: cowSwap.gno,
   spark: spark.gno,
   stakewise_v3: stakeWiseV3.gno,
+  uniswap_v3: uniswapV3.gno,
 } satisfies ProtocolSchemas
 
 export const arb1 = {
@@ -55,16 +56,19 @@ export const arb1 = {
   aura: aura.arb1,
   balancer: balancer.arb1,
   cowswap: cowSwap.arb1,
+  uniswap_v3: uniswapV3.arb1,
 } satisfies ProtocolSchemas
 
 export const oeth = {
   aave_v3: aaveV3.oeth,
   aura: aura.oeth,
   balancer: balancer.oeth,
+  uniswap_v3: uniswapV3.oeth,
 } satisfies ProtocolSchemas
 
 export const base = {
   aave_v3: aaveV3.base,
   aura: aura.base,
   balancer: balancer.base,
+  uniswap_v3: uniswapV3.base,
 } satisfies ProtocolSchemas

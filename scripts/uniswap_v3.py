@@ -1,155 +1,122 @@
 import os
 import time
-# thegraph queries
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
 from karpatkit.functions import get_node
 from defabipedia import Chain
 from lib.dump import dump
 
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# subgraph_query_all_pools
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def subgraph_query_all_pools(blockchain, min_tvl_usd=0, min_volume_usd=0):
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# MINIMUM TVL
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MIN_TVL = {
+    Chain.ETHEREUM: 100_000,
+    Chain.GNOSIS: 0,
+    Chain.ARBITRUM: 1_000_000,
+    Chain.OPTIMISM: 1_000_000,
+    Chain.BASE: 1_000_000,
+}
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# subgraph_query_tokens
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def subgraph_query_tokens(blockchain):
 
     # Initialize subgraph
     the_graph_apikey = os.getenv('THE_GRAPH_APIKEY')
-    # Deprecated endpoint: "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3"
-    subgraph_url = f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV"
-    uniswapv3_transport = RequestsHTTPTransport(
-        url=subgraph_url, verify=True, retries=3
-    )
-    client = Client(transport=uniswapv3_transport)
+    subgraph_urls = {
+        Chain.ETHEREUM: f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/5zvR82QoaXYFyDEKLZ9t6v9adgnptxYpKpSbxtgVENFV",
+        Chain.GNOSIS: f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/Dimv1udMsJu1DqirVM4G2vNRvH8CWzWTn7GffQQCGAaq",
+        Chain.ARBITRUM: f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/FbCGRftH4a3yZugY7TnbYgPJVEv2LvMT6oF1fxPe9aJM",
+        Chain.OPTIMISM: f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/Cghf4LfVqPiFw6fp6Y5X5Ubc8UpmUhSfJL82zwiBFLaj",
+        Chain.BASE: f"https://gateway-arbitrum.network.thegraph.com/api/{the_graph_apikey}/subgraphs/id/GqzP4Xaehti8KSfQmv3ZctFSjnSUYZ4En5NRsiTbvZpz",
+    }
 
-    pools = {}
-    response = {}
-    last_timestamp = 0
-    all_found = False
+    subgraph_url = subgraph_urls.get(blockchain)
+    if not subgraph_url:
+        return []
 
+    client = Client(transport=RequestsHTTPTransport(url=subgraph_url, verify=True, retries=3))
     web3 = get_node(blockchain)
 
-    try:
-        query_string = """
+    tokens = {}
+    last_id = ""  # For pagination
+    min_tvl = MIN_TVL[blockchain]
+    all_found = False
+
+    def fetch_tokens(last_token_id):
+        query_string = f"""
         query {{
-        pools(first: 1000, orderBy: createdAtTimestamp, orderDirection: asc) 
-            {{
+            tokens(
+                where: {{ totalValueLockedUSD_gte: {min_tvl}, id_gt: "{last_token_id}" }}
+                first: 1000
+                orderBy: id
+                orderDirection: asc
+            ) {{
                 id
-                token0{{id symbol}}
-                token1{{id symbol}}
-                feeTier
-                volumeUSD
+                symbol
                 totalValueLockedUSD
-                createdAtTimestamp
             }}
         }}
         """
+        return client.execute(gql(query_string))
 
-        formatted_query_string = query_string.format()
-        response = client.execute(gql(formatted_query_string))
+    try:
+        # Initial query to start fetching tokens
+        response = fetch_tokens(last_id)
 
-        for pool in response["pools"]:
-            volume_usd = float(pool["volumeUSD"])
-            tvl_usd = float(pool["totalValueLockedUSD"])
+        while not all_found:
+            batch = response.get("tokens", [])
+            if not batch:
+                break
 
-            if volume_usd >= min_volume_usd and tvl_usd >= min_tvl_usd:
-                pools[pool["id"]] = [
-                    web3.to_checksum_address(pool["token0"]["id"]),
-                    pool["token0"]["symbol"],
-                    web3.to_checksum_address(pool["token1"]["id"]),
-                    pool["token1"]["symbol"],
-                    int(pool["feeTier"]),
-                    volume_usd,
-                    tvl_usd,
-                ]
+            for token in batch:
+                token_address = web3.to_checksum_address(token["id"])
+                symbol = token["symbol"]
+                tvl_usd = float(token["totalValueLockedUSD"])
 
-        if len(response["pools"]) < 1000:
-            all_found = True
-        else:
-            last_timestamp = int(pool["createdAtTimestamp"]) - 1
+                tokens[token_address] = {"address": token_address, "symbol": symbol, "tvl": tvl_usd}
 
-    except Exception as Ex:
-        print(Ex)
+            # Pagination: Get last token ID from the batch
+            last_id = batch[-1]["id"]
 
-    if not all_found and last_timestamp > 0:
+            # Stop if fewer than 1000 results were returned
+            if len(batch) < 1000:
+                all_found = True
+            else:
+                time.sleep(5)  # Prevent hitting rate limits
+                response = fetch_tokens(last_id)  # Fetch next batch
 
-        try:
-            while not all_found:
-                query_string = """
-                query {{
-                pools(first: 1000, orderBy: createdAtTimestamp, orderDirection: asc
-                where: {{createdAtTimestamp_gt: {last_timestamp} }})
-                    {{
-                        id
-                        token0{{id symbol}}
-                        token1{{id symbol}}
-                        feeTier
-                        volumeUSD
-                        totalValueLockedUSD
-                        createdAtTimestamp
-                    }}
-                }}
-                """
+    except Exception as ex:
+        print(ex)
 
-                formatted_query_string = query_string.format(
-                    last_timestamp=last_timestamp
-                )
-                response = client.execute(gql(formatted_query_string))
+    # Sort tokens by totalValueLockedUSD in descending order
+    sorted_tokens = sorted(tokens.values(), key=lambda t: t["tvl"], reverse=True)
 
-                for pool in response["pools"]:
-                    volume_usd = float(pool["volumeUSD"])
-                    tvl_usd = float(pool["totalValueLockedUSD"])
+    # Return only address and symbol (excluding TVL)
+    return [{"address": t["address"], "symbol": t["symbol"]} for t in sorted_tokens]
 
-                    if volume_usd >= min_volume_usd and tvl_usd >= min_tvl_usd:
-                        pools[pool["id"]] = [
-                            web3.to_checksum_address(pool["token0"]["id"]),
-                            pool["token0"]["symbol"],
-                            web3.to_checksum_address(pool["token1"]["id"]),
-                            pool["token1"]["symbol"],
-                            int(pool["feeTier"]),
-                            volume_usd,
-                            tvl_usd,
-                        ]
-
-                if len(response["pools"]) < 1000:
-                    all_found = True
-                else:
-                    last_timestamp = int(pool["createdAtTimestamp"]) - 1
-                    time.sleep(5)
-
-        except Exception as Ex:
-            print(Ex)
-
-    return pools
-
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # protocol_data
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-def protocol_data(blockchain, min_tvl_usd=0, min_volume_usd=0):
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+def protocol_data(blockchain):
+    tokens = subgraph_query_tokens(blockchain)
 
-    if blockchain == Chain.ETHEREUM:
-        tokens = []
-
-    pools = subgraph_query_all_pools(blockchain, min_tvl_usd=min_tvl_usd, min_volume_usd=min_volume_usd)
-
-    if len(pools) > 0:
-        pools = dict(sorted(pools.items(), key=lambda item: item[1][4], reverse=True))
-
-        for pool in pools:
-            token0 = {
-                "address": pools[pool][0],
-                "symbol": pools[pool][1],
-            }
-            if token0 not in tokens:
-                tokens.append(token0)
-            token1 = {
-                "address": pools[pool][2],
-                "symbol": pools[pool][3],
-            }
-            if token1 not in tokens:
-                tokens.append(token1)
-                      
     if blockchain == Chain.ETHEREUM:
         dump(tokens, 'uniswap/v3', '_ethInfo.ts')
+    elif blockchain == Chain.GNOSIS:
+        dump(tokens, 'uniswap/v3', '_gnoInfo.ts')
+    elif blockchain == Chain.ARBITRUM:
+        dump(tokens, 'uniswap/v3', '_arb1Info.ts')
+    elif blockchain == Chain.OPTIMISM:
+        dump(tokens, 'uniswap/v3', '_oethInfo.ts')
+    elif blockchain == Chain.BASE:
+        dump(tokens, 'uniswap/v3', '_baseInfo.ts')
 
 
-protocol_data(Chain.ETHEREUM, min_tvl_usd=1000000, min_volume_usd=1000000)
+# Run for all blockchains
+protocol_data(Chain.ETHEREUM)
+protocol_data(Chain.GNOSIS)
+protocol_data(Chain.ARBITRUM)
+protocol_data(Chain.OPTIMISM)
+protocol_data(Chain.BASE)

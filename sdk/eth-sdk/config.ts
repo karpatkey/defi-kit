@@ -185,6 +185,7 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x7B9c12915c594a68dE96201Cbdc79147F09da278",
       aGnoWXDAI: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
       variableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
+      protocolDataProviderV3: "0x57038C3e3Fe0a170BB72DE2fD56E98e4d1a69717",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
@@ -217,6 +218,9 @@ export const contracts = {
     stakeWiseV3: {
       vault: "0x00c3C5227402BC4cF383Ae2E6931394dD1e720B4", // GnoVault (Implementation)
     },
+    uniswapV3: {
+      positionsNft: "0xAE8fbE656a77519a7490054274910129c9244FA3",
+    },
     comp: "0xDf6FF92bfDC1e8bE45177DC1f4845d391D3ad8fD",
     gno: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
     usdc: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
@@ -232,6 +236,7 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x5760E34c4003752329bC77790B1De44C2799F8C3",
       aArbWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
+      protocolDataProviderV3: "0x14496b405D62c24F91f04Cda1c69Dc526D56fDE5",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
@@ -257,6 +262,9 @@ export const contracts = {
     cowSwap: {
       orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
     },
+    uniswapV3: {
+      positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+    },
     weth: "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
     usdc: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
     gatewayRouter: "0x5288c571Fd7aD117beA99bF60FE0846C4E84F933",
@@ -269,6 +277,7 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x60eE8b61a13c67d0191c851BEC8F0bc850160710",
       aOptWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
+      protocolDataProviderV3: "0x14496b405D62c24F91f04Cda1c69Dc526D56fDE5",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
@@ -291,6 +300,9 @@ export const contracts = {
       cUsdcV3: "0x2e44e174f7D53F0212823acC11C01A11d58c5bCB",
       cometRewards: "0x443EA0340cb75a160F31A440722dec7b5bc3C2E9",
     },
+    uniswapV3: {
+      positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+    },
     weth: "0x4200000000000000000000000000000000000006",
     usdc: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
     daiTokenBridge: "0x467194771dAe2967Aef3ECbEDD3Bf9a310C76C65",
@@ -304,6 +316,7 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x729b3EA8C005AbC58c9150fb57Ec161296F06766",
       aBasWeth: "0xD4a0e0b9149BCee3C920d2E00b5dE09138fd8bb7",
       variableDebtWeth: "0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E",
+      protocolDataProviderV3: "0xC4Fcf9893072d61Cc2899C0054877Cb752587981",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
@@ -326,8 +339,11 @@ export const contracts = {
       cUsdcV3: "0xb125E6687d4313864e53df431d5425969c15Eb2F",
       cometRewards: "0x123964802e6ABabBE1Bc9547D72Ef1B69B00A6b1",
     },
-    weth: "0x4200000000000000000000000000000000000006",
+    uniswapV3: {
+      positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+    },
     usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    weth: "0x4200000000000000000000000000000000000006",
     l2HopCctp: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
   },
 } as const satisfies EthSdkConfig["contracts"]

@@ -1,11 +1,11 @@
-import { eth } from "."
-import { wallets } from "../../../../test/wallets"
-import { applyPermissions, stealErc20 } from "../../../../test/helpers"
-import { contracts } from "../../../../eth-sdk/config"
-import { Status } from "../../../../test/types"
-import { eth as kit } from "../../../../test/kit"
+import { eth } from "../../index"
+import { wallets } from "../../../../../../test/wallets"
+import { applyPermissions, stealErc20 } from "../../../../../../test/helpers"
+import { contracts } from "../../../../../../eth-sdk/config"
+import { Status } from "../../../../../../test/types"
+import { eth as kit } from "../../../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
-import { Chain } from "../../../../src"
+import { Chain } from "../../../../../index"
 
 describe("aaveV3", () => {
   describe("deposit", () => {
@@ -176,7 +176,7 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.poolCoreV3.withdraw(
           contracts.mainnet.usdc,
-          parseUnits("1000", 6),
+          parseUnits("500", 6),
           wallets.avatar
         )
       ).not.toRevert()
@@ -184,7 +184,7 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.poolCoreV3.withdraw(
           contracts.mainnet.usdc,
-          parseUnits("1000", 6),
+          parseUnits("500", 6),
           wallets.member
         )
       ).toBeForbidden(Status.ParameterNotAllowed)

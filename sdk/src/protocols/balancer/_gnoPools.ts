@@ -45,6 +45,49 @@ export default [
     ],
   },
   {
+    bpt: "0x11467c3BEea894d9e8618d80b9a006C9BAa9344c",
+    id: "0x11467c3beea894d9e8618d80b9a006c9baa9344c000200000000000000000018",
+    name: "50FRACTION-50MIVA",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x2bF2ba13735160624a0fEaE98f6aC8F70885eA61",
+        symbol: "FRACTION",
+        id: "0x",
+      },
+      {
+        address: "0x63e62989D9EB2d37dfDB1F93A22f063635b07d51",
+        symbol: "MIVA",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x11884dA90FB4221b3aa288a7741C51eC4Fc43B2f",
+    id: "0x11884da90fb4221b3aa288a7741c51ec4fc43b2f000000000000000000000004",
+    name: "xdaiusdtusdc",
+    type: "Stable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
+        symbol: "USDT",
+        id: "0x",
+      },
+      {
+        address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
+        symbol: "USDC",
+        id: "0x",
+      },
+      {
+        address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+        symbol: "WXDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x17794DB163DD298bbA1FfA4d42918C6b8474D948",
     id: "0x17794db163dd298bba1ffa4d42918c6b8474d94800020000000000000000008b",
     name: "10REG-90USDC",
@@ -59,6 +102,25 @@ export default [
       {
         address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
         symbol: "USDC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x1AcD5C5E69DC056649d698046486fb54545Ce7E4",
+    id: "0x1acd5c5e69dc056649d698046486fb54545ce7e4000200000000000000000117",
+    name: "ECLP-bCSPX-sDAI",
+    type: "GyroE",
+    gauge: "0xbcF4969d4dc6Cb86Ce0B8a101d220b558F14739C",
+    tokens: [
+      {
+        address: "0x1e2C4fb7eDE391d116E6B41cD0608260e8801D59",
+        symbol: "bCSPX",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
         id: "0x",
       },
     ],
@@ -102,6 +164,25 @@ export default [
       {
         address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
         symbol: "WXDAI",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x2178eF6E2D4408CE87a1f1dA886e3023a0B57708",
+    id: "0x2178ef6e2d4408ce87a1f1da886e3023a0b57708000200000000000000000119",
+    name: "METESTSUP-sDAI",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x370eb0F68CFd9f2b26B1CaCE93DC619954cb5dAF",
+        symbol: "s-METESTSUP",
+        id: "0x",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
         id: "0x",
       },
     ],
@@ -259,6 +340,25 @@ export default [
     ],
   },
   {
+    bpt: "0x5C78d05b8ECF97507d1cf70646082c54FaA4dA95",
+    id: "0x5c78d05b8ecf97507d1cf70646082c54faa4da95000000000000000000000030",
+    name: "bb-agEUR-EURe",
+    type: "ComposableStable",
+    gauge: "0x210ABdFD989f3eE5C08614a8f4e096Cf8408f5DF",
+    tokens: [
+      {
+        address: "0x4b1E2c2762667331Bc91648052F646d1b0d35984",
+        symbol: "EURA",
+        id: "0x",
+      },
+      {
+        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
+        symbol: "EURe",
+        id: "0x",
+      },
+    ],
+  },
+  {
     bpt: "0x5DC587361652A791A4B271e635B060665A1D4ceF",
     id: "0x5dc587361652a791a4b271e635b060665a1d4cef00020000000000000000009d",
     name: "15sDAI-85SLX",
@@ -302,6 +402,25 @@ export default [
       {
         address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
         symbol: "WETH",
+        id: "0x",
+      },
+      {
+        address: "0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252",
+        symbol: "WBTC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x717633A41211C944C7808013b44824C3D9BB63cD",
+    id: "0x717633a41211c944c7808013b44824c3d9bb63cd000200000000000000000116",
+    name: "50WBTC/50WSTETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
+        symbol: "wstETH",
         id: "0x",
       },
       {
@@ -426,6 +545,25 @@ export default [
       {
         address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
         symbol: "wstETH",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0x915938ff0A2B54e575068fF1A95007caFBa7D277",
+    id: "0x915938ff0a2b54e575068ff1a95007cafba7d27700020000000000000000008a",
+    name: "80REG-20WXDAI",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x0AA1e96D2a46Ec6beB2923dE1E61Addf5F5f1dce",
+        symbol: "REG",
+        id: "0x",
+      },
+      {
+        address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+        symbol: "WXDAI",
         id: "0x",
       },
     ],
@@ -664,6 +802,30 @@ export default [
       {
         address: "0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252",
         symbol: "WBTC",
+        id: "0x",
+      },
+    ],
+  },
+  {
+    bpt: "0xfa0017abd72BB87443c3F39b9434d357Cc1EeC27",
+    id: "0xfa0017abd72bb87443c3f39b9434d357cc1eec2700010000000000000000001d",
+    name: "40FRACTION-40MIVA-20GNO",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x2bF2ba13735160624a0fEaE98f6aC8F70885eA61",
+        symbol: "FRACTION",
+        id: "0x",
+      },
+      {
+        address: "0x63e62989D9EB2d37dfDB1F93A22f063635b07d51",
+        symbol: "MIVA",
+        id: "0x",
+      },
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
         id: "0x",
       },
     ],

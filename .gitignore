@@ -18,5 +18,5 @@ app/build
 app/next-env.d.ts
 
 playground/build
-
+.idea/
 sdk/dist
