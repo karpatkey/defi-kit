@@ -2923,7 +2923,7 @@ export default [
       },
       {
         address: "0xf073bAC22DAb7FaF4a3Dd6c6189a70D54110525C",
-        symbol: "genETH",
+        symbol: "InETH",
         id: "0x",
       },
     ],
