@@ -450,7 +450,7 @@ export default [
     id: "0x43837db3216980957b5af229e28dd532c6cda5200002000000000000000005ed",
     name: "ECLP-WETH-GYD",
     type: "GyroE",
-    gauge: null,
+    gauge: "0xB541Ae08772EDa705EB95C2A80E2bB931Dc7742b",
     tokens: [
       {
         address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
@@ -1083,7 +1083,7 @@ export default [
     id: "0x952ae0edf4cc29f924d56920986469b5125e34df0002000000000000000005ea",
     name: "ECLP-WETH-GYD",
     type: "GyroE",
-    gauge: null,
+    gauge: "0xaa7137b20D7B99A0b1a9E514c349041667053387",
     tokens: [
       {
         address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",

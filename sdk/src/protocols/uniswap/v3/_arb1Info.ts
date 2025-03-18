@@ -58,12 +58,12 @@ export default [
     symbol: "AVATAR",
   },
   {
-    address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
-    symbol: "AAVE",
-  },
-  {
     address: "0x37a645648dF29205C6261289983FB04ECD70b4B3",
     symbol: "ANIME",
+  },
+  {
+    address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
+    symbol: "AAVE",
   },
   {
     address: "0x431402e8b9dE9aa016C743880e04E517074D8cEC",
@@ -78,11 +78,7 @@ export default [
     symbol: "CRV",
   },
   {
-    address: "0x092bAaDB7DEf4C3981454dD9c0A0D7FF07bCFc86",
-    symbol: "MOR",
-  },
-  {
-    address: "0x5979D7b546E38E414F7E9822514be443A4800529",
-    symbol: "wstETH",
+    address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+    symbol: "DAI",
   },
 ] as const
