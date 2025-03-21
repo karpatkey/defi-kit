@@ -1179,25 +1179,6 @@ export default [
     ],
   },
   {
-    bpt: "0x9D48A5084a2317CDa57A2b21851bF9Bc56F00613",
-    id: "0x9d48a5084a2317cda57a2b21851bf9bc56f006130002000000000000000005e1",
-    name: "ECLP-GYD-MONEY",
-    type: "GyroE",
-    gauge: "0x0BCDc8186c0201A29a7daD1D3e4Fe7a9bf92a0a8",
-    tokens: [
-      {
-        address: "0x69420f9E38a4e60a62224C489be4BF7a94402496",
-        symbol: "MONEY",
-        id: "0x",
-      },
-      {
-        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
-        symbol: "GYD",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xa01364561eE7d9EC7f234Af070993Ee6baE9B2a4",
     id: "0xa01364561ee7d9ec7f234af070993ee6bae9b2a40002000000000000000005ec",
     name: "ECLP-WETH-USDT",
@@ -1436,25 +1417,6 @@ export default [
       {
         address: "0x95aB45875cFFdba1E5f451B950bC2E42c0053f39",
         symbol: "sfrxETH",
-        id: "0x",
-      },
-    ],
-  },
-  {
-    bpt: "0xc757F12694F550d0985ad6E1019C4db4A803f160",
-    id: "0xc757f12694f550d0985ad6e1019c4db4a803f1600002000000000000000004de",
-    name: "50wstETH/50sFRAX",
-    type: "Weighted",
-    gauge: "0xeBF2d1995f9bBEa5CE689945b87CA4B5a033B653",
-    tokens: [
-      {
-        address: "0x5979D7b546E38E414F7E9822514be443A4800529",
-        symbol: "wstETH",
-        id: "0x",
-      },
-      {
-        address: "0xe3b3FE7bcA19cA77Ad877A5Bebab186bEcfAD906",
-        symbol: "sFRAX",
         id: "0x",
       },
     ],

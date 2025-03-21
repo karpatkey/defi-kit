@@ -74,12 +74,6 @@ export default [
       "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
   },
   {
-    id: "0xe32773a0f6fa8ebf2a32c040dacd031a1ad1e530",
-    name: "Deprecated: Orangefin Ventures",
-    description:
-      "Orangefin Ventures has been acquired and we will be sunsetting our support for Gnosis. We will be exiting all of our validators so users don't incur any penalties. Please unstake at your earliest convenience.",
-  },
-  {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
     name: "FCC GNO Vault",
     description: "FCC GNO Liquid Staking Public Vault",
@@ -94,6 +88,12 @@ export default [
     id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
     name: "Wunode",
     description: "Dappnode vault, fiber gigabit uplink, UPS",
+  },
+  {
+    id: "0xe32773a0f6fa8ebf2a32c040dacd031a1ad1e530",
+    name: "Deprecated: Orangefin Ventures",
+    description:
+      "Orangefin Ventures has been acquired and we will be sunsetting our support for Gnosis. We will be exiting all of our validators so users don't incur any penalties. Please unstake at your earliest convenience.",
   },
   {
     id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",

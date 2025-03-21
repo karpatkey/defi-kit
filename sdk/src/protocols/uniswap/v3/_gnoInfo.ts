@@ -6,12 +6,12 @@ export default [
     symbol: "WETH",
   },
   {
-    address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
-    symbol: "USDC",
-  },
-  {
     address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
     symbol: "WXDAI",
+  },
+  {
+    address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
+    symbol: "USDC",
   },
   {
     address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
@@ -20,6 +20,10 @@ export default [
   {
     address: "0x1D1498166DDCEeE616a6d99868e1E0677300056f",
     symbol: "xSPACE",
+  },
+  {
+    address: "0x216a7d520992eD198593A16e0b17c784c9cdc660",
+    symbol: "POOL",
   },
   {
     address: "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
@@ -40,10 +44,6 @@ export default [
   {
     address: "0x1f82284C1658Ad71C576f7230E6C2DEE7901c1FA",
     symbol: "wbTSLA",
-  },
-  {
-    address: "0x216a7d520992eD198593A16e0b17c784c9cdc660",
-    symbol: "POOL",
   },
   {
     address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
