@@ -2885,4 +2885,32 @@ export default [
     cvxDepositToken: "0xE2bb8B08Be19bd8316c8115223fDd48ac48555ce",
     rewarder: "0x8867Df8D263077f94Ddb5E86c4328Fd8d2c0E818",
   },
+  {
+    name: "reusdsfrx",
+    id: "439",
+    crvLPToken: "0xed785Af60bEd688baa8990cD5c4166221599A441",
+    cvxDepositToken: "0x47FdB72CcC93Bc9568a82917dFF767FDbB4f2f5F",
+    rewarder: "0x18574c2047A2D4786567A2C31B4f25Ae291ed6bF",
+  },
+  {
+    name: "reusdscrv",
+    id: "440",
+    crvLPToken: "0xc522A6606BBA746d7960404F22a3DB936B6F4F50",
+    cvxDepositToken: "0x20F1c81B123FFcD19B5469f0EB2C4FD37983dBBc",
+    rewarder: "0x7Fafc1876970dBD9F6568586EFa7d0FAc0FE8EA8",
+  },
+  {
+    name: "wethrsup",
+    id: "441",
+    crvLPToken: "0xEe351f12EAE8C2B8B9d1B9BFd3c5dd565234578d",
+    cvxDepositToken: "0x12611382e49e51f2b74C8E14361028dc373AE0dC",
+    rewarder: "0xbD60aAe56ede51f20D8E416637D7c80737441460",
+  },
+  {
+    name: "OGNETHUSD",
+    id: "442",
+    crvLPToken: "0xB8ac7ce449Ed72FF61dE8043d67B507f9F523Fa2",
+    cvxDepositToken: "0xcfBD855194Aea2dEBF9FC898ee61e0aA05aE5b21",
+    rewarder: "0x2c69273f8E983EDDEB517602e46bBF429FE90BC8",
+  },
 ] as const

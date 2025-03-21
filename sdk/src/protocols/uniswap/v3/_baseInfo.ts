@@ -195,12 +195,12 @@ export default [
     symbol: "DUCK",
   },
   {
-    address: "0xddEb793839e4c2b5FfE80008DE7f4521da67Cab4",
-    symbol: "BSE",
+    address: "0x8d34d5273945e04c9465480f7737A07679B718e5",
+    symbol: "BTRUMP",
   },
   {
-    address: "0xE198a5f4c784A5A97f28B2B790603c2B3dfa85C1",
-    symbol: "ACT",
+    address: "0xddEb793839e4c2b5FfE80008DE7f4521da67Cab4",
+    symbol: "BSE",
   },
   {
     address: "0x13137B72bC9822bD2800086187033693017023A6",
@@ -263,16 +263,16 @@ export default [
     symbol: "Kekius",
   },
   {
+    address: "0xfDc6aBaA69f0df71FF4Bb6BdFeC34188796Ee07A",
+    symbol: "GrokCoin",
+  },
+  {
     address: "0x0419856F551fec5AA8a18d2A05090A93BbE62071",
     symbol: "ARTTO",
   },
   {
     address: "0x189b5576CFd40c615B3c309BA5D393Bb0b6Ab849",
     symbol: "$SNPDOGE",
-  },
-  {
-    address: "0xf462b0CBC93F972CF3D8c18D418eFaA36f499E87",
-    symbol: "$WLFI",
   },
   {
     address: "0xe911c12104A21C296c4CBb282E2A43D55305dEe1",
@@ -285,6 +285,10 @@ export default [
   {
     address: "0x1a9f53a3237dD66047eb560BC81d4Fd2D28dBfD2",
     symbol: "fred",
+  },
+  {
+    address: "0xf462b0CBC93F972CF3D8c18D418eFaA36f499E87",
+    symbol: "$WLFI",
   },
   {
     address: "0x4200000000000000000000000000000000000006",
@@ -319,32 +323,32 @@ export default [
     symbol: "ARC",
   },
   {
-    address: "0x8b9A1016fAE4028b93eBd440E5DEF2c750825c2b",
-    symbol: "STAR10",
-  },
-  {
     address: "0x578D3a95b63D10C2aA870EEAe862EAdd5232525e",
     symbol: "PEPE",
-  },
-  {
-    address: "0x8d34d5273945e04c9465480f7737A07679B718e5",
-    symbol: "BTRUMP",
   },
   {
     address: "0x55782f9c2C8Dd6f5be673826C9fb0039584E5D4B",
     symbol: "BBB",
   },
   {
+    address: "0xE198a5f4c784A5A97f28B2B790603c2B3dfa85C1",
+    symbol: "ACT",
+  },
+  {
+    address: "0x218BCe282067f146965584107d06320ec70DbFE1",
+    symbol: "RICH",
+  },
+  {
     address: "0xF8fA6ef4aCA0B431Da07FEfe88c32e4D5080Ae91",
     symbol: "H.J.Res.109",
   },
   {
-    address: "0xB4A89255574Fd3410ED4F218eE22d68D891393b7",
-    symbol: "FLOKI",
-  },
-  {
     address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     symbol: "USDC",
+  },
+  {
+    address: "0xB4A89255574Fd3410ED4F218eE22d68D891393b7",
+    symbol: "FLOKI",
   },
   {
     address: "0x0cd64F5eF133A8be645199ccF82b203707ceC4af",
@@ -407,10 +411,6 @@ export default [
     symbol: "PEPE",
   },
   {
-    address: "0xfF1C4FE43c23710ca9eDc611833519e186B9A4e2",
-    symbol: "PHA",
-  },
-  {
     address: "0x5c5EbFa9ffE0D09c2b9F3e1d802c5Ff2Ff2Dd5fe",
     symbol: "NORRIS",
   },
@@ -431,8 +431,16 @@ export default [
     symbol: "EURO24",
   },
   {
+    address: "0xfF1C4FE43c23710ca9eDc611833519e186B9A4e2",
+    symbol: "PHA",
+  },
+  {
     address: "0xa8334525aA440A27826B915547F32F7f9D0b0503",
     symbol: "DOGE",
+  },
+  {
+    address: "0x79EA8FD2cdd71DFe93a7B63220Fb8041889f981E",
+    symbol: "SATS",
   },
   {
     address: "0xA73614E5984a71a86145CD444Ab82e7A1525974b",
@@ -475,10 +483,6 @@ export default [
     symbol: "JOSEPH",
   },
   {
-    address: "0x937a1cFAF0A3d9f5Dc4D0927F72ee5e3e5F82a00",
-    symbol: "Cocoro",
-  },
-  {
     address: "0x7e1C268C2B794C930cDf7b195869De0Ac94B0A21",
     symbol: "TRUMPDAY",
   },
@@ -491,10 +495,6 @@ export default [
     symbol: "HAREMBE X KABOSU",
   },
   {
-    address: "0x8F219E405f5Aa614424822130Db7A61322AC1255",
-    symbol: "Web3",
-  },
-  {
     address: "0x7717a07581C727bA7c1511C573697b1EB791A30D",
     symbol: "FIDELITY",
   },
@@ -505,10 +505,6 @@ export default [
   {
     address: "0x69a767D1727D125279Ce0eeb407491617526d906",
     symbol: "ROBINHOOD",
-  },
-  {
-    address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-    symbol: "cbBTC",
   },
   {
     address: "0xeDa6192C1C1F17187DfF12bED547F754142CADaF",
@@ -539,12 +535,20 @@ export default [
     symbol: "PIZZA",
   },
   {
+    address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+    symbol: "cbBTC",
+  },
+  {
     address: "0x532f27101965dd16442E59d40670FaF5eBB142E4",
     symbol: "BRETT",
   },
   {
     address: "0xD5457DC852Bf0A1A3FD1fFfe9232D843B48FeEcc",
     symbol: "HALFIN",
+  },
+  {
+    address: "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
+    symbol: "TOSHI",
   },
   {
     address: "0x291C57b7e29e8D035f42d68E2268f1B3ABe78407",
@@ -559,36 +563,28 @@ export default [
     symbol: "RNT",
   },
   {
-    address: "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
-    symbol: "TOSHI",
-  },
-  {
     address: "0x0034E887cc70f67a9a54F31d1D5b52942dC6E965",
     symbol: "OBC",
-  },
-  {
-    address: "0x320155582cC96A7c52F42779B047f341a6859F71",
-    symbol: "B5",
   },
   {
     address: "0x71CB212754c8a13f0B5773e93497ef04d9c4E175",
     symbol: "HOPPY",
   },
   {
-    address: "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
-    symbol: "VIRTUAL",
-  },
-  {
     address: "0x94bc124A87d4a171c09b07cd59be8dD7911c2609",
     symbol: "$78",
   },
   {
-    address: "0x3f7C549f61F996cd0325deEe5e6DA584c5ec5A64",
-    symbol: "HBAR",
+    address: "0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb",
+    symbol: "CLANKER",
   },
   {
-    address: "0x1B68244B100A6713ca7F540697b1bE12148a8bf9",
-    symbol: "YES",
+    address: "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+    symbol: "VIRTUAL",
+  },
+  {
+    address: "0x937a1cFAF0A3d9f5Dc4D0927F72ee5e3e5F82a00",
+    symbol: "Cocoro",
   },
   {
     address: "0x6dc3d8FEe328CC54c46d3812d74a12aa739AabAB",
@@ -599,8 +595,8 @@ export default [
     symbol: "EUR",
   },
   {
-    address: "0x1bc0c42215582d5A085795f4baDbaC3ff36d1Bcb",
-    symbol: "CLANKER",
+    address: "0x3f7C549f61F996cd0325deEe5e6DA584c5ec5A64",
+    symbol: "HBAR",
   },
   {
     address: "0x0D87E5E17C68Dd5dc346797bF4036DfA0bc947C7",
@@ -615,8 +611,16 @@ export default [
     symbol: "🍻 BEER",
   },
   {
-    address: "0x27D2DECb4bFC9C76F0309b8E88dec3a601Fe25a8",
-    symbol: "BALD",
+    address: "0x1B68244B100A6713ca7F540697b1bE12148a8bf9",
+    symbol: "YES",
+  },
+  {
+    address: "0x22aF33FE49fD1Fa80c7149773dDe5890D3c76F3b",
+    symbol: "BNKR",
+  },
+  {
+    address: "0x320155582cC96A7c52F42779B047f341a6859F71",
+    symbol: "B5",
   },
   {
     address: "0x20fAD58A61c3B522FfDc819694D38653DCB0211F",
@@ -625,10 +629,6 @@ export default [
   {
     address: "0x67dd8404E609bb4F1bA81eae2cF2005d8160C0C1",
     symbol: "EURO24",
-  },
-  {
-    address: "0x50dA645f148798F68EF2d7dB7C1CB22A6819bb2C",
-    symbol: "SPX",
   },
   {
     address: "0x822330630F20C55FCdc15f680ab51EA3E868B861",
@@ -647,12 +647,16 @@ export default [
     symbol: "FOMO",
   },
   {
-    address: "0xFD764f3f4d16047E090B9020C3a66bA86c767C5F",
-    symbol: "MEMERBIT",
+    address: "0x27D2DECb4bFC9C76F0309b8E88dec3a601Fe25a8",
+    symbol: "BALD",
   },
   {
-    address: "0x22aF33FE49fD1Fa80c7149773dDe5890D3c76F3b",
-    symbol: "BNKR",
+    address: "0xb33Ff54b9F7242EF1593d2C9Bcd8f9df46c77935",
+    symbol: "FAI",
+  },
+  {
+    address: "0xFD764f3f4d16047E090B9020C3a66bA86c767C5F",
+    symbol: "MEMERBIT",
   },
   {
     address: "0x7ca4d45a2b7223f968c9C58C9a7Ad0704Dbf4890",
@@ -667,12 +671,12 @@ export default [
     symbol: "BILLY",
   },
   {
-    address: "0xb33Ff54b9F7242EF1593d2C9Bcd8f9df46c77935",
-    symbol: "FAI",
-  },
-  {
     address: "0x62AF5774B54D5186eF3f462fd6eD93BCe2B16e44",
     symbol: "CICADA",
+  },
+  {
+    address: "0x3ec2156D4c0A9CBdAB4a016633b7BcF6a8d68Ea2",
+    symbol: "DRB",
   },
   {
     address: "0xeF6E6B6090B5eBc55504A3AeB8A0cB3C9d914909",
@@ -683,12 +687,12 @@ export default [
     symbol: "ai16z",
   },
   {
-    address: "0xb14A3F8287D590B6aD9ABf1CC94f0AA3198fEE4D",
-    symbol: "sec",
+    address: "0x0A507d26A6147630DC5EEbEfB6302572CfA1464F",
+    symbol: "AERC",
   },
   {
-    address: "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
-    symbol: "AIXBT",
+    address: "0xb14A3F8287D590B6aD9ABf1CC94f0AA3198fEE4D",
+    symbol: "sec",
   },
   {
     address: "0x7f88F7FEa8D8A06acae239ED84c1d7A8D93A0475",
@@ -711,28 +715,32 @@ export default [
     symbol: "Byebit",
   },
   {
-    address: "0xE3086852A4B125803C815a158249ae468A3254Ca",
-    symbol: "$mfer",
+    address: "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
+    symbol: "AIXBT",
   },
   {
-    address: "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
-    symbol: "DEGEN",
+    address: "0x50dA645f148798F68EF2d7dB7C1CB22A6819bb2C",
+    symbol: "SPX",
   },
   {
     address: "0x2739e24841E6edCb51b0Ad3990761C2E73394F72",
     symbol: "LONG",
   },
   {
-    address: "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
-    symbol: "AERO",
+    address: "0x6921B130D297cc43754afba22e5EAc0FBf8Db75b",
+    symbol: "doginme",
   },
   {
     address: "0xA4b17e73A8a79c0227804eFDDBa298dc8aaa82C7",
     symbol: "COPA",
   },
   {
-    address: "0x0C03Ce270B4826Ec62e7DD007f0B716068639F7B",
-    symbol: "TIG",
+    address: "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
+    symbol: "DEGEN",
+  },
+  {
+    address: "0xE3086852A4B125803C815a158249ae468A3254Ca",
+    symbol: "$mfer",
   },
   {
     address: "0x17fBc025FD6a0C5913D6cB8213aF61E77a9ABE3c",
@@ -755,32 +763,36 @@ export default [
     symbol: "BRKFST",
   },
   {
-    address: "0x52b492a33E447Cdb854c7FC19F1e57E8BfA1777D",
-    symbol: "PEPE",
+    address: "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+    symbol: "AERO",
   },
   {
     address: "0x2960A147BbEC2a858366Ae4e94aA496012c69363",
     symbol: "LNCH",
   },
   {
+    address: "0x90d81fc9817d00C1c01c7D8735D5A80cee1e341C",
+    symbol: "MTS",
+  },
+  {
     address: "0x22066D8264C0758FE020968759dF5F38B2C1F9ce",
     symbol: "ELON",
+  },
+  {
+    address: "0x5F2ac4465192243781a281a1ed023649811687F5",
+    symbol: "BASE",
   },
   {
     address: "0x060cb087a9730E13aa191f31A6d86bFF8DfcdCC0",
     symbol: "OHM",
   },
   {
-    address: "0x0A507d26A6147630DC5EEbEfB6302572CfA1464F",
-    symbol: "AERC",
+    address: "0x0C03Ce270B4826Ec62e7DD007f0B716068639F7B",
+    symbol: "TIG",
   },
   {
     address: "0x09BCc244524CDdbc7446a993AE13Cd69928a68c2",
     symbol: "DISH",
-  },
-  {
-    address: "0x333333C465a19C85f85c6CfbED7B16b0B26E3333",
-    symbol: "ORA",
   },
   {
     address: "0xd977700eBFd90E143bD1eD1f18430A6047B5B3b0",
@@ -795,6 +807,10 @@ export default [
     symbol: "APTHV1",
   },
   {
+    address: "0xA0aeBd4Ae5F256B72B7D43f67eD934237Adb1AeE",
+    symbol: "BONSAICOIN",
+  },
+  {
     address: "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
     symbol: "USDbC",
   },
@@ -803,20 +819,8 @@ export default [
     symbol: "SHIB",
   },
   {
-    address: "0x70737489DFDf1A29b7584d40500d3561bD4Fe196",
-    symbol: "BORED",
-  },
-  {
     address: "0x012D089446c4098058727DC3CC1F9F1f73CC6B96",
     symbol: "NUGS",
-  },
-  {
-    address: "0xA0aeBd4Ae5F256B72B7D43f67eD934237Adb1AeE",
-    symbol: "BONSAICOIN",
-  },
-  {
-    address: "0xC958E3db092Ce36105C14217BBFa38B90a9C3E78",
-    symbol: "AIRDROP",
   },
   {
     address: "0x9e91077EB43C26a92fe8c830A730CF582e011c34",
@@ -825,6 +829,10 @@ export default [
   {
     address: "0xABa939D544D8DbC5aF6bF442eEE2dAfa42202A1E",
     symbol: "NALS",
+  },
+  {
+    address: "0x333333C465a19C85f85c6CfbED7B16b0B26E3333",
+    symbol: "ORA",
   },
   {
     address: "0xf7B31c8603d70CA22FF5a81Ea56430fd0C5145E0",
@@ -839,6 +847,10 @@ export default [
     symbol: "ZBU",
   },
   {
+    address: "0x70737489DFDf1A29b7584d40500d3561bD4Fe196",
+    symbol: "BORED",
+  },
+  {
     address: "0x3567D03a958494834C0ec9D5AE602251F6dDB3f6",
     symbol: "MAGA",
   },
@@ -847,64 +859,52 @@ export default [
     symbol: "DOGE",
   },
   {
-    address: "0x6921B130D297cc43754afba22e5EAc0FBf8Db75b",
-    symbol: "doginme",
-  },
-  {
-    address: "0x367eca121B97689351654cA36b4d5704Fe1E3069",
-    symbol: "CBURG",
+    address: "0x52b492a33E447Cdb854c7FC19F1e57E8BfA1777D",
+    symbol: "PEPE",
   },
   {
     address: "0x566879525B07862708ef162c422eC70CA3FA8244",
     symbol: "OPRAH",
   },
   {
-    address: "0xB1a03EdA10342529bBF8EB700a06C60441fEf25d",
-    symbol: "MIGGLES",
-  },
-  {
     address: "0xC06d667A6123aBB9133eB8996d551730c1f1055D",
     symbol: "EG",
+  },
+  {
+    address: "0xC958E3db092Ce36105C14217BBFa38B90a9C3E78",
+    symbol: "AIRDROP",
   },
   {
     address: "0x346fAC947bc2e24Ab5D74a8BCa94082C6127B6C0",
     symbol: "KABOSU",
   },
   {
+    address: "0xB1a03EdA10342529bBF8EB700a06C60441fEf25d",
+    symbol: "MIGGLES",
+  },
+  {
     address: "0x8600afe41B35DaFa72E42Da9D633be48E64fb559",
     symbol: "KAMA",
-  },
-  {
-    address: "0x9AC802B60b477CAe004f9938C3b7abE99899E194",
-    symbol: "ETHV",
-  },
-  {
-    address: "0x3ec2156D4c0A9CBdAB4a016633b7BcF6a8d68Ea2",
-    symbol: "DRB",
-  },
-  {
-    address: "0xfDc6aBaA69f0df71FF4Bb6BdFeC34188796Ee07A",
-    symbol: "GrokCoin",
-  },
-  {
-    address: "0x96419929d7949D6A801A6909c145C8EEf6A40431",
-    symbol: "SPEC",
-  },
-  {
-    address: "0x98d0baa52b2D063E780DE12F615f963Fe8537553",
-    symbol: "KAITO",
-  },
-  {
-    address: "0x0B51C01378Ad9BA9481E697B695B2A7080edE3A2",
-    symbol: "SYMBOL",
   },
   {
     address: "0x2f6c17fa9f9bC3600346ab4e48C0701e1d5962AE",
     symbol: "Fartcoin",
   },
   {
+    address: "0x9AC802B60b477CAe004f9938C3b7abE99899E194",
+    symbol: "ETHV",
+  },
+  {
+    address: "0x0B51C01378Ad9BA9481E697B695B2A7080edE3A2",
+    symbol: "SYMBOL",
+  },
+  {
     address: "0xe487aBd2Af7ECB7CD597C9FF011a855C99191728",
     symbol: "WOW",
+  },
+  {
+    address: "0x96419929d7949D6A801A6909c145C8EEf6A40431",
+    symbol: "SPEC",
   },
   {
     address: "0x857aC97ea291cdF09AFE0f7e81204B0542631cEd",
@@ -923,8 +923,8 @@ export default [
     symbol: "FREEDUROV",
   },
   {
-    address: "0x9C13aC83930076744B375Cd1D379f5a25D436755",
-    symbol: "DeepSeek",
+    address: "0x9a26F5433671751C3276a065f57e5a02D2817973",
+    symbol: "KEYCAT",
   },
   {
     address: "0xD962E9bc39Cc9c4a6908cE4141bA54E82160f56d",
