@@ -147,7 +147,10 @@ All action functions should be covered with tests to make sure the returned perm
    import { applyPermissions } from "../../../../../../test/helpers"
    import { eth } from "."
 
-   await applyPermissions(Chain.eth, await eth.deposit({ market: "Core", targets: ["ETH", "USDC", "WETH"] }))
+   await applyPermissions(
+     Chain.eth,
+     await eth.deposit({ market: "Core", targets: ["ETH", "USDC", "WETH"] })
+   )
    ```
 
 2. Use test kit to execute calls to any contract in eth-sdk/config.ts through the test role:
@@ -230,6 +233,7 @@ To run a script locally you need to first go through some setup steps:
   cd scripts
   pip install -r requirements.txt
   ```
+
 - Create a file scripts/.env with the following content:
   ```
   CONFIG_PATH=<ABSOLUTE_PATH_TO_CONFIG.JSON>
