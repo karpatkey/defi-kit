@@ -68,7 +68,7 @@ describe("aaveV3", () => {
         Chain.base,
         contracts.base.weth,
         parseEther("1"),
-        contracts.base.balancer.vault
+        contracts.base.balancerV2.vault
       )
 
       await expect(

@@ -11,7 +11,7 @@ import { findPool as findAuraPool } from "../../protocols/aura"
 import {
   ExitKind,
   withdrawOptions as balancerWithdrawOptions,
-} from "../balancer/actions"
+} from "../balancer/v2/actions"
 import { Address } from "@gnosis-guild/eth-sdk"
 
 export const withdrawOptions = (

@@ -1,8 +1,8 @@
-import ethPools from "./_ethPools"
-import gnoPools from "./_gnoPools"
-import arb1Pools from "./_arb1Pools"
-import oethPools from "./_oethPools"
-import basePools from "./_basePools"
+import ethPools from "../v2/_ethPools"
+import gnoPools from "../v2/_gnoPools"
+import arb1Pools from "../v2/_arb1Pools"
+import oethPools from "../v2/_oethPools"
+import basePools from "../v2/_basePools"
 
 export type EthPool = (typeof ethPools)[number]
 export type GnoPool = (typeof gnoPools)[number]

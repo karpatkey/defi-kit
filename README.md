@@ -144,28 +144,26 @@ All action functions should be covered with tests to make sure the returned perm
 1. Use the `applyPermissions` helper function to apply the action's permission to a test role that is prepared as part of the global test setup:
 
    ```typescript
-   import { applyPermissions } from "../../../test/helpers"
+   import { applyPermissions } from "../../../../../../test/helpers"
    import { eth } from "."
 
-   await applyPermissions(await eth.deposit({ targets: ["ETH", "USDC"] }))
+   await applyPermissions(Chain.eth, await eth.deposit({ market: "Core", targets: ["ETH", "USDC", "WETH"] }))
    ```
 
 2. Use test kit to execute calls to any contract in eth-sdk/config.ts through the test role:
 
    ```typescript
-   import { testKit } from "../../../test/kit"
+   import { eth as kit } from "../../../test/kit"
 
-   await testKit.eth.maker.DSProxy.attach(proxyAddress).execute(...args)
+   await expect(kit.asMember.aaveV3.poolCoreV3.supply(...args)).toBeAllowed()
    ```
 
 3. Use the [custom jest matchers](sdk/test/setup-after-env.ts) to check on the transaction outcome:
 
    ```typescript
-   import { testKit } from "../../../test/kit"
+   import { eth as kit } from "../../../test/kit"
 
-   await expect(
-     testKit.eth.maker.DSProxy.attach(proxyAddress).execute(...args)
-   ).not.toRevert()
+   await expect(kit.asMember.aaveV3.poolCoreV3.supply(...args)).not.toRevert()
    ```
 
 #### Run specific tests
@@ -173,7 +171,7 @@ All action functions should be covered with tests to make sure the returned perm
 The `test:watch` script allows you to target specific test files rather than running the entire test suite:
 
 ```bash
-yarn test:watch maker/deposit
+yarn test:watch aave/v3/deposit
 ```
 
 You can pass any substring of the file paths to the targeted test files. Then you can also use the jest watch cli to control which tests shall be run whenever saving changes.
@@ -232,8 +230,6 @@ To run a script locally you need to first go through some setup steps:
   cd scripts
   pip install -r requirements.txt
   ```
-
-- Ask your colleagues for the config.json file for the [defi-protocols](https://github.com/karpatkey/defi-protocols) package. Store it in _scripts/config.json_.
 - Create a file scripts/.env with the following content:
   ```
   CONFIG_PATH=<ABSOLUTE_PATH_TO_CONFIG.JSON>

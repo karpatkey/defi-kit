@@ -1,9 +1,9 @@
 import { Permission, c } from "zodiac-roles-sdk"
 import { allow } from "zodiac-roles-sdk/kit"
-import { allowErc20Approve } from "../../conditions"
+import { allowErc20Approve } from "../../../conditions"
 import { Pool, Token } from "./types"
-import { contracts } from "../../../eth-sdk/config"
-import { Chain } from "../../types"
+import { contracts } from "../../../../eth-sdk/config"
+import { Chain } from "../../../types"
 
 export const bal = "0xba100000625a3754423978a60c9317c58a424e3D"
 export const b80Bal20Weth = "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56"
@@ -19,9 +19,9 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
     .filter((address) => tokens.some((token) => token.address === address))
 
   const permissions: Permission[] = [
-    ...allowErc20Approve(tokenAddresses, [contracts.mainnet.balancer.vault]),
+    ...allowErc20Approve(tokenAddresses, [contracts.mainnet.balancerV2.vault]),
 
-    allow.mainnet.balancer.vault.joinPool(
+    allow.mainnet.balancerV2.vault.joinPool(
       pool.id,
       c.avatar,
       c.avatar,
@@ -34,7 +34,7 @@ export const deposit = (pool: Pool, tokens: readonly Token[] = pool.tokens) => {
       }
     ),
 
-    allow.mainnet.balancer.vault.exitPool(pool.id, c.avatar, c.avatar),
+    allow.mainnet.balancerV2.vault.exitPool(pool.id, c.avatar, c.avatar),
   ]
 
   return permissions
@@ -48,28 +48,28 @@ export const stake = (chain: Chain, pool: Pool) => {
 
   switch (chain) {
     case Chain.eth:
-      minter = contracts.mainnet.balancer.minter as `0x${string}`
-      relayer = contracts.mainnet.balancer.relayer as `0x${string}`
+      minter = contracts.mainnet.balancerV2.minter as `0x${string}`
+      relayer = contracts.mainnet.balancerV2.relayer as `0x${string}`
       break
 
     case Chain.gno:
-      minter = contracts.gnosis.balancer.minter as `0x${string}`
-      relayer = contracts.gnosis.balancer.relayer as `0x${string}`
+      minter = contracts.gnosis.balancerV2.minter as `0x${string}`
+      relayer = contracts.gnosis.balancerV2.relayer as `0x${string}`
       break
 
     case Chain.arb1:
-      minter = contracts.arbitrumOne.balancer.minter as `0x${string}`
-      relayer = contracts.arbitrumOne.balancer.relayer as `0x${string}`
+      minter = contracts.arbitrumOne.balancerV2.minter as `0x${string}`
+      relayer = contracts.arbitrumOne.balancerV2.relayer as `0x${string}`
       break
 
     case Chain.oeth:
-      minter = contracts.optimism.balancer.minter as `0x${string}`
-      relayer = contracts.optimism.balancer.relayer as `0x${string}`
+      minter = contracts.optimism.balancerV2.minter as `0x${string}`
+      relayer = contracts.optimism.balancerV2.relayer as `0x${string}`
       break
 
     case Chain.base:
-      minter = contracts.base.balancer.minter as `0x${string}`
-      relayer = contracts.base.balancer.relayer as `0x${string}`
+      minter = contracts.base.balancerV2.minter as `0x${string}`
+      relayer = contracts.base.balancerV2.relayer as `0x${string}`
       break
 
     default:
@@ -80,26 +80,26 @@ export const stake = (chain: Chain, pool: Pool) => {
     permissions.push(
       ...allowErc20Approve([pool.bpt], [pool.gauge]),
       {
-        ...allow.mainnet.balancer.gauge["deposit(uint256)"](),
+        ...allow.mainnet.balancerV2.gauge["deposit(uint256)"](),
         targetAddress: pool.gauge,
       },
       {
-        ...allow.mainnet.balancer.gauge["withdraw(uint256)"](),
+        ...allow.mainnet.balancerV2.gauge["withdraw(uint256)"](),
         targetAddress: pool.gauge,
       },
       {
-        ...allow.mainnet.balancer.gauge["claim_rewards()"](),
+        ...allow.mainnet.balancerV2.gauge["claim_rewards()"](),
         targetAddress: pool.gauge,
       },
       {
-        ...allow.mainnet.balancer.minter.mint(pool.gauge),
+        ...allow.mainnet.balancerV2.minter.mint(pool.gauge),
         targetAddress: minter,
       },
 
       // New permissions for Unstaking and Claiming
-      allow.mainnet.balancer.vault.setRelayerApproval(c.avatar, relayer),
+      allow.mainnet.balancerV2.vault.setRelayerApproval(c.avatar, relayer),
       {
-        ...allow.mainnet.balancer.relayer.gaugeWithdraw(
+        ...allow.mainnet.balancerV2.relayer.gaugeWithdraw(
           pool.gauge,
           c.avatar,
           c.avatar
@@ -108,16 +108,16 @@ export const stake = (chain: Chain, pool: Pool) => {
       },
       // New permissions for Claiming and Claiming All
       {
-        ...allow.mainnet.balancer.minter.setMinterApproval(relayer),
+        ...allow.mainnet.balancerV2.minter.setMinterApproval(relayer),
         targetAddress: minter,
       },
       // vault.setRelayerApproval() already added
       {
-        ...allow.mainnet.balancer.relayer.gaugeClaimRewards([pool.gauge]), // WARNING!!: Specify gauge?
+        ...allow.mainnet.balancerV2.relayer.gaugeClaimRewards([pool.gauge]), // WARNING!!: Specify gauge?
         targetAddress: relayer,
       },
       {
-        ...allow.mainnet.balancer.relayer.gaugeMint([pool.gauge]), // WARNING!!: Specify gauge?
+        ...allow.mainnet.balancerV2.relayer.gaugeMint([pool.gauge]), // WARNING!!: Specify gauge?
         targetAddress: relayer,
       }
     )
@@ -130,26 +130,26 @@ export const lock = (): Permission[] => {
   return [
     ...allowErc20Approve(
       [bal, contracts.mainnet.weth],
-      [contracts.mainnet.balancer.vault]
+      [contracts.mainnet.balancerV2.vault]
     ),
-    ...allowErc20Approve([b80Bal20Weth], [contracts.mainnet.balancer.veBal]),
-    allow.mainnet.balancer.vault.joinPool(
+    ...allowErc20Approve([b80Bal20Weth], [contracts.mainnet.balancerV2.veBal]),
+    allow.mainnet.balancerV2.vault.joinPool(
       b80Bal20WethPid,
       c.avatar,
       c.avatar,
       undefined,
       { send: true }
     ),
-    allow.mainnet.balancer.vault.exitPool(b80Bal20WethPid, c.avatar, c.avatar),
+    allow.mainnet.balancerV2.vault.exitPool(b80Bal20WethPid, c.avatar, c.avatar),
     // As Safes are smart contracts they are not allowed to lock veBAL
     // if the they are not whitelisted previously by Balancer:
     // https://forum.balancer.fi/t/allow-for-gnosis-safe-to-be-used-for-vebal-locking/2698
-    allow.mainnet.balancer.veBal.create_lock(),
-    allow.mainnet.balancer.veBal.increase_amount(),
-    allow.mainnet.balancer.veBal.increase_unlock_time(),
-    allow.mainnet.balancer.veBal.withdraw(),
-    allow.mainnet.balancer.feeDistributor.claimToken(c.avatar),
-    allow.mainnet.balancer.feeDistributor.claimTokens(c.avatar),
+    allow.mainnet.balancerV2.veBal.create_lock(),
+    allow.mainnet.balancerV2.veBal.increase_amount(),
+    allow.mainnet.balancerV2.veBal.increase_unlock_time(),
+    allow.mainnet.balancerV2.veBal.withdraw(),
+    allow.mainnet.balancerV2.feeDistributor.claimToken(c.avatar),
+    allow.mainnet.balancerV2.feeDistributor.claimTokens(c.avatar),
   ]
 }
 
