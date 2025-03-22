@@ -140,7 +140,11 @@ export const lock = (): Permission[] => {
       undefined,
       { send: true }
     ),
-    allow.mainnet.balancerV2.vault.exitPool(b80Bal20WethPid, c.avatar, c.avatar),
+    allow.mainnet.balancerV2.vault.exitPool(
+      b80Bal20WethPid,
+      c.avatar,
+      c.avatar
+    ),
     // As Safes are smart contracts they are not allowed to lock veBAL
     // if the they are not whitelisted previously by Balancer:
     // https://forum.balancer.fi/t/allow-for-gnosis-safe-to-be-used-for-vebal-locking/2698

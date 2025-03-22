@@ -124,7 +124,7 @@ Note: For the new protocol functions to become available in the SDK playground, 
      }
    }
    ```
-2. Run `yarn setup`. This will automatically fetch the ABI for the listed contracts. In case this fails, you will have to manually add the ABI json file add the respective location in sdk/eth-sdk/abis.
+2. Run `yarn setup`. This will automatically fetch the ABI for the listed contracts. In case this fails, you will have to manually add the ABI json file to the respective location in sdk/eth-sdk/abis.
 3. Use the typed allow kit that has been generated:
 
    ```typescript
