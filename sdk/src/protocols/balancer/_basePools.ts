@@ -650,25 +650,6 @@ export default [
     ],
   },
   {
-    bpt: "0xcF4DA47A718b985Ef4cf96dFF1477Fc899f70897",
-    id: "0xcf4da47a718b985ef4cf96dff1477fc899f708970002000000000000000001cb",
-    name: "ECLP-WETH-USDT",
-    type: "GyroE",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
-        id: "0x",
-      },
-      {
-        address: "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2",
-        symbol: "USDT",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0xE40cBcCba664C7B1a953827C062F5070B78de868",
     id: "0xe40cbccba664c7b1a953827c062f5070b78de86800020000000000000000001b",
     name: "50WETH-50GOLD",

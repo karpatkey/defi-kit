@@ -22,6 +22,10 @@ export default [
     symbol: "xSPACE",
   },
   {
+    address: "0x216a7d520992eD198593A16e0b17c784c9cdc660",
+    symbol: "POOL",
+  },
+  {
     address: "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
     symbol: "AURA",
   },
@@ -40,10 +44,6 @@ export default [
   {
     address: "0x1f82284C1658Ad71C576f7230E6C2DEE7901c1FA",
     symbol: "wbTSLA",
-  },
-  {
-    address: "0x216a7d520992eD198593A16e0b17c784c9cdc660",
-    symbol: "POOL",
   },
   {
     address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",

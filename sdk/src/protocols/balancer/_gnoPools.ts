@@ -550,25 +550,6 @@ export default [
     ],
   },
   {
-    bpt: "0x915938ff0A2B54e575068fF1A95007caFBa7D277",
-    id: "0x915938ff0a2b54e575068ff1a95007cafba7d27700020000000000000000008a",
-    name: "80REG-20WXDAI",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x0AA1e96D2a46Ec6beB2923dE1E61Addf5F5f1dce",
-        symbol: "REG",
-        id: "0x",
-      },
-      {
-        address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
-        symbol: "WXDAI",
-        id: "0x",
-      },
-    ],
-  },
-  {
     bpt: "0x9D93F38b75B376AcDFe607cD1ECF4495E047dEfF",
     id: "0x9d93f38b75b376acdfe607cd1ecf4495e047deff00000000000000000000009e",
     name: "GBPe/sDAI",

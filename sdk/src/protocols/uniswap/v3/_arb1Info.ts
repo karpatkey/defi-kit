@@ -30,12 +30,12 @@ export default [
     symbol: "USDT",
   },
   {
-    address: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
-    symbol: "GMX",
-  },
-  {
     address: "0x912CE59144191C1204E64559FE8253a0e49E6548",
     symbol: "ARB",
+  },
+  {
+    address: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
+    symbol: "GMX",
   },
   {
     address: "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
@@ -58,27 +58,35 @@ export default [
     symbol: "AVATAR",
   },
   {
-    address: "0x37a645648dF29205C6261289983FB04ECD70b4B3",
-    symbol: "ANIME",
-  },
-  {
     address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
     symbol: "AAVE",
-  },
-  {
-    address: "0x431402e8b9dE9aa016C743880e04E517074D8cEC",
-    symbol: "HEGIC",
   },
   {
     address: "0x6985884C4392D348587B19cb9eAAf157F13271cd",
     symbol: "ZRO",
   },
   {
-    address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
-    symbol: "CRV",
+    address: "0x431402e8b9dE9aa016C743880e04E517074D8cEC",
+    symbol: "HEGIC",
+  },
+  {
+    address: "0x37a645648dF29205C6261289983FB04ECD70b4B3",
+    symbol: "ANIME",
   },
   {
     address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
     symbol: "DAI",
+  },
+  {
+    address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
+    symbol: "CRV",
+  },
+  {
+    address: "0x092bAaDB7DEf4C3981454dD9c0A0D7FF07bCFc86",
+    symbol: "MOR",
+  },
+  {
+    address: "0x5979D7b546E38E414F7E9822514be443A4800529",
+    symbol: "wstETH",
   },
 ] as const

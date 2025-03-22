@@ -14,12 +14,12 @@ export default [
     symbol: "USDC",
   },
   {
-    address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
-    symbol: "USDC",
-  },
-  {
     address: "0x9A601C5bb360811d96A23689066af316a30c3027",
     symbol: "PIKA",
+  },
+  {
+    address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+    symbol: "USDC",
   },
   {
     address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
