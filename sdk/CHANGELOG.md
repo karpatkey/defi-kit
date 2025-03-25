@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.13.8](https://github.com/karpatkey/defi-kit/compare/v2.13.7...v2.13.8) (2025-03-25)
+
+
+### Bug Fixes
+
+* refactor Balancer v2 ([#411](https://github.com/karpatkey/defi-kit/issues/411)) ([86db699](https://github.com/karpatkey/defi-kit/commit/86db699b4312bbede94b6177183357b10922c46b))
+* scripts dependencies ([#412](https://github.com/karpatkey/defi-kit/issues/412)) ([431ff0e](https://github.com/karpatkey/defi-kit/commit/431ff0e52f0d6481aeb55017ef8dd62e1889d609))
+
 ## [2.13.7](https://github.com/karpatkey/defi-kit/compare/v2.13.6...v2.13.7) (2025-03-18)
 
 
