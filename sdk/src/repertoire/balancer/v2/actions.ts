@@ -1,17 +1,17 @@
 import { allow } from "zodiac-roles-sdk/kit"
 import { c, PermissionSet } from "zodiac-roles-sdk"
-import { Chain } from "../../types"
-import { Pool } from "../../protocols/balancer/types"
-import ethPools from "../../protocols/balancer/_ethPools"
-import gnoPools from "../../protocols/balancer/_gnoPools"
-import arb1Pools from "../../protocols/balancer/_arb1Pools"
-import oethPools from "../../protocols/balancer/_oethPools"
-import basePools from "../../protocols/balancer/_basePools"
+import { Chain } from "../../../types"
+import { Pool } from "../../../protocols/balancer/v2/types"
+import ethPools from "../../../protocols/balancer/v2/_ethPools"
+import gnoPools from "../../../protocols/balancer/v2/_gnoPools"
+import arb1Pools from "../../../protocols/balancer/v2/_arb1Pools"
+import oethPools from "../../../protocols/balancer/v2/_oethPools"
+import basePools from "../../../protocols/balancer/v2/_basePools"
 import {
   findPool,
   findTokenIndexInPool,
   findPoolByGauge,
-} from "../../protocols/balancer"
+} from "../../../protocols/balancer/v2"
 
 export enum ExitKind {
   single,
@@ -59,7 +59,7 @@ export const withdrawOptions = (
 
     permissions.push(
       // It doesn't matter the blockchain we use, as the Vault address remains the same
-      allow.mainnet.balancer.vault.exitPool(pId, c.avatar, c.avatar, {
+      allow.mainnet.balancerV2.vault.exitPool(pId, c.avatar, c.avatar, {
         userData: c.abiEncodedMatches(
           [
             0,
@@ -73,7 +73,7 @@ export const withdrawOptions = (
   } else if (exitKind === ExitKind.proportional) {
     permissions.push(
       // It doesn't matter the blockchain we use, as the Vault address remains the same
-      allow.mainnet.balancer.vault.exitPool(pId, c.avatar, c.avatar, {
+      allow.mainnet.balancerV2.vault.exitPool(pId, c.avatar, c.avatar, {
         userData: c.abiEncodedMatches(
           poolType === "ComposableStable" ? [2] : [1],
           ["uint256"]
@@ -83,13 +83,13 @@ export const withdrawOptions = (
   } else {
     // Default case when `exitKind` is not specified
     permissions.push(
-      allow.mainnet.balancer.vault.exitPool(pId, c.avatar, c.avatar)
+      allow.mainnet.balancerV2.vault.exitPool(pId, c.avatar, c.avatar)
     )
   }
 
   if (gauge) {
     permissions.push({
-      ...allow.mainnet.balancer.gauge["withdraw(uint256)"](),
+      ...allow.mainnet.balancerV2.gauge["withdraw(uint256)"](),
       targetAddress: gauge,
     })
   }

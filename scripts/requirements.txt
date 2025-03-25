@@ -1,4 +1,3 @@
-defyes @ git+https://github.com/karpatkey/defyes.git
 karpatkit @ git+https://github.com/karpatkey/karpatkit.git
 
 gql>=3.4.0

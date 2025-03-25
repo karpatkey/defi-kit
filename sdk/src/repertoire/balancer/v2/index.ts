@@ -1,6 +1,5 @@
-import { Chain } from "../../types"
-import { withdrawOptions } from "./actions"
-import { ExitKind } from "./actions"
+import { Chain } from "../../../types"
+import { ExitKind, withdrawOptions } from "../v2/actions"
 
 export const eth = {
   withdraw_proportional: async ({ bpt }: { bpt: `0x${string}` }) =>

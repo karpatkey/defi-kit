@@ -25,7 +25,7 @@ describe("aaveV2", () => {
         Chain.eth,
         contracts.mainnet.aaveV2.aave,
         parseEther("1"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
 
       await expect(
@@ -125,7 +125,7 @@ describe("aaveV2", () => {
         Chain.eth,
         contracts.mainnet.aaveV2.gho,
         parseEther("1"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
 
       await expect(

@@ -1,9 +1,9 @@
 import { z } from "zod"
-import ethPools from "../../protocols/balancer/_ethPools"
-import gnoPools from "../../protocols/balancer/_gnoPools"
-import arb1Pools from "../../protocols/balancer/_arb1Pools"
-import oethPools from "../../protocols/balancer/_oethPools"
-import basePools from "../../protocols/balancer/_basePools"
+import ethPools from "../../../protocols/balancer/v2/_ethPools"
+import gnoPools from "../../../protocols/balancer/v2/_gnoPools"
+import arb1Pools from "../../../protocols/balancer/v2/_arb1Pools"
+import oethPools from "../../../protocols/balancer/v2/_oethPools"
+import basePools from "../../../protocols/balancer/v2/_basePools"
 
 const ethBpts = [...new Set(ethPools.map((pool) => pool.bpt))]
 const gnoBpts = [...new Set(gnoPools.map((pool) => pool.bpt))]

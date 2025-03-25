@@ -39,10 +39,10 @@ jobs:
         run: python scripts/aave_v3.py
       - name: Run aura.py
         run: python scripts/aura.py
-      - name: Run balancer.py
+      - name: Run balancer_v2.py
         env:
           THE_GRAPH_APIKEY: ${{ secrets.THE_GRAPH_APIKEY }}
-        run: python scripts/balancer.py
+        run: python scripts/balancer_v2.py
       - name: Run compound_v2
         run: python scripts/compound_v2.py
       - name: Run compound_v3

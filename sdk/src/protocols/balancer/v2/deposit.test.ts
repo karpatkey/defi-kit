@@ -1,10 +1,10 @@
 import { eth } from "."
-import { wallets } from "../../../test/wallets"
-import { applyPermissions } from "../../../test/helpers"
-import { contracts } from "../../../eth-sdk/config"
-import { eth as kit } from "../../../test/kit"
+import { wallets } from "../../../../test/wallets"
+import { applyPermissions } from "../../../../test/helpers"
+import { contracts } from "../../../../eth-sdk/config"
+import { eth as kit } from "../../../../test/kit"
 import { parseEther } from "ethers"
-import { Chain } from "../../../src"
+import { Chain } from "../../.."
 
 const bRethStablePid =
   "0x1e19cf2d73a72ef1332c882f20534b6519be0276000200000000000000000112"
@@ -23,13 +23,13 @@ describe("balancer", () => {
       await kit.asAvatar.weth.deposit({ value: parseEther("1") })
       await expect(
         kit.asMember.weth.approve(
-          contracts.mainnet.balancer.vault,
+          contracts.mainnet.balancerV2.vault,
           parseEther("1")
         )
       ).not.toRevert()
 
       await expect(
-        kit.asMember.balancer.vault.joinPool(
+        kit.asMember.balancerV2.vault.joinPool(
           bRethStablePid,
           wallets.avatar,
           wallets.avatar,
@@ -44,7 +44,7 @@ describe("balancer", () => {
       ).not.toRevert()
       // member address not allowed
       await expect(
-        kit.asMember.balancer.vault.joinPool(
+        kit.asMember.balancerV2.vault.joinPool(
           bRethStablePid,
           wallets.member,
           wallets.member,
@@ -59,7 +59,7 @@ describe("balancer", () => {
       ).toBeForbidden()
       // pool id not allowed
       await expect(
-        kit.asMember.balancer.vault.joinPool(
+        kit.asMember.balancerV2.vault.joinPool(
           "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014",
           wallets.avatar,
           wallets.avatar,
@@ -74,7 +74,7 @@ describe("balancer", () => {
       ).toBeForbidden()
 
       await expect(
-        kit.asMember.balancer.vault.exitPool(
+        kit.asMember.balancerV2.vault.exitPool(
           bRethStablePid,
           wallets.avatar,
           wallets.avatar,
@@ -89,7 +89,7 @@ describe("balancer", () => {
       ).not.toRevert()
       // member address not allowed
       await expect(
-        kit.asMember.balancer.vault.exitPool(
+        kit.asMember.balancerV2.vault.exitPool(
           bRethStablePid,
           wallets.member,
           wallets.member,
@@ -104,7 +104,7 @@ describe("balancer", () => {
       ).toBeForbidden()
       // pool id not allowed
       await expect(
-        kit.asMember.balancer.vault.exitPool(
+        kit.asMember.balancerV2.vault.exitPool(
           "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014",
           wallets.avatar,
           wallets.avatar,

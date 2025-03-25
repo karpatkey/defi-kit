@@ -7,13 +7,13 @@ import {
   bbaUsdV2,
   bbaUsdV3,
 } from "./actions"
-import { contracts } from "../../../eth-sdk/config"
-import { Status } from "../../../test/types"
-import { wallets } from "../../../test/wallets"
-import { applyPermissions } from "../../../test/helpers"
-import { eth as kit } from "../../../test/kit"
+import { contracts } from "../../../../eth-sdk/config"
+import { Status } from "../../../../test/types"
+import { wallets } from "../../../../test/wallets"
+import { applyPermissions } from "../../../../test/helpers"
+import { eth as kit } from "../../../../test/kit"
 import { ZeroAddress, parseEther } from "ethers"
-import { Chain } from "../../../src"
+import { Chain } from "../../.."
 
 describe("balancer", () => {
   describe("lock", () => {
@@ -23,7 +23,7 @@ describe("balancer", () => {
 
     it("deposit and withdraw from B-80BAL-20WETH pool", async () => {
       await expect(
-        kit.asMember.balancer.vault.joinPool(
+        kit.asMember.balancerV2.vault.joinPool(
           b80Bal20WethPid,
           wallets.avatar,
           wallets.avatar,
@@ -39,7 +39,7 @@ describe("balancer", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.balancer.vault.exitPool(
+        kit.asMember.balancerV2.vault.exitPool(
           b80Bal20WethPid,
           wallets.avatar,
           wallets.avatar,
@@ -60,7 +60,7 @@ describe("balancer", () => {
       await expect(
         kit.asMember.usdc
           .attach(b80Bal20Weth)
-          .approve(contracts.mainnet.balancer.veBal, parseEther("200"))
+          .approve(contracts.mainnet.balancerV2.veBal, parseEther("200"))
       ).not.toRevert()
 
       // The create_lock() reverts because it checks if the call
@@ -68,7 +68,7 @@ describe("balancer", () => {
       // To check if the smart contract is whitelisted you can query
       // the check() in https://etherscan.io/address/0x7869296Efd0a76872fEE62A058C8fBca5c1c826C
       await expect(
-        kit.asMember.balancer.veBal.create_lock(
+        kit.asMember.balancerV2.veBal.create_lock(
           parseEther("100"),
           unlock_timestamp
         )
@@ -76,7 +76,7 @@ describe("balancer", () => {
 
       // Test that the transaction goes through the roles
       await expect(
-        kit.asMember.balancer.veBal.create_lock(
+        kit.asMember.balancerV2.veBal.create_lock(
           parseEther("100"),
           unlock_timestamp
         )
@@ -84,21 +84,21 @@ describe("balancer", () => {
 
       // Test that the transaction goes through the roles
       await expect(
-        kit.asMember.balancer.veBal.increase_amount(parseEther("200"))
+        kit.asMember.balancerV2.veBal.increase_amount(parseEther("200"))
       ).toBeAllowed()
 
       unlock_timestamp = unlock_timestamp + 30 * 24 * 60 * 60
       // Test that the transaction goes through the roles
       await expect(
-        kit.asMember.balancer.veBal.increase_unlock_time(unlock_timestamp)
+        kit.asMember.balancerV2.veBal.increase_unlock_time(unlock_timestamp)
       ).toBeAllowed()
 
       // Test that the transaction goes through the roles
-      await expect(kit.asMember.balancer.veBal.withdraw()).toBeAllowed()
+      await expect(kit.asMember.balancerV2.veBal.withdraw()).toBeAllowed()
 
       // Claim only with avatar as user
       await expect(
-        kit.asMember.balancer.feeDistributor.claimTokens(wallets.avatar, [
+        kit.asMember.balancerV2.feeDistributor.claimTokens(wallets.avatar, [
           bbaUsdV1,
           bbaUsdV2,
           bbaUsdV3,
@@ -108,7 +108,7 @@ describe("balancer", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.balancer.feeDistributor.claimTokens(wallets.member, [
+        kit.asMember.balancerV2.feeDistributor.claimTokens(wallets.member, [
           bbaUsdV1,
           bbaUsdV2,
           bbaUsdV3,

@@ -52,7 +52,7 @@ export const contracts = {
       rewarder: "0x59D66C58E83A26d6a0E35114323f65c3945c89c1",
       claimZapV3: "0x5b2364fD757E262253423373E4D57C5c011Ad7F4",
     },
-    balancer: {
+    balancerV2: {
       relayer: "0x35Cea9e57A393ac66Aaa7E25C391D52C74B5648f",
       relayerLibrary: "0xeA66501dF1A00261E3bB79D1E90444fc6A186B62",
       vault: "0xba12222222228d8ba445958a75a0704d566bf2c8",
@@ -182,7 +182,7 @@ export const contracts = {
       rewardPoolDepositWrapper: "0x0Fec3d212BcC29eF3E505B555D7a7343DF0B7F76",
       rewarder: "0x14A81C9283CC16897DaA3f466847Baa260b770eB",
     },
-    balancer: {
+    balancerV2: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       minter: "0xA8920455934Da4D853faac1f94Fe7bEf72943eF1",
       relayer: "0x2163c2FcD0940e84B8a68991bF926eDfB0Cd926C",
@@ -233,7 +233,7 @@ export const contracts = {
       rewardPoolDepositWrapper: "0x6b02fEFd2F2e06f51E17b7d5b8B20D75fd6916be",
       rewarder: "0x40bF10900a55c69c9dADdc3dC52465e01AcEF4A4",
     },
-    balancer: {
+    balancerV2: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       gauge: "0x260cbb867359a1084eC97de4157d06ca74e89415",
       bpt: "0x9791d590788598535278552EEcD4b211bFc790CB",
@@ -274,7 +274,7 @@ export const contracts = {
       rewardPoolDepositWrapper: "0x51b6e0ac6D6435650748513C71db453F96749fe1",
       rewarder: "0xe350DFC963445F3B64a4229d019787491a58F8B9",
     },
-    balancer: {
+    balancerV2: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       gauge: "0xA30992B40a0cb4B2Da081ddBd843f9CcE25c2fe3",
       bpt: "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2",
@@ -313,7 +313,7 @@ export const contracts = {
       rewardPoolDepositWrapper: "0xa9952C914D86f896c53Bf17125c4104Cc058008E",
       rewarder: "0xcCAC11368BDD522fc4DD23F98897712391ab1E00",
     },
-    balancer: {
+    balancerV2: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       gauge: "0x8D118063B521e0CB9947A934BE90f7e32d02b158",
       bpt: "0xC771c1a5905420DAEc317b154EB13e4198BA97D0",

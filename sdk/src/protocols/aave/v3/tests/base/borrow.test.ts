@@ -25,7 +25,7 @@ describe("aaveV3", () => {
         Chain.base,
         contracts.base.usdc,
         parseUnits("10000", 6),
-        contracts.base.balancer.vault
+        contracts.base.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc.approve(
@@ -172,7 +172,7 @@ describe("aaveV3", () => {
         Chain.eth,
         contracts.base.usdc,
         parseUnits("100", 6),
-        contracts.base.balancer.vault
+        contracts.base.balancerV2.vault
       )
 
       await expect(
