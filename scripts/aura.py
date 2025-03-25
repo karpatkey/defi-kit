@@ -3,23 +3,14 @@ from defabipedia import Chain
 from web3.exceptions import ContractLogicError
 from lib.dump import dump
 
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# AURA BOOSTER
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Aura Booster (Main Deposit Contract) Address
 BOOSTER = "0xA57b8d98dAE62B26Ec3bcC4a365338157060B234"
 # Booster Lite for side-chains
 BOOSTER_LITE = "0x98Ef32edd24e2c92525E59afc4475C1242a30184"
 
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# BALANCER VAULT
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Balancer Vault Contract Address
 VAULT = "0xBA12222222228d8Ba445958a75a0704d566BF2C8"
 
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# ABIs
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Booster ABI - poolInfo, poolLength
 ABI_BOOSTER = '[{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"poolInfo","outputs":[{"internalType":"address","name":"lptoken","type":"address"},{"internalType":"address","name":"token","type":"address"},{"internalType":"address","name":"gauge","type":"address"},{"internalType":"address","name":"crvRewards","type":"address"},{"internalType":"address","name":"stash","type":"address"},{"internalType":"bool","name":"shutdown","type":"bool"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"poolLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]'
 
@@ -29,10 +20,6 @@ ABI_VAULT = '[{"inputs":[{"internalType":"bytes32","name":"poolId","type":"bytes
 # BPT- getPoolId, POOL_ID
 ABI_BPT = '[{"inputs":[],"name":"getPoolId","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"POOL_ID","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"}]'
 
-
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# protocol_data
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def protocol_data(blockchain = Chain.ETHEREUM):
 
     result = []

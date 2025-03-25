@@ -1,29 +1,18 @@
-from defyes.protocols.compound import ABI_CTOKEN
 from karpatkit.functions import get_contract, get_symbol, get_node
 from karpatkit.constants import Address
 from defabipedia import Chain
 from web3.exceptions import BadFunctionCallOutput
 from lib.dump import dump
 
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# COMPTROLLER
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Ethereum - Comptroller Address
 COMPTROLLER = "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B"
 
 # Comptroller ABI - getAllMarkets, mintGuardianPaused
 ABI_COMPTROLLER = '[{"constant":true,"inputs":[],"name":"getAllMarkets","outputs":[{"internalType":"contract CToken[]","name":"","type":"address[]"}],"payable":false,"stateMutability":"view","type":"function"}, {"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"mintGuardianPaused","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"}]'
 
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# ABIs
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # cToken ABI - underlying
 ABI_CTOKEN = '[{"constant":true,"inputs":[],"name":"underlying","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"}]'
 
-
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# markets_data_v2
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def markets_data_v2(blockchain):
     result = []
 

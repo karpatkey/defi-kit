@@ -3,16 +3,9 @@ from defabipedia import Chain
 from lib.dump import dump
 import requests
 
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# ABIs
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Gem Join - gem, ilk
 ABI_GEM_JOIN = '[{"constant":true,"inputs":[],"name":"gem","outputs":[{"internalType":"contract GemLike","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"ilk","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"}]'
 
-
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# protocol_data
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def protocol_data():
     chainlog_data = requests.get("https://chainlog.sky.money/api/mainnet/active.json").json()
 
