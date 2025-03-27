@@ -121,7 +121,7 @@ export const contracts = {
     },
     morpho: {
       morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
-      publicAllocator: "0xfd32fA2ca22c76dD6E550706Ad913FC6CE91c75D",
+      // publicAllocator: "0xfd32fA2ca22c76dD6E550706Ad913FC6CE91c75D",
       metaMorpho: "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658",
     },
     rocketPool: {
