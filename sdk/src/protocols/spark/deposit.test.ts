@@ -94,7 +94,7 @@ describe("spark", () => {
         Chain.eth,
         contracts.mainnet.weth,
         parseEther("1"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       await expect(
         kit.asMember.weth.approve(
@@ -167,7 +167,7 @@ describe("spark", () => {
         Chain.eth,
         contracts.mainnet.usdc,
         parseUnits("1000", 6),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc.approve(
@@ -241,7 +241,7 @@ describe("spark", () => {
         Chain.eth,
         contracts.mainnet.dai,
         parseEther("1000"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       await expect(
         kit.asMember.dai.approve(

@@ -1,8 +1,8 @@
 import { eth } from "."
-import { applyPermissions, stealErc20 } from "../../../test/helpers"
-import { eth as kit } from "../../../test/kit"
+import { applyPermissions, stealErc20 } from "../../../../test/helpers"
+import { eth as kit } from "../../../../test/kit"
 import { parseEther } from "ethers"
-import { Chain } from "../../../src"
+import { Chain } from "../../.."
 
 const bRethStable = "0x1E19CF2D73a72Ef1332C882F20534B6519Be0276"
 const bRethStableGauge = "0x79eF6103A513951a3b25743DB509E267685726B7"
@@ -30,25 +30,25 @@ describe("balancer", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.balancer.gauge
+        kit.asMember.balancerV2.gauge
           .attach(bRethStableGauge)
           ["deposit(uint256)"](parseEther("1"))
       ).not.toRevert()
 
       await expect(
-        kit.asMember.balancer.gauge
+        kit.asMember.balancerV2.gauge
           .attach(bRethStableGauge)
           ["withdraw(uint256)"](parseEther("1"))
       ).not.toRevert()
 
       await expect(
-        kit.asMember.balancer.gauge
+        kit.asMember.balancerV2.gauge
           .attach(bRethStableGauge)
           ["claim_rewards()"]()
       ).not.toRevert()
 
       await expect(
-        kit.asMember.balancer.minter.mint(bRethStableGauge)
+        kit.asMember.balancerV2.minter.mint(bRethStableGauge)
       ).not.toRevert()
     })
   })

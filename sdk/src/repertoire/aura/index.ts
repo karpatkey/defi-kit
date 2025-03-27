@@ -1,6 +1,6 @@
 import { Chain } from "../../types"
 import { withdrawOptions } from "./actions"
-import { ExitKind } from "../balancer/actions"
+import { ExitKind } from "../balancer/v2/actions"
 
 export const eth = {
   unstake: async ({ rewarder }: { rewarder: `0x${string}` }) =>

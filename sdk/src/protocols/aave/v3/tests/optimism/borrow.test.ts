@@ -25,7 +25,7 @@ describe("aaveV3", () => {
         Chain.oeth,
         contracts.optimism.usdc,
         parseUnits("10000", 6),
-        contracts.optimism.balancer.vault
+        contracts.optimism.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc.approve(
@@ -172,7 +172,7 @@ describe("aaveV3", () => {
         Chain.eth,
         contracts.optimism.usdc,
         parseUnits("100", 6),
-        contracts.optimism.balancer.vault
+        contracts.optimism.balancerV2.vault
       )
 
       await expect(

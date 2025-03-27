@@ -16,9 +16,9 @@ import gnoPools from "./_gnoPools"
 import arb1Pools from "./_arb1Pools"
 import oethPools from "./_oethPools"
 import basePools from "./_basePools"
-import { NotFoundError } from "../../errors"
+import { NotFoundError } from "../../../errors"
 import { deposit, stake, lock } from "./actions"
-import { Chain } from "../../types"
+import { Chain } from "../../../types"
 
 export const findPool = (pools: readonly Pool[], nameIdOrBpt: string) => {
   const nameIdOrBptLower = nameIdOrBpt.toLowerCase()

@@ -99,6 +99,10 @@ export default [
         address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
         symbol: "ETHx",
       },
+      {
+        address: "0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8",
+        symbol: "tETH",
+      },
     ],
   },
 ] as const

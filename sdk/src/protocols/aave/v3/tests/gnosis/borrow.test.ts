@@ -25,7 +25,7 @@ describe("aaveV3", () => {
         Chain.gno,
         contracts.gnosis.usdc,
         parseUnits("1000", 6),
-        contracts.gnosis.balancer.vault
+        contracts.gnosis.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc.approve(
@@ -174,7 +174,7 @@ describe("aaveV3", () => {
         Chain.gno,
         contracts.gnosis.usdc,
         parseUnits("100", 6),
-        contracts.gnosis.balancer.vault
+        contracts.gnosis.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc.approve(

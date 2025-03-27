@@ -14,12 +14,6 @@ export default [
       "Chorus One’s ground-breaking MEV research ensures the highest yields with top-tier security and enterprise-level infrastructure. Start staking ETH today.",
   },
   {
-    id: "0x3be03c2c390f405560599d962ddf60eecd9f6a94",
-    name: "Nya Stake - Low fee",
-    description:
-      "This is a vault holding all my savings and you are welcome to use too.\nNodes with UPS and redundant network connections.",
-  },
-  {
     id: "0xb36fc5e542cb4fc562a624912f55da2758998113",
     name: "Serenita - Powered by Vero",
     description:
@@ -96,16 +90,16 @@ export default [
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
   {
-    id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
-    name: "Verse ETH Staking",
-    description:
-      "Earn rewards by staking your ETH in the Verse Ecosystem vault",
-  },
-  {
     id: "0xdbdee04c72a02a740b9f26ada9203582c8a99daf",
     name: "Chorus One - Obol DV vault",
     description:
       'This vault represents a distributed validator cluster , using Obol\'s DV technology to run the validators across multiple nodes. As a staker, you can expect higher uptime, decreased slashing risk, and a meaningful contribution to the decentralization of the Ethereum network.\n\nBy staking with an Obol DV, you automatically participate in the Obol Contributions initiative, contributing 1% of staking rewards to the "1% for Decentralization" retroactive funding model. Your contributions will be tracked and recognized by Obol and can be viewed on our staking dApp, OPUS Pool.',
+  },
+  {
+    id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
+    name: "Verse ETH Staking",
+    description:
+      "Earn rewards by staking your ETH in the Verse Ecosystem vault",
   },
   {
     id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
@@ -123,12 +117,6 @@ export default [
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
     name: "BRAZILPRACIMA",
     description: "Independent solo operator since genesis",
-  },
-  {
-    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
-    name: "Fox & Yaga",
-    description:
-      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
   },
   {
     id: "0x9c29c571847a68a947acec8bacd303e36bc72ec5",
@@ -207,5 +195,11 @@ export default [
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
+  },
+  {
+    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
+    name: "Fox & Yaga",
+    description:
+      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
   },
 ] as const

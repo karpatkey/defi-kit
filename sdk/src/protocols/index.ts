@@ -2,7 +2,7 @@ import * as aaveV2 from "./aave/v2"
 import * as aaveV3 from "./aave/v3"
 import * as ankr from "./ankr"
 import * as aura from "./aura"
-import * as balancer from "./balancer"
+import * as balancerV2 from "./balancer/v2"
 import * as compoundV2 from "./compound/v2"
 // import * as compoundV3 from "./compound/v3"
 import * as convex from "./convex"
@@ -28,7 +28,7 @@ export const eth = annotateAll(
     aave_v3: aaveV3.eth,
     ankr: ankr.eth,
     aura: aura.eth,
-    balancer: balancer.eth,
+    balancer_v2: balancerV2.eth,
     compound_v2: compoundV2.eth,
     // compound_v3: compoundV3.eth,
     convex: convex.eth,
@@ -51,7 +51,7 @@ export const gno = annotateAll(
   {
     aave_v3: aaveV3.gno,
     aura: aura.gno,
-    balancer: balancer.gno,
+    balancer_v2: balancerV2.gno,
     cowswap: cowSwap.gno,
     spark: spark.gno,
     stakewise_v3: stakeWiseV3.gno,
@@ -64,7 +64,7 @@ export const arb1 = annotateAll(
   {
     aave_v3: aaveV3.arb1,
     aura: aura.arb1,
-    balancer: balancer.arb1,
+    balancer_v2: balancerV2.arb1,
     cowswap: cowSwap.arb1,
     uniswap_v3: uniswapV3.arb1,
   },
@@ -75,7 +75,7 @@ export const oeth = annotateAll(
   {
     aave_v3: aaveV3.oeth,
     aura: aura.oeth,
-    balancer: balancer.oeth,
+    balancer_v2: balancerV2.oeth,
     uniswap_v3: uniswapV3.oeth,
   },
   "oeth"
@@ -85,7 +85,7 @@ export const base = annotateAll(
   {
     aave_v3: aaveV3.base,
     aura: aura.base,
-    balancer: balancer.base,
+    balancer_v2: balancerV2.base,
     uniswap_v3: uniswapV3.base,
   },
   "base"

@@ -23,7 +23,7 @@ describe("convex", () => {
         Chain.eth,
         crv,
         parseEther("2"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc
@@ -63,7 +63,7 @@ describe("convex", () => {
         Chain.eth,
         crv,
         parseEther("1"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc
@@ -101,7 +101,7 @@ describe("convex", () => {
         Chain.eth,
         cvx,
         parseEther("1"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc
