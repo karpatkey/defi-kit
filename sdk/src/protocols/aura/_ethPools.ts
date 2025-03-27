@@ -2145,4 +2145,20 @@ export default [
     ],
     rewarder: "0x53c21ED0B4dFD8Be6264717B831Ea9529bAc874d",
   },
+  {
+    name: "B-sdBAL-STABLE",
+    id: "249",
+    bpt: "0x2d011aDf89f0576C9B722c28269FcB5D50C2d179",
+    tokens: [
+      {
+        address: "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56",
+        symbol: "B-80BAL-20WETH",
+      },
+      {
+        address: "0xF24d8651578a55b0C119B9910759a351A3458895",
+        symbol: "sdBal",
+      },
+    ],
+    rewarder: "0xdb407aD592f0563250b55261c37e029152128f18",
+  },
 ] as const

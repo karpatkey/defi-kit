@@ -52,7 +52,7 @@ export const contracts = {
       rewarder: "0x59D66C58E83A26d6a0E35114323f65c3945c89c1",
       claimZapV3: "0x5b2364fD757E262253423373E4D57C5c011Ad7F4",
     },
-    balancer: {
+    balancerV2: {
       relayer: "0x35Cea9e57A393ac66Aaa7E25C391D52C74B5648f",
       relayerLibrary: "0xeA66501dF1A00261E3bB79D1E90444fc6A186B62",
       vault: "0xba12222222228d8ba445958a75a0704d566bf2c8",
@@ -187,13 +187,14 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x7B9c12915c594a68dE96201Cbdc79147F09da278",
       aGnoWXDAI: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
       variableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
+      protocolDataProviderV3: "0x57038C3e3Fe0a170BB72DE2fD56E98e4d1a69717",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
       rewardPoolDepositWrapper: "0x0Fec3d212BcC29eF3E505B555D7a7343DF0B7F76",
       rewarder: "0x14A81C9283CC16897DaA3f466847Baa260b770eB",
     },
-    balancer: {
+    balancerV2: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       minter: "0xA8920455934Da4D853faac1f94Fe7bEf72943eF1",
       relayer: "0x2163c2FcD0940e84B8a68991bF926eDfB0Cd926C",
@@ -219,6 +220,9 @@ export const contracts = {
     stakeWiseV3: {
       vault: "0x00c3C5227402BC4cF383Ae2E6931394dD1e720B4", // GnoVault (Implementation)
     },
+    uniswapV3: {
+      positionsNft: "0xAE8fbE656a77519a7490054274910129c9244FA3",
+    },
     comp: "0xDf6FF92bfDC1e8bE45177DC1f4845d391D3ad8fD",
     gno: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
     usdc: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
@@ -234,13 +238,14 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x5760E34c4003752329bC77790B1De44C2799F8C3",
       aArbWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
+      protocolDataProviderV3: "0x14496b405D62c24F91f04Cda1c69Dc526D56fDE5",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
       rewardPoolDepositWrapper: "0x6b02fEFd2F2e06f51E17b7d5b8B20D75fd6916be",
       rewarder: "0x40bF10900a55c69c9dADdc3dC52465e01AcEF4A4",
     },
-    balancer: {
+    balancerV2: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       gauge: "0x260cbb867359a1084eC97de4157d06ca74e89415",
       bpt: "0x9791d590788598535278552EEcD4b211bFc790CB",
@@ -259,6 +264,9 @@ export const contracts = {
     cowSwap: {
       orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
     },
+    uniswapV3: {
+      positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+    },
     weth: "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
     usdc: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
     gatewayRouter: "0x5288c571Fd7aD117beA99bF60FE0846C4E84F933",
@@ -271,13 +279,14 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x60eE8b61a13c67d0191c851BEC8F0bc850160710",
       aOptWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
+      protocolDataProviderV3: "0x14496b405D62c24F91f04Cda1c69Dc526D56fDE5",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
       rewardPoolDepositWrapper: "0x51b6e0ac6D6435650748513C71db453F96749fe1",
       rewarder: "0xe350DFC963445F3B64a4229d019787491a58F8B9",
     },
-    balancer: {
+    balancerV2: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       gauge: "0xA30992B40a0cb4B2Da081ddBd843f9CcE25c2fe3",
       bpt: "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2",
@@ -293,6 +302,9 @@ export const contracts = {
       cUsdcV3: "0x2e44e174f7D53F0212823acC11C01A11d58c5bCB",
       cometRewards: "0x443EA0340cb75a160F31A440722dec7b5bc3C2E9",
     },
+    uniswapV3: {
+      positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+    },
     weth: "0x4200000000000000000000000000000000000006",
     usdc: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
     daiTokenBridge: "0x467194771dAe2967Aef3ECbEDD3Bf9a310C76C65",
@@ -306,13 +318,14 @@ export const contracts = {
       wrappedTokenGatewayV3: "0x729b3EA8C005AbC58c9150fb57Ec161296F06766",
       aBasWeth: "0xD4a0e0b9149BCee3C920d2E00b5dE09138fd8bb7",
       variableDebtWeth: "0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E",
+      protocolDataProviderV3: "0xC4Fcf9893072d61Cc2899C0054877Cb752587981",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
       rewardPoolDepositWrapper: "0xa9952C914D86f896c53Bf17125c4104Cc058008E",
       rewarder: "0xcCAC11368BDD522fc4DD23F98897712391ab1E00",
     },
-    balancer: {
+    balancerV2: {
       vault: "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
       gauge: "0x8D118063B521e0CB9947A934BE90f7e32d02b158",
       bpt: "0xC771c1a5905420DAEc317b154EB13e4198BA97D0",
@@ -332,7 +345,11 @@ export const contracts = {
       morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
     },
     weth: "0x4200000000000000000000000000000000000006",
+    uniswapV3: {
+      positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+    },
     usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    weth: "0x4200000000000000000000000000000000000006",
     l2HopCctp: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
   },
 } as const satisfies EthSdkConfig["contracts"]

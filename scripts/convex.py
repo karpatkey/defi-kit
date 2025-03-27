@@ -2,22 +2,12 @@ from karpatkit.functions import get_contract, get_symbol, get_node
 from defabipedia import Chain
 from lib.dump import dump
 
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# BOOSTER
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Booster (Main Deposit Contract) Address
 BOOSTER = "0xF403C135812408BFbE8713b5A23a04b3D48AAE31"
 
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# ABIs
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Booster ABI - poolInfo, poolLength
 ABI_BOOSTER = '[{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"poolInfo","outputs":[{"internalType":"address","name":"lptoken","type":"address"},{"internalType":"address","name":"token","type":"address"},{"internalType":"address","name":"gauge","type":"address"},{"internalType":"address","name":"crvRewards","type":"address"},{"internalType":"address","name":"stash","type":"address"},{"internalType":"bool","name":"shutdown","type":"bool"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"poolLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]'
 
-
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# protocol_data
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def protocol_data():
 
     result = []
@@ -46,6 +36,5 @@ def protocol_data():
             result.append(pool_data)
 
     dump(result, 'convex')
-
 
 protocol_data()

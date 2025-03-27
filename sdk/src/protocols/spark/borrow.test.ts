@@ -25,7 +25,7 @@ describe("spark", () => {
         Chain.eth,
         contracts.mainnet.spark.sDai,
         parseEther("10000"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       await expect(
         kit.asMember.spark.sDai.approve(
@@ -184,7 +184,7 @@ describe("spark", () => {
         Chain.eth,
         contracts.mainnet.dai,
         parseEther("10000"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
 
       await expect(

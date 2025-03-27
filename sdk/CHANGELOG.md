@@ -1,5 +1,83 @@
 # Changelog
 
+## [2.13.9](https://github.com/karpatkey/defi-kit/compare/v2.13.8...v2.13.9) (2025-03-25)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#409](https://github.com/karpatkey/defi-kit/issues/409)) ([78c7390](https://github.com/karpatkey/defi-kit/commit/78c7390cb223f931b20b29fd2c073dda197f8dc4))
+
+## [2.13.8](https://github.com/karpatkey/defi-kit/compare/v2.13.7...v2.13.8) (2025-03-25)
+
+
+### Bug Fixes
+
+* refactor Balancer v2 ([#411](https://github.com/karpatkey/defi-kit/issues/411)) ([86db699](https://github.com/karpatkey/defi-kit/commit/86db699b4312bbede94b6177183357b10922c46b))
+* scripts dependencies ([#412](https://github.com/karpatkey/defi-kit/issues/412)) ([431ff0e](https://github.com/karpatkey/defi-kit/commit/431ff0e52f0d6481aeb55017ef8dd62e1889d609))
+
+## [2.13.7](https://github.com/karpatkey/defi-kit/compare/v2.13.6...v2.13.7) (2025-03-18)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#407](https://github.com/karpatkey/defi-kit/issues/407)) ([3c3b2c8](https://github.com/karpatkey/defi-kit/commit/3c3b2c8ed892b6187d9e36782cea734ee01e2e7b))
+
+## [2.13.6](https://github.com/karpatkey/defi-kit/compare/v2.13.5...v2.13.6) (2025-03-17)
+
+
+### Bug Fixes
+
+* Circle v1 receive ([#405](https://github.com/karpatkey/defi-kit/issues/405)) ([579fde7](https://github.com/karpatkey/defi-kit/commit/579fde72925365eb71b35b70bfd29f63cb5a53f4))
+
+## [2.13.5](https://github.com/karpatkey/defi-kit/compare/v2.13.4...v2.13.5) (2025-03-17)
+
+
+### Bug Fixes
+
+* Circle v1 receive ([#402](https://github.com/karpatkey/defi-kit/issues/402)) ([884e548](https://github.com/karpatkey/defi-kit/commit/884e54822fb1e2b92de011940d3ef801fac8d8d9))
+
+## [2.13.4](https://github.com/karpatkey/defi-kit/compare/v2.13.3...v2.13.4) (2025-03-17)
+
+
+### Bug Fixes
+
+* protocol databases ([#400](https://github.com/karpatkey/defi-kit/issues/400)) ([d0eb20a](https://github.com/karpatkey/defi-kit/commit/d0eb20add1104cf1bf456c0e973b5e1160340b3d))
+
+## [2.13.3](https://github.com/karpatkey/defi-kit/compare/v2.13.2...v2.13.3) (2025-03-17)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#387](https://github.com/karpatkey/defi-kit/issues/387)) ([edcb50d](https://github.com/karpatkey/defi-kit/commit/edcb50d880b8c79605add1035e80c956908fc8a6))
+
+## [2.13.2](https://github.com/karpatkey/defi-kit/compare/v2.13.1...v2.13.2) (2025-03-14)
+
+
+### Bug Fixes
+
+* Add Aave v3 test for sidechains ([#388](https://github.com/karpatkey/defi-kit/issues/388)) ([0e8f405](https://github.com/karpatkey/defi-kit/commit/0e8f405f5c7989cedb5349fce8dfa130878f9061))
+
+## [2.13.1](https://github.com/karpatkey/defi-kit/compare/v2.13.0...v2.13.1) (2025-03-13)
+
+
+### Bug Fixes
+
+* Uniswap v3 script ([#396](https://github.com/karpatkey/defi-kit/issues/396)) ([a0263ef](https://github.com/karpatkey/defi-kit/commit/a0263ef18ba9467b94d25b96468e2c92a532194f))
+
+## [2.13.0](https://github.com/karpatkey/defi-kit/compare/v2.12.1...v2.13.0) (2025-03-12)
+
+
+### Features
+
+* Extend Uniswap v3 to sidechains ([#394](https://github.com/karpatkey/defi-kit/issues/394)) ([5433c01](https://github.com/karpatkey/defi-kit/commit/5433c0158e1bbffb3ea9c98a139be4bf28ccd06f))
+
+## [2.12.1](https://github.com/karpatkey/defi-kit/compare/v2.12.0...v2.12.1) (2025-03-11)
+
+
+### Bug Fixes
+
+* Balancer script (remove TVL filter) ([#392](https://github.com/karpatkey/defi-kit/issues/392)) ([50b528b](https://github.com/karpatkey/defi-kit/commit/50b528b6489190e09a6728c1fa45b603de6fa242))
+
 ## [2.12.0](https://github.com/karpatkey/defi-kit/compare/v2.11.5...v2.12.0) (2025-02-26)
 
 

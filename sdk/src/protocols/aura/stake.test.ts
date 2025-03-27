@@ -25,7 +25,7 @@ describe("aura", () => {
         Chain.eth,
         bal,
         parseEther("3"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc
@@ -84,7 +84,7 @@ describe("aura", () => {
         Chain.eth,
         b80Bal20Weth,
         parseEther("3"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc
@@ -141,7 +141,7 @@ describe("aura", () => {
         Chain.eth,
         auraBal,
         parseEther("2"),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       // For staking
       await expect(

@@ -38,16 +38,16 @@ export default [
       "Node operators, securing and decentralizing Ethereum |  AVS operator: http://avs.stakecat.space\n \nWe provide greater decentralization for networks with our own infrastructure for validators and high availability to compete with centralized data center performance.\n\nmore about Stakecat here: https://www.stakecat.space/",
   },
   {
-    id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
-    name: "IP Stake",
-    description:
-      "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
-  },
-  {
     id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
     name: "H2O Nodes",
     description:
       "Help decentralize Ethereum by staking with us - we run minority clients (usually Nimbus + Nethermind) running on bare metal servers in minority data centers. \n\nRead more at www.h2o-nodes.com\n\nHappy staking! ",
+  },
+  {
+    id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
+    name: "IP Stake",
+    description:
+      "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
   },
   {
     id: "0x3cb4692177525db38d983da0445d4eb25c3826de",
@@ -74,12 +74,6 @@ export default [
       "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
   },
   {
-    id: "0xe32773a0f6fa8ebf2a32c040dacd031a1ad1e530",
-    name: "Deprecated: Orangefin Ventures",
-    description:
-      "Orangefin Ventures has been acquired and we will be sunsetting our support for Gnosis. We will be exiting all of our validators so users don't incur any penalties. Please unstake at your earliest convenience.",
-  },
-  {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
     name: "FCC GNO Vault",
     description: "FCC GNO Liquid Staking Public Vault",
@@ -94,6 +88,12 @@ export default [
     id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
     name: "Wunode",
     description: "Dappnode vault, fiber gigabit uplink, UPS",
+  },
+  {
+    id: "0xe32773a0f6fa8ebf2a32c040dacd031a1ad1e530",
+    name: "Deprecated: Orangefin Ventures",
+    description:
+      "Orangefin Ventures has been acquired and we will be sunsetting our support for Gnosis. We will be exiting all of our validators so users don't incur any penalties. Please unstake at your earliest convenience.",
   },
   {
     id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
@@ -111,15 +111,5 @@ export default [
     name: "Sophia's Gnosis",
     description:
       "Whispers of Sophia's Gnosis\n\nIn realms beyond the veil of sight,\nI dance with truths both dark and light.\nSophia's wisdom, my guiding star,\nGnosis beckons from afar.\n\nThrough winding paths of mystic lore,\nI seek the keys to cosmic doors.\nEach step unveils a sacred sign,\nAs mortal flesh and soul entwine.\n\nIn silence deep, I hear the call,\nOf hidden knowledge, one and all.\nThe serpent's whisper, soft and low,\nReveals the truths I've come to know.\n\nIllumination floods my mind,\nAs earthly shackles fall behind.\nIn gnosis found, both pure and bright,\nI rise, transformed, into the light.\n\nFor wisdom's flame burns ever true,\nIn hearts that dare to see anew.\nAnd in this knowing, vast and free,\nI find the cosmic self that sleeps in me.",
-  },
-  {
-    id: "0x9cb24ec88fca91aff9def12989ab9274f3992d3e",
-    name: "Vespertine",
-    description: "Investing in a bankless future.",
-  },
-  {
-    id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",
-    name: "Test No Deposit",
-    description: null,
   },
 ] as const

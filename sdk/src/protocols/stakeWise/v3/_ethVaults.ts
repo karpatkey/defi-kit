@@ -39,9 +39,9 @@ export default [
   },
   {
     id: "0x663580b3edad914d0b59cea88616f06278d42bb2",
-    name: "𓃵 onchainaustria.at",
+    name: "onchainaustria.at",
     description:
-      "onchainaustria is a registered Austrian association and thriving crypto community. We operate as a node operator with a low fee structure and a highly redundant technical setup.\n\nWe are offering native crypto staking. Our members benefit from a collaborative environment where we share knowledge and optimize crypto investments.\n\nhttps://onchainaustria.at/",
+      "onchainaustria is the first Austrian DAO-directed association (𓃵 Airdrop incoming!). We operate as a node operator (ETH, STRK, UNI) with low fees and a highly redundant infrastructure.\n\nWe are a thriving Austrian crypto community, dedicated to enabling our members to participate in and support the decentralization of DLT networks.\n\nJoin us and become part of a collaborative environment driving the future of decentralization!\n\n🔗 onchainaustria.at",
   },
   {
     id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
@@ -79,9 +79,9 @@ export default [
   },
   {
     id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
-    name: "Blockshard Pioneers Vault ",
+    name: "Blockshard DVT Pioneers Vault",
     description:
-      "Leading vault featuring a strategic blend of DVT and vanilla validators. Around 50% are managed with SSV and Obol, employing highly skilled and experienced operators. \n\nThe remaining 50% are run on our advanced, high-availability system. The validator client is connected to five Ethereum nodes and uses Web3Signer to protect validator keys, ensuring enhanced reliability and security.\n\nA competitive fee of only 3.5% on rewards makes this vault a prudent choice for stakers. ",
+      "A premier vault utilizing Distributed Validator Technology (DVT) for enhanced security and resilience. All validators are operated in-house using SSV, with plans to also incorporate Obol.\n\nOnce StakeWise enables the feature for distributing additional incentives for vault operators, we will share 90% of the rewards earned from SSV Network’s incentivized mainnet with our stakers - boosting the vault’s APR to over 10%. We anticipate similar incentives from Obol once its token becomes transferable, and we will add it as a DVT solution accordingly. \n\nAs the DVT ecosystem evolves, we remain committed to integrating promising new DVT solutions once they reach maturity and viability.\n\nWith a competitive 3.5% fee on rewards, this vault offers a secure, efficient, and high-reward staking solution for ETH holders.",
   },
   {
     id: "0x05e393ec11d0197a88d84457908edd4ff235f323",
@@ -90,22 +90,16 @@ export default [
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
   {
-    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
-    name: "Fox & Yaga",
+    id: "0xdbdee04c72a02a740b9f26ada9203582c8a99daf",
+    name: "Chorus One - Obol DV vault",
     description:
-      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
+      'This vault represents a distributed validator cluster , using Obol\'s DV technology to run the validators across multiple nodes. As a staker, you can expect higher uptime, decreased slashing risk, and a meaningful contribution to the decentralization of the Ethereum network.\n\nBy staking with an Obol DV, you automatically participate in the Obol Contributions initiative, contributing 1% of staking rewards to the "1% for Decentralization" retroactive funding model. Your contributions will be tracked and recognized by Obol and can be viewed on our staking dApp, OPUS Pool.',
   },
   {
     id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
     name: "Verse ETH Staking",
     description:
       "Earn rewards by staking your ETH in the Verse Ecosystem vault",
-  },
-  {
-    id: "0xdbdee04c72a02a740b9f26ada9203582c8a99daf",
-    name: "Chorus One - Obol DV vault",
-    description:
-      'This vault represents a distributed validator cluster , using Obol\'s DV technology to run the validators across multiple nodes. As a staker, you can expect higher uptime, decreased slashing risk, and a meaningful contribution to the decentralization of the Ethereum network.\n\nBy staking with an Obol DV, you automatically participate in the Obol Contributions initiative, contributing 1% of staking rewards to the "1% for Decentralization" retroactive funding model. Your contributions will be tracked and recognized by Obol and can be viewed on our staking dApp, OPUS Pool.',
   },
   {
     id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
@@ -203,9 +197,9 @@ export default [
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
   {
-    id: "0x64f2907f92631619ed7ea510982835f9e1024767",
-    name: "AutoStake ⚡️ 1% fee forever",
+    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
+    name: "Fox & Yaga",
     description:
-      "Slash insurance backed by a SAFU fund.\nDecentralized infrastructure powered by Distributed Validator Technology. \nConnect with us at: https://linktr.ee/autostake",
+      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
   },
 ] as const

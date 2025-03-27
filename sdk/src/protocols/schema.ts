@@ -2,7 +2,7 @@ import * as aaveV2 from "./aave/v2/schema"
 import * as aaveV3 from "./aave/v3/schema"
 import * as ankr from "./ankr/schema"
 import * as aura from "./aura/schema"
-import * as balancer from "./balancer/schema"
+import * as balancerV2 from "./balancer/v2/schema"
 import * as compoundV2 from "./compound/v2/schema"
 // import * as compoundV3 from "./compound/v3/schema"
 import * as convex from "./convex/schema"
@@ -25,7 +25,7 @@ export const eth = {
   aave_v3: aaveV3.eth,
   ankr: ankr.eth,
   aura: aura.eth,
-  balancer: balancer.eth,
+  balancer_v2: balancerV2.eth,
   compound_v2: compoundV2.eth,
   // compound_v3: compoundV3.eth,
   convex: convex.eth,
@@ -44,27 +44,31 @@ export const eth = {
 export const gno = {
   aave_v3: aaveV3.gno,
   aura: aura.gno,
-  balancer: balancer.gno,
+  balancer_v2: balancerV2.gno,
   cowswap: cowSwap.gno,
   spark: spark.gno,
   stakewise_v3: stakeWiseV3.gno,
+  uniswap_v3: uniswapV3.gno,
 } satisfies ProtocolSchemas
 
 export const arb1 = {
   aave_v3: aaveV3.arb1,
   aura: aura.arb1,
-  balancer: balancer.arb1,
+  balancer_v2: balancerV2.arb1,
   cowswap: cowSwap.arb1,
+  uniswap_v3: uniswapV3.arb1,
 } satisfies ProtocolSchemas
 
 export const oeth = {
   aave_v3: aaveV3.oeth,
   aura: aura.oeth,
-  balancer: balancer.oeth,
+  balancer_v2: balancerV2.oeth,
+  uniswap_v3: uniswapV3.oeth,
 } satisfies ProtocolSchemas
 
 export const base = {
   aave_v3: aaveV3.base,
   aura: aura.base,
-  balancer: balancer.base,
+  balancer_v2: balancerV2.base,
+  uniswap_v3: uniswapV3.base,
 } satisfies ProtocolSchemas

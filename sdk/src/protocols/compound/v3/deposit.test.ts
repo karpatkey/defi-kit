@@ -21,7 +21,7 @@ describe.skip("compoundV3", () => {
         Chain.eth,
         contracts.mainnet.usdc,
         parseUnits("10000", 6),
-        contracts.mainnet.balancer.vault
+        contracts.mainnet.balancerV2.vault
       )
       await expect(
         kit.asMember.usdc.approve(
