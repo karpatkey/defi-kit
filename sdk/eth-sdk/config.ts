@@ -349,7 +349,6 @@ export const contracts = {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
     },
     usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-    weth: "0x4200000000000000000000000000000000000006",
     l2HopCctp: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
   },
 } as const satisfies EthSdkConfig["contracts"]
