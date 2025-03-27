@@ -4,110 +4,87 @@ import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 import { Chain } from "../../../src"
+import { MarketParams } from "./types"
 
-const MorphoBluePool = "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb"
-const STEAL_WSTETH = "0xacB7027f271B03B502D65fEBa617a0d817D62b8e" // Address wstETH
-const STEAL_WETH = "0xa1E2481a9CD0Cb0447EeB1cbc26F1b3fff3bec20"
-const underlying_wsteth = "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0" // WstETH
-const WETH = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
-const marketId =
-  "0xb8fc70e82bc5bb53e773626fcc6a23f7eefa036918d7ef216ecfb1950a94a85e"
+const MORPHO_BLUE = "0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb"
+const STEAL_WSTETH = "0xacb7027f271b03b502d65feba617a0d817d62b8e"
+const STEAL_WETH = "0xa1e2481a9cd0cb0447eeb1cbc26f1b3fff3bec20"
+const WSTETH = "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0"
+const WETH = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+
+const marketParamsWhitelisted: MarketParams = {
+  loanToken: WETH,
+  collateralToken: WSTETH,
+  oracle: "0xbd60a6770b27e084e8617335dde769241b0e71d8",
+  irm: "0x870ac11d48b15db9a138cf899d20f13f79ba00bc",
+  lltv: "965000000000000000",
+}
+
+const unauthorizedMarketParams = {
+  loanToken: "0x000000000000000000000000000000000000dEaD", //dead address
+  collateralToken: WSTETH,
+  oracle: "0xbd60a6770b27e084e8617335dde769241b0e71d8", //MorphoChainlinkOracleV2
+  irm: "0x870ac11d48b15db9a138cf899d20f13f79ba00bc", //AdaptiveCurveIrm
+  lltv: "965000000000000000",
+}
 
 describe("Morpho supply", () => {
-  describe("supply Action", () => {
-    beforeAll(async () => {
-      await applyPermissions(
-        Chain.eth,
-        await eth.supply({
-          supplyTargets: [
-            "0xb8fc70e82bc5bb53e773626fcc6a23f7eefa036918d7ef216ecfb1950a94a85e", //marketId
-          ],
-        })
-      )
-    })
+  beforeAll(async () => {
+    await applyPermissions(
+      Chain.eth,
+      await eth.supply({
+        targets: [marketParamsWhitelisted],
+      })
+    )
+  })
 
-    it("approuve -> supply -> withdraw", async () => {
-      const amountSupply = BigInt(parseEther("3").toString())
+  it("approve -> supply -> withdraw", async () => {
+    const amountSupply = parseEther("3")
 
-      const unauthorizedMarketParams = {
-        loanToken: "0x000000000000000000000000000000000000dEaD", //dead address
-        collateralToken: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0", //WstETH
-        oracle: "0xbD60A6770b27E084E8617335ddE769241B0e71D8", //MorphoChainlinkOracleV2
-        irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC", //AdaptiveCurveIrm
-        lltv: "965000000000000000",
-      }
+    await stealErc20(Chain.eth, WSTETH, parseEther("10"), STEAL_WSTETH)
+    await stealErc20(Chain.eth, WETH, parseEther("10"), STEAL_WETH)
+    await kit.asMember.weth.attach(WETH).approve(MORPHO_BLUE, amountSupply)
 
-      await stealErc20(
-        Chain.eth,
-        underlying_wsteth,
-        parseEther("10"),
-        STEAL_WSTETH
-      )
-      await stealErc20(
-        Chain.eth,
-        "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        parseEther("10"),
-        STEAL_WETH
-      )
-      await kit.asMember.weth
-        .attach(underlying_wsteth)
-        .approve(MorphoBluePool, amountSupply)
+    await kit.asMember.wsteth.attach(WETH).approve(MORPHO_BLUE, amountSupply)
 
-      await kit.asMember.wsteth
-        .attach(WETH)
-        .approve(MorphoBluePool, amountSupply)
+    console.log("supply valid market params")
+    await expect(
+      kit.asMember.morpho.morphoBlue
+        .attach(MORPHO_BLUE)
+        .supply(marketParamsWhitelisted, amountSupply, 0, wallets.avatar, "0x")
+    ).not.toRevert()
 
-      console.log("supply valid market params")
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .supply(
-            await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-            amountSupply,
-            0,
-            wallets.avatar,
-            "0x"
-          )
-      ).not.toRevert()
+    console.log("supply invalid market params")
+    await expect(
+      kit.asMember.morpho.morphoBlue
+        .attach(MORPHO_BLUE)
+        .supply(unauthorizedMarketParams, amountSupply, 0, wallets.avatar, "0x")
+    ).toRevert()
 
-      console.log("supply invalid market params")
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .supply(
-            unauthorizedMarketParams,
-            amountSupply,
-            0,
-            wallets.avatar,
-            "0x"
-          )
-      ).toRevert()
+    console.log("withdraw valid")
+    await expect(
+      kit.asMember.morpho.morphoBlue
+        .attach(MORPHO_BLUE)
+        .withdraw(
+          marketParamsWhitelisted,
+          amountSupply,
+          0,
+          wallets.avatar,
+          wallets.avatar
+        )
+    ).not.toRevert()
 
-      console.log("withdraw valid")
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .withdraw(
-            await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-            amountSupply,
-            0,
-            wallets.avatar,
-            wallets.avatar
-          )
-      ).not.toRevert()
-
-      console.log("withdraw NOT valid")
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .withdraw(
-            unauthorizedMarketParams,
-            amountSupply,
-            0,
-            wallets.avatar,
-            wallets.avatar
-          )
-      ).toRevert()
-    })
+    console.log("withdraw NOT valid")
+    await expect(
+      kit.asMember.morpho.morphoBlue
+        .attach(MORPHO_BLUE)
+        .withdraw(
+          unauthorizedMarketParams,
+          amountSupply,
+          0,
+          wallets.avatar,
+          wallets.avatar
+        )
+    ).toRevert()
   })
 })

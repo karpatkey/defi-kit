@@ -4,128 +4,118 @@ import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 import { Chain } from "../../../src"
+import { MarketParams } from "./types"
 
-const MorphoBluePool = "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb" // gtLRTcore Vault address
-const STEAL_ADDRESS = "0xacB7027f271B03B502D65fEBa617a0d817D62b8e" // Address wstETH
-const STEAL_WETH = "0xa1E2481a9CD0Cb0447EeB1cbc26F1b3fff3bec20"
-const underlying_wsteth = "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0" // WstETH
-const marketId =
-  "0xb8fc70e82bc5bb53e773626fcc6a23f7eefa036918d7ef216ecfb1950a94a85e"
+const MORPHO_BLUE = "0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb"
+const STEAL_WSTETH = "0xacb7027f271b03b502d65feba617a0d817d62b8e"
+const STEAL_WETH = "0xa1e2481a9cd0cb0447eeb1cbc26f1b3fff3bec20"
+const WSTETH = "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0"
+const WETH = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
 
-describe("Morpho Blue borrow", () => {
-  describe("Borrow Action", () => {
-    beforeAll(async () => {
-      await applyPermissions(
-        Chain.eth,
-        await eth.borrow({
-          blueTargets: [
-            "0xb8fc70e82bc5bb53e773626fcc6a23f7eefa036918d7ef216ecfb1950a94a85e",
-          ],
-        })
-      )
-    })
+const marketParamsWhitelisted: MarketParams = {
+  loanToken: WETH,
+  collateralToken: WSTETH,
+  oracle: "0xbd60a6770b27e084e8617335dde769241b0e71d8",
+  irm: "0x870ac11d48b15db9a138cf899d20f13f79ba00bc",
+  lltv: "965000000000000000",
+}
 
-    it("supplyCollateral -> borrow -> repay -> withdrawCollateral", async () => {
-      const amountCollateral = BigInt(parseEther("5").toString())
-      const amountBorrow = BigInt(parseEther("2").toString())
-      const unauthorizedMarketParams = {
-        loanToken: "0x000000000000000000000000000000000000dEaD", //dead address
-        collateralToken: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0", //WstETH
-        oracle: "0xbD60A6770b27E084E8617335ddE769241B0e71D8", //MorphoChainlinkOracleV2
-        irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC", //AdaptiveCurveIrm
-        lltv: "965000000000000000",
-      }
+const unauthorizedMarketParams = {
+  loanToken: "0x000000000000000000000000000000000000dEaD", //dead address
+  collateralToken: WSTETH,
+  oracle: "0xbd60a6770b27e084e8617335dde769241b0e71d8", //MorphoChainlinkOracleV2
+  irm: "0x870ac11d48b15db9a138cf899d20f13f79ba00bc", //AdaptiveCurveIrm
+  lltv: "965000000000000000",
+}
 
-      await stealErc20(
-        Chain.eth,
-        underlying_wsteth,
-        parseEther("10"),
-        STEAL_ADDRESS
-      )
-      await stealErc20(
-        Chain.eth,
-        "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        parseEther("10"),
-        STEAL_WETH
-      )
-      await kit.asMember.weth
-        .attach(underlying_wsteth)
-        .approve(MorphoBluePool, amountCollateral)
+describe("Borrow Action", () => {
+  beforeAll(async () => {
+    await applyPermissions(
+      Chain.eth,
+      await eth.borrow({
+        targets: [marketParamsWhitelisted],
+      })
+    )
+  })
 
-      console.log("supply collateral")
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .supplyCollateral(
-            await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-            amountCollateral,
-            wallets.avatar,
-            "0x"
-          )
-      ).not.toRevert()
+  it("supplyCollateral -> borrow -> repay -> withdrawCollateral", async () => {
+    const amountCollateral = parseEther("5")
+    const amountBorrow = parseEther("2")
 
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .supplyCollateral(
-            unauthorizedMarketParams,
-            amountCollateral,
-            wallets.avatar,
-            "0x"
-          )
-      ).toRevert()
+    await stealErc20(Chain.eth, WSTETH, parseEther("10"), STEAL_WSTETH)
+    await stealErc20(Chain.eth, WETH, parseEther("10"), STEAL_WETH)
 
-      console.log("borrow")
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .borrow(
-            await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-            amountBorrow,
-            0,
-            wallets.avatar,
-            wallets.avatar
-          )
-      ).not.toRevert()
+    await kit.asMember.weth
+      .attach(WSTETH)
+      .approve(MORPHO_BLUE, amountCollateral)
 
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .borrow(
-            unauthorizedMarketParams,
-            amountBorrow,
-            0,
-            wallets.avatar,
-            wallets.avatar
-          )
-      ).toRevert()
+    console.log("supply collateral")
+    await expect(
+      kit.asMember.morpho.morphoBlue
+        .attach(MORPHO_BLUE)
+        .supplyCollateral(
+          marketParamsWhitelisted,
+          amountCollateral,
+          wallets.avatar,
+          "0x"
+        )
+    ).not.toRevert()
 
-      await kit.asMember.weth.approve(MorphoBluePool, amountBorrow)
+    await expect(
+      kit.asMember.morpho.morphoBlue
+        .attach(MORPHO_BLUE)
+        .supplyCollateral(
+          unauthorizedMarketParams,
+          amountCollateral,
+          wallets.avatar,
+          "0x"
+        )
+    ).toRevert()
 
-      console.log("repay")
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .repay(
-            await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-            amountBorrow,
-            0,
-            wallets.avatar,
-            "0x"
-          )
-      ).not.toRevert()
+    console.log("borrow")
+    await expect(
+      kit.asMember.morpho.morphoBlue
+        .attach(MORPHO_BLUE)
+        .borrow(
+          marketParamsWhitelisted,
+          amountBorrow,
+          0,
+          wallets.avatar,
+          wallets.avatar
+        )
+    ).not.toRevert()
 
-      console.log("withdraw collateral")
-      await expect(
-        kit.asMember.morpho.morphoBlue
-          .attach(MorphoBluePool)
-          .withdrawCollateral(
-            await kit.asMember.morpho.morphoBlue.idToMarketParams(marketId),
-            amountCollateral,
-            wallets.avatar,
-            wallets.avatar
-          )
-      ).not.toRevert()
-    })
+    await expect(
+      kit.asMember.morpho.morphoBlue
+        .attach(MORPHO_BLUE)
+        .borrow(
+          unauthorizedMarketParams,
+          amountBorrow,
+          0,
+          wallets.avatar,
+          wallets.avatar
+        )
+    ).toRevert()
+
+    await kit.asMember.weth.approve(MORPHO_BLUE, amountBorrow)
+
+    console.log("repay")
+    await expect(
+      kit.asMember.morpho.morphoBlue
+        .attach(MORPHO_BLUE)
+        .repay(marketParamsWhitelisted, amountBorrow, 0, wallets.avatar, "0x")
+    ).not.toRevert()
+
+    console.log("withdraw collateral")
+    await expect(
+      kit.asMember.morpho.morphoBlue
+        .attach(MORPHO_BLUE)
+        .withdrawCollateral(
+          marketParamsWhitelisted,
+          amountCollateral,
+          wallets.avatar,
+          wallets.avatar
+        )
+    ).not.toRevert()
   })
 })
