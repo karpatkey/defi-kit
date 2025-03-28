@@ -1,6 +1,6 @@
 // This file is auto-generated. Do not edit!
 
-// fetch from:
+// fetched from:
 // https://blue-api.morpho.org/graphql?explorerURLState=N4IgJg9gxgrgtgUwHYBcQC4QEcYIE4CeABAKIAeAhnAA4A2CAiroQBQAkA7gBb4LpEA1CjFooAYgEtR%2BAM4AaImwBmEvDJT8AkqgCURYAB0kRIgDdhomS269%2BnHngQKVajYpfq9h4yaISUCHAy%2Bka%2BvhRgYI4yMqFhRBQxCCghPvFEMgRwAEYQtHHpEVEIMQW%2BAL5lJpk5eVVESFQIZZU%2Bra0gciDmeBIU2fQyGCDeJgYgNo7j-KO%2B49z%2BCLQS6ghg00QoeLhyZeNQXBQSSJpgAPrHGwAcACwArADMceW7PuMeKBsAjAAMf0blEDlIA
 
 export default [

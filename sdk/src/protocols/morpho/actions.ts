@@ -3,7 +3,6 @@ import { MarketParams, Vault } from "./types"
 import { c } from "zodiac-roles-sdk"
 import { contracts } from "../../../eth-sdk/config"
 
-// TODO: can be generalized allowErc4626
 export function withdraw(vault: Vault) {
   return [
     {
@@ -21,7 +20,6 @@ export function withdraw(vault: Vault) {
   ]
 }
 
-// TODO: can be generalized allowErc4626
 export function deposit(vault: Vault) {
   return [
     {
