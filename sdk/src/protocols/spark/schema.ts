@@ -5,6 +5,7 @@ import gnoTokens from "./_gnoInfo"
 const zEthTokenDeposit = z.enum([
   "ETH",
   "DSR_sDAI",
+  "SKY_USDC",
   "SKY_USDS",
   ...ethTokens.map((token) => token.symbol),
   ...ethTokens.map((token) => token.token),

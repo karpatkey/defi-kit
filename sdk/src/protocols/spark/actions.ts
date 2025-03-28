@@ -52,6 +52,18 @@ export const depositDsr = (chain: Chain): Permission[] => {
         allow.mainnet.spark.sDai.redeem(undefined, c.avatar, c.avatar),
         // Spark's new UI now calls the withdraw() function instead of redeem()
         allow.mainnet.spark.sDai.withdraw(undefined, c.avatar, c.avatar),
+
+        ...allowErc20Approve(
+          [contracts.mainnet.usdc],
+          [contracts.mainnet.spark.psmUsdcSdai]
+        ),
+        allow.mainnet.spark.psmUsdcSdai.swapAndDeposit(c.avatar),
+        ...allowErc20Approve(
+          [contracts.mainnet.spark.sDai],
+          [contracts.mainnet.spark.psmUsdcSdai]
+        ),
+        allow.mainnet.spark.psmUsdcSdai.withdrawAndSwap(c.avatar),
+        allow.mainnet.spark.psmUsdcSdai.redeemAndSwap(c.avatar),
       ]
 
     case Chain.gno:
@@ -80,6 +92,29 @@ export const depositDsr = (chain: Chain): Permission[] => {
   }
 }
 
+export const depositUSDC = (): Permission[] => {
+  return [
+    ...allowErc20Approve(
+      [contracts.mainnet.usdc],
+      [contracts.mainnet.spark.sUsdc]
+    ),
+    allow.mainnet.spark.sUsdc["deposit(uint256,address,uint256,uint16)"](
+      undefined,
+      c.avatar
+    ),
+    allow.mainnet.spark.sUsdc["withdraw(uint256,address,address,uint256)"](
+      undefined,
+      c.avatar,
+      c.avatar
+    ),
+    allow.mainnet.spark.sUsdc["redeem(uint256,address,address,uint256)"](
+      undefined,
+      c.avatar,
+      c.avatar
+    ),
+  ]
+}
+
 export const depositUSDS = (): Permission[] => {
   return [
     ...allowErc20Approve(
@@ -88,11 +123,13 @@ export const depositUSDS = (): Permission[] => {
     ),
     allow.mainnet.spark.migrationActions.migrateDAIToUSDS(c.avatar),
     allow.mainnet.spark.migrationActions.migrateDAIToSUSDS(c.avatar),
+
     ...allowErc20Approve(
       [contracts.mainnet.spark.usds],
       [contracts.mainnet.spark.migrationActions]
     ),
     allow.mainnet.spark.migrationActions.downgradeUSDSToDAI(c.avatar),
+
     ...allowErc20Approve(
       [contracts.mainnet.spark.usds],
       [contracts.mainnet.spark.sUsds]
@@ -103,6 +140,29 @@ export const depositUSDS = (): Permission[] => {
     ),
     allow.mainnet.spark.sUsds.withdraw(undefined, c.avatar, c.avatar),
     allow.mainnet.spark.sUsds.redeem(undefined, c.avatar, c.avatar),
+
+    ...allowErc20Approve(
+      [contracts.mainnet.usdc],
+      [contracts.mainnet.spark.UsdsPsmWrapper]
+    ),
+    allow.mainnet.spark.UsdsPsmWrapper.sellGem(c.avatar),
+    ...allowErc20Approve(
+      [contracts.mainnet.spark.usds],
+      [contracts.mainnet.spark.UsdsPsmWrapper]
+    ),
+    allow.mainnet.spark.UsdsPsmWrapper.buyGem(c.avatar),
+
+    ...allowErc20Approve(
+      [contracts.mainnet.usdc],
+      [contracts.mainnet.spark.psmUsdcSusds]
+    ),
+    allow.mainnet.spark.psmUsdcSusds.swapAndDeposit(c.avatar),
+    ...allowErc20Approve(
+      [contracts.mainnet.spark.sUsdc],
+      [contracts.mainnet.spark.psmUsdcSusds]
+    ),
+    allow.mainnet.spark.psmUsdcSusds.withdrawAndSwap(c.avatar),
+    allow.mainnet.spark.psmUsdcSusds.redeemAndSwap(c.avatar),
   ]
 }
 

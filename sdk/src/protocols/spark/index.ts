@@ -6,6 +6,7 @@ import {
   depositEther,
   depositToken,
   depositDsr,
+  depositUSDC,
   depositUSDS,
   borrowEther,
   borrowToken,
@@ -35,6 +36,7 @@ export const eth = {
   }: {
     targets: (
       | "DSR_sDAI"
+      | "SKY_USDC"
       | "SKY_USDS"
       | "ETH"
       | EthToken["symbol"]
@@ -46,6 +48,8 @@ export const eth = {
         ? depositDsr(Chain.eth)
         : target === "SKY_USDS"
         ? depositUSDS()
+        : target === "SKY_USDC"
+        ? depositUSDC()
         : target === "ETH"
         ? depositEther(Chain.eth)
         : depositToken(Chain.eth, findToken(ethTokens, target))
