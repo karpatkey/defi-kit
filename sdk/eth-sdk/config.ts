@@ -135,6 +135,10 @@ export const contracts = {
       usds: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
       sUsds: "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
       stakingRewards: "0x0650CAF159C5A49f711e8169D4336ECB9b950275",
+      psmUsdcSdai: "0x5803199F1085d52D1Bb527f24Dc1A2744e80A979",
+      psmUsdcSusds: "0xd0A61F2963622e992e6534bde4D52fd0a89F39E0",
+      sUsdc: "0xBc65ad17c5C0a2A4D159fa5a503f4992c7B545FE",
+      UsdsPsmWrapper: "0xA188EEC8F81263234dA3622A406892F3D630f98c",
     },
     stader: {
       stakingPoolManager: "0xcf5EA1b38380f6aF39068375516Daf40Ed70D299",
@@ -340,10 +344,9 @@ export const contracts = {
 
 export default defineConfig({
   rpc: {
-    mainnet: "https://rpc.ankr.com/eth",
+    mainnet: "https://ethereum-rpc.publicnode.com",
     gnosis: "https://rpc.gnosischain.com/",
-    //gnosis: "https://rpc.ankr.com/gnosis"
-    optimism: "https://rpc.ankr.com/optimism",
+    optimism: "https://optimism-rpc.publicnode.com",
     arbitrumOne: "https://arb1.arbitrum.io/rpc",
     base: "https://base-rpc.publicnode.com",
   },
