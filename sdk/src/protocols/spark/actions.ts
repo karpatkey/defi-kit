@@ -111,7 +111,7 @@ export const depositUSDC = (): Permission[] => {
       undefined,
       c.avatar,
       c.avatar
-    )
+    ),
   ]
 }
 
