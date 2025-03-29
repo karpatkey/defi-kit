@@ -22,16 +22,16 @@ export default [
     symbol: "USDC",
   },
   {
+    address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
+    symbol: "WBTC",
+  },
+  {
     address: "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
     symbol: "tBTC",
   },
   {
     address: "0x139052115F8B1773cF7DcBA6a553F922a2E54F69",
     symbol: "(=ↀωↀ=)",
-  },
-  {
-    address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
-    symbol: "WBTC",
   },
   {
     address: "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",

@@ -765,23 +765,6 @@ export default [
     ],
   },
   {
-    bpt: "0x2044aFEF1268100918F88De66a3532Eab3D8f3ef",
-    id: "0x2044afef1268100918f88de66a3532eab3d8f3ef00020000000000000000068a",
-    name: "ECLP-PAR-EURA",
-    type: "GyroE",
-    gauge: "0x597AEbfe41dCc042db206Eb888c42560a22c9303",
-    tokens: [
-      {
-        address: "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
-        symbol: "EURA",
-      },
-      {
-        address: "0x68037790A0229e9Ce6EaA8A99ea92964106C4703",
-        symbol: "PAR",
-      },
-    ],
-  },
-  {
     bpt: "0x20FacEcaa68E9b7c92d2d0ec9136D864Df805233",
     id: "0x20facecaa68e9b7c92d2d0ec9136d864df805233000100000000000000000190",
     name: "WILDFIRE",
