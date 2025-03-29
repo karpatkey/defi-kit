@@ -44,16 +44,16 @@ export default [
       "onchainaustria is the first Austrian DAO-directed association (𓃵 Airdrop incoming!). We operate as a node operator (ETH, STRK, UNI) with low fees and a highly redundant infrastructure.\n\nWe are a thriving Austrian crypto community, dedicated to enabling our members to participate in and support the decentralization of DLT networks.\n\nJoin us and become part of a collaborative environment driving the future of decentralization!\n\n🔗 onchainaustria.at",
   },
   {
-    id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
-    name: "Blockscape Super Early Bird",
-    description:
-      "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
-  },
-  {
     id: "0x5610297eb32542b8f13378fe7d783dcb1ac3b1a1",
     name: "SenseiNode",
     description:
       "SenseiNode is the first institutional-grade blockchain infrastructure service provider in Latin America. We automate and simplify the deployment and monitoring of nodes on leading protocols, providing access to organizations looking to build their blockchain infrastructure with a high availability and low total cost of ownership.",
+  },
+  {
+    id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
+    name: "Blockscape Super Early Bird",
+    description:
+      "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
   },
   {
     id: "0x99510bfc5d420cd3c41458f4692b1c3321908734",
