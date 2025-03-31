@@ -16,6 +16,10 @@ import { Callout } from "nextra/components"
 | `USDS`                  | [0xdC035D45d973E3EC169d2276DDab16f1e407384F](https://etherscan.io/address/0xdC035D45d973E3EC169d2276DDab16f1e407384F) |
 | `sUSDS`                 | [0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD](https://etherscan.io/address/0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD) |
 | `StakingRewards`        | [0x0650CAF159C5A49f711e8169D4336ECB9b950275](https://etherscan.io/address/0x0650CAF159C5A49f711e8169D4336ECB9b950275) |
+| `PsmUsdcSdai`           | [0x5803199F1085d52D1Bb527f24Dc1A2744e80A979](https://etherscan.io/address/0x5803199F1085d52D1Bb527f24Dc1A2744e80A979) |
+| `UsdsPsmWrapper`        | [0xA188EEC8F81263234dA3622A406892F3D630f98c](https://etherscan.io/address/0xA188EEC8F81263234dA3622A406892F3D630f98c) |
+| `PsmUsdcSusds`          | [0xd0A61F2963622e992e6534bde4D52fd0a89F39E0](https://etherscan.io/address/0xd0A61F2963622e992e6534bde4D52fd0a89F39E0) |
+| `sUSDC`                 | [0xBc65ad17c5C0a2A4D159fa5a503f4992c7B545FE](https://etherscan.io/address/0xBc65ad17c5C0a2A4D159fa5a503f4992c7B545FE) |
 
 ## Action: `deposit`
 
@@ -205,6 +209,30 @@ Approve `sDAI` to spend `DAI` tokens on behalf of the avatar.
   | `spender` | equal to `sDAI` |
   | `amount`  | -               |
 
+#### `USDC · approve - PsmUsdcSdai as spender`
+
+Approve `PsmUsdcSdai` to spend `USDC` tokens on behalf of the avatar.
+
+- **Contract:** `USDC`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint             |
+  | :-------- | :--------------------- |
+  | `spender` | equal to `PsmUsdcSdai` |
+  | `amount`  | -                      |
+
+#### `sDAI · approve - PsmUsdcSdai as spender`
+
+Approve `PsmUsdcSdai` to spend `sDAI` tokens on behalf of the avatar.
+
+- **Contract:** `sDAI`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint             |
+  | :-------- | :--------------------- |
+  | `spender` | equal to `PsmUsdcSdai` |
+  | `amount`  | -                      |
+
 #### `sDAI · deposit`
 
 Deposit `DAI` and receive `sDAI` tokens in exchange.
@@ -243,6 +271,45 @@ Redeem `sDAI` and withdraw `DAI` tokens.
   | `receiver` | equal to `AVATAR` |
   | `owner`    | equal to `AVATAR` |
 
+#### `PsmUsdcSdai · swapAndDeposit`
+
+Deposit `USDC` and receive `sDAI` tokens in exchange.
+
+- **Contract:** `PsmUsdcSdai`
+- **Function:** `swapAndDeposit(address,uint256,uint256)`
+
+  | Parameter      | Constraint        |
+  | :------------- | :---------------- |
+  | `receiver`     | equal to `AVATAR` |
+  | `amountIn`     | -                 |
+  | `minAmountOut` | -                 |
+
+#### `PsmUsdcSdai · withdrawAndSwap`
+
+Redeem `sDAI` and withdraw `USDC`.
+
+- **Contract:** `PsmUsdcSdai`
+- **Function:** `withdrawAndSwap(address,uint256,uint256)`
+
+  | Parameter     | Constraint        |
+  | :------------ | :---------------- |
+  | `receiver`    | equal to `AVATAR` |
+  | `amountOut`   | -                 |
+  | `maxAmountIn` | -                 |
+
+#### `PsmUsdcSdai · redeemAndSwap`
+
+Redeem `sDAI` and withdraw `USDC`.
+
+- **Contract:** `PsmUsdcSdai`
+- **Function:** `redeemAndSwap(address,uint256,uint256)`
+
+  | Parameter      | Constraint        |
+  | :------------- | :---------------- |
+  | `receiver`     | equal to `AVATAR` |
+  | `shares`       | -                 |
+  | `minAmountOut` | -                 |
+
 ### Target: SKY_USDS
 
 #### `DAI · approve - MigrationActions as spender`
@@ -280,6 +347,54 @@ Approve `sUSDS` to spend `USDS` tokens on behalf of the avatar.
   | :-------- | :--------------- |
   | `spender` | equal to `sUSDS` |
   | `amount`  | -                |
+
+#### `USDC · approve - UsdsPsmWrapper as spender`
+
+Approve `UsdsPsmWrapper` to spend `USDC` tokens on behalf of the avatar.
+
+- **Contract:** `USDC`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint                |
+  | :-------- | :------------------------ |
+  | `spender` | equal to `UsdsPsmWrapper` |
+  | `amount`  | -                         |
+
+#### `USDS · approve - UsdsPsmWrapper as spender`
+
+Approve `UsdsPsmWrapper` to spend `USDS` tokens on behalf of the avatar.
+
+- **Contract:** `USDS`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint                |
+  | :-------- | :------------------------ |
+  | `spender` | equal to `UsdsPsmWrapper` |
+  | `amount`  | -                         |
+
+#### `USDC · approve - PsmUsdcSusds as spender`
+
+Approve `PsmUsdcSusds` to spend `USDC` tokens on behalf of the avatar.
+
+- **Contract:** `USDC`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint              |
+  | :-------- | :---------------------- |
+  | `spender` | equal to `PsmUsdcSusds` |
+  | `amount`  | -                       |
+
+#### `sUSDS · approve - PsmUsdcSusds as spender`
+
+Approve `PsmUsdcSusds` to spend `sUSDS` tokens on behalf of the avatar.
+
+- **Contract:** `sUSDS`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint              |
+  | :-------- | :---------------------- |
+  | `spender` | equal to `PsmUsdcSusds` |
+  | `amount`  | -                       |
 
 #### `MigrationActions · migrateDAIToUSDS`
 
@@ -355,6 +470,125 @@ Redeem `sUSDS` and withdraw `USDS` tokens.
   | `shares`   | -                 |
   | `receiver` | equal to `AVATAR` |
   | `owner`    | equal to `AVATAR` |
+
+#### `UsdsPsmWrapper · sellGem`
+
+Converts `USDC` into `USDS` tokens and transfers the resulting `USDS` to the avatar.
+
+- **Contract:** `UsdsPsmWrapper`
+- **Function:** `sellGem(address,uint256)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `usr`     | equal to `AVATAR` |
+  | `gemAmt`  | -                 |
+
+#### `UsdsPsmWrapper · buyGem`
+
+Converts `USDS` into `USDC` tokens and transfers the resulting `USDC` to the avatar.
+
+- **Contract:** `UsdsPsmWrapper`
+- **Function:** `buyGem(address,uint256)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `usr`     | equal to `AVATAR` |
+  | `gemAmt`  | -                 |
+
+#### `PsmUsdcSusds · swapAndDeposit`
+
+Deposit `USDC` and receive `sUSDS` tokens in exchange.
+
+- **Contract:** `PsmUsdcSusds`
+- **Function:** `swapAndDeposit(address,uint256,uint256)`
+
+  | Parameter      | Constraint        |
+  | :------------- | :---------------- |
+  | `receiver`     | equal to `AVATAR` |
+  | `amountIn`     | -                 |
+  | `minAmountOut` | -                 |
+
+#### `PsmUsdcSusds · withdrawAndSwap`
+
+Redeem `sUSDS` and withdraw `USDC`.
+
+- **Contract:** `PsmUsdcSusds`
+- **Function:** `withdrawAndSwap(address,uint256,uint256)`
+
+  | Parameter     | Constraint        |
+  | :------------ | :---------------- |
+  | `receiver`    | equal to `AVATAR` |
+  | `amountOut`   | -                 |
+  | `maxAmountIn` | -                 |
+
+#### `PsmUsdcSusds · redeemAndSwap`
+
+Redeem `sUSDS` and withdraw `USDC`.
+
+- **Contract:** `PsmUsdcSusds`
+- **Function:** `redeemAndSwap(address,uint256,uint256)`
+
+  | Parameter      | Constraint        |
+  | :------------- | :---------------- |
+  | `receiver`     | equal to `AVATAR` |
+  | `shares`       | -                 |
+  | `minAmountOut` | -                 |
+
+### Target: SKY_USDC
+
+#### `USDC · approve - sUSDC as spender`
+
+Approve `sUSDC` to spend `USDC` tokens on behalf of the avatar.
+
+- **Contract:** `USDC`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint       |
+  | :-------- | :--------------- |
+  | `spender` | equal to `sUSDC` |
+  | `amount`  | -                |
+
+#### `sUSDC · deposit`
+
+Deposit `USDC` and receive `sUSDC` tokens in exchange.
+
+- **Contract:** `sUSDC`
+- **Function:** `deposit(uint256,address,uint256,uint16)`
+
+  | Parameter   | Constraint        |
+  | :---------- | :---------------- |
+  | `assets`    | -                 |
+  | `receiver`  | equal to `AVATAR` |
+  | `minShares` | -                 |
+  | `referral`  | -                 |
+
+#### `sUSDC · withdraw`
+
+Redeem `sUSDC` and withdraw `USDC` tokens.
+
+- **Contract:** `sUSDC`
+- **Function:** `withdraw(uint256,address,address,uint256)`
+
+  | Parameter   | Constraint        |
+  | :---------- | :---------------- |
+  | `assets`    | -                 |
+  | `receiver`  | equal to `AVATAR` |
+  | `owner`     | equal to `AVATAR` |
+  | `maxShares` | -                 |
+
+#### `sUSDC · redeem`
+
+Redeem `sUSDC` and withdraw `USDC` tokens.
+
+- **Contract:** `sUSDC`
+- **Function:** `redeem(uint256,address,address,uint256)`
+
+  | Parameter   | Constraint        |
+  | :---------- | :---------------- |
+  | `shares`    | -                 |
+  | `receiver`  | equal to `AVATAR` |
+  | `owner`     | equal to `AVATAR` |
+  | `minAssets` | -                 |
 
 ## Action: `borrow`
 
