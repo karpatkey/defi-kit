@@ -1,5 +1,5 @@
 from karpatkit.functions import get_contract, get_symbol, get_node
-from karpatkit.constants import Address
+# from karpatkit.constants import Address
 from defabipedia import Chain
 from lib.dump import dump
 
@@ -11,6 +11,23 @@ COMETS = [
     {
         'address': '0xA17581A9E3356d9A858b789D68B4d866e593aE94',
         'symbol': 'cWETHv3'
+    },
+    {
+        'address': '0x3Afdc9BCA9213A35503b077a6072F3D0d5AB0840',
+        'symbol': 'cUSDTv3'
+    },
+    {
+        'address': '0x3D0bb1ccaB520A66e607822fC55BC921738fAFE3',
+        'symbol': 'cWstETHv3'
+    },
+    {
+        'address': '0x5d409e56d886231adaf00c8775665ad0f9897b56',
+        'symbol': 'cUSDSv3'
+    },
+    
+    {
+        'address': '0xe85Dc543813B8c2CFEaAc371517b925a166a9293',
+        'symbol': 'cWBTCv3'
     }
 ]
 
@@ -30,16 +47,16 @@ def markets_data_v3(blockchain):
         base_token = comet_contract.functions.baseToken().call()
         base_token_symbol = get_symbol(base_token, blockchain, web3=web3)
         
-        if base_token_symbol == 'WETH':
-            comet_data['borrowToken'] = {
-                'address': Address.E,
-                'symbol': 'ETH'
-            }
-        else:
-            comet_data['borrowToken'] = {
-                'address': base_token,
-                'symbol': base_token_symbol
-            }
+        # if base_token_symbol == 'WETH':
+        #     comet_data['borrowToken'] = {
+        #         'address': Address.E,
+        #         'symbol': 'ETH'
+        #     }
+        # else:
+        comet_data['borrowToken'] = {
+            'address': base_token,
+            'symbol': base_token_symbol
+        }
 
         comet_data['collateralTokens'] = []
 
@@ -51,9 +68,9 @@ def markets_data_v3(blockchain):
             market['address'] = comet_contract.functions.getAssetInfo(i).call()[1]
             market['symbol'] = get_symbol(market['address'], blockchain, web3=web3)
 
-            if market['symbol'] == 'WETH':
-                market['address'] = Address.E
-                market['symbol'] = 'ETH'
+            # if market['symbol'] == 'WETH':
+            #     market['address'] = Address.E
+            #     market['symbol'] = 'ETH'
 
             comet_data['collateralTokens'].append(market)
         

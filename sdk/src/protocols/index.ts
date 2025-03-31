@@ -4,7 +4,7 @@ import * as ankr from "./ankr"
 import * as aura from "./aura"
 import * as balancerV2 from "./balancer/v2"
 import * as compoundV2 from "./compound/v2"
-// import * as compoundV3 from "./compound/v3"
+import * as compoundV3 from "./compound/v3"
 import * as convex from "./convex"
 import * as cowSwap from "./cowSwap"
 import * as lido from "./lido"
@@ -28,7 +28,7 @@ export const eth = annotateAll(
     aura: aura.eth,
     balancer_v2: balancerV2.eth,
     compound_v2: compoundV2.eth,
-    // compound_v3: compoundV3.eth,
+    compound_v3: compoundV3.eth,
     convex: convex.eth,
     cowswap: cowSwap.eth,
     lido: lido.eth,

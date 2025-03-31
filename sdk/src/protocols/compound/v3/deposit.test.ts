@@ -5,8 +5,7 @@ import { eth as kit } from "../../../../test/kit"
 import { parseUnits } from "ethers"
 import { Chain } from "../../../../src"
 
-// TODO we need to find a solution for handling the compundV3 bulker permissions
-describe.skip("compoundV3", () => {
+describe("compoundV3", () => {
   describe("deposit", () => {
     beforeAll(async () => {
       await applyPermissions(
@@ -15,7 +14,6 @@ describe.skip("compoundV3", () => {
       )
     })
 
-    // Deposit USDC
     it("allows depositing USDC on behalf of avatar", async () => {
       await stealErc20(
         Chain.eth,
@@ -31,6 +29,12 @@ describe.skip("compoundV3", () => {
       ).not.toRevert()
       await expect(
         kit.asMember.compoundV3.cUsdcV3.supply(
+          contracts.mainnet.usdc,
+          parseUnits("10000", 6)
+        )
+      ).not.toRevert()
+      await expect(
+        kit.asMember.compoundV3.cUsdcV3.withdraw(
           contracts.mainnet.usdc,
           parseUnits("10000", 6)
         )

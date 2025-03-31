@@ -29,19 +29,18 @@ const findCometByBorrowToken = (symbolOrAddress: string): Comet => {
   return comet
 }
 
-const findToken = (symbolOrAddress: string) => {
+const findTokenByComet = (comet: Comet, symbolOrAddress: string): Token => {
   const symbolAddressLower = symbolOrAddress.toLowerCase()
-  const tokens = comets.flatMap((comet) => [
-    comet.borrowToken,
-    ...comet.collateralTokens,
-  ])
+  const tokens = [comet.borrowToken, ...comet.collateralTokens]
   const token = tokens.find(
     (token) =>
       token.symbol.toLowerCase() === symbolAddressLower ||
       token.address.toLowerCase() === symbolAddressLower
   )
   if (!token) {
-    throw new NotFoundError(`Token not found: ${symbolOrAddress}`)
+    throw new NotFoundError(
+      `Token not found for ${symbolOrAddress} in comet ${comet.symbol}`
+    )
   }
   return token
 }
@@ -54,16 +53,20 @@ export const eth = {
     targets: (Comet["symbol"] | Comet["address"])[]
     tokens?: (Token["address"] | Token["symbol"])[]
   }) => {
-    return targets.flatMap((target) =>
-      deposit(findComet(target), tokens?.map(findToken))
-    )
+    return targets.flatMap((target) => {
+      const comet = findComet(target)
+      const resolvedTokens = tokens?.map((token) =>
+        findTokenByComet(comet, token)
+      )
+      return deposit(comet, resolvedTokens)
+    })
   },
 
   borrow: async ({
-    tokens,
+    targets,
   }: {
-    tokens: (BorrowToken["symbol"] | BorrowToken["address"])[]
+    targets: (BorrowToken["symbol"] | BorrowToken["address"])[]
   }) => {
-    return tokens.flatMap((token) => borrow(findCometByBorrowToken(token)))
+    return targets.flatMap((target) => borrow(findCometByBorrowToken(target)))
   },
 }

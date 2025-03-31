@@ -4,7 +4,7 @@ import * as ankr from "./ankr/schema"
 import * as aura from "./aura/schema"
 import * as balancerV2 from "./balancer/v2/schema"
 import * as compoundV2 from "./compound/v2/schema"
-// import * as compoundV3 from "./compound/v3/schema"
+import * as compoundV3 from "./compound/v3/schema"
 import * as convex from "./convex/schema"
 import * as cowSwap from "./cowSwap/schema"
 import * as lido from "./lido/schema"
@@ -26,7 +26,7 @@ export const eth = {
   aura: aura.eth,
   balancer_v2: balancerV2.eth,
   compound_v2: compoundV2.eth,
-  // compound_v3: compoundV3.eth,
+  compound_v3: compoundV3.eth,
   convex: convex.eth,
   cowswap: cowSwap.eth,
   lido: lido.eth,
