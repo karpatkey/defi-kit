@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.14.0](https://github.com/karpatkey/defi-kit/compare/v2.13.9...v2.14.0) (2025-03-31)
+
+
+### Features
+
+* Spark: Updates to DSR_sDAI and SKY_USDS / Add SKY_USDC ([#418](https://github.com/karpatkey/defi-kit/issues/418)) ([8dfed9f](https://github.com/karpatkey/defi-kit/commit/8dfed9f319c72f7d4b260f01a54188f24609d6c2))
+
 ## [2.13.9](https://github.com/karpatkey/defi-kit/compare/v2.13.8...v2.13.9) (2025-03-25)
 
 
