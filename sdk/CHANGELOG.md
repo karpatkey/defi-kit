@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.0](https://github.com/karpatkey/defi-kit/compare/v2.14.1...v2.15.0) (2025-04-01)
+
+
+### Features
+
+* Compound v3 on Mainnet ([#420](https://github.com/karpatkey/defi-kit/issues/420)) ([7787195](https://github.com/karpatkey/defi-kit/commit/77871958ea31508565446f67810f512f930e740c))
+
 ## [2.14.1](https://github.com/karpatkey/defi-kit/compare/v2.14.0...v2.14.1) (2025-04-01)
 
 
