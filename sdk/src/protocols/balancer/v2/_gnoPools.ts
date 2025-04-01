@@ -40,6 +40,23 @@ export default [
     ],
   },
   {
+    bpt: "0x09d50d1CaB16BF9c69034ff15221bC3ed84df259",
+    id: "0x09d50d1cab16bf9c69034ff15221bc3ed84df25900020000000000000000011e",
+    name: "BFN50WBTC50",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x2cabC867A6C4a32846677e74b3F75Df055E01F21",
+        symbol: "s-BFN",
+      },
+      {
+        address: "0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252",
+        symbol: "WBTC",
+      },
+    ],
+  },
+  {
     bpt: "0x11467c3BEea894d9e8618d80b9a006C9BAa9344c",
     id: "0x11467c3beea894d9e8618d80b9a006c9baa9344c000200000000000000000018",
     name: "50FRACTION-50MIVA",

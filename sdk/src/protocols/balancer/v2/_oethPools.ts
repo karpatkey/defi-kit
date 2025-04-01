@@ -496,23 +496,6 @@ export default [
     ],
   },
   {
-    bpt: "0xE906d4C4fC4c3Fe96560De86B4bf7eD89aF9A69a",
-    id: "0xe906d4c4fc4c3fe96560de86b4bf7ed89af9a69a000200000000000000000126",
-    name: "bpt-fraxsym",
-    type: "GyroE",
-    gauge: "0xF6b4ace2D69a0c6f966D44448692cA392f29029A",
-    tokens: [
-      {
-        address: "0x2Dd1B4D4548aCCeA497050619965f91f78b3b532",
-        symbol: "sFRAX",
-      },
-      {
-        address: "0x2E3D870790dC77A83DD1d18184Acc7439A53f475",
-        symbol: "FRAX",
-      },
-    ],
-  },
-  {
     bpt: "0xeFb0D9F51EFd52d7589A9083A6d0CA4de416c249",
     id: "0xefb0d9f51efd52d7589a9083a6d0ca4de416c24900020000000000000000002c",
     name: "BPT-IBETH",
