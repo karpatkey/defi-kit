@@ -39,12 +39,14 @@ export const deposit = (
   comet: Comet,
   tokens: Token[] = [comet.borrowToken, ...comet.collateralTokens]
 ) => {
-  const erc20Tokens = tokens.filter((token) => token.symbol !== "ETH")
-  const erc20TokenAddresses = erc20Tokens.map((token) => token.address)
+  // const erc20Tokens = tokens.filter((token) => token.symbol !== "ETH")
+  // const erc20TokenAddresses = erc20Tokens.map((token) => token.address)
+
+  const erc20TokenAddresses = tokens.map((token) => token.address)
 
   const permissions = [
-    // allow allowing the bulker
-    _allow(comet),
+    // // allow allowing the bulker
+    // _allow(comet),
 
     // allow approvals for all deposit tokens to the comet
     ...allowErc20Approve(erc20TokenAddresses, [comet.address]),
@@ -63,73 +65,78 @@ export const deposit = (
       targetAddress: comet.address,
     },
 
-    allow.mainnet.compoundV3.mainnetBulker.invoke(
-      c.every(
-        c.or(
-          c.eq(actionSupplyAsset),
-          c.eq(actionWithdrawAsset),
-          c.eq(actionClaimReward)
-        )
-      ),
-      c.every(
-        c.or(
-          c.abiEncodedMatches(
-            [
-              comet.address,
-              c.avatar,
-              c.or(...(erc20TokenAddresses as [string, string, ...string[]])),
-            ],
-            ["address", "address", "address", "uint256"]
-          ),
+    // allow.mainnet.compoundV3.mainnetBulker.invoke(
+    //   c.every(
+    //     c.or(
+    //       c.eq(actionSupplyAsset),
+    //       c.eq(actionWithdrawAsset),
+    //       c.eq(actionClaimReward)
+    //     )
+    //   ),
+    //   c.every(
+    //     c.or(
+    //       c.abiEncodedMatches(
+    //         [
+    //           comet.address,
+    //           c.avatar,
+    //           c.or(...(erc20TokenAddresses as [string, string, ...string[]])),
+    //         ],
+    //         ["address", "address", "address", "uint256"]
+    //       ),
 
-          c.abiEncodedMatches(
-            [
-              comet.address,
-              contracts.mainnet.compoundV3.cometRewards,
-              c.avatar,
-            ],
-            ["address", "address", "address", "bool"]
-          )
-        )
-      ),
-      // Roles mod does not support scoping the same function with different option values.
-      { send: true }
-    ),
+    //       c.abiEncodedMatches(
+    //         [
+    //           comet.address,
+    //           contracts.mainnet.compoundV3.cometRewards,
+    //           c.avatar,
+    //         ],
+    //         ["address", "address", "address", "bool"]
+    //       )
+    //     )
+    //   ),
+    //   // Roles mod does not support scoping the same function with different option values.
+    //   { send: true }
+    // ),
   ]
 
-  if (tokens.some((token) => token.symbol === "ETH")) {
-    // allow supply and withdraw of ETH through the bulker contract
-    permissions.push(
-      allow.mainnet.compoundV3.mainnetBulker.invoke(
-        c.every(
-          c.or(
-            c.eq(actionSupplyNativeToken),
-            c.eq(actionWithdrawNativeToken),
-            c.eq(actionClaimReward)
-          )
-        ),
-        c.every(
-          c.or(
-            c.abiEncodedMatches(
-              [comet.address, c.avatar],
-              ["address", "address", "uint256"]
-            ),
-            c.abiEncodedMatches(
-              [
-                comet.address,
-                contracts.mainnet.compoundV3.cometRewards,
-                c.avatar,
-              ],
-              ["address", "address", "address", "bool"]
-            )
-          )
-        ),
-        // Roles mod does not support scoping the same function with different option values.
-        // So we must also allow send here. This is not a problem because the MainnetBulker contract
-        // will refund any sent but unused ETH.
-        { send: true }
-      )
-    )
+  // if (tokens.some((token) => token.symbol === "ETH")) {
+  //   // allow supply and withdraw of ETH through the bulker contract
+  //   permissions.push(
+  //     allow.mainnet.compoundV3.mainnetBulker.invoke(
+  //       c.every(
+  //         c.or(
+  //           c.eq(actionSupplyNativeToken),
+  //           c.eq(actionWithdrawNativeToken),
+  //           c.eq(actionClaimReward)
+  //         )
+  //       ),
+  //       c.every(
+  //         c.or(
+  //           c.abiEncodedMatches(
+  //             [comet.address, c.avatar],
+  //             ["address", "address", "uint256"]
+  //           ),
+  //           c.abiEncodedMatches(
+  //             [
+  //               comet.address,
+  //               contracts.mainnet.compoundV3.cometRewards,
+  //               c.avatar,
+  //             ],
+  //             ["address", "address", "address", "bool"]
+  //           )
+  //         )
+  //       ),
+  //       // Roles mod does not support scoping the same function with different option values.
+  //       // So we must also allow send here. This is not a problem because the MainnetBulker contract
+  //       // will refund any sent but unused ETH.
+  //       { send: true }
+  //     )
+  //   )
+  // }
+
+  if (tokens.some((token) => token.symbol === "WETH")) {
+    permissions.push(allow.mainnet.weth.deposit({ send: true }))
+    permissions.push(allow.mainnet.weth.withdraw())
   }
 
   permissions.push(
@@ -145,49 +152,54 @@ export const borrow = (comet: Comet) => {
   // Other option to avoid the if(comet.borrowToken.symbol !== 'ETH')
   // ...(comet.borrowToken.symbol !== 'ETH' ? allowErc20Approve([comet.borrowToken.address], [comet.address]) : []),
 
-  if (comet.borrowToken.symbol !== "ETH") {
-    permissions.push(
-      ...allowErc20Approve([comet.borrowToken.address], [comet.address]),
+  // if (comet.borrowToken.symbol !== "ETH") {
+  permissions.push(
+    ...allowErc20Approve([comet.borrowToken.address], [comet.address]),
 
-      {
-        ...allow.mainnet.compoundV3.comet.supply(comet.borrowToken.address),
-        targetAddress: comet.address,
-      },
+    {
+      ...allow.mainnet.compoundV3.comet.supply(comet.borrowToken.address),
+      targetAddress: comet.address,
+    },
 
-      {
-        ...allow.mainnet.compoundV3.comet.withdraw(comet.borrowToken.address),
-        targetAddress: comet.address,
-      },
+    {
+      ...allow.mainnet.compoundV3.comet.withdraw(comet.borrowToken.address),
+      targetAddress: comet.address,
+    }
 
-      allow.mainnet.compoundV3.mainnetBulker.invoke(
-        c.every(c.or(c.eq(actionSupplyAsset), c.eq(actionWithdrawAsset))),
-        c.every(
-          c.abiEncodedMatches(
-            [comet.address, c.avatar, comet.borrowToken.address],
-            ["address", "address", "address", "uint256"]
-          )
-        ),
-        // Roles mod does not support scoping the same function with different option values.
-        { send: true }
-      )
-    )
-  } else {
-    permissions.push(
-      allow.mainnet.compoundV3.mainnetBulker.invoke(
-        // TODO this does not work, since the type trees are different (Roles mod will raise an integrity check error when applying)
-        c.every(
-          c.or(c.eq(actionSupplyNativeToken), c.eq(actionWithdrawNativeToken))
-        ),
-        c.every(
-          c.abiEncodedMatches(
-            [comet.address, c.avatar],
-            ["address", "address", "uint256"]
-          )
-        ),
-        // Roles mod does not support scoping the same function with different option values.
-        { send: true }
-      )
-    )
+    // allow.mainnet.compoundV3.mainnetBulker.invoke(
+    //   c.every(c.or(c.eq(actionSupplyAsset), c.eq(actionWithdrawAsset))),
+    //   c.every(
+    //     c.abiEncodedMatches(
+    //       [comet.address, c.avatar, comet.borrowToken.address],
+    //       ["address", "address", "address", "uint256"]
+    //     )
+    //   ),
+    //   // Roles mod does not support scoping the same function with different option values.
+    //   { send: true }
+    // )
+  )
+  // } else {
+  //   permissions.push(
+  //     allow.mainnet.compoundV3.mainnetBulker.invoke(
+  //       // TODO this does not work, since the type trees are different (Roles mod will raise an integrity check error when applying)
+  //       c.every(
+  //         c.or(c.eq(actionSupplyNativeToken), c.eq(actionWithdrawNativeToken))
+  //       ),
+  //       c.every(
+  //         c.abiEncodedMatches(
+  //           [comet.address, c.avatar],
+  //           ["address", "address", "uint256"]
+  //         )
+  //       ),
+  //       // Roles mod does not support scoping the same function with different option values.
+  //       { send: true }
+  //     )
+  //   )
+  // }
+
+  if (comet.borrowToken.symbol === "WETH") {
+    permissions.push(allow.mainnet.weth.deposit({ send: true }))
+    permissions.push(allow.mainnet.weth.withdraw())
   }
 
   return permissions
