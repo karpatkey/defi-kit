@@ -30,15 +30,11 @@ export default [
     symbol: "(=ↀωↀ=)",
   },
   {
-    address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
-    symbol: "WBTC",
-  },
-  {
     address: "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
     symbol: "WLD",
   },
   {
-    address: "0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4",
-    symbol: "SNX",
+    address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
+    symbol: "WBTC",
   },
 ] as const

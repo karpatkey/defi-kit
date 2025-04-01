@@ -471,23 +471,6 @@ export default [
     ],
   },
   {
-    bpt: "0x43837Db3216980957B5Af229E28DD532C6Cda520",
-    id: "0x43837db3216980957b5af229e28dd532c6cda5200002000000000000000005ed",
-    name: "ECLP-WETH-GYD",
-    type: "GyroE",
-    gauge: "0xB541Ae08772EDa705EB95C2A80E2bB931Dc7742b",
-    tokens: [
-      {
-        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
-        symbol: "WETH",
-      },
-      {
-        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
-        symbol: "GYD",
-      },
-    ],
-  },
-  {
     bpt: "0x444E1C6A039Ea14adcAD5E4cAa73a12cC40D9Aa0",
     id: "0x444e1c6a039ea14adcad5e4caa73a12cc40d9aa00002000000000000000005e9",
     name: "ECLP-WETH-USDT",
