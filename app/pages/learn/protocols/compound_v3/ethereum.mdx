@@ -16,8 +16,8 @@ import { Callout } from "nextra/components"
 <Callout type="warning">
   **ETH is not supported directly through DeFi Kit actions**
 
-The permissions listed for the actions do not support the use of ETH; use `WETH` instead.
-This is why the actions include the permission to wrap and unwrap ETH into `WETH` when needed.
+The permissions listed for the actions do not support the use of ETH. Use `WETH` instead.
+This is why the actions include the permission to wrap ETH into `WETH` and unwrap `WETH` into ETH when needed.
 
 ETH usage in Compound v3 requires the [MainnetBulker](https://etherscan.io/address/0xa397a8C2086C554B531c02E29f3291c9704B00c7),
 which handles ETH by using the `invoke(bytes32[] actions, bytes[] data)` function.
