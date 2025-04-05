@@ -10,6 +10,10 @@ export default [
     symbol: "WXDAI",
   },
   {
+    address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
+    symbol: "USDC.e",
+  },
+  {
     address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
     symbol: "USDC",
   },
@@ -44,10 +48,6 @@ export default [
   {
     address: "0x1f82284C1658Ad71C576f7230E6C2DEE7901c1FA",
     symbol: "wbTSLA",
-  },
-  {
-    address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
-    symbol: "USDC.e",
   },
   {
     address: "0x420CA0f9B9b604cE0fd9C18EF134C705e5Fa3430",

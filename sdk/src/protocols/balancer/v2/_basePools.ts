@@ -112,23 +112,6 @@ export default [
     ],
   },
   {
-    bpt: "0x1681606d347678d94b77edf887C75bE28fE254Bd",
-    id: "0x1681606d347678d94b77edf887c75be28fe254bd0002000000000000000001cf",
-    name: "ECLP-sUSDe-GYD",
-    type: "GyroE",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2",
-        symbol: "sUSDe",
-      },
-      {
-        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
-        symbol: "GYD",
-      },
-    ],
-  },
-  {
     bpt: "0x17e7d59bB209a3215Ccc25FFfEf7161498B7C10d",
     id: "0x17e7d59bb209a3215ccc25fffef7161498b7c10d000200000000000000000020",
     name: "1WETH-99GOLD",

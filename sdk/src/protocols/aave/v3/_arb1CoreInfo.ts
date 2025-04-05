@@ -199,4 +199,15 @@ export default [
     aTokenAddress: "0xEA1132120ddcDDA2F119e99Fa7A27a0d036F7Ac9",
     variableDebtTokenAddress: "0x1fFD28689DA7d0148ff0fCB669e9f9f0Fc13a219",
   },
+  {
+    symbol: "rsETH",
+    token: "0x4186BFC76E2E237523CBC30FD220FE055156b41F",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: false,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x6b030Ff3FB9956B1B69f475B77aE0d3Cf2CC5aFa",
+    variableDebtTokenAddress: "0x80cA0d8C38d2e2BcbaB66aA1648Bd1C7160500FE",
+  },
 ] as const

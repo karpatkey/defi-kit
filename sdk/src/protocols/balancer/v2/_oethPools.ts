@@ -390,23 +390,6 @@ export default [
     ],
   },
   {
-    bpt: "0xc1F46ce83439886F0ea9c21512b36e7E67239d2C",
-    id: "0xc1f46ce83439886f0ea9c21512b36e7e67239d2c000200000000000000000108",
-    name: "bpt-roabee",
-    type: "Weighted",
-    gauge: "0x53bFf7a10181E4Fa2a92011dE9816220E0DaDd41",
-    tokens: [
-      {
-        address: "0x9Bcef72be871e61ED4fBbc7630889beE758eb81D",
-        symbol: "rETH",
-      },
-      {
-        address: "0xb4Bc46bc6cB217B59ea8F4530BaE26Bf69F677f0",
-        symbol: "BEETS",
-      },
-    ],
-  },
-  {
     bpt: "0xc38C2fC871188935B9C615e73B17f2e7e463C8b1",
     id: "0xc38c2fc871188935b9c615e73b17f2e7e463c8b1000200000000000000000119",
     name: "80BAL-20WETH",
@@ -492,6 +475,23 @@ export default [
       {
         address: "0xFE8B128bA8C78aabC59d4c64cEE7fF28e9379921",
         symbol: "BAL",
+      },
+    ],
+  },
+  {
+    bpt: "0xE906d4C4fC4c3Fe96560De86B4bf7eD89aF9A69a",
+    id: "0xe906d4c4fc4c3fe96560de86b4bf7ed89af9a69a000200000000000000000126",
+    name: "bpt-fraxsym",
+    type: "GyroE",
+    gauge: "0xF6b4ace2D69a0c6f966D44448692cA392f29029A",
+    tokens: [
+      {
+        address: "0x2Dd1B4D4548aCCeA497050619965f91f78b3b532",
+        symbol: "sFRAX",
+      },
+      {
+        address: "0x2E3D870790dC77A83DD1d18184Acc7439A53f475",
+        symbol: "FRAX",
       },
     ],
   },

@@ -19,27 +19,6 @@ export default [
     ],
   },
   {
-    bpt: "0x0510cCF9eB3AB03C1508d3b9769E8Ee2CFd6FDcF",
-    id: "0x0510ccf9eb3ab03c1508d3b9769e8ee2cfd6fdcf00000000000000000000005d",
-    name: "MAI-BSP",
-    type: "Stable",
-    gauge: "0x7254C5933DE13B3FD5235a7706fAfA7B0a4a44F6",
-    tokens: [
-      {
-        address: "0x3F56e0c36d275367b8C502090EDF38289b3dEa0d",
-        symbol: "MAI",
-      },
-      {
-        address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USDT",
-      },
-      {
-        address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
-        symbol: "USDC",
-      },
-    ],
-  },
-  {
     bpt: "0x055242438D0Eca5DD98878c32a3033d19f73C935",
     id: "0x055242438d0eca5dd98878c32a3033d19f73c935000200000000000000000046",
     name: "50LEVR-50WETH",
@@ -467,6 +446,23 @@ export default [
       {
         address: "0xf7d4e7273E5015C96728A6b02f31C505eE184603",
         symbol: "osETH",
+      },
+    ],
+  },
+  {
+    bpt: "0x43837Db3216980957B5Af229E28DD532C6Cda520",
+    id: "0x43837db3216980957b5af229e28dd532c6cda5200002000000000000000005ed",
+    name: "ECLP-WETH-GYD",
+    type: "GyroE",
+    gauge: "0xB541Ae08772EDa705EB95C2A80E2bB931Dc7742b",
+    tokens: [
+      {
+        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        symbol: "WETH",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
       },
     ],
   },
@@ -1128,23 +1124,6 @@ export default [
       {
         address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
         symbol: "WETH",
-      },
-    ],
-  },
-  {
-    bpt: "0xa01364561eE7d9EC7f234Af070993Ee6baE9B2a4",
-    id: "0xa01364561ee7d9ec7f234af070993ee6bae9b2a40002000000000000000005ec",
-    name: "ECLP-WETH-USDT",
-    type: "GyroE",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
-        symbol: "WETH",
-      },
-      {
-        address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-        symbol: "USD₮0",
       },
     ],
   },

@@ -3621,27 +3621,6 @@ export default [
     ],
   },
   {
-    bpt: "0x9412206f58cc72b9b4e340422A95354372A3ec3D",
-    id: "0x9412206f58cc72b9b4e340422a95354372a3ec3d00020000000000000000069a",
-    name: "20B-baoUSD-LUSD-BPT-80BAO",
-    type: "Weighted",
-    gauge: "0x6b9dE817875952Cb23d985AbF6fa9ec4b7f66ad5",
-    tokens: [
-      {
-        address: "0x5f98805A4E8be255a32880FDeC7F6728C6568bA0",
-        symbol: "LUSD",
-      },
-      {
-        address: "0x7945b0A6674b175695e5d1D08aE1e6F13744Abb0",
-        symbol: "BaoUSD",
-      },
-      {
-        address: "0xCe391315b414D4c7555956120461D21808A69F3A",
-        symbol: "BAO",
-      },
-    ],
-  },
-  {
     bpt: "0x95f1A3cA4aF4d08B9C42D65Ef07b66E8222ED85a",
     id: "0x95f1a3ca4af4d08b9c42d65ef07b66e8222ed85a0002000000000000000005b6",
     name: "50somm-50WETH",
@@ -5089,23 +5068,6 @@ export default [
       {
         address: "0xdBdb4d16EdA451D0503b854CF79D55697F90c8DF",
         symbol: "ALCX",
-      },
-    ],
-  },
-  {
-    bpt: "0xDbC4F138528B6B893cBCc3fd9c15D8B34D0554aE",
-    id: "0xdbc4f138528b6b893cbcc3fd9c15d8b34d0554ae0002000000000000000003bf",
-    name: "85QNT-15USDC",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x4a220E6096B25EADb88358cb44068A3248254675",
-        symbol: "QNT",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
       },
     ],
   },
