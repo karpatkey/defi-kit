@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.1](https://github.com/karpatkey/defi-kit/compare/v2.15.0...v2.15.1) (2025-04-07)
+
+
+### Bug Fixes
+
+* Remove Balancer v2 threshold for GC pools ([#424](https://github.com/karpatkey/defi-kit/issues/424)) ([1840f57](https://github.com/karpatkey/defi-kit/commit/1840f57a31d26b95c45c85e8b4485ad5ef0a3a83))
+
 ## [2.15.0](https://github.com/karpatkey/defi-kit/compare/v2.14.1...v2.15.0) (2025-04-01)
 
 
