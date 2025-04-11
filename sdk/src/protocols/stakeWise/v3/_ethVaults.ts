@@ -32,6 +32,12 @@ export default [
       "Welcome to The Stakingverse!\n\nA premier staking provider with competitive fees, MEV boost and state-of-the-art infrastructure.\n\nAs an official StakeWise partner, we are dedicated to perfecting the secure and decentralized nature of the V3 Protocol to multiple chains. And with a team of highly-experienced professionals, who have been on the front-line of blockchain technology for many years now, you will get the best service, APY and security in liquid staking.\n\nStake your LYX and ETH with The Best at stakingverse.io",
   },
   {
+    id: "0x663580b3edad914d0b59cea88616f06278d42bb2",
+    name: "onchainaustria.at",
+    description:
+      "onchainaustria is the first Austrian DAO-directed association (𓃵 Airdrop incoming!). We operate as a node operator (ETH, STRK, UNI) with low fees and a highly redundant infrastructure.\n\nWe are a thriving Austrian crypto community, dedicated to enabling our members to participate in and support the decentralization of DLT networks.\n\nJoin us and become part of a collaborative environment driving the future of decentralization!\n\n🔗 onchainaustria.at",
+  },
+  {
     id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
     name: "Allnodes",
     description:
@@ -42,12 +48,6 @@ export default [
     name: "Data Nexus",
     description:
       "Independent Ethereum validators with owned hardware, MEV boost, and minority clients for robust decentralization. Empowering the Ethereum network with integrity.",
-  },
-  {
-    id: "0x663580b3edad914d0b59cea88616f06278d42bb2",
-    name: "onchainaustria.at",
-    description:
-      "onchainaustria is the first Austrian DAO-directed association (𓃵 Airdrop incoming!). We operate as a node operator (ETH, STRK, UNI) with low fees and a highly redundant infrastructure.\n\nWe are a thriving Austrian crypto community, dedicated to enabling our members to participate in and support the decentralization of DLT networks.\n\nJoin us and become part of a collaborative environment driving the future of decentralization!\n\n🔗 onchainaustria.at",
   },
   {
     id: "0x5610297eb32542b8f13378fe7d783dcb1ac3b1a1",
@@ -195,11 +195,5 @@ export default [
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
-  },
-  {
-    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
-    name: "Fox & Yaga",
-    description:
-      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
   },
 ] as const

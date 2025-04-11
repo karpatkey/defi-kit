@@ -30,12 +30,12 @@ export default [
     symbol: "USDT",
   },
   {
-    address: "0x912CE59144191C1204E64559FE8253a0e49E6548",
-    symbol: "ARB",
-  },
-  {
     address: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
     symbol: "GMX",
+  },
+  {
+    address: "0x912CE59144191C1204E64559FE8253a0e49E6548",
+    symbol: "ARB",
   },
   {
     address: "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
@@ -54,10 +54,6 @@ export default [
     symbol: "tBTC",
   },
   {
-    address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
-    symbol: "AAVE",
-  },
-  {
     address: "0x81314B07b2f8796a477f1c31c92241ee8D86301D",
     symbol: "AVATAR",
   },
@@ -66,20 +62,16 @@ export default [
     symbol: "ZRO",
   },
   {
+    address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
+    symbol: "AAVE",
+  },
+  {
     address: "0x37a645648dF29205C6261289983FB04ECD70b4B3",
     symbol: "ANIME",
   },
   {
     address: "0x431402e8b9dE9aa016C743880e04E517074D8cEC",
     symbol: "HEGIC",
-  },
-  {
-    address: "0x5979D7b546E38E414F7E9822514be443A4800529",
-    symbol: "wstETH",
-  },
-  {
-    address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
-    symbol: "CRV",
   },
   {
     address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",

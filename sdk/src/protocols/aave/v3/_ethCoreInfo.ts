@@ -419,4 +419,15 @@ export default [
     aTokenAddress: "0x65906988ADEe75306021C417a1A3458040239602",
     variableDebtTokenAddress: "0x68aeB290C7727D899B47c56d1c96AEAC475cD0dD",
   },
+  {
+    symbol: "eBTC",
+    token: "0x657e8C867D8B37dCC18fA4Caead9C45EB088C642",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: false,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x5fefd7069a7D91d01f269DADE14526CCF3487810",
+    variableDebtTokenAddress: "0x47eD0509e64615c0d5C6d39AF1B38D02Bc9fE58f",
+  },
 ] as const
