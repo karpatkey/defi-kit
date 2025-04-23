@@ -68,12 +68,6 @@ export default [
       "Gnosis Vault by Stakers.space | Fee 10% | Learn more about Gnosis staking at https://stakers.space/gnosis-staking.",
   },
   {
-    id: "0x0f6f727421ed6229fcac821147ae104c9326229e",
-    name: "Dappnode vault",
-    description:
-      "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
-  },
-  {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
     name: "FCC GNO Vault",
     description: "FCC GNO Liquid Staking Public Vault",
@@ -83,6 +77,12 @@ export default [
     name: "Blockscape Gnosis Vault ",
     description:
       "Institutional-grade staking for everyone made by Blockscape in Switzerland. As staker, you benefit from a low commission fee of just 12.5%, while still enjoying the same levels of security and reliability. Our unique setup provides highest standards in security and reliability. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world. Moreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network or visit https://blockscape.network for more information.",
+  },
+  {
+    id: "0x0f6f727421ed6229fcac821147ae104c9326229e",
+    name: "Dappnode vault",
+    description:
+      "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
   },
   {
     id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
@@ -104,6 +104,23 @@ export default [
   {
     id: "0x5f07fa4f2f9173d6d9a3dbcf24c0933213cef7b7",
     name: "Portugal Vault",
+    description: null,
+  },
+  {
+    id: "0x20dd41e898a58ee4148a2f6db2c2be7082441932",
+    name: "Sophia's Gnosis",
+    description:
+      "Whispers of Sophia's Gnosis\n\nIn realms beyond the veil of sight,\nI dance with truths both dark and light.\nSophia's wisdom, my guiding star,\nGnosis beckons from afar.\n\nThrough winding paths of mystic lore,\nI seek the keys to cosmic doors.\nEach step unveils a sacred sign,\nAs mortal flesh and soul entwine.\n\nIn silence deep, I hear the call,\nOf hidden knowledge, one and all.\nThe serpent's whisper, soft and low,\nReveals the truths I've come to know.\n\nIllumination floods my mind,\nAs earthly shackles fall behind.\nIn gnosis found, both pure and bright,\nI rise, transformed, into the light.\n\nFor wisdom's flame burns ever true,\nIn hearts that dare to see anew.\nAnd in this knowing, vast and free,\nI find the cosmic self that sleeps in me.",
+  },
+  {
+    id: "0x9eeb6be79899cfe45018866a2113c6b77fa96f35",
+    name: "SEEDNode",
+    description:
+      "Gnosis v3 Vault 🦉\n\nAt SEEDNode, we promote and strengthen decentralization globally by providing best-in-class node infrastructure and actively participating in multiple networks.\n\nPowered by SEED Org.\nseedlatam.org",
+  },
+  {
+    id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",
+    name: "Test No Deposit",
     description: null,
   },
 ] as const
