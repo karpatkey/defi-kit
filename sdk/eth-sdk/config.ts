@@ -178,7 +178,7 @@ export const contracts = {
       poolV3: "0xb50201558B00496A145fE76f7424749556E326D8",
       // wrappedTokenGatewayV3 New Address: "0xb85d72EC1EfE48168c4aBC4eB855f8Cbcd05cE38" -> NOT USED!
       // Reason: Fails both the test and the simulation. Keeping old address for now.
-      wrappedTokenGatewayV3: "0x7B9c12915c594a68dE96201Cbdc79147F09da278", 
+      wrappedTokenGatewayV3: "0x7B9c12915c594a68dE96201Cbdc79147F09da278",
       aGnoWXDAI: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
       variableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
       protocolDataProviderV3: "0x57038C3e3Fe0a170BB72DE2fD56E98e4d1a69717",
