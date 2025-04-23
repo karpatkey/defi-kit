@@ -23,7 +23,7 @@ describe("aaveV3", () => {
           contracts.gnosis.aaveV3.poolV3,
           wallets.avatar,
           0,
-          { value: parseEther("1") }
+          { value: parseEther("10") }
         )
       ).not.toRevert()
       await expect(
@@ -31,7 +31,7 @@ describe("aaveV3", () => {
           contracts.gnosis.aaveV3.poolV3,
           wallets.member,
           0,
-          { value: parseEther("1") }
+          { value: parseEther("10") }
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -123,7 +123,7 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.poolV3.withdraw(
           contracts.gnosis.usdc,
-          parseUnits("1000", 6),
+          parseUnits("500", 6),
           wallets.avatar
         )
       ).not.toRevert()
@@ -131,7 +131,7 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.poolV3.withdraw(
           contracts.gnosis.usdc,
-          parseUnits("1000", 6),
+          parseUnits("500", 6),
           wallets.member
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
