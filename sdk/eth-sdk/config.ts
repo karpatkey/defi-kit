@@ -20,16 +20,16 @@ export const contracts = {
     aaveV3: {
       protocolDataProviderCoreV3: "0x41393e5e337606dc3821075Af65AeE84D7688CBD",
       poolCoreV3: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2",
-      wrappedTokenGatewayCoreV3: "0xA434D495249abE33E031Fe71a969B81f3c07950D",
+      wrappedTokenGatewayCoreV3: "0xd01607c3C5eCABa394D8be377a08590149325722",
       aEthWeth: "0x4d5F47FA6A74757f35C14fD3a6Ef8E3C9BC514E8",
       variableDebtWeth: "0xeA51d7853EEFb32b6ee06b1C12E6dcCA88Be0fFE",
       poolPrimeV3: "0x4e033931ad43597d96D6bcc25c280717730B58B1",
-      wrappedTokenGatewayPrimeV3: "0x0B8C700917a6991FEa7198dDFC80bc8962b5055D",
+      wrappedTokenGatewayPrimeV3: "0x3167C452fA3fa1e5C16bB83Bc0fde4519C464299",
       variableDebtEthLidoWeth: "0x91b7d78BF92db564221f6B5AeE744D1727d1Dd1e",
       aEthLidoWeth: "0xfA1fDbBD71B0aA16162D76914d69cD8CB3Ef92da",
       poolEtherFiV3: "0x0AA97c284e98396202b6A04024F5E2c65026F3c0",
       wrappedTokenGatewayEtherFiV3:
-        "0xAB911dFB2bB9e264EE836F30D3367618f8Aef965",
+        "0xf956B38F035dC9067fb827A512D3CF35202AB0Bc",
       meritDistributor: "0x3Ef3D8bA38EBe18DB133cEc108f4D14CE00Dd9Ae",
       incentivesV3: "0x8164Cc65827dcFe994AB23944CBC90e0aa80bFcb",
     },
@@ -176,7 +176,7 @@ export const contracts = {
   gnosis: {
     aaveV3: {
       poolV3: "0xb50201558B00496A145fE76f7424749556E326D8",
-      wrappedTokenGatewayV3: "0x7B9c12915c594a68dE96201Cbdc79147F09da278",
+      wrappedTokenGatewayV3: "0xb85d72EC1EfE48168c4aBC4eB855f8Cbcd05cE38",
       aGnoWXDAI: "0xd0Dd6cEF72143E22cCED4867eb0d5F2328715533",
       variableDebtWXDAI: "0x281963D7471eCdC3A2Bd4503e24e89691cfe420D",
       protocolDataProviderV3: "0x57038C3e3Fe0a170BB72DE2fD56E98e4d1a69717",
@@ -227,7 +227,7 @@ export const contracts = {
   arbitrumOne: {
     aaveV3: {
       poolV3: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
-      wrappedTokenGatewayV3: "0x5760E34c4003752329bC77790B1De44C2799F8C3",
+      wrappedTokenGatewayV3: "0x5283BEcEd7ADF6D003225C13896E536f2D4264FF",
       aArbWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
       protocolDataProviderV3: "0x14496b405D62c24F91f04Cda1c69Dc526D56fDE5",
@@ -268,7 +268,7 @@ export const contracts = {
   optimism: {
     aaveV3: {
       poolV3: "0x794a61358D6845594F94dc1DB02A252b5b4814aD",
-      wrappedTokenGatewayV3: "0x60eE8b61a13c67d0191c851BEC8F0bc850160710",
+      wrappedTokenGatewayV3: "0x5f2508cAE9923b02316254026CD43d7902866725",
       aOptWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
       protocolDataProviderV3: "0x14496b405D62c24F91f04Cda1c69Dc526D56fDE5",
@@ -307,7 +307,7 @@ export const contracts = {
   base: {
     aaveV3: {
       poolV3: "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5",
-      wrappedTokenGatewayV3: "0x729b3EA8C005AbC58c9150fb57Ec161296F06766",
+      wrappedTokenGatewayV3: "0xa0d9C1E9E48Ca30c8d8C3B5D69FF5dc1f6DFfC24",
       aBasWeth: "0xD4a0e0b9149BCee3C920d2E00b5dE09138fd8bb7",
       variableDebtWeth: "0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E",
       protocolDataProviderV3: "0xC4Fcf9893072d61Cc2899C0054877Cb752587981",
