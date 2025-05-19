@@ -90,33 +90,16 @@ export default [
     description: "Dappnode vault, fiber gigabit uplink, UPS",
   },
   {
-    id: "0xe32773a0f6fa8ebf2a32c040dacd031a1ad1e530",
-    name: "Deprecated: Orangefin Ventures",
-    description:
-      "Orangefin Ventures has been acquired and we will be sunsetting our support for Gnosis. We will be exiting all of our validators so users don't incur any penalties. Please unstake at your earliest convenience.",
-  },
-  {
     id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
     name: "Stakers Union Vault",
     description:
       "The home-stakers collective:\nEmpowering individual stakers, preserving decentralization across Ethereum-aligned networks.",
   },
   {
-    id: "0x5f07fa4f2f9173d6d9a3dbcf24c0933213cef7b7",
-    name: "Portugal Vault",
-    description: null,
-  },
-  {
     id: "0x20dd41e898a58ee4148a2f6db2c2be7082441932",
     name: "Sophia's Gnosis",
     description:
       "Whispers of Sophia's Gnosis\n\nIn realms beyond the veil of sight,\nI dance with truths both dark and light.\nSophia's wisdom, my guiding star,\nGnosis beckons from afar.\n\nThrough winding paths of mystic lore,\nI seek the keys to cosmic doors.\nEach step unveils a sacred sign,\nAs mortal flesh and soul entwine.\n\nIn silence deep, I hear the call,\nOf hidden knowledge, one and all.\nThe serpent's whisper, soft and low,\nReveals the truths I've come to know.\n\nIllumination floods my mind,\nAs earthly shackles fall behind.\nIn gnosis found, both pure and bright,\nI rise, transformed, into the light.\n\nFor wisdom's flame burns ever true,\nIn hearts that dare to see anew.\nAnd in this knowing, vast and free,\nI find the cosmic self that sleeps in me.",
-  },
-  {
-    id: "0x9eeb6be79899cfe45018866a2113c6b77fa96f35",
-    name: "SEEDNode",
-    description:
-      "Gnosis v3 Vault 🦉\n\nAt SEEDNode, we promote and strengthen decentralization globally by providing best-in-class node infrastructure and actively participating in multiple networks.\n\nPowered by SEED Org.\nseedlatam.org",
   },
   {
     id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",

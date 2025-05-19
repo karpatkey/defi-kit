@@ -26,6 +26,12 @@ export default [
       "3 out of 4 Fault Tolerance  - SSV Operators 491, 770, 1002, 1003 - Solo node runner since April 2023 -  Minority clients Nethermind/Nimbus, Besu/Teku, Erigon/Lodestar, Nethermind/Prysm - MEV enabled - High-end NUC with UPS",
   },
   {
+    id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
+    name: "Blockshard DVT Pioneers Vault",
+    description:
+      "This vault runs on secure Distributed Validator Technology (DVT), meaning no single server holds a full validator key and built-in fault tolerance ensures resilient performance.\n\nWe currently use SSV and Obol, and will add more DVT solutions as they mature.\n\nAll DVT protocol rewards are shared with stakers, making this a high-yield strategy for ETH holders.\n\n",
+  },
+  {
     id: "0x8a93a876912c9f03f88bc9114847cf5b63c89f56",
     name: "Stakingverse - Max MEV Boost",
     description:
@@ -50,6 +56,12 @@ export default [
       "Independent Ethereum validators with owned hardware, MEV boost, and minority clients for robust decentralization. Empowering the Ethereum network with integrity.",
   },
   {
+    id: "0x99510bfc5d420cd3c41458f4692b1c3321908734",
+    name: "Stakely",
+    description:
+      "Stakely is a top Staking-as-a-Service provider specialized in Proof-of-Stake blockchains. With over 40 supported networks, we offer reliable and secure staking services for the best staking experience.\n",
+  },
+  {
     id: "0x5610297eb32542b8f13378fe7d783dcb1ac3b1a1",
     name: "SenseiNode",
     description:
@@ -62,21 +74,9 @@ export default [
       "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
   },
   {
-    id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
-    name: "Blockshard DVT Pioneers Vault",
-    description:
-      "This vault runs on secure Distributed Validator Technology (DVT), meaning no single server holds a full validator key and built-in fault tolerance ensures resilient performance.\n\nWe currently use SSV and Obol, and will add more DVT solutions as they mature.\n\nAll DVT protocol rewards are shared with stakers, making this a high-yield strategy for ETH holders.\n\n",
-  },
-  {
     id: "0x089a97a8bc0c0f016f89f9cf42181ff06afb2daf",
     name: "validator service",
     description: "reliable validation",
-  },
-  {
-    id: "0x99510bfc5d420cd3c41458f4692b1c3321908734",
-    name: "Stakely",
-    description:
-      "Stakely is a top Staking-as-a-Service provider specialized in Proof-of-Stake blockchains. With over 40 supported networks, we offer reliable and secure staking services for the best staking experience.\n",
   },
   {
     id: "0x481afcd21a3447a7a04c4afd968df877b76d2310",
@@ -119,22 +119,16 @@ export default [
     description: "Independent solo operator since genesis",
   },
   {
+    id: "0xd21b6bc0a1434aef8cf468a20bf2daefcaf6eab9",
+    name: "Caliber",
+    description:
+      "Caliber is a Web3 Venture Builder empowering founders to build impactful startups. We offer comprehensive support - from funding and engineering to strategy and legal - to drive innovation in consumer apps, DeFi, and infrastructure.",
+  },
+  {
     id: "0x9c29c571847a68a947acec8bacd303e36bc72ec5",
     name: "01node StakeWise V3 Vault",
     description:
       "01node operarated Vault, 1% commision; read more on  https://staking.01node.com/",
-  },
-  {
-    id: "0x302be829c61c287787030888bbcf11115ecd5773",
-    name: "Swiss Liquid Staking",
-    description:
-      "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
-  },
-  {
-    id: "0x2a14b47e551288f3f5e35842970cc2bc78ceb47d",
-    name: "Cryptoknight Vault",
-    description:
-      "Validator nodes operated by the leading Web3 education community for working professionals in Singapore - Cryptoknight Academy. Limited to 100 validator keys, we work with the Stakesaurus home staking community for diversification of our physical infrastructure and clients. DVTs will be implemented for additional performance and security boosts as we scale up!",
   },
   {
     id: "0xe2d8f982708ce1e3814c8986cbab624ca926288a",
@@ -161,6 +155,12 @@ export default [
       "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
   },
   {
+    id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
+    name: "Stakesaurus SEA Home Nodes",
+    description:
+      "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community\n\nCentralised infrastructure is bad for both the network and your own ETH (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service!\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws — e.g. Most slashing events are due to institutions over-engineering their setups.\n\nAt Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
+  },
+  {
     id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
     name: "DSRV",
     description:
@@ -179,10 +179,10 @@ export default [
       "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
-    id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
-    name: "Stakesaurus SEA Home Nodes",
+    id: "0x302be829c61c287787030888bbcf11115ecd5773",
+    name: "Swiss Liquid Staking",
     description:
-      "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community\n\nCentralised infrastructure is bad for both the network and your own ETH (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service!\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws — e.g. Most slashing events are due to institutions over-engineering their setups.\n\nAt Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
+      "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
   },
   {
     id: "0xcf8357e5d8d90aa3c86eeba3c494947dab28bfaf",
@@ -195,5 +195,16 @@ export default [
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
+  },
+  {
+    id: "0x2a14b47e551288f3f5e35842970cc2bc78ceb47d",
+    name: "Cryptoknight Vault",
+    description:
+      "Validator nodes operated by the leading Web3 education community for working professionals in Singapore - Cryptoknight Academy. Limited to 100 validator keys, we work with the Stakesaurus home staking community for diversification of our physical infrastructure and clients. DVTs will be implemented for additional performance and security boosts as we scale up!",
+  },
+  {
+    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
+    name: "place holder",
+    description: null,
   },
 ] as const

@@ -256,6 +256,23 @@ export default [
     ],
   },
   {
+    bpt: "0x1445d65aDCCe244505491Ccad8A86d161252a0de",
+    id: "0x1445d65adcce244505491ccad8a86d161252a0de00020000000000000000012b",
+    name: "BFN50WBTC50",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x0d8c4901Dd270Fe101B8014A5dbECC4e4432eB1E",
+        symbol: "s-BFN",
+      },
+      {
+        address: "0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252",
+        symbol: "WBTC",
+      },
+    ],
+  },
+  {
     bpt: "0x15D17723BC3840f6e86Ab47819843fCD7558F410",
     id: "0x15d17723bc3840f6e86ab47819843fcd7558f41000020000000000000000003a",
     name: "50agEUR-50WXDAI",
@@ -1694,6 +1711,23 @@ export default [
     ],
   },
   {
+    bpt: "0x8F5f9554fd1AeE851b6f69D0863Bb0F48c2A8402",
+    id: "0x8f5f9554fd1aee851b6f69d0863bb0f48c2a840200020000000000000000012c",
+    name: "METESTSUP33sDAI67",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x7147A7405fCFe5CFa30c6d5363f9f357a317d082",
+        symbol: "s-METESTSUP",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+    ],
+  },
+  {
     bpt: "0x8fCAdfDfe786c6f8E1cf82fbD1bD243501a18341",
     id: "0x8fcadfdfe786c6f8e1cf82fbd1bd243501a183410001000000000000000000ae",
     name: "50COW-25USDC-25WXDAI",
@@ -2066,6 +2100,23 @@ export default [
       {
         address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
         symbol: "sDAI",
+      },
+    ],
+  },
+  {
+    bpt: "0xB6f15EcafA41046bB5602Bf98C537f85BAF3B16d",
+    id: "0xb6f15ecafa41046bb5602bf98c537f85baf3b16d000000000000000000000139",
+    name: "EURE/USDC.E",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
+        symbol: "USDC.e",
+      },
+      {
+        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
+        symbol: "EURe",
       },
     ],
   },
@@ -2507,6 +2558,23 @@ export default [
       {
         address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
         symbol: "WXDAI",
+      },
+    ],
+  },
+  {
+    bpt: "0xe89023C28eB5F7079f88A284546DEc8fb8C3Cd02",
+    id: "0xe89023c28eb5f7079f88a284546dec8fb8c3cd02000200000000000000000144",
+    name: "s-ZUCRCW66sDAIW33",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+      {
+        address: "0xE6863166D96a6f2fc2e9118AC418796f694cCFBd",
+        symbol: "s-ZUCRC",
       },
     ],
   },
