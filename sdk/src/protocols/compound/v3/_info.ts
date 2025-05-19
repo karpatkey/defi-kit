@@ -41,6 +41,10 @@ export default [
         address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
         symbol: "tBTC",
       },
+      {
+        address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+        symbol: "weETH",
+      },
     ],
   },
   {
@@ -216,6 +220,14 @@ export default [
       {
         address: "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
         symbol: "sUSDS",
+      },
+      {
+        address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+        symbol: "weETH",
+      },
+      {
+        address: "0x56072C95FAA701256059aa122697B133aDEd9279",
+        symbol: "SKY",
       },
     ],
   },

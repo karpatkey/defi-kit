@@ -6,12 +6,12 @@ export default [
     symbol: "USDC.e",
   },
   {
-    address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
-    symbol: "WXDAI",
-  },
-  {
     address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
     symbol: "WETH",
+  },
+  {
+    address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+    symbol: "WXDAI",
   },
   {
     address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
@@ -24,6 +24,10 @@ export default [
   {
     address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
     symbol: "USDT",
+  },
+  {
+    address: "0x0d8c4901Dd270Fe101B8014A5dbECC4e4432eB1E",
+    symbol: "s-BFN",
   },
   {
     address: "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
@@ -58,12 +62,20 @@ export default [
     symbol: "SAFE",
   },
   {
+    address: "0x532801ED6f82FFfD2DAB70A19fC2d7B2772C4f4b",
+    symbol: "SWPR",
+  },
+  {
     address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
     symbol: "GBPe",
   },
   {
     address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
     symbol: "wstETH",
+  },
+  {
+    address: "0x7147A7405fCFe5CFa30c6d5363f9f357a317d082",
+    symbol: "s-METESTSUP",
   },
   {
     address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
