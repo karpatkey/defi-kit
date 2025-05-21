@@ -179,6 +179,12 @@ export default [
       "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
+    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
+    name: "Fox & Yaga",
+    description:
+      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
+  },
+  {
     id: "0x302be829c61c287787030888bbcf11115ecd5773",
     name: "Swiss Liquid Staking",
     description:

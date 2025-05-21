@@ -42,6 +42,10 @@ export default [
     symbol: "s-TEST-LBP01",
   },
   {
+    address: "0x1C67d859bD4a4e449d790b65fd6E28f982ae84B0",
+    symbol: "s-BREAD",
+  },
+  {
     address: "0x1e2C4fb7eDE391d116E6B41cD0608260e8801D59",
     symbol: "bCSPX",
   },
@@ -54,6 +58,10 @@ export default [
     symbol: "POOL",
   },
   {
+    address: "0x31B32b96049F8FD24969611252c4e44a1b4A07eB",
+    symbol: "s-SCOUT",
+  },
+  {
     address: "0x420CA0f9B9b604cE0fd9C18EF134C705e5Fa3430",
     symbol: "EURe",
   },
@@ -62,8 +70,20 @@ export default [
     symbol: "SAFE",
   },
   {
+    address: "0x5198D513A6DBbA16637B353ce06197f750addB4B",
+    symbol: "s-ETHCC",
+  },
+  {
+    address: "0x51cFFACFfb9bF480c20023B625977c419146F12a",
+    symbol: "s-ASTRO",
+  },
+  {
     address: "0x532801ED6f82FFfD2DAB70A19fC2d7B2772C4f4b",
     symbol: "SWPR",
+  },
+  {
+    address: "0x5c154527cc33b9a5dA8F259A0745454f155e7D55",
+    symbol: "s-GRD",
   },
   {
     address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
@@ -82,11 +102,27 @@ export default [
     symbol: "GNO",
   },
   {
+    address: "0xa0ea681f5685BFa6857d776b5aCbf3D51bbeCC9a",
+    symbol: "s-CBG",
+  },
+  {
     address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
     symbol: "sDAI",
   },
   {
+    address: "0xC2366F0d00f274d1fB6ac761e7D66EAfD1b8C03D",
+    symbol: "s-ZUB",
+  },
+  {
     address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
     symbol: "EURe",
+  },
+  {
+    address: "0xE0eD85F76D9C552478929fab44693E03F0899F23",
+    symbol: "s-KPK",
+  },
+  {
+    address: "0xf084b8F984912f0c62179Ca7EE998BeC90757B53",
+    symbol: "s-crc-lx",
   },
 ] as const

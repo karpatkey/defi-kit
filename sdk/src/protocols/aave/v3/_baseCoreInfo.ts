@@ -133,4 +133,15 @@ export default [
     aTokenAddress: "0x90DA57E0A6C0d166Bf15764E03b83745Dc90025B",
     variableDebtTokenAddress: "0x03D01595769333174036832e18fA2f17C74f8161",
   },
+  {
+    symbol: "AAVE",
+    token: "0x63706e401c06ac8513145b7687A14804d17f814b",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: false,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x67EAF2BeE4384a2f84Da9Eb8105C661C123736BA",
+    variableDebtTokenAddress: "0xcEC1Ea95dDEF7CFC27D3D9615E05b035af460978",
+  },
 ] as const
