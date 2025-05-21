@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.15.6](https://github.com/karpatkey/defi-kit/compare/v2.15.5...v2.15.6) (2025-05-21)
+
+
+### Bug Fixes
+
+* Aave v3 Wrapped Token Gateway v3 update on GC ([#433](https://github.com/karpatkey/defi-kit/issues/433)) ([0cfc489](https://github.com/karpatkey/defi-kit/commit/0cfc489b8cce6d4f381fdfc7e1f02086c2dc2f85))
+
 ## [2.15.5](https://github.com/karpatkey/defi-kit/compare/v2.15.4...v2.15.5) (2025-05-21)
 
 
