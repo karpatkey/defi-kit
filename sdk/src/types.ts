@@ -19,6 +19,7 @@ export type ProtocolActions = {
   swap?: AllowFunction
   lock?: AllowFunction
   delegate?: AllowFunction
+  supply?: AllowFunction
   bridge?: AllowFunction
   receive?: AllowFunction
 }
