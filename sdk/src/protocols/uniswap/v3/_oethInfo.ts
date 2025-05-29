@@ -6,12 +6,12 @@ export default [
     symbol: "WETH",
   },
   {
-    address: "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
-    symbol: "USDC",
-  },
-  {
     address: "0x4200000000000000000000000000000000000042",
     symbol: "OP",
+  },
+  {
+    address: "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
+    symbol: "USDC",
   },
   {
     address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
@@ -26,12 +26,8 @@ export default [
     symbol: "WLD",
   },
   {
-    address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
-    symbol: "WBTC",
-  },
-  {
-    address: "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
-    symbol: "wstETH",
+    address: "0x139052115F8B1773cF7DcBA6a553F922a2E54F69",
+    symbol: "(=ↀωↀ=)",
   },
   {
     address: "0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4",

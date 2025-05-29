@@ -148,7 +148,7 @@ export default [
     symbol: "FRAX",
     token: "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
     usageAsCollateralEnabled: true,
-    borrowingEnabled: true,
+    borrowingEnabled: false,
     stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,
