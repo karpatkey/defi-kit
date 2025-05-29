@@ -23,7 +23,7 @@ export default [
     id: "0xa8cb2e35f594b308726b242136f0a8995bf19e97",
     name: "Easy Stake - Powered by SSV",
     description:
-      "3 out of 4 Fault Tolerance  - SSV Operators 491, 770, 1002, 1003 - Solo node runner since April 2023 -  Minority clients Nethermind/Nimbus, Besu/Teku, Erigon/Lodestar, Nethermind/Prysm - MEV enabled - High-end NUC with UPS",
+      "3 out of 4 Fault Tolerance  - SSV Operators 491, 770, 1002, 1003 - Solo node runner since April 2023 -   Nethermind/Nimbus, Reth/Lighthouse, Geth/Prysm, Erigon/Lodestar - MEV enabled - High-end NUC with UPS",
   },
   {
     id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
@@ -108,6 +108,12 @@ export default [
       "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
   },
   {
+    id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
+    name: "Stakesaurus SEA Home Nodes",
+    description:
+      "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community\n\nCentralised infrastructure is bad for both the network and your own ETH (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service!\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws — e.g. Most slashing events are due to institutions over-engineering their setups.\n\nAt Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
+  },
+  {
     id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
     name: "VincentTaglia.eth",
     description:
@@ -131,12 +137,6 @@ export default [
       "01node operarated Vault, 1% commision; read more on  https://staking.01node.com/",
   },
   {
-    id: "0xe2d8f982708ce1e3814c8986cbab624ca926288a",
-    name: "KysenPool Zen 🧘",
-    description:
-      "Unlock the Power of Staking with Our Trusted Blockchain Infrastructure Services!  We are a Stakewise-verified validator.  Operating since 2019 as a qualified and elected validator in over a dozen mainnet chains, we have expanded our staking infrastructure into 3 continents.  This vault is managed by a multisig wallet and limited to 500 validators (16,000 ETH).  Visit our Website @ https://kysenpool.io -or- Web3 Guidebooks @ https://docs.kysenpool.io for more information.\n\nFor institutional ETH holders looking to have your own private Stakewise pool, you can establish a commercial agreement with us to have a custom vault fee, set up operational and reporting procedures, manage jurisdictional requirements, uphold security standards and maintain compliance with regulations.  Please reach out to our business development team at bizdev@kysenpool.io",
-  },
-  {
     id: "0x30c13e93c170885e9969ae2e4ff5f020807e0d74",
     name: "Simply Staking: Premium",
     description:
@@ -155,12 +155,6 @@ export default [
       "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
   },
   {
-    id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
-    name: "Stakesaurus SEA Home Nodes",
-    description:
-      "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community\n\nCentralised infrastructure is bad for both the network and your own ETH (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service!\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws — e.g. Most slashing events are due to institutions over-engineering their setups.\n\nAt Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
-  },
-  {
     id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
     name: "DSRV",
     description:
@@ -171,12 +165,6 @@ export default [
     name: "Big Euler's e-Stake",
     description:
       "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
-  },
-  {
-    id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
-    name: "Peer Ventures",
-    description:
-      "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
     id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
@@ -203,14 +191,15 @@ export default [
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
   {
-    id: "0x2a14b47e551288f3f5e35842970cc2bc78ceb47d",
-    name: "Cryptoknight Vault",
+    id: "0xe2d8f982708ce1e3814c8986cbab624ca926288a",
+    name: "KysenPool Zen 🧘",
     description:
-      "Validator nodes operated by the leading Web3 education community for working professionals in Singapore - Cryptoknight Academy. Limited to 100 validator keys, we work with the Stakesaurus home staking community for diversification of our physical infrastructure and clients. DVTs will be implemented for additional performance and security boosts as we scale up!",
+      "Unlock the Power of Staking with Our Trusted Blockchain Infrastructure Services!  We are a Stakewise-verified validator.  Operating since 2019 as a qualified and elected validator in over a dozen mainnet chains, we have expanded our staking infrastructure into 3 continents.  This vault is managed by a multisig wallet and limited to 500 validators (16,000 ETH).  Visit our Website @ https://kysenpool.io -or- Web3 Guidebooks @ https://docs.kysenpool.io for more information.\n\nFor institutional ETH holders looking to have your own private Stakewise pool, you can establish a commercial agreement with us to have a custom vault fee, set up operational and reporting procedures, manage jurisdictional requirements, uphold security standards and maintain compliance with regulations.  Please reach out to our business development team at bizdev@kysenpool.io",
   },
   {
-    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
-    name: "place holder",
-    description: null,
+    id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
+    name: "Peer Ventures",
+    description:
+      "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
 ] as const

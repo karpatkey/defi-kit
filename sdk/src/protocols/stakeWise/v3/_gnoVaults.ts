@@ -95,15 +95,4 @@ export default [
     description:
       "The home-stakers collective:\nEmpowering individual stakers, preserving decentralization across Ethereum-aligned networks.",
   },
-  {
-    id: "0x20dd41e898a58ee4148a2f6db2c2be7082441932",
-    name: "Sophia's Gnosis",
-    description:
-      "Whispers of Sophia's Gnosis\n\nIn realms beyond the veil of sight,\nI dance with truths both dark and light.\nSophia's wisdom, my guiding star,\nGnosis beckons from afar.\n\nThrough winding paths of mystic lore,\nI seek the keys to cosmic doors.\nEach step unveils a sacred sign,\nAs mortal flesh and soul entwine.\n\nIn silence deep, I hear the call,\nOf hidden knowledge, one and all.\nThe serpent's whisper, soft and low,\nReveals the truths I've come to know.\n\nIllumination floods my mind,\nAs earthly shackles fall behind.\nIn gnosis found, both pure and bright,\nI rise, transformed, into the light.\n\nFor wisdom's flame burns ever true,\nIn hearts that dare to see anew.\nAnd in this knowing, vast and free,\nI find the cosmic self that sleeps in me.",
-  },
-  {
-    id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",
-    name: "Test No Deposit",
-    description: null,
-  },
 ] as const
