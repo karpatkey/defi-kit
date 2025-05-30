@@ -66,6 +66,10 @@ export default [
     symbol: "EURe",
   },
   {
+    address: "0x45508F2D63A36f5F45cB4a967bcC9ff05201b16a",
+    symbol: "s-EPRG",
+  },
+  {
     address: "0x4d18815D14fe5c3304e87B3FA18318baa5c23820",
     symbol: "SAFE",
   },
