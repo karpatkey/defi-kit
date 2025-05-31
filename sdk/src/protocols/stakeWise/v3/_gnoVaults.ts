@@ -95,4 +95,9 @@ export default [
     description:
       "The home-stakers collective:\nEmpowering individual stakers, preserving decentralization across Ethereum-aligned networks.",
   },
+  {
+    id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",
+    name: "Test No Deposit",
+    description: null,
+  },
 ] as const
