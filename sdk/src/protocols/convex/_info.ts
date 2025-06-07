@@ -3032,4 +3032,18 @@ export default [
     cvxDepositToken: "0x55D6d853b7acE76dcE6162e661c9e42c6D18CDbC",
     rewarder: "0xfC84FAA5B9a0293B853a607bdcfA285c6C947830",
   },
+  {
+    name: "ROMEUSDT",
+    id: "460",
+    crvLPToken: "0xF0909Ea2428bBBA587797D6874a3F611B31d907c",
+    cvxDepositToken: "0xc4b4dC15EAC730E1D036dE9a8bb245C332f5ea6D",
+    rewarder: "0x2C12AF9728a818fe54768BCE011394C2fed67d81",
+  },
+  {
+    name: "crv2USDaf",
+    id: "461",
+    crvLPToken: "0x95591348FE9718bE8bfa3afcC9b017D9Ec18A7fa",
+    cvxDepositToken: "0xc13A2bD68A84105C13068A39115CD7E3ebe767D9",
+    rewarder: "0x1A6Fcc741528c8f02942A0BA9997979106175dE3",
+  },
 ] as const

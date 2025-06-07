@@ -191,12 +191,6 @@ export default [
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
   {
-    id: "0xe2d8f982708ce1e3814c8986cbab624ca926288a",
-    name: "KysenPool Zen 🧘",
-    description:
-      "Unlock the Power of Staking with Our Trusted Blockchain Infrastructure Services!  We are a Stakewise-verified validator.  Operating since 2019 as a qualified and elected validator in over a dozen mainnet chains, we have expanded our staking infrastructure into 3 continents.  This vault is managed by a multisig wallet and limited to 500 validators (16,000 ETH).  Visit our Website @ https://kysenpool.io -or- Web3 Guidebooks @ https://docs.kysenpool.io for more information.\n\nFor institutional ETH holders looking to have your own private Stakewise pool, you can establish a commercial agreement with us to have a custom vault fee, set up operational and reporting procedures, manage jurisdictional requirements, uphold security standards and maintain compliance with regulations.  Please reach out to our business development team at bizdev@kysenpool.io",
-  },
-  {
     id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
     name: "Peer Ventures",
     description:
