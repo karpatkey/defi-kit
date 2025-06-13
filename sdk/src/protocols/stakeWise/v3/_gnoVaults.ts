@@ -90,9 +90,8 @@ export default [
     description: "Dappnode vault, fiber gigabit uplink, UPS",
   },
   {
-    id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
-    name: "Stakers Union Vault",
-    description:
-      "The home-stakers collective:\nEmpowering individual stakers, preserving decentralization across Ethereum-aligned networks.",
+    id: "0xe275ce985bebf24f30548ab56c66861a802b5598",
+    name: "CNCPoolVault",
+    description: "Stacked by the Chartreuse Node Crew",
   },
 ] as const
