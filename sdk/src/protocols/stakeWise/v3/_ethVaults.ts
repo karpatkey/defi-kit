@@ -90,10 +90,28 @@ export default [
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
   {
+    id: "0xd21b6bc0a1434aef8cf468a20bf2daefcaf6eab9",
+    name: "Caliber",
+    description:
+      "Caliber is a Web3 Venture Builder empowering founders to build impactful startups. We offer comprehensive support - from funding and engineering to strategy and legal - to drive innovation in consumer apps, DeFi, and infrastructure.",
+  },
+  {
+    id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
+    name: "Stakesaurus SEA Home Nodes",
+    description:
+      "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community\n\nCentralised infrastructure is bad for both the network and your own ETH (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service!\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws — e.g. Most slashing events are due to institutions over-engineering their setups.\n\nAt Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
+  },
+  {
     id: "0xdbdee04c72a02a740b9f26ada9203582c8a99daf",
     name: "Chorus One - Obol DV vault",
     description:
       'This vault represents a distributed validator cluster , using Obol\'s DV technology to run the validators across multiple nodes. As a staker, you can expect higher uptime, decreased slashing risk, and a meaningful contribution to the decentralization of the Ethereum network.\n\nBy staking with an Obol DV, you automatically participate in the Obol Contributions initiative, contributing 1% of staking rewards to the "1% for Decentralization" retroactive funding model. Your contributions will be tracked and recognized by Obol and can be viewed on our staking dApp, OPUS Pool.',
+  },
+  {
+    id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
+    name: "Peer Ventures",
+    description:
+      "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
     id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
@@ -108,12 +126,6 @@ export default [
       "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
   },
   {
-    id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
-    name: "Stakesaurus SEA Home Nodes",
-    description:
-      "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community\n\nCentralised infrastructure is bad for both the network and your own ETH (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service!\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws — e.g. Most slashing events are due to institutions over-engineering their setups.\n\nAt Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
-  },
-  {
     id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
     name: "VincentTaglia.eth",
     description:
@@ -125,16 +137,16 @@ export default [
     description: "Independent solo operator since genesis",
   },
   {
-    id: "0xd21b6bc0a1434aef8cf468a20bf2daefcaf6eab9",
-    name: "Caliber",
-    description:
-      "Caliber is a Web3 Venture Builder empowering founders to build impactful startups. We offer comprehensive support - from funding and engineering to strategy and legal - to drive innovation in consumer apps, DeFi, and infrastructure.",
-  },
-  {
     id: "0x9c29c571847a68a947acec8bacd303e36bc72ec5",
     name: "01node StakeWise V3 Vault",
     description:
       "01node operarated Vault, 1% commision; read more on  https://staking.01node.com/",
+  },
+  {
+    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
+    name: "Big Euler's e-Stake",
+    description:
+      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
   },
   {
     id: "0x30c13e93c170885e9969ae2e4ff5f020807e0d74",
@@ -161,12 +173,6 @@ export default [
       "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
   },
   {
-    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
-    name: "Big Euler's e-Stake",
-    description:
-      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
-  },
-  {
     id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
     name: "Fox & Yaga",
     description:
@@ -189,17 +195,5 @@ export default [
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
-  },
-  {
-    id: "0xe2d8f982708ce1e3814c8986cbab624ca926288a",
-    name: "KysenPool Zen 🧘",
-    description:
-      "Unlock the Power of Staking with Our Trusted Blockchain Infrastructure Services!  We are a Stakewise-verified validator.  Operating since 2019 as a qualified and elected validator in over a dozen mainnet chains, we have expanded our staking infrastructure into 3 continents.  This vault is managed by a multisig wallet and limited to 500 validators (16,000 ETH).  Visit our Website @ https://kysenpool.io -or- Web3 Guidebooks @ https://docs.kysenpool.io for more information.\n\nFor institutional ETH holders looking to have your own private Stakewise pool, you can establish a commercial agreement with us to have a custom vault fee, set up operational and reporting procedures, manage jurisdictional requirements, uphold security standards and maintain compliance with regulations.  Please reach out to our business development team at bizdev@kysenpool.io",
-  },
-  {
-    id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
-    name: "Peer Ventures",
-    description:
-      "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
 ] as const
