@@ -9,6 +9,8 @@ export const getWrappedNativeToken = (chain: Chain): `0x${string}` => {
       return contracts.gnosis.wxdai
     case Chain.arb1:
       return contracts.arbitrumOne.weth
+    case Chain.base:
+      return contracts.base.weth
     default:
       throw new Error("No chainId found")
   }
