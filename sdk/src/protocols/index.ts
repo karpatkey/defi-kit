@@ -82,6 +82,7 @@ export const base = annotateAll(
     aave_v3: aaveV3.base,
     aura: aura.base,
     balancer_v2: balancerV2.base,
+    cowswap: cowSwap.base,
     uniswap_v3: uniswapV3.base,
   },
   "base"

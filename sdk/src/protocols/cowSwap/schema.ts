@@ -23,7 +23,10 @@ export const gno = {
   swap: swapGno,
 }
 
-// Reuse for other contexts if needed
 export const arb1 = {
+  swap: swapEth,
+}
+
+export const base = {
   swap: swapEth,
 }
