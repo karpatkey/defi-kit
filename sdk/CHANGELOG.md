@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.16.0](https://github.com/karpatkey/defi-kit/compare/v2.15.8...v2.16.0) (2025-06-19)
+
+
+### Features
+
+* Add CowSwap to Base ([#440](https://github.com/karpatkey/defi-kit/issues/440)) ([538baa6](https://github.com/karpatkey/defi-kit/commit/538baa63ba0569e51cd9ee61a768f1cedbc5a844))
+
 ## [2.15.8](https://github.com/karpatkey/defi-kit/compare/v2.15.7...v2.15.8) (2025-06-19)
 
 
