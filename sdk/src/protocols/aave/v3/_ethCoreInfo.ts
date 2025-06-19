@@ -507,4 +507,15 @@ export default [
     aTokenAddress: "0x5F9190496e0DFC831C3bd307978de4a245E2F5cD",
     variableDebtTokenAddress: "0x48351fCc9536dA440AE9471220F6dC921b0eB703",
   },
+  {
+    symbol: "FBTC",
+    token: "0xC96dE26018A54D51c097160568752c4E3BD6C364",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: true,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0xcCA43ceF272c30415866914351fdfc3E881bb7c2",
+    variableDebtTokenAddress: "0x4A35FD7F93324Cc48bc12190D3F37493437b1Eff",
+  },
 ] as const

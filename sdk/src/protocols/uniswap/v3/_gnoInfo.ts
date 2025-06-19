@@ -6,20 +6,20 @@ export default [
     symbol: "USDC.e",
   },
   {
-    address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
-    symbol: "WETH",
-  },
-  {
     address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
     symbol: "WXDAI",
   },
   {
-    address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
-    symbol: "USDC",
+    address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+    symbol: "WETH",
   },
   {
     address: "0x1D1498166DDCEeE616a6d99868e1E0677300056f",
     symbol: "xSPACE",
+  },
+  {
+    address: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
+    symbol: "USDC",
   },
   {
     address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
@@ -64,6 +64,10 @@ export default [
   {
     address: "0x420CA0f9B9b604cE0fd9C18EF134C705e5Fa3430",
     symbol: "EURe",
+  },
+  {
+    address: "0x45508F2D63A36f5F45cB4a967bcC9ff05201b16a",
+    symbol: "s-EPRG",
   },
   {
     address: "0x4d18815D14fe5c3304e87B3FA18318baa5c23820",

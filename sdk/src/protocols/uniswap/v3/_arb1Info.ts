@@ -46,55 +46,43 @@ export default [
     symbol: "LINK",
   },
   {
-    address: "0x37a645648dF29205C6261289983FB04ECD70b4B3",
-    symbol: "ANIME",
+    address: "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
+    symbol: "tBTC",
   },
   {
     address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
     symbol: "CRV",
   },
   {
-    address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
-    symbol: "CRYPTO",
-  },
-  {
     address: "0x431402e8b9dE9aa016C743880e04E517074D8cEC",
     symbol: "HEGIC",
-  },
-  {
-    address: "0x6985884C4392D348587B19cb9eAAf157F13271cd",
-    symbol: "ZRO",
-  },
-  {
-    address: "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
-    symbol: "tBTC",
-  },
-  {
-    address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
-    symbol: "AAVE",
   },
   {
     address: "0x81314B07b2f8796a477f1c31c92241ee8D86301D",
     symbol: "AVATAR",
   },
   {
-    address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
-    symbol: "DAI",
+    address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
+    symbol: "AAVE",
   },
   {
     address: "0x5979D7b546E38E414F7E9822514be443A4800529",
     symbol: "wstETH",
   },
   {
-    address: "0x9623063377AD1B27544C965cCd7342f7EA7e88C7",
-    symbol: "GRT",
+    address: "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+    symbol: "ZRO",
   },
   {
-    address: "0xD8369C2EDA18dD6518eABb1F85BD60606dEb39Ec",
-    symbol: "WETH",
+    address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
+    symbol: "CRYPTO",
   },
   {
-    address: "0x092bAaDB7DEf4C3981454dD9c0A0D7FF07bCFc86",
-    symbol: "MOR",
+    address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+    symbol: "DAI",
+  },
+  {
+    address: "0x37a645648dF29205C6261289983FB04ECD70b4B3",
+    symbol: "ANIME",
   },
 ] as const
