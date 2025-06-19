@@ -101,7 +101,7 @@ describe("aaveV2", () => {
 
       await expect(kit.asMember.aaveV2.stkAbptV2.cooldown()).not.toRevert()
 
-      // The 20 days cooldown period must pass in order to withdraw the AAVE.
+      // The 20 days cooldown period must pass in order to withdraw the ABPT V2.
       await advanceTime(Chain.eth, 1730000)
       await expect(
         kit.asMember.aaveV2.stkAbptV2.redeem(wallets.avatar, 1)
@@ -146,8 +146,7 @@ describe("aaveV2", () => {
 
       await expect(kit.asMember.aaveV2.stkGho.cooldown()).not.toRevert()
 
-      // The 20 days cooldown period must pass in order to withdraw the AAVE.
-      await advanceTime(Chain.eth, 1730000)
+      // GHO can be instantly redeemed.
       await expect(
         kit.asMember.aaveV2.stkGho.redeem(wallets.avatar, 1)
       ).not.toRevert()

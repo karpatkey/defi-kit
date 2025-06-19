@@ -24,3 +24,11 @@ export const arb1 = {
     feeAmountBp?: number
   }) => swap(options, Chain.arb1),
 }
+
+export const base = {
+  swap: (options: {
+    sell: (`0x${string}` | "ETH")[]
+    buy?: (`0x${string}` | "ETH")[]
+    feeAmountBp?: number
+  }) => swap(options, Chain.base),
+}
