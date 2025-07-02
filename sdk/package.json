@@ -85,7 +85,7 @@
     "@gnosis-guild/zodiac": "^4.0.3",
     "ethers": "^6.13.4",
     "zod": "^3.22.2",
-    "zodiac-roles-sdk": "^2.21.1"
+    "zodiac-roles-sdk": "^3.0.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.2",

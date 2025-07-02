@@ -1,9 +1,8 @@
 import {
   Permission,
   processPermissions,
-  checkIntegrity,
-  applyTargets,
-  applyAnnotations,
+  targetIntegrity,
+  planApplyRole,
   ChainId,
   PermissionSet,
   Target,
@@ -41,7 +40,7 @@ export const createApply = (chainId: ChainId) => {
   ) {
     const awaitedPermissions = await Promise.all(permissions)
     const { targets, annotations } = processPermissions(awaitedPermissions)
-    checkIntegrity(targets)
+    targetIntegrity(targets)
 
     const role = await fetchRole({ address: options.address, roleKey, chainId })
     if (!role && options.mode === "remove") {
@@ -50,31 +49,20 @@ export const createApply = (chainId: ChainId) => {
       )
     }
 
-    const rolesModCalls = await applyTargets(roleKey, targets, {
-      ...options,
-      chainId,
-      currentTargets: options.currentTargets || role?.targets || [],
-    })
-
-    const posterCalls = await applyAnnotations(roleKey, annotations, {
-      ...options,
-      chainId,
-      currentAnnotations: options.currentAnnotations || role?.annotations || [],
-    })
-
-    const value = "0" as const
-    return [
-      ...rolesModCalls.map((data) => ({
-        to: options.address,
-        data,
-        value,
-      })),
-      ...posterCalls.map((data) => ({
-        to: POSTER_ADDRESS,
-        data,
-        value,
-      })),
-    ]
+    return await planApplyRole(
+      { key: roleKey, targets, annotations },
+      {
+        ...options,
+        chainId,
+        current: {
+          key: roleKey,
+          members: role?.members || [],
+          lastUpdate: role?.lastUpdate || 0,
+          targets: options.currentTargets || role?.targets || [],
+          annotations: options.currentAnnotations || role?.annotations || [],
+        },
+      }
+    )
   }
 }
 
