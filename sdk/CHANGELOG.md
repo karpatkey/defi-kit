@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.17.0](https://github.com/karpatkey/defi-kit/compare/v2.16.0...v2.17.0) (2025-07-02)
+
+
+### Features
+
+* update zodiac-roles-sdk to v3 ([#443](https://github.com/karpatkey/defi-kit/issues/443)) ([9de2f71](https://github.com/karpatkey/defi-kit/commit/9de2f71c03bddae952cce627d0103c0ead4d7e48))
+
 ## [2.16.0](https://github.com/karpatkey/defi-kit/compare/v2.15.8...v2.16.0) (2025-06-19)
 
 
