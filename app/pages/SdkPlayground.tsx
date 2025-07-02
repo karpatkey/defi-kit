@@ -1,6 +1,5 @@
 import Playground from "@/components/Playground"
 import type { NextPage } from "next"
-import dynamic from "next/dynamic"
 
 const SdkPlayground: NextPage = () => {
   return (
