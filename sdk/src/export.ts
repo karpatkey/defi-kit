@@ -21,7 +21,6 @@ export const createExportToSafeTransactionBuilder = (chainId: ChainId) => {
     transactions: {
       to: `0x${string}`
       data: `0x${string}`
-      value: "0"
     }[],
     meta?: {
       name?: string
@@ -42,11 +41,7 @@ export const createExportToSafeTransactionBuilder = (chainId: ChainId) => {
   }
 }
 
-const decode = (transaction: {
-  to: `0x${string}`
-  data: `0x${string}`
-  value: "0"
-}) => {
+const decode = (transaction: { to: `0x${string}`; data: `0x${string}` }) => {
   const abi: readonly JsonFragment[] =
     transaction.to === POSTER_ADDRESS ? posterAbi : rolesAbi
   const iface = new Interface(abi)
@@ -75,7 +70,7 @@ const decode = (transaction: {
 
   return {
     to: transaction.to,
-    value: transaction.value,
+    value: "0",
     contractMethod: {
       inputs: mapInputs(contractMethod.inputs) || [],
       name: contractMethod.name || "",

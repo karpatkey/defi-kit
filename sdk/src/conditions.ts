@@ -1,5 +1,4 @@
 import { c, forAll } from "zodiac-roles-sdk"
-import { ConditionFunction } from "zodiac-roles-sdk/build/cjs/sdk/src/permissions/authoring/conditions/types"
 
 export const oneOf = <T>(values: readonly T[]) => {
   if (values.length === 0) {
