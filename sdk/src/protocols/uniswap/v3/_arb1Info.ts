@@ -50,6 +50,10 @@ export default [
     symbol: "tBTC",
   },
   {
+    address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
+    symbol: "CRYPTO",
+  },
+  {
     address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
     symbol: "CRV",
   },
@@ -70,19 +74,11 @@ export default [
     symbol: "wstETH",
   },
   {
-    address: "0x6985884C4392D348587B19cb9eAAf157F13271cd",
-    symbol: "ZRO",
-  },
-  {
-    address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
-    symbol: "CRYPTO",
-  },
-  {
     address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
     symbol: "DAI",
   },
   {
-    address: "0x37a645648dF29205C6261289983FB04ECD70b4B3",
-    symbol: "ANIME",
+    address: "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+    symbol: "ZRO",
   },
 ] as const
