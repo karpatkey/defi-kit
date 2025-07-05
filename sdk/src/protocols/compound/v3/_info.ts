@@ -45,6 +45,10 @@ export default [
         address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
         symbol: "weETH",
       },
+      {
+        address: "0x15700B564Ca08D9439C58cA5053166E8317aa138",
+        symbol: "deUSD",
+      },
     ],
   },
   {
