@@ -163,7 +163,7 @@ export const contracts = {
     usdt: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     gnoOmnibridge: "0x88ad09518695c6c3712AC10a214bE5109a655671",
-    gnoXdaiBridge: "0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
+    gnoXdaiBridge: "0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0",
     ambEthXdai: "0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e",
     optDaiBridge: "0x10E6593CDda8c58a1d0f14C5164B376352a55f2F",
     optGateway: "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
