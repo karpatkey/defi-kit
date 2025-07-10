@@ -68,6 +68,12 @@ export default [
       "Gnosis Vault by Stakers.space | Fee 10% | Learn more about Gnosis staking at https://stakers.space/gnosis-staking.",
   },
   {
+    id: "0x2397b3fe8049c40270a943b7f714140937c3470b",
+    name: "SEEDNodes",
+    description:
+      "Gnosis Vault 🦉\n\nAt SEEDNode, we promote and strengthen decentralization globally by providing best-in-class node infrastructure and actively participating in multiple networks.\n\nPowered by SEED Org.\nseedlatam.org",
+  },
+  {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
     name: "FCC GNO Vault",
     description: "FCC GNO Liquid Staking Public Vault",
@@ -85,29 +91,19 @@ export default [
       "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
   },
   {
-    id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
-    name: "Wunode",
-    description: "Dappnode vault, fiber gigabit uplink, UPS",
-  },
-  {
     id: "0xe275ce985bebf24f30548ab56c66861a802b5598",
     name: "CNCPoolVault",
     description: "Stacked by the Chartreuse Node Crew",
+  },
+  {
+    id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
+    name: "Wunode",
+    description: "Dappnode vault, fiber gigabit uplink, UPS",
   },
   {
     id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
     name: "Stakers Union Vault",
     description:
       "The home-stakers collective:\nEmpowering individual stakers, preserving decentralization across Ethereum-aligned networks.",
-  },
-  {
-    id: "0x5f07fa4f2f9173d6d9a3dbcf24c0933213cef7b7",
-    name: "Portugal Vault",
-    description: null,
-  },
-  {
-    id: "0x1361e24571c40052de8fd8405a2d3a5545d7a303",
-    name: "Test No Deposit",
-    description: null,
   },
 ] as const
