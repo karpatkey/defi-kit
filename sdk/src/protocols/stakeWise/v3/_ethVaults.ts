@@ -27,9 +27,9 @@ export default [
   },
   {
     id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
-    name: "Blockshard DVT Pioneers Vault",
+    name: "Blockshard DVT Pioneers",
     description:
-      "This vault runs on secure Distributed Validator Technology (DVT), meaning no single server holds a full validator key and built-in fault tolerance ensures resilient performance.\n\nWe currently use SSV and Obol, and will add more DVT solutions as they mature.\n\nAll DVT protocol rewards are shared with stakers, making this a high-yield strategy for ETH holders.\n\n",
+      "The first ship has launched — nearly full and forging ahead into the staking frontier.\n\nThis high-performance pool runs on Distributed Validator Technology (DVT) with no single point of failure and maximum fault tolerance. We use SSV and Obol, and share 90% of protocol rewards with stakers.\n\n⚠️ Capacity capped at 3200 ETH.\n🚀 Follow the Pioneers’ path in our new pool: Blockshard DVT Explorers",
   },
   {
     id: "0x8a93a876912c9f03f88bc9114847cf5b63c89f56",
@@ -134,13 +134,8 @@ export default [
   {
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
     name: "BRAZILPRACIMA",
-    description: "Independent solo operator since genesis",
-  },
-  {
-    id: "0x9c29c571847a68a947acec8bacd303e36bc72ec5",
-    name: "01node StakeWise V3 Vault",
     description:
-      "01node operarated Vault, 1% commision; read more on  https://staking.01node.com/",
+      "Independent solo operator since genesis, running on top of OBOL technology ",
   },
   {
     id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
@@ -185,15 +180,15 @@ export default [
       "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
   },
   {
-    id: "0xcf8357e5d8d90aa3c86eeba3c494947dab28bfaf",
-    name: "GlobalStake",
-    description:
-      "With decades of infrastructure experience, GlobalStake's enterprise-grade Web3 data centers, equipment, and protocols are specifically engineered to secure Proof-of-Stake networks. We believe that if you are going to do something, do it right!",
-  },
-  {
     id: "0xc502a1008cae7ad560294ac987355dfdb287e597",
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
+  },
+  {
+    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
+    name: "Blockshard DVT Explorers",
+    description:
+      "The next ship is ready — unlimited capacity for the next wave of stakers.\n\nBuilt on the same secure DVT foundation as the Pioneers vault, with SSV and Obol powering fault-tolerant performance. 90% of DVT protocol incentives are passed on to stakers.\n\nFor those continuing the journey — with a 5% fee and no deposit cap.",
   },
 ] as const

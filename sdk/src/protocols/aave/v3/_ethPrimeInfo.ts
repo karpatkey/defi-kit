@@ -89,4 +89,15 @@ export default [
     aTokenAddress: "0x56D919E7B25aA42F3F8a4BC77b8982048F2E84B4",
     variableDebtTokenAddress: "0x2c2163f120cf58631368981BC16e90190Bc6C644",
   },
+  {
+    symbol: "tETH",
+    token: "0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: false,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0xce8c60fd8390eFCc3Fc66A3f0bd64BEb969e750E",
+    variableDebtTokenAddress: "0xe7ea6125490ae4594aD9B44D05dFF9F2A4343134",
+  },
 ] as const
