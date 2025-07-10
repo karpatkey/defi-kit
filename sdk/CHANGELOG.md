@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.17.2](https://github.com/karpatkey/defi-kit/compare/v2.17.1...v2.17.2) (2025-07-10)
+
+
+### Bug Fixes
+
+* xDai Bridge Update ([#448](https://github.com/karpatkey/defi-kit/issues/448)) ([84de5b2](https://github.com/karpatkey/defi-kit/commit/84de5b25a3abd819238218f46aadab2b7c5589fe))
+
 ## [2.17.0](https://github.com/karpatkey/defi-kit/compare/v2.16.0...v2.17.0) (2025-07-02)
 
 
