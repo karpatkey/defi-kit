@@ -10,6 +10,10 @@ export default [
     symbol: "USDC",
   },
   {
+    address: "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
+    symbol: "USDC",
+  },
+  {
     address: "0x9A601C5bb360811d96A23689066af316a30c3027",
     symbol: "PIKA",
   },
@@ -18,7 +22,11 @@ export default [
     symbol: "OP",
   },
   {
-    address: "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
-    symbol: "USDC",
+    address: "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
+    symbol: "WLD",
+  },
+  {
+    address: "0x139052115F8B1773cF7DcBA6a553F922a2E54F69",
+    symbol: "(=ↀωↀ=)",
   },
 ] as const
