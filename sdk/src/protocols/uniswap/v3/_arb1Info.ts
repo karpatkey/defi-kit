@@ -58,8 +58,8 @@ export default [
     symbol: "HEGIC",
   },
   {
-    address: "0x81314B07b2f8796a477f1c31c92241ee8D86301D",
-    symbol: "AVATAR",
+    address: "0x5979D7b546E38E414F7E9822514be443A4800529",
+    symbol: "wstETH",
   },
   {
     address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
@@ -70,8 +70,8 @@ export default [
     symbol: "CRV",
   },
   {
-    address: "0x5979D7b546E38E414F7E9822514be443A4800529",
-    symbol: "wstETH",
+    address: "0x81314B07b2f8796a477f1c31c92241ee8D86301D",
+    symbol: "AVATAR",
   },
   {
     address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
@@ -84,5 +84,9 @@ export default [
   {
     address: "0x092bAaDB7DEf4C3981454dD9c0A0D7FF07bCFc86",
     symbol: "MOR",
+  },
+  {
+    address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+    symbol: "UNI",
   },
 ] as const
