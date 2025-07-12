@@ -26,12 +26,6 @@ export default [
       "Chorus One is a trusted staking provider, offering secure and reliable services to individual and institutional stakers alike. Operating on 60+ blockchain networks, we're the choice of over 150,000 delegators worldwide, including leading institutions like BitGo, Ledger, and Hex Trust.\n\nKnown for our enterprise-grade infrastructure and research-driven approach, we've never been slashed and consistently strive to deliver the highest possible yields for our stakers.\n\nStake your GNO with confidence today. Learn more at chorus.one",
   },
   {
-    id: "0x33c346928ed9249cf1d5fc16ae32a8cffa1671ad",
-    name: "Axol.io",
-    description:
-      "Sustainable nodes for gnosis, ran by the LATAM team at Axol.io",
-  },
-  {
     id: "0xe0a342ed4e0f0dbe97c4810534cfcb6550ea017d",
     name: "Stakecat",
     description:
