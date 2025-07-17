@@ -3130,4 +3130,25 @@ export default [
     cvxDepositToken: "0x8C1d373B5970Df341FBd28798Ad39833F99AD8D8",
     rewarder: "0x170F1A70c94851707C405985671d86D36d7f5a74",
   },
+  {
+    name: "uniEfrxE",
+    id: "474",
+    crvLPToken: "0x78C579A2Dcfe10Ae8B3C888A583337Beb4D91733",
+    cvxDepositToken: "0xe77815343c3f913C7E9F07BBE87B5e8506179E93",
+    rewarder: "0x4683d23005D56fD44B67D52b62bD43318983B9C1",
+  },
+  {
+    name: "USD3sUSDS",
+    id: "475",
+    crvLPToken: "0x65b05F6b0472b1f36a2F6d90A14cD21900851609",
+    cvxDepositToken: "0xE1921dF0EC5c1F6733f8e210b5c3569e19bAdb37",
+    rewarder: "0x49d0d76d64f55B41254B39a2115A25FC06fE74C3",
+  },
+  {
+    name: "ZCHFUSDT",
+    id: "476",
+    crvLPToken: "0x6031bDd613E6A2F587b244e078053Fe7BbaBE3B5",
+    cvxDepositToken: "0xDCd6d9377De8A8bF4c5Cf051Cf660c2422E7eaab",
+    rewarder: "0x0D2c64161135740b879d7ba30041f78D4723c7ad",
+  },
 ] as const

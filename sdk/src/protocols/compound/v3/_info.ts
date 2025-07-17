@@ -49,6 +49,10 @@ export default [
         address: "0x15700B564Ca08D9439C58cA5053166E8317aa138",
         symbol: "deUSD",
       },
+      {
+        address: "0x5C5b196aBE0d54485975D1Ec29617D42D9198326",
+        symbol: "sdeUSD",
+      },
     ],
   },
   {
@@ -111,6 +115,14 @@ export default [
         address: "0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8",
         symbol: "tETH",
       },
+      {
+        address: "0xD9A442856C234a39a81a089C06451EBAa4306a72",
+        symbol: "pufETH",
+      },
+      {
+        address: "0xDcEe70654261AF21C44c093C300eD3Bb97b78192",
+        symbol: "wOETH",
+      },
     ],
   },
   {
@@ -168,6 +180,14 @@ export default [
       {
         address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
         symbol: "weETH",
+      },
+      {
+        address: "0x5C5b196aBE0d54485975D1Ec29617D42D9198326",
+        symbol: "sdeUSD",
+      },
+      {
+        address: "0x15700B564Ca08D9439C58cA5053166E8317aa138",
+        symbol: "deUSD",
       },
     ],
   },
@@ -232,6 +252,10 @@ export default [
       {
         address: "0x56072C95FAA701256059aa122697B133aDEd9279",
         symbol: "SKY",
+      },
+      {
+        address: "0x15700B564Ca08D9439C58cA5053166E8317aa138",
+        symbol: "deUSD",
       },
     ],
   },
