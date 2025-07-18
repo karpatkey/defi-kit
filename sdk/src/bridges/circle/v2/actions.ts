@@ -105,7 +105,7 @@ export const receive = (
           // skip the first 12 bytes of the address with 0's
           // Source Circle Token Messenger
           c.bitmask({
-            shift: 44 + 12, // 56 bytes = 12 bytes (version + source domain + destination domain) + 32 bytes (nonce) + 12 bytes of 0's 
+            shift: 44 + 12, // 56 bytes = 12 bytes (version + source domain + destination domain) + 32 bytes (nonce) + 12 bytes of 0's
             mask: "0xffffffffffffffffffff",
             value: sourceTokenMessenger.slice(0, 22),
           }),
