@@ -66,6 +66,10 @@ export const contracts = {
       tokenMessenger: "0xBd3fa81B58Ba92a82136038B25aDec7066af3155",
       messageTransmitter: "0x0a992d191DEeC32aFe36203Ad87D7d289a738F81",
     },
+    circleV2: {
+      tokenMessenger: "0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d",
+      messageTransmitter: "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64",
+    },
     compoundV2: {
       comptroller: "0x3d9819210a31b4961b30ef54be2aed79b9c9cd3b",
       maximillion: "0xf859A1AD94BcF445A406B892eF0d3082f4174088",
@@ -252,6 +256,10 @@ export const contracts = {
       tokenMessenger: "0x19330d10D9Cc8751218eaf51E8885D058642E08A",
       messageTransmitter: "0xC30362313FBBA5cf9163F0bb16a0e01f01A896ca",
     },
+    circleV2: {
+      tokenMessenger: "0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d",
+      messageTransmitter: "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64",
+    },
     compoundV3: {
       cUsdcV3: "0x9c4ec768c28520B50860ea7a15bd7213a9fF58bf",
       cometRewards: "0x88730d254A2f7e6AC8388c3198aFd694bA9f7fae",
@@ -293,6 +301,10 @@ export const contracts = {
       tokenMessenger: "0x2B4069517957735bE00ceE0fadAE88a26365528f",
       messageTransmitter: "0x4D41f22c5a0e5c74090899E5a8Fb597a8842b3e8",
     },
+    circleV2: {
+      tokenMessenger: "0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d",
+      messageTransmitter: "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64",
+    },
     compoundV3: {
       cUsdcV3: "0x2e44e174f7D53F0212823acC11C01A11d58c5bCB",
       cometRewards: "0x443EA0340cb75a160F31A440722dec7b5bc3C2E9",
@@ -331,6 +343,10 @@ export const contracts = {
     circleV1: {
       tokenMessenger: "0x1682Ae6375C4E4A97e4B583BC394c861A46D8962",
       messageTransmitter: "0xAD09780d193884d503182aD4588450C416D6F9D4",
+    },
+    circleV2: {
+      tokenMessenger: "0x28b5a0e9C621a5BadaA536219b3a228C8168cf5d",
+      messageTransmitter: "0x81D40F21F12A8F0E3252Bccb954D722d4c464B64",
     },
     compoundV3: {
       cUsdcV3: "0xb125E6687d4313864e53df431d5425969c15Eb2F",
