@@ -14,6 +14,11 @@ export default withNextra({
       "utf-8-validate": "commonjs utf-8-validate",
       bufferutil: "commonjs bufferutil",
     })
+
+    if (!dev) {
+      config.optimization.minimize = false
+    }
+
     return config
   },
   async headers() {
