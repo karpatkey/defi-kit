@@ -26,6 +26,10 @@ export default [
     symbol: "WBTC",
   },
   {
+    address: "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
+    symbol: "wstETH",
+  },
+  {
     address: "0x139052115F8B1773cF7DcBA6a553F922a2E54F69",
     symbol: "(=ↀωↀ=)",
   },
