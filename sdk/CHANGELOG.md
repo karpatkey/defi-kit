@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.18.0](https://github.com/karpatkey/defi-kit/compare/v2.17.3...v2.18.0) (2025-07-18)
+
+
+### Features
+
+* Circle CCTP v2 ([#453](https://github.com/karpatkey/defi-kit/issues/453)) ([6e153b1](https://github.com/karpatkey/defi-kit/commit/6e153b1ce95bf94682d5e4044a040163942dec66))
+
 ## [2.17.3](https://github.com/karpatkey/defi-kit/compare/v2.17.2...v2.17.3) (2025-07-17)
 
 
