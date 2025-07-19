@@ -30,12 +30,12 @@ export default [
     symbol: "USDT",
   },
   {
-    address: "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
-    symbol: "PENDLE",
-  },
-  {
     address: "0x912CE59144191C1204E64559FE8253a0e49E6548",
     symbol: "ARB",
+  },
+  {
+    address: "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
+    symbol: "PENDLE",
   },
   {
     address: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
@@ -50,12 +50,16 @@ export default [
     symbol: "tBTC",
   },
   {
+    address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
+    symbol: "CRYPTO",
+  },
+  {
     address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
     symbol: "AAVE",
   },
   {
-    address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
-    symbol: "CRYPTO",
+    address: "0x5979D7b546E38E414F7E9822514be443A4800529",
+    symbol: "wstETH",
   },
   {
     address: "0x431402e8b9dE9aa016C743880e04E517074D8cEC",
@@ -78,12 +82,12 @@ export default [
     symbol: "ZRO",
   },
   {
-    address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
-    symbol: "UNI",
-  },
-  {
     address: "0xe80772Eaf6e2E18B651F160Bc9158b2A5caFCA65",
     symbol: "USD+",
+  },
+  {
+    address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+    symbol: "UNI",
   },
   {
     address: "0x092bAaDB7DEf4C3981454dD9c0A0D7FF07bCFc86",
