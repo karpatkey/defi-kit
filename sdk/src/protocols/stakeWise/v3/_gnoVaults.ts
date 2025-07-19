@@ -26,6 +26,12 @@ export default [
       "Chorus One is a trusted staking provider, offering secure and reliable services to individual and institutional stakers alike. Operating on 60+ blockchain networks, we're the choice of over 150,000 delegators worldwide, including leading institutions like BitGo, Ledger, and Hex Trust.\n\nKnown for our enterprise-grade infrastructure and research-driven approach, we've never been slashed and consistently strive to deliver the highest possible yields for our stakers.\n\nStake your GNO with confidence today. Learn more at chorus.one",
   },
   {
+    id: "0x33c346928ed9249cf1d5fc16ae32a8cffa1671ad",
+    name: "Axol.io",
+    description:
+      "Sustainable nodes for gnosis, ran by the LATAM team at Axol.io",
+  },
+  {
     id: "0xe0a342ed4e0f0dbe97c4810534cfcb6550ea017d",
     name: "Stakecat",
     description:
@@ -78,9 +84,21 @@ export default [
     description: "Stacked by the Chartreuse Node Crew",
   },
   {
+    id: "0x0f6f727421ed6229fcac821147ae104c9326229e",
+    name: "Dappnode vault",
+    description:
+      "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
+  },
+  {
     id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
     name: "Wunode",
     description: "Dappnode vault, fiber gigabit uplink, UPS",
+  },
+  {
+    id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
+    name: "Stakers Union Vault",
+    description:
+      "The home-stakers collective:\nEmpowering individual stakers, preserving decentralization across Ethereum-aligned networks.",
   },
   {
     id: "0x2397b3fe8049c40270a943b7f714140937c3470b",
