@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.19.0](https://github.com/karpatkey/defi-kit/compare/v2.18.0...v2.19.0) (2025-07-21)
+
+
+### Features
+
+* npm release ([#461](https://github.com/karpatkey/defi-kit/issues/461)) ([7a47b59](https://github.com/karpatkey/defi-kit/commit/7a47b597416a43866b9325e05143c1cd699a448a))
+
 ## [2.18.0](https://github.com/karpatkey/defi-kit/compare/v2.17.3...v2.18.0) (2025-07-18)
 
 
