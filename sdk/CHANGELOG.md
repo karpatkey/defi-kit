@@ -1,12 +1,5 @@
 # Changelog
 
-## [2.19.0](https://github.com/karpatkey/defi-kit/compare/v2.18.0...v2.19.0) (2025-07-18)
-
-
-### Features
-
-* chore: fix max call stack size exceeded error by disabling minimization ([#455](https://github.com/karpatkey/defi-kit/issues/455)) ([209ff9f](https://github.com/karpatkey/defi-kit/commit/209ff9ff18319f6a8a537549eda28c9237484c05))
-
 ## [2.18.0](https://github.com/karpatkey/defi-kit/compare/v2.17.3...v2.18.0) (2025-07-18)
 
 
