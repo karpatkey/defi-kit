@@ -26,6 +26,11 @@ export default [
       "Chorus One is a trusted staking provider, offering secure and reliable services to individual and institutional stakers alike. Operating on 60+ blockchain networks, we're the choice of over 150,000 delegators worldwide, including leading institutions like BitGo, Ledger, and Hex Trust.\n\nKnown for our enterprise-grade infrastructure and research-driven approach, we've never been slashed and consistently strive to deliver the highest possible yields for our stakers.\n\nStake your GNO with confidence today. Learn more at chorus.one",
   },
   {
+    id: "0xf7ee331fe545d25c91977161eed2957c5cffd313",
+    name: "Ten Percent Fee",
+    description: "The 10% Fee Vault",
+  },
+  {
     id: "0x33c346928ed9249cf1d5fc16ae32a8cffa1671ad",
     name: "Axol.io",
     description:
@@ -54,11 +59,6 @@ export default [
     name: "Stakesaurus SEA Home Nodes",
     description:
       "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community. Centralised infrastructure is bad for both the network and your own GNO (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst. Our solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service! At Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
-  },
-  {
-    id: "0xf7ee331fe545d25c91977161eed2957c5cffd313",
-    name: "Ten Percent Fee",
-    description: "The 10% Fee Vault",
   },
   {
     id: "0x27fbf9cc8a4dbf438aecb32f278e287f157a267b",
