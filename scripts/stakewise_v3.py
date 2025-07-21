@@ -5,7 +5,7 @@ from lib.dump import dump
 def subgraph_query_vaults(blockchain):
     result = []  # To store all fetched vaults
     
-    skip = 0
+    skip = 0 # Start at the beginning
     batch_size = 1000  # Adjust as needed (API usually limits this to 1000 or fewer)
 
     if blockchain == Chain.ETHEREUM:
