@@ -26,22 +26,33 @@ export default [
       "Chorus One is a trusted staking provider, offering secure and reliable services to individual and institutional stakers alike. Operating on 60+ blockchain networks, we're the choice of over 150,000 delegators worldwide, including leading institutions like BitGo, Ledger, and Hex Trust.\n\nKnown for our enterprise-grade infrastructure and research-driven approach, we've never been slashed and consistently strive to deliver the highest possible yields for our stakers.\n\nStake your GNO with confidence today. Learn more at chorus.one",
   },
   {
+    id: "0xf7ee331fe545d25c91977161eed2957c5cffd313",
+    name: "Ten Percent Fee",
+    description: "The 10% Fee Vault",
+  },
+  {
+    id: "0x33c346928ed9249cf1d5fc16ae32a8cffa1671ad",
+    name: "Axol.io",
+    description:
+      "Sustainable nodes for gnosis, ran by the LATAM team at Axol.io",
+  },
+  {
     id: "0xe0a342ed4e0f0dbe97c4810534cfcb6550ea017d",
     name: "Stakecat",
     description:
       "Node operators, securing and decentralizing Ethereum |  AVS operator: http://avs.stakecat.space\n \nWe provide greater decentralization for networks with our own infrastructure for validators and high availability to compete with centralized data center performance.\n\nmore about Stakecat here: https://www.stakecat.space/",
   },
   {
-    id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
-    name: "H2O Nodes",
-    description:
-      "Help decentralize Ethereum by staking with us - we run minority clients (usually Nimbus + Nethermind) running on bare metal servers in minority data centers. \n\nRead more at www.h2o-nodes.com\n\nHappy staking! ",
-  },
-  {
     id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
     name: "IP Stake",
     description:
       "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
+  },
+  {
+    id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
+    name: "H2O Nodes",
+    description:
+      "Help decentralize Ethereum by staking with us - we run minority clients (usually Nimbus + Nethermind) running on bare metal servers in minority data centers. \n\nRead more at www.h2o-nodes.com\n\nHappy staking! ",
   },
   {
     id: "0x3cb4692177525db38d983da0445d4eb25c3826de",
@@ -78,13 +89,20 @@ export default [
     description: "Stacked by the Chartreuse Node Crew",
   },
   {
+    id: "0x0f6f727421ed6229fcac821147ae104c9326229e",
+    name: "Dappnode vault",
+    description:
+      "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
+  },
+  {
     id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
     name: "Wunode",
     description: "Dappnode vault, fiber gigabit uplink, UPS",
   },
   {
-    id: "0x2397b3fe8049c40270a943b7f714140937c3470b",
-    name: "SEEDNodes Test",
-    description: "\n",
+    id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
+    name: "Stakers Union Vault",
+    description:
+      "The home-stakers collective:\nEmpowering individual stakers, preserving decentralization across Ethereum-aligned networks.",
   },
 ] as const

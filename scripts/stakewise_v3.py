@@ -9,9 +9,9 @@ def subgraph_query_vaults(blockchain):
     batch_size = 1000  # Adjust as needed (API usually limits this to 1000 or fewer)
 
     if blockchain == Chain.ETHEREUM:
-        subgraph_url = "https://mainnet-graph.stakewise.io/subgraphs/name/stakewise/stakewise"
+        subgraph_url = "https://graphs.stakewise.io/mainnet/subgraphs/name/stakewise/prod/"
     elif blockchain == Chain.GNOSIS:
-        subgraph_url = "https://gnosis-graph.stakewise.io/subgraphs/name/stakewise/stakewise"
+        subgraph_url = "https://graphs.stakewise.io/gnosis/subgraphs/name/stakewise/prod/"
 
     while True:
         # GraphQL query with pagination
