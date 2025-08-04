@@ -97,6 +97,7 @@ export const contracts = {
       orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
       gpv2VaultRelayer: "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110",
       vCow: "0xD057B63f5E69CF1B929b356b579Cba08D7688048",
+      composableCow: "0xfdaFc9d1902f4e0b84f65F49f244b32b31013b74",
     },
     curve: {
       crvMinter: "0xd061D61a4d941c39E5453435B6345Dc261C2fcE0",
@@ -106,6 +107,10 @@ export const contracts = {
       stEth: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
       wstEth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       unstEth: "0x889edC2eDab5f40e902b864aD4d7AdE8E412F9B1",
+    },
+    safe: {
+      gnosisSafe: "0xd9Db270c1B5E3Bd161E8c8503c55cEABeE709552", // Implementation
+      extensibleFallbackHandler: "0x2f55e8b20D0B9FEFA187AA7d00B6Cbe563605bF5",
     },
     sky: {
       dsProxy: "0xD758500ddEc05172aaA035911387C8E0e789CF6a", // GnosisDAO DSProxy

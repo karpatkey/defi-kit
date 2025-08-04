@@ -7,6 +7,8 @@ const createSwapSchema = (tokenType: "ETH" | "XDAI") => {
     sell: zx.address().or(z.literal(tokenType)).array(),
     buy: zx.address().or(z.literal(tokenType)).array().optional(),
     feeAmountBp: z.number().int().min(0).max(10000).optional(),
+    twap: z.boolean().optional(),
+    recipient: zx.address().optional(),
   })
 }
 
