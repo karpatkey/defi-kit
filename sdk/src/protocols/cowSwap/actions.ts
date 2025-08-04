@@ -4,6 +4,7 @@ import { allowErc20Approve, oneOf } from "../../conditions"
 import { c, Permission } from "zodiac-roles-sdk"
 import { getWrappedNativeToken } from "./utils"
 import { contracts } from "../../../eth-sdk/config"
+import { ZeroAddress } from "ethers"
 
 const gpV2VaultRelayer = "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110"
 const eAddress = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
@@ -100,7 +101,7 @@ export const swap = async (
             [
               c.or(...(updatedSell as [string, string, ...string[]])),
               c.or(...(updatedBuy as [string, string, ...string[]])),
-              c.avatar,
+              c.or(c.avatar, ZeroAddress),
             ],
             ["address", "address", "address"]
           ),
