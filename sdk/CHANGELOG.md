@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.20.0](https://github.com/karpatkey/defi-kit/compare/v2.19.2...v2.20.0) (2025-08-05)
+
+
+### Features
+
+* CoW TWAP Orders ([#465](https://github.com/karpatkey/defi-kit/issues/465)) ([2aac11f](https://github.com/karpatkey/defi-kit/commit/2aac11f02238f25e90114fd70db4f16cf3dab804))
+
 ## [2.19.2](https://github.com/karpatkey/defi-kit/compare/v2.19.1...v2.19.2) (2025-08-05)
 
 
