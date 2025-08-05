@@ -1,6 +1,6 @@
 {
   "name": "defi-kit",
-  "version": "2.19.1",
+  "version": "2.19.2",
   "description": "Permissions for Zodiac Roles covering interactions with DeFi protocols",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

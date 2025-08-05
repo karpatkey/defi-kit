@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.19.2](https://github.com/karpatkey/defi-kit/compare/v2.19.1...v2.19.2) (2025-08-05)
+
+
+### Bug Fixes
+
+* protocol updates [nightly] ([#464](https://github.com/karpatkey/defi-kit/issues/464)) ([ad59f4d](https://github.com/karpatkey/defi-kit/commit/ad59f4d222db5d89a8049cfdd9d00355f1abb8a7))
+
 ## [2.19.1](https://github.com/karpatkey/defi-kit/compare/v2.19.0...v2.19.1) (2025-07-21)
 
 
