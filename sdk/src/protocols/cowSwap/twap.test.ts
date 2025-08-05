@@ -14,7 +14,7 @@ describe("cowSwap", () => {
           sell: [contracts.mainnet.weth],
           buy: [contracts.mainnet.usdc],
           twap: true,
-          recipient: wallets.avatar as `0x${string}`,
+          receiver: wallets.avatar as `0x${string}`,
         })
       )
     })

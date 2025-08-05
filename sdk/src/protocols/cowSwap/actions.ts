@@ -20,11 +20,11 @@ export const swap = async (
     buy?: (`0x${string}` | "ETH" | "XDAI")[]
     feeAmountBp?: number
     twap?: boolean
-    recipient?: `0x${string}`
+    receiver?: `0x${string}`
   },
   chain: Chain
 ) => {
-  const { sell, buy, feeAmountBp, twap = false, recipient } = options
+  const { sell, buy, feeAmountBp, twap = false, receiver } = options
   const permissions: Permission[] = []
 
   if (sell.length === 0) {
@@ -45,9 +45,9 @@ export const swap = async (
     }
   }
   if (twap) {
-    if (recipient === undefined) {
+    if (receiver === undefined) {
       throw new Error(
-        "If `twap` is `true` then `recipient` must be a valid address."
+        "If `twap` is `true` then `receiver` must be a valid address."
       )
     }
   }
@@ -84,14 +84,14 @@ export const swap = async (
         ...allow.mainnet.safe.gnosisSafe.setFallbackHandler(
           contracts.mainnet.safe.extensibleFallbackHandler
         ),
-        targetAddress: recipient as `0x${string}`,
+        targetAddress: receiver as `0x${string}`,
       },
       {
         ...allow.mainnet.safe.extensibleFallbackHandler.setDomainVerifier(
           domainSeparator,
           contracts.mainnet.cowSwap.composableCow
         ),
-        targetAddress: recipient as `0x${string}`,
+        targetAddress: receiver as `0x${string}`,
       },
       allow.mainnet.cowSwap.composableCow.createWithContext(
         {
