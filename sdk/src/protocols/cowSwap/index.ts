@@ -6,6 +6,8 @@ export const eth = {
     sell: (`0x${string}` | "ETH")[]
     buy?: (`0x${string}` | "ETH")[]
     feeAmountBp?: number
+    twap?: boolean
+    receiver?: `0x${string}`
   }) => swap(options, Chain.eth),
 }
 
@@ -14,6 +16,8 @@ export const gno = {
     sell: (`0x${string}` | "XDAI")[]
     buy?: (`0x${string}` | "XDAI")[]
     feeAmountBp?: number
+    twap?: boolean
+    receiver?: `0x${string}`
   }) => swap(options, Chain.gno),
 }
 
@@ -22,6 +26,8 @@ export const arb1 = {
     sell: (`0x${string}` | "ETH")[]
     buy?: (`0x${string}` | "ETH")[]
     feeAmountBp?: number
+    twap?: boolean
+    receiver?: `0x${string}`
   }) => swap(options, Chain.arb1),
 }
 
@@ -30,5 +36,7 @@ export const base = {
     sell: (`0x${string}` | "ETH")[]
     buy?: (`0x${string}` | "ETH")[]
     feeAmountBp?: number
+    twap?: boolean
+    receiver?: `0x${string}`
   }) => swap(options, Chain.base),
 }
