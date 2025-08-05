@@ -540,4 +540,15 @@ export default [
     aTokenAddress: "0x5f4a0873a3A02f7C0CB0e13a1d4362a1AD90e751",
     variableDebtTokenAddress: "0xc9AD8Dd111e6384128146467aAf92B81EC422848",
   },
+  {
+    symbol: "PT-USDe-25SEP2025",
+    token: "0xBC6736d346a5eBC0dEbc997397912CD9b8FAe10a",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: false,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x38A5357Ce55c81add62aBc84Fb32981e2626ADEf",
+    variableDebtTokenAddress: "0x0D8486E1CAbf3C9407B3DdA0cfc4d9C3101fB683",
+  },
 ] as const

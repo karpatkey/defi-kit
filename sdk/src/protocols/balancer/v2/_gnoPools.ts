@@ -577,6 +577,23 @@ export default [
     ],
   },
   {
+    bpt: "0x2FD74Fb2b2B79dB5F7E53061CA420087a29570Fc",
+    id: "0x2fd74fb2b2b79db5f7e53061ca420087a29570fc0002000000000000000002dd",
+    name: "GNOsDAI",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
+      },
+    ],
+  },
+  {
     bpt: "0x31A43002E60D4B66084f4cC4E68585358c362b44",
     id: "0x31a43002e60d4b66084f4cc4e68585358c362b440002000000000000000000ce",
     name: "50bNVDA-50sDAI",

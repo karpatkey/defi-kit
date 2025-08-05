@@ -96,6 +96,12 @@ export default [
       "Caliber is a Web3 Venture Builder empowering founders to build impactful startups. We offer comprehensive support - from funding and engineering to strategy and legal - to drive innovation in consumer apps, DeFi, and infrastructure.",
   },
   {
+    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
+    name: "Blockshard DVT Explorers",
+    description:
+      "The next ship is ready — unlimited capacity for the next wave of stakers.\n\nBuilt on the same secure DVT foundation as the Pioneers vault, with SSV and Obol powering fault-tolerant performance. 90% of DVT protocol incentives are passed on to stakers.\n\nFor those continuing the journey — with a 5% fee and no deposit cap.",
+  },
+  {
     id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
     name: "Stakesaurus SEA Home Nodes",
     description:
@@ -184,11 +190,5 @@ export default [
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
-  },
-  {
-    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
-    name: "Blockshard DVT Explorers",
-    description:
-      "The next ship is ready — unlimited capacity for the next wave of stakers.\n\nBuilt on the same secure DVT foundation as the Pioneers vault, with SSV and Obol powering fault-tolerant performance. 90% of DVT protocol incentives are passed on to stakers.\n\nFor those continuing the journey — with a 5% fee and no deposit cap.",
   },
 ] as const
