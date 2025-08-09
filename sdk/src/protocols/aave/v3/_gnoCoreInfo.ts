@@ -89,4 +89,15 @@ export default [
     aTokenAddress: "0xC0333cb85B59a788d8C7CAe5e1Fd6E229A3E5a65",
     variableDebtTokenAddress: "0x37B9Ad6b5DC8Ad977AD716e92F49e9D200e58431",
   },
+  {
+    symbol: "GHO",
+    token: "0xfc421aD3C883Bf9E7C4f42dE845C4e4405799e73",
+    usageAsCollateralEnabled: false,
+    borrowingEnabled: true,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x3FdCeC11B4f15C79d483Aedc56F37D302837Cf4d",
+    variableDebtTokenAddress: "0x2766EEFE0311Bf7421cC30155b03d210BCE30dF8",
+  },
 ] as const

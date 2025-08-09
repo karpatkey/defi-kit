@@ -94,12 +94,6 @@ export default [
     description: "Dappnode vault, fiber gigabit uplink, UPS",
   },
   {
-    id: "0x27b7cb7bc376c0798651238ce5294f70b283bc61",
-    name: "Blockscape Gnosis Vault ",
-    description:
-      "Institutional-grade staking for everyone made by Blockscape in Switzerland. As staker, you benefit from a low commission fee of just 12.5%, while still enjoying the same levels of security and reliability. Our unique setup provides highest standards in security and reliability. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world. Moreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network or visit https://blockscape.network for more information.",
-  },
-  {
     id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
     name: "Stakers Union Vault",
     description:

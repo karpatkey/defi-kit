@@ -129,4 +129,16 @@ export default [
     address: "0xf084b8F984912f0c62179Ca7EE998BeC90757B53",
     symbol: "s-crc-lx",
   },
+  {
+    address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
+    symbol: "osGNO",
+  },
+  {
+    address: "0xfc421aD3C883Bf9E7C4f42dE845C4e4405799e73",
+    symbol: "GHO",
+  },
+  {
+    address: "0xFECB3F7c54E2CAAE9dC6Ac9060A822D47E053760",
+    symbol: "BRLA",
+  },
 ] as const

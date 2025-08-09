@@ -3207,4 +3207,25 @@ export default [
     cvxDepositToken: "0xa15bF97b29fB2b5Ae43c1A83E78cd7A089Dd1eA3",
     rewarder: "0xDc717a66D6fb22251d9E6E4e45eFDAD521aE12F0",
   },
+  {
+    name: "VSPWETH",
+    id: "485",
+    crvLPToken: "0x20F858D88124857274994516eEaC7720fe39B8ea",
+    cvxDepositToken: "0x224407E8E3432bc8701e752050605cbC5557e34d",
+    rewarder: "0x8825A44b055FAEDa01Ba917C7eBB57ae94f53E42",
+  },
+  {
+    name: "uniBTCfrx",
+    id: "486",
+    crvLPToken: "0x7780884A24E4d84a6Fbb5EFF5aBa8B944d5cA52C",
+    cvxDepositToken: "0x8F1224d008415952f8A15506C824075b9346c20F",
+    rewarder: "0xA12d64FfC48F01c5dAe709Db5130497c99A3149E",
+  },
+  {
+    name: "ebUSDUSDC",
+    id: "487",
+    crvLPToken: "0xD25f2cC6819FBD34641712122397eFbaf9b6A6e2",
+    cvxDepositToken: "0x0167850fFeAC15501781E7Cb45dD7208bF60b386",
+    rewarder: "0x3eF636075372e093c48Bb32AEaEEfCB17367A9Ab",
+  },
 ] as const
