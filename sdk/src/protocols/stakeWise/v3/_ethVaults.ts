@@ -44,16 +44,16 @@ export default [
       "onchainaustria is the first Austrian DAO-directed association (𓃵 Airdrop incoming!). We operate as a node operator (ETH, STRK, UNI) with low fees and a highly redundant infrastructure.\n\nWe are a thriving Austrian crypto community, dedicated to enabling our members to participate in and support the decentralization of DLT networks.\n\nJoin us and become part of a collaborative environment driving the future of decentralization!\n\n🔗 onchainaustria.at",
   },
   {
-    id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
-    name: "Allnodes",
-    description:
-      "Reliable non-custodial Validator run by the industry leader - Allnodes",
-  },
-  {
     id: "0x8216e50b1dd76faeb1ff4cafaba6790ea71910df",
     name: "Data Nexus",
     description:
       "Independent Ethereum validators with owned hardware, MEV boost, and minority clients for robust decentralization. Empowering the Ethereum network with integrity.",
+  },
+  {
+    id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
+    name: "Allnodes",
+    description:
+      "Reliable non-custodial Validator run by the industry leader - Allnodes",
   },
   {
     id: "0x99510bfc5d420cd3c41458f4692b1c3321908734",
