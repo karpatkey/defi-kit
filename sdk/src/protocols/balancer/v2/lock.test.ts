@@ -1,11 +1,5 @@
 import { eth } from "."
-import {
-  bal,
-  b80Bal20WethPid,
-  bbaUsdV1,
-  bbaUsdV2,
-  bbaUsdV3,
-} from "./actions"
+import { bal, b80Bal20WethPid, bbaUsdV1, bbaUsdV2, bbaUsdV3 } from "./actions"
 import { contracts } from "../../../../eth-sdk/config"
 import { Status } from "../../../../test/types"
 import { wallets } from "../../../../test/wallets"
