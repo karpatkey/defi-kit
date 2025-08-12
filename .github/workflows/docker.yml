@@ -6,6 +6,9 @@ on:
       - main
     tags:
       - '**' # Trigger on tag
+  release:
+    types: [published]
+
   workflow_dispatch:
 
 concurrency:
@@ -20,6 +23,7 @@ env:
   DOCKER_PASSWORD: ${{ secrets.GCP_REG_PASSWORD }}
   DOCKER_IMAGE_NAME: ${{ secrets.GCP_REG_URL }}/${{ github.event.repository.name }}
   GITHUB_PAT: ${{ secrets.GIT_PAT }}
+  KPK_DEVOPS_PAT: ${{ secrets.KPK_DEVOPS_PAT }}
   DOCKERFILE: './Dockerfile'
 
 
@@ -33,3 +37,7 @@ jobs:
       
       - name: Build Docker image using composite action
         uses: karpatkey/build-actions/build-docker-image@main
+      
+      - name: deploy prod release
+        if: github.event_name == 'release' && github.event.action == 'published'
+        uses: karpatkey/build-actions/release-prod@main
