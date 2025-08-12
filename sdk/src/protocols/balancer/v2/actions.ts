@@ -49,27 +49,27 @@ export const stake = (chain: Chain, pool: Pool) => {
   switch (chain) {
     case Chain.eth:
       minter = contracts.mainnet.balancerV2.minter as `0x${string}`
-      relayer = contracts.mainnet.balancerV2.relayer as `0x${string}`
+      // relayer = contracts.mainnet.balancerV2.relayer as `0x${string}`
       break
 
     case Chain.gno:
       minter = contracts.gnosis.balancerV2.minter as `0x${string}`
-      relayer = contracts.gnosis.balancerV2.relayer as `0x${string}`
+      // relayer = contracts.gnosis.balancerV2.relayer as `0x${string}`
       break
 
     case Chain.arb1:
       minter = contracts.arbitrumOne.balancerV2.minter as `0x${string}`
-      relayer = contracts.arbitrumOne.balancerV2.relayer as `0x${string}`
+      // relayer = contracts.arbitrumOne.balancerV2.relayer as `0x${string}`
       break
 
     case Chain.oeth:
       minter = contracts.optimism.balancerV2.minter as `0x${string}`
-      relayer = contracts.optimism.balancerV2.relayer as `0x${string}`
+      // relayer = contracts.optimism.balancerV2.relayer as `0x${string}`
       break
 
     case Chain.base:
       minter = contracts.base.balancerV2.minter as `0x${string}`
-      relayer = contracts.base.balancerV2.relayer as `0x${string}`
+      // relayer = contracts.base.balancerV2.relayer as `0x${string}`
       break
 
     default:
@@ -96,30 +96,30 @@ export const stake = (chain: Chain, pool: Pool) => {
         targetAddress: minter,
       },
 
-      // New permissions for Unstaking and Claiming
-      allow.mainnet.balancerV2.vault.setRelayerApproval(c.avatar, relayer),
-      {
-        ...allow.mainnet.balancerV2.relayer.gaugeWithdraw(
-          pool.gauge,
-          c.avatar,
-          c.avatar
-        ),
-        targetAddress: relayer,
-      },
-      // New permissions for Claiming and Claiming All
-      {
-        ...allow.mainnet.balancerV2.minter.setMinterApproval(relayer),
-        targetAddress: minter,
-      },
-      // vault.setRelayerApproval() already added
-      {
-        ...allow.mainnet.balancerV2.relayer.gaugeClaimRewards([pool.gauge]), // WARNING!!: Specify gauge?
-        targetAddress: relayer,
-      },
-      {
-        ...allow.mainnet.balancerV2.relayer.gaugeMint([pool.gauge]), // WARNING!!: Specify gauge?
-        targetAddress: relayer,
-      }
+      // // New permissions for Unstaking and Claiming
+      // allow.mainnet.balancerV2.vault.setRelayerApproval(c.avatar, relayer),
+      // {
+      //   ...allow.mainnet.balancerV2.relayer.gaugeWithdraw(
+      //     pool.gauge,
+      //     c.avatar,
+      //     c.avatar
+      //   ),
+      //   targetAddress: relayer,
+      // },
+      // // New permissions for Claiming and Claiming All
+      // {
+      //   ...allow.mainnet.balancerV2.minter.setMinterApproval(relayer),
+      //   targetAddress: minter,
+      // },
+      // // vault.setRelayerApproval() already added
+      // {
+      //   ...allow.mainnet.balancerV2.relayer.gaugeClaimRewards([pool.gauge]), // WARNING!!: Specify gauge?
+      //   targetAddress: relayer,
+      // },
+      // {
+      //   ...allow.mainnet.balancerV2.relayer.gaugeMint([pool.gauge]), // WARNING!!: Specify gauge?
+      //   targetAddress: relayer,
+      // }
     )
   }
 
@@ -148,6 +148,12 @@ export const lock = (): Permission[] => {
     // As Safes are smart contracts they are not allowed to lock veBAL
     // if the they are not whitelisted previously by Balancer:
     // https://forum.balancer.fi/t/allow-for-gnosis-safe-to-be-used-for-vebal-locking/2698
+    allow.mainnet.balancerV2.b80Bal20Weth.increaseApproval(
+      contracts.mainnet.balancerV2.veBal,
+    ),
+    allow.mainnet.balancerV2.b80Bal20Weth.decreaseApproval(
+      contracts.mainnet.balancerV2.veBal,
+    ),
     allow.mainnet.balancerV2.veBal.create_lock(),
     allow.mainnet.balancerV2.veBal.increase_amount(),
     allow.mainnet.balancerV2.veBal.increase_unlock_time(),
