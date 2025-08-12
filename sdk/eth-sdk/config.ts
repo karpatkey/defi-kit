@@ -59,6 +59,7 @@ export const contracts = {
       bpt: "0x93d199263632a4EF4Bb438F1feB99e57b4b5f0BD",
       gauge: "0xcD4722B7c24C29e0413BDCd9e51404B4539D14aE",
       minter: "0x239e55F427D44C3cc793f49bFB507ebe76638a2b",
+      b80Bal20Weth: "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56",
       veBal: "0xC128a9954e6c874eA3d62ce62B468bA073093F25",
       feeDistributor: "0xD3cf852898b21fc233251427c2DC93d3d604F3BB",
     },

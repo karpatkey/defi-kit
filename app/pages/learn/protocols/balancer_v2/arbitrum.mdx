@@ -7,7 +7,6 @@ import { Callout } from "nextra/components"
 | Name             | Address                                                                                                              |
 | :--------------- | :------------------------------------------------------------------------------------------------------------------- |
 | `Vault`          | [0xBA12222222228d8Ba445958a75a0704d566BF2C8](https://arbiscan.io/address/0xBA12222222228d8Ba445958a75a0704d566BF2C8) |
-| `Relayer`        | [0x9B892E515D2Ab8869F17488d64B3b918731cc70d](https://arbiscan.io/address/0x9B892E515D2Ab8869F17488d64B3b918731cc70d) |
 | `BalancerMinter` | [0xc3ccacE87f6d3A81724075ADcb5ddd85a8A1bB68](https://arbiscan.io/address/0xc3ccacE87f6d3A81724075ADcb5ddd85a8A1bB68) |
 | `BAL`            | [0x040d1EdC9569d4Bab2D15287Dc5A4F10F56a56B8](https://arbiscan.io/address/0x040d1EdC9569d4Bab2D15287Dc5A4F10F56a56B8) |
 
@@ -154,64 +153,3 @@ Mint `BAL` rewards for `Pool`.
   | :-------- | :---------------------- |
   | `gauge`   | equal to `TARGET_GAUGE` |
 
-#### `Vault · setRelayerApproval`
-
-One-time (and persistent) approval of the Relayer as single-point of entry.
-
-- **Contract:** `Vault`
-- **Function:** `setRelayerApproval(address,address,bool)`
-
-  | Parameter  | Constraint         |
-  | :--------- | :----------------- |
-  | `sender`   | equal to `AVATAR`  |
-  | `relayer`  | equal to `Relayer` |
-  | `approved` | -                  |
-
-#### `Relayer · gaugeWithdraw`
-
-Redeem `TARGET_GAUGE` tokens and receive `TARGET_BPT` tokens in exchange.
-
-- **Contract:** `Relayer`
-- **Function:** `gaugeWithdraw(address,address,address,uint256)`
-
-  | Parameter   | Constraint              |
-  | :---------- | :---------------------- |
-  | `gauge`     | equal to `TARGET_GAUGE` |
-  | `sender`    | equal to `AVATAR`       |
-  | `recipient` | equal to `AVATAR`       |
-  | `amount`    | -                       |
-
-#### `Minter · setMinterApproval`
-
-One-time (and persistent) approval of the Relayer as single-point of entry.
-
-- **Contract:** `Minter`
-- **Function:** `setMinterApproval(address,bool)`
-
-  | Parameter  | Constraint         |
-  | :--------- | :----------------- |
-  | `minter`   | equal to `Relayer` |
-  | `approval` | -                  |
-
-#### `Relayer · gaugeClaimRewards`
-
-Claim `Pool` rewards.
-
-- **Contract:** `Relayer`
-- **Function:** `gaugeClaimRewards(address[])`
-
-  | Parameter | Constraint                |
-  | :-------- | :------------------------ |
-  | `gauges`  | equal to `[TARGET_GAUGE]` |
-
-#### `Relayer · gaugeMint`
-
-Mint `BAL` rewards for `Pool`.
-
-- **Contract:** `Relayer`
-- **Function:** `gaugeMint(address[],uint256)`
-
-  | Parameter         | Constraint                |
-  | :---------------- | :------------------------ |
-  | `gauges`          | equal to `[TARGET_GAUGE]` |
-  | `outputReference` | -                         |

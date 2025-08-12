@@ -7,7 +7,6 @@ import { Callout } from "nextra/components"
 | Name             | Address                                                                                                               |
 | :--------------- | :-------------------------------------------------------------------------------------------------------------------- |
 | `Vault`          | [0xBA12222222228d8Ba445958a75a0704d566BF2C8](https://etherscan.io/address/0xBA12222222228d8Ba445958a75a0704d566BF2C8) |
-| `Relayer`        | [0x35Cea9e57A393ac66Aaa7E25C391D52C74B5648f](https://etherscan.io/address/0x35Cea9e57A393ac66Aaa7E25C391D52C74B5648f) |
 | `BalancerMinter` | [0x239e55F427D44C3cc793f49bFB507ebe76638a2b](https://etherscan.io/address/0x239e55F427D44C3cc793f49bFB507ebe76638a2b) |
 | `BAL`            | [0xba100000625a3754423978a60c9317c58a424e3D](https://etherscan.io/address/0xba100000625a3754423978a60c9317c58a424e3D) |
 | `B-80BAL-20WETH` | [0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56](https://etherscan.io/address/0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56) |
@@ -157,68 +156,6 @@ Mint `BAL` rewards for `Pool`.
   | :-------- | :---------------------- |
   | `gauge`   | equal to `TARGET_GAUGE` |
 
-#### `Vault · setRelayerApproval`
-
-One-time (and persistent) approval of the Relayer as single-point of entry.
-
-- **Contract:** `Vault`
-- **Function:** `setRelayerApproval(address,address,bool)`
-
-  | Parameter  | Constraint         |
-  | :--------- | :----------------- |
-  | `sender`   | equal to `AVATAR`  |
-  | `relayer`  | equal to `Relayer` |
-  | `approved` | -                  |
-
-#### `Relayer · gaugeWithdraw`
-
-Redeem `TARGET_GAUGE` tokens and receive `TARGET_BPT` tokens in exchange.
-
-- **Contract:** `Relayer`
-- **Function:** `gaugeWithdraw(address,address,address,uint256)`
-
-  | Parameter   | Constraint              |
-  | :---------- | :---------------------- |
-  | `gauge`     | equal to `TARGET_GAUGE` |
-  | `sender`    | equal to `AVATAR`       |
-  | `recipient` | equal to `AVATAR`       |
-  | `amount`    | -                       |
-
-#### `Minter · setMinterApproval`
-
-One-time (and persistent) approval of the Relayer as single-point of entry.
-
-- **Contract:** `Minter`
-- **Function:** `setMinterApproval(address,bool)`
-
-  | Parameter  | Constraint         |
-  | :--------- | :----------------- |
-  | `minter`   | equal to `Relayer` |
-  | `approval` | -                  |
-
-#### `Relayer · gaugeClaimRewards`
-
-Claim `Pool` rewards.
-
-- **Contract:** `Relayer`
-- **Function:** `gaugeClaimRewards(address[])`
-
-  | Parameter | Constraint                |
-  | :-------- | :------------------------ |
-  | `gauges`  | equal to `[TARGET_GAUGE]` |
-
-#### `Relayer · gaugeMint`
-
-Mint `BAL` rewards for `Pool`.
-
-- **Contract:** `Relayer`
-- **Function:** `gaugeMint(address[],uint256)`
-
-  | Parameter         | Constraint                |
-  | :---------------- | :------------------------ |
-  | `gauges`          | equal to `[TARGET_GAUGE]` |
-  | `outputReference` | -                         |
-
 ## Action: `lock`
 
 **Parameters:**
@@ -304,6 +241,28 @@ Redeem `B-80BAL-20WETH` tokens to the corresponding Balancer pool and receive `T
   | `request.minAmountsOut`     | -                             |
   | `request.userData`          | -                             |
   | `request.toInternalBalance` | -                             |
+
+### `B-80BAL-20WETH · increaseApproval`
+Increase the allowance of `B-80BAL-20WETH` tokens for `veBAL` as the spender.
+
+- **Contract:** `B-80BAL-20WETH`
+- **Function:** `increaseApproval(address,uint256)`
+
+  | Parameter | Constraint                    |
+  | :-------- | :---------------------------- |
+  | `spender` | equal to `veBAL`              |
+  | `amount`  | -                             |
+
+### `B-80BAL-20WETH · decreaseApproval`
+Decrease the allowance of `B-80BAL-20WETH` tokens for `veBAL` as the spender.
+
+- **Contract:** `B-80BAL-20WETH`
+- **Function:** `decreaseApproval(address,uint256)`
+
+  | Parameter | Constraint                    |
+  | :-------- | :---------------------------- |
+  | `spender` | equal to `veBAL`              |
+  | `amount`  | -                             |
 
 ### `veBAL · create_lock`
 
