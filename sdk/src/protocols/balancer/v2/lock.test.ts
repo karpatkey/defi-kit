@@ -1,7 +1,6 @@
 import { eth } from "."
 import {
   bal,
-  b80Bal20Weth,
   b80Bal20WethPid,
   bbaUsdV1,
   bbaUsdV2,
@@ -59,7 +58,7 @@ describe("balancer", () => {
         Math.floor(new Date().getTime() / 1000) + 30 * 24 * 60 * 60
       await expect(
         kit.asMember.usdc
-          .attach(b80Bal20Weth)
+          .attach(contracts.mainnet.balancerV2.b80Bal20Weth)
           .approve(contracts.mainnet.balancerV2.veBal, parseEther("200"))
       ).not.toRevert()
 

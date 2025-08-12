@@ -6,7 +6,6 @@ import { contracts } from "../../../../eth-sdk/config"
 import { Chain } from "../../../types"
 
 export const bal = "0xba100000625a3754423978a60c9317c58a424e3D"
-export const b80Bal20Weth = "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56"
 export const b80Bal20WethPid =
   "0x5c6ee304399dbdb9c8ef030ab642b10820db8f56000200000000000000000014"
 export const bbaUsdV1 = "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2"
@@ -44,7 +43,7 @@ export const stake = (chain: Chain, pool: Pool) => {
   const permissions: Permission[] = []
 
   let minter: `0x${string}`
-  let relayer: `0x${string}`
+  // let relayer: `0x${string}`
 
   switch (chain) {
     case Chain.eth:
@@ -132,7 +131,10 @@ export const lock = (): Permission[] => {
       [bal, contracts.mainnet.weth],
       [contracts.mainnet.balancerV2.vault]
     ),
-    ...allowErc20Approve([b80Bal20Weth], [contracts.mainnet.balancerV2.veBal]),
+    ...allowErc20Approve(
+      [contracts.mainnet.balancerV2.b80Bal20Weth],
+      [contracts.mainnet.balancerV2.veBal]
+    ),
     allow.mainnet.balancerV2.vault.joinPool(
       b80Bal20WethPid,
       c.avatar,
