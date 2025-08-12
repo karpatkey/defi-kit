@@ -94,7 +94,7 @@ export const stake = (chain: Chain, pool: Pool) => {
       {
         ...allow.mainnet.balancerV2.minter.mint(pool.gauge),
         targetAddress: minter,
-      },
+      }
 
       // // New permissions for Unstaking and Claiming
       // allow.mainnet.balancerV2.vault.setRelayerApproval(c.avatar, relayer),
@@ -149,10 +149,10 @@ export const lock = (): Permission[] => {
     // if the they are not whitelisted previously by Balancer:
     // https://forum.balancer.fi/t/allow-for-gnosis-safe-to-be-used-for-vebal-locking/2698
     allow.mainnet.balancerV2.b80Bal20Weth.increaseApproval(
-      contracts.mainnet.balancerV2.veBal,
+      contracts.mainnet.balancerV2.veBal
     ),
     allow.mainnet.balancerV2.b80Bal20Weth.decreaseApproval(
-      contracts.mainnet.balancerV2.veBal,
+      contracts.mainnet.balancerV2.veBal
     ),
     allow.mainnet.balancerV2.veBal.create_lock(),
     allow.mainnet.balancerV2.veBal.increase_amount(),

@@ -7,6 +7,8 @@ import { oeth as kit } from "../../../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 import { Chain } from "../../../../../index"
 
+const usdcHolder = "0xBB9B3e1271E67ce0DAFd2c4d47Ef67dF8768C6F4"
+
 describe("aaveV3", () => {
   describe("borrow", () => {
     beforeAll(async () => {
@@ -25,7 +27,7 @@ describe("aaveV3", () => {
         Chain.oeth,
         contracts.optimism.usdc,
         parseUnits("10000", 6),
-        contracts.optimism.balancerV2.vault
+        usdcHolder
       )
       await expect(
         kit.asMember.usdc.approve(
@@ -172,7 +174,7 @@ describe("aaveV3", () => {
         Chain.eth,
         contracts.optimism.usdc,
         parseUnits("100", 6),
-        contracts.optimism.balancerV2.vault
+        usdcHolder
       )
 
       await expect(
