@@ -205,4 +205,16 @@ export default [
     stableDebtTokenAddress: "0x1B16e95958e06291c028e709727f8B0BB56451D3",
     variableDebtTokenAddress: "0xc528F0C91CFAE4fd86A68F6Dfd4d7284707Bec68",
   },
+  {
+    symbol: "PYUSD",
+    token: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+    usageAsCollateralEnabled: false,
+    borrowingEnabled: true,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x779224df1c756b4EDD899854F32a53E8c2B2ce5d",
+    stableDebtTokenAddress: "0x76e39b016ae2B4db14b40845aBE4B9b7aDAf0c12",
+    variableDebtTokenAddress: "0x3357D2DB7763D6Cd3a99f0763EbF87e0096D95f9",
+  },
 ] as const

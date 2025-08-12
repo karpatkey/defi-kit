@@ -44,16 +44,16 @@ export default [
       "onchainaustria is the first Austrian DAO-directed association (𓃵 Airdrop incoming!). We operate as a node operator (ETH, STRK, UNI) with low fees and a highly redundant infrastructure.\n\nWe are a thriving Austrian crypto community, dedicated to enabling our members to participate in and support the decentralization of DLT networks.\n\nJoin us and become part of a collaborative environment driving the future of decentralization!\n\n🔗 onchainaustria.at",
   },
   {
-    id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
-    name: "Allnodes",
-    description:
-      "Reliable non-custodial Validator run by the industry leader - Allnodes",
-  },
-  {
     id: "0x8216e50b1dd76faeb1ff4cafaba6790ea71910df",
     name: "Data Nexus",
     description:
       "Independent Ethereum validators with owned hardware, MEV boost, and minority clients for robust decentralization. Empowering the Ethereum network with integrity.",
+  },
+  {
+    id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
+    name: "Allnodes",
+    description:
+      "Reliable non-custodial Validator run by the industry leader - Allnodes",
   },
   {
     id: "0x99510bfc5d420cd3c41458f4692b1c3321908734",
@@ -114,16 +114,16 @@ export default [
       'This vault represents a distributed validator cluster , using Obol\'s DV technology to run the validators across multiple nodes. As a staker, you can expect higher uptime, decreased slashing risk, and a meaningful contribution to the decentralization of the Ethereum network.\n\nBy staking with an Obol DV, you automatically participate in the Obol Contributions initiative, contributing 1% of staking rewards to the "1% for Decentralization" retroactive funding model. Your contributions will be tracked and recognized by Obol and can be viewed on our staking dApp, OPUS Pool.',
   },
   {
-    id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
-    name: "Verse ETH Staking",
-    description:
-      "Earn rewards by staking your ETH in the Verse Ecosystem vault",
-  },
-  {
     id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
     name: "Peer Ventures",
     description:
       "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
+  },
+  {
+    id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
+    name: "Verse ETH Staking",
+    description:
+      "Earn rewards by staking your ETH in the Verse Ecosystem vault",
   },
   {
     id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
@@ -132,16 +132,16 @@ export default [
       "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
   },
   {
-    id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
-    name: "VincentTaglia.eth",
-    description:
-      "Independent Ethereum validator utilizing Nethermind+Teku, uncensored MEV relays, owned hardware, and the smoothing pool. Support decentralization and spread risk by staking with me. Learn more: https://vincenttaglia.eth.limo",
-  },
-  {
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
     name: "BRAZILPRACIMA",
     description:
       "Independent solo operator since genesis, running on top of OBOL technology ",
+  },
+  {
+    id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
+    name: "VincentTaglia.eth",
+    description:
+      "Independent Ethereum validator utilizing Nethermind+Teku, uncensored MEV relays, owned hardware, and the smoothing pool. Support decentralization and spread risk by staking with me. Learn more: https://vincenttaglia.eth.limo",
   },
   {
     id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
@@ -184,6 +184,12 @@ export default [
     name: "DSRV",
     description:
       "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
+  },
+  {
+    id: "0xcf8357e5d8d90aa3c86eeba3c494947dab28bfaf",
+    name: "GlobalStake",
+    description:
+      "With decades of infrastructure experience, GlobalStake's enterprise-grade Web3 data centers, equipment, and protocols are specifically engineered to secure Proof-of-Stake networks. We believe that if you are going to do something, do it right!",
   },
   {
     id: "0xc502a1008cae7ad560294ac987355dfdb287e597",
