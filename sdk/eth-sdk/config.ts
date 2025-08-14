@@ -104,6 +104,12 @@ export const contracts = {
       crvMinter: "0xd061D61a4d941c39E5453435B6345Dc261C2fcE0",
       stakeDepositZap: "0x56C526b0159a258887e0d79ec3a80dfb940d0cD7",
     },
+    kelp: {
+      LRTDepositPool: "0x036676389e48133B63a802f8635AD39E752D375D",
+      ethx: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+      rseth: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+      LRTWithdrawalManager: "0x62De59c08eB5dAE4b7E6F7a8cAd3006d6965ec16",
+    },
     lido: {
       stEth: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
       wstEth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
@@ -125,6 +131,8 @@ export const contracts = {
     },
     morpho: {
       morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
+      // publicAllocator: "0xfd32fA2ca22c76dD6E550706Ad913FC6CE91c75D",
+      metaMorpho: "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658",
     },
     rocketPool: {
       storage: "0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46",
@@ -162,6 +170,9 @@ export const contracts = {
     stakeWiseV3: {
       vault: "0xba0B5ba961B108BFf8D761A256e9763a4FccFF23", // EthVault (Implementation)
     },
+    symbiotic: {
+      defaultCollateral: "0xa301ea1E3CAB036AbE8fa70e5526A51Cb41799B6",
+    },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
       factory: "0x1F98431c8aD98523631AE4a59f267346ea31F984",
@@ -172,6 +183,7 @@ export const contracts = {
     usdc: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
     usdt: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    wsteth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
     gnoOmnibridge: "0x88ad09518695c6c3712AC10a214bE5109a655671",
     gnoXdaiBridge: "0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
     xdaiUsdsBridge: "0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0",
@@ -358,11 +370,14 @@ export const contracts = {
       cUsdcV3: "0xb125E6687d4313864e53df431d5425969c15Eb2F",
       cometRewards: "0x123964802e6ABabBE1Bc9547D72Ef1B69B00A6b1",
     },
+    morpho: {
+      morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
+    },
+    weth: "0x4200000000000000000000000000000000000006",
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
     },
     usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-    weth: "0x4200000000000000000000000000000000000006",
     l2HopCctp: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
   },
 } as const satisfies EthSdkConfig["contracts"]
