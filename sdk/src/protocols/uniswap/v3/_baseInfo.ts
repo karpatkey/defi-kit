@@ -499,6 +499,10 @@ export default [
     symbol: "Bitcat",
   },
   {
+    address: "0xc2737920721cb99bF2efB552DA7EF80915e77341",
+    symbol: "SKITTEN",
+  },
+  {
     address: "0xeAC770a0767AE96582cb7422C22110cb961cD9F5",
     symbol: "RSR",
   },
@@ -551,10 +555,6 @@ export default [
     symbol: "ROBINHOOD",
   },
   {
-    address: "0xc2737920721cb99bF2efB552DA7EF80915e77341",
-    symbol: "SKITTEN",
-  },
-  {
     address: "0xeDa6192C1C1F17187DfF12bED547F754142CADaF",
     symbol: "MICA",
   },
@@ -575,16 +575,16 @@ export default [
     symbol: "KABOSU",
   },
   {
-    address: "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
-    symbol: "VIRTUAL",
-  },
-  {
     address: "0x803e0b8e7481F34826efbFAF258CD5B893901d8A",
     symbol: "XRP",
   },
   {
     address: "0x479A9a51F164114F2aA903226015bd6eC3dE492c",
     symbol: "SWIFT",
+  },
+  {
+    address: "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+    symbol: "VIRTUAL",
   },
   {
     address: "0x919a432445d89AD661B953119F040EcDAf9016F4",
@@ -647,10 +647,6 @@ export default [
     symbol: "JOSEPH",
   },
   {
-    address: "0x1B68244B100A6713ca7F540697b1bE12148a8bf9",
-    symbol: "YES",
-  },
-  {
     address: "0x0b78aFfC8e5E542E50b2247302fC89A71B8b7824",
     symbol: "🍻 BEER",
   },
@@ -663,8 +659,8 @@ export default [
     symbol: "EURO24",
   },
   {
-    address: "0x2b72C608264bC6CaEfdf7231fC917e0318488043",
-    symbol: "MACD",
+    address: "0x50dA645f148798F68EF2d7dB7C1CB22A6819bb2C",
+    symbol: "SPX",
   },
   {
     address: "0x822330630F20C55FCdc15f680ab51EA3E868B861",
@@ -675,8 +671,12 @@ export default [
     symbol: "PVPB",
   },
   {
-    address: "0x50dA645f148798F68EF2d7dB7C1CB22A6819bb2C",
-    symbol: "SPX",
+    address: "0x2b72C608264bC6CaEfdf7231fC917e0318488043",
+    symbol: "MACD",
+  },
+  {
+    address: "0x1B68244B100A6713ca7F540697b1bE12148a8bf9",
+    symbol: "YES",
   },
   {
     address: "0x6921B130D297cc43754afba22e5EAc0FBf8Db75b",
@@ -703,12 +703,12 @@ export default [
     symbol: "BALD",
   },
   {
-    address: "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
-    symbol: "AIXBT",
-  },
-  {
     address: "0xb33Ff54b9F7242EF1593d2C9Bcd8f9df46c77935",
     symbol: "FAI",
+  },
+  {
+    address: "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
+    symbol: "AIXBT",
   },
   {
     address: "0x371f338D14ffAA5575241b458b94f3C0BF68469f",
@@ -739,20 +739,20 @@ export default [
     symbol: "ai16z",
   },
   {
-    address: "0xb14A3F8287D590B6aD9ABf1CC94f0AA3198fEE4D",
-    symbol: "sec",
-  },
-  {
     address: "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
     symbol: "DEGEN",
   },
   {
-    address: "0x7f88F7FEa8D8A06acae239ED84c1d7A8D93A0475",
-    symbol: "MAGA",
+    address: "0xb14A3F8287D590B6aD9ABf1CC94f0AA3198fEE4D",
+    symbol: "sec",
   },
   {
     address: "0x2f6c17fa9f9bC3600346ab4e48C0701e1d5962AE",
     symbol: "Fartcoin",
+  },
+  {
+    address: "0x7f88F7FEa8D8A06acae239ED84c1d7A8D93A0475",
+    symbol: "MAGA",
   },
   {
     address: "0x209b94Bb22C990D9d221749558c5FFEd7Fc82e64",
@@ -823,12 +823,12 @@ export default [
     symbol: "PEPE",
   },
   {
-    address: "0x2960A147BbEC2a858366Ae4e94aA496012c69363",
-    symbol: "LNCH",
-  },
-  {
     address: "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
     symbol: "AERO",
+  },
+  {
+    address: "0x2960A147BbEC2a858366Ae4e94aA496012c69363",
+    symbol: "LNCH",
   },
   {
     address: "0x22066D8264C0758FE020968759dF5F38B2C1F9ce",
@@ -863,10 +863,6 @@ export default [
     symbol: "NUGS",
   },
   {
-    address: "0x96419929d7949D6A801A6909c145C8EEf6A40431",
-    symbol: "SPEC",
-  },
-  {
     address: "0x9e91077EB43C26a92fe8c830A730CF582e011c34",
     symbol: "CRINGE",
   },
@@ -887,6 +883,10 @@ export default [
     symbol: "MIGGLES",
   },
   {
+    address: "0x96419929d7949D6A801A6909c145C8EEf6A40431",
+    symbol: "SPEC",
+  },
+  {
     address: "0x3567D03a958494834C0ec9D5AE602251F6dDB3f6",
     symbol: "MAGA",
   },
@@ -903,12 +903,12 @@ export default [
     symbol: "EG",
   },
   {
-    address: "0x9a26F5433671751C3276a065f57e5a02D2817973",
-    symbol: "KEYCAT",
-  },
-  {
     address: "0x70737489DFDf1A29b7584d40500d3561bD4Fe196",
     symbol: "BORED",
+  },
+  {
+    address: "0x9a26F5433671751C3276a065f57e5a02D2817973",
+    symbol: "KEYCAT",
   },
   {
     address: "0x346fAC947bc2e24Ab5D74a8BCa94082C6127B6C0",
