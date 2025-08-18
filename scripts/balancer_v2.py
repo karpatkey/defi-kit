@@ -226,5 +226,5 @@ def protocol_data(blockchain):
     }
     dump(result, 'balancer/v2', suffixes[blockchain])
 
-for chain in [Chain.GNOSIS]:# [Chain.ETHEREUM, Chain.GNOSIS, Chain.ARBITRUM, Chain.OPTIMISM, Chain.BASE]:
+for chain in [Chain.ETHEREUM, Chain.GNOSIS, Chain.ARBITRUM, Chain.OPTIMISM, Chain.BASE]:
     protocol_data(chain)
