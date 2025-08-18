@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.20.3](https://github.com/karpatkey/defi-kit/compare/v2.20.2...v2.20.3) (2025-08-18)
+
+
+### Bug Fixes
+
+* Balancer v2 script ([#475](https://github.com/karpatkey/defi-kit/issues/475)) ([5cacaee](https://github.com/karpatkey/defi-kit/commit/5cacaee5b0b127601baa8db09bab57e75d143043))
+
 ## [2.20.2](https://github.com/karpatkey/defi-kit/compare/v2.20.1...v2.20.2) (2025-08-12)
 
 
