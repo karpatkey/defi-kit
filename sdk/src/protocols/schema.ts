@@ -7,6 +7,7 @@ import * as compoundV2 from "./compound/v2/schema"
 import * as compoundV3 from "./compound/v3/schema"
 import * as convex from "./convex/schema"
 import * as cowSwap from "./cowSwap/schema"
+import * as fluid from "./fluid/schema"
 import * as lido from "./lido/schema"
 import * as sky from "./sky/schema"
 import * as rocketPool from "./rocketPool/schema"
@@ -29,6 +30,7 @@ export const eth = {
   compound_v3: compoundV3.eth,
   convex: convex.eth,
   cowswap: cowSwap.eth,
+  fluid: fluid.eth,
   lido: lido.eth,
   sky: sky.eth,
   rocket_pool: rocketPool.eth,
@@ -54,6 +56,7 @@ export const arb1 = {
   aura: aura.arb1,
   balancer_v2: balancerV2.arb1,
   cowswap: cowSwap.arb1,
+  fluid: fluid.arb1,
   uniswap_v3: uniswapV3.arb1,
 } satisfies ProtocolSchemas
 
@@ -69,5 +72,6 @@ export const base = {
   aura: aura.base,
   balancer_v2: balancerV2.base,
   cowswap: cowSwap.base,
+  fluid: fluid.base,
   uniswap_v3: uniswapV3.base,
 } satisfies ProtocolSchemas
