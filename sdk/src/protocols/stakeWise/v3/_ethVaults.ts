@@ -68,15 +68,15 @@ export default [
       "SenseiNode is the first institutional-grade blockchain infrastructure service provider in Latin America. We automate and simplify the deployment and monitoring of nodes on leading protocols, providing access to organizations looking to build their blockchain infrastructure with a high availability and low total cost of ownership.",
   },
   {
+    id: "0x089a97a8bc0c0f016f89f9cf42181ff06afb2daf",
+    name: "validator service",
+    description: "reliable validation",
+  },
+  {
     id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
     name: "Blockscape Super Early Bird",
     description:
       "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
-  },
-  {
-    id: "0x089a97a8bc0c0f016f89f9cf42181ff06afb2daf",
-    name: "validator service",
-    description: "reliable validation",
   },
   {
     id: "0x481afcd21a3447a7a04c4afd968df877b76d2310",

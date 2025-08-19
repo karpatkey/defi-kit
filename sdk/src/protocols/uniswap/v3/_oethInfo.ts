@@ -22,19 +22,15 @@ export default [
     symbol: "OP",
   },
   {
+    address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
+    symbol: "WBTC",
+  },
+  {
     address: "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
     symbol: "WLD",
   },
   {
     address: "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
     symbol: "wstETH",
-  },
-  {
-    address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
-    symbol: "WBTC",
-  },
-  {
-    address: "0x139052115F8B1773cF7DcBA6a553F922a2E54F69",
-    symbol: "(=ↀωↀ=)",
   },
 ] as const
