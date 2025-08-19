@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.21.0](https://github.com/karpatkey/defi-kit/compare/v2.20.4...v2.21.0) (2025-08-19)
+
+
+### Features
+
+* Integrate Fluid ([#474](https://github.com/karpatkey/defi-kit/issues/474)) ([9ce32f6](https://github.com/karpatkey/defi-kit/commit/9ce32f62a0cbbd63efa5261c74470f7146ffa719))
+
 ## [2.20.4](https://github.com/karpatkey/defi-kit/compare/v2.20.3...v2.20.4) (2025-08-19)
 
 
