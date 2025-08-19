@@ -464,6 +464,23 @@ export default [
     ],
   },
   {
+    bpt: "0xA28BAE3B7fD894A65B77A82A9AfbEF9f578338d1",
+    id: "0xa28bae3b7fd894a65b77a82a9afbef9f578338d10002000000000000000001d8",
+    name: "ECLP-GYFI-wstETH",
+    type: "GyroE",
+    gauge: "0x549b362fEfe9311FEC739c53F1A62b075563Ae74",
+    tokens: [
+      {
+        address: "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xc63529297dE076eB15fcbE873AE9136E446cFbB9",
+        symbol: "GYFI",
+      },
+    ],
+  },
+  {
     bpt: "0xa476E9f11b3b32c0DEbdD6b01d54b79C8eF14411",
     id: "0xa476e9f11b3b32c0debdd6b01d54b79c8ef144110002000000000000000001e5",
     name: "ECLP-cbBTC-USDC-dyn",

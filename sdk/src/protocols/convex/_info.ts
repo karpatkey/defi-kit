@@ -3228,4 +3228,11 @@ export default [
     cvxDepositToken: "0x0167850fFeAC15501781E7Cb45dD7208bF60b386",
     rewarder: "0x3eF636075372e093c48Bb32AEaEEfCB17367A9Ab",
   },
+  {
+    name: "RFRX-CRV",
+    id: "488",
+    crvLPToken: "0xc2FcdD48209DD383B1f2AC120b84b2A75EE18BD3",
+    cvxDepositToken: "0xdFfefB650EaD7393CFB24e64f07DEFA03969415f",
+    rewarder: "0xe103350ac2712cFAF470cB6da0F8B5aa517d10eF",
+  },
 ] as const
