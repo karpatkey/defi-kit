@@ -19,17 +19,15 @@ describe("fluid", () => {
     // Test with ETH
     it("only allows depositing ETH on behalf of avatar", async () => {
       await expect(
-        kit.asMember.fluid.fWeth["depositNative(address)"](
-          wallets.avatar,
-          { value: parseEther("1") }
-        )
+        kit.asMember.fluid.fWeth["depositNative(address)"](wallets.avatar, {
+          value: parseEther("1"),
+        })
       ).not.toRevert()
 
       await expect(
-        kit.asMember.fluid.fWeth["depositNative(address)"](
-          wallets.member,
-          { value: parseEther("1") }
-        )
+        kit.asMember.fluid.fWeth["depositNative(address)"](wallets.member, {
+          value: parseEther("1"),
+        })
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
@@ -69,14 +67,14 @@ describe("fluid", () => {
       await expect(
         kit.asMember.fluid.fWeth["deposit(uint256,address)"](
           parseEther("1"),
-          wallets.avatar,
+          wallets.avatar
         )
       ).not.toRevert()
 
       await expect(
         kit.asMember.fluid.fWeth["deposit(uint256,address)"](
           parseEther("1"),
-          wallets.member,
+          wallets.member
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
@@ -108,7 +106,9 @@ describe("fluid", () => {
           1,
           "0x0000000000000000000000000000000000000000000000000000000000000000",
           1,
-          ["0x0000000000000000000000000000000000000000000000000000000000000000"],
+          [
+            "0x0000000000000000000000000000000000000000000000000000000000000000",
+          ],
           "0x"
         )
       ).toBeAllowed()
@@ -120,7 +120,9 @@ describe("fluid", () => {
           1,
           "0x0000000000000000000000000000000000000000000000000000000000000000",
           1,
-          ["0x0000000000000000000000000000000000000000000000000000000000000000"],
+          [
+            "0x0000000000000000000000000000000000000000000000000000000000000000",
+          ],
           "0x"
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
