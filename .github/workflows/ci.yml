@@ -57,6 +57,7 @@ jobs:
             compound,
             convex,
             cowSwap,
+            fluid,
             lido,
             rocketPool,
             sky,

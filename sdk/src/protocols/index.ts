@@ -7,6 +7,7 @@ import * as compoundV2 from "./compound/v2"
 import * as compoundV3 from "./compound/v3"
 import * as convex from "./convex"
 import * as cowSwap from "./cowSwap"
+import * as fluid from "./fluid"
 import * as lido from "./lido"
 import * as sky from "./sky"
 import * as rocketPool from "./rocketPool"
@@ -31,6 +32,7 @@ export const eth = annotateAll(
     compound_v3: compoundV3.eth,
     convex: convex.eth,
     cowswap: cowSwap.eth,
+    fluid: fluid.eth,
     lido: lido.eth,
     sky: sky.eth,
     rocket_pool: rocketPool.eth,
@@ -62,6 +64,7 @@ export const arb1 = annotateAll(
     aura: aura.arb1,
     balancer_v2: balancerV2.arb1,
     cowswap: cowSwap.arb1,
+    fluid: fluid.arb1,
     uniswap_v3: uniswapV3.arb1,
   },
   "arb1"
@@ -83,6 +86,7 @@ export const base = annotateAll(
     aura: aura.base,
     balancer_v2: balancerV2.base,
     cowswap: cowSwap.base,
+    fluid: fluid.base,
     uniswap_v3: uniswapV3.base,
   },
   "base"

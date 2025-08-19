@@ -104,6 +104,10 @@ export const contracts = {
       crvMinter: "0xd061D61a4d941c39E5453435B6345Dc261C2fcE0",
       stakeDepositZap: "0x56C526b0159a258887e0d79ec3a80dfb940d0cD7",
     },
+    fluid: {
+      fWeth: "0x90551c1795392094FE6D29B758EcCD233cFAa260",
+      merkleDistributor: "0x7060FE0Dd3E31be01EFAc6B28C8D38018fD163B0",
+    },
     lido: {
       stEth: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
       wstEth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
@@ -273,6 +277,10 @@ export const contracts = {
     cowSwap: {
       orderSigner: "0x23dA9AdE38E4477b23770DeD512fD37b12381FAB",
     },
+    fluid: {
+      fWeth: "0x45Df0656F8aDf017590009d2f1898eeca4F0a205",
+      merkleDistributor: "0x94312a608246Cecfce6811Db84B3Ef4B2619054E",
+    },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
     },
@@ -357,6 +365,10 @@ export const contracts = {
     compoundV3: {
       cUsdcV3: "0xb125E6687d4313864e53df431d5425969c15Eb2F",
       cometRewards: "0x123964802e6ABabBE1Bc9547D72Ef1B69B00A6b1",
+    },
+    fluid: {
+      fWeth: "0x9272D6153133175175Bc276512B2336BE3931CE9",
+      merkleDistributor: "0x94312a608246Cecfce6811Db84B3Ef4B2619054E",
     },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
