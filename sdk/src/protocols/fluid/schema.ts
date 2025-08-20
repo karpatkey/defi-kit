@@ -1,5 +1,5 @@
 import { z } from "zod"
-import arb1Tokens from "./_baseInfo"
+import arb1Tokens from "./_arb1Info"
 import baseTokens from "./_baseInfo"
 import ethTokens from "./_ethInfo"
 
