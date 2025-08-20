@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.21.3](https://github.com/karpatkey/defi-kit/compare/v2.21.2...v2.21.3) (2025-08-20)
+
+
+### Bug Fixes
+
+* Fluid Info ([#484](https://github.com/karpatkey/defi-kit/issues/484)) ([b9992b2](https://github.com/karpatkey/defi-kit/commit/b9992b258cda5dc1bed1919dc51727efdd048b45))
+
 ## [2.21.2](https://github.com/karpatkey/defi-kit/compare/v2.21.1...v2.21.2) (2025-08-20)
 
 
