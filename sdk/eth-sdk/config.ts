@@ -38,6 +38,15 @@ export const contracts = {
       flashUnstake: "0xf047f23ACFdB1315cF63Ad8aB5146d5fDa4267Af",
       ankrEth: "0xE95A203B1a91a908F9B9CE46459d101078c2c3cb",
     },
+    arbitrumBridge: {
+      delayedInbox: "0x4Dbd4fc535Ac27206064B68FfCf827b0A60BAB3f",
+      outbox4: "0x0B9857ae2D4A3DBe74ffE1d7DF045bb7F96E4840",
+      usdtOftAdapter: "0x6C96dE32CEa08842dcc4058c14d3aaAD7Fa41dee", // OFT adapter used to bridge USDT via LayerZero
+      l1Erc20Gateway: "0xa3A7B6F88361F48403514059F1F16C8E78d60EeC",
+      arbDaiGateway: "0xD3B5b60020504bc3489D6949d545893982BA3011",
+      arbErc20Gateway: "0xa3A7B6F88361F48403514059F1F16C8E78d60EeC",
+      arbL1GatewayRouter: "0x72Ce9c846789fdB6fC1f34aC4AD25Dd9ef7031ef",
+    },
     aura: {
       booster: "0xA57b8d98dAE62B26Ec3bcC4a365338157060B234",
       rewardPoolDepositWrapper: "0xB188b1CB84Fb0bA13cb9ee1292769F903A9feC59",
@@ -108,6 +117,17 @@ export const contracts = {
       fWeth: "0x90551c1795392094FE6D29B758EcCD233cFAa260",
       merkleDistributor: "0x7060FE0Dd3E31be01EFAc6B28C8D38018fD163B0",
     },
+    gnosisBridge: {
+      gnoOmnibridge: "0x88ad09518695c6c3712AC10a214bE5109a655671",
+      gnoXdaiBridge: "0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
+      xdaiUsdsBridge: "0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0",
+      ambEthXdai: "0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e",
+      wethOmnibridgeRouter: "0xa6439Ca0FCbA1d0F80df0bE6A17220feD9c9038a",
+    },
+    hop: {
+      l1HopCctp: "0x7e77461CA2a9d82d26FD5e0Da2243BF72eA45747",
+      hopDaiBridge: "0x3d4Cc8A61c7528Fd86C55cfe061a78dCBA48EDd1",
+    },
     lido: {
       stEth: "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
       wstEth: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
@@ -129,6 +149,10 @@ export const contracts = {
     },
     morpho: {
       morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
+    },
+    optimismBridge: {
+      optDaiBridge: "0x10E6593CDda8c58a1d0f14C5164B376352a55f2F",
+      optGateway: "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
     },
     rocketPool: {
       storage: "0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46",
@@ -176,17 +200,6 @@ export const contracts = {
     usdc: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
     usdt: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     weth: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-    gnoOmnibridge: "0x88ad09518695c6c3712AC10a214bE5109a655671",
-    gnoXdaiBridge: "0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
-    xdaiUsdsBridge: "0x9a873656c19Efecbfb4f9FAb5B7acdeAb466a0B0",
-    ambEthXdai: "0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e",
-    optDaiBridge: "0x10E6593CDda8c58a1d0f14C5164B376352a55f2F",
-    optGateway: "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
-    arbDaiGateway: "0xD3B5b60020504bc3489D6949d545893982BA3011",
-    arbErc20Gateway: "0xa3A7B6F88361F48403514059F1F16C8E78d60EeC",
-    l1HopCctp: "0x7e77461CA2a9d82d26FD5e0Da2243BF72eA45747",
-    hopDaiBridge: "0x3d4Cc8A61c7528Fd86C55cfe061a78dCBA48EDd1",
-    arbL1GatewayRouter: "0x72Ce9c846789fdB6fC1f34aC4AD25Dd9ef7031ef",
   },
   gnosis: {
     aaveV3: {
@@ -216,6 +229,14 @@ export const contracts = {
       gpv2VaultRelayer: "0xC92E8bdf79f0507f65a392b0ab4667716BFE0110",
       vCow: "0xc20C9C13E853fc64d054b73fF21d3636B2d97eaB",
     },
+    gnosisBridge: {
+      usdcTransmuter: "0x0392A2F5Ac47388945D8c84212469F545fAE52B2",
+      xdaiBridge: "0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d",
+      xdaiBridge2: "0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
+    },
+    hop: {
+      hopDaiWrapper: "0x6C928f435d1F3329bABb42d69CCF043e3900EcF1",
+    },
     spark: {
       sDai: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
       poolV3: "0x2Dae5307c5E3FD1CF5A72Cb6F698f915860607e0",
@@ -235,11 +256,7 @@ export const contracts = {
     comp: "0xDf6FF92bfDC1e8bE45177DC1f4845d391D3ad8fD",
     gno: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
     usdc: "0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83",
-    usdcTransmuter: "0x0392A2F5Ac47388945D8c84212469F545fAE52B2",
     wxdai: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
-    xdaiBridge: "0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d",
-    xdaiBridge2: "0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
-    hopDaiWrapper: "0x6C928f435d1F3329bABb42d69CCF043e3900EcF1",
   },
   arbitrumOne: {
     aaveV3: {
@@ -248,6 +265,9 @@ export const contracts = {
       aArbWeth: "0xe50fA9b3c56FfB159cB0FCA61F5c9D750e8128c8",
       variableDebtWeth: "0x0c84331e39d6658Cd6e6b9ba04736cC4c4734351",
       protocolDataProviderV3: "0x14496b405D62c24F91f04Cda1c69Dc526D56fDE5",
+    },
+    arbitrumBridge: {
+      gatewayRouter: "0x5288c571Fd7aD117beA99bF60FE0846C4E84F933",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
@@ -281,14 +301,15 @@ export const contracts = {
       fWeth: "0x45Df0656F8aDf017590009d2f1898eeca4F0a205",
       merkleDistributor: "0x94312a608246Cecfce6811Db84B3Ef4B2619054E",
     },
+    hop: {
+      l2HopCctp: "0x6504BFcaB789c35325cA4329f1f41FaC340bf982",
+      hopDaiWrapper: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
+    },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
     },
     weth: "0x82af49447d8a07e3bd95bd0d56f35241523fbab1",
     usdc: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
-    gatewayRouter: "0x5288c571Fd7aD117beA99bF60FE0846C4E84F933",
-    l2HopCctp: "0x6504BFcaB789c35325cA4329f1f41FaC340bf982",
-    hopDaiWrapper: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
   },
   optimism: {
     aaveV3: {
@@ -323,15 +344,19 @@ export const contracts = {
       cUsdcV3: "0x2e44e174f7D53F0212823acC11C01A11d58c5bCB",
       cometRewards: "0x443EA0340cb75a160F31A440722dec7b5bc3C2E9",
     },
+    hop: {
+      l2HopCctp: "0x469147af8Bde580232BE9DC84Bb4EC84d348De24",
+      hopDaiWrapper: "0xb3C68a491608952Cb1257FC9909a537a0173b63B",
+    },
+    optimismBridge: {
+      daiTokenBridge: "0x467194771dAe2967Aef3ECbEDD3Bf9a310C76C65",
+      optimismBridge: "0x4200000000000000000000000000000000000010",
+    },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
     },
     weth: "0x4200000000000000000000000000000000000006",
     usdc: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
-    daiTokenBridge: "0x467194771dAe2967Aef3ECbEDD3Bf9a310C76C65",
-    optimismBridge: "0x4200000000000000000000000000000000000010",
-    l2HopCctp: "0x469147af8Bde580232BE9DC84Bb4EC84d348De24",
-    hopDaiWrapper: "0xb3C68a491608952Cb1257FC9909a537a0173b63B",
   },
   base: {
     aaveV3: {
@@ -370,12 +395,14 @@ export const contracts = {
       fWeth: "0x9272D6153133175175Bc276512B2336BE3931CE9",
       merkleDistributor: "0x94312a608246Cecfce6811Db84B3Ef4B2619054E",
     },
+    hop: {
+      l2HopCctp: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
+    },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
     },
     usdc: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     weth: "0x4200000000000000000000000000000000000006",
-    l2HopCctp: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
   },
 } as const satisfies EthSdkConfig["contracts"]
 
