@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.21.2](https://github.com/karpatkey/defi-kit/compare/v2.21.1...v2.21.2) (2025-08-20)
+
+
+### Bug Fixes
+
+* Update Bridges ([#482](https://github.com/karpatkey/defi-kit/issues/482)) ([f39a48c](https://github.com/karpatkey/defi-kit/commit/f39a48c86d6fc6c6b894f84a0d914a6a685b4d8d))
+
 ## [2.21.1](https://github.com/karpatkey/defi-kit/compare/v2.21.0...v2.21.1) (2025-08-20)
 
 
