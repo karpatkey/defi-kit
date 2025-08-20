@@ -236,6 +236,9 @@ export const contracts = {
     },
     hop: {
       hopDaiWrapper: "0x6C928f435d1F3329bABb42d69CCF043e3900EcF1",
+      daiLiquidityPool: "0x24afDcA4653042C6D08fb1A754b2535dAcF6Eb24",
+      lpDai: "0x5300648b1cFaa951bbC1d56a4457083D92CFa33F",
+      daiRewards2: "0xBF7a02d963b23D84313F07a04ad663409CEE5A92",
     },
     spark: {
       sDai: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
@@ -268,6 +271,8 @@ export const contracts = {
     },
     arbitrumBridge: {
       gatewayRouter: "0x5288c571Fd7aD117beA99bF60FE0846C4E84F933",
+      arbSys: "0x0000000000000000000000000000000000000064",
+      l2Erc20Gateway: "0x09e9222E96E7B4AE2a407B98d48e330053351EEe",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
