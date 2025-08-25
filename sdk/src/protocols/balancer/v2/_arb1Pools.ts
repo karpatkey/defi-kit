@@ -805,6 +805,23 @@ export default [
     ],
   },
   {
+    bpt: "0x7967FA58B9501600D96bD843173b9334983EE6E6",
+    id: "0x7967fa58b9501600d96bd843173b9334983ee6e600020000000000000000056e",
+    name: "ECLP-wstETH-WETH",
+    type: "GyroE",
+    gauge: "0x96d7C70c80518Ee189CB6ba672FbD22E4fDD9c19",
+    tokens: [
+      {
+        address: "0x5979D7b546E38E414F7E9822514be443A4800529",
+        symbol: "wstETH",
+      },
+      {
+        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        symbol: "WETH",
+      },
+    ],
+  },
+  {
     bpt: "0x7B54C44fBe6Db6D97FD22b8756f89c0aF16202Cc",
     id: "0x7b54c44fbe6db6d97fd22b8756f89c0af16202cc00000000000000000000053c",
     name: "ETHx/wstETH",

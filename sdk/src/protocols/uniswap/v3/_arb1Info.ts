@@ -14,12 +14,12 @@ export default [
     symbol: "WETH",
   },
   {
-    address: "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
-    symbol: "WBTC",
-  },
-  {
     address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
     symbol: "USDC",
+  },
+  {
+    address: "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+    symbol: "WBTC",
   },
   {
     address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
@@ -42,12 +42,12 @@ export default [
     symbol: "GMX",
   },
   {
-    address: "0x45D9831d8751B2325f3DBf48db748723726e1C8c",
-    symbol: "EVA",
-  },
-  {
     address: "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
     symbol: "LINK",
+  },
+  {
+    address: "0x45D9831d8751B2325f3DBf48db748723726e1C8c",
+    symbol: "EVA",
   },
   {
     address: "0x431402e8b9dE9aa016C743880e04E517074D8cEC",
@@ -70,20 +70,20 @@ export default [
     symbol: "CRYPTO",
   },
   {
-    address: "0x81314B07b2f8796a477f1c31c92241ee8D86301D",
-    symbol: "AVATAR",
+    address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+    symbol: "DAI",
   },
   {
-    address: "0xD8369C2EDA18dD6518eABb1F85BD60606dEb39Ec",
-    symbol: "WETH",
+    address: "0x81314B07b2f8796a477f1c31c92241ee8D86301D",
+    symbol: "AVATAR",
   },
   {
     address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
     symbol: "UNI",
   },
   {
-    address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
-    symbol: "DAI",
+    address: "0xD8369C2EDA18dD6518eABb1F85BD60606dEb39Ec",
+    symbol: "WETH",
   },
   {
     address: "0x092bAaDB7DEf4C3981454dD9c0A0D7FF07bCFc86",

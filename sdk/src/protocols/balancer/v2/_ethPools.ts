@@ -5422,6 +5422,23 @@ export default [
     ],
   },
   {
+    bpt: "0xe805c864992e6a6cBf46E7E81C7154B78155D0ac",
+    id: "0xe805c864992e6a6cbf46e7e81c7154b78155d0ac000200000000000000000210",
+    name: "50SMT-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xB17548c7B510427baAc4e267BEa62e800b247173",
+        symbol: "SMT",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+  },
+  {
     bpt: "0xe8cc7E765647625B95F59C15848379D10B9AB4af",
     id: "0xe8cc7e765647625b95f59c15848379d10b9ab4af0002000000000000000001de",
     name: "20WETH-80WNCG",
