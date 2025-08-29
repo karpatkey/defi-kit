@@ -210,4 +210,15 @@ export default [
     aTokenAddress: "0x6b030Ff3FB9956B1B69f475B77aE0d3Cf2CC5aFa",
     variableDebtTokenAddress: "0x80cA0d8C38d2e2BcbaB66aA1648Bd1C7160500FE",
   },
+  {
+    symbol: "tBTC",
+    token: "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
+    usageAsCollateralEnabled: true,
+    borrowingEnabled: false,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0x62fC96b27a510cF4977B59FF952Dc32378Cc221d",
+    variableDebtTokenAddress: "0xB5b46F918C2923fC7f26DB76e8a6A6e9C4347Cf9",
+  },
 ] as const

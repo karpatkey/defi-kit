@@ -162,12 +162,6 @@ export default [
       "Fortifying crypto networks with MPC/SSV security, slash insurance, and open source contributions. Connect with us at https://linktr.ee/lavenderfive.",
   },
   {
-    id: "0x366e7f2e3462e31001560875b9877a0714e90d9c",
-    name: "A41",
-    description:
-      "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
-  },
-  {
     id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
     name: "Fox & Yaga",
     description:
@@ -196,5 +190,17 @@ export default [
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
+  },
+  {
+    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
+    name: "Meria",
+    description:
+      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
+  },
+  {
+    id: "0x366e7f2e3462e31001560875b9877a0714e90d9c",
+    name: "A41",
+    description:
+      "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
   },
 ] as const
