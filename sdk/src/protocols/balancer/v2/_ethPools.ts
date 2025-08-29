@@ -3988,23 +3988,6 @@ export default [
     ],
   },
   {
-    bpt: "0xA2E9242163d54b536583368a01b5D232C95aA884",
-    id: "0xa2e9242163d54b536583368a01b5d232c95aa884000000000000000000000653",
-    name: "ePENDLE/PENDLE",
-    type: "ComposableStable",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x22Fc5A29bd3d6CCe19a06f844019fd506fCe4455",
-        symbol: "ePendle",
-      },
-      {
-        address: "0x808507121B80c02388fAd14726482e061B8da827",
-        symbol: "PENDLE",
-      },
-    ],
-  },
-  {
     bpt: "0xa33E376932b2c01323F0A7f9bBe0a53F7662B2E9",
     id: "0xa33e376932b2c01323f0a7f9bbe0a53f7662b2e900010000000000000000031d",
     name: "14YFI-14UNI-14WBTC-14CHZ-14LINK-14COMP-14WETH",
@@ -5418,6 +5401,23 @@ export default [
       {
         address: "0xf951E335afb289353dc249e82926178EaC7DEd78",
         symbol: "swETH",
+      },
+    ],
+  },
+  {
+    bpt: "0xe805c864992e6a6cBf46E7E81C7154B78155D0ac",
+    id: "0xe805c864992e6a6cbf46e7e81c7154b78155d0ac000200000000000000000210",
+    name: "50SMT-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xB17548c7B510427baAc4e267BEa62e800b247173",
+        symbol: "SMT",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
       },
     ],
   },

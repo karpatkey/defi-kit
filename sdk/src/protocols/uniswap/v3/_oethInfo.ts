@@ -14,20 +14,20 @@ export default [
     symbol: "USDC",
   },
   {
-    address: "0x4200000000000000000000000000000000000042",
-    symbol: "OP",
-  },
-  {
     address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
     symbol: "USDC",
   },
   {
-    address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
-    symbol: "WBTC",
+    address: "0x4200000000000000000000000000000000000042",
+    symbol: "OP",
   },
   {
     address: "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
     symbol: "WLD",
+  },
+  {
+    address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
+    symbol: "WBTC",
   },
   {
     address: "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
