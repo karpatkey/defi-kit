@@ -88,12 +88,6 @@ export default [
     description: "Dappnode vault, fiber gigabit uplink, UPS",
   },
   {
-    id: "0x0f6f727421ed6229fcac821147ae104c9326229e",
-    name: "Dappnode vault",
-    description:
-      "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
-  },
-  {
     id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
     name: "Stakers Union Vault",
     description:

@@ -201,6 +201,23 @@ export default [
     ],
   },
   {
+    bpt: "0x731290da2FA9970304E270940a91F3244B4637c9",
+    id: "0x731290da2fa9970304e270940a91f3244b4637c900020000000000000000016e",
+    name: "99USDC/1USDT",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+        symbol: "USDC",
+      },
+      {
+        address: "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+        symbol: "USDT",
+      },
+    ],
+  },
+  {
     bpt: "0x73A7fe27fe9545D53924E529Acf11F3073841b9e",
     id: "0x73a7fe27fe9545d53924e529acf11f3073841b9e000000000000000000000133",
     name: "wrsETH/wETH",
