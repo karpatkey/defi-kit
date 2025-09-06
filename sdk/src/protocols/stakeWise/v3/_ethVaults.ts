@@ -120,16 +120,16 @@ export default [
       "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
-    id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
-    name: "Verse ETH Staking",
-    description:
-      "Earn rewards by staking your ETH in the Verse Ecosystem vault",
-  },
-  {
     id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
     name: "CommonWealth",
     description:
       "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
+  },
+  {
+    id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
+    name: "Verse ETH Staking",
+    description:
+      "Earn rewards by staking your ETH in the Verse Ecosystem vault",
   },
   {
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
@@ -162,10 +162,10 @@ export default [
       "Fortifying crypto networks with MPC/SSV security, slash insurance, and open source contributions. Connect with us at https://linktr.ee/lavenderfive.",
   },
   {
-    id: "0x366e7f2e3462e31001560875b9877a0714e90d9c",
-    name: "A41",
+    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
+    name: "Meria",
     description:
-      "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
+      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
@@ -196,5 +196,11 @@ export default [
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
+  },
+  {
+    id: "0x366e7f2e3462e31001560875b9877a0714e90d9c",
+    name: "A41",
+    description:
+      "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
   },
 ] as const
