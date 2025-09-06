@@ -3235,4 +3235,25 @@ export default [
     cvxDepositToken: "0xdFfefB650EaD7393CFB24e64f07DEFA03969415f",
     rewarder: "0xe103350ac2712cFAF470cB6da0F8B5aa517d10eF",
   },
+  {
+    name: "JUSD USDC",
+    id: "489",
+    crvLPToken: "0x6A0c68Bc96658A2B97201d94986Bf7753000f2cF",
+    cvxDepositToken: "0x2Ff84F68556D9055b012Ad8D3450787cDA06d9ED",
+    rewarder: "0x59cA1f2cd4C61146C9360058Db869CBccf5caa18",
+  },
+  {
+    name: "uniBTCwBTC",
+    id: "490",
+    crvLPToken: "0x404fdadA7fC68B5B633D184067c9643732f8A045",
+    cvxDepositToken: "0x4aAc246fffDa2fa82F849b8F1a37fC0b4Dc83018",
+    rewarder: "0x129Bd315f8F2CB7288654057953f75986BBa0Af4",
+  },
+  {
+    name: "litsfrxUSD",
+    id: "491",
+    crvLPToken: "0x640Bc08845EA4bd89842D51D48c8f53EAC84Cfa6",
+    cvxDepositToken: "0xA7B150e49E301242FeDA0baa72F25d39232365aA",
+    rewarder: "0x2a50b1f9bf10B32Bc969eC91B2066F7D1C603EF9",
+  },
 ] as const

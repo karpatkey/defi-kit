@@ -3988,23 +3988,6 @@ export default [
     ],
   },
   {
-    bpt: "0xA2E9242163d54b536583368a01b5D232C95aA884",
-    id: "0xa2e9242163d54b536583368a01b5d232c95aa884000000000000000000000653",
-    name: "ePENDLE/PENDLE",
-    type: "ComposableStable",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x22Fc5A29bd3d6CCe19a06f844019fd506fCe4455",
-        symbol: "ePendle",
-      },
-      {
-        address: "0x808507121B80c02388fAd14726482e061B8da827",
-        symbol: "PENDLE",
-      },
-    ],
-  },
-  {
     bpt: "0xa33E376932b2c01323F0A7f9bBe0a53F7662B2E9",
     id: "0xa33e376932b2c01323f0a7f9bbe0a53f7662b2e900010000000000000000031d",
     name: "14YFI-14UNI-14WBTC-14CHZ-14LINK-14COMP-14WETH",
@@ -4072,23 +4055,6 @@ export default [
       {
         address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         symbol: "WETH",
-      },
-    ],
-  },
-  {
-    bpt: "0xa468570dB143321Bc034BbD74A6Cc2694d15B252",
-    id: "0xa468570db143321bc034bbd74a6cc2694d15b252000000000000000000000629",
-    name: "SWEEP-USDC-BPT",
-    type: "ComposableStable",
-    gauge: null,
-    tokens: [
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-      },
-      {
-        address: "0xB88a5Ac00917a02d82c7cd6CEBd73E2852d43574",
-        symbol: "SWEEP",
       },
     ],
   },
