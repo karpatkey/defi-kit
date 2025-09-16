@@ -19,6 +19,23 @@ export default [
     ],
   },
   {
+    bpt: "0x057cCEDf34e92B156822c473D505c3Bc17811138",
+    id: "0x057ccedf34e92b156822c473d505c3bc17811138000200000000000000000204",
+    name: "ECLP-WETH-cbBTC-dyn",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4200000000000000000000000000000000000006",
+        symbol: "WETH",
+      },
+      {
+        address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        symbol: "cbBTC",
+      },
+    ],
+  },
+  {
     bpt: "0x0C659734f1eEF9C63B7Ebdf78a164CDd745586Db",
     id: "0x0c659734f1eef9c63b7ebdf78a164cdd745586db000000000000000000000046",
     name: "USDC/USDbC/axlUSDC",
@@ -87,6 +104,23 @@ export default [
       {
         address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         symbol: "USDC",
+      },
+    ],
+  },
+  {
+    bpt: "0x280cFd4dCD4D44b90ec6345ffC20a8b088b8CA59",
+    id: "0x280cfd4dcd4d44b90ec6345ffc20a8b088b8ca590002000000000000000001e8",
+    name: "ECLP-WETH-GYD-dyn",
+    type: "GyroE",
+    gauge: "0x5307fe148Ccbd1522db44A566890a8055794355C",
+    tokens: [
+      {
+        address: "0x4200000000000000000000000000000000000006",
+        symbol: "WETH",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
       },
     ],
   },
@@ -167,23 +201,6 @@ export default [
       {
         address: "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
         symbol: "USDbC",
-      },
-    ],
-  },
-  {
-    bpt: "0x2dCdAB065B356e62c2966BAe332268A286cc8cBD",
-    id: "0x2dcdab065b356e62c2966bae332268a286cc8cbd0002000000000000000001c7",
-    name: "ECLP-WETH-USDT",
-    type: "GyroE",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
-      },
-      {
-        address: "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2",
-        symbol: "USDT",
       },
     ],
   },
@@ -324,23 +341,6 @@ export default [
       {
         address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         symbol: "USDC",
-      },
-    ],
-  },
-  {
-    bpt: "0x6B1BaA0A046C9eBB7Da8668B66E9282A896E1Edb",
-    id: "0x6b1baa0a046c9ebb7da8668b66e9282a896e1edb000200000000000000000094",
-    name: "50WETH-50USDbC",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
-      },
-      {
-        address: "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
-        symbol: "USDbC",
       },
     ],
   },

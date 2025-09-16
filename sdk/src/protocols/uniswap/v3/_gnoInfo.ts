@@ -6,12 +6,12 @@ export default [
     symbol: "USDC.e",
   },
   {
-    address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
-    symbol: "WXDAI",
-  },
-  {
     address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
     symbol: "WETH",
+  },
+  {
+    address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+    symbol: "WXDAI",
   },
   {
     address: "0x1D1498166DDCEeE616a6d99868e1E0677300056f",
@@ -120,6 +120,14 @@ export default [
   {
     address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
     symbol: "EURe",
+  },
+  {
+    address: "0xCD2f64112ec04e21cC56F7bf2294A6A37790305e",
+    symbol: "USDC.e",
+  },
+  {
+    address: "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
+    symbol: "ZCHF",
   },
   {
     address: "0xE0eD85F76D9C552478929fab44693E03F0899F23",

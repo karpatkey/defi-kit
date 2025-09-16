@@ -53,6 +53,10 @@ export default [
         address: "0x5C5b196aBE0d54485975D1Ec29617D42D9198326",
         symbol: "sdeUSD",
       },
+      {
+        address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+        symbol: "rsETH",
+      },
     ],
   },
   {
