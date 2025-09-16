@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.21.5](https://github.com/karpatkey/defi-kit/compare/v2.21.4...v2.21.5) (2025-09-16)
+
+
+### Bug Fixes
+
+* StakeWise v3 script ([#488](https://github.com/karpatkey/defi-kit/issues/488)) ([5305b51](https://github.com/karpatkey/defi-kit/commit/5305b5198bbea58ed101371400f4e17df348b75e))
+
 ## [2.21.4](https://github.com/karpatkey/defi-kit/compare/v2.21.3...v2.21.4) (2025-09-16)
 
 
