@@ -67,10 +67,25 @@ export default [
       "stakewise V3 vault on gnosis, brought to you by alpineforge.eu with <3\nhappy staking! 🦉hoot, hoot!",
   },
   {
+    id: "0xeba0b1524714e50f5844db7f9f821bba08402974",
+    name: "nst",
+    description: "private, 5% fee, no smoothing",
+  },
+  {
+    id: "0x39f27264ebaa1e3abf085df3845782d450ac942b",
+    name: "Pro Fox",
+    description: null,
+  },
+  {
     id: "0x79dbec2d18a758c62d410f9763956d52fbd4a3cc",
     name: "Stakers.space",
     description:
       "Gnosis Vault by Stakers.space | Fee 10% | Learn more about Gnosis staking at https://stakers.space/gnosis-staking.",
+  },
+  {
+    id: "0x451dbe45b4d4d158937f974e16b85342c8788bcd",
+    name: "Home vault",
+    description: "My home vault.",
   },
   {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
@@ -83,9 +98,20 @@ export default [
     description: "Stacked by the Chartreuse Node Crew",
   },
   {
+    id: "0x1f87105abbd23b49f2abf0995b21b52b97aacdc4",
+    name: "AI IA Private Vault",
+    description: null,
+  },
+  {
     id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
     name: "Wunode",
     description: "Dappnode vault, fiber gigabit uplink, UPS",
+  },
+  {
+    id: "0xb221ea4b710043f3530d2bc912dbef6cab2b5c3d",
+    name: "Day One Law Team&Client Vault",
+    description:
+      "At Day One Law, we don’t just advise on crypto—we use the products, run the infrastructure, and stake on-chain alongside our clients. Our private Stakewise vault on Gnosis Chain is exclusively for our clients and team members, reinforcing our commitment to supporting the ecosystems that matter.\n\nIf you’re already working with us, you’re in. If not, and you’re looking for a legal partner who actually understands the tech, uses the protocols, and aligns with builders and investors in the space, let’s talk.\n\nWe support founders, investors, and operators pushing crypto forward—structuring their projects, securing regulatory clarity, and aligning incentives for long-term success. Our clients get real legal and strategic value, plus access to exclusive opportunities like this.\n\nWe’re not just advisors—we’re on-chain, active participants in the same products and protocols shaping the future of decentralized finance. If that’s the kind of partner you want, reach out.",
   },
   {
     id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
@@ -97,5 +123,15 @@ export default [
     id: "0xb352b25eca7707edc33580572a251e4cab06d2df",
     name: "DVault",
     description: null,
+  },
+  {
+    id: "0x1f7e70d661279a8bb657417bbc71b82b948752b2",
+    name: "Dappnode Test 2",
+    description: null,
+  },
+  {
+    id: "0xe77141d0047691d4464fe1f3d3615ca10b74830b",
+    name: "cncVault2",
+    description: "Stacked by the Chartreuse Node Crew",
   },
 ] as const

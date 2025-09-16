@@ -14,6 +14,12 @@ export default [
       "Chorus One’s ground-breaking MEV research ensures the highest yields with top-tier security and enterprise-level infrastructure. Start staking ETH today.",
   },
   {
+    id: "0xb266274f55e784689e97b7e363b0666d92e6305b",
+    name: "NodeSet Private Vault",
+    description:
+      "A vault for private users. Powered by NodeSet's uniquely decentralized infrastructure network.",
+  },
+  {
     id: "0xb36fc5e542cb4fc562a624912f55da2758998113",
     name: "Serenita - Powered by Vero",
     description:
@@ -30,6 +36,12 @@ export default [
     name: "Blockshard DVT Pioneers",
     description:
       "The first ship has launched — nearly full and forging ahead into the staking frontier.\n\nThis high-performance pool runs on Distributed Validator Technology (DVT) with no single point of failure and maximum fault tolerance. We use SSV and Obol, and share 90% of protocol rewards with stakers.\n\n⚠️ Capacity capped at 3200 ETH.\n🚀 Follow the Pioneers’ path in our new pool: Blockshard DVT Explorers",
+  },
+  {
+    id: "0x4425bb38d4ca95e522f9308175ec7d8188e8284e",
+    name: "Dream vault",
+    description:
+      "This is a private vault and accumulating ETH for a home node runner from family and friends",
   },
   {
     id: "0x8a93a876912c9f03f88bc9114847cf5b63c89f56",
@@ -56,6 +68,12 @@ export default [
       "Reliable non-custodial Validator run by the industry leader - Allnodes",
   },
   {
+    id: "0x3fcbc480f3bb3ce8379bb475d95de603f188d9c0",
+    name: "Stakeway Private Vault 1",
+    description:
+      "Stakeway by Gateway.fm is a premier staking provider offering Enterprise Grade Infrastructure tailored for customers seeking reliable and secure staking solutions. With a focus on performance and trust, we deliver a robust platform. Our services are designed to optimize staking experience, ensuring seamless operation and maximum returns.",
+  },
+  {
     id: "0x99510bfc5d420cd3c41458f4692b1c3321908734",
     name: "Stakely",
     description:
@@ -77,6 +95,11 @@ export default [
     name: "Blockscape Super Early Bird",
     description:
       "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
+  },
+  {
+    id: "0x0af0a2671bb19d4be5d6c6899ec712341e472d4b",
+    name: "Illus Capital",
+    description: "Illus Capital Private Staking Vault",
   },
   {
     id: "0x481afcd21a3447a7a04c4afd968df877b76d2310",
@@ -124,6 +147,11 @@ export default [
     name: "Verse ETH Staking",
     description:
       "Earn rewards by staking your ETH in the Verse Ecosystem vault",
+  },
+  {
+    id: "0x4e0a83509f5d0ef2e55b6f08dbf2462b72bcd30a",
+    name: "Solo Staker",
+    description: "Staking forever",
   },
   {
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
