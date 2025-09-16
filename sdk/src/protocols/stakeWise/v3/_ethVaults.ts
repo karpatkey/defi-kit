@@ -90,22 +90,16 @@ export default [
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
   {
+    id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
+    name: "Stakesaurus SEA Home Nodes",
+    description:
+      "High availability setup using a network of home-based nodes in Southeast Asia running minority clients by Stakesaurus' community\n\nCentralised infrastructure is detrimental to both the network and your own ETH (e.g., cloud services, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes acts as a fallback for one another to provide a high-availability staking service.\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws.\n\nStake with this vault to support my efforts in growing the Solo staking community in Asia!",
+  },
+  {
     id: "0xd21b6bc0a1434aef8cf468a20bf2daefcaf6eab9",
     name: "Caliber",
     description:
       "Caliber is a Web3 Venture Builder empowering founders to build impactful startups. We offer comprehensive support - from funding and engineering to strategy and legal - to drive innovation in consumer apps, DeFi, and infrastructure.",
-  },
-  {
-    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
-    name: "Blockshard DVT Explorers",
-    description:
-      "The next ship is ready — unlimited capacity for the next wave of stakers.\n\nBuilt on the same secure DVT foundation as the Pioneers vault, with SSV and Obol powering fault-tolerant performance. 90% of DVT protocol incentives are passed on to stakers.\n\nFor those continuing the journey — with a 5% fee and no deposit cap.",
-  },
-  {
-    id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
-    name: "Stakesaurus SEA Home Nodes",
-    description:
-      "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community\n\nCentralised infrastructure is bad for both the network and your own ETH (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service!\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws — e.g. Most slashing events are due to institutions over-engineering their setups.\n\nAt Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
   },
   {
     id: "0xdbdee04c72a02a740b9f26ada9203582c8a99daf",
@@ -120,16 +114,16 @@ export default [
       "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
-    id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
-    name: "Verse ETH Staking",
-    description:
-      "Earn rewards by staking your ETH in the Verse Ecosystem vault",
-  },
-  {
     id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
     name: "CommonWealth",
     description:
       "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
+  },
+  {
+    id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
+    name: "Verse ETH Staking",
+    description:
+      "Earn rewards by staking your ETH in the Verse Ecosystem vault",
   },
   {
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
@@ -156,22 +150,22 @@ export default [
       "Minimum Fee - Unrestricted Maximum MEV - Zero-Cloud - Private Datacentre - 24/7 Engineering Support - All included in Simply Staking's Premium Vault...\n\n\n- Fee: Competitive 3.75%.\n- MEV: Extensive list of MEV relays, free of restrictions, with the ultimate goal of using a global set of relays to maximise profit.\n- Private Data Centre Operation: Your ETH is securely managed in our privately operated data center in Malta, prioritising security and reliability, free from the dependencies of cloud services.",
   },
   {
+    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
+    name: "Blockshard DVT Explorers",
+    description:
+      "The next ship is ready — unlimited capacity for the next wave of stakers.\n\nBuilt on the same secure DVT foundation as the Pioneers vault, with SSV and Obol powering fault-tolerant performance. 90% of DVT protocol incentives are passed on to stakers.\n\nFor those continuing the journey — with a 5% fee and no deposit cap.",
+  },
+  {
     id: "0x5fe23da0835ecf01f4faf9b07fdcfd603dfbd146",
     name: "Lavender.Five Nodes",
     description:
       "Fortifying crypto networks with MPC/SSV security, slash insurance, and open source contributions. Connect with us at https://linktr.ee/lavenderfive.",
   },
   {
-    id: "0x366e7f2e3462e31001560875b9877a0714e90d9c",
-    name: "A41",
+    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
+    name: "Meria",
     description:
-      "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
-  },
-  {
-    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
-    name: "Fox & Yaga",
-    description:
-      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
+      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0x302be829c61c287787030888bbcf11115ecd5773",
@@ -196,5 +190,17 @@ export default [
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
+  },
+  {
+    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
+    name: "Fox & Yaga",
+    description:
+      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
+  },
+  {
+    id: "0x366e7f2e3462e31001560875b9877a0714e90d9c",
+    name: "A41",
+    description:
+      "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
   },
 ] as const

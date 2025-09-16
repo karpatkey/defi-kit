@@ -4076,23 +4076,6 @@ export default [
     ],
   },
   {
-    bpt: "0xa468570dB143321Bc034BbD74A6Cc2694d15B252",
-    id: "0xa468570db143321bc034bbd74a6cc2694d15b252000000000000000000000629",
-    name: "SWEEP-USDC-BPT",
-    type: "ComposableStable",
-    gauge: null,
-    tokens: [
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-      },
-      {
-        address: "0xB88a5Ac00917a02d82c7cd6CEBd73E2852d43574",
-        symbol: "SWEEP",
-      },
-    ],
-  },
-  {
     bpt: "0xa5533A44D06800Eaf2DaAD5aAd3f9AA9e1DC3614",
     id: "0xa5533a44d06800eaf2daad5aad3f9aa9e1dc36140002000000000000000001b8",
     name: "20PAR-80MIMO",
@@ -5418,6 +5401,23 @@ export default [
       {
         address: "0xf951E335afb289353dc249e82926178EaC7DEd78",
         symbol: "swETH",
+      },
+    ],
+  },
+  {
+    bpt: "0xe805c864992e6a6cBf46E7E81C7154B78155D0ac",
+    id: "0xe805c864992e6a6cbf46e7e81c7154b78155d0ac000200000000000000000210",
+    name: "50SMT-50WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xB17548c7B510427baAc4e267BEa62e800b247173",
+        symbol: "SMT",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
       },
     ],
   },

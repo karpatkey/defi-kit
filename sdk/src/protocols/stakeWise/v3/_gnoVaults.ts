@@ -20,15 +20,15 @@ export default [
       "Welcome to the Nedo Vault on StakeWise v3!\n\nWhy Stake with Nedo?\n\nMaximized Returns: Nedo is dedicated to boosting your APY through operational excellence and cost efficiency. We meticulously manage operational costs to enhance your returns and accelerate asset growth.\n\nUncompromised Security: Security is our top priority. We employ cutting-edge measures to safeguard your investments, making Nedo a trusted platform for both institutional and individual investors.\n\nUnwavering Stability: By reinvesting operational fees into our infrastructure, we ensure continuous uptime and reliable performance. Stake with confidence knowing your assets are in steady hands.\n\nTransparency: We believe in openness. Explore our infrastructure in real-time on our transparency dashboard at nedo.fm/gnosis\n\nJoin Nedo Today: Experience secure and profitable staking on the Gnosis Chain with StakeWise v3. Let your assets work harder for you with Nedo.\n\nContact us at: gm@nedo.fm",
   },
   {
+    id: "0xf7ee331fe545d25c91977161eed2957c5cffd313",
+    name: "Ten Percent Fee",
+    description: "The 10% Fee Vault",
+  },
+  {
     id: "0x0686f6bbb28fd0642aebf5b89654aeba9cc73dea",
     name: "Chorus One",
     description:
       "Chorus One is a trusted staking provider, offering secure and reliable services to individual and institutional stakers alike. Operating on 60+ blockchain networks, we're the choice of over 150,000 delegators worldwide, including leading institutions like BitGo, Ledger, and Hex Trust.\n\nKnown for our enterprise-grade infrastructure and research-driven approach, we've never been slashed and consistently strive to deliver the highest possible yields for our stakers.\n\nStake your GNO with confidence today. Learn more at chorus.one",
-  },
-  {
-    id: "0xf7ee331fe545d25c91977161eed2957c5cffd313",
-    name: "Ten Percent Fee",
-    description: "The 10% Fee Vault",
   },
   {
     id: "0x33c346928ed9249cf1d5fc16ae32a8cffa1671ad",
@@ -88,15 +88,14 @@ export default [
     description: "Dappnode vault, fiber gigabit uplink, UPS",
   },
   {
-    id: "0x0f6f727421ed6229fcac821147ae104c9326229e",
-    name: "Dappnode vault",
-    description:
-      "This is a vault from a home node runner using a Dappnode secured by an UPS and connected via FTTH. Everybody is welcome. 5% Fees",
-  },
-  {
     id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
     name: "Stakers Union Vault",
     description:
       "The home-stakers collective:\nEmpowering individual stakers, preserving decentralization across Ethereum-aligned networks.",
+  },
+  {
+    id: "0xb352b25eca7707edc33580572a251e4cab06d2df",
+    name: "DVault",
+    description: null,
   },
 ] as const
