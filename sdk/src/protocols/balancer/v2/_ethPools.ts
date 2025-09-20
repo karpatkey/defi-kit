@@ -1776,6 +1776,23 @@ export default [
     ],
   },
   {
+    bpt: "0x4446d101E91D042b5d08b62fdE126E307F1aCD57",
+    id: "0x4446d101e91d042b5d08b62fde126e307f1acd570002000000000000000006f9",
+    name: "80VLR/20WETH",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4e107a0000DB66f0E9Fd2039288Bf811dD1f9c74",
+        symbol: "VLR",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+  },
+  {
     bpt: "0x4626d81b3a1711bEb79f4CEcFf2413886d461677",
     id: "0x4626d81b3a1711beb79f4cecff2413886d461677000200000000000000000011",
     name: "B-50BAL-50DAI",

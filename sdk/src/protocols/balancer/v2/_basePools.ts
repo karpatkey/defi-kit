@@ -260,6 +260,23 @@ export default [
     ],
   },
   {
+    bpt: "0x44d46A43ceb5A1e04Ef12B5731de5F9917f0eC8A",
+    id: "0x44d46a43ceb5a1e04ef12b5731de5f9917f0ec8a000200000000000000000208",
+    name: "20WETH/80VLR",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4200000000000000000000000000000000000006",
+        symbol: "WETH",
+      },
+      {
+        address: "0x4e107a0000DB66f0E9Fd2039288Bf811dD1f9c74",
+        symbol: "VLR",
+      },
+    ],
+  },
+  {
     bpt: "0x4c42B5057A8663E2b1ac21685D1502c937a03817",
     id: "0x4c42b5057a8663e2b1ac21685d1502c937a0381700020000000000000000019c",
     name: "ECLP-WETH-USDC",
@@ -621,6 +638,23 @@ export default [
       {
         address: "0x4200000000000000000000000000000000000006",
         symbol: "WETH",
+      },
+    ],
+  },
+  {
+    bpt: "0xD97d36e71463c490a01556f0bbEa777fDf2d48DC",
+    id: "0xd97d36e71463c490a01556f0bbea777fdf2d48dc000200000000000000000209",
+    name: "ECLP-wstUSR-GYD",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xB67675158B412D53fe6B68946483ba920b135bA1",
+        symbol: "wstUSR",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
       },
     ],
   },

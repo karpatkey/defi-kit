@@ -50,12 +50,12 @@ export default [
     symbol: "HEGIC",
   },
   {
-    address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
-    symbol: "CRV",
-  },
-  {
     address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
     symbol: "AAVE",
+  },
+  {
+    address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
+    symbol: "CRV",
   },
   {
     address: "0x5979D7b546E38E414F7E9822514be443A4800529",
@@ -74,20 +74,20 @@ export default [
     symbol: "DAI",
   },
   {
-    address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
-    symbol: "UNI",
-  },
-  {
-    address: "0x092bAaDB7DEf4C3981454dD9c0A0D7FF07bCFc86",
-    symbol: "MOR",
-  },
-  {
     address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
     symbol: "CRYPTO",
   },
   {
+    address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+    symbol: "UNI",
+  },
+  {
     address: "0x6985884C4392D348587B19cb9eAAf157F13271cd",
     symbol: "ZRO",
+  },
+  {
+    address: "0x092bAaDB7DEf4C3981454dD9c0A0D7FF07bCFc86",
+    symbol: "MOR",
   },
   {
     address: "0xD8369C2EDA18dD6518eABb1F85BD60606dEb39Ec",
