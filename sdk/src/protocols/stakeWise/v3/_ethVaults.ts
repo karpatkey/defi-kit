@@ -196,12 +196,6 @@ export default [
       "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
-    id: "0x302be829c61c287787030888bbcf11115ecd5773",
-    name: "Swiss Liquid Staking",
-    description:
-      "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
-  },
-  {
     id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
     name: "DSRV",
     description:
@@ -220,15 +214,15 @@ export default [
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
   {
+    id: "0x302be829c61c287787030888bbcf11115ecd5773",
+    name: "Swiss Liquid Staking",
+    description:
+      "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
+  },
+  {
     id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
     name: "Fox & Yaga",
     description:
       "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
-  },
-  {
-    id: "0x366e7f2e3462e31001560875b9877a0714e90d9c",
-    name: "A41",
-    description:
-      "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
   },
 ] as const
