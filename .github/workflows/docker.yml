@@ -39,6 +39,15 @@ jobs:
         if: github.event_name != 'release' || github.event.action != 'published'
         uses: karpatkey/build-actions/build-docker-image@main
       
+  deploy_prod:                                   # <-- new job just for release deploy
+    if: github.event_name == 'release' && github.event.action == 'published'
+    runs-on: self-hosted
+    permissions:
+      deployments: write                         # <-- allow creating the environment deployment
+      contents: read
+    environment:
+      name: production                           # <-- triggers Required reviewers approval
+    steps:
+      - uses: actions/checkout@v4
       - name: deploy prod release
-        if: github.event_name == 'release' && github.event.action == 'published'
         uses: karpatkey/build-actions/release-prod@main
