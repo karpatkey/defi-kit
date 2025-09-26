@@ -1749,4 +1749,12 @@ export default [
     address: "0xe9B076B476D8865cDF79D1Cf7DF420EE397a7f75",
     symbol: "FUND",
   },
+  {
+    address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+    symbol: "ETHx",
+  },
+  {
+    address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+    symbol: "rsETH",
+  },
 ] as const
