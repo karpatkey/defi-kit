@@ -108,23 +108,6 @@ export default [
     ],
   },
   {
-    bpt: "0x280cFd4dCD4D44b90ec6345ffC20a8b088b8CA59",
-    id: "0x280cfd4dcd4d44b90ec6345ffc20a8b088b8ca590002000000000000000001e8",
-    name: "ECLP-WETH-GYD-dyn",
-    type: "GyroE",
-    gauge: "0x5307fe148Ccbd1522db44A566890a8055794355C",
-    tokens: [
-      {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
-      },
-      {
-        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
-        symbol: "GYD",
-      },
-    ],
-  },
-  {
     bpt: "0x2A5757b60987FF10385De1D4D923792f6fdCfFf1",
     id: "0x2a5757b60987ff10385de1d4d923792f6fdcfff100010000000000000000019e",
     name: "25cbETH-25SNUT-25NUT-25cbBTC",
@@ -256,6 +239,23 @@ export default [
       {
         address: "0xbeFD5C25A59ef2C1316c5A4944931171F30Cd3E4",
         symbol: "GOLD",
+      },
+    ],
+  },
+  {
+    bpt: "0x44d46A43ceb5A1e04Ef12B5731de5F9917f0eC8A",
+    id: "0x44d46a43ceb5a1e04ef12b5731de5f9917f0ec8a000200000000000000000208",
+    name: "20WETH/80VLR",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4200000000000000000000000000000000000006",
+        symbol: "WETH",
+      },
+      {
+        address: "0x4e107a0000DB66f0E9Fd2039288Bf811dD1f9c74",
+        symbol: "VLR",
       },
     ],
   },
@@ -545,31 +545,6 @@ export default [
       {
         address: "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2",
         symbol: "USDT",
-      },
-    ],
-  },
-  {
-    bpt: "0xc8Fe41D2456d578cA9dB99AF9E4f36db923321D8",
-    id: "0xc8fe41d2456d578ca9db99af9e4f36db923321d80001000000000000000001a4",
-    name: "25OLAS-25WETH-25CBBTC-25USDC",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
-      },
-      {
-        address: "0x54330d28ca3357F294334BDC454a032e7f353416",
-        symbol: "OLAS",
-      },
-      {
-        address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-        symbol: "USDC",
-      },
-      {
-        address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-        symbol: "cbBTC",
       },
     ],
   },
