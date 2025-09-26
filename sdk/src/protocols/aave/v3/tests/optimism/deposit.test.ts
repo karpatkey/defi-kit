@@ -41,14 +41,14 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.aOptWeth.approve(
           contracts.optimism.aaveV3.wrappedTokenGatewayV3,
-          parseEther("1")
+          parseEther("0.5")
         )
       ).not.toRevert()
 
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.withdrawETH(
           contracts.optimism.aaveV3.poolV3,
-          parseEther("1"),
+          parseEther("0.5"),
           wallets.avatar
         )
       ).not.toRevert()
@@ -56,7 +56,7 @@ describe("aaveV3", () => {
       await expect(
         kit.asMember.aaveV3.wrappedTokenGatewayV3.withdrawETH(
           contracts.optimism.aaveV3.poolV3,
-          parseEther("1"),
+          parseEther("0.5"),
           wallets.member
         )
       ).toBeForbidden(Status.ParameterNotAllowed)

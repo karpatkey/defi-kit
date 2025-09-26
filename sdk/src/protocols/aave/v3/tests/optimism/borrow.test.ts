@@ -7,7 +7,7 @@ import { oeth as kit } from "../../../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 import { Chain } from "../../../../../index"
 
-const usdcHolder = "0xBB9B3e1271E67ce0DAFd2c4d47Ef67dF8768C6F4"
+const usdcHolder = "0xcE8CcA271Ebc0533920C83d39F417ED6A0abB7D0"
 
 describe("aaveV3", () => {
   describe("borrow", () => {
@@ -171,7 +171,7 @@ describe("aaveV3", () => {
 
     it("only allows repaying USDC from avatar", async () => {
       await stealErc20(
-        Chain.eth,
+        Chain.oeth,
         contracts.optimism.usdc,
         parseUnits("100", 6),
         usdcHolder
