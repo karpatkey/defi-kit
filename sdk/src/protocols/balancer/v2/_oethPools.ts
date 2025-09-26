@@ -163,6 +163,23 @@ export default [
     ],
   },
   {
+    bpt: "0x587c2Ac5303D22E09cFFF5F3E75c7a46f802f566",
+    id: "0x587c2ac5303d22e09cfff5f3e75c7a46f802f56600020000000000000000016f",
+    name: "ECLP-USDC.e-USDC",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+        symbol: "USDC",
+      },
+      {
+        address: "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
+        symbol: "USDC",
+      },
+    ],
+  },
+  {
     bpt: "0x5BB3E58887264B667f915130fD04bbB56116C278",
     id: "0x5bb3e58887264b667f915130fd04bbb56116c27800020000000000000000012a",
     name: "50WETH-50OLAS",
@@ -327,6 +344,40 @@ export default [
     ],
   },
   {
+    bpt: "0x8CE93cF0AC66F2A22a19A9aC2631D83068481469",
+    id: "0x8ce93cf0ac66f2a22a19a9ac2631d83068481469000200000000000000000170",
+    name: "ECLP-USDT0-USDT",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x01bFF41798a0BcF287b996046Ca68b395DbC1071",
+        symbol: "USD₮0",
+      },
+      {
+        address: "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+        symbol: "USDT",
+      },
+    ],
+  },
+  {
+    bpt: "0x9620b74077e2A9f118cD37ef60001Aeb327EC1a7",
+    id: "0x9620b74077e2a9f118cd37ef60001aeb327ec1a7000200000000000000000171",
+    name: "20WETH/80VLR",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x4200000000000000000000000000000000000006",
+        symbol: "WETH",
+      },
+      {
+        address: "0x4e107a0000DB66f0E9Fd2039288Bf811dD1f9c74",
+        symbol: "VLR",
+      },
+    ],
+  },
+  {
     bpt: "0x9Da11Ff60bfc5aF527f58fd61679c3AC98d040d9",
     id: "0x9da11ff60bfc5af527f58fd61679c3ac98d040d9000000000000000000000100",
     name: "bpt-stablebeets",
@@ -382,23 +433,6 @@ export default [
       {
         address: "0x6806411765Af15Bddd26f8f544A34cC40cb9838B",
         symbol: "frxETH",
-      },
-    ],
-  },
-  {
-    bpt: "0xc38C2fC871188935B9C615e73B17f2e7e463C8b1",
-    id: "0xc38c2fc871188935b9c615e73b17f2e7e463c8b1000200000000000000000119",
-    name: "80BAL-20WETH",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
-      },
-      {
-        address: "0xFE8B128bA8C78aabC59d4c64cEE7fF28e9379921",
-        symbol: "BAL",
       },
     ],
   },

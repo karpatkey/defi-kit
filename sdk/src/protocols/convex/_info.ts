@@ -3284,4 +3284,11 @@ export default [
     cvxDepositToken: "0xa14B00e62f4Cf04132Bf31Ffb42e6845BCd8E11e",
     rewarder: "0x4522692F8b63bbF933fBaE6a915d4d7a13742C87",
   },
+  {
+    name: "DOLAwstUSR",
+    id: "496",
+    crvLPToken: "0x64273624eb57c5cA961d366CBF3968e760Bf0452",
+    cvxDepositToken: "0x5B323610BcdC6938C6f45eE99E82935f800b4421",
+    rewarder: "0x7F548ca54A86a326CE42772879338d429F14f048",
+  },
 ] as const

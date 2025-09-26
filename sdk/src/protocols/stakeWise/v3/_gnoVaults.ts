@@ -37,16 +37,16 @@ export default [
       "Sustainable nodes for gnosis, ran by the LATAM team at Axol.io",
   },
   {
-    id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
-    name: "IP Stake",
-    description:
-      "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
-  },
-  {
     id: "0xe0a342ed4e0f0dbe97c4810534cfcb6550ea017d",
     name: "Stakecat",
     description:
       "Node operators, securing and decentralizing Ethereum |  AVS operator: http://avs.stakecat.space\n \nWe provide greater decentralization for networks with our own infrastructure for validators and high availability to compete with centralized data center performance.\n\nmore about Stakecat here: https://www.stakecat.space/",
+  },
+  {
+    id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
+    name: "IP Stake",
+    description:
+      "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
   },
   {
     id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
@@ -77,15 +77,15 @@ export default [
     description: null,
   },
   {
+    id: "0x451dbe45b4d4d158937f974e16b85342c8788bcd",
+    name: "Home vault",
+    description: "My home vault.",
+  },
+  {
     id: "0x79dbec2d18a758c62d410f9763956d52fbd4a3cc",
     name: "Stakers.space",
     description:
       "Gnosis Vault by Stakers.space | Fee 10% | Learn more about Gnosis staking at https://stakers.space/gnosis-staking.",
-  },
-  {
-    id: "0x451dbe45b4d4d158937f974e16b85342c8788bcd",
-    name: "Home vault",
-    description: "My home vault.",
   },
   {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
@@ -103,26 +103,21 @@ export default [
     description: null,
   },
   {
-    id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
-    name: "Wunode",
-    description: "Dappnode vault, fiber gigabit uplink, UPS",
-  },
-  {
     id: "0xb221ea4b710043f3530d2bc912dbef6cab2b5c3d",
     name: "Day One Law Team&Client Vault",
     description:
       "At Day One Law, we don’t just advise on crypto—we use the products, run the infrastructure, and stake on-chain alongside our clients. Our private Stakewise vault on Gnosis Chain is exclusively for our clients and team members, reinforcing our commitment to supporting the ecosystems that matter.\n\nIf you’re already working with us, you’re in. If not, and you’re looking for a legal partner who actually understands the tech, uses the protocols, and aligns with builders and investors in the space, let’s talk.\n\nWe support founders, investors, and operators pushing crypto forward—structuring their projects, securing regulatory clarity, and aligning incentives for long-term success. Our clients get real legal and strategic value, plus access to exclusive opportunities like this.\n\nWe’re not just advisors—we’re on-chain, active participants in the same products and protocols shaping the future of decentralized finance. If that’s the kind of partner you want, reach out.",
   },
   {
+    id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
+    name: "Wunode",
+    description: "Dappnode vault, fiber gigabit uplink, UPS",
+  },
+  {
     id: "0x5fa6aa1ebbbbcbfd8757b6f56abbe468ac3a6026",
     name: "Stakers Union Vault",
     description:
       "The home-stakers collective:\nEmpowering individual stakers, preserving decentralization across Ethereum-aligned networks.",
-  },
-  {
-    id: "0xb352b25eca7707edc33580572a251e4cab06d2df",
-    name: "DVault",
-    description: null,
   },
   {
     id: "0x1f7e70d661279a8bb657417bbc71b82b948752b2",
@@ -133,5 +128,10 @@ export default [
     id: "0xe77141d0047691d4464fe1f3d3615ca10b74830b",
     name: "cncVault2",
     description: "Stacked by the Chartreuse Node Crew",
+  },
+  {
+    id: "0xb352b25eca7707edc33580572a251e4cab06d2df",
+    name: "DVault",
+    description: null,
   },
 ] as const

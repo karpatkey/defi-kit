@@ -190,16 +190,16 @@ export default [
       "Fortifying crypto networks with MPC/SSV security, slash insurance, and open source contributions. Connect with us at https://linktr.ee/lavenderfive.",
   },
   {
+    id: "0xcf8357e5d8d90aa3c86eeba3c494947dab28bfaf",
+    name: "GlobalStake",
+    description:
+      "With decades of infrastructure experience, GlobalStake's enterprise-grade Web3 data centers, equipment, and protocols are specifically engineered to secure Proof-of-Stake networks. We believe that if you are going to do something, do it right!",
+  },
+  {
     id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
     name: "Meria",
     description:
       "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
-  },
-  {
-    id: "0x302be829c61c287787030888bbcf11115ecd5773",
-    name: "Swiss Liquid Staking",
-    description:
-      "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
   },
   {
     id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
@@ -208,16 +208,16 @@ export default [
       "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
   },
   {
-    id: "0xcf8357e5d8d90aa3c86eeba3c494947dab28bfaf",
-    name: "GlobalStake",
-    description:
-      "With decades of infrastructure experience, GlobalStake's enterprise-grade Web3 data centers, equipment, and protocols are specifically engineered to secure Proof-of-Stake networks. We believe that if you are going to do something, do it right!",
-  },
-  {
     id: "0xc502a1008cae7ad560294ac987355dfdb287e597",
     name: "Stakin - Full MEV",
     description:
       "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
+  },
+  {
+    id: "0x302be829c61c287787030888bbcf11115ecd5773",
+    name: "Swiss Liquid Staking",
+    description:
+      "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
   },
   {
     id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
@@ -226,9 +226,9 @@ export default [
       "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
   },
   {
-    id: "0x366e7f2e3462e31001560875b9877a0714e90d9c",
-    name: "A41",
+    id: "0x5799be451ee9fddd171c23bf5be86eccfe1f062f",
+    name: "Blockdaemon",
     description:
-      "A41 is a blockchain infrastructure company. We provide staking service on multichain. Stake your token with us now and earn rewards!",
+      "Blockdaemon is the most battle-tested node provider for 70+ protocols, allowing for an easy way to receive optimized rewards while minimizing risk and supporting the network.",
   },
 ] as const
