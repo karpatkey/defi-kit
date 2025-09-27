@@ -765,6 +765,23 @@ export default [
     ],
   },
   {
+    bpt: "0x2044aFEF1268100918F88De66a3532Eab3D8f3ef",
+    id: "0x2044afef1268100918f88de66a3532eab3d8f3ef00020000000000000000068a",
+    name: "ECLP-PAR-EURA",
+    type: "GyroE",
+    gauge: "0x597AEbfe41dCc042db206Eb888c42560a22c9303",
+    tokens: [
+      {
+        address: "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
+        symbol: "EURA",
+      },
+      {
+        address: "0x68037790A0229e9Ce6EaA8A99ea92964106C4703",
+        symbol: "PAR",
+      },
+    ],
+  },
+  {
     bpt: "0x20FacEcaa68E9b7c92d2d0ec9136D864Df805233",
     id: "0x20facecaa68e9b7c92d2d0ec9136d864df805233000100000000000000000190",
     name: "WILDFIRE",
@@ -1057,6 +1074,23 @@ export default [
       {
         address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         symbol: "USDC",
+      },
+    ],
+  },
+  {
+    bpt: "0x2dE32a7c98C3ef6ec79e703500e8CA5b2eC819aa",
+    id: "0x2de32a7c98c3ef6ec79e703500e8ca5b2ec819aa00020000000000000000031c",
+    name: "50/50 BTRFLY-OHM",
+    type: "Weighted",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x64aa3364F17a4D01c6f1751Fd97C2BD3D7e7f1D5",
+        symbol: "OHM",
+      },
+      {
+        address: "0xc55126051B22eBb829D00368f4B12Bde432de5Da",
+        symbol: "BTRFLY",
       },
     ],
   },

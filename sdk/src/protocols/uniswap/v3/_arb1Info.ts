@@ -14,12 +14,12 @@ export default [
     symbol: "WETH",
   },
   {
-    address: "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
-    symbol: "WBTC",
-  },
-  {
     address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
     symbol: "USDC",
+  },
+  {
+    address: "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+    symbol: "WBTC",
   },
   {
     address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
@@ -50,10 +50,6 @@ export default [
     symbol: "HEGIC",
   },
   {
-    address: "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
-    symbol: "tBTC",
-  },
-  {
     address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
     symbol: "CRV",
   },
@@ -70,6 +66,10 @@ export default [
     symbol: "AVATAR",
   },
   {
+    address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
+    symbol: "CRYPTO",
+  },
+  {
     address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
     symbol: "DAI",
   },
@@ -80,9 +80,5 @@ export default [
   {
     address: "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
     symbol: "UNI",
-  },
-  {
-    address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
-    symbol: "CRYPTO",
   },
 ] as const
