@@ -30,6 +30,10 @@ export default [
     symbol: "WBTC",
   },
   {
+    address: "0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4",
+    symbol: "SNX",
+  },
+  {
     address: "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
     symbol: "wstETH",
   },
