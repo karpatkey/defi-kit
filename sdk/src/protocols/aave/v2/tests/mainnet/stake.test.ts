@@ -50,8 +50,8 @@ describe("aaveV2", () => {
 
       await expect(kit.asMember.aaveV2.stkAave.cooldown()).not.toRevert()
 
-      // The 20 days cooldown period must pass in order to withdraw the AAVE.
-      await advanceTime(Chain.eth, 1730000)
+      // The 7 days cooldown period must pass in order to withdraw the AAVE.
+      await advanceTime(Chain.eth, 605000)
       await expect(
         kit.asMember.aaveV2.stkAave.redeem(wallets.avatar, 1)
       ).not.toRevert()
