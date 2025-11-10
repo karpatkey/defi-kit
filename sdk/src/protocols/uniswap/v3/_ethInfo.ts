@@ -1577,4 +1577,12 @@ export default [
     address: "0xa19f5264F7D7Be11c451C093D8f92592820Bea86",
     symbol: "BYTES",
   },
+  {
+    address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+    symbol: "ETHx",
+  },
+  {
+    address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+    symbol: "rsETH",
+  },
 ] as const
