@@ -7,7 +7,8 @@ import { gno as kit } from "../../../../../../test/kit"
 import { parseEther, parseUnits } from "ethers"
 import { Chain } from "../../../../../index"
 
-describe("aaveV3", () => {
+// Temporarily skipped after Balancer's hack
+describe.skip("aaveV3", () => {
   describe("borrow", () => {
     beforeAll(async () => {
       await applyPermissions(
