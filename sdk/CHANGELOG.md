@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.22.0](https://github.com/karpatkey/defi-kit/compare/v2.21.7...v2.22.0) (2025-11-10)
+
+
+### Features
+
+* Spark USDT ([#494](https://github.com/karpatkey/defi-kit/issues/494)) ([ecf51c4](https://github.com/karpatkey/defi-kit/commit/ecf51c4dedacd7956e5b240e513a22401206d13d))
+
 ## [2.21.7](https://github.com/karpatkey/defi-kit/compare/v2.21.6...v2.21.7) (2025-11-10)
 
 
