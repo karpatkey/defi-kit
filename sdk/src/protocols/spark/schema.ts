@@ -7,6 +7,7 @@ const zEthTokenDeposit = z.enum([
   "DSR_sDAI",
   "SKY_USDC",
   "SKY_USDS",
+  "SKY_USDT",
   ...ethTokens.map((token) => token.symbol),
   ...ethTokens.map((token) => token.token),
 ] as [string, string, ...string[]])
