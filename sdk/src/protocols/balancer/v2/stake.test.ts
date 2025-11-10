@@ -4,51 +4,51 @@ import { eth as kit } from "../../../../test/kit"
 import { parseEther } from "ethers"
 import { Chain } from "../../.."
 
-const bRethStable = "0x1E19CF2D73a72Ef1332C882F20534B6519Be0276"
-const bRethStableGauge = "0x79eF6103A513951a3b25743DB509E267685726B7"
+const bAuraBalStable = "0x3dd0843A028C86e0b760b1A76929d1C5Ef93a2dd"
+const bAuraBalStableGauge = "0x0312AA8D0BA4a1969Fddb382235870bF55f7f242"
 
 describe("balancer", () => {
   describe("stake", () => {
     beforeAll(async () => {
       await applyPermissions(
         Chain.eth,
-        await eth.stake({ targets: ["B-rETH-STABLE"] })
+        await eth.stake({ targets: ["B-auraBAL-STABLE"] })
       )
     })
 
     it("stake and withdraw from gauge", async () => {
       await stealErc20(
         Chain.eth,
-        bRethStable,
+        bAuraBalStable,
         parseEther("1"),
-        bRethStableGauge
+        bAuraBalStableGauge
       )
       await expect(
         kit.asMember.usdc
-          .attach(bRethStable)
-          .approve(bRethStableGauge, parseEther("1"))
+          .attach(bAuraBalStable)
+          .approve(bAuraBalStableGauge, parseEther("1"))
       ).not.toRevert()
 
       await expect(
         kit.asMember.balancerV2.gauge
-          .attach(bRethStableGauge)
+          .attach(bAuraBalStableGauge)
           ["deposit(uint256)"](parseEther("1"))
       ).not.toRevert()
 
       await expect(
         kit.asMember.balancerV2.gauge
-          .attach(bRethStableGauge)
+          .attach(bAuraBalStableGauge)
           ["withdraw(uint256)"](parseEther("1"))
       ).not.toRevert()
 
       await expect(
         kit.asMember.balancerV2.gauge
-          .attach(bRethStableGauge)
+          .attach(bAuraBalStableGauge)
           ["claim_rewards()"]()
       ).not.toRevert()
 
       await expect(
-        kit.asMember.balancerV2.minter.mint(bRethStableGauge)
+        kit.asMember.balancerV2.minter.mint(bAuraBalStableGauge)
       ).not.toRevert()
     })
   })

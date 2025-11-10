@@ -177,6 +177,7 @@ export const contracts = {
       psmUsdcSusds: "0xd0A61F2963622e992e6534bde4D52fd0a89F39E0",
       sUsdc: "0xBc65ad17c5C0a2A4D159fa5a503f4992c7B545FE",
       UsdsPsmWrapper: "0xA188EEC8F81263234dA3622A406892F3D630f98c",
+      spUsdt: "0xe2e7a17dFf93280dec073C995595155283e3C372",
     },
     stader: {
       stakingPoolManager: "0xcf5EA1b38380f6aF39068375516Daf40Ed70D299",

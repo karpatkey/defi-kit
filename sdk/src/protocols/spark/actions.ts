@@ -166,6 +166,21 @@ export const depositUSDS = (): Permission[] => {
   ]
 }
 
+export const depositUSDT = (): Permission[] => {
+  return [
+    ...allowErc20Approve(
+      [contracts.mainnet.usdt],
+      [contracts.mainnet.spark.spUsdt]
+    ),
+    allow.mainnet.spark.spUsdt["deposit(uint256,address,uint16)"](
+      undefined,
+      c.avatar
+    ),
+    allow.mainnet.spark.spUsdt.withdraw(undefined, c.avatar, c.avatar),
+    allow.mainnet.spark.spUsdt.redeem(undefined, c.avatar, c.avatar),
+  ]
+}
+
 export const depositToken = (chain: Chain, token: Token) => {
   const { poolV3, rewardsController } = _getAllAddresses(chain)
 
