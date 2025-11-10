@@ -176,16 +176,8 @@ export const depositUSDT = (): Permission[] => {
       undefined,
       c.avatar
     ),
-    allow.mainnet.spark.spUsdt.withdraw(
-      undefined,
-      c.avatar,
-      c.avatar
-    ),
-    allow.mainnet.spark.spUsdt.redeem(
-      undefined,
-      c.avatar,
-      c.avatar
-    ),
+    allow.mainnet.spark.spUsdt.withdraw(undefined, c.avatar, c.avatar),
+    allow.mainnet.spark.spUsdt.redeem(undefined, c.avatar, c.avatar),
   ]
 }
 
