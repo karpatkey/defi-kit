@@ -26,6 +26,11 @@ export default [
       "Serenita provides enterprise-grade staking services with a focus on top-tier performance and minimal risk. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nThe validators in this Vault are powered by Vero, our custom-built multi-node validator client software. Similar to DVT technology, Vero verifies the chain’s latest state across multiple independent client implementations—shielding our validators from single-client bugs and downtime.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
   },
   {
+    id: "0x47fd7ac6c6bc73f2d419a18d0692f37df3f48034",
+    name: "Stakin Private Vault 1",
+    description: null,
+  },
+  {
     id: "0xa8cb2e35f594b308726b242136f0a8995bf19e97",
     name: "Easy Stake - Powered by SSV",
     description:
@@ -50,6 +55,12 @@ export default [
       "Welcome to The Stakingverse!\n\nA premier staking provider with competitive fees, MEV boost and state-of-the-art infrastructure.\n\nAs an official StakeWise partner, we are dedicated to perfecting the secure and decentralized nature of the V3 Protocol to multiple chains. And with a team of highly-experienced professionals, who have been on the front-line of blockchain technology for many years now, you will get the best service, APY and security in liquid staking.\n\nStake your LYX and ETH with The Best at stakingverse.io",
   },
   {
+    id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
+    name: "Allnodes",
+    description:
+      "Reliable non-custodial Validator run by the industry leader - Allnodes",
+  },
+  {
     id: "0x663580b3edad914d0b59cea88616f06278d42bb2",
     name: "onchainaustria.at",
     description:
@@ -60,12 +71,6 @@ export default [
     name: "Data Nexus",
     description:
       "Independent Ethereum validators with owned hardware, MEV boost, and minority clients for robust decentralization. Empowering the Ethereum network with integrity.",
-  },
-  {
-    id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
-    name: "Allnodes",
-    description:
-      "Reliable non-custodial Validator run by the industry leader - Allnodes",
   },
   {
     id: "0x3fcbc480f3bb3ce8379bb475d95de603f188d9c0",
@@ -137,16 +142,16 @@ export default [
       "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
-    id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
-    name: "CommonWealth",
-    description:
-      "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
-  },
-  {
     id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
     name: "Verse ETH Staking",
     description:
       "Earn rewards by staking your ETH in the Verse Ecosystem vault",
+  },
+  {
+    id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
+    name: "CommonWealth",
+    description:
+      "Professional setup powered by minority pairs and validator client strategies.\nCompetitive 3.9% operator fee.",
   },
   {
     id: "0x4e0a83509f5d0ef2e55b6f08dbf2462b72bcd30a",
@@ -155,9 +160,8 @@ export default [
   },
   {
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
-    name: "BRAZILPRACIMA",
-    description:
-      "Independent solo operator since genesis, running on top of OBOL technology ",
+    name: "brazilpracima",
+    description: "Independent Ethereum node operator since genesis",
   },
   {
     id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
@@ -166,22 +170,16 @@ export default [
       "Independent Ethereum validator utilizing Nethermind+Teku, uncensored MEV relays, owned hardware, and the smoothing pool. Support decentralization and spread risk by staking with me. Learn more: https://vincenttaglia.eth.limo",
   },
   {
-    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
-    name: "Big Euler's e-Stake",
+    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
+    name: "Blockshard DVT Explorers",
     description:
-      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots | We also operate genesis Ethereum validator #4394 using the same system",
+      "The next ship is ready — unlimited capacity for the next wave of stakers.\n\nBuilt on the same secure DVT foundation as the Pioneers vault, with SSV and Obol powering fault-tolerant performance. 90% of DVT protocol incentives are passed on to stakers.\n\nFor those continuing the journey — with a 5% fee and no deposit cap.",
   },
   {
     id: "0x30c13e93c170885e9969ae2e4ff5f020807e0d74",
     name: "Simply Staking: Premium",
     description:
       "Minimum Fee - Unrestricted Maximum MEV - Zero-Cloud - Private Datacentre - 24/7 Engineering Support - All included in Simply Staking's Premium Vault...\n\n\n- Fee: Competitive 3.75%.\n- MEV: Extensive list of MEV relays, free of restrictions, with the ultimate goal of using a global set of relays to maximise profit.\n- Private Data Centre Operation: Your ETH is securely managed in our privately operated data center in Malta, prioritising security and reliability, free from the dependencies of cloud services.",
-  },
-  {
-    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
-    name: "Blockshard DVT Explorers",
-    description:
-      "The next ship is ready — unlimited capacity for the next wave of stakers.\n\nBuilt on the same secure DVT foundation as the Pioneers vault, with SSV and Obol powering fault-tolerant performance. 90% of DVT protocol incentives are passed on to stakers.\n\nFor those continuing the journey — with a 5% fee and no deposit cap.",
   },
   {
     id: "0x5fe23da0835ecf01f4faf9b07fdcfd603dfbd146",
@@ -196,10 +194,10 @@ export default [
       "With decades of infrastructure experience, GlobalStake's enterprise-grade Web3 data centers, equipment, and protocols are specifically engineered to secure Proof-of-Stake networks. We believe that if you are going to do something, do it right!",
   },
   {
-    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
-    name: "Meria",
+    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
+    name: "Big Euler's e-Stake",
     description:
-      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
+      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | 0x02 Compounding | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots |  We also operate genesis Ethereum validator #4394 using the same system",
   },
   {
     id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
@@ -220,10 +218,10 @@ export default [
       "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
   },
   {
-    id: "0x7eed3ea8d83ba4ccc1b20674f46825ece2fce594",
-    name: "Fox & Yaga",
+    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
+    name: "Meria",
     description:
-      "Fox & Yaga is a collaboration vault on StakeWise dedicated to securing Ethereum while supporting the growth of Yaga, a unique jewelry brand. This initiative combines the strength of decentralized finance with a passion for fostering local businesses, making it a beacon of community-driven progress in the crypto space.",
+      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0x5799be451ee9fddd171c23bf5be86eccfe1f062f",
