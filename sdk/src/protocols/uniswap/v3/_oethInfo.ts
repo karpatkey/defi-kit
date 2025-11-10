@@ -14,12 +14,12 @@ export default [
     symbol: "USDC",
   },
   {
-    address: "0x4200000000000000000000000000000000000042",
-    symbol: "OP",
-  },
-  {
     address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
     symbol: "USDC",
+  },
+  {
+    address: "0x4200000000000000000000000000000000000042",
+    symbol: "OP",
   },
   {
     address: "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
@@ -30,7 +30,7 @@ export default [
     symbol: "WBTC",
   },
   {
-    address: "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
-    symbol: "wstETH",
+    address: "0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4",
+    symbol: "SNX",
   },
 ] as const

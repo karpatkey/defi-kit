@@ -307,23 +307,6 @@ export default [
     ],
   },
   {
-    bpt: "0x1AcD5C5E69DC056649d698046486fb54545Ce7E4",
-    id: "0x1acd5c5e69dc056649d698046486fb54545ce7e4000200000000000000000117",
-    name: "ECLP-bCSPX-sDAI",
-    type: "GyroE",
-    gauge: "0xbcF4969d4dc6Cb86Ce0B8a101d220b558F14739C",
-    tokens: [
-      {
-        address: "0x1e2C4fb7eDE391d116E6B41cD0608260e8801D59",
-        symbol: "bCSPX",
-      },
-      {
-        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
-        symbol: "sDAI",
-      },
-    ],
-  },
-  {
     bpt: "0x1e8b447129984d8A6B652C807DfC3bd135973133",
     id: "0x1e8b447129984d8a6b652c807dfc3bd1359731330002000000000000000000d6",
     name: "ECLP-GYD-sDAI",
@@ -607,23 +590,6 @@ export default [
       {
         address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
         symbol: "sDAI",
-      },
-    ],
-  },
-  {
-    bpt: "0x3220C83e953186f2B9dDFc0B5dD69483354EDCA2",
-    id: "0x3220c83e953186f2b9ddfc0b5dd69483354edca20000000000000000000000b0",
-    name: "osGNO/GNO-BPT",
-    type: "ComposableStable",
-    gauge: "0x1350724a020B27c4f0E369bB00ae3127022d5465",
-    tokens: [
-      {
-        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
-        symbol: "GNO",
-      },
-      {
-        address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
-        symbol: "osGNO",
       },
     ],
   },
@@ -931,23 +897,6 @@ export default [
       {
         address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
         symbol: "wstETH",
-      },
-      {
-        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
-        symbol: "GNO",
-      },
-    ],
-  },
-  {
-    bpt: "0x48094F85AEEb2D67D6F1EF2409d600C02859e57c",
-    id: "0x48094f85aeeb2d67d6f1ef2409d600c02859e57c0002000000000000000002fc",
-    name: "ECLP-GNO-USDC.e-dyn",
-    type: "GyroE",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
-        symbol: "USDC.e",
       },
       {
         address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
@@ -1931,40 +1880,6 @@ export default [
     ],
   },
   {
-    bpt: "0x9D376359b1C4975Aae4907E540C76838547E2Fe2",
-    id: "0x9d376359b1c4975aae4907e540c76838547e2fe20002000000000000000002fb",
-    name: "ECLP-GNO-wstETH-dyn",
-    type: "GyroE",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
-        symbol: "wstETH",
-      },
-      {
-        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
-        symbol: "GNO",
-      },
-    ],
-  },
-  {
-    bpt: "0x9D93F38b75B376AcDFe607cD1ECF4495E047dEfF",
-    id: "0x9d93f38b75b376acdfe607cd1ecf4495e047deff00000000000000000000009e",
-    name: "GBPe/sDAI",
-    type: "ComposableStable",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
-        symbol: "GBPe",
-      },
-      {
-        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
-        symbol: "sDAI",
-      },
-    ],
-  },
-  {
     bpt: "0xa515361B6a769E82F6D2f3F4596AF6553FA30B84",
     id: "0xa515361b6a769e82f6d2f3f4596af6553fa30b840002000000000000000000b5",
     name: "90REG-10USDC",
@@ -2155,23 +2070,6 @@ export default [
     ],
   },
   {
-    bpt: "0xB6f15EcafA41046bB5602Bf98C537f85BAF3B16d",
-    id: "0xb6f15ecafa41046bb5602bf98c537f85baf3b16d000000000000000000000139",
-    name: "EURE/USDC.E",
-    type: "ComposableStable",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
-        symbol: "USDC.e",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
-      },
-    ],
-  },
-  {
     bpt: "0xB8bB1ce9C6E5401D66fE2126dB6E7387E1E24fFE",
     id: "0xb8bb1ce9c6e5401d66fe2126db6e7387e1e24ffe00020000000000000000003d",
     name: "50WETH-50GNO",
@@ -2287,23 +2185,6 @@ export default [
       {
         address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
         symbol: "GBPe",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
-      },
-    ],
-  },
-  {
-    bpt: "0xC66936a47E6D40DD050A8419B4352825D9082241",
-    id: "0xc66936a47e6d40dd050a8419b4352825d9082241000000000000000000000090",
-    name: "EURe-jEUR",
-    type: "ComposableStable",
-    gauge: "0xe8672E6d593D5D2769266919abB6dAd7b9687608",
-    tokens: [
-      {
-        address: "0x9fB1d52596c44603198fB0aee434fac3a679f702",
-        symbol: "jEUR",
       },
       {
         address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
@@ -2841,27 +2722,6 @@ export default [
       {
         address: "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
         symbol: "WXDAI",
-      },
-    ],
-  },
-  {
-    bpt: "0xfC095C811fE836Ed12f247BCf042504342B73FB7",
-    id: "0xfc095c811fe836ed12f247bcf042504342b73fb700000000000000000000009f",
-    name: "sBAL3",
-    type: "ComposableStable",
-    gauge: "0x306b2E81Fc7c6F73F2460E3974538D724a88f8a5",
-    tokens: [
-      {
-        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
-        symbol: "USDC.e",
-      },
-      {
-        address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
-        symbol: "USDT",
-      },
-      {
-        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
-        symbol: "sDAI",
       },
     ],
   },
