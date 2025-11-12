@@ -1,0 +1,189 @@
+import { Callout } from "nextra/components"
+
+# Morpho Markets on Base
+
+**Deployments**
+
+| Name         | Address                                                                                                                     |
+| :----------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| `MorphoBlue` | [0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb](https://basescan.org/address/0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb) |
+
+## Action: `deposit`
+
+**Parameters**
+
+| Name      | Type                  | Description                     |
+| :-------- | :-------------------- | :------------------------------ |
+| `targets` | _string[] (required)_ | `Market` IDs                    |
+
+<Callout type="info">
+  `MARKET` below refers to the specific market parameters corresponding to each market ID provided in `targets`.
+</Callout>
+
+### Target: Market ID
+
+For each market ID provided in `targets`, the following functions are allowed:
+
+#### `MARKET.LOAN_TOKEN · approve`
+
+Approve `MorphoBlue` to spend `MARKET.LOAN_TOKEN` tokens on behalf of the avatar.
+
+- **Contract:** `MARKET.LOAN_TOKEN`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint            |
+  | :-------- | :-------------------- |
+  | `spender` | equal to `MorphoBlue` |
+  | `amount`  | -                     |
+
+#### `MorphoBlue · supply`
+
+Supply `MARKET.LOAN_TOKEN` to the market and receive shares in exchange.
+
+- **Contract:** `MorphoBlue`
+- **Function:** `supply((address,address,address,address,uint256),uint256,uint256,address,bytes)`
+
+  | Parameter                        | Constraint                           |
+  | :------------------------------- | :----------------------------------- |
+  | `marketParams.loanToken`         | equal to `MARKET.LOAN_TOKEN`         |
+  | `marketParams.collateralToken`   | equal to `MARKET.COLLATERAL_TOKEN`   |
+  | `marketParams.oracle`            | equal to `MARKET.ORACLE`             |
+  | `marketParams.irm`               | equal to `MARKET.IRM`                |
+  | `marketParams.lltv`              | equal to `MARKET.LLTV`               |
+  | `assets`                         | -                                    |
+  | `shares`                         | -                                    |
+  | `onBehalf`                       | equal to `AVATAR`                    |
+  | `data`                           | equal to `0x`                        |
+
+#### `MorphoBlue · withdraw`
+
+Withdraw `MARKET.LOAN_TOKEN` from the market by redeeming shares.
+
+- **Contract:** `MorphoBlue`
+- **Function:** `withdraw((address,address,address,address,uint256),uint256,uint256,address,address)`
+
+  | Parameter                        | Constraint                           |
+  | :------------------------------- | :----------------------------------- |
+  | `marketParams.loanToken`         | equal to `MARKET.LOAN_TOKEN`         |
+  | `marketParams.collateralToken`   | equal to `MARKET.COLLATERAL_TOKEN`   |
+  | `marketParams.oracle`            | equal to `MARKET.ORACLE`             |
+  | `marketParams.irm`               | equal to `MARKET.IRM`                |
+  | `marketParams.lltv`              | equal to `MARKET.LLTV`               |
+  | `assets`                         | -                                    |
+  | `shares`                         | -                                    |
+  | `onBehalf`                       | equal to `AVATAR`                    |
+  | `receiver`                       | equal to `AVATAR`                    |
+
+## Action: `borrow`
+
+**Parameters**
+
+| Name      | Type                  | Description                     |
+| :-------- | :-------------------- | :------------------------------ |
+| `targets` | _string[] (required)_ | `Market` IDs                    |
+
+<Callout type="info">
+  `MARKET` below refers to the specific market parameters corresponding to each market ID provided in `targets`.
+</Callout>
+
+### Target: Market ID
+
+For each market ID provided in `targets`, the following functions are allowed:
+
+#### `MARKET.LOAN_TOKEN · approve`
+
+Approve `MorphoBlue` to spend `MARKET.LOAN_TOKEN` tokens on behalf of the avatar.
+
+- **Contract:** `MARKET.LOAN_TOKEN`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint            |
+  | :-------- | :-------------------- |
+  | `spender` | equal to `MorphoBlue` |
+  | `amount`  | -                     |
+
+#### `MARKET.COLLATERAL_TOKEN · approve`
+
+Approve `MorphoBlue` to spend `MARKET.COLLATERAL_TOKEN` tokens on behalf of the avatar.
+
+- **Contract:** `MARKET.COLLATERAL_TOKEN`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint            |
+  | :-------- | :-------------------- |
+  | `spender` | equal to `MorphoBlue` |
+  | `amount`  | -                     |
+
+#### `MorphoBlue · supplyCollateral`
+
+Supply `MARKET.COLLATERAL_TOKEN` as collateral to the market.
+
+- **Contract:** `MorphoBlue`
+- **Function:** `supplyCollateral((address,address,address,address,uint256),uint256,address,bytes)`
+
+  | Parameter                        | Constraint                           |
+  | :------------------------------- | :----------------------------------- |
+  | `marketParams.loanToken`         | equal to `MARKET.LOAN_TOKEN`         |
+  | `marketParams.collateralToken`   | equal to `MARKET.COLLATERAL_TOKEN`   |
+  | `marketParams.oracle`            | equal to `MARKET.ORACLE`             |
+  | `marketParams.irm`               | equal to `MARKET.IRM`                |
+  | `marketParams.lltv`              | equal to `MARKET.LLTV`               |
+  | `assets`                         | -                                    |
+  | `onBehalf`                       | equal to `AVATAR`                    |
+  | `data`                           | equal to `0x`                        |
+
+#### `MorphoBlue · withdrawCollateral`
+
+Withdraw `MARKET.COLLATERAL_TOKEN` collateral from the market.
+
+- **Contract:** `MorphoBlue`
+- **Function:** `withdrawCollateral((address,address,address,address,uint256),uint256,address,address)`
+
+  | Parameter                        | Constraint                           |
+  | :------------------------------- | :----------------------------------- |
+  | `marketParams.loanToken`         | equal to `MARKET.LOAN_TOKEN`         |
+  | `marketParams.collateralToken`   | equal to `MARKET.COLLATERAL_TOKEN`   |
+  | `marketParams.oracle`            | equal to `MARKET.ORACLE`             |
+  | `marketParams.irm`               | equal to `MARKET.IRM`                |
+  | `marketParams.lltv`              | equal to `MARKET.LLTV`               |
+  | `assets`                         | -                                    |
+  | `onBehalf`                       | equal to `AVATAR`                    |
+  | `receiver`                       | equal to `AVATAR`                    |
+
+#### `MorphoBlue · borrow`
+
+Borrow `MARKET.LOAN_TOKEN` from the market.
+
+- **Contract:** `MorphoBlue`
+- **Function:** `borrow((address,address,address,address,uint256),uint256,uint256,address,address)`
+
+  | Parameter                        | Constraint                           |
+  | :------------------------------- | :----------------------------------- |
+  | `marketParams.loanToken`         | equal to `MARKET.LOAN_TOKEN`         |
+  | `marketParams.collateralToken`   | equal to `MARKET.COLLATERAL_TOKEN`   |
+  | `marketParams.oracle`            | equal to `MARKET.ORACLE`             |
+  | `marketParams.irm`               | equal to `MARKET.IRM`                |
+  | `marketParams.lltv`              | equal to `MARKET.LLTV`               |
+  | `assets`                         | -                                    |
+  | `shares`                         | -                                    |
+  | `onBehalf`                       | equal to `AVATAR`                    |
+  | `receiver`                       | equal to `AVATAR`                    |
+
+#### `MorphoBlue · repay`
+
+Repay borrowed `MARKET.LOAN_TOKEN` to the market.
+
+- **Contract:** `MorphoBlue`
+- **Function:** `repay((address,address,address,address,uint256),uint256,uint256,address,bytes)`
+
+  | Parameter                        | Constraint                           |
+  | :------------------------------- | :----------------------------------- |
+  | `marketParams.loanToken`         | equal to `MARKET.LOAN_TOKEN`         |
+  | `marketParams.collateralToken`   | equal to `MARKET.COLLATERAL_TOKEN`   |
+  | `marketParams.oracle`            | equal to `MARKET.ORACLE`             |
+  | `marketParams.irm`               | equal to `MARKET.IRM`                |
+  | `marketParams.lltv`              | equal to `MARKET.LLTV`               |
+  | `assets`                         | -                                    |
+  | `shares`                         | -                                    |
+  | `onBehalf`                       | equal to `AVATAR`                    |
+  | `data`                           | equal to `0x`                        |
