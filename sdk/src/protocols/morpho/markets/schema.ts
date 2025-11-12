@@ -15,30 +15,30 @@ const zBaseMarket = z.enum(baseMarketIds as [string, ...string[]])
 
 export const eth = {
   deposit: z.object({
-    targets: zEthMarket,
+    targets: zEthMarket.array(),
   }),
 
   borrow: z.object({
-    targets: zEthMarket,
+    targets: zEthMarket.array(),
   }),
 }
 
 export const arb1 = {
   deposit: z.object({
-    targets: zArb1Market,
+    targets: zArb1Market.array(),
   }),
 
   borrow: z.object({
-    targets: zArb1Market,
+    targets: zArb1Market.array(),
   }),
 }
 
 export const base = {
   deposit: z.object({
-    targets: zBaseMarket,
+    targets: zBaseMarket.array(),
   }),
 
   borrow: z.object({
-    targets: zBaseMarket,
+    targets: zBaseMarket.array(),
   }),
 }
