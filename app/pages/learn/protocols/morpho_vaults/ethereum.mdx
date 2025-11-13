@@ -1,0 +1,67 @@
+import { Callout } from "nextra/components"
+
+# Morpho Vaults on Ethereum
+
+## Action: `deposit`
+
+**Parameters**
+
+| Name      | Type                  | Description                                                    |
+| :-------- | :-------------------- | :------------------------------------------------------------- |
+| `targets` | _string[] (required)_ | `Vault` IDs \| `Vault` names \| `Vault` symbols                |
+
+<Callout type="info">
+  `VAULT` below refers to the specific vault corresponding to each vault ID, name, or symbol provided in `targets`.
+</Callout>
+
+For each vault identifier provided in `targets`, the following functions are allowed:
+
+### `VAULT.ASSET · approve`
+
+Approve the vault to spend `VAULT.ASSET` tokens on behalf of the avatar.
+
+- **Contract:** `VAULT.ASSET`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `spender` | equal to `VAULT`  |
+  | `amount`  | -                 |
+
+### `VAULT · deposit`
+
+Deposit `VAULT.ASSET` tokens to the vault and receive vault shares in exchange.
+
+- **Contract:** `VAULT`
+- **Function:** `deposit(uint256,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `assets`   | -                 |
+  | `onBehalf` | equal to `AVATAR` |
+
+### `VAULT · withdraw`
+
+Withdraw `VAULT.ASSET` tokens from the vault by specifying the desired asset amount.
+
+- **Contract:** `VAULT`
+- **Function:** `withdraw(uint256,address,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `assets`   | -                 |
+  | `receiver` | equal to `AVATAR` |
+  | `onBehalf` | equal to `AVATAR` |
+
+### `VAULT · redeem`
+
+Redeem vault shares to receive `VAULT.ASSET` tokens.
+
+- **Contract:** `VAULT`
+- **Function:** `redeem(uint256,address,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `shares`   | -                 |
+  | `receiver` | equal to `AVATAR` |
+  | `onBehalf` | equal to `AVATAR` |

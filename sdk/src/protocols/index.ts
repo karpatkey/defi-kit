@@ -10,6 +10,7 @@ import * as cowSwap from "./cowSwap"
 import * as fluid from "./fluid"
 import * as lido from "./lido"
 import * as morphoMarkets from "./morpho/markets"
+import * as morphoVaults from "./morpho/vaults"
 import * as sky from "./sky"
 import * as rocketPool from "./rocketPool"
 import * as spark from "./spark"
@@ -36,6 +37,7 @@ export const eth = annotateAll(
     fluid: fluid.eth,
     lido: lido.eth,
     morphoMarkets: morphoMarkets.eth,
+    morphoVaults: morphoVaults.eth,
     sky: sky.eth,
     rocket_pool: rocketPool.eth,
     spark: spark.eth,
@@ -68,6 +70,7 @@ export const arb1 = annotateAll(
     cowswap: cowSwap.arb1,
     fluid: fluid.arb1,
     morphoMarkets: morphoMarkets.arb1,
+    morphoVaults: morphoVaults.arb1,
     uniswap_v3: uniswapV3.arb1,
   },
   "arb1"
@@ -91,6 +94,7 @@ export const base = annotateAll(
     cowswap: cowSwap.base,
     fluid: fluid.base,
     morphoMarkets: morphoMarkets.base,
+    morphoVaults: morphoVaults.base,
     uniswap_v3: uniswapV3.base,
   },
   "base"

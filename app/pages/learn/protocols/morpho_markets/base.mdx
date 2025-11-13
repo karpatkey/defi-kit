@@ -20,11 +20,9 @@ import { Callout } from "nextra/components"
   `MARKET` below refers to the specific market parameters corresponding to each market ID provided in `targets`.
 </Callout>
 
-### Target: Market ID
-
 For each market ID provided in `targets`, the following functions are allowed:
 
-#### `MARKET.LOAN_TOKEN · approve`
+### `MARKET.LOAN_TOKEN · approve`
 
 Approve `MorphoBlue` to spend `MARKET.LOAN_TOKEN` tokens on behalf of the avatar.
 
@@ -36,7 +34,7 @@ Approve `MorphoBlue` to spend `MARKET.LOAN_TOKEN` tokens on behalf of the avatar
   | `spender` | equal to `MorphoBlue` |
   | `amount`  | -                     |
 
-#### `MorphoBlue · supply`
+### `MorphoBlue · supply`
 
 Supply `MARKET.LOAN_TOKEN` to the market and receive shares in exchange.
 
@@ -55,7 +53,7 @@ Supply `MARKET.LOAN_TOKEN` to the market and receive shares in exchange.
   | `onBehalf`                       | equal to `AVATAR`                    |
   | `data`                           | equal to `0x`                        |
 
-#### `MorphoBlue · withdraw`
+### `MorphoBlue · withdraw`
 
 Withdraw `MARKET.LOAN_TOKEN` from the market by redeeming shares.
 
@@ -86,11 +84,9 @@ Withdraw `MARKET.LOAN_TOKEN` from the market by redeeming shares.
   `MARKET` below refers to the specific market parameters corresponding to each market ID provided in `targets`.
 </Callout>
 
-### Target: Market ID
-
 For each market ID provided in `targets`, the following functions are allowed:
 
-#### `MARKET.LOAN_TOKEN · approve`
+### `MARKET.LOAN_TOKEN · approve`
 
 Approve `MorphoBlue` to spend `MARKET.LOAN_TOKEN` tokens on behalf of the avatar.
 
@@ -102,7 +98,7 @@ Approve `MorphoBlue` to spend `MARKET.LOAN_TOKEN` tokens on behalf of the avatar
   | `spender` | equal to `MorphoBlue` |
   | `amount`  | -                     |
 
-#### `MARKET.COLLATERAL_TOKEN · approve`
+### `MARKET.COLLATERAL_TOKEN · approve`
 
 Approve `MorphoBlue` to spend `MARKET.COLLATERAL_TOKEN` tokens on behalf of the avatar.
 
@@ -114,7 +110,7 @@ Approve `MorphoBlue` to spend `MARKET.COLLATERAL_TOKEN` tokens on behalf of the 
   | `spender` | equal to `MorphoBlue` |
   | `amount`  | -                     |
 
-#### `MorphoBlue · supplyCollateral`
+### `MorphoBlue · supplyCollateral`
 
 Supply `MARKET.COLLATERAL_TOKEN` as collateral to the market.
 
@@ -132,7 +128,7 @@ Supply `MARKET.COLLATERAL_TOKEN` as collateral to the market.
   | `onBehalf`                       | equal to `AVATAR`                    |
   | `data`                           | equal to `0x`                        |
 
-#### `MorphoBlue · withdrawCollateral`
+### `MorphoBlue · withdrawCollateral`
 
 Withdraw `MARKET.COLLATERAL_TOKEN` collateral from the market.
 
@@ -150,7 +146,7 @@ Withdraw `MARKET.COLLATERAL_TOKEN` collateral from the market.
   | `onBehalf`                       | equal to `AVATAR`                    |
   | `receiver`                       | equal to `AVATAR`                    |
 
-#### `MorphoBlue · borrow`
+### `MorphoBlue · borrow`
 
 Borrow `MARKET.LOAN_TOKEN` from the market.
 
@@ -169,7 +165,7 @@ Borrow `MARKET.LOAN_TOKEN` from the market.
   | `onBehalf`                       | equal to `AVATAR`                    |
   | `receiver`                       | equal to `AVATAR`                    |
 
-#### `MorphoBlue · repay`
+### `MorphoBlue · repay`
 
 Repay borrowed `MARKET.LOAN_TOKEN` to the market.
 

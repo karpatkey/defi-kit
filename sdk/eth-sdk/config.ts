@@ -149,6 +149,7 @@ export const contracts = {
     },
     morpho: {
       morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
+      vault: "0x571BD367471D2202F99CC0317882aC3b0208001a", // Vault v2 Implementation
     },
     optimismBridge: {
       optDaiBridge: "0x10E6593CDda8c58a1d0f14C5164B376352a55f2F",
