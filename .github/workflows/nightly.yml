@@ -49,6 +49,14 @@ jobs:
         run: python scripts/compound_v3.py
       - name: Run convex
         run: python scripts/convex.py
+      - name: Run fluid
+        run: python scripts/fluid.py
+      - name: Run morpho_markets
+        env:
+          THE_GRAPH_APIKEY: ${{ secrets.THE_GRAPH_APIKEY }}
+        run: python scripts/morpho_markets.py
+      - name: Run morpho_vaults
+        run: python scripts/morpho_vaults.py
       - name: Run sky
         run: python scripts/sky.py
       - name: Run spark
