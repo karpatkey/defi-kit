@@ -6,9 +6,11 @@ import {
   depositEther,
   depositToken,
   depositDsr,
-  depositUSDC,
-  depositUSDS,
-  depositUSDT,
+  depositsUSDC,
+  depositsUSDS,
+  depositspETH,
+  depositspUSDC,
+  depositspUSDT,
   borrowEther,
   borrowToken,
   stake,
@@ -37,9 +39,11 @@ export const eth = {
   }: {
     targets: (
       | "DSR_sDAI"
-      | "SKY_USDC"
-      | "SKY_USDS"
-      | "SKY_USDT"
+      | "SKY_sUSDC"
+      | "SKY_sUSDS"
+      | "SKY_spETH"
+      | "SKY_spUSDC"
+      | "SKY_spUSDT"
       | "ETH"
       | EthToken["symbol"]
       | EthToken["token"]
@@ -48,12 +52,16 @@ export const eth = {
     return targets.flatMap((target) =>
       target === "DSR_sDAI"
         ? depositDsr(Chain.eth)
-        : target === "SKY_USDS"
-        ? depositUSDS()
-        : target === "SKY_USDC"
-        ? depositUSDC()
-        : target === "SKY_USDT"
-        ? depositUSDT()
+        : target === "SKY_sUSDS"
+        ? depositsUSDS()
+        : target === "SKY_sUSDC"
+        ? depositsUSDC()
+        : target === "SKY_spETH"
+        ? depositspETH()
+        : target === "SKY_spUSDC"
+        ? depositspUSDC()
+        : target === "SKY_spUSDT"
+        ? depositspUSDT()
         : target === "ETH"
         ? depositEther(Chain.eth)
         : depositToken(Chain.eth, findToken(ethTokens, target))

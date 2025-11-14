@@ -92,7 +92,7 @@ export const depositDsr = (chain: Chain): Permission[] => {
   }
 }
 
-export const depositUSDC = (): Permission[] => {
+export const depositsUSDC = (): Permission[] => {
   return [
     ...allowErc20Approve(
       [contracts.mainnet.usdc],
@@ -115,7 +115,7 @@ export const depositUSDC = (): Permission[] => {
   ]
 }
 
-export const depositUSDS = (): Permission[] => {
+export const depositsUSDS = (): Permission[] => {
   return [
     ...allowErc20Approve(
       [contracts.mainnet.dai],
@@ -166,7 +166,39 @@ export const depositUSDS = (): Permission[] => {
   ]
 }
 
-export const depositUSDT = (): Permission[] => {
+export const depositspETH = (): Permission[] => {
+  return [
+    allow.mainnet.weth.deposit({ send: true }),
+    allow.mainnet.weth.withdraw(),
+    ...allowErc20Approve(
+      [contracts.mainnet.weth],
+      [contracts.mainnet.spark.spEth]
+    ),
+    allow.mainnet.spark.spEth["deposit(uint256,address,uint16)"](
+      undefined,
+      c.avatar
+    ),
+    allow.mainnet.spark.spEth.withdraw(undefined, c.avatar, c.avatar),
+    allow.mainnet.spark.spEth.redeem(undefined, c.avatar, c.avatar),
+  ]
+}
+
+export const depositspUSDC = (): Permission[] => {
+  return [
+    ...allowErc20Approve(
+      [contracts.mainnet.usdc],
+      [contracts.mainnet.spark.spUsdc]
+    ),
+    allow.mainnet.spark.spUsdc["deposit(uint256,address,uint16)"](
+      undefined,
+      c.avatar
+    ),
+    allow.mainnet.spark.spUsdc.withdraw(undefined, c.avatar, c.avatar),
+    allow.mainnet.spark.spUsdc.redeem(undefined, c.avatar, c.avatar),
+  ]
+}
+
+export const depositspUSDT = (): Permission[] => {
   return [
     ...allowErc20Approve(
       [contracts.mainnet.usdt],
