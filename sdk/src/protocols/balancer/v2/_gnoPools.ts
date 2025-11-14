@@ -905,6 +905,23 @@ export default [
     ],
   },
   {
+    bpt: "0x48094F85AEEb2D67D6F1EF2409d600C02859e57c",
+    id: "0x48094f85aeeb2d67d6f1ef2409d600c02859e57c0002000000000000000002fc",
+    name: "ECLP-GNO-USDC.e-dyn",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
+        symbol: "USDC.e",
+      },
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+      },
+    ],
+  },
+  {
     bpt: "0x48a50106D9123EfaeBF5ee402f3f7E1C3Da49f27",
     id: "0x48a50106d9123efaebf5ee402f3f7e1c3da49f270001000000000000000000ba",
     name: "40REG-30sDAI-20WBTC-10wstETH",
@@ -2739,6 +2756,74 @@ export default [
       {
         address: "0xCA30c93B02514f86d5C86a6e375E3A330B435Fb5",
         symbol: "bIB01",
+      },
+    ],
+  },
+  {
+    bpt: "0x3220C83e953186f2B9dDFc0B5dD69483354EDCA2",
+    id: "0x3220c83e953186f2b9ddfc0b5dd69483354edca20000000000000000000000b0",
+    name: "osGNO/GNO-BPT",
+    type: "ComposableStable",
+    gauge: "0x1350724a020B27c4f0E369bB00ae3127022d5465",
+    tokens: [
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+      },
+      {
+        address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
+        symbol: "osGNO",
+      },
+    ],
+  },
+  {
+    bpt: "0x9D376359b1C4975Aae4907E540C76838547E2Fe2",
+    id: "0x9d376359b1c4975aae4907e540c76838547e2fe20002000000000000000002fb",
+    name: "ECLP-GNO-wstETH-dyn",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
+        symbol: "wstETH",
+      },
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+      },
+    ],
+  },
+  {
+    bpt: "0x48094F85AEEb2D67D6F1EF2409d600C02859e57c",
+    id: "0x48094f85aeeb2d67d6f1ef2409d600c02859e57c0002000000000000000002fc",
+    name: "ECLP-GNO-USDC.e-dyn",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
+        symbol: "USDC.e",
+      },
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+      },
+    ],
+  },
+  {
+    bpt: "0x9D93F38b75B376AcDFe607cD1ECF4495E047dEfF",
+    id: "0x9d93f38b75b376acdfe607cd1ecf4495e047deff00000000000000000000009e",
+    name: "GBPe/sDAI",
+    type: "ComposableStable",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x5Cb9073902F2035222B9749F8fB0c9BFe5527108",
+        symbol: "GBPe",
+      },
+      {
+        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
+        symbol: "sDAI",
       },
     ],
   },

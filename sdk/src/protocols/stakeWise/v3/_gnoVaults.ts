@@ -60,12 +60,6 @@ export default [
       "Help decentralize Ethereum by staking with us - we run minority clients (usually Nimbus + Nethermind) running on bare metal servers in minority data centers. \n\nRead more at www.h2o-nodes.com\n\nHappy staking! ",
   },
   {
-    id: "0x3cb4692177525db38d983da0445d4eb25c3826de",
-    name: "Stakesaurus SEA Home Nodes",
-    description:
-      "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community. Centralised infrastructure is bad for both the network and your own GNO (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst. Our solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service! At Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
-  },
-  {
     id: "0x27fbf9cc8a4dbf438aecb32f278e287f157a267b",
     name: "alpineforge.eu gnosis vault",
     description:
@@ -127,6 +121,11 @@ export default [
     id: "0xe77141d0047691d4464fe1f3d3615ca10b74830b",
     name: "CNCVault2",
     description: "Stacked by the Chartreuse Node Crew",
+  },
+  {
+    id: "0x44cc6c8229f1873660012ba36a040b89d83f2cf8",
+    name: "SLH",
+    description: null,
   },
   {
     id: "0x451dbe45b4d4d158937f974e16b85342c8788bcd",

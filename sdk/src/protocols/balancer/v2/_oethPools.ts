@@ -112,23 +112,6 @@ export default [
     ],
   },
   {
-    bpt: "0x4Fd63966879300caFafBB35D157dC5229278Ed23",
-    id: "0x4fd63966879300cafafbb35d157dc5229278ed2300020000000000000000002b",
-    name: "BPT-rETH-ETH",
-    type: "MetaStable",
-    gauge: "0xF27D53f21d024643d50de50183932F17638229F6",
-    tokens: [
-      {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
-      },
-      {
-        address: "0x9Bcef72be871e61ED4fBbc7630889beE758eb81D",
-        symbol: "rETH",
-      },
-    ],
-  },
-  {
     bpt: "0x587c2Ac5303D22E09cFFF5F3E75c7a46f802f566",
     id: "0x587c2ac5303d22e09cfff5f3e75c7a46f802f56600020000000000000000016f",
     name: "ECLP-USDC.e-USDC",
@@ -176,23 +159,6 @@ export default [
       {
         address: "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
         symbol: "USDT",
-      },
-    ],
-  },
-  {
-    bpt: "0x7B50775383d3D6f0215A8F290f2C9e2eEBBEceb2",
-    id: "0x7b50775383d3d6f0215a8f290f2c9e2eebbeceb200020000000000000000008b",
-    name: "BPT-WSTETH-WETH",
-    type: "MetaStable",
-    gauge: "0xA30992B40a0cb4B2Da081ddBd843f9CcE25c2fe3",
-    tokens: [
-      {
-        address: "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
-        symbol: "wstETH",
-      },
-      {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
       },
     ],
   },
@@ -268,6 +234,23 @@ export default [
       {
         address: "0x4DD03dfD36548C840B563745e3FBeC320F37BA7e",
         symbol: "stataOptUSDCn",
+      },
+    ],
+  },
+  {
+    bpt: "0x8CE93cF0AC66F2A22a19A9aC2631D83068481469",
+    id: "0x8ce93cf0ac66f2a22a19a9ac2631d83068481469000200000000000000000170",
+    name: "ECLP-USDT0-USDT",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x01bFF41798a0BcF287b996046Ca68b395DbC1071",
+        symbol: "USD₮0",
+      },
+      {
+        address: "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+        symbol: "USDT",
       },
     ],
   },
