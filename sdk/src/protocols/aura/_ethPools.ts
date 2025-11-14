@@ -210,6 +210,22 @@ export default [
     rewarder: "0x77E20717a5a77893D1a94BbebC5f990b957062A7",
   },
   {
+    name: "wstETH-WETH-BPT",
+    id: "153",
+    bpt: "0x93d199263632a4EF4Bb438F1feB99e57b4b5f0BD",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+    rewarder: "0x2a14dB8D09dB0542f6A371c0cB308A768227D67D",
+  },
+  {
     name: "STG/USDC",
     id: "154",
     bpt: "0x3ff3a210e57cFe679D9AD1e9bA6453A716C56a2e",
@@ -290,6 +306,22 @@ export default [
     rewarder: "0x4313428170c09ca81117a95f0418aefE3446d935",
   },
   {
+    name: "osETH/wETH-BPT",
+    id: "179",
+    bpt: "0xDACf5Fa19b1f720111609043ac67A9818262850c",
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+      {
+        address: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
+        symbol: "osETH",
+      },
+    ],
+    rewarder: "0x5F032f15B4e910252EDaDdB899f7201E89C8cD6b",
+  },
+  {
     name: "80MIMO-20WETH",
     id: "180",
     bpt: "0xee3959FD00a0B996d801fc34B7CE566bD037f5f5",
@@ -304,6 +336,22 @@ export default [
       },
     ],
     rewarder: "0x098DCC73cd97C2BE5eAC5bD59c50cc034b60C06E",
+  },
+  {
+    name: "weETH/rETH",
+    id: "182",
+    bpt: "0x05ff47AFADa98a98982113758878F9A8B9FddA0a",
+    tokens: [
+      {
+        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
+        symbol: "rETH",
+      },
+      {
+        address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+        symbol: "weETH",
+      },
+    ],
+    rewarder: "0x07A319A023859BbD49CC9C38ee891c3EA9283Cc5",
   },
   {
     name: "pxETH/wETH",
@@ -336,6 +384,22 @@ export default [
       },
     ],
     rewarder: "0x8660F02Ca94970C45add17CEDdCC81DD4D90ffED",
+  },
+  {
+    name: "ETHx/wstETH",
+    id: "207",
+    bpt: "0xB91159aa527D4769CB9FAf3e4ADB760c7E8C8Ea7",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+        symbol: "ETHx",
+      },
+    ],
+    rewarder: "0x571a20C14a7c3Ac6d30Ee7D1925940bb0C027696",
   },
   {
     name: "ECLP-paUSD-GYD",
