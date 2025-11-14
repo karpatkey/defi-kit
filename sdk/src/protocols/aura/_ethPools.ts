@@ -242,6 +242,26 @@ export default [
     rewarder: "0x8bd520Bf5d59F959b25EE7b78811142dDe543134",
   },
   {
+    name: "GHO/USDT/USDC",
+    id: "157",
+    bpt: "0x8353157092ED8Be69a9DF8F95af097bbF33Cb2aF",
+    tokens: [
+      {
+        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+        symbol: "GHO",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+      {
+        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        symbol: "USDT",
+      },
+    ],
+    rewarder: "0xBDD6984C3179B099E9D383ee2F44F3A57764BF7d",
+  },
+  {
     name: "2BTC",
     id: "159",
     bpt: "0xe4e72f872c4048925a78E1e6Fddac411C9ae348A",

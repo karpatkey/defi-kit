@@ -149,6 +149,7 @@ export const contracts = {
     },
     morpho: {
       morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
+      vault: "0x571BD367471D2202F99CC0317882aC3b0208001a", // Vault v2 Implementation
     },
     optimismBridge: {
       optDaiBridge: "0x10E6593CDda8c58a1d0f14C5164B376352a55f2F",
@@ -311,6 +312,9 @@ export const contracts = {
       l2HopCctp: "0x6504BFcaB789c35325cA4329f1f41FaC340bf982",
       hopDaiWrapper: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
     },
+    morpho: {
+      morphoBlue: "0x6c247b1F6182318877311737BaC0844bAa518F5e",
+    },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
     },
@@ -403,6 +407,9 @@ export const contracts = {
     },
     hop: {
       l2HopCctp: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
+    },
+    morpho: {
+      morphoBlue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb",
     },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",

@@ -25,7 +25,7 @@ describe("aaveV3", () => {
         Chain.arb1,
         contracts.arbitrumOne.usdc,
         parseUnits("10000", 6),
-        contracts.arbitrumOne.balancerV2.vault
+        contracts.arbitrumOne.morpho.morphoBlue
       )
       await expect(
         kit.asMember.usdc.approve(

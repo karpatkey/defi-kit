@@ -9,6 +9,8 @@ import * as convex from "./convex/schema"
 import * as cowSwap from "./cowSwap/schema"
 import * as fluid from "./fluid/schema"
 import * as lido from "./lido/schema"
+import * as morphoMarkets from "./morpho/markets/schema"
+import * as morphoVaults from "./morpho/vaults/schema"
 import * as sky from "./sky/schema"
 import * as rocketPool from "./rocketPool/schema"
 import * as spark from "./spark/schema"
@@ -32,6 +34,8 @@ export const eth = {
   cowswap: cowSwap.eth,
   fluid: fluid.eth,
   lido: lido.eth,
+  morphoMarkets: morphoMarkets.eth,
+  morphoVaults: morphoVaults.eth,
   sky: sky.eth,
   rocket_pool: rocketPool.eth,
   spark: spark.eth,
@@ -57,6 +61,8 @@ export const arb1 = {
   balancer_v2: balancerV2.arb1,
   cowswap: cowSwap.arb1,
   fluid: fluid.arb1,
+  morphoMarkets: morphoMarkets.arb1,
+  morphoVaults: morphoVaults.arb1,
   uniswap_v3: uniswapV3.arb1,
 } satisfies ProtocolSchemas
 
@@ -73,5 +79,7 @@ export const base = {
   balancer_v2: balancerV2.base,
   cowswap: cowSwap.base,
   fluid: fluid.base,
+  morphoMarkets: morphoMarkets.base,
+  morphoVaults: morphoVaults.base,
   uniswap_v3: uniswapV3.base,
 } satisfies ProtocolSchemas
