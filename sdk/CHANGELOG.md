@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.24.0](https://github.com/karpatkey/defi-kit/compare/v2.23.0...v2.24.0) (2025-11-14)
+
+
+### Features
+
+* Morpho ([#500](https://github.com/karpatkey/defi-kit/issues/500)) ([4dd4c06](https://github.com/karpatkey/defi-kit/commit/4dd4c06f95b86c8dce3e8e63cdadd0c4f47633e4))
+
 ## [2.23.0](https://github.com/karpatkey/defi-kit/compare/v2.22.1...v2.23.0) (2025-11-14)
 
 
