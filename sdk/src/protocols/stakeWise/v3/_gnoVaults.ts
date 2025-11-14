@@ -132,4 +132,10 @@ export default [
     name: "Home vault",
     description: "My home vault.",
   },
+  {
+    id: "0x3cb4692177525db38d983da0445d4eb25c3826de",
+    name: "Stakesaurus SEA Home Nodes",
+    description:
+      "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community. Centralised infrastructure is bad for both the network and your own GNO (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst. Our solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service! At Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
+  },
 ] as const
