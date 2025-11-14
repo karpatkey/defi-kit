@@ -5024,4 +5024,55 @@ export default [
       },
     ],
   },
+  {
+    bpt: "0xDACf5Fa19b1f720111609043ac67A9818262850c",
+    id: "0xdacf5fa19b1f720111609043ac67a9818262850c000000000000000000000635",
+    name: "osETH/wETH-BPT",
+    type: "ComposableStable",
+    gauge: "0xc592c33e51A764B94DB0702D8BAf4035eD577aED",
+    tokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+      {
+        address: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
+        symbol: "osETH",
+      },
+    ],
+  },
+  {
+    bpt: "0xB91159aa527D4769CB9FAf3e4ADB760c7E8C8Ea7",
+    id: "0xb91159aa527d4769cb9faf3e4adb760c7e8c8ea700000000000000000000067c",
+    name: "ETHx/wstETH",
+    type: "ComposableStable",
+    gauge: "0xAC08fde28aa2D123B61a5dB3074cAF72760FfeEB",
+    tokens: [
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+        symbol: "ETHx",
+      },
+    ],
+  },
+  {
+    bpt: "0x596192bB6e41802428Ac943D2f1476C1Af25CC0E",
+    id: "0x596192bb6e41802428ac943d2f1476c1af25cc0e000000000000000000000659",
+    name: "ezETH-WETH-BPT",
+    type: "ComposableStable",
+    gauge: "0xa8B309a75f0D64ED632d45A003c68A30e59A1D8b",
+    tokens: [
+      {
+        address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+        symbol: "ezETH",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+    ],
+  },
 ] as const
