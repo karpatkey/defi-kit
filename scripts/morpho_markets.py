@@ -1,6 +1,7 @@
 import os
 from gql import gql, Client
 from gql.transport.requests import RequestsHTTPTransport
+from karpatkit.node import get_node
 from defabipedia import Chain
 from defabipedia.tokens import EthereumTokenAddr
 from lib.dump import dump
@@ -55,6 +56,7 @@ def subgraph_query_markets(blockchain):
 
 def protocol_data(blockchain):
     markets = subgraph_query_markets(blockchain)
+    web3 = get_node(blockchain)
     
     result = []
     for market in markets:
@@ -68,16 +70,16 @@ def protocol_data(blockchain):
         result.append({
             "id": market["id"],
             "name": market["name"],
-            "irm": market["irm"],
+            "irm": web3.to_checksum_address(market["irm"]),
             "lltv": market["lltv"],
-            "oracle": market["oracle"]["oracleAddress"],
+            "oracle": web3.to_checksum_address(market["oracle"]["oracleAddress"]),
             "loanToken": {
-                "address": market["inputToken"]["id"],
-                "symbol": market["inputToken"]["symbol"]
+                "address": web3.to_checksum_address(market["borrowedToken"]["id"]),
+                "symbol": market["borrowedToken"]["symbol"]
             },
             "collateralToken": {
-                "address": market["borrowedToken"]["id"],
-                "symbol": market["borrowedToken"]["symbol"]
+                "address": web3.to_checksum_address(market["inputToken"]["id"]),
+                "symbol": market["inputToken"]["symbol"]
             }
         })
 
