@@ -905,6 +905,23 @@ export default [
     ],
   },
   {
+    bpt: "0x48094F85AEEb2D67D6F1EF2409d600C02859e57c",
+    id: "0x48094f85aeeb2d67d6f1ef2409d600c02859e57c0002000000000000000002fc",
+    name: "ECLP-GNO-USDC.e-dyn",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x2a22f9c3b484c3629090FeED35F17Ff8F88f76F0",
+        symbol: "USDC.e",
+      },
+      {
+        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
+        symbol: "GNO",
+      },
+    ],
+  },
+  {
     bpt: "0x48a50106D9123EfaeBF5ee402f3f7E1C3Da49f27",
     id: "0x48a50106d9123efaebf5ee402f3f7e1c3da49f270001000000000000000000ba",
     name: "40REG-30sDAI-20WBTC-10wstETH",
