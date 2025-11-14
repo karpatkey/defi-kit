@@ -180,6 +180,23 @@ export default [
     ],
   },
   {
+    bpt: "0x2b51E0443bE2656d0AFb982695695254E2cACE2D",
+    id: "0x2b51e0443be2656d0afb982695695254e2cace2d0002000000000000000005ef",
+    name: "ECLP-wstUSR-GYD",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x66CFbD79257dC5217903A36293120282548E2254",
+        symbol: "wstUSR",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+      },
+    ],
+  },
+  {
     bpt: "0x2D42910D826e5500579D121596E98A6eb33C0a1b",
     id: "0x2d42910d826e5500579d121596e98a6eb33c0a1b0002000000000000000003d9",
     name: "50WETH-50ARB",
@@ -624,6 +641,23 @@ export default [
     ],
   },
   {
+    bpt: "0x80f4140b740556BeFb27C19D37bc8717b48C2AE8",
+    id: "0x80f4140b740556befb27c19d37bc8717b48c2ae80002000000000000000005f0",
+    name: "ECLP-syrupUSDC-GYD",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x41CA7586cC1311807B4605fBB748a3B8862b42b5",
+        symbol: "syrupUSDC",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+      },
+    ],
+  },
+  {
     bpt: "0x820b69faD931d4b4Bf14E70fF234A8390F6A0658",
     id: "0x820b69fad931d4b4bf14e70ff234a8390f6a0658000200000000000000000547",
     name: "ECLP-GYD-AUSDC",
@@ -993,23 +1027,6 @@ export default [
       {
         address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
         symbol: "WETH",
-      },
-    ],
-  },
-  {
-    bpt: "0xd0EC47c54cA5e20aaAe4616c25C825c7f48D4069",
-    id: "0xd0ec47c54ca5e20aaae4616c25c825c7f48d40690000000000000000000004ef",
-    name: "rETH/wETH BPT",
-    type: "ComposableStable",
-    gauge: "0x8ba2D53F34159C5C5e7add60B56C7dE3BBc1DA68",
-    tokens: [
-      {
-        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
-        symbol: "WETH",
-      },
-      {
-        address: "0xEC70Dcb4A1EFa46b8F2D97C310C9c4790ba5ffA8",
-        symbol: "rETH",
       },
     ],
   },
