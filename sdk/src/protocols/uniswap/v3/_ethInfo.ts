@@ -1565,4 +1565,12 @@ export default [
     address: "0x491604c0FDF08347Dd1fa4Ee062a822A5DD06B5D",
     symbol: "CTSI",
   },
+  {
+    address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
+    symbol: "ETHx",
+  },
+  {
+    address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
+    symbol: "rsETH",
+  },
 ] as const
