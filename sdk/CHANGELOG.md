@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.25.0](https://github.com/karpatkey/defi-kit/compare/v2.24.0...v2.25.0) (2025-11-14)
+
+
+### Features
+
+* Spark Update ([#502](https://github.com/karpatkey/defi-kit/issues/502)) ([bbea558](https://github.com/karpatkey/defi-kit/commit/bbea55854a2ada1e8a01a100e3c0fbcee2d274b1))
+
 ## [2.24.0](https://github.com/karpatkey/defi-kit/compare/v2.23.0...v2.24.0) (2025-11-14)
 
 
