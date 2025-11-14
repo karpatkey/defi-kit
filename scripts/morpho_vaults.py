@@ -56,7 +56,7 @@ CreateVaultV2 = "0x341ce009267aa0d78cc12b34155e223904a51ed49d144beb6eb8be87813ed
 VAULT_ABI = json.loads('[{"inputs":[],"name":"asset","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"}, {"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"}]')
 
 def get_vaults_data(chain):
-    node = get_node(chain)
+    web3 = get_node(chain)
     result = []
     
     # Get V1 vaults
@@ -68,27 +68,27 @@ def get_vaults_data(chain):
             block_start=factory_info["fromBlock"],
             block_end="latest",
             topics=[CreateMetaMorpho],
-            web3=node,
+            web3=web3,
         )
         
         for log in logs:
             vault_address = "0x" + log["topics"][1].hex()[26:]  # topic 1, remove 0x and first 24 chars
-            vault_contract = get_contract(vault_address, chain, node, abi=VAULT_ABI)
+            vault_contract = get_contract(vault_address, chain, web3, abi=VAULT_ABI)
             
             try:
                 name = vault_contract.functions.name().call()
                 symbol = vault_contract.functions.symbol().call()
                 asset_address = vault_contract.functions.asset().call()
-                asset_symbol = get_symbol(asset_address, chain, node)
+                asset_symbol = get_symbol(asset_address, chain, web3)
                 
                 if name and symbol:  # Filter out vaults with empty name or symbol
                     result.append({
-                        "id": vault_address,
+                        "id": web3.to_checksum_address(vault_address),
                         "version": "v1",
                         "name": name,
                         "symbol": symbol,
                         "asset": {
-                            "address": asset_address,
+                            "address": web3.to_checksum_address(asset_address),
                             "symbol": asset_symbol
                         }
                     })
@@ -104,27 +104,27 @@ def get_vaults_data(chain):
             block_start=factory_info["fromBlock"],
             block_end="latest",
             topics=[CreateMetaMorpho],
-            web3=node,
+            web3=web3,
         )
         
         for log in logs:
             vault_address = "0x" + log["topics"][1].hex()[26:]  # topic 1, remove 0x and first 24 chars
-            vault_contract = get_contract(vault_address, chain, node, abi=VAULT_ABI)
+            vault_contract = get_contract(vault_address, chain, web3, abi=VAULT_ABI)
             
             try:
                 name = vault_contract.functions.name().call()
                 symbol = vault_contract.functions.symbol().call()
                 asset_address = vault_contract.functions.asset().call()
-                asset_symbol = get_symbol(asset_address, chain, node)
+                asset_symbol = get_symbol(asset_address, chain, web3)
                 
                 if name and symbol:  # Filter out vaults with empty name or symbol
                     result.append({
-                        "id": vault_address,
+                        "id": web3.to_checksum_address(vault_address),
                         "version": "v1.1",
                         "name": name,
                         "symbol": symbol,
                         "asset": {
-                            "address": asset_address,
+                            "address": web3.to_checksum_address(asset_address),
                             "symbol": asset_symbol
                         }
                     })
@@ -140,27 +140,27 @@ def get_vaults_data(chain):
             block_start=factory_info["fromBlock"],
             block_end="latest",
             topics=[CreateVaultV2],
-            web3=node,
+            web3=web3,
         )
         
         for log in logs:
             vault_address = "0x" + log["topics"][3].hex()[26:]  # topic 3, remove 0x and first 24 chars
-            vault_contract = get_contract(vault_address, chain, node, abi=VAULT_ABI)
+            vault_contract = get_contract(vault_address, chain, web3, abi=VAULT_ABI)
             
             try:
                 name = vault_contract.functions.name().call()
                 symbol = vault_contract.functions.symbol().call()
                 asset_address = vault_contract.functions.asset().call()
-                asset_symbol = get_symbol(asset_address, chain, node)
+                asset_symbol = get_symbol(asset_address, chain, web3)
                 
                 if name and symbol:  # Filter out vaults with empty name or symbol
                     result.append({
-                        "id": vault_address,
+                        "id": web3.to_checksum_address(vault_address),
                         "version": "v2",
                         "name": name,
                         "symbol": symbol,
                         "asset": {
-                            "address": asset_address,
+                            "address": web3.to_checksum_address(asset_address),
                             "symbol": asset_symbol
                         }
                     })

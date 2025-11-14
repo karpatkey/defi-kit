@@ -2,7 +2,7 @@
 
 export default [
   {
-    id: "0x1350994173f1cc83f8fc45a5af80a0acfc1b613c",
+    id: "0x1350994173f1CC83f8fc45a5aF80A0aCfC1B613C",
     version: "v1.1",
     name: "vaultname",
     symbol: "symbol",
@@ -12,7 +12,7 @@ export default [
     },
   },
   {
-    id: "0xe01133083c34cdec8a6722b1c8e9ec3c5a46ae86",
+    id: "0xe01133083c34CDEc8A6722b1C8E9EC3c5A46AE86",
     version: "v1.1",
     name: "Storm USDC",
     symbol: "stormUSDC",
@@ -22,7 +22,7 @@ export default [
     },
   },
   {
-    id: "0x2a177a2c0d54d445f5a06f67d97f79fdc73b3534",
+    id: "0x2A177A2C0D54d445f5a06F67d97f79FdC73B3534",
     version: "v1.1",
     name: "Honor Vault",
     symbol: "honorUSDC",
@@ -32,7 +32,7 @@ export default [
     },
   },
   {
-    id: "0xa9d11e0e1356d13d18edd9dbd7b0352464256b33",
+    id: "0xa9D11e0e1356d13d18edd9DBd7b0352464256b33",
     version: "v1.1",
     name: "Test Vault 2",
     symbol: "testVault2",
@@ -42,7 +42,7 @@ export default [
     },
   },
   {
-    id: "0xfdad9e039e2a5458e75f2bd4a0952456bd25ce9b",
+    id: "0xfDaD9e039e2a5458E75F2BD4a0952456bd25ce9B",
     version: "v1.1",
     name: "Finz Vault",
     symbol: "finzVault",
@@ -52,7 +52,7 @@ export default [
     },
   },
   {
-    id: "0x7d27402fd0401f62709100e43a99e6eb4740c970",
+    id: "0x7d27402FD0401F62709100e43a99e6EB4740c970",
     version: "v1.1",
     name: "Test Vault 3",
     symbol: "testVault3",
@@ -62,7 +62,7 @@ export default [
     },
   },
   {
-    id: "0x1a461ebed31fe0fa36d91c9e09528837bacca43a",
+    id: "0x1A461ebED31fE0fa36D91C9E09528837BaCca43a",
     version: "v1.1",
     name: "Test Vault 4",
     symbol: "testVault4",
@@ -72,7 +72,7 @@ export default [
     },
   },
   {
-    id: "0xec2cf9ca3a579d5c170187534f585fe92d288ae0",
+    id: "0xEC2Cf9ca3A579d5C170187534F585fe92d288aE0",
     version: "v1.1",
     name: "Test Vault 5",
     symbol: "testVault5",
@@ -82,7 +82,7 @@ export default [
     },
   },
   {
-    id: "0x563b46cddd026ee909c75ef5d125a94136799ac1",
+    id: "0x563B46Cddd026Ee909C75eF5D125A94136799Ac1",
     version: "v1.1",
     name: "Vaulty Vault",
     symbol: "vv",
@@ -92,7 +92,7 @@ export default [
     },
   },
   {
-    id: "0x16cd9de749627eb65eedba35548d61d915815f89",
+    id: "0x16Cd9De749627eB65EeDBa35548D61D915815F89",
     version: "v1.1",
     name: "MS-sUSDe",
     symbol: "MUX-V3 Senior Tranche sUSDe",
@@ -102,7 +102,7 @@ export default [
     },
   },
   {
-    id: "0x24717fddd4fdf9dffa856d8a7f1a41d2b9de9dec",
+    id: "0x24717fDDD4FDF9DffA856D8A7F1A41D2b9dE9dEC",
     version: "v1.1",
     name: "testWbtc",
     symbol: "TCWBTC",
@@ -112,7 +112,7 @@ export default [
     },
   },
   {
-    id: "0x99654c53728b36f6b96063db7b0d6dc4116a66cf",
+    id: "0x99654C53728B36f6b96063dB7B0d6Dc4116a66cf",
     version: "v1.1",
     name: "testusdc1",
     symbol: "usdctt",
@@ -122,7 +122,7 @@ export default [
     },
   },
   {
-    id: "0x137525c9c78f5fd675138568318a19126afb436b",
+    id: "0x137525c9c78f5fd675138568318A19126aFb436b",
     version: "v1.1",
     name: "sail USDC",
     symbol: "sjUSDC",
@@ -132,7 +132,7 @@ export default [
     },
   },
   {
-    id: "0x696565124bfc7cf6ccd9194ef949799cf21069e8",
+    id: "0x696565124BfC7Cf6CCd9194Ef949799cF21069e8",
     version: "v1.1",
     name: "TEST WETH VAULT",
     symbol: "test-weth-vault",
@@ -142,7 +142,7 @@ export default [
     },
   },
   {
-    id: "0xbe1a0690aa440ccae131b05679aef197f843527a",
+    id: "0xbE1A0690Aa440ccaE131B05679aeF197f843527a",
     version: "v1.1",
     name: "MS-sUSDe",
     symbol: "MUX-V3 Senior Tranche sUSDe",
@@ -152,7 +152,7 @@ export default [
     },
   },
   {
-    id: "0xbd14bea2ecececd5f32149b0f84be7f7f446b964",
+    id: "0xBD14bEa2eCECeCD5F32149B0f84BE7f7F446B964",
     version: "v1.1",
     name: "Gauntlet WETH Core",
     symbol: "gtWETH",
@@ -162,7 +162,7 @@ export default [
     },
   },
   {
-    id: "0x7c574174da4b2be3f705c6244b4bfa0815a8b3ed",
+    id: "0x7c574174DA4b2be3f705c6244B4BfA0815a8B3Ed",
     version: "v1.1",
     name: "Gauntlet USDC Prime",
     symbol: "gtUSDCp",
@@ -172,7 +172,7 @@ export default [
     },
   },
   {
-    id: "0x7e97fa6893871a2751b5fe961978dccb2c201e65",
+    id: "0x7e97fa6893871A2751B5fE961978DCCb2c201E65",
     version: "v1.1",
     name: "Gauntlet USDC Core",
     symbol: "gtUSDCc",
@@ -182,7 +182,7 @@ export default [
     },
   },
   {
-    id: "0x139250cdb310d657eac506c7c7fc6acde34af1ec",
+    id: "0x139250CdB310D657eAC506c7C7FC6AcDE34Af1ec",
     version: "v1.1",
     name: "Gauntlet USDT0 Core",
     symbol: "gtUSDT0",
@@ -192,7 +192,7 @@ export default [
     },
   },
   {
-    id: "0x4db0b0a83de352817d0c30a88a36667b75d48b6e",
+    id: "0x4dB0B0a83de352817d0C30a88a36667b75D48b6E",
     version: "v1.1",
     name: "test do not use",
     symbol: "testWETH",
@@ -202,7 +202,7 @@ export default [
     },
   },
   {
-    id: "0x250cf7c82bac7cb6cf899b6052979d4b5ba1f9ca",
+    id: "0x250CF7c82bAc7cB6cf899b6052979d4B5BA1f9ca",
     version: "v1.1",
     name: "Steakhouse Prime USDC",
     symbol: "steakUSDC",
@@ -212,7 +212,7 @@ export default [
     },
   },
   {
-    id: "0x0623a67d69bb2f59d266897a15dc1509d291d631",
+    id: "0x0623a67D69bB2F59D266897A15dC1509d291D631",
     version: "v1.1",
     name: "Steakhouse Prime ETH",
     symbol: "steakETH",
@@ -222,7 +222,7 @@ export default [
     },
   },
   {
-    id: "0x87deae530841a9671326c9d5b9f91bdb11f3162c",
+    id: "0x87DEAE530841A9671326C9D5B9f91bdB11F3162c",
     version: "v1.1",
     name: "Yearn OG USDC",
     symbol: "yOG-USDC",
@@ -232,7 +232,7 @@ export default [
     },
   },
   {
-    id: "0x3574b6b307f86c0ca6bd263dca12d8f3031e57b9",
+    id: "0x3574B6b307f86C0ca6bd263dCa12d8f3031e57B9",
     version: "v1.1",
     name: "Yearn OG WETH",
     symbol: "yOG-WETH",
@@ -242,7 +242,7 @@ export default [
     },
   },
   {
-    id: "0x2281961480216653529a03d6ce03ee6b8cdf564e",
+    id: "0x2281961480216653529A03D6CE03Ee6B8cdF564E",
     version: "v1.1",
     name: "Steakhouse Prime USDT0",
     symbol: "steakUSDT0",
@@ -252,7 +252,7 @@ export default [
     },
   },
   {
-    id: "0x6d57dad0f1c4da0c1d5443ae8f7f8a50bdb9cf75",
+    id: "0x6d57dAd0F1c4da0C1d5443AE8F7f8a50BDb9Cf75",
     version: "v1.1",
     name: "MEV Capital USDT0",
     symbol: "MCUSDT0",
@@ -262,7 +262,7 @@ export default [
     },
   },
   {
-    id: "0xa60643c90a542a95026c0f1dbdb0615ff42019cf",
+    id: "0xa60643c90A542A95026C0F1dbdB0615fF42019Cf",
     version: "v1.1",
     name: "MEV Capital USDC",
     symbol: "MCUSDC",
@@ -272,7 +272,7 @@ export default [
     },
   },
   {
-    id: "0x9b33073eb98a9a1eb408dedcd08616fe850b3f09",
+    id: "0x9B33073eB98A9a1eb408DedcD08616fE850b3f09",
     version: "v1.1",
     name: "MEV Capital wETH",
     symbol: "MCwETH",
@@ -282,7 +282,7 @@ export default [
     },
   },
   {
-    id: "0x4c289073eb6679393890b85eec9d604271c18c28",
+    id: "0x4C289073eb6679393890b85eEC9D604271c18c28",
     version: "v1.1",
     name: "Alpha USDC Core",
     symbol: "aUSDC",
@@ -292,7 +292,7 @@ export default [
     },
   },
   {
-    id: "0x23faff4f253b85834d9d37f97ea807ec46d1ec9e",
+    id: "0x23fafF4F253B85834D9d37f97EA807EC46d1Ec9E",
     version: "v1.1",
     name: "Alpha wETH Core",
     symbol: "aWETH",
@@ -302,7 +302,7 @@ export default [
     },
   },
   {
-    id: "0x0f841bd670eaeb6be0a173c06efefbad09abb0f4",
+    id: "0x0f841BD670eaeB6bE0a173C06EFEfBAD09ABB0f4",
     version: "v1.1",
     name: "Alpha USDT Core",
     symbol: "aUSDT",
@@ -312,7 +312,7 @@ export default [
     },
   },
   {
-    id: "0xf56932d6bd0b99aadd8b77117e08374a14520dbe",
+    id: "0xf56932d6bd0b99aadD8B77117e08374A14520dbE",
     version: "v1.1",
     name: "Tridust USDC",
     symbol: "tdUSDC",
@@ -322,7 +322,7 @@ export default [
     },
   },
   {
-    id: "0x5c0c306aaa9f877de636f4d5822ca9f2e81563ba",
+    id: "0x5c0C306Aaa9F877de636f4d5822cA9F2E81563BA",
     version: "v1.1",
     name: "Steakhouse High Yield USDC",
     symbol: "bbqUSDC",
@@ -332,7 +332,7 @@ export default [
     },
   },
   {
-    id: "0x4739e2c293bdcd835829aa7c5d7fbdee93565d1a",
+    id: "0x4739E2c293bDCD835829aA7c5d7fBdee93565D1a",
     version: "v1.1",
     name: "Steakhouse High Yield USDT0",
     symbol: "bbqUSDT0",
@@ -342,7 +342,7 @@ export default [
     },
   },
   {
-    id: "0x9948364c08b28270b0463377a3b7cb49c630e9c7",
+    id: "0x9948364c08B28270b0463377a3B7cB49c630e9c7",
     version: "v1.1",
     name: "bratset",
     symbol: "bratset",
@@ -352,7 +352,7 @@ export default [
     },
   },
   {
-    id: "0x64a651d825fc70ebba88f2e1bad90be9a496c4b9",
+    id: "0x64A651D825FC70Ebba88f2E1BAD90be9A496C4b9",
     version: "v1.1",
     name: "Avantgarde USDC Core Arbitrum",
     symbol: "AVGUSDCCOREarb",
@@ -362,7 +362,7 @@ export default [
     },
   },
   {
-    id: "0x9257edda03f9915857187e927ef501c53b1679b3",
+    id: "0x9257eDDa03f9915857187e927eF501c53b1679b3",
     version: "v1.1",
     name: "Avantgarde USDC Prime Arbitrum",
     symbol: "AVGUSDCPRIMEarb",
@@ -372,7 +372,7 @@ export default [
     },
   },
   {
-    id: "0x704761b6280bfabc7e397efd34fc15cd3b527d7d",
+    id: "0x704761B6280BfABC7E397EfD34Fc15cd3b527d7D",
     version: "v1.1",
     name: "Re7 USDC",
     symbol: "Re7USDC",
@@ -382,7 +382,7 @@ export default [
     },
   },
   {
-    id: "0x3820b4a0309280d2dbfce37ce4a72a4200ef0e13",
+    id: "0x3820B4a0309280D2DbFCe37Ce4a72a4200ef0E13",
     version: "v1.1",
     name: "Dojo USDC",
     symbol: "USDC",
@@ -392,7 +392,7 @@ export default [
     },
   },
   {
-    id: "0x26f9c07c6c7c4fc18c9fbb0dd852a9e2c060b36e",
+    id: "0x26f9C07c6c7c4fC18C9fbb0DD852a9e2c060B36e",
     version: "v1.1",
     name: "sft USDC test",
     symbol: "sfUSDC",
@@ -402,7 +402,7 @@ export default [
     },
   },
   {
-    id: "0xe349f4114e8588469fdbc68fae326a50517e40fb",
+    id: "0xe349f4114E8588469FdbC68FAE326a50517E40FB",
     version: "v1.1",
     name: "SingularV USDC",
     symbol: "svUSDC",
@@ -412,7 +412,7 @@ export default [
     },
   },
   {
-    id: "0x62eb3db2a6d0be24c5538414189d3f75ab7110f2",
+    id: "0x62Eb3dB2A6d0BE24c5538414189d3F75Ab7110F2",
     version: "v1.1",
     name: "SingularV ETH",
     symbol: "svETH",
@@ -422,7 +422,7 @@ export default [
     },
   },
   {
-    id: "0x4b6f1c9e5d470b97181786b26da0d0945a7cf027",
+    id: "0x4B6F1C9E5d470b97181786b26da0d0945A7cf027",
     version: "v1.1",
     name: "Hyperithm USDC",
     symbol: "hyperUSDC",
@@ -432,7 +432,7 @@ export default [
     },
   },
   {
-    id: "0x5579e27129110bbc9c0ec1388acbf7ad04771b76",
+    id: "0x5579e27129110bBC9c0eC1388aCBf7ad04771b76",
     version: "v1.1",
     name: "dForce USDC",
     symbol: "dForce USDC",
@@ -442,7 +442,7 @@ export default [
     },
   },
   {
-    id: "0xa53cf822fe93002aeae16d395cd823ece161a6ac",
+    id: "0xa53Cf822FE93002aEaE16d395CD823Ece161a6AC",
     version: "v1.1",
     name: "Clearstar USDC Reactor",
     symbol: "CSUSDC",
@@ -452,7 +452,7 @@ export default [
     },
   },
   {
-    id: "0xb34e17733245c7371e87e9df64e705000b91d169",
+    id: "0xB34e17733245c7371E87E9DF64E705000B91D169",
     version: "v1.1",
     name: "Duplicated Key Arbitrum",
     symbol: "DPK.Arb",
@@ -462,7 +462,7 @@ export default [
     },
   },
   {
-    id: "0x6ca1814af943d3a796090ab5b098a68fb4cbc990",
+    id: "0x6cA1814AF943d3A796090aB5b098A68FB4cBC990",
     version: "v1.1",
     name: "MetaMorphoV1_1",
     symbol: "MM11",
@@ -472,7 +472,7 @@ export default [
     },
   },
   {
-    id: "0xe2fddc23ab85c83c16b0d5429a4dec6f147454aa",
+    id: "0xE2fddc23AB85C83c16b0d5429A4dEc6F147454AA",
     version: "v1.1",
     name: "MetaMorphoV1_1",
     symbol: "MM11",
@@ -482,7 +482,7 @@ export default [
     },
   },
   {
-    id: "0x671739ea595c42ac506d35709e613afca3a1e01a",
+    id: "0x671739Ea595C42AC506d35709e613aFca3a1E01a",
     version: "v1.1",
     name: "losemoney-usdc",
     symbol: "loser",
@@ -492,7 +492,7 @@ export default [
     },
   },
   {
-    id: "0x36b69949d60d06eccc14de0ae63f4e00cc2cd8b9",
+    id: "0x36b69949d60d06ECcC14DE0Ae63f4E00cc2cd8B9",
     version: "v1.1",
     name: "Yearn Degen USDC",
     symbol: "yDG-USDC",
@@ -502,7 +502,7 @@ export default [
     },
   },
   {
-    id: "0x3014ed70b39be395e1a5eb8ab4c4b8a5378e6522",
+    id: "0x3014ED70B39be395e1a5Eb8ab4c4b8a5378E6522",
     version: "v1.1",
     name: "Not Gauntlet",
     symbol: "AUSD",
@@ -512,7 +512,7 @@ export default [
     },
   },
   {
-    id: "0xba473de3eaa8e6d9d603cc9ed2f78983bfd10a30",
+    id: "0xba473dE3EAA8E6d9D603cC9Ed2f78983Bfd10A30",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -522,7 +522,7 @@ export default [
     },
   },
   {
-    id: "0x37997418ef10f0db0b38a411877de1e17e0b2058",
+    id: "0x37997418Ef10F0DB0B38A411877De1e17e0B2058",
     version: "v1.1",
     name: "MS-sUSDC",
     symbol: "MUX-V3 Senior Tranche sUSDC",
@@ -532,17 +532,17 @@ export default [
     },
   },
   {
-    id: "0xdc2f46e34d06e8f982000cca8253e9ea6529598d",
+    id: "0xDC2f46e34d06e8F982000cca8253e9ea6529598D",
     version: "v1.1",
-    name: "RIMU USDC",
-    symbol: "RIMUusdc",
+    name: "RIMU USDC Core",
+    symbol: "RIMUusdcCore",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
       symbol: "USDC",
     },
   },
   {
-    id: "0x44dd55b94223077386c351dae154ad107bac31e4",
+    id: "0x44Dd55b94223077386C351dae154AD107bAC31E4",
     version: "v1.1",
     name: "TryVault",
     symbol: "TV",
@@ -552,7 +552,7 @@ export default [
     },
   },
   {
-    id: "0x2c609d9cfc9dda2db5c128b2a665d921ec53579d",
+    id: "0x2C609d9CfC9dda2dB5C128B2a665D921ec53579d",
     version: "v1.1",
     name: "kpk USDC Yield",
     symbol: "kpk_USDC_Yield_Morpho",
@@ -562,7 +562,7 @@ export default [
     },
   },
   {
-    id: "0x320a3d53ab1ae0a4b8e324f4c74bd04d1cfe0cff",
+    id: "0x320A3D53AB1Ae0A4B8E324F4C74bd04d1cFe0CFf",
     version: "v1.1",
     name: "Super USDC",
     symbol: "supUSDC",
@@ -572,7 +572,7 @@ export default [
     },
   },
   {
-    id: "0xe9c36f2f6e44e0836ac1da5c7c1ebcac1465c80e",
+    id: "0xe9C36f2F6e44e0836Ac1da5C7c1EbCac1465c80E",
     version: "v1.1",
     name: "AA Quad USDT0 Vault",
     symbol: "aaUSDT0",
@@ -582,7 +582,7 @@ export default [
     },
   },
   {
-    id: "0x37492b884cb8f47a630d8dbba62b459f79996e9f",
+    id: "0x37492b884Cb8f47A630D8DBBa62B459F79996e9f",
     version: "v1.1",
     name: "AA Quad USDC Vault",
     symbol: "aaUSDC",
@@ -592,7 +592,7 @@ export default [
     },
   },
   {
-    id: "0x6ed386ee386199d0e1d9d712ef2071be433844f4",
+    id: "0x6ed386Ee386199D0E1D9D712Ef2071bE433844F4",
     version: "v1.1",
     name: "ABRC",
     symbol: "abrc",
@@ -602,7 +602,7 @@ export default [
     },
   },
   {
-    id: "0x64ca76e2525fc6ab2179300c15e343d73e42f958",
+    id: "0x64CA76e2525fc6Ab2179300c15e343d73e42f958",
     version: "v1.1",
     name: "Clearstar High Yield USDC",
     symbol: "CSHYUSDC",
@@ -612,7 +612,7 @@ export default [
     },
   },
   {
-    id: "0x1ee4add09635515628a94b2a8b26c71ec7d58b29",
+    id: "0x1ee4Add09635515628a94B2A8B26c71Ec7d58B29",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -622,7 +622,7 @@ export default [
     },
   },
   {
-    id: "0x0136bc523ca620d9d8a85af6c8a051ee004c32be",
+    id: "0x0136bc523cA620d9D8a85aF6c8a051eE004c32BE",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -632,7 +632,7 @@ export default [
     },
   },
   {
-    id: "0x9d1005a902a7d9c4f24ebc3b0cb3bbf6f2c85f30",
+    id: "0x9D1005A902A7D9C4f24ebc3b0CB3Bbf6F2c85F30",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -642,7 +642,7 @@ export default [
     },
   },
   {
-    id: "0x59db78948dc41a8c23b22803c312eab0ecf8d0db",
+    id: "0x59Db78948dC41A8c23b22803c312EaB0ecf8D0DB",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -652,7 +652,7 @@ export default [
     },
   },
   {
-    id: "0xec957bc43dba57abfca4518d6f1aa28e443bac26",
+    id: "0xEC957BC43dBa57aBFCA4518d6F1aA28e443BAc26",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -662,7 +662,7 @@ export default [
     },
   },
   {
-    id: "0xbe3f0374d673ec95140913af83ec3fee26344e14",
+    id: "0xbe3F0374d673ec95140913aF83eC3fee26344E14",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -672,7 +672,7 @@ export default [
     },
   },
   {
-    id: "0x664a88cc97e23582744f53d1a575dab091396d19",
+    id: "0x664A88cC97e23582744f53D1a575daB091396d19",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -682,7 +682,7 @@ export default [
     },
   },
   {
-    id: "0xe70934e06150dc85594b94a453a99233622a7861",
+    id: "0xe70934e06150Dc85594b94A453a99233622a7861",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -692,7 +692,7 @@ export default [
     },
   },
   {
-    id: "0x300e922054ef443199e39cc151e84f3d97b936fa",
+    id: "0x300E922054EF443199E39CC151e84f3D97b936fa",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -702,7 +702,7 @@ export default [
     },
   },
   {
-    id: "0x64d4e6d8d030b6b7fc6c34f6222d5a392c2b4294",
+    id: "0x64D4e6d8D030b6B7Fc6c34f6222D5A392c2B4294",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -712,7 +712,7 @@ export default [
     },
   },
   {
-    id: "0x596cde05ff90c826695b9080fc792e562f3b235c",
+    id: "0x596Cde05ff90c826695B9080fc792e562f3b235c",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -722,7 +722,7 @@ export default [
     },
   },
   {
-    id: "0xe32f77a13ce050b3d4c4b43935ede955609c33b1",
+    id: "0xe32f77a13CE050b3D4c4B43935edE955609C33b1",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -732,7 +732,7 @@ export default [
     },
   },
   {
-    id: "0x981a7b6ec71d2b92eb976ba5b7901628d7fea048",
+    id: "0x981a7B6eC71D2b92EB976ba5b7901628d7fEA048",
     version: "v1.1",
     name: "Naga Vault",
     symbol: "NAGAVAULT",
@@ -742,7 +742,7 @@ export default [
     },
   },
   {
-    id: "0x76b2406d29f1a2be4db638abbd5c7cab2ee2d8fe",
+    id: "0x76B2406D29F1A2Be4DB638aBBD5c7Cab2eE2D8FE",
     version: "v1.1",
     name: "Vaultik USDC",
     symbol: "vUSDC",
@@ -752,7 +752,7 @@ export default [
     },
   },
   {
-    id: "0xefc0c886e51d1d0bbea780a5e2442cf3947acb74",
+    id: "0xeFc0c886e51d1d0bbeA780A5e2442Cf3947acB74",
     version: "v1.1",
     name: "Blend Euler Earn USDC V1",
     symbol: "blend-eeUSDC-v1",
@@ -762,7 +762,7 @@ export default [
     },
   },
   {
-    id: "0xdf8eda1e84e610b550ff46ce0a81364807ba243b",
+    id: "0xDf8EdA1E84E610B550ff46CE0a81364807bA243B",
     version: "v1.1",
     name: "Blend Hyperithm USDC V1",
     symbol: "blend-hyperUSDC-v1",
@@ -772,7 +772,7 @@ export default [
     },
   },
   {
-    id: "0x6417ce2f7c8f6da9a031d53f87e53dc554d8ad7c",
+    id: "0x6417ce2f7c8F6DA9A031D53F87e53dC554D8aD7c",
     version: "v1.1",
     name: "Blend Gauntlet USDC Core V1",
     symbol: "blend-gtUSDCc-v1",
@@ -782,7 +782,7 @@ export default [
     },
   },
   {
-    id: "0xa19db1af5d973397de74f68b5a13a38caa81f16e",
+    id: "0xA19db1af5d973397DE74f68b5a13A38Caa81f16E",
     version: "v1.1",
     name: "Blend MEV Capital USDC V1",
     symbol: "blend-MCUSDC-v1",
@@ -792,7 +792,7 @@ export default [
     },
   },
   {
-    id: "0x3ac8fd1ba33eac80d37bfdc51bc10b6c7a4a38b8",
+    id: "0x3Ac8FD1BA33eAC80D37Bfdc51bC10B6C7a4a38B8",
     version: "v1.1",
     name: "Blend Steakhouse High Yield USDC V1",
     symbol: "blend-bbqUSDC-v1",
@@ -802,7 +802,7 @@ export default [
     },
   },
   {
-    id: "0x9abe4959bdd33b934d0250bc009a41248eae2d18",
+    id: "0x9ABE4959BDd33B934D0250bc009a41248eAe2d18",
     version: "v1.1",
     name: "Roy",
     symbol: "Roy",
@@ -812,7 +812,7 @@ export default [
     },
   },
   {
-    id: "0x8293026f4835e7e69093f4aca9d80b916930ec47",
+    id: "0x8293026f4835E7e69093F4aca9D80B916930ec47",
     version: "v1.1",
     name: "Pocky's High Yield USDC",
     symbol: "PHYUSDCARB",
@@ -822,7 +822,7 @@ export default [
     },
   },
   {
-    id: "0x2d91466bcc6946b58869fe2ae521a856737c3f6e",
+    id: "0x2D91466BCC6946B58869fE2ae521A856737C3f6e",
     version: "v1.1",
     name: "Edge UltraYield USDC",
     symbol: "edgeUSDC",
@@ -832,7 +832,7 @@ export default [
     },
   },
   {
-    id: "0x1faee72c301919ddb33cbf36a5c8ab8da886594d",
+    id: "0x1FaEe72c301919DdB33CbF36A5c8ab8Da886594d",
     version: "v1.1",
     name: "NALTESTUSDC",
     symbol: "NALTESTUSDC",
@@ -842,7 +842,7 @@ export default [
     },
   },
   {
-    id: "0x6ed14e086c28fdb951a2297907db9893ffad7987",
+    id: "0x6ED14e086c28fDb951a2297907DB9893FFAD7987",
     version: "v1.1",
     name: "USDCtestYield",
     symbol: "ktestUSDC",
@@ -852,7 +852,7 @@ export default [
     },
   },
   {
-    id: "0x5011849f4bdae6906639428290d886166dd2f274",
+    id: "0x5011849f4BDaE6906639428290D886166DD2f274",
     version: "v1.1",
     name: "DeFiAM Core USDC",
     symbol: "DFUSD",
@@ -862,7 +862,7 @@ export default [
     },
   },
   {
-    id: "0x97e429c9b2d177c6e7570893cf80bd4ebec2243f",
+    id: "0x97e429C9b2d177C6e7570893Cf80Bd4EbEC2243f",
     version: "v1.1",
     name: "0xDataWolf Points Farm",
     symbol: "🐺FARM",
@@ -872,7 +872,7 @@ export default [
     },
   },
   {
-    id: "0xa47c5203d22ae173788a9d9be0f2beecc97f4df9",
+    id: "0xa47C5203d22Ae173788a9d9Be0F2bEeCc97F4dF9",
     version: "v2",
     name: "Blend USDC Reserve",
     symbol: "blend-usdc-reserve",
@@ -882,7 +882,7 @@ export default [
     },
   },
   {
-    id: "0x2a7f06e9fde9ddc713789ef18b4a5a7322f555a0",
+    id: "0x2A7F06e9fdE9Ddc713789Ef18b4A5A7322F555a0",
     version: "v2",
     name: "Blend PT thBILL 27NOV2025",
     symbol: "blend-PT-thBILL-27NOV2025",
@@ -892,7 +892,7 @@ export default [
     },
   },
   {
-    id: "0xee64035d7f469dfe52df71f6fa17cbe09a7200f2",
+    id: "0xeE64035d7F469Dfe52df71F6FA17Cbe09a7200f2",
     version: "v2",
     name: "Blend PT USDai 20NOV2025",
     symbol: "blend-PT-USDai-20NOV2025",
@@ -902,7 +902,7 @@ export default [
     },
   },
   {
-    id: "0x1107288527ff3c814757cfcb7b5c681eacdfa931",
+    id: "0x1107288527Ff3C814757cfcb7B5c681eAcDfA931",
     version: "v2",
     name: "Blend PT thBILL 27NOV2025",
     symbol: "blend-PT-thBILL-27NOV2025",
@@ -912,7 +912,7 @@ export default [
     },
   },
   {
-    id: "0xaafbf21ef7c2d188c5b20df10c2b1bf94b5c78c0",
+    id: "0xaaFbf21Ef7C2D188C5b20dF10C2B1bf94B5c78c0",
     version: "v2",
     name: "Blend Euler Earn USDC",
     symbol: "blend-eeUSDC",
@@ -922,7 +922,7 @@ export default [
     },
   },
   {
-    id: "0x6d6d4d5010a7606fc7dd83df927a6684aa394b74",
+    id: "0x6d6d4D5010A7606FC7dD83df927A6684Aa394B74",
     version: "v2",
     name: "Blend Hyperithm USDC",
     symbol: "blend-hyperUSDC",
@@ -932,7 +932,7 @@ export default [
     },
   },
   {
-    id: "0x207195dfa461868a616f9280708a1c77d24e19ef",
+    id: "0x207195DfA461868a616F9280708a1C77d24e19EF",
     version: "v2",
     name: "Blend Gauntlet USDC Core",
     symbol: "blend-gtUSDCc",
@@ -942,7 +942,7 @@ export default [
     },
   },
   {
-    id: "0x69e6160ad95a9c751b385f3094bd6cdb7ed84521",
+    id: "0x69E6160aD95a9C751b385f3094Bd6cDb7ED84521",
     version: "v2",
     name: "Blend MEV Capital USDC",
     symbol: "blend-MCUSDC",
@@ -952,7 +952,7 @@ export default [
     },
   },
   {
-    id: "0x5818359fa0f44a3f0efb37057ba383671e747f25",
+    id: "0x5818359fa0f44A3F0EFB37057bA383671E747f25",
     version: "v2",
     name: "Blend WETH",
     symbol: "blend-weth",
@@ -962,7 +962,7 @@ export default [
     },
   },
   {
-    id: "0x62bda6a9f801db7a06bbb398638d17b98fc6e450",
+    id: "0x62BDA6a9f801DB7A06BBb398638d17b98fC6E450",
     version: "v2",
     name: "Blend Test",
     symbol: "blend-test",
@@ -972,7 +972,7 @@ export default [
     },
   },
   {
-    id: "0xf3809e56dcd87da3cf1f96a071ff0d5abd73f683",
+    id: "0xf3809e56Dcd87DA3Cf1F96A071fF0d5ABd73f683",
     version: "v2",
     name: "Blend Test 2",
     symbol: "blend-test-2",
@@ -982,7 +982,7 @@ export default [
     },
   },
   {
-    id: "0x28cd883aa8a3a234ce76a3b8a26511a142f0c293",
+    id: "0x28CD883aa8a3a234Ce76A3B8a26511A142f0C293",
     version: "v2",
     name: "Blend test 2",
     symbol: "blend-test-2",
@@ -992,7 +992,7 @@ export default [
     },
   },
   {
-    id: "0x0dfd6dcc9f13a1b0793b22cf7cfc929a9493df35",
+    id: "0x0dfd6DCc9F13A1B0793B22cF7CfC929A9493DF35",
     version: "v2",
     name: "test",
     symbol: "test1",
@@ -1002,7 +1002,7 @@ export default [
     },
   },
   {
-    id: "0x8e2ba11ceaa5c6bd8c3eabb1b62e31d36c955241",
+    id: "0x8e2Ba11Ceaa5C6BD8C3eAbB1b62e31d36c955241",
     version: "v2",
     name: "Blend Hyperithm USDC",
     symbol: "blend-hyperUSDC",
@@ -1012,7 +1012,7 @@ export default [
     },
   },
   {
-    id: "0xf1ebc1d262f99398bbfaf090519ee82f073d9cd0",
+    id: "0xF1Ebc1D262F99398BBfaf090519eE82f073d9cD0",
     version: "v2",
     name: "Blend Hyperithm USDC",
     symbol: "blend-hyperUSDC",
@@ -1022,7 +1022,7 @@ export default [
     },
   },
   {
-    id: "0x96e3800fe5c387750ad7435ab78698bc5ec9b39d",
+    id: "0x96E3800fe5c387750aD7435Ab78698BC5ec9B39d",
     version: "v2",
     name: "Blend Gauntlet USDC Core",
     symbol: "blend-gtUSDCc",
@@ -1032,7 +1032,7 @@ export default [
     },
   },
   {
-    id: "0xe2f6de763b77a897feda7943f65ff25f1fef8932",
+    id: "0xe2f6DE763b77a897feDa7943f65Ff25f1Fef8932",
     version: "v2",
     name: "Blend Euler Earn USDC",
     symbol: "blend-eeUSDC",
@@ -1042,7 +1042,7 @@ export default [
     },
   },
   {
-    id: "0x14accdcd16140d44ffc962d586c750d411829a6f",
+    id: "0x14ACcDcd16140D44Ffc962D586c750D411829A6f",
     version: "v2",
     name: "Blend Gauntlet USDC Core",
     symbol: "blend-gtUSDCc",
@@ -1052,7 +1052,7 @@ export default [
     },
   },
   {
-    id: "0x4c20c82ffcb0ea5f58eb4620d2f212d8879b7c03",
+    id: "0x4C20c82FFCB0ea5F58eb4620d2F212D8879B7C03",
     version: "v2",
     name: "Blend Gauntlet USDC Core",
     symbol: "blend-gtUSDCc",
@@ -1062,7 +1062,7 @@ export default [
     },
   },
   {
-    id: "0xd4400f8e077ab585840de3a8c575b86c9a68d9c2",
+    id: "0xd4400F8E077ab585840DE3A8c575b86c9a68D9C2",
     version: "v2",
     name: "Blend MEV Capital USDC",
     symbol: "blend-MCUSDC",
@@ -1072,7 +1072,7 @@ export default [
     },
   },
   {
-    id: "0xb2d1ee9a49bb9813e1464311159b1fc8ff294791",
+    id: "0xB2d1EE9a49Bb9813e1464311159B1FC8fF294791",
     version: "v2",
     name: "Blend Steakhouse High Yield USDC",
     symbol: "blend-bbqUSDC",
@@ -1082,7 +1082,7 @@ export default [
     },
   },
   {
-    id: "0xa1bc1d1a68b4c1721a65188e763e40bf44f79443",
+    id: "0xA1Bc1D1a68B4c1721a65188e763E40bf44f79443",
     version: "v2",
     name: "Blend Steakhouse High Yield USDC",
     symbol: "blend-bbqUSDC",
@@ -1092,7 +1092,7 @@ export default [
     },
   },
   {
-    id: "0xdcdd105e252e8cf685fb910fd9b2172ca3535a7f",
+    id: "0xdCdd105E252E8cF685fb910FD9B2172cA3535a7F",
     version: "v2",
     name: "WETH TEST",
     symbol: "weth-test",
@@ -1102,7 +1102,7 @@ export default [
     },
   },
   {
-    id: "0xecd5a2676d78e0c93ee4d09c9d397b9043eff72d",
+    id: "0xeCd5a2676d78E0C93EE4D09c9D397B9043Eff72D",
     version: "v2",
     name: "test usdc",
     symbol: "test-usdc",
@@ -1112,7 +1112,7 @@ export default [
     },
   },
   {
-    id: "0x7aab1a24201ce87df20f095ac31f3187fabb9ac5",
+    id: "0x7AaB1A24201Ce87Df20F095ac31f3187FABB9AC5",
     version: "v2",
     name: "test",
     symbol: "test",
@@ -1122,7 +1122,7 @@ export default [
     },
   },
   {
-    id: "0x9ce8a73296704d4689586347ef6e2087c2128f45",
+    id: "0x9cE8A73296704d4689586347eF6e2087c2128F45",
     version: "v2",
     name: "Blend USDC",
     symbol: "blend-usdc",
@@ -1132,7 +1132,7 @@ export default [
     },
   },
   {
-    id: "0x05597ecd2af27a03d2d175658c13272fc6faa378",
+    id: "0x05597ECd2af27A03D2d175658C13272fc6FaA378",
     version: "v2",
     name: "Blend Aave USDC",
     symbol: "blend-aave-usdc",

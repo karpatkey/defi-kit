@@ -613,7 +613,7 @@ export default [
     id: "0x1e19cf2d73a72ef1332c882f20534b6519be0276000200000000000000000112",
     name: "B-rETH-STABLE",
     type: "MetaStable",
-    gauge: null,
+    gauge: "0x79eF6103A513951a3b25743DB509E267685726B7",
     tokens: [
       {
         address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
@@ -3104,7 +3104,7 @@ export default [
     id: "0x93d199263632a4ef4bb438f1feb99e57b4b5f0bd0000000000000000000005c2",
     name: "wstETH-WETH-BPT",
     type: "ComposableStable",
-    gauge: null,
+    gauge: "0x5C0F23A5c1be65Fa710d385814a7Fd1Bda480b1C",
     tokens: [
       {
         address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
