@@ -4011,4 +4011,14 @@ export default [
       symbol: "USDC",
     },
   },
+  {
+    id: "0x91292Ae9e3Fd9d2eE9b83349843947cF02350B73",
+    version: "v2",
+    name: "Ready x Steakhouse High Yield USDC",
+    symbol: "ready-bbqUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
 ] as const

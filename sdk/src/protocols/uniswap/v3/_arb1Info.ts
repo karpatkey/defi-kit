@@ -62,12 +62,16 @@ export default [
     symbol: "CRV",
   },
   {
+    address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
+    symbol: "CRYPTO",
+  },
+  {
     address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
     symbol: "DAI",
   },
   {
-    address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
-    symbol: "CRYPTO",
+    address: "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
+    symbol: "tBTC",
   },
   {
     address: "0xe80772Eaf6e2E18B651F160Bc9158b2A5caFCA65",
