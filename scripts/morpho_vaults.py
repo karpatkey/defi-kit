@@ -72,7 +72,7 @@ def get_vaults_data(chain):
         )
         
         for log in logs:
-            vault_address = "0x" + log["topics"][1].hex()[26:]  # topic 1, remove 0x and first 24 chars
+            vault_address = "0x" + log["topics"][1].hex()[-40:]  # topic 1, 0x + last 40 chars
             vault_contract = get_contract(vault_address, chain, web3, abi=VAULT_ABI)
             
             try:
@@ -108,7 +108,7 @@ def get_vaults_data(chain):
         )
         
         for log in logs:
-            vault_address = "0x" + log["topics"][1].hex()[26:]  # topic 1, remove 0x and first 24 chars
+            vault_address = "0x" + log["topics"][1].hex()[-40:]  # topic 1, 0x + last 40 chars
             vault_contract = get_contract(vault_address, chain, web3, abi=VAULT_ABI)
             
             try:
@@ -144,7 +144,7 @@ def get_vaults_data(chain):
         )
         
         for log in logs:
-            vault_address = "0x" + log["topics"][3].hex()[26:]  # topic 3, remove 0x and first 24 chars
+            vault_address = "0x" + log["topics"][3].hex()[-40:]  # topic 3, 0x + last 40 chars
             vault_contract = get_contract(vault_address, chain, web3, abi=VAULT_ABI)
             
             try:
