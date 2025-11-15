@@ -3742,6 +3742,36 @@ export default [
     },
   },
   {
+    id: "0x9Ec9DD27f328A728ED6b2668681B4C3445fED4f7",
+    version: "v1.1",
+    name: "KedaoUsdc",
+    symbol: "KedaoUsdc",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xb7b4e1F7086820a02f9d630AB013596115574710",
+    version: "v1.1",
+    name: "Kedao USDC Vault",
+    symbol: "KdUSDC",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x9CBF0184036048895e69aAFb4D0A1598085bFc82",
+    version: "v1.1",
+    name: "Pofu Base USDC",
+    symbol: "pofuBaseUSDC",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0x5887D05d500bFFa0B7C2b946748bD9FbF8efE9E4",
     version: "v2",
     name: "Peaty cbBTC",
@@ -5236,6 +5266,36 @@ export default [
     version: "v2",
     name: "ARCH DIRECT",
     symbol: "ARCH DIRECT",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xAB69221057C80364AAe7eae22B5288426286694c",
+    version: "v2",
+    name: "KedaoTest",
+    symbol: "KeDaoTest",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x8effa741061aaA2d8A5012a9B09A2d31d8B628d7",
+    version: "v2",
+    name: "ARCHITECT INDIRECT",
+    symbol: "ARCHITECT INDIRECT",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x6022Cbf61352618053d89FD9eEfe78Cb725B3c9d",
+    version: "v2",
+    name: "ARCH FoF II",
+    symbol: "ARCH FoF II",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",

@@ -238,23 +238,6 @@ export default [
     ],
   },
   {
-    bpt: "0x8CE93cF0AC66F2A22a19A9aC2631D83068481469",
-    id: "0x8ce93cf0ac66f2a22a19a9ac2631d83068481469000200000000000000000170",
-    name: "ECLP-USDT0-USDT",
-    type: "GyroE",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x01bFF41798a0BcF287b996046Ca68b395DbC1071",
-        symbol: "USD₮0",
-      },
-      {
-        address: "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
-        symbol: "USDT",
-      },
-    ],
-  },
-  {
     bpt: "0x9620b74077e2A9f118cD37ef60001Aeb327EC1a7",
     id: "0x9620b74077e2a9f118cd37ef60001aeb327ec1a7000200000000000000000171",
     name: "20WETH/80VLR",

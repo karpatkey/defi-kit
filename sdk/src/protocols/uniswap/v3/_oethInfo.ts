@@ -25,4 +25,8 @@ export default [
     address: "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
     symbol: "WLD",
   },
+  {
+    address: "0x68f180fcCe6836688e9084f035309E29Bf0A2095",
+    symbol: "WBTC",
+  },
 ] as const

@@ -188,7 +188,7 @@ export default [
     symbol: "gtUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -248,7 +248,7 @@ export default [
     symbol: "steakUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -258,7 +258,7 @@ export default [
     symbol: "MCUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -308,7 +308,7 @@ export default [
     symbol: "aUSDT",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -338,7 +338,7 @@ export default [
     symbol: "bbqUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -548,7 +548,7 @@ export default [
     symbol: "TV",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -578,7 +578,7 @@ export default [
     symbol: "aaUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -678,7 +678,7 @@ export default [
     symbol: "NAGAVAULT",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -738,7 +738,7 @@ export default [
     symbol: "NAGAVAULT",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -808,7 +808,7 @@ export default [
     symbol: "Roy",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -866,6 +866,26 @@ export default [
     version: "v1.1",
     name: "0xDataWolf Points Farm",
     symbol: "🐺FARM",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x61A9bd201827FA93f2e0236ED83258028cECBa59",
+    version: "v1.1",
+    name: "Unstablecoin",
+    symbol: "UNSTABLE",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xaE73875437c86abb60cD7fA77286D63cb94F9a25",
+    version: "v1.1",
+    name: "HexaOne USDC",
+    symbol: "hxUSDCa",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
       symbol: "USDC",
