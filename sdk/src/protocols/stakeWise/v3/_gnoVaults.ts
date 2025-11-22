@@ -97,6 +97,11 @@ export default [
     description: "FCC GNO Liquid Staking Public Vault",
   },
   {
+    id: "0x44cc6c8229f1873660012ba36a040b89d83f2cf8",
+    name: "SLH",
+    description: null,
+  },
+  {
     id: "0x1f87105abbd23b49f2abf0995b21b52b97aacdc4",
     name: "AI IA Private Vault",
     description: null,
@@ -121,21 +126,5 @@ export default [
     id: "0xe77141d0047691d4464fe1f3d3615ca10b74830b",
     name: "CNCVault2",
     description: "Stacked by the Chartreuse Node Crew",
-  },
-  {
-    id: "0x44cc6c8229f1873660012ba36a040b89d83f2cf8",
-    name: "SLH",
-    description: null,
-  },
-  {
-    id: "0x451dbe45b4d4d158937f974e16b85342c8788bcd",
-    name: "Home vault",
-    description: "My home vault.",
-  },
-  {
-    id: "0x3cb4692177525db38d983da0445d4eb25c3826de",
-    name: "Stakesaurus SEA Home Nodes",
-    description:
-      "High availability setup using a network of home-based nodes in SEA running minority clients by Stakesaurus' community. Centralised infrastructure is bad for both the network and your own GNO (e.g. cloud service, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst. Our solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes act as fallbacks for one another to provide a high availability staking service! At Stakesaurus, we are growing the solo-staking community in SEA with our open source content — https://linktr.ee/stakesaurus",
   },
 ] as const

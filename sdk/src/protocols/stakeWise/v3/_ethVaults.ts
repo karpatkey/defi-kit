@@ -96,12 +96,6 @@ export default [
     description: "reliable validation",
   },
   {
-    id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
-    name: "Blockscape Super Early Bird",
-    description:
-      "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
-  },
-  {
     id: "0x0af0a2671bb19d4be5d6c6899ec712341e472d4b",
     name: "Illus Capital",
     description: "Illus Capital Private Staking Vault",
@@ -110,6 +104,12 @@ export default [
     id: "0x481afcd21a3447a7a04c4afd968df877b76d2310",
     name: "Sun and Moon Collection",
     description: "Celestial gains for celestial bodies.",
+  },
+  {
+    id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
+    name: "Blockscape Super Early Bird",
+    description:
+      "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
   },
   {
     id: "0x05e393ec11d0197a88d84457908edd4ff235f323",
@@ -164,6 +164,12 @@ export default [
     description: "Independent Ethereum node operator since genesis",
   },
   {
+    id: "0x5799be451ee9fddd171c23bf5be86eccfe1f062f",
+    name: "Blockdaemon",
+    description:
+      "Blockdaemon is the most battle-tested node provider for 70+ protocols, allowing for an easy way to receive optimized rewards while minimizing risk and supporting the network.",
+  },
+  {
     id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
     name: "VincentTaglia.eth",
     description:
@@ -206,12 +212,6 @@ export default [
       "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
   },
   {
-    id: "0xc502a1008cae7ad560294ac987355dfdb287e597",
-    name: "Stakin - Full MEV",
-    description:
-      "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
-  },
-  {
     id: "0x302be829c61c287787030888bbcf11115ecd5773",
     name: "Swiss Liquid Staking",
     description:
@@ -224,9 +224,9 @@ export default [
       "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
-    id: "0x5799be451ee9fddd171c23bf5be86eccfe1f062f",
-    name: "Blockdaemon",
+    id: "0xc502a1008cae7ad560294ac987355dfdb287e597",
+    name: "Stakin - Full MEV",
     description:
-      "Blockdaemon is the most battle-tested node provider for 70+ protocols, allowing for an easy way to receive optimized rewards while minimizing risk and supporting the network.",
+      "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
 ] as const
