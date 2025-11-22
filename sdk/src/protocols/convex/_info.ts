@@ -3382,4 +3382,18 @@ export default [
     cvxDepositToken: "0xED81D7446C38188E757F4bB56C93d8bCb9C77986",
     rewarder: "0x2384DF5C229A2a13Ce2e2D1644cDfDc0535CAED1",
   },
+  {
+    name: "FrxMsUSD",
+    id: "510",
+    crvLPToken: "0x9A9e2e70919c75D80aAaA1D483c46CdBb8ac4d1b",
+    cvxDepositToken: "0x8776057375455A92ac296Df174a42E2e8a371dC7",
+    rewarder: "0x60Aa76b7797644c89EB004b84286B47517a8DDb3",
+  },
+  {
+    name: "MUSD/2pool",
+    id: "511",
+    crvLPToken: "0xB5571E76693ba60110B5811DD650FFefce1C955f",
+    cvxDepositToken: "0xE6626C15aB80fb6694B5E39c4172551aB20A2E20",
+    rewarder: "0xC14aD130D6d2cf3F5CDD6E9b7A5B65115183F3cb",
+  },
 ] as const
