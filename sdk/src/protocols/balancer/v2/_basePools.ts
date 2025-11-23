@@ -481,6 +481,23 @@ export default [
     ],
   },
   {
+    bpt: "0xD97d36e71463c490a01556f0bbEa777fDf2d48DC",
+    id: "0xd97d36e71463c490a01556f0bbea777fdf2d48dc000200000000000000000209",
+    name: "ECLP-wstUSR-GYD",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0xB67675158B412D53fe6B68946483ba920b135bA1",
+        symbol: "wstUSR",
+      },
+      {
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
+      },
+    ],
+  },
+  {
     bpt: "0xDaa2d9be4f10622795676E59722bE1bBFa6C1fF0",
     id: "0xdaa2d9be4f10622795676e59722be1bbfa6c1ff00002000000000000000001db",
     name: "sPRF",

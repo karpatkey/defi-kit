@@ -146,6 +146,10 @@ export default [
     symbol: "s-KPK",
   },
   {
+    address: "0xeeF7B1f06B092625228C835Dd5D5B14641D1e54A",
+    symbol: "s-gCRC",
+  },
+  {
     address: "0xf084b8F984912f0c62179Ca7EE998BeC90757B53",
     symbol: "s-crc-lx",
   },

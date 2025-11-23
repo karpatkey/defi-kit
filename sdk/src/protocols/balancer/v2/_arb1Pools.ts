@@ -197,23 +197,6 @@ export default [
     ],
   },
   {
-    bpt: "0x2D42910D826e5500579D121596E98A6eb33C0a1b",
-    id: "0x2d42910d826e5500579d121596e98a6eb33c0a1b0002000000000000000003d9",
-    name: "50WETH-50ARB",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
-        symbol: "WETH",
-      },
-      {
-        address: "0x912CE59144191C1204E64559FE8253a0e49E6548",
-        symbol: "ARB",
-      },
-    ],
-  },
-  {
     bpt: "0x2e8Ea681FD59c9dc5f32B29de31F782724EF4DcB",
     id: "0x2e8ea681fd59c9dc5f32b29de31f782724ef4dcb0001000000000000000004bc",
     name: "50GOLD-25USDC-25WSTETH",
@@ -265,23 +248,6 @@ export default [
       {
         address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
         symbol: "WETH",
-      },
-    ],
-  },
-  {
-    bpt: "0x3a4c6D2404b5eb14915041e01F63200a82f4a343",
-    id: "0x3a4c6d2404b5eb14915041e01f63200a82f4a343000200000000000000000065",
-    name: "50STG-50USDC",
-    type: "Weighted",
-    gauge: "0xC422B5407C7717a3259A59738E05e74d6AA3302A",
-    tokens: [
-      {
-        address: "0x6694340fc020c5E6B96567843da2df01b2CE1eb6",
-        symbol: "STG",
-      },
-      {
-        address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
-        symbol: "USDC",
       },
     ],
   },
@@ -637,23 +603,6 @@ export default [
       {
         address: "0xD2cC61A36c31425B3Eb9bBEeCcE74A82a2e32E27",
         symbol: "RATS",
-      },
-    ],
-  },
-  {
-    bpt: "0x80f4140b740556BeFb27C19D37bc8717b48C2AE8",
-    id: "0x80f4140b740556befb27c19d37bc8717b48c2ae80002000000000000000005f0",
-    name: "ECLP-syrupUSDC-GYD",
-    type: "GyroE",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x41CA7586cC1311807B4605fBB748a3B8862b42b5",
-        symbol: "syrupUSDC",
-      },
-      {
-        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
-        symbol: "GYD",
       },
     ],
   },
@@ -1078,23 +1027,6 @@ export default [
       {
         address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
         symbol: "WETH",
-      },
-    ],
-  },
-  {
-    bpt: "0xef0c116A2818A5b1A5D836A291856A321f43C2Fb",
-    id: "0xef0c116a2818a5b1a5d836a291856a321f43c2fb00020000000000000000053a",
-    name: "ECLP-WOETH-WETH",
-    type: "GyroE",
-    gauge: "0x40e86216712cB9871B9C698EA3AFB22f88c00E6e",
-    tokens: [
-      {
-        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
-        symbol: "WETH",
-      },
-      {
-        address: "0xD8724322f44E5c58D7A815F542036fb17DbbF839",
-        symbol: "WOETH",
       },
     ],
   },
