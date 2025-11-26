@@ -237,6 +237,7 @@ export const contracts = {
       usdcTransmuter: "0x0392A2F5Ac47388945D8c84212469F545fAE52B2",
       xdaiBridge: "0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d",
       xdaiBridge2: "0x7301CFA0e1756B71869E93d4e4Dca5c7d0eb0AA6",
+      usdsDeposit: "0x5C183C8A49aBA6e31049997a56D75600E27FF8c9",
     },
     hop: {
       hopDaiWrapper: "0x6C928f435d1F3329bABb42d69CCF043e3900EcF1",

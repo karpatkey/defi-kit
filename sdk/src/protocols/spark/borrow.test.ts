@@ -12,31 +12,31 @@ describe("spark", () => {
     beforeAll(async () => {
       await applyPermissions(
         Chain.eth,
-        await eth.deposit({ targets: ["DAI", "ETH", "sDAI"] })
+        await eth.deposit({ targets: ["DAI", "ETH", "wstETH"] })
       )
       await applyPermissions(
         Chain.eth,
-        await eth.borrow({ targets: ["DAI", "ETH", "sDAI"] })
+        await eth.borrow({ targets: ["DAI", "ETH", "wstETH"] })
       )
     })
 
-    it("deposit sDAI", async () => {
+    it("deposit wstETH", async () => {
       await stealErc20(
         Chain.eth,
-        contracts.mainnet.spark.sDai,
-        parseEther("10000"),
+        contracts.mainnet.lido.wstEth,
+        parseEther("5"),
         contracts.mainnet.balancerV2.vault
       )
       await expect(
-        kit.asMember.spark.sDai.approve(
+        kit.asMember.lido.wstEth.approve(
           contracts.mainnet.spark.poolV3,
-          parseEther("10000")
+          parseEther("5")
         )
       ).not.toRevert()
       await expect(
         kit.asMember.spark.poolV3.supply(
-          contracts.mainnet.spark.sDai,
-          parseEther("10000"),
+          contracts.mainnet.lido.wstEth,
+          parseEther("5"),
           wallets.avatar,
           0
         )
@@ -94,7 +94,7 @@ describe("spark", () => {
       await expect(
         kit.asMember.dai.approve(
           contracts.mainnet.spark.poolV3,
-          parseEther("50")
+          parseEther("100")
         )
       ).not.toRevert()
 
