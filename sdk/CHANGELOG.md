@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.25.1](https://github.com/karpatkey/defi-kit/compare/v2.25.0...v2.25.1) (2025-11-26)
+
+
+### Bug Fixes
+
+* add USDS Deposit contract - Gnosis Bridge ([#506](https://github.com/karpatkey/defi-kit/issues/506)) ([5dd6cd6](https://github.com/karpatkey/defi-kit/commit/5dd6cd6d2be33bad9413dedd6d68d4028e1b18a7))
+
 ## [2.25.0](https://github.com/karpatkey/defi-kit/compare/v2.24.0...v2.25.0) (2025-11-14)
 
 
