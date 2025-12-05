@@ -188,7 +188,7 @@ export default [
     symbol: "gtUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -248,7 +248,7 @@ export default [
     symbol: "steakUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -258,7 +258,7 @@ export default [
     symbol: "MCUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -308,7 +308,7 @@ export default [
     symbol: "aUSDT",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -338,7 +338,7 @@ export default [
     symbol: "bbqUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -548,7 +548,7 @@ export default [
     symbol: "TV",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -578,7 +578,7 @@ export default [
     symbol: "aaUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -678,7 +678,7 @@ export default [
     symbol: "NAGAVAULT",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -738,7 +738,7 @@ export default [
     symbol: "NAGAVAULT",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -808,7 +808,7 @@ export default [
     symbol: "Roy",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-      symbol: "USDT",
+      symbol: "USD₮0",
     },
   },
   {
@@ -866,6 +866,56 @@ export default [
     version: "v1.1",
     name: "0xDataWolf Points Farm",
     symbol: "🐺FARM",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x61A9bd201827FA93f2e0236ED83258028cECBa59",
+    version: "v1.1",
+    name: "Unstablecoin",
+    symbol: "UNSTABLE",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xaE73875437c86abb60cD7fA77286D63cb94F9a25",
+    version: "v1.1",
+    name: "HexaOne USDC",
+    symbol: "hxUSDCa",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xDa59B4682Fe0F5C86E041A81E17E64dE6418DA5c",
+    version: "v1.1",
+    name: "ZZZ",
+    symbol: "zzz",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xdAd074C0c9FB7deDA603Fe47De3172aB01C7C28c",
+    version: "v1.1",
+    name: "Kedao USDC Vault",
+    symbol: "KdUSDC",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x36AB064fCBfcC87F6D4a25E638468616E0d92D8D",
+    version: "v1.1",
+    name: "Only Trust",
+    symbol: "onlytrust",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
       symbol: "USDC",
@@ -1139,6 +1189,56 @@ export default [
     asset: {
       address: "0x724dc807b04555b71ed48a6896b6F41593b8C637",
       symbol: "aArbUSDCn",
+    },
+  },
+  {
+    id: "0x75E9d4FEa6c408097eE4F3C63359D0dc617AcB4F",
+    version: "v2",
+    name: "Blend PT USDai 19FEB2026",
+    symbol: "blend-PT-USDai-19FEB2026",
+    asset: {
+      address: "0x5B2C615E22272234AACF187632a0531cA1243279",
+      symbol: "PT-USDai-19FEB2026",
+    },
+  },
+  {
+    id: "0x567c1B5c2E58C66f84B80dff4C97b084B23B4E87",
+    version: "v2",
+    name: "Blend PT sUSDai 19FEB2026",
+    symbol: "blend-PT-sUSDai-19FEB2026",
+    asset: {
+      address: "0x1BF1311FCF914A69Dd5805C9B06b72F80539cB3f",
+      symbol: "PT-sUSDai-19FEB2026",
+    },
+  },
+  {
+    id: "0x32819ebBd29AAe745AB3e172892e749AebEb889E",
+    version: "v2",
+    name: "Blend Aave USDC",
+    symbol: "blend-aave-usdc",
+    asset: {
+      address: "0x724dc807b04555b71ed48a6896b6F41593b8C637",
+      symbol: "aArbUSDCn",
+    },
+  },
+  {
+    id: "0xfd3B6dE1EaeEb3e8CAdD125BfC8Aec492A5C542F",
+    version: "v2",
+    name: "Blend Aave USDC",
+    symbol: "blend-aave-usdc",
+    asset: {
+      address: "0x7F6501d3B98eE91f9b9535E4b0ac710Fb0f9e0bc",
+      symbol: "waArbUSDCn",
+    },
+  },
+  {
+    id: "0xE3637cA4D1D6dD756dE0ecd527c40077029eCE6e",
+    version: "v2",
+    name: "Blend PT-thBILL-19FEB2026",
+    symbol: "blend-PT-thBILL-19FEB2026",
+    asset: {
+      address: "0x9b3924f9652cabf3Db48B7B4C92E474c571B3Ab4",
+      symbol: "PT-thBILL-19FEB2026",
     },
   },
 ] as const
