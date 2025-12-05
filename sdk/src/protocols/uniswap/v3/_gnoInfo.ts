@@ -26,6 +26,10 @@ export default [
     symbol: "USDT",
   },
   {
+    address: "0x0AA1e96D2a46Ec6beB2923dE1E61Addf5F5f1dce",
+    symbol: "REG",
+  },
+  {
     address: "0x0a06c8354A6CC1a07549a38701eAc205942E3Ac6",
     symbol: "BRZ",
   },
@@ -144,6 +148,10 @@ export default [
   {
     address: "0xE0eD85F76D9C552478929fab44693E03F0899F23",
     symbol: "s-KPK",
+  },
+  {
+    address: "0xeeF7B1f06B092625228C835Dd5D5B14641D1e54A",
+    symbol: "s-gCRC",
   },
   {
     address: "0xf084b8F984912f0c62179Ca7EE998BeC90757B53",
