@@ -2,22 +2,6 @@
 
 export default [
   {
-    name: "bb-WETH-wstETH",
-    id: "0",
-    bpt: "0xbAd20c15A773bf03ab973302F61FAbceA5101f0A",
-    tokens: [
-      {
-        address: "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
-        symbol: "WETH",
-      },
-      {
-        address: "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
-        symbol: "wstETH",
-      },
-    ],
-    rewarder: "0x026d163C28cC7dbf57d6ED57f14208Ee412CA526",
-  },
-  {
     name: "50COW-50GNO",
     id: "5",
     bpt: "0x21d4c792Ea7E38e0D0819c2011A2b1Cb7252Bd99",
@@ -68,22 +52,6 @@ export default [
       },
     ],
     rewarder: "0x51867537e5532186E76BA5380235512A9A4ca52a",
-  },
-  {
-    name: "EURe/sDAI",
-    id: "18",
-    bpt: "0xDd439304A77f54B1F7854751Ac1169b279591Ef7",
-    tokens: [
-      {
-        address: "0xaf204776c7245bF4147c2612BF6e5972Ee483701",
-        symbol: "sDAI",
-      },
-      {
-        address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
-        symbol: "EURe",
-      },
-    ],
-    rewarder: "0xDE151980d461696543aa07A19BbE2603B20ECbAE",
   },
   {
     name: "B-50sDAI-50wstETH",
@@ -148,22 +116,6 @@ export default [
       },
     ],
     rewarder: "0x37748422F82b0c07CCbD40347abC1Da55ac138a0",
-  },
-  {
-    name: "osGNO/GNO-BPT",
-    id: "28",
-    bpt: "0x3220C83e953186f2B9dDFc0B5dD69483354EDCA2",
-    tokens: [
-      {
-        address: "0x9C58BAcC331c9aa871AFD802DB6379a98e80CEdb",
-        symbol: "GNO",
-      },
-      {
-        address: "0xF490c80aAE5f2616d3e3BDa2483E30C4CB21d1A0",
-        symbol: "osGNO",
-      },
-    ],
-    rewarder: "0x198F9709870d061c40ED5c08b1b09093144DdE2B",
   },
   {
     name: "ECLP-sDAI-USDC.e-rh",
