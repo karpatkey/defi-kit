@@ -54,16 +54,24 @@ export default [
     symbol: "AVATAR",
   },
   {
+    address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+    symbol: "DAI",
+  },
+  {
     address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
     symbol: "AAVE",
+  },
+  {
+    address: "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
+    symbol: "tBTC",
   },
   {
     address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
     symbol: "CRV",
   },
   {
-    address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
-    symbol: "DAI",
+    address: "0x25118290e6A5f4139381D072181157035864099d",
+    symbol: "RAIN",
   },
   {
     address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",

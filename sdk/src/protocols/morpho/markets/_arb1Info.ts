@@ -272,6 +272,36 @@ export default [
     },
   },
   {
+    id: "0xdd7e1e279b340527751fbc8c99d2f8aa803ebdc4f255ed2087140553dc8ed78d",
+    name: "USDC / PT-thBILL-19FEB2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "945000000000000000",
+    oracle: "0x3E0E1e5aef3ea576750AdED57b7Bf3a42161B6Cd",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x9b3924f9652cabf3Db48B7B4C92E474c571B3Ab4",
+      symbol: "PT-thBILL-19FEB2026",
+    },
+  },
+  {
+    id: "0xdc3edb8cdf997ee55ac67d521f0fcb65a75272007abc5157ca1841b10635732e",
+    name: "mJPYC / mKGLD",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "860000000000000000",
+    oracle: "0x946273Cf499e7fE6f1c4A5810aD693292d773c12",
+    loanToken: {
+      address: "0xcc7b0546991e25DdA448F8048a1E8e43135cBC39",
+      symbol: "mJPYC",
+    },
+    collateralToken: {
+      address: "0x5C275d38A23BBF2e1Bc28B88093Aeb60e49De8Fe",
+      symbol: "mKGLD",
+    },
+  },
+  {
     id: "0xdbeea0b7cc09f4a4cf167a4ecc92ee25dcaf38d8c441500416a94b2fe78f6863",
     name: "MYRC / WETH",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -284,6 +314,21 @@ export default [
     collateralToken: {
       address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
       symbol: "WETH",
+    },
+  },
+  {
+    id: "0xdb493f6e7f7b2ba5bf0cf37bc641c46f087515b82c98034c8d3422c3de00de45",
+    name: "USDC / USDai",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0xd029280d2917F24bEab009F39c33b262241a52a8",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x0A1a1A107E45b7Ced86833863f482BC5f4ed82EF",
+      symbol: "USDai",
     },
   },
   {
@@ -419,6 +464,21 @@ export default [
     collateralToken: {
       address: "0x5979D7b546E38E414F7E9822514be443A4800529",
       symbol: "wstETH",
+    },
+  },
+  {
+    id: "0xc7670063349ac19dfa324ead7bd7da2985ae931e1b09fb0e31b62c6486b730bd",
+    name: "USDC / RLP",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "860000000000000000",
+    oracle: "0x2d8380D2E2DBE516049fA2c4CB2EC48C418d249C",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
+      symbol: "RLP",
     },
   },
   {
@@ -602,6 +662,21 @@ export default [
     },
   },
   {
+    id: "0xb36f4bc24d26b574133222f69b9bfb051ba4ee1dadb40be048f9f6eff120ac0a",
+    name: "mUSDT / mKGLD",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "860000000000000000",
+    oracle: "0xbaf671e0a97E1e43c07A02Bf7351eb876756dF28",
+    loanToken: {
+      address: "0xFDfC5fA3f087700b7c9D246c871BFdE25350508d",
+      symbol: "mUSDT",
+    },
+    collateralToken: {
+      address: "0x00e90a3633023392d9794Fe305bcC48BE90c0b69",
+      symbol: "mKGLD",
+    },
+  },
+  {
     id: "0xaf642e81aef72331fd70e423e0966c1d91e6364abab239966066da893a20457f",
     name: "MYRC / USDC",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -767,6 +842,21 @@ export default [
     },
   },
   {
+    id: "0x912dfca6cc5c7097ab9229ea4e631c9a5fe7aca15be8ef3f594f7674413f4c32",
+    name: "USDC / PT-sUSDai-19FEB2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "860000000000000000",
+    oracle: "0x97576e5e8aFb600Fd35717Db0DEcD6B4A9277e30",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x1BF1311FCF914A69Dd5805C9B06b72F80539cB3f",
+      symbol: "PT-sUSDai-19FEB2026",
+    },
+  },
+  {
     id: "0x90a63331978485224d2c69a8e658902bb65a3c81ca12eaf1c8d10f4251013b30",
     name: "USD₮0 / USDe",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -809,6 +899,21 @@ export default [
     collateralToken: {
       address: "0x1Ef58a7aF39883CC95c59a2c106b726C64c2ECC6",
       symbol: "PT-syrupUSDC-29JAN2026",
+    },
+  },
+  {
+    id: "0x83c970dd4cad83be2b1e5ddd9224bc6868911bcbb01da1d42f340e1a2e2d5f87",
+    name: "USDC / PT-thBILL-19FEB2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0x3E0E1e5aef3ea576750AdED57b7Bf3a42161B6Cd",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x9b3924f9652cabf3Db48B7B4C92E474c571B3Ab4",
+      symbol: "PT-thBILL-19FEB2026",
     },
   },
   {
@@ -872,6 +977,21 @@ export default [
     },
   },
   {
+    id: "0x7d4799e15dcaad9da49ab8edf46d647db2da2ff419db52e8ec0984d0c49e8b9b",
+    name: "USDC / PT-USDai-19FEB2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0x838f9a104Df1B2F5b35FFd7cf84827CC82eE8DE9",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x5B2C615E22272234AACF187632a0531cA1243279",
+      symbol: "PT-USDai-19FEB2026",
+    },
+  },
+  {
     id: "0x7d14980617f8b0904485a1bd1a3c6038b4627fb2f2f9feb767d240989dbf9b5c",
     name: "USDe / USDe",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -932,6 +1052,21 @@ export default [
     },
   },
   {
+    id: "0x7717f1e04510390518811b3133ea47c298094ddd1d806ed8f8867d88c727bad7",
+    name: "USDC / PT-sUSDai-19FEB2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "860000000000000000",
+    oracle: "0x7678125b59a0a5365D673D874e807db8F2BaE2C0",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x1BF1311FCF914A69Dd5805C9B06b72F80539cB3f",
+      symbol: "PT-sUSDai-19FEB2026",
+    },
+  },
+  {
     id: "0x729e4ab1f1613a55f4dc6444cb073a2f9ba4c402f8c59e93e1d725f9ce45f23a",
     name: "USDC / PT-USDe-11DEC2025",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -989,6 +1124,21 @@ export default [
     collateralToken: {
       address: "0xA1082BDFC6f21cD71073FFeE2823139D67878aaE",
       symbol: "MUX3LP-sUSDe-1",
+    },
+  },
+  {
+    id: "0x6c831dcc45a7c0af00b751da651bd874b96653c587615d11aafade7b357c4b43",
+    name: "USDC / PT-thBILL-19FEB2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0xb623285330A61203A248dD9c9301fEC120aaAF7b",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x9b3924f9652cabf3Db48B7B4C92E474c571B3Ab4",
+      symbol: "PT-thBILL-19FEB2026",
     },
   },
   {
@@ -1139,6 +1289,21 @@ export default [
     collateralToken: {
       address: "0x936F210d277bf489A3211CeF9AB4BC47a7B69C96",
       symbol: "PT-sUSDai-20NOV2025",
+    },
+  },
+  {
+    id: "0x4d963c5f201cb1bb87fa044b80dff095684a79fe85c31433f6a5e4753c33a9d6",
+    name: "USDC / PT-sUSDai-19FEB2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "945000000000000000",
+    oracle: "0x3E0E1e5aef3ea576750AdED57b7Bf3a42161B6Cd",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x1BF1311FCF914A69Dd5805C9B06b72F80539cB3f",
+      symbol: "PT-sUSDai-19FEB2026",
     },
   },
   {
@@ -1394,6 +1559,21 @@ export default [
     collateralToken: {
       address: "0x5979D7b546E38E414F7E9822514be443A4800529",
       symbol: "wstETH",
+    },
+  },
+  {
+    id: "0x1d11f2e7d5381ccbec21294a530e4241bb3e0bd9cb47db9a47d2bbba0ef58605",
+    name: "USDC / PT-USDai-19FEB2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0xa8B3F0451312e2D8Aa2BD0A1d4Fd674570007DFC",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x5B2C615E22272234AACF187632a0531cA1243279",
+      symbol: "PT-USDai-19FEB2026",
     },
   },
   {
