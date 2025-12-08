@@ -12,7 +12,7 @@ export default [
     fToken: "0x1A996cb54bb95462040408C06122D45D6Cdb6096",
   },
   {
-    symbol: "USDT",
+    symbol: "USD₮0",
     token: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
     fToken: "0x4A03F37e7d3fC243e3f99341d36f4b829BEe5E03",
   },
