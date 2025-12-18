@@ -9,7 +9,6 @@ export const contracts = {
       aWeth: "0x030bA81f1c18d280636F32af80b9AAd02Cf0854e",
       variableDebtWeth: "0xF63B34710400CAd3e044cFfDcAb00a0f32E33eCf",
       stableDebtWeth: "0x4e977830ba4bd783C0BB7F15d3e243f73FF57121",
-      
     },
     aaveV3: {
       protocolDataProviderCoreV3: "0x41393e5e337606dc3821075Af65AeE84D7688CBD",

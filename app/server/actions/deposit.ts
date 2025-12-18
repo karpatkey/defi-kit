@@ -43,7 +43,7 @@ export const registerAllowDeposit = (
 ) => {
   const { schema } = sdks[chainPrefix] as any
   const querySchema = schema[protocol]?.deposit
-  
+
   if (!querySchema) return
 
   registry.registerPath({
@@ -85,7 +85,7 @@ export const registerDepositPermissions = (
 ) => {
   const { schema } = sdks[chainPrefix] as any
   const querySchema = schema[protocol]?.deposit
-  
+
   if (!querySchema) return
 
   registry.registerPath({

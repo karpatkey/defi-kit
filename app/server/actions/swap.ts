@@ -43,7 +43,7 @@ export const registerAllowSwap = (
 ) => {
   const { schema } = sdks[chainPrefix] as any
   const querySchema = schema[protocol]?.swap
-  
+
   if (!querySchema) return
 
   registry.registerPath({
@@ -85,7 +85,7 @@ export const registerSwapPermissions = (
 ) => {
   const { schema } = sdks[chainPrefix] as any
   const querySchema = schema[protocol]?.swap
-  
+
   if (!querySchema) return
 
   registry.registerPath({

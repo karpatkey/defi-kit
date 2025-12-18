@@ -9,6 +9,9 @@ import { parseEther } from "ethers"
 import { Chain } from "../../../src"
 
 const cvxCrv = "0x62B9c7356A2Dc64a1969e19C23e4f579F9810Aa7"
+const cvxCrvHolder = "0x3Fe65692bfCD0e6CF84cB1E7d24108E434A7587e"
+const cvxHolder = "0xCF50b810E57Ac33B91dCF525C6ddd9881B139332"
+const crvHolder = "0x5f3b5DfEb7B28CDbD7FAba78963EE202a494e2A2"
 
 describe("convex", () => {
   describe("stake", () => {
@@ -23,7 +26,7 @@ describe("convex", () => {
         Chain.eth,
         crv,
         parseEther("2"),
-        contracts.mainnet.balancerV2.vault
+        cvxCrvHolder
       )
       await expect(
         kit.asMember.usdc
@@ -63,7 +66,7 @@ describe("convex", () => {
         Chain.eth,
         crv,
         parseEther("1"),
-        contracts.mainnet.balancerV2.vault
+        crvHolder
       )
       await expect(
         kit.asMember.usdc
@@ -101,7 +104,7 @@ describe("convex", () => {
         Chain.eth,
         cvx,
         parseEther("1"),
-        contracts.mainnet.balancerV2.vault
+        cvxHolder
       )
       await expect(
         kit.asMember.usdc

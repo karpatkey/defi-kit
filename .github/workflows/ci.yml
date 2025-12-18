@@ -54,7 +54,7 @@ jobs:
             aura,
             balancer,
             circle,
-            compound,
+            compound/v3,
             convex,
             cowSwap,
             fluid,

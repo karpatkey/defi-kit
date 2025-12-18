@@ -43,7 +43,7 @@ export const registerAllowDelegate = (
 ) => {
   const { schema } = sdks[chainPrefix] as any
   const querySchema = schema[protocol]?.delegate
-  
+
   if (!querySchema) return
 
   registry.registerPath({
@@ -85,7 +85,7 @@ export const registerDelegatePermissions = (
 ) => {
   const { schema } = sdks[chainPrefix] as any
   const querySchema = schema[protocol]?.delegate
-  
+
   if (!querySchema) return
 
   registry.registerPath({
