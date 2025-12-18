@@ -22,12 +22,7 @@ describe("convex", () => {
       )
     })
     it("convert CRV to cvxCRV", async () => {
-      await stealErc20(
-        Chain.eth,
-        crv,
-        parseEther("2"),
-        cvxCrvHolder
-      )
+      await stealErc20(Chain.eth, crv, parseEther("2"), cvxCrvHolder)
       await expect(
         kit.asMember.usdc
           .attach(crv)
@@ -62,12 +57,7 @@ describe("convex", () => {
         kit.asMember.convex.stkCvxCrv.stake(parseEther("1"), wallets.avatar)
       ).not.toRevert()
 
-      await stealErc20(
-        Chain.eth,
-        crv,
-        parseEther("1"),
-        crvHolder
-      )
+      await stealErc20(Chain.eth, crv, parseEther("1"), crvHolder)
       await expect(
         kit.asMember.usdc
           .attach(crv)
@@ -100,12 +90,7 @@ describe("convex", () => {
     })
 
     it("stake and withdraw CVX / claim rewards", async () => {
-      await stealErc20(
-        Chain.eth,
-        cvx,
-        parseEther("1"),
-        cvxHolder
-      )
+      await stealErc20(Chain.eth, cvx, parseEther("1"), cvxHolder)
       await expect(
         kit.asMember.usdc
           .attach(cvx)
