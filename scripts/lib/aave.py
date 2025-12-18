@@ -10,29 +10,29 @@ PROTOCOL_DATA_PROVIDER = {
     Chain.ETHEREUM: {
         'v2': '0x057835Ad21a177dbdd3090bB1CAE03EaCF78Fc6d',
         'v3': {
-            'Core': '0x41393e5e337606dc3821075Af65AeE84D7688CBD',
-            'Prime': '0x08795CFE08C7a81dCDFf482BbAAF474B240f31cD',
-            'EtherFi': '0xE7d490885A68f00d9886508DF281D67263ed5758',
+            'Core': '0x0a16f2FCC0D44FaE41cc54e079281D84A363bECD',
+            'Prime': '0xB85B2bFEbeC4F5f401dbf92ac147A3076391fCD5',
+            'EtherFi': '0x7c8509591f9693D21280d96e149a08A3bf69Cd0c',
         }
     },
     Chain.GNOSIS: {
         'v3': {
-          'Core': '0x57038C3e3Fe0a170BB72DE2fD56E98e4d1a69717',
+          'Core': '0xF1F5acB596568895393cB5E4D0452D6592A2fA70',
         }
     },
     Chain.ARBITRUM: {
         'v3': {
-          'Core': '0x7F23D86Ee20D869112572136221e173428DD740B',
+          'Core': '0x243Aa95cAC2a25651eda86e80bEe66114413c43b',
         }
     },
     Chain.OPTIMISM: {
         'v3': {
-          'Core': '0x7F23D86Ee20D869112572136221e173428DD740B',
+          'Core': '0x243Aa95cAC2a25651eda86e80bEe66114413c43b',
         }
     },
     Chain.BASE: {
         'v3': {
-          'Core': '0xd82a47fdebB5bf5329b09441C3DaB4b5df2153Ad',
+          'Core': '0x0F43731EB8d45A581f4a36DD74F5f358bc90C73A',
         }
     }
 }

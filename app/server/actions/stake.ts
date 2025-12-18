@@ -42,7 +42,9 @@ export const registerAllowStake = (
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].stake
+  const querySchema = schema[protocol]?.stake
+  
+  if (!querySchema) return
 
   registry.registerPath({
     method: "get",
@@ -82,7 +84,9 @@ export const registerStakePermissions = (
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].stake
+  const querySchema = schema[protocol]?.stake
+  
+  if (!querySchema) return
 
   registry.registerPath({
     method: "get",

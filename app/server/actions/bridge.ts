@@ -42,7 +42,9 @@ export const registerAllowBridge = (
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].bridge
+  const querySchema = schema[protocol]?.bridge
+  
+  if (!querySchema) return
 
   registry.registerPath({
     method: "get",
@@ -82,7 +84,9 @@ export const registerBridgePermissions = (
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].bridge
+  const querySchema = schema[protocol]?.bridge
+  
+  if (!querySchema) return
 
   registry.registerPath({
     method: "get",

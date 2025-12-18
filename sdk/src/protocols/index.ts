@@ -1,9 +1,7 @@
-import * as aaveV2 from "./aave/v2"
 import * as aaveV3 from "./aave/v3"
 import * as ankr from "./ankr"
 import * as aura from "./aura"
 import * as balancerV2 from "./balancer/v2"
-import * as compoundV2 from "./compound/v2"
 import * as compoundV3 from "./compound/v3"
 import * as convex from "./convex"
 import * as cowSwap from "./cowSwap"
@@ -15,7 +13,6 @@ import * as sky from "./sky"
 import * as rocketPool from "./rocketPool"
 import * as spark from "./spark"
 import * as stader from "./stader"
-import * as stakeWiseV2 from "./stakeWise/v2"
 import * as stakeWiseV3 from "./stakeWise/v3"
 import * as uniswapV3 from "./uniswap/v3"
 
@@ -25,12 +22,10 @@ import { annotateAll } from "./annotate"
 // IMPORTANT: API keys were rolled back to prevent breaking annotations in existing policies.
 export const eth = annotateAll(
   {
-    aave_v2: aaveV2.eth,
     aave_v3: aaveV3.eth,
     ankr: ankr.eth,
     aura: aura.eth,
     balancer_v2: balancerV2.eth,
-    compound_v2: compoundV2.eth,
     compound_v3: compoundV3.eth,
     convex: convex.eth,
     cowswap: cowSwap.eth,
@@ -42,7 +37,6 @@ export const eth = annotateAll(
     rocket_pool: rocketPool.eth,
     spark: spark.eth,
     stader: stader.eth,
-    stakewise_v2: stakeWiseV2.eth,
     stakewise_v3: stakeWiseV3.eth,
     uniswap_v3: uniswapV3.eth,
   },

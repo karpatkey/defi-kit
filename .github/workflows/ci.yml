@@ -49,7 +49,7 @@ jobs:
         label:
           [
             general,
-            aave,
+            aave/v3,
             ankr,
             aura,
             balancer,
@@ -63,7 +63,7 @@ jobs:
             sky,
             spark,
             stader,
-            stakeWise,
+            stakeWise/v3,
             uniswap,
           ]
     steps:

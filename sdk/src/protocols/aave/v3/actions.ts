@@ -5,7 +5,7 @@ import gnoTokens from "./_gnoCoreInfo"
 import arb1Tokens from "./_arb1CoreInfo"
 import oethTokens from "./_oethCoreInfo"
 import baseTokens from "./_baseCoreInfo"
-import { Token } from "./types"
+import { Token, DelegateToken, StakeToken } from "./types"
 import { allowErc20Approve } from "../../../conditions"
 import { contracts } from "../../../../eth-sdk/config"
 import { Chain } from "../../../../src"
@@ -318,4 +318,77 @@ export const borrowEther = (chain: Chain, market: string = "Core") => {
       targetAddress: wrappedTokenGatewayV3,
     },
   ]
+}
+
+export const stake = (token: StakeToken): Permission[] => {
+  const permissions: Permission[] = []
+
+  switch (token.symbol) {
+    case "AAVE":
+      permissions.push(
+        ...allowErc20Approve(
+          [contracts.mainnet.aaveV3.aave],
+          [contracts.mainnet.aaveV3.stkAave]
+        ),
+        allow.mainnet.aaveV3.stkAave.stake(c.avatar),
+        allow.mainnet.aaveV3.stkAave.claimRewardsAndStake(c.avatar),
+        allow.mainnet.aaveV3.stkAave.redeem(c.avatar),
+        allow.mainnet.aaveV3.stkAave.cooldown(),
+        allow.mainnet.aaveV3.stkAave.claimRewards(c.avatar)
+      )
+      break
+    case "ABPTV2":
+      permissions.push(
+        ...allowErc20Approve(
+          [contracts.mainnet.aaveV3.abptV2],
+          [contracts.mainnet.aaveV3.stkAbptV2]
+        ),
+        allow.mainnet.aaveV3.stkAbptV2.stake(c.avatar),
+        allow.mainnet.aaveV3.stkAbptV2.redeem(c.avatar),
+        allow.mainnet.aaveV3.stkAbptV2.cooldown(),
+        allow.mainnet.aaveV3.stkAbptV2.claimRewards(c.avatar)
+      )
+      break
+    case "GHO":
+      permissions.push(
+        ...allowErc20Approve(
+          [contracts.mainnet.aaveV3.gho],
+          [contracts.mainnet.aaveV3.stkGho]
+        ),
+        allow.mainnet.aaveV3.stkGho.stake(c.avatar),
+        allow.mainnet.aaveV3.stkGho.redeem(c.avatar),
+        allow.mainnet.aaveV3.stkGho.cooldown(),
+        allow.mainnet.aaveV3.stkGho.claimRewards(c.avatar)
+      )
+      break
+  }
+
+  return permissions
+}
+
+export const delegate = (token: DelegateToken, delegatee: string) => {
+  const permissions = []
+
+  switch (token.symbol) {
+    case "AAVE":
+      permissions.push(
+        allow.mainnet.aaveV3.aave.delegate(delegatee),
+        allow.mainnet.aaveV3.aave.delegateByType(delegatee)
+      )
+      break
+    case "stkAAVE":
+      permissions.push(
+        allow.mainnet.aaveV3.stkAave.delegate(delegatee),
+        allow.mainnet.aaveV3.stkAave.delegateByType(delegatee)
+      )
+      break
+    case "aEthAAVE":
+      permissions.push(
+        allow.mainnet.aaveV3.aEthAave.delegate(delegatee),
+        allow.mainnet.aaveV3.aEthAave.delegateByType(delegatee)
+      )
+      break
+  }
+
+  return permissions
 }
