@@ -6,6 +6,7 @@ import * as compoundV3 from "./compound/v3/schema"
 import * as convex from "./convex/schema"
 import * as cowSwap from "./cowSwap/schema"
 import * as fluid from "./fluid/schema"
+import * as gearbox from "./gearbox/schema"
 import * as lido from "./lido/schema"
 import * as morphoMarkets from "./morpho/markets/schema"
 import * as morphoVaults from "./morpho/vaults/schema"
@@ -27,6 +28,7 @@ export const eth = {
   convex: convex.eth,
   cowswap: cowSwap.eth,
   fluid: fluid.eth,
+  gearbox: gearbox.eth,
   lido: lido.eth,
   morphoMarkets: morphoMarkets.eth,
   morphoVaults: morphoVaults.eth,

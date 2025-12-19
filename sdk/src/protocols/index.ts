@@ -6,6 +6,7 @@ import * as compoundV3 from "./compound/v3"
 import * as convex from "./convex"
 import * as cowSwap from "./cowSwap"
 import * as fluid from "./fluid"
+import * as gearbox from "./gearbox"
 import * as lido from "./lido"
 import * as morphoMarkets from "./morpho/markets"
 import * as morphoVaults from "./morpho/vaults"
@@ -30,6 +31,7 @@ export const eth = annotateAll(
     convex: convex.eth,
     cowswap: cowSwap.eth,
     fluid: fluid.eth,
+    gearbox: gearbox.eth,
     lido: lido.eth,
     morphoMarkets: morphoMarkets.eth,
     morphoVaults: morphoVaults.eth,

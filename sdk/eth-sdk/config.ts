@@ -117,6 +117,9 @@ export const contracts = {
       fWeth: "0x90551c1795392094FE6D29B758EcCD233cFAa260",
       merkleDistributor: "0x7060FE0Dd3E31be01EFAc6B28C8D38018fD163B0",
     },
+    gearbox: {
+      vault: "0x9396DCbf78fc526bb003665337C5E73b699571EF", // Gearbox - kpk ETH v3
+    },
     gnosisBridge: {
       gnoOmnibridge: "0x88ad09518695c6c3712AC10a214bE5109a655671",
       gnoXdaiBridge: "0x4aa42145Aa6Ebf72e164C9bBC74fbD3788045016",
