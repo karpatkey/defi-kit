@@ -1,13 +1,12 @@
-import * as aaveV2 from "./aave/v2/schema"
 import * as aaveV3 from "./aave/v3/schema"
 import * as ankr from "./ankr/schema"
 import * as aura from "./aura/schema"
 import * as balancerV2 from "./balancer/v2/schema"
-import * as compoundV2 from "./compound/v2/schema"
 import * as compoundV3 from "./compound/v3/schema"
 import * as convex from "./convex/schema"
 import * as cowSwap from "./cowSwap/schema"
 import * as fluid from "./fluid/schema"
+import * as gearbox from "./gearbox/schema"
 import * as lido from "./lido/schema"
 import * as morphoMarkets from "./morpho/markets/schema"
 import * as morphoVaults from "./morpho/vaults/schema"
@@ -15,7 +14,6 @@ import * as sky from "./sky/schema"
 import * as rocketPool from "./rocketPool/schema"
 import * as spark from "./spark/schema"
 import * as stader from "./stader/schema"
-import * as stakeWiseV2 from "./stakeWise/v2/schema"
 import * as stakeWiseV3 from "./stakeWise/v3/schema"
 import * as uniswapV3 from "./uniswap/v3/schema"
 import { ProtocolSchemas } from "../types"
@@ -23,16 +21,14 @@ import { ProtocolSchemas } from "../types"
 // group all protocols schemas by chain
 // IMPORTANT: API keys were rolled back to prevent breaking annotations in existing policies.
 export const eth = {
-  aave_v2: aaveV2.eth,
   aave_v3: aaveV3.eth,
   ankr: ankr.eth,
   aura: aura.eth,
-  balancer_v2: balancerV2.eth,
-  compound_v2: compoundV2.eth,
   compound_v3: compoundV3.eth,
   convex: convex.eth,
   cowswap: cowSwap.eth,
   fluid: fluid.eth,
+  gearbox: gearbox.eth,
   lido: lido.eth,
   morphoMarkets: morphoMarkets.eth,
   morphoVaults: morphoVaults.eth,
@@ -40,7 +36,6 @@ export const eth = {
   rocket_pool: rocketPool.eth,
   spark: spark.eth,
   stader: stader.eth,
-  stakewise_v2: stakeWiseV2.eth,
   stakewise_v3: stakeWiseV3.eth,
   uniswap_v3: uniswapV3.eth,
 } satisfies ProtocolSchemas

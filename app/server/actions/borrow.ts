@@ -42,7 +42,9 @@ export const registerAllowBorrow = (
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].borrow
+  const querySchema = schema[protocol]?.borrow
+
+  if (!querySchema) return
 
   registry.registerPath({
     method: "get",
@@ -82,7 +84,9 @@ export const registerBorrowPermissions = (
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].borrow
+  const querySchema = schema[protocol]?.borrow
+
+  if (!querySchema) return
 
   registry.registerPath({
     method: "get",

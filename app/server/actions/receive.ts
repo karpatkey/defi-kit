@@ -42,7 +42,9 @@ export const registerAllowReceive = (
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].receive
+  const querySchema = schema[protocol]?.receive
+
+  if (!querySchema) return
 
   registry.registerPath({
     method: "get",
@@ -82,7 +84,9 @@ export const registerReceivePermissions = (
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].receive
+  const querySchema = schema[protocol]?.receive
+
+  if (!querySchema) return
 
   registry.registerPath({
     method: "get",

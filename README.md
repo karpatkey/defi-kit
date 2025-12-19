@@ -240,5 +240,5 @@ To run a script locally you need to first go through some setup steps:
   ```
 - Run any script inside the scripts folder using the following command:
   ```bash
-  yarn run-script aave_v2.py
+  yarn run-script aave_v3.py
   ```

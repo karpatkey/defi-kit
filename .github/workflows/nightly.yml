@@ -33,8 +33,6 @@ jobs:
           git config --global url."https://${{ secrets.GH_TOKEN }}@github.com/".insteadOf "https://github.com/"
           pip install -r requirements.txt
 
-      - name: Run aave_v2.py
-        run: python scripts/aave_v2.py
       - name: Run aave_v3.py
         run: python scripts/aave_v3.py
       - name: Run aura.py
@@ -43,14 +41,14 @@ jobs:
         env:
           THE_GRAPH_APIKEY: ${{ secrets.THE_GRAPH_APIKEY }}
         run: python scripts/balancer_v2.py
-      - name: Run compound_v2
-        run: python scripts/compound_v2.py
       - name: Run compound_v3
         run: python scripts/compound_v3.py
       - name: Run convex
         run: python scripts/convex.py
       - name: Run fluid
         run: python scripts/fluid.py
+      - name: Run gearbox
+        run: python scripts/gearbox.py
       - name: Run morpho_markets
         env:
           THE_GRAPH_APIKEY: ${{ secrets.THE_GRAPH_APIKEY }}

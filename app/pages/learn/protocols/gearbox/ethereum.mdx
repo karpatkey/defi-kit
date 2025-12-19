@@ -1,0 +1,80 @@
+import { Callout } from "nextra/components"
+
+# Gearbox on Ethereum
+
+## Action: `deposit`
+
+**Parameters**
+
+| Name      | Type                  | Description |
+| :-------- | :-------------------- | :---------- |
+| `targets` | _string[] (required)_ | `Vault` IDs |
+
+<Callout type="info">
+  `VAULT` below refers to the specific vault corresponding to each vault ID provided in `targets`.
+</Callout>
+
+For each vault identifier provided in `targets`, the following functions are allowed:
+
+### `VAULT.ASSET · approve`
+
+Approve the vault to spend `VAULT.ASSET` tokens on behalf of the avatar.
+
+- **Contract:** `VAULT.ASSET`
+- **Function:** `approve(address,uint256)`
+
+  | Parameter | Constraint        |
+  | :-------- | :---------------- |
+  | `spender` | equal to `VAULT`  |
+  | `amount`  | -                 |
+
+### `VAULT · deposit`
+
+Deposit `VAULT.ASSET` tokens to the vault and receive vault shares in exchange.
+
+- **Contract:** `VAULT`
+- **Function:** `deposit(uint256,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `assets`   | -                 |
+  | `receiver` | equal to `AVATAR` |
+
+### `VAULT · depositWithReferral`
+
+Deposit `VAULT.ASSET` tokens to the vault with referral and receive vault shares in exchange.
+
+- **Contract:** `VAULT`
+- **Function:** `depositWithReferral(uint256,address,uint256)`
+
+  | Parameter      | Constraint        |
+  | :------------- | :---------------- |
+  | `assets`       | -                 |
+  | `receiver`     | equal to `AVATAR` |
+  | `referralCode` | -                 |
+
+### `VAULT · withdraw`
+
+Withdraw `VAULT.ASSET` tokens from the vault by specifying the desired asset amount.
+
+- **Contract:** `VAULT`
+- **Function:** `withdraw(uint256,address,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `assets`   | -                 |
+  | `receiver` | equal to `AVATAR` |
+  | `owner`    | equal to `AVATAR` |
+
+### `VAULT · redeem`
+
+Redeem vault shares to receive `VAULT.ASSET` tokens.
+
+- **Contract:** `VAULT`
+- **Function:** `redeem(uint256,address,address)`
+
+  | Parameter  | Constraint        |
+  | :--------- | :---------------- |
+  | `shares`   | -                 |
+  | `receiver` | equal to `AVATAR` |
+  | `owner`    | equal to `AVATAR` |

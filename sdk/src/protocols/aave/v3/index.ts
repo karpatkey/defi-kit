@@ -7,6 +7,8 @@ import gnoTokens from "./_gnoCoreInfo"
 import arb1Tokens from "./_arb1CoreInfo"
 import oethTokens from "./_oethCoreInfo"
 import baseTokens from "./_baseCoreInfo"
+import delegateTokens from "../v3/_delegateTokens"
+import stakeTokens from "../v3/_stakeTokens"
 import {
   EthToken,
   EthMarket,
@@ -16,11 +18,36 @@ import {
   BaseToken,
   Token,
 } from "./types"
-import { DelegateToken, StakeToken } from "../v2/types"
-import { findDelegateToken, findStakeToken } from "../v2/index"
+import { DelegateToken, StakeToken } from "./types"
 import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
-import { stake, delegate } from "../v2/actions"
+import { stake, delegate } from "./actions"
 import { Chain } from "../../../../src"
+
+export const findDelegateToken = (nameOrAddress: string): DelegateToken => {
+  const symbolAddressLower = nameOrAddress.toLowerCase()
+  const delegateToken = delegateTokens.find(
+    (delegateToken) =>
+      delegateToken.address.toLowerCase() === symbolAddressLower ||
+      delegateToken.symbol.toLowerCase() === symbolAddressLower
+  )
+  if (!delegateToken) {
+    throw new NotFoundError(`Token not found: ${nameOrAddress}`)
+  }
+  return delegateToken
+}
+
+export const findStakeToken = (nameOrAddress: string): StakeToken => {
+  const symbolAddressLower = nameOrAddress.toLowerCase()
+  const stakeToken = stakeTokens.find(
+    (stakeToken) =>
+      stakeToken.address.toLowerCase() === symbolAddressLower ||
+      stakeToken.symbol.toLowerCase() === symbolAddressLower
+  )
+  if (!stakeToken) {
+    throw new NotFoundError(`Token not found: ${nameOrAddress}`)
+  }
+  return stakeToken
+}
 
 export const findToken = (
   tokens: readonly Token[],

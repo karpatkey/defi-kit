@@ -49,12 +49,12 @@ jobs:
         label:
           [
             general,
-            aave,
+            aave/v3,
             ankr,
             aura,
             balancer,
             circle,
-            compound,
+            compound/v3,
             convex,
             cowSwap,
             fluid,
@@ -63,7 +63,7 @@ jobs:
             sky,
             spark,
             stader,
-            stakeWise,
+            stakeWise/v3,
             uniswap,
           ]
     steps:

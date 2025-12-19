@@ -4,7 +4,6 @@ import arb1Vaults from "./_arb1Info"
 import baseVaults from "./_baseInfo"
 import { EthVault, Arb1Vault, BaseVault, Vault } from "./types"
 import { deposit } from "./actions"
-import { Chain } from "../../../types"
 
 export const findVault = (vaults: readonly Vault[], target: string): Vault => {
   const vault = vaults.find(

@@ -9,13 +9,6 @@ export const contracts = {
       aWeth: "0x030bA81f1c18d280636F32af80b9AAd02Cf0854e",
       variableDebtWeth: "0xF63B34710400CAd3e044cFfDcAb00a0f32E33eCf",
       stableDebtWeth: "0x4e977830ba4bd783C0BB7F15d3e243f73FF57121",
-      aave: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
-      abptV2: "0x3de27EFa2F1AA663Ae5D458857e731c129069F29",
-      stkAave: "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
-      stkAbptV2: "0x9eDA81C21C273a82BE9Bbc19B6A6182212068101",
-      aEthAave: "0xA700b4eB416Be35b2911fd5Dee80678ff64fF6C9",
-      gho: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
-      stkGho: "0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d",
     },
     aaveV3: {
       protocolDataProviderCoreV3: "0x41393e5e337606dc3821075Af65AeE84D7688CBD",
@@ -32,6 +25,13 @@ export const contracts = {
         "0xf956B38F035dC9067fb827A512D3CF35202AB0Bc",
       meritDistributor: "0x3Ef3D8bA38EBe18DB133cEc108f4D14CE00Dd9Ae",
       incentivesV3: "0x8164Cc65827dcFe994AB23944CBC90e0aa80bFcb",
+      aave: "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+      abptV2: "0x3de27EFa2F1AA663Ae5D458857e731c129069F29",
+      stkAave: "0x4da27a545c0c5b758a6ba100e3a049001de870f5",
+      stkAbptV2: "0x9eDA81C21C273a82BE9Bbc19B6A6182212068101",
+      gho: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
+      stkGho: "0x1a88Df1cFe15Af22B3c4c783D4e6F7F9e0C1885d",
+      aEthAave: "0xA700b4eB416Be35b2911fd5Dee80678ff64fF6C9",
     },
     ankr: {
       eth2Staking: "0x84db6ee82b7cf3b47e8f19270abde5718b936670",
@@ -116,6 +116,9 @@ export const contracts = {
     fluid: {
       fWeth: "0x90551c1795392094FE6D29B758EcCD233cFAa260",
       merkleDistributor: "0x7060FE0Dd3E31be01EFAc6B28C8D38018fD163B0",
+    },
+    gearbox: {
+      vault: "0x9396DCbf78fc526bb003665337C5E73b699571EF", // Gearbox - kpk ETH v3
     },
     gnosisBridge: {
       gnoOmnibridge: "0x88ad09518695c6c3712AC10a214bE5109a655671",

@@ -42,7 +42,9 @@ export const registerAllowLock = (
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].lock
+  const querySchema = schema[protocol]?.lock
+
+  if (!querySchema) return
 
   registry.registerPath({
     method: "get",
@@ -82,7 +84,9 @@ export const registerLockPermissions = (
   protocol: string
 ) => {
   const { schema } = sdks[chainPrefix] as any
-  const querySchema = schema[protocol].lock
+  const querySchema = schema[protocol]?.lock
+
+  if (!querySchema) return
 
   registry.registerPath({
     method: "get",

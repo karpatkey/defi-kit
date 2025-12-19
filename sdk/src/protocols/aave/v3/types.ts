@@ -6,6 +6,8 @@ import gnoTokens from "./_gnoCoreInfo"
 import arb1Tokens from "./_arb1CoreInfo"
 import oethTokens from "./_oethCoreInfo"
 import baseTokens from "./_baseCoreInfo"
+import delegateTokens from "../v3/_delegateTokens"
+import stakeTokens from "../v3/_stakeTokens"
 
 export type EthCoreToken = (typeof ethCoreTokens)[number]
 export type EthPrimeToken = (typeof ethPrimeTokens)[number]
@@ -21,3 +23,6 @@ export type BaseToken = (typeof baseTokens)[number]
 export type Token = EthToken | GnoToken | Arb1Token | OethToken | BaseToken
 
 export type EthMarket = (typeof ethMarkets)[number]
+
+export type DelegateToken = (typeof delegateTokens)[number]
+export type StakeToken = (typeof stakeTokens)[number]

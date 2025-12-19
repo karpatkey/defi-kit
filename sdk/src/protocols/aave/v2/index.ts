@@ -1,16 +1,10 @@
 import { NotFoundError } from "../../../errors"
 import tokens from "./_ethCoreInfo"
-import delegateTokens from "./_delegateTokens"
-import stakeTokens from "./_stakeTokens"
+import delegateTokens from "../v3/_delegateTokens"
+import stakeTokens from "../v3/_stakeTokens"
 import { Token, DelegateToken, StakeToken } from "./types"
-import {
-  depositEther,
-  depositToken,
-  borrowEther,
-  borrowToken,
-  stake,
-  delegate,
-} from "./actions"
+import { depositEther, depositToken, borrowEther, borrowToken } from "./actions"
+import { stake, delegate } from "../v3/actions"
 
 const findToken = (symbolOrAddress: string): Token => {
   const symbolOrAddressLower = symbolOrAddress.toLowerCase()

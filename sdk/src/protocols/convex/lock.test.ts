@@ -12,18 +12,15 @@ import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 import { Chain } from "../../../src"
 
+const cvxHolder = "0xCF50b810E57Ac33B91dCF525C6ddd9881B139332"
+
 describe("convex", () => {
   describe("stake", () => {
     beforeAll(async () => {
       await applyPermissions(Chain.eth, await eth.lock())
     })
     it("only allow lock, process expired locks and claim to avatar", async () => {
-      await stealErc20(
-        Chain.eth,
-        cvx,
-        parseEther("1"),
-        contracts.mainnet.balancerV2.vault
-      )
+      await stealErc20(Chain.eth, cvx, parseEther("1"), cvxHolder)
       await expect(
         kit.asMember.usdc
           .attach(cvx)
