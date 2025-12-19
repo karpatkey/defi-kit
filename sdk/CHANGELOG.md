@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.0](https://github.com/karpatkey/defi-kit/compare/v2.25.1...v2.26.0) (2025-12-19)
+
+
+### Features
+
+* Remove deprecated protocols: Aave v2, Compound v2 and StakeWise v2 + Intregate Gearbox ([#508](https://github.com/karpatkey/defi-kit/issues/508)) ([01dfedc](https://github.com/karpatkey/defi-kit/commit/01dfedc4ac9ca07cdb5cf608e4e76a2172492d23))
+
 ## [2.25.1](https://github.com/karpatkey/defi-kit/compare/v2.25.0...v2.25.1) (2025-11-26)
 
 
