@@ -57,7 +57,7 @@ export const stake = (chain: Chain, vault: Vault) => {
             {
               send: true,
             }
-          )
+          ),
         }
       )
       break
