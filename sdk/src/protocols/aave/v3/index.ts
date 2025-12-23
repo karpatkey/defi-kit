@@ -128,8 +128,8 @@ export const eth = {
 
     return targets.flatMap((target) =>
       target === "ETH"
-        ? borrowEther(Chain.eth)
-        : borrowToken(Chain.eth, findToken(tokens, target))
+        ? borrowEther(Chain.eth, selectedMarket.name)
+        : borrowToken(Chain.eth, findToken(tokens, target), selectedMarket.name)
     )
   },
 
