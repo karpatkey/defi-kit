@@ -48,6 +48,16 @@ export const stake = (chain: Chain, vault: Vault) => {
             }
           ),
           targetAddress: vault.id,
+        },
+        {
+          ...allow.mainnet.stakeWiseV3.vault.depositAndMintOsToken(
+            c.avatar,
+            undefined,
+            undefined,
+            {
+              send: true,
+            }
+          )
         }
       )
       break

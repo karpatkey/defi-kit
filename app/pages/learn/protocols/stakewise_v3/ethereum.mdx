@@ -56,6 +56,19 @@ Updates Vault state and deposits ETH to the Vault.
   | `unlockedMevReward` | -                 |
   | `proof`             | -                 |
 
+### `TARGET_VAULT · depositAndMintOsToken`
+
+Stake ETH to the corresponding StakeWise v3 Vault and mints osToken shares to the specified receiver.
+
+- **Contract:** `TARGET_VAULT`
+- **Function:** `depositAndMintOsToken(address,uint256,address)` Ξ _allow sending ETH_
+
+  | Parameter       | Constraint        |
+  | :-------------- | :---------------- |
+  | `receiver`      | equal to `AVATAR` |
+  | `osTokenShares` | -                 |
+  | `referrer`      | -                 |
+
 ### `TARGET_VAULT · mintOsToken`
 
 Mints osToken shares to the specified receiver.
