@@ -195,7 +195,7 @@ export const contracts = {
       merkleDistributor: "0xA3F21010e8b9a3930996C8849Df38f9Ca3647c20",
     },
     stakeWiseV3: {
-      vault: "0xba0B5ba961B108BFf8D761A256e9763a4FccFF23", // EthVault (Implementation)
+      vault: "0x927A83c679A5e1a6435D6BfaEF7F20D4db23e2cC", // EthVault (Implementation)
     },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
