@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.2](https://github.com/karpatkey/defi-kit/compare/v2.26.1...v2.26.2) (2025-12-23)
+
+
+### Bug Fixes
+
+* StakeWise v3 Update ([#512](https://github.com/karpatkey/defi-kit/issues/512)) ([efc0f1a](https://github.com/karpatkey/defi-kit/commit/efc0f1ad59eddbabfbe01015a15e50048e08071b))
+
 ## [2.26.1](https://github.com/karpatkey/defi-kit/compare/v2.26.0...v2.26.1) (2025-12-23)
 
 
