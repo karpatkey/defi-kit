@@ -315,7 +315,7 @@ export default [
     id: "0x8670583bf7106c0cf850552c027ffa2c21be060700020000000000000000020b",
     name: "ECLP-WETH-USDC-dyn",
     type: "GyroE",
-    gauge: null,
+    gauge: "0xd3D7cA2e255BDA5a97381E004970fd757b03a6e3",
     tokens: [
       {
         address: "0x4200000000000000000000000000000000000006",
@@ -413,6 +413,23 @@ export default [
     ],
   },
   {
+    bpt: "0xAfe040fF1E4e1E24ED95D408e00e0839940ABE2F",
+    id: "0xafe040ff1e4e1e24ed95d408e00e0839940abe2f00020000000000000000020f",
+    name: "ECLP-USDbC-USDC",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        symbol: "USDC",
+      },
+      {
+        address: "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
+        symbol: "USDbC",
+      },
+    ],
+  },
+  {
     bpt: "0xC3889F9764d68BDF2e16f237206746344172A147",
     id: "0xc3889f9764d68bdf2e16f237206746344172a14700020000000000000000018e",
     name: "20ZBU-80USDC OLP",
@@ -460,23 +477,6 @@ export default [
       {
         address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
         symbol: "GYD",
-      },
-    ],
-  },
-  {
-    bpt: "0xd0fAB38d17f4Ae1dB607E91Fc7c106877136772f",
-    id: "0xd0fab38d17f4ae1db607e91fc7c106877136772f0002000000000000000001eb",
-    name: "ECLP-VIRTUAL-WETH-dyn",
-    type: "GyroE",
-    gauge: "0x3D992d4172cD8CC8ACB7AC791b479ce709637061",
-    tokens: [
-      {
-        address: "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
-        symbol: "VIRTUAL",
-      },
-      {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
       },
     ],
   },

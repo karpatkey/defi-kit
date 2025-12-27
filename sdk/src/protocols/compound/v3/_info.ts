@@ -127,6 +127,14 @@ export default [
         address: "0xDcEe70654261AF21C44c093C300eD3Bb97b78192",
         symbol: "wOETH",
       },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+      {
+        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        symbol: "USDT",
+      },
     ],
   },
   {
@@ -215,6 +223,22 @@ export default [
         address: "0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8",
         symbol: "tETH",
       },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+      {
+        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        symbol: "USDT",
+      },
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+      {
+        address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+        symbol: "weETH",
+      },
     ],
   },
   {
@@ -282,6 +306,14 @@ export default [
       {
         address: "0xF469fBD2abcd6B9de8E169d128226C0Fc90a012e",
         symbol: "pumpBTC",
+      },
+      {
+        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        symbol: "USDC",
+      },
+      {
+        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        symbol: "USDT",
       },
     ],
   },
