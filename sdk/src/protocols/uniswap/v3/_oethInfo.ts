@@ -21,8 +21,4 @@ export default [
     address: "0x4200000000000000000000000000000000000042",
     symbol: "OP",
   },
-  {
-    address: "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
-    symbol: "WLD",
-  },
 ] as const
