@@ -315,7 +315,7 @@ export default [
     id: "0x8670583bf7106c0cf850552c027ffa2c21be060700020000000000000000020b",
     name: "ECLP-WETH-USDC-dyn",
     type: "GyroE",
-    gauge: null,
+    gauge: "0xd3D7cA2e255BDA5a97381E004970fd757b03a6e3",
     tokens: [
       {
         address: "0x4200000000000000000000000000000000000006",
@@ -379,23 +379,6 @@ export default [
     ],
   },
   {
-    bpt: "0xa04259De0129ac4C4a0ce22BE2ec729482034ba0",
-    id: "0xa04259de0129ac4c4a0ce22be2ec729482034ba000020000000000000000016d",
-    name: "50AURA-50BAL",
-    type: "Weighted",
-    gauge: null,
-    tokens: [
-      {
-        address: "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
-        symbol: "AURA",
-      },
-      {
-        address: "0x4158734D47Fc9692176B5085E0F52ee0Da5d47F1",
-        symbol: "BAL",
-      },
-    ],
-  },
-  {
     bpt: "0xa476E9f11b3b32c0DEbdD6b01d54b79C8eF14411",
     id: "0xa476e9f11b3b32c0debdd6b01d54b79c8ef144110002000000000000000001e5",
     name: "ECLP-cbBTC-USDC-dyn",
@@ -409,6 +392,23 @@ export default [
       {
         address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
         symbol: "cbBTC",
+      },
+    ],
+  },
+  {
+    bpt: "0xAfe040fF1E4e1E24ED95D408e00e0839940ABE2F",
+    id: "0xafe040ff1e4e1e24ed95d408e00e0839940abe2f00020000000000000000020f",
+    name: "ECLP-USDbC-USDC",
+    type: "GyroE",
+    gauge: null,
+    tokens: [
+      {
+        address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        symbol: "USDC",
+      },
+      {
+        address: "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
+        symbol: "USDbC",
       },
     ],
   },
@@ -464,19 +464,19 @@ export default [
     ],
   },
   {
-    bpt: "0xd0fAB38d17f4Ae1dB607E91Fc7c106877136772f",
-    id: "0xd0fab38d17f4ae1db607e91fc7c106877136772f0002000000000000000001eb",
-    name: "ECLP-VIRTUAL-WETH-dyn",
+    bpt: "0xD97d36e71463c490a01556f0bbEa777fDf2d48DC",
+    id: "0xd97d36e71463c490a01556f0bbea777fdf2d48dc000200000000000000000209",
+    name: "ECLP-wstUSR-GYD",
     type: "GyroE",
-    gauge: "0x3D992d4172cD8CC8ACB7AC791b479ce709637061",
+    gauge: null,
     tokens: [
       {
-        address: "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
-        symbol: "VIRTUAL",
+        address: "0xB67675158B412D53fe6B68946483ba920b135bA1",
+        symbol: "wstUSR",
       },
       {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
+        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
+        symbol: "GYD",
       },
     ],
   },
