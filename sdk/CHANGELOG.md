@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.3](https://github.com/karpatkey/defi-kit/compare/v2.26.2...v2.26.3) (2026-01-15)
+
+
+### Bug Fixes
+
+* Fluid, Native Bridges, script DBs Updates ([#514](https://github.com/karpatkey/defi-kit/issues/514)) ([9b48f34](https://github.com/karpatkey/defi-kit/commit/9b48f34d8fddc4b853ab1e52e6b4e064e707d6fc))
+
 ## [2.26.2](https://github.com/karpatkey/defi-kit/compare/v2.26.1...v2.26.2) (2025-12-23)
 
 
