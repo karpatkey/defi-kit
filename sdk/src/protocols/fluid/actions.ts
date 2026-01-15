@@ -77,6 +77,6 @@ export const depositToken = (token: Token): Permission[] => {
         c.avatar
       ),
       targetAddress: token.fToken,
-    }
+    },
   ]
 }
