@@ -4,16 +4,19 @@ import baseTokens from "./_baseInfo"
 import ethTokens from "./_ethInfo"
 
 const zArb1TokenDeposit = z.enum([
+  "ETH", // Include native ETH
   ...arb1Tokens.map((token) => token.symbol),
   ...arb1Tokens.map((token) => token.token),
 ] as [string, string, ...string[]])
 
 const zBaseTokenDeposit = z.enum([
+  "ETH", // Include native ETH
   ...baseTokens.map((token) => token.symbol),
   ...baseTokens.map((token) => token.token),
 ] as [string, string, ...string[]])
 
 const zEthTokenDeposit = z.enum([
+  "ETH", // Include native ETH
   ...ethTokens.map((token) => token.symbol),
   ...ethTokens.map((token) => token.token),
 ] as [string, string, ...string[]])
