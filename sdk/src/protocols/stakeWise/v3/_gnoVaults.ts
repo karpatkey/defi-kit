@@ -81,31 +81,20 @@ export default [
     description: null,
   },
   {
-    id: "0x8898a1199a36023e9791f445bbf498755a180b7f",
-    name: "H2O Nodes",
-    description:
-      "Help decentralize Ethereum by staking with us - we run minority clients (usually Nimbus + Nethermind) running on bare metal servers in minority data centers. \n\nRead more at www.h2o-nodes.com\n\nHappy staking! ",
-  },
-  {
     id: "0x79dbec2d18a758c62d410f9763956d52fbd4a3cc",
     name: "Stakers.space",
     description:
       "Gnosis Vault by Stakers.space | Fee 10% | Learn more about Gnosis staking at https://stakers.space/gnosis-staking.",
   },
   {
-    id: "0xb352b25eca7707edc33580572a251e4cab06d2df",
-    name: "DVault",
-    description: null,
-  },
-  {
-    id: "0x2d3cac9c8645f9c9bc0e875359947ed38f817042",
-    name: "Pool Cherry Collective",
-    description: "1% Fee ",
-  },
-  {
     id: "0xe275ce985bebf24f30548ab56c66861a802b5598",
     name: "CNCVault1",
     description: "Stacked by the Chartreuse Node Crew",
+  },
+  {
+    id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
+    name: "FCC GNO Vault",
+    description: "FCC GNO Liquid Staking Public Vault",
   },
   {
     id: "0x44cc6c8229f1873660012ba36a040b89d83f2cf8",
@@ -123,13 +112,18 @@ export default [
     description: "Dappnode vault, fiber gigabit uplink, UPS",
   },
   {
+    id: "0xe77141d0047691d4464fe1f3d3615ca10b74830b",
+    name: "CNCVault2",
+    description: "Stacked by the Chartreuse Node Crew",
+  },
+  {
     id: "0x1f7e70d661279a8bb657417bbc71b82b948752b2",
     name: "Dappnode Test 2",
     description: null,
   },
   {
-    id: "0xe77141d0047691d4464fe1f3d3615ca10b74830b",
-    name: "CNCVault2",
-    description: "Stacked by the Chartreuse Node Crew",
+    id: "0x2d3cac9c8645f9c9bc0e875359947ed38f817042",
+    name: "Pool Cherry Collective",
+    description: "1% Fee ",
   },
 ] as const

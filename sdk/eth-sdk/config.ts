@@ -46,6 +46,8 @@ export const contracts = {
       arbDaiGateway: "0xD3B5b60020504bc3489D6949d545893982BA3011",
       arbErc20Gateway: "0xa3A7B6F88361F48403514059F1F16C8E78d60EeC",
       arbL1GatewayRouter: "0x72Ce9c846789fdB6fC1f34aC4AD25Dd9ef7031ef",
+      wethGateway: "0xd92023E9d9911199a6711321D1277285e6d4e2db",
+      lidoArbL1Erc20TokenGateway: "0x0F25c1DC2a9922304f2eac71DCa9B07E310e8E5a",
     },
     aura: {
       booster: "0xA57b8d98dAE62B26Ec3bcC4a365338157060B234",
@@ -71,6 +73,11 @@ export const contracts = {
       b80Bal20Weth: "0x5c6Ee304399DBdB9C8Ef030aB642B10820DB8F56",
       veBal: "0xC128a9954e6c874eA3d62ce62B468bA073093F25",
       feeDistributor: "0xD3cf852898b21fc233251427c2DC93d3d604F3BB",
+    },
+    baseBridge: {
+      baseBridge: "0x3154Cf16ccdb4C6d922629664174b904d80F2C35",
+      basePortal: "0x49048044D57e1C92A77f79988d21Fa8fAF74E97e",
+      resolvedDelegateProxy: "0x866E82a600A1414e583f7F13623F1aC5d58b0Afa",
     },
     circleV1: {
       tokenMessenger: "0xBd3fa81B58Ba92a82136038B25aDec7066af3155",
@@ -115,7 +122,7 @@ export const contracts = {
     },
     fluid: {
       fWeth: "0x90551c1795392094FE6D29B758EcCD233cFAa260",
-      merkleDistributor: "0x7060FE0Dd3E31be01EFAc6B28C8D38018fD163B0",
+      merkleDistributor: "0x7060FE0Dd3E31be01EFAc6B28C8D38018fD163B0", // $FLUID Merkle Distributor
     },
     gearbox: {
       vault: "0x9396DCbf78fc526bb003665337C5E73b699571EF", // Gearbox - kpk ETH v3
@@ -157,6 +164,9 @@ export const contracts = {
     optimismBridge: {
       optDaiBridge: "0x10E6593CDda8c58a1d0f14C5164B376352a55f2F",
       optGateway: "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
+      l1CrossDomainMessenger: "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
+      optimismPortal: "0xbEb5Fc579115071764c7423A4f12eDde41f106Ed",
+      gateway: "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
     },
     rocketPool: {
       storage: "0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46",
@@ -281,6 +291,8 @@ export const contracts = {
       gatewayRouter: "0x5288c571Fd7aD117beA99bF60FE0846C4E84F933",
       arbSys: "0x0000000000000000000000000000000000000064",
       l2Erc20Gateway: "0x09e9222E96E7B4AE2a407B98d48e330053351EEe",
+      l2WethGateway: "0x6c411aD3E74De3E7Bd422b94A27770f5B86C623B",
+      lidoL2Erc20TokenGateway: "0x07D4692291B9E30E326fd31706f686f83f331B82",
     },
     aura: {
       booster: "0x98Ef32edd24e2c92525E59afc4475C1242a30184",
@@ -312,7 +324,7 @@ export const contracts = {
     },
     fluid: {
       fWeth: "0x45Df0656F8aDf017590009d2f1898eeca4F0a205",
-      merkleDistributor: "0x94312a608246Cecfce6811Db84B3Ef4B2619054E",
+      merkleDistributor: "0x94312a608246Cecfce6811Db84B3Ef4B2619054E", // $FLUID Merkle Distributor
     },
     hop: {
       l2HopCctp: "0x6504BFcaB789c35325cA4329f1f41FaC340bf982",
@@ -367,6 +379,7 @@ export const contracts = {
     optimismBridge: {
       daiTokenBridge: "0x467194771dAe2967Aef3ECbEDD3Bf9a310C76C65",
       optimismBridge: "0x4200000000000000000000000000000000000010",
+      l2CrossDomainMessenger: "0x4200000000000000000000000000000000000007",
     },
     uniswapV3: {
       positionsNft: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
@@ -395,6 +408,10 @@ export const contracts = {
       relayer: "0x7C3C773C878d2238a9b64d8CEE02377BF07ED06a",
       relayerLibrary: "0x82416Ce6eA7dD4923d4A3ED70a79B4A432a382C4",
     },
+    baseBridge: {
+      l2CrossDomainMessengerProxy: "0x4200000000000000000000000000000000000007",
+      l2StandardBridgeProxy: "0x4200000000000000000000000000000000000010",
+    },
     circleV1: {
       tokenMessenger: "0x1682Ae6375C4E4A97e4B583BC394c861A46D8962",
       messageTransmitter: "0xAD09780d193884d503182aD4588450C416D6F9D4",
@@ -409,7 +426,7 @@ export const contracts = {
     },
     fluid: {
       fWeth: "0x9272D6153133175175Bc276512B2336BE3931CE9",
-      merkleDistributor: "0x94312a608246Cecfce6811Db84B3Ef4B2619054E",
+      merkleDistributor: "0x94312a608246Cecfce6811Db84B3Ef4B2619054E", // $FLUID Merkle Distributor
     },
     hop: {
       l2HopCctp: "0xe7F40BF16AB09f4a6906Ac2CAA4094aD2dA48Cc2",
