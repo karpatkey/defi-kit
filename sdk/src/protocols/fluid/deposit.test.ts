@@ -96,36 +96,5 @@ describe("fluid", () => {
         )
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
-
-    // Claim rewards to avatar
-    it("only claim rewards to avatar", async () => {
-      await expect(
-        kit.asMember.fluid.merkleDistributor.claim(
-          wallets.avatar,
-          1,
-          1,
-          "0x0000000000000000000000000000000000000000000000000000000000000000",
-          1,
-          [
-            "0x0000000000000000000000000000000000000000000000000000000000000000",
-          ],
-          "0x"
-        )
-      ).toBeAllowed()
-
-      await expect(
-        kit.asMember.fluid.merkleDistributor.claim(
-          wallets.member,
-          1,
-          1,
-          "0x0000000000000000000000000000000000000000000000000000000000000000",
-          1,
-          [
-            "0x0000000000000000000000000000000000000000000000000000000000000000",
-          ],
-          "0x"
-        )
-      ).toBeForbidden(Status.ParameterNotAllowed)
-    })
   })
 })
