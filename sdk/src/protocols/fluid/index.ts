@@ -31,7 +31,7 @@ export const eth = {
     return targets.flatMap((target) =>
       target === "ETH"
         ? depositEther(Chain.eth)
-        : depositToken(Chain.eth, findToken(ethTokens, target))
+        : depositToken(findToken(ethTokens, target))
     )
   },
 }
@@ -45,7 +45,7 @@ export const arb1 = {
     return targets.flatMap((target) =>
       target === "ETH"
         ? depositEther(Chain.arb1)
-        : depositToken(Chain.arb1, findToken(arb1Tokens, target))
+        : depositToken(findToken(arb1Tokens, target))
     )
   },
 }
@@ -59,7 +59,7 @@ export const base = {
     return targets.flatMap((target) =>
       target === "ETH"
         ? depositEther(Chain.base)
-        : depositToken(Chain.base, findToken(baseTokens, target))
+        : depositToken(findToken(baseTokens, target))
     )
   },
 }

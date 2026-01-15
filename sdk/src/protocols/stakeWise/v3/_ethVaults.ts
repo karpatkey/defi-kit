@@ -9,7 +9,7 @@ export default [
   },
   {
     id: "0xe6d8d8ac54461b1c5ed15740eee322043f696c08",
-    name: "Chorus One - MEV Max",
+    name: "Chorus One Max Vault",
     description:
       "Chorus One’s ground-breaking MEV research ensures the highest yields with top-tier security and enterprise-level infrastructure. Start staking ETH today.",
   },
@@ -87,10 +87,9 @@ export default [
       "onchainaustria is the first Austrian DAO-directed association (𓃵 Airdrop incoming!). We operate as a node operator (ETH, STRK, UNI) with low fees and a highly redundant infrastructure.\n\nWe are a thriving Austrian crypto community, dedicated to enabling our members to participate in and support the decentralization of DLT networks.\n\nJoin us and become part of a collaborative environment driving the future of decentralization!\n\n🔗 onchainaustria.at",
   },
   {
-    id: "0x3fcbc480f3bb3ce8379bb475d95de603f188d9c0",
-    name: "Stakeway Private Vault 1",
-    description:
-      "Stakeway by Gateway.fm is a premier staking provider offering Enterprise Grade Infrastructure tailored for customers seeking reliable and secure staking solutions. With a focus on performance and trust, we deliver a robust platform. Our services are designed to optimize staking experience, ensuring seamless operation and maximum returns.",
+    id: "0xb1e3ca426d3a3810edb58017a4d6a71fc6221f44",
+    name: "CCM LeverVault",
+    description: "CCM Is the name, levered staking is the game",
   },
   {
     id: "0x99510bfc5d420cd3c41458f4692b1c3321908734",
@@ -120,16 +119,16 @@ export default [
     description: "Celestial gains for celestial bodies.",
   },
   {
-    id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
-    name: "Blockscape Super Early Bird",
+    id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
+    name: "Blockshard DVT Pioneers",
     description:
-      "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
+      "The first ship has launched — nearly full and forging ahead into the staking frontier.\n\nThis high-performance pool runs on Distributed Validator Technology (DVT) with no single point of failure and maximum fault tolerance. We use SSV and Obol, and share 90% of protocol rewards with stakers.\n\n⚠️ Capacity capped at 3200 ETH.\n🚀 Follow the Pioneers’ path in our new pool: Blockshard DVT Explorers",
   },
   {
     id: "0x05e393ec11d0197a88d84457908edd4ff235f323",
-    name: "Stakin - No MEV",
+    name: "Stakin by The Tie - No MEV",
     description:
-      "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
+      "Institutional-grade staking services and Web3 infrastructure provider. T&Cs apply, visit our website.",
   },
   {
     id: "0x649955f4189c3921df60e25f58cb1e81070fedb0",
@@ -138,10 +137,10 @@ export default [
       "High availability setup using a network of home-based nodes in Southeast Asia running minority clients by Stakesaurus' community\n\nCentralised infrastructure is detrimental to both the network and your own ETH (e.g., cloud services, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes acts as a fallback for one another to provide a high-availability staking service.\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws.\n\nStake with this vault to support my efforts in growing the Solo staking community in Asia!",
   },
   {
-    id: "0xd21b6bc0a1434aef8cf468a20bf2daefcaf6eab9",
-    name: "Caliber",
+    id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
+    name: "Blockscape Super Early Bird",
     description:
-      "Caliber is a Web3 Venture Builder empowering founders to build impactful startups. We offer comprehensive support - from funding and engineering to strategy and legal - to drive innovation in consumer apps, DeFi, and infrastructure.",
+      "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
   },
   {
     id: "0xdbdee04c72a02a740b9f26ada9203582c8a99daf",
@@ -150,16 +149,16 @@ export default [
       'This vault represents a distributed validator cluster , using Obol\'s DV technology to run the validators across multiple nodes. As a staker, you can expect higher uptime, decreased slashing risk, and a meaningful contribution to the decentralization of the Ethereum network.\n\nBy staking with an Obol DV, you automatically participate in the Obol Contributions initiative, contributing 1% of staking rewards to the "1% for Decentralization" retroactive funding model. Your contributions will be tracked and recognized by Obol and can be viewed on our staking dApp, OPUS Pool.',
   },
   {
-    id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
-    name: "Peer Ventures",
-    description:
-      "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
-  },
-  {
     id: "0x91211a4965e75152cb549b308f8ba398c3ab337e",
     name: "Verse ETH Staking",
     description:
       "Earn rewards by staking your ETH in the Verse Ecosystem vault",
+  },
+  {
+    id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
+    name: "Peer Ventures",
+    description:
+      "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
     id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
@@ -176,6 +175,12 @@ export default [
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
     name: "brazilpracima",
     description: "Independent Ethereum node operator since genesis",
+  },
+  {
+    id: "0xd21b6bc0a1434aef8cf468a20bf2daefcaf6eab9",
+    name: "Caliber",
+    description:
+      "Caliber is a Web3 Venture Builder empowering founders to build impactful startups. We offer comprehensive support - from funding and engineering to strategy and legal - to drive innovation in consumer apps, DeFi, and infrastructure.",
   },
   {
     id: "0x5799be451ee9fddd171c23bf5be86eccfe1f062f",
@@ -208,22 +213,10 @@ export default [
       "Minimum Fee - Unrestricted Maximum MEV - Zero-Cloud - Private Datacentre - 24/7 Engineering Support - All included in Simply Staking's Premium Vault...\n\n\n- Fee: Competitive 3.75%.\n- MEV: Extensive list of MEV relays, free of restrictions, with the ultimate goal of using a global set of relays to maximise profit.\n- Private Data Centre Operation: Your ETH is securely managed in our privately operated data center in Malta, prioritising security and reliability, free from the dependencies of cloud services.",
   },
   {
-    id: "0x5fe23da0835ecf01f4faf9b07fdcfd603dfbd146",
-    name: "Lavender.Five Nodes",
-    description:
-      "Fortifying crypto networks with MPC/SSV security, slash insurance, and open source contributions. Connect with us at https://linktr.ee/lavenderfive.",
-  },
-  {
     id: "0xcf8357e5d8d90aa3c86eeba3c494947dab28bfaf",
     name: "GlobalStake",
     description:
       "With decades of infrastructure experience, GlobalStake's enterprise-grade Web3 data centers, equipment, and protocols are specifically engineered to secure Proof-of-Stake networks. We believe that if you are going to do something, do it right!",
-  },
-  {
-    id: "0x06ec2d731b2fa8895e5a9482c22ee33573f44a13",
-    name: "Big Euler's e-Stake",
-    description:
-      "Inspired by Euler's number, we're all about exponential growth. Our fee is based off 'e' itself - just 2.71% - Solo Staker | 0x02 Compounding | Local Hardware | Lighthouse | Nethermind | Ultrasound Money | Flashbots |  We also operate genesis Ethereum validator #4394 using the same system",
   },
   {
     id: "0xea6db44b0d7e20f72f2b4b3deaaa9e710e718bd9",
@@ -232,20 +225,8 @@ export default [
       "DSRV is an integrated blockchain solutions company with the mission of enriching the crypto ecosystem via stronger connectivity. We strive to be your gateway to a suite of all-comprehensive blockchain services. Everything distributed, served complete.",
   },
   {
-    id: "0x302be829c61c287787030888bbcf11115ecd5773",
-    name: "Swiss Liquid Staking",
-    description:
-      "Unlock the potential of liquid Ethereum staking with Brick Towers, where we bring Swiss precision and security to your Ethereum journey.  Our platform, originally designed for banks, is now open to everyone, offering a cost-effective and non-custodial way to access protocol rewards by securing the network.  At your choice, mint osETH and enter the world of DeFi (lending & borrowing, yield farming and restaking) to enhance your rewards. Join us and experience a hassle-free liquid staking solution. Learn more about us at 🔗 https://bricktowers.io ",
-  },
-  {
     id: "0xa071d03d96554e185a86ab178ea3d76c9caaaad8",
     name: "0xa071d03d96554e185a86ab178ea3d76c9caaaad8",
     description: null,
-  },
-  {
-    id: "0xc502a1008cae7ad560294ac987355dfdb287e597",
-    name: "Stakin - Full MEV",
-    description:
-      "Stakin (https://stakin.com) provides institutional-grade non-custodial staking services and Web3 infrastructure. We operate on more than 40 blockchain networks including Ethereum, with 10,000+ ETH validators.",
   },
 ] as const

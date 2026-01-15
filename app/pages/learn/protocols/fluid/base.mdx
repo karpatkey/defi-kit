@@ -7,8 +7,6 @@ import { Callout } from "nextra/components"
 | Name                | Address                                                                                                               |
 | :------------------ | :-------------------------------------------------------------------------------------------------------------------- |
 | `fWETH`             | [0x9272D6153133175175Bc276512B2336BE3931CE9](https://basescan.org/address/0x9272D6153133175175Bc276512B2336BE3931CE9) |
-| `MerkleDistributor` | [0x94312a608246Cecfce6811Db84B3Ef4B2619054E](https://basescan.org/address/0x94312a608246Cecfce6811Db84B3Ef4B2619054E) |
-
 ## Action: `deposit`
 
 **Parameters**
@@ -80,23 +78,6 @@ Redeem a specific amount of `FTOKEN` shares to receive the corresponding amount 
   | `receiver` | equal to `AVATAR` |
   | `owner`    | equal to `AVATAR` |
 
-#### `MerkleDistributor · claim`
-
-Claim incentive rewards.
-
-- **Contract:** `MerkleDistributor`
-- **Function:** `claim(address,uint256,uint8,bytes32,uint256,bytes32[],bytes)`
-
-  | Parameter          | Constraint        |
-  | :----------------- | :---------------- |
-  | `recipient`        | equal to `AVATAR` |
-  | `cumulativeAmount` | -                 |
-  | `positionType`     | -                 |
-  | `positionId`       | -                 |
-  | `cycle`            | -                 |
-  | `merkleProof`      | -                 |
-  | `metadata`         | -                 |
-
 ### Target: ETH
 
 For ETH as an element of `targets`, the following functions are allowed:
@@ -138,19 +119,3 @@ Redeem a specific amount of `fWETH` shares to receive the corresponding amount o
   | `receiver` | equal to `AVATAR` |
   | `owner`    | equal to `AVATAR` |
 
-#### `MerkleDistributor · claim`
-
-Claim incentive rewards.
-
-- **Contract:** `MerkleDistributor`
-- **Function:** `claim(address,uint256,uint8,bytes32,uint256,bytes32[],bytes)`
-
-  | Parameter          | Constraint        |
-  | :----------------- | :---------------- |
-  | `recipient`        | equal to `AVATAR` |
-  | `cumulativeAmount` | -                 |
-  | `positionType`     | -                 |
-  | `positionId`       | -                 |
-  | `cycle`            | -                 |
-  | `merkleProof`      | -                 |
-  | `metadata`         | -                 |
