@@ -257,6 +257,21 @@ export default [
     },
   },
   {
+    id: "0xe23e15ddd552eb148045e3f4b74e71f4923bc6bea6e5bda0a4cf89a0cecd1a3b",
+    name: "USDC / siUSD",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0xB283D0c3438D0430F9B414B487F50cfD415EEC0A",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x51B0f6AED4a421f09D28A5eDe1DCF460BCB54d30",
+      symbol: "siUSD",
+    },
+  },
+  {
     id: "0xe0de6b571ec913ada63d5327f70c8849ea2363d47f44a190e8fb489db07fee1e",
     name: "USDC / USDe",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -419,6 +434,21 @@ export default [
     collateralToken: {
       address: "0x41CA7586cC1311807B4605fBB748a3B8862b42b5",
       symbol: "syrupUSDC",
+    },
+  },
+  {
+    id: "0xd91052003758145cc53615895c0ce2081c7080b661dbab5652c2b8433b248c2d",
+    name: "USD₮0 / siUSD",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0x9fcDf72F1585E3D96DdAC6D35CD7087cC58dC589",
+    loanToken: {
+      address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      symbol: "USD₮0",
+    },
+    collateralToken: {
+      address: "0x51B0f6AED4a421f09D28A5eDe1DCF460BCB54d30",
+      symbol: "siUSD",
     },
   },
   {

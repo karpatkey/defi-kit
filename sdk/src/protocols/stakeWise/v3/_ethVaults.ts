@@ -58,15 +58,15 @@ export default [
     description: null,
   },
   {
+    id: "0x579ecfe4270ce23589d8b0a41dd234316018c11c",
+    name: "0x579ecfe4270ce23589d8b0a41dd234316018c11c",
+    description: null,
+  },
+  {
     id: "0x8a93a876912c9f03f88bc9114847cf5b63c89f56",
     name: "Stakingverse - Max MEV Boost",
     description:
       "Welcome to The Stakingverse!\n\nA premier staking provider with competitive fees, MEV boost and state-of-the-art infrastructure.\n\nAs an official StakeWise partner, we are dedicated to perfecting the secure and decentralized nature of the V3 Protocol to multiple chains. And with a team of highly-experienced professionals, who have been on the front-line of blockchain technology for many years now, you will get the best service, APY and security in liquid staking.\n\nStake your LYX and ETH with The Best at stakingverse.io",
-  },
-  {
-    id: "0x579ecfe4270ce23589d8b0a41dd234316018c11c",
-    name: "0x579ecfe4270ce23589d8b0a41dd234316018c11c",
-    description: null,
   },
   {
     id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
@@ -183,6 +183,12 @@ export default [
       "Caliber is a Web3 Venture Builder empowering founders to build impactful startups. We offer comprehensive support - from funding and engineering to strategy and legal - to drive innovation in consumer apps, DeFi, and infrastructure.",
   },
   {
+    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
+    name: "Meria",
+    description:
+      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
+  },
+  {
     id: "0x5799be451ee9fddd171c23bf5be86eccfe1f062f",
     name: "Blockdaemon",
     description:
@@ -199,12 +205,6 @@ export default [
     name: "Blockshard DVT Explorers",
     description:
       "The next ship is ready — unlimited capacity for the next wave of stakers.\n\nBuilt on the same secure DVT foundation as the Pioneers vault, with SSV and Obol powering fault-tolerant performance. 90% of DVT protocol incentives are passed on to stakers.\n\nFor those continuing the journey — with a 5% fee and no deposit cap.",
-  },
-  {
-    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
-    name: "Meria",
-    description:
-      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0x30c13e93c170885e9969ae2e4ff5f020807e0d74",
