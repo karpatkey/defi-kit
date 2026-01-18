@@ -1062,6 +1062,16 @@ export default [
     },
   },
   {
+    id: "0x64418b3D2c8514488F6aB47f47416AE6D44b008d",
+    version: "v1",
+    name: "Base Vault Token",
+    symbol: "BVT",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0xBbEAb58fF0fB74371eFc6126C6935271D3744145",
     version: "v1.1",
     name: "Elixir Capital USDC",
@@ -7996,6 +8006,56 @@ export default [
     version: "v2",
     name: "RWA Private Equity",
     symbol: "RWA Private Equity",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x9156B01b98cda3b8FD5C655fE2c2010b6368Af0F",
+    version: "v2",
+    name: "test-vault",
+    symbol: "TV",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x3eac1E022bf299476158d287b85c1e52Eae2bDd6",
+    version: "v2",
+    name: "Moonwell cbBTC Vault",
+    symbol: "Moonwell-cbBTC",
+    asset: {
+      address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      symbol: "cbBTC",
+    },
+  },
+  {
+    id: "0x4952482927542E7bf75F024e7e06B239227a6F87",
+    version: "v2",
+    name: "Alpha USDC Core",
+    symbol: "alphaUSDC",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x2b2735DE176d42BA673A468E75B20b30d5B14aF3",
+    version: "v2",
+    name: "Demo",
+    symbol: "Demo11",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xcDA5Dbf58a016158ECD4A226109752Cc3A627Ec8",
+    version: "v2",
+    name: "DeTrade Serenity USDC",
+    symbol: "dt-serenityUSDC",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",

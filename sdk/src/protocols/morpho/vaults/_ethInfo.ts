@@ -3825,7 +3825,7 @@ export default [
     id: "0xc88eFFD6e74D55c78290892809955463468E982A",
     version: "v1.1",
     name: "kpk ETH Yield",
-    symbol: "kpk_ETH_Yield_Morpho",
+    symbol: "kpk_ETH_Yield",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       symbol: "WETH",
@@ -3835,7 +3835,7 @@ export default [
     id: "0x9178eBE0691593184c1D785a864B62a326cc3509",
     version: "v1.1",
     name: "kpk USDC Yield",
-    symbol: "kpk_USDC_Yield_Morpho",
+    symbol: "kpk_USDC_Yield",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -5346,6 +5346,26 @@ export default [
     version: "v2",
     name: "3F x Steakhouse USDC",
     symbol: "3F-steakUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xc770a57fCfBC716a1F94C414d9a62792C766E883",
+    version: "v2",
+    name: "Philidor USDC Prime",
+    symbol: "phiUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xaA8d9E2aBa210639cE6C7cE21385e7c673ACa6f3",
+    version: "v2",
+    name: "Yearn Normie USDC",
+    symbol: "yNM-USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",

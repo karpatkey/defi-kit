@@ -269,23 +269,6 @@ export default [
     ],
   },
   {
-    bpt: "0x3a4c6D2404b5eb14915041e01F63200a82f4a343",
-    id: "0x3a4c6d2404b5eb14915041e01f63200a82f4a343000200000000000000000065",
-    name: "50STG-50USDC",
-    type: "Weighted",
-    gauge: "0xC422B5407C7717a3259A59738E05e74d6AA3302A",
-    tokens: [
-      {
-        address: "0x6694340fc020c5E6B96567843da2df01b2CE1eb6",
-        symbol: "STG",
-      },
-      {
-        address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
-        symbol: "USDC",
-      },
-    ],
-  },
-  {
     bpt: "0x3f09C77B19AD8Bb527355ec32d5ce98421fec2E3",
     id: "0x3f09c77b19ad8bb527355ec32d5ce98421fec2e30000000000000000000004b2",
     name: "axlBAL/BAL",
@@ -362,31 +345,6 @@ export default [
       {
         address: "0x7dfF72693f6A4149b17e7C6314655f6A9F7c8B33",
         symbol: "GHO",
-      },
-    ],
-  },
-  {
-    bpt: "0x49b2De7d214070893c038299a57BaC5ACb8B8A34",
-    id: "0x49b2de7d214070893c038299a57bac5acb8b8a340001000000000000000004be",
-    name: "GOLD-BAL-AURA-wstETH",
-    type: "Weighted",
-    gauge: "0x159be31493C26F8F924b3A2a7F428C2f41247e83",
-    tokens: [
-      {
-        address: "0x040d1EdC9569d4Bab2D15287Dc5A4F10F56a56B8",
-        symbol: "BAL",
-      },
-      {
-        address: "0x1509706a6c66CA549ff0cB464de88231DDBe213B",
-        symbol: "AURA",
-      },
-      {
-        address: "0x5979D7b546E38E414F7E9822514be443A4800529",
-        symbol: "wstETH",
-      },
-      {
-        address: "0x8b5e4C9a188b1A187f2D1E80b1c2fB17fA2922e1",
-        symbol: "GOLD",
       },
     ],
   },
@@ -1078,23 +1036,6 @@ export default [
       {
         address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
         symbol: "WETH",
-      },
-    ],
-  },
-  {
-    bpt: "0xef0c116A2818A5b1A5D836A291856A321f43C2Fb",
-    id: "0xef0c116a2818a5b1a5d836a291856a321f43c2fb00020000000000000000053a",
-    name: "ECLP-WOETH-WETH",
-    type: "GyroE",
-    gauge: "0x40e86216712cB9871B9C698EA3AFB22f88c00E6e",
-    tokens: [
-      {
-        address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
-        symbol: "WETH",
-      },
-      {
-        address: "0xD8724322f44E5c58D7A815F542036fb17DbbF839",
-        symbol: "WOETH",
       },
     ],
   },
