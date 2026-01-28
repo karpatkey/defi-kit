@@ -3,11 +3,11 @@ name: Continuous integration checks
 on: [push]
 
 env:
-  ETH_FORK_RPC: ${{ secrets.ETH_FORK_RPC }}
-  ARB1_FORK_RPC: ${{ secrets.ARB1_FORK_RPC }}
-  GNO_FORK_RPC: ${{ secrets.GNO_FORK_RPC }}
-  OETH_FORK_RPC: ${{ secrets.OETH_FORK_RPC }}
-  BASE_FORK_RPC: ${{ secrets.BASE_FORK_RPC }}
+  ETH_FORK_RPC: ${{ vars.KNODE_URL }}/ethereum?${{ secrets.KNODE_API_KEY }}
+  ARB1_FORK_RPC: ${{ vars.KNODE_URL }}/arbitrum?${{ secrets.KNODE_API_KEY }}
+  GNO_FORK_RPC: ${{ vars.KNODE_URL }}/gnosis?${{ secrets.KNODE_API_KEY }}
+  OETH_FORK_RPC: ${{ vars.KNODE_URL }}/optimism?${{ secrets.KNODE_API_KEY }}
+  BASE_FORK_RPC: ${{ vars.KNODE_URL }}/base?${{ secrets.KNODE_API_KEY }}
 
 jobs:
   checks:
