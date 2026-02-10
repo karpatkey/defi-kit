@@ -3424,7 +3424,7 @@ export default [
   {
     id: "0x3094b241AaDe60F91f1c82b0628A10d9501462F9",
     version: "v1.1",
-    name: "Mo USD Max",
+    name: "Mo Earn Max USDC",
     symbol: "maxUSD",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
@@ -4385,7 +4385,7 @@ export default [
     id: "0x546d66d1b8C95a3e2459a9D93989Aa57910801aD",
     version: "v1.1",
     name: "Rafael Vault v1",
-    symbol: "RAFC",
+    symbol: "RAFUSDC",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",
@@ -4564,8 +4564,8 @@ export default [
   {
     id: "0x4AE4FB344CeD876bddCeaB2A2A7a8a63089444b3",
     version: "v2",
-    name: "frr",
-    symbol: "frr",
+    name: "fr fr",
+    symbol: "fr fr",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",
@@ -4816,6 +4816,16 @@ export default [
     version: "v2",
     name: "testing1",
     symbol: "testing1",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xebcB0B755e291851f8c3a6dd564f689Cb2b92dc4",
+    version: "v2",
+    name: "Abdicated",
+    symbol: "testABDUSDC",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",
@@ -5982,6 +5992,16 @@ export default [
     },
   },
   {
+    id: "0x67Ee90c3757d41dd273d209f1B30cc3532876844",
+    version: "v2",
+    name: "Pofu USDC",
+    symbol: "pofuUSDC",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0x8effa741061aaA2d8A5012a9B09A2d31d8B628d7",
     version: "v2",
     name: "ARCHITECT Global Value",
@@ -6524,8 +6544,8 @@ export default [
   {
     id: "0x4Fe103d05704E8d85D5E03B5D3b41FDB73D53061",
     version: "v2",
-    name: "jvaTest",
-    symbol: "jvaUSDC",
+    name: "test2",
+    symbol: "test2USDC",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",

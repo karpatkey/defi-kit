@@ -36,7 +36,7 @@ describe("aaveV3", () => {
         )
       ).not.toRevert()
       await expect(
-        kit.asMember.aaveV3.poolV3.supply(
+        kit.asMember.aaveV3.poolV3["supply(address,uint256,address,uint16)"](
           contracts.optimism.usdc,
           parseUnits("10000", 6),
           wallets.avatar,
@@ -82,13 +82,9 @@ describe("aaveV3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.poolV3.borrow(
-          contracts.optimism.usdc,
-          parseUnits("100", 6),
-          2,
-          0,
-          wallets.avatar
-        )
+        kit.asMember.aaveV3.poolV3[
+          "borrow(address,uint256,uint256,uint16,address)"
+        ](contracts.optimism.usdc, parseUnits("100", 6), 2, 0, wallets.avatar)
       ).not.toRevert()
 
       await expect(
@@ -99,7 +95,7 @@ describe("aaveV3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.poolV3.repay(
+        kit.asMember.aaveV3.poolV3["repay(address,uint256,uint256,address)"](
           contracts.optimism.usdc,
           parseUnits("100", 6),
           2,
@@ -149,23 +145,15 @@ describe("aaveV3", () => {
     // Test with USDC
     it("only allows borrowing USDC from avatar", async () => {
       await expect(
-        kit.asMember.aaveV3.poolV3.borrow(
-          contracts.optimism.usdc,
-          parseUnits("100", 6),
-          2,
-          0,
-          wallets.avatar
-        )
+        kit.asMember.aaveV3.poolV3[
+          "borrow(address,uint256,uint256,uint16,address)"
+        ](contracts.optimism.usdc, parseUnits("100", 6), 2, 0, wallets.avatar)
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.poolV3.borrow(
-          contracts.optimism.usdc,
-          parseUnits("100", 6),
-          2,
-          0,
-          wallets.member
-        )
+        kit.asMember.aaveV3.poolV3[
+          "borrow(address,uint256,uint256,uint16,address)"
+        ](contracts.optimism.usdc, parseUnits("100", 6), 2, 0, wallets.member)
       ).toBeForbidden(Status.ParameterNotAllowed)
     })
 
@@ -185,7 +173,7 @@ describe("aaveV3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.poolV3.repay(
+        kit.asMember.aaveV3.poolV3["repay(address,uint256,uint256,address)"](
           contracts.optimism.usdc,
           parseUnits("100", 6),
           2,
@@ -194,7 +182,7 @@ describe("aaveV3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.poolV3.repay(
+        kit.asMember.aaveV3.poolV3["repay(address,uint256,uint256,address)"](
           contracts.optimism.usdc,
           parseUnits("100", 6),
           2,

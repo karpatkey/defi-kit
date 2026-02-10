@@ -39,13 +39,7 @@ export default [
     id: "0xa8cb2e35f594b308726b242136f0a8995bf19e97",
     name: "Easy Stake - Powered by SSV",
     description:
-      "3 out of 4 Fault Tolerance  - SSV Operators 491, 770, 1002, 1003 - Solo node runner since April 2023 -   Nethermind/Nimbus, Reth/Lighthouse, Geth/Prysm, Erigon/Lodestar - MEV enabled - High-end NUC with UPS",
-  },
-  {
-    id: "0x4425bb38d4ca95e522f9308175ec7d8188e8284e",
-    name: "Dream vault",
-    description:
-      "This is a private vault and accumulating ETH for a home node runner from family and friends",
+      "3 out of 4 Fault Tolerance  - SSV Operators 491, 770, 1002, 1003 - Solo node runner since April 2023 -   Nethermind/Nimbus, Reth/Lighthouse, Geth/Prysm, Besu/Lodestar - MEV enabled - High-end NUC with UPS",
   },
   {
     id: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
@@ -58,15 +52,21 @@ export default [
     description: null,
   },
   {
-    id: "0x8a93a876912c9f03f88bc9114847cf5b63c89f56",
-    name: "Stakingverse - Max MEV Boost",
+    id: "0x4425bb38d4ca95e522f9308175ec7d8188e8284e",
+    name: "Dream vault",
     description:
-      "Welcome to The Stakingverse!\n\nA premier staking provider with competitive fees, MEV boost and state-of-the-art infrastructure.\n\nAs an official StakeWise partner, we are dedicated to perfecting the secure and decentralized nature of the V3 Protocol to multiple chains. And with a team of highly-experienced professionals, who have been on the front-line of blockchain technology for many years now, you will get the best service, APY and security in liquid staking.\n\nStake your LYX and ETH with The Best at stakingverse.io",
+      "This is a private vault and accumulating ETH for a home node runner from family and friends",
   },
   {
     id: "0x579ecfe4270ce23589d8b0a41dd234316018c11c",
     name: "0x579ecfe4270ce23589d8b0a41dd234316018c11c",
     description: null,
+  },
+  {
+    id: "0x8a93a876912c9f03f88bc9114847cf5b63c89f56",
+    name: "Stakingverse - Max MEV Boost",
+    description:
+      "Welcome to The Stakingverse!\n\nA premier staking provider with competitive fees, MEV boost and state-of-the-art infrastructure.\n\nAs an official StakeWise partner, we are dedicated to perfecting the secure and decentralized nature of the V3 Protocol to multiple chains. And with a team of highly-experienced professionals, who have been on the front-line of blockchain technology for many years now, you will get the best service, APY and security in liquid staking.\n\nStake your LYX and ETH with The Best at stakingverse.io",
   },
   {
     id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
@@ -114,15 +114,10 @@ export default [
     description: "Illus Capital Private Staking Vault",
   },
   {
-    id: "0x481afcd21a3447a7a04c4afd968df877b76d2310",
-    name: "Sun and Moon Collection",
-    description: "Celestial gains for celestial bodies.",
-  },
-  {
-    id: "0x96fb413349cb4ec17410df929898ae9c0e56ae40",
-    name: "Blockshard DVT Pioneers",
+    id: "0x5799be451ee9fddd171c23bf5be86eccfe1f062f",
+    name: "Blockdaemon",
     description:
-      "The first ship has launched — nearly full and forging ahead into the staking frontier.\n\nThis high-performance pool runs on Distributed Validator Technology (DVT) with no single point of failure and maximum fault tolerance. We use SSV and Obol, and share 90% of protocol rewards with stakers.\n\n⚠️ Capacity capped at 3200 ETH.\n🚀 Follow the Pioneers’ path in our new pool: Blockshard DVT Explorers",
+      "Blockdaemon is the most battle-tested node provider for 70+ protocols, allowing for an easy way to receive optimized rewards while minimizing risk and supporting the network.",
   },
   {
     id: "0x05e393ec11d0197a88d84457908edd4ff235f323",
@@ -143,6 +138,12 @@ export default [
       "Institutional-grade staking for everyone made by Blockscape in Switzerland. As an early staker, you benefit from a lower commission fee of just 4%, while still enjoying the same levels of security and reliability. We are pioneering the distributed validator technology (DVT) in Stakewise with SSV.\nOur unique setup provides highest standards in security and reliability through a distributed DVT setup located in Canada, Germany, Singapore, and France. With more than 10.000 stakers and over $500.000.000 under management, Blockscape is one of the most reliable staking providers in the world.\nMoreover, we offer dedicated vaults for institutions with specific requirements. Reach out to us at: partner@blockscape.network\nor visit https://blockscape.network for more information.",
   },
   {
+    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
+    name: "Blockshard DVT Explorers",
+    description:
+      "The next ship is ready — unlimited capacity for the next wave of stakers.\n\nBuilt on the same secure DVT foundation as the Pioneers vault, with SSV and Obol powering fault-tolerant performance. 90% of DVT protocol incentives are passed on to stakers.\n\nFor those continuing the journey — with a 5% fee and no deposit cap.",
+  },
+  {
     id: "0xdbdee04c72a02a740b9f26ada9203582c8a99daf",
     name: "Chorus One - Obol DV vault",
     description:
@@ -153,12 +154,6 @@ export default [
     name: "Verse ETH Staking",
     description:
       "Earn rewards by staking your ETH in the Verse Ecosystem vault",
-  },
-  {
-    id: "0x907660805fb78ae4e8419f76537671cc4df2d4ab",
-    name: "Peer Ventures",
-    description:
-      "Peer Ventures Vault is managed by experienced and conscientious node operators with on-premises equipment. We strive for the top tier of effectiveness with reliable power and internet, battery backups, proper maintenance, and monitoring. We've been operating highly effective validators on mainnet since January 2022, and manage 5,000 Holesky validators from genesis, for the lifetime of the testnet.  Ethereum is all we do, and the health of the beacon chain is important to us. This vault is self-limited to 100,000 ETH, which is less than 0.5% of the stake at time of creation.",
   },
   {
     id: "0xb0fd1783826ce1a254ba8d5c409b267238faa9cd",
@@ -172,6 +167,12 @@ export default [
     description: "Staking forever",
   },
   {
+    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
+    name: "Meria",
+    description:
+      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
+  },
+  {
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
     name: "brazilpracima",
     description: "Independent Ethereum node operator since genesis",
@@ -183,28 +184,10 @@ export default [
       "Caliber is a Web3 Venture Builder empowering founders to build impactful startups. We offer comprehensive support - from funding and engineering to strategy and legal - to drive innovation in consumer apps, DeFi, and infrastructure.",
   },
   {
-    id: "0x5799be451ee9fddd171c23bf5be86eccfe1f062f",
-    name: "Blockdaemon",
-    description:
-      "Blockdaemon is the most battle-tested node provider for 70+ protocols, allowing for an easy way to receive optimized rewards while minimizing risk and supporting the network.",
-  },
-  {
     id: "0x2ca762ed936e48c23b8a32403dd754020b07e86f",
     name: "VincentTaglia.eth",
     description:
       "Independent Ethereum validator utilizing Nethermind+Teku, uncensored MEV relays, owned hardware, and the smoothing pool. Support decentralization and spread risk by staking with me. Learn more: https://vincenttaglia.eth.limo",
-  },
-  {
-    id: "0x579684ecef8ea89224f1898d69fdcc820ee12431",
-    name: "Blockshard DVT Explorers",
-    description:
-      "The next ship is ready — unlimited capacity for the next wave of stakers.\n\nBuilt on the same secure DVT foundation as the Pioneers vault, with SSV and Obol powering fault-tolerant performance. 90% of DVT protocol incentives are passed on to stakers.\n\nFor those continuing the journey — with a 5% fee and no deposit cap.",
-  },
-  {
-    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
-    name: "Meria",
-    description:
-      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0x30c13e93c170885e9969ae2e4ff5f020807e0d74",

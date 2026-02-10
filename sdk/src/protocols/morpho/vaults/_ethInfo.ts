@@ -1144,8 +1144,8 @@ export default [
   {
     id: "0x79FD640000F8563A866322483524a4b48f1Ed702",
     version: "v1.1",
-    name: "Gauntlet USDT Core",
-    symbol: "gtUSDTc",
+    name: "Gauntlet USDT Frontier",
+    symbol: "gtusdtf",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
       symbol: "USDT",
@@ -1334,7 +1334,7 @@ export default [
   {
     id: "0x1E2aAaDcF528b9cC08F43d4fd7db488cE89F5741",
     version: "v1.1",
-    name: "Turtle USDC",
+    name: "9Summits USDC",
     symbol: "9SUSDC11Core",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -2705,7 +2705,7 @@ export default [
     id: "0xe108fbc04852B5df72f9E44d7C29F47e7A993aDd",
     version: "v1.1",
     name: " kpk USDC Prime",
-    symbol: " kpk_USDC_Prime_Morpho",
+    symbol: "kpk_USDC_Prime",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -2735,7 +2735,7 @@ export default [
     id: "0x0c6aec603d48eBf1cECc7b247a2c3DA08b398DC1",
     version: "v1.1",
     name: " kpk EURC Yield",
-    symbol: "kpk_EURC_Yield_Morpho",
+    symbol: "kpk_EURC_Yield",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
       symbol: "EURC",
@@ -3115,7 +3115,7 @@ export default [
     id: "0xd564F765F9aD3E7d2d6cA782100795a885e8e7C8",
     version: "v1.1",
     name: "kpk ETH Prime",
-    symbol: "kpk_ETH_Prime_Morpho",
+    symbol: "kpk_ETH_Prime",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       symbol: "WETH",
@@ -3624,8 +3624,8 @@ export default [
   {
     id: "0x5B8b9FA8e4145eE06025F642cAdB1B47e5F39F04",
     version: "v1.1",
-    name: "mUSD Vault",
-    symbol: "mOUSD",
+    name: "OUSD Vault V1",
+    symbol: "OUSD-V1",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -3804,8 +3804,8 @@ export default [
   {
     id: "0x8B3b3a5657f1B5169712c9e06437fe80645637C7",
     version: "v1.1",
-    name: "kpk USDC Yield",
-    symbol: "kpk_USDC_Yield_Morpho",
+    name: "deprecated2",
+    symbol: "deprecated2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -3825,7 +3825,7 @@ export default [
     id: "0xc88eFFD6e74D55c78290892809955463468E982A",
     version: "v1.1",
     name: "kpk ETH Yield",
-    symbol: "kpk_ETH_Yield_Morpho",
+    symbol: "kpk_ETH_Yield",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       symbol: "WETH",
@@ -3835,7 +3835,7 @@ export default [
     id: "0x9178eBE0691593184c1D785a864B62a326cc3509",
     version: "v1.1",
     name: "kpk USDC Yield",
-    symbol: "kpk_USDC_Yield_Morpho",
+    symbol: "kpk_USDC_Yield",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -3964,8 +3964,8 @@ export default [
   {
     id: "0x2C793f5cB25B35A99648783c01E6cCCC200D2096",
     version: "v1.1",
-    name: "Exclusive Sentora PYUSD",
-    symbol: "senPYUSDethena",
+    name: "Sentora PYUSD Core",
+    symbol: "senPYUSDcore",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
       symbol: "PYUSD",
@@ -4054,8 +4054,8 @@ export default [
   {
     id: "0xCE341182ad323b9CB5aD45A60859dbc356dC3dDd",
     version: "v2",
-    name: "Alpha USDC Core",
-    symbol: "aUSDC+",
+    name: "zzzz",
+    symbol: "zzzz",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -4064,8 +4064,8 @@ export default [
   {
     id: "0xbB5ad5d522684de9dD3f545fa6D6ac5BBCA4710E",
     version: "v2",
-    name: "Alpha WETH Core",
-    symbol: "aWETH+",
+    name: "Alpha WETH Core V2",
+    symbol: "alphaWETHCoreV2",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       symbol: "WETH",
@@ -4344,8 +4344,8 @@ export default [
   {
     id: "0x4Ef53d2cAa51C447fdFEEedee8F07FD1962C9ee6",
     version: "v2",
-    name: "kpk USDC",
-    symbol: "kpk_USDC_v2",
+    name: "kpk USDC Prime V2",
+    symbol: "kpk_USDC_PrimeV2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -4354,8 +4354,8 @@ export default [
   {
     id: "0xa877D5bb0274dcCbA8556154A30E1Ca4021a275f",
     version: "v2",
-    name: "kpk EURC",
-    symbol: "kpk_EURC_v2",
+    name: "kpk EURC Yield V2",
+    symbol: "kpk_EURC_YieldV2",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
       symbol: "EURC",
@@ -4444,8 +4444,8 @@ export default [
   {
     id: "0x093272C07700d3cA5301C3Bf9B3A392624179E2F",
     version: "v2",
-    name: "Hyperithm Morpho USDC",
-    symbol: "hyperMorphoUSDC",
+    name: "Hyperithm USDC Degen",
+    symbol: "hyperUSDCd",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -4512,6 +4512,16 @@ export default [
     },
   },
   {
+    id: "0x5E5b30c5fD07da26d1e515dfEDb1D37C93417652",
+    version: "v2",
+    name: "SingularV USDC",
+    symbol: "svUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0xbeeff5d996F649eB9b35514610A5F660Da3d0684",
     version: "v2",
     name: "Steakhouse High Yield Term",
@@ -4534,8 +4544,8 @@ export default [
   {
     id: "0xBb50A5341368751024ddf33385BA8cf61fE65FF9",
     version: "v2",
-    name: "kpk ETH",
-    symbol: "kpk_WETH_v2",
+    name: "kpk ETH Prime V2",
+    symbol: "kpk_ETH_PrimeV2",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       symbol: "WETH",
@@ -4744,8 +4754,8 @@ export default [
   {
     id: "0xE571B648569619566CF6ce1060C97B621CB635D3",
     version: "v2",
-    name: "Gauntlet USDT Balanced",
-    symbol: "gtusdtb",
+    name: "Gauntlet USDT Frontier",
+    symbol: "gtusdcf",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
       symbol: "USDT",
@@ -5094,7 +5104,7 @@ export default [
   {
     id: "0xD5cCe260E7a755DDf0Fb9cdF06443d593AaeaA13",
     version: "v2",
-    name: "kpk USDC Yield",
+    name: "kpk USDC Yield V2",
     symbol: "kpk_USDC_YieldV2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -5104,7 +5114,7 @@ export default [
   {
     id: "0x5dbf760b4fd0cDdDe0366b33aEb338b2A6d77725",
     version: "v2",
-    name: "kpk ETH Yield",
+    name: "kpk ETH Yield V2",
     symbol: "kpk_ETH_YieldV2",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",

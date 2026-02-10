@@ -41,16 +41,16 @@ export default [
       "Chorus One is a trusted staking provider, offering secure and reliable services to individual and institutional stakers alike. Operating on 60+ blockchain networks, we're the choice of over 150,000 delegators worldwide, including leading institutions like BitGo, Ledger, and Hex Trust.\n\nKnown for our enterprise-grade infrastructure and research-driven approach, we've never been slashed and consistently strive to deliver the highest possible yields for our stakers.\n\nStake your GNO with confidence today. Learn more at chorus.one",
   },
   {
-    id: "0x33c346928ed9249cf1d5fc16ae32a8cffa1671ad",
-    name: "Axol.io",
-    description:
-      "Sustainable nodes for gnosis, ran by the LATAM team at Axol.io",
-  },
-  {
     id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
     name: "IP Stake",
     description:
       "I'm a Gnosis Chain solo operator based in Europe since January 2022. I run on-premises high availability setup with 99.9% uptime. I'm a verified nodeset.io operator since June 2024, a verified member of stakersunion.com and a Lido SimpleDVT module mainet operator since July 2024. Stake with me!",
+  },
+  {
+    id: "0x33c346928ed9249cf1d5fc16ae32a8cffa1671ad",
+    name: "Axol.io",
+    description:
+      "Sustainable nodes for gnosis, ran by the LATAM team at Axol.io",
   },
   {
     id: "0xe0a342ed4e0f0dbe97c4810534cfcb6550ea017d",
@@ -97,19 +97,9 @@ export default [
     description: "FCC GNO Liquid Staking Public Vault",
   },
   {
-    id: "0x44cc6c8229f1873660012ba36a040b89d83f2cf8",
-    name: "SLH",
-    description: null,
-  },
-  {
     id: "0x1f87105abbd23b49f2abf0995b21b52b97aacdc4",
     name: "AI IA Private Vault",
     description: null,
-  },
-  {
-    id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
-    name: "Wunode",
-    description: "Dappnode vault, fiber gigabit uplink, UPS",
   },
   {
     id: "0xe77141d0047691d4464fe1f3d3615ca10b74830b",
@@ -117,13 +107,13 @@ export default [
     description: "Stacked by the Chartreuse Node Crew",
   },
   {
+    id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
+    name: "Wunode",
+    description: "Dappnode vault, fiber gigabit uplink, UPS",
+  },
+  {
     id: "0x1f7e70d661279a8bb657417bbc71b82b948752b2",
     name: "Dappnode Test 2",
     description: null,
-  },
-  {
-    id: "0x2d3cac9c8645f9c9bc0e875359947ed38f817042",
-    name: "Pool Cherry Collective",
-    description: "1% Fee ",
   },
 ] as const

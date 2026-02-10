@@ -223,6 +223,31 @@ Repay borrowed `TARGET` tokens.
   | `rateMode`   | -                 |
   | `onBehalfOf` | equal to `AVATAR` |
 
+#### `PoolV3 · repay(bytes32)`
+
+Repay borrowed `TARGET` tokens.
+
+- **Contract:** `PoolV3`
+- **Function:** `repay(bytes32)`
+
+  | Parameter | Constraint                    |
+  | :-------- | :---------------------------- |
+  | `args`    | Scoped by assetId (see below) |
+
+<Callout type="info">
+  The `args` is a 32 bytes parameter, where the first 30 bytes represent
+  `amount`, and the last 2 bytes represent `assetId`. Only the last 2 bytes are
+  scoped to ensure the correct `assetId` is used.
+  <br />
+  For example:
+  `0x0000000000000000000000000000000000000000000000000000000f4240000c`.
+  <br />
+  &nbsp;&nbsp;`amount`: 1000000 (represented by
+  `0x0000000000000000000000000000000000000000000000000000000f4240`).
+  <br />
+  &nbsp;&nbsp;`assetId`: 12 (represented by `0x000c`).
+</Callout>
+
 ### Target: ETH
 
 For ETH as an element of `targets`, the following functions are allowed:
