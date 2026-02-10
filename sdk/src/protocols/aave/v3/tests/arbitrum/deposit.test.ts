@@ -79,7 +79,7 @@ describe("aaveV3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.poolV3.supply(
+        kit.asMember.aaveV3.poolV3["supply(address,uint256,address,uint16)"](
           contracts.arbitrumOne.weth,
           parseEther("1"),
           wallets.avatar,
@@ -88,7 +88,7 @@ describe("aaveV3", () => {
       ).not.toRevert()
 
       await expect(
-        kit.asMember.aaveV3.poolV3.supply(
+        kit.asMember.aaveV3.poolV3["supply(address,uint256,address,uint16)"](
           contracts.arbitrumOne.weth,
           parseEther("1"),
           wallets.member,
@@ -106,14 +106,14 @@ describe("aaveV3", () => {
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(
-          kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
+          kit.asMember.aaveV3.poolV3["setUserUseReserveAsCollateral(address,bool)"](
             contracts.arbitrumOne.weth,
             true
           )
         ).not.toRevert()
       } else {
         await expect(
-          kit.asMember.aaveV3.poolV3.setUserUseReserveAsCollateral(
+          kit.asMember.aaveV3.poolV3["setUserUseReserveAsCollateral(address,bool)"](
             contracts.arbitrumOne.weth,
             true
           )
