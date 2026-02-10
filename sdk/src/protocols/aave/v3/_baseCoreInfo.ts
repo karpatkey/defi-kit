@@ -155,4 +155,15 @@ export default [
     aTokenAddress: "0xbcFFB4B3beADc989Bd1458740952aF6EC8fBE431",
     variableDebtTokenAddress: "0x182cDEEC1D52ccad869d621bA422F449FA5809f5",
   },
+  {
+    symbol: "syrupUSDC",
+    token: "0x660975730059246A68521a3e2FBD4740173100f5",
+    usageAsCollateralEnabled: false,
+    borrowingEnabled: false,
+    stableBorrowRateEnabled: false,
+    isActive: true,
+    isFrozen: false,
+    aTokenAddress: "0xD7424238CcbE7b7198Ab3cFE232e0271E22da7bd",
+    variableDebtTokenAddress: "0x57B8C05ee2cD9d0143eBC21FBD9288C39B9F716c",
+  },
 ] as const

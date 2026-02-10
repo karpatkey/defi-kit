@@ -4,14 +4,15 @@ import { Callout } from "nextra/components"
 
 **Deployments**
 
-| Name        | Address                                                                                                               |
-| :---------- | :-------------------------------------------------------------------------------------------------------------------- |
-| `cUSDCv3`   | [0xc3d688B66703497DAA19211EEdff47f25384cdc3](https://etherscan.io/address/0xc3d688B66703497DAA19211EEdff47f25384cdc3) |
-| `cWETHv3`   | [0xA17581A9E3356d9A858b789D68B4d866e593aE94](https://etherscan.io/address/0xA17581A9E3356d9A858b789D68B4d866e593aE94) |
-| `cUSDTv3`   | [0x3Afdc9BCA9213A35503b077a6072F3D0d5AB0840](https://etherscan.io/address/0x3Afdc9BCA9213A35503b077a6072F3D0d5AB0840) |
-| `cWstETHv3` | [0x3D0bb1ccaB520A66e607822fC55BC921738fAFE3](https://etherscan.io/address/0x3D0bb1ccaB520A66e607822fC55BC921738fAFE3) |
-| `cUSDSv3`   | [0x5d409e56d886231adaf00c8775665ad0f9897b56](https://etherscan.io/address/0x5d409e56d886231adaf00c8775665ad0f9897b56) |
-| `cWBTCv3`   | [0xe85Dc543813B8c2CFEaAc371517b925a166a9293](https://etherscan.io/address/0xe85Dc543813B8c2CFEaAc371517b925a166a9293) |
+| Name           | Address                                                                                                               |
+| :------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| `cUSDCv3`      | [0xc3d688B66703497DAA19211EEdff47f25384cdc3](https://etherscan.io/address/0xc3d688B66703497DAA19211EEdff47f25384cdc3) |
+| `cWETHv3`      | [0xA17581A9E3356d9A858b789D68B4d866e593aE94](https://etherscan.io/address/0xA17581A9E3356d9A858b789D68B4d866e593aE94) |
+| `cUSDTv3`      | [0x3Afdc9BCA9213A35503b077a6072F3D0d5AB0840](https://etherscan.io/address/0x3Afdc9BCA9213A35503b077a6072F3D0d5AB0840) |
+| `cWstETHv3`    | [0x3D0bb1ccaB520A66e607822fC55BC921738fAFE3](https://etherscan.io/address/0x3D0bb1ccaB520A66e607822fC55BC921738fAFE3) |
+| `cUSDSv3`      | [0x5d409e56d886231adaf00c8775665ad0f9897b56](https://etherscan.io/address/0x5d409e56d886231adaf00c8775665ad0f9897b56) |
+| `cWBTCv3`      | [0xe85Dc543813B8c2CFEaAc371517b925a166a9293](https://etherscan.io/address/0xe85Dc543813B8c2CFEaAc371517b925a166a9293) |
+| `CometRewards` | [0x1B0e765F6224C21223AeA2af16c1C46E38885a40](https://etherscan.io/address/0x1B0e765F6224C21223AeA2af16c1C46E38885a40) |
 
 <Callout type="warning">
   **ETH is not supported directly through DeFi Kit actions**
@@ -82,6 +83,21 @@ Unwrap `WETH` and receive ETH tokens.
   | :-------- | :--------- |
   | `wad`     | -          |
 
+  claim(address comet, address src, bool shouldAccrue)
+
+#### `CometRewards · claim`
+
+Claim rewards.
+
+- **Contract:** `CometRewards`
+- **Function:** `claim(address,address,bool)`
+
+  | Parameter      | Constraint              |
+  | :------------- | :---------------------- |
+  | `comet`        | equal to `TARGET_COMET` |
+  | `src`          | equal to `AVATAR`       |
+  | `shouldAccrue` | -                       |
+
 ### `TARGET_COMET · supply`
 
 Deposit `TOKEN` tokens into the corresponding `TARGET_COMET`.
@@ -105,6 +121,19 @@ Withdraw `TOKEN` tokens from the corresponding `TARGET_COMET`.
   | :-------- | :--------------- |
   | `asset`   | equal to `TOKEN` |
   | `amount`  | -                |
+
+### `CometRewards · claim`
+
+Claim rewards.
+
+- **Contract:** `CometRewards`
+- **Function:** `claim(address,address,bool)`
+
+  | Parameter      | Constraint              |
+  | :------------- | :---------------------- |
+  | `comet`        | equal to `TARGET_COMET` |
+  | `src`          | equal to `AVATAR`       |
+  | `shouldAccrue` | -                       |
 
 ## Action: `borrow`
 

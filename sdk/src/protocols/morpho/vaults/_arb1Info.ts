@@ -555,7 +555,7 @@ export default [
     id: "0x2C609d9CfC9dda2dB5C128B2a665D921ec53579d",
     version: "v1.1",
     name: "kpk USDC Yield",
-    symbol: "kpk_USDC_Yield_Morpho",
+    symbol: "kpk_USDC_Yield",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
       symbol: "USDC",
@@ -1462,6 +1462,16 @@ export default [
     },
   },
   {
+    id: "0x670C270A27f64Ece248dE8055fA8A3eEF4D56C96",
+    version: "v2",
+    name: "Blend xChain USDC",
+    symbol: "blend-xchain-usdc",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0x6A4e8a3119170F1E97BDC0fBF115D67f83E40560",
     version: "v2",
     name: "Blend USDC/​EURe",
@@ -1564,8 +1574,8 @@ export default [
   {
     id: "0x9a37fFD04d980f34819eae4fD99420dA590e86C0",
     version: "v2",
-    name: "VaultTest",
-    symbol: "VT",
+    name: "K3 High Yield USDC",
+    symbol: "k3hyUSDC",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
       symbol: "USDC",

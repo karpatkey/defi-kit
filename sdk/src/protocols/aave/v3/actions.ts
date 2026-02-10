@@ -259,7 +259,7 @@ export const borrowToken = (
 ) => {
   const { poolV3 } = _getAllAddresses(chain, market)
 
-  return [
+  const permissions: Permission[] = [
     ...allowErc20Approve([token.token], [poolV3]),
     {
       ...allow.mainnet.aaveV3.poolCoreV3.borrow(
@@ -281,6 +281,23 @@ export const borrowToken = (
       targetAddress: poolV3,
     },
   ]
+
+  if (chain === Chain.arb1 || chain === Chain.oeth) {
+    const assetId = _getAssetId(chain, token)
+
+    permissions.push({
+      ...allow.arbitrumOne.aaveV3.poolV3["repay(bytes32)"](
+        c.bitmask({
+          shift: 30,
+          mask: "0xffff",
+          value: assetId,
+        })
+      ),
+      targetAddress: poolV3,
+    })
+  }
+
+  return permissions
 }
 
 export const borrowEther = (chain: Chain, market: string = "Core") => {
