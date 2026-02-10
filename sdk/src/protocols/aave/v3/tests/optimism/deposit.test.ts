@@ -106,17 +106,15 @@ describe("aaveV3", () => {
       console.log("is collateralizable: ", collateralizable)
       if (collateralizable) {
         await expect(
-          kit.asMember.aaveV3.poolV3["setUserUseReserveAsCollateral(address,bool)"](
-            contracts.optimism.weth,
-            true
-          )
+          kit.asMember.aaveV3.poolV3[
+            "setUserUseReserveAsCollateral(address,bool)"
+          ](contracts.optimism.weth, true)
         ).not.toRevert()
       } else {
         await expect(
-          kit.asMember.aaveV3.poolV3["setUserUseReserveAsCollateral(address,bool)"](
-            contracts.optimism.weth,
-            true
-          )
+          kit.asMember.aaveV3.poolV3[
+            "setUserUseReserveAsCollateral(address,bool)"
+          ](contracts.optimism.weth, true)
         ).toRevert()
       }
     })
