@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.4](https://github.com/karpatkey/defi-kit/compare/v2.26.3...v2.26.4) (2026-02-10)
+
+
+### Bug Fixes
+
+* Aave v3 repay arb1 and oeth / docs ([#517](https://github.com/karpatkey/defi-kit/issues/517)) ([21288db](https://github.com/karpatkey/defi-kit/commit/21288dbe42e9ce15abe20dcaf3b8637d6c3853ee))
+
 ## [2.26.3](https://github.com/karpatkey/defi-kit/compare/v2.26.2...v2.26.3) (2026-01-15)
 
 
