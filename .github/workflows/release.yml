@@ -18,6 +18,7 @@ jobs:
         with:
           release-type: node
           path: sdk
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
       - uses: actions/checkout@v4
         # ensure that a publication only occurs when a new release is created:
         if: ${{ steps.release.outputs.releases_created }}
