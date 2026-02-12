@@ -201,6 +201,10 @@ export default [
         address: "0x15700B564Ca08D9439C58cA5053166E8317aa138",
         symbol: "deUSD",
       },
+      {
+        address: "0x68749665FF8D2d112Fa859AA293F07A622782F38",
+        symbol: "XAUt",
+      },
     ],
   },
   {
