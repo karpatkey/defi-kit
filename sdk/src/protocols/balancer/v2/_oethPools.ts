@@ -180,47 +180,6 @@ export default [
     ],
   },
   {
-    bpt: "0x7Ef99013E446dDCe2486b8E04735b7019a115e6F",
-    id: "0x7ef99013e446ddce2486b8e04735b7019a115e6f000100000000000000000005",
-    name: "BPT-8TRACK",
-    type: "Weighted",
-    gauge: "0xCf69061C06e57AE8f284e6d2EE0E889BD671Ab10",
-    tokens: [
-      {
-        address: "0x4200000000000000000000000000000000000042",
-        symbol: "OP",
-      },
-      {
-        address: "0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb",
-        symbol: "LYRA",
-      },
-      {
-        address: "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
-        symbol: "USDC",
-      },
-      {
-        address: "0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4",
-        symbol: "SNX",
-      },
-      {
-        address: "0x8c6f28f2F1A3C87F0f938b96d27520d9751ec8d9",
-        symbol: "sUSD",
-      },
-      {
-        address: "0x97513e975a7fA9072c72C92d8000B0dB90b163c5",
-        symbol: "BEETS",
-      },
-      {
-        address: "0x9e1028F5F1D5eDE59748FFceE5532509976840E0",
-        symbol: "PERP",
-      },
-      {
-        address: "0xFE8B128bA8C78aabC59d4c64cEE7fF28e9379921",
-        symbol: "BAL",
-      },
-    ],
-  },
-  {
     bpt: "0x8BB826Afc0fF7d2c034a2883F4C461ffD238E1C3",
     id: "0x8bb826afc0ff7d2c034a2883f4c461ffd238e1c300020000000000000000012b",
     name: "RSB",

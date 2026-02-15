@@ -1367,6 +1367,21 @@ export default [
     },
   },
   {
+    id: "0xeb944e6b3d71a7bc918e9ba606911102c86d7b512a14ab123a0bd74b0ddeb66d",
+    name: "cLOAN / cCOLL",
+    irm: "0x46415998764C29aB2a25CbeA6254146D50D22687",
+    lltv: "980000000000000000",
+    oracle: "0x7322d1b8b430abb3ad9b97D5E13b72CF90c85B98",
+    loanToken: {
+      address: "0x90F1fC97076B138f5D4D3F6b9951e1BC8eeF9569",
+      symbol: "cLOAN",
+    },
+    collateralToken: {
+      address: "0x4A32ef8D04e04a25AC14Faa5a3d161E772636afd",
+      symbol: "cCOLL",
+    },
+  },
+  {
     id: "0xeb7c6b329734bd3699ce8f6fb2afb07ac099d2e052b1c028b06469c58ba74c5d",
     name: "cbBTC / GMORPHO",
     irm: "0x46415998764C29aB2a25CbeA6254146D50D22687",
@@ -4937,6 +4952,21 @@ export default [
     },
   },
   {
+    id: "0xb3a899a4c4aa5d07a9371841f4c9e2e0a6c24359828463d8dcecf858b6e8e804",
+    name: "cLOAN / cCOLL",
+    irm: "0x46415998764C29aB2a25CbeA6254146D50D22687",
+    lltv: "980000000000000000",
+    oracle: "0x76c97BC66731ae261A51bF93D342915049D0c83a",
+    loanToken: {
+      address: "0x317E13CaF107FAD5B689c71418FD3E5A151a256f",
+      symbol: "cLOAN",
+    },
+    collateralToken: {
+      address: "0xF3504EBCC32F2F009778434218c40B61Df967ec1",
+      symbol: "cCOLL",
+    },
+  },
+  {
     id: "0xb3920b96dec75b6a1144b71f963f30236fb200f3e33e93c2e9c0d222c1fa53c2",
     name: "USDC / stkWELL",
     irm: "0x46415998764C29aB2a25CbeA6254146D50D22687",
@@ -7907,6 +7937,21 @@ export default [
     },
   },
   {
+    id: "0x882da612acf6255da05bc12fe39fd5d99d281731d90dda957a69b025955a7cf7",
+    name: "USDC / CLAWNCH",
+    irm: "0x46415998764C29aB2a25CbeA6254146D50D22687",
+    lltv: "770000000000000000",
+    oracle: "0xCB2E29718B2fdcfA887b62Cc20CEE769816f986b",
+    loanToken: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xa1F72459dfA10BAD200Ac160eCd78C6b77a747be",
+      symbol: "CLAWNCH",
+    },
+  },
+  {
     id: "0x87ff0aad672898c24411f98555f958e232c048f41e6d3f2059d26c13fad07563",
     name: "USDC / wstETH",
     irm: "0x46415998764C29aB2a25CbeA6254146D50D22687",
@@ -8474,6 +8519,21 @@ export default [
     collateralToken: {
       address: "0xDa1C2c3C8FaD503662e41E324FC644Dc2c5e0CCD",
       symbol: "GMORPHO",
+    },
+  },
+  {
+    id: "0x7f91ddb1b3f5637b7569ff6a29e4fece97a4dd091682d9fe48126ae84786ce05",
+    name: "cLOAN / cCOLL",
+    irm: "0x46415998764C29aB2a25CbeA6254146D50D22687",
+    lltv: "980000000000000000",
+    oracle: "0xB6EDaE7B5AEc56f418820d7b2FB690793017e2Ef",
+    loanToken: {
+      address: "0x621C06767CeAd282ae688b41dC76D17EB7385A2d",
+      symbol: "cLOAN",
+    },
+    collateralToken: {
+      address: "0x935Ed723A398F124815935eb10D9249271C6Ae0C",
+      symbol: "cCOLL",
     },
   },
   {
@@ -15509,6 +15569,21 @@ export default [
     collateralToken: {
       address: "0xDa1C2c3C8FaD503662e41E324FC644Dc2c5e0CCD",
       symbol: "GMORPHO",
+    },
+  },
+  {
+    id: "0x171f622a589c6e42cca285390204fe0cd24fbbce2c5f356b8567901c1ce4b3cf",
+    name: "cLOAN / cCOLL",
+    irm: "0x46415998764C29aB2a25CbeA6254146D50D22687",
+    lltv: "980000000000000000",
+    oracle: "0x6b13a8d244D3FC665c78a6D2e91fA31D1e52A5AE",
+    loanToken: {
+      address: "0xe8B89f75C757921654182088503501541AaA7F5c",
+      symbol: "cLOAN",
+    },
+    collateralToken: {
+      address: "0xCb4816D96841697F87cb628374225E4eE7889817",
+      symbol: "cCOLL",
     },
   },
   {

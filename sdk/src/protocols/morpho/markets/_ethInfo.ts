@@ -92,21 +92,6 @@ export default [
     },
   },
   {
-    id: "0x37e7484d642d90f14451f1910ba4b7b8e4c3ccdd0ec28f8b2bdb35479e472ba7",
-    name: "WETH / weETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "945000000000000000",
-    oracle: "0xbDd2F2D473E8D63d1BFb0185B5bDB8046ca48a72",
-    loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
-    },
-    collateralToken: {
-      address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
-      symbol: "weETH",
-    },
-  },
-  {
     id: "0x3274643db77a064abd3bc851de77556a4ad2e2f502f4f0c80845fa8f909ecf0b",
     name: "USDT / sUSDS",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -119,6 +104,21 @@ export default [
     collateralToken: {
       address: "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
       symbol: "sUSDS",
+    },
+  },
+  {
+    id: "0x37e7484d642d90f14451f1910ba4b7b8e4c3ccdd0ec28f8b2bdb35479e472ba7",
+    name: "WETH / weETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "945000000000000000",
+    oracle: "0xbDd2F2D473E8D63d1BFb0185B5bDB8046ca48a72",
+    loanToken: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+    collateralToken: {
+      address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+      symbol: "weETH",
     },
   },
   {
@@ -167,21 +167,6 @@ export default [
     },
   },
   {
-    id: "0xe83d72fa5b00dcd46d9e0e860d95aa540d5ec106da5833108a9f826f21f36f52",
-    name: "USDC / AA_FalconXUSDC",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "770000000000000000",
-    oracle: "0x52eA2C12734B5bB61e1edf52Bb0f01D9206493Fc",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0xC26A6Fa2C37b38E549a4a1807543801Db684f99C",
-      symbol: "AA_FalconXUSDC",
-    },
-  },
-  {
     id: "0x9bc98c2f20ac58287ef2c860eea53a2fdc27c17a7817ff1206c0b7840cc7cd79",
     name: "USDC / PT-reUSD-25JUN2026",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -209,6 +194,21 @@ export default [
     collateralToken: {
       address: "0x8236a87084f8B84306f72007F36F2618A5634494",
       symbol: "LBTC",
+    },
+  },
+  {
+    id: "0xe83d72fa5b00dcd46d9e0e860d95aa540d5ec106da5833108a9f826f21f36f52",
+    name: "USDC / AA_FalconXUSDC",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "770000000000000000",
+    oracle: "0x52eA2C12734B5bB61e1edf52Bb0f01D9206493Fc",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xC26A6Fa2C37b38E549a4a1807543801Db684f99C",
+      symbol: "AA_FalconXUSDC",
     },
   },
   {
@@ -257,21 +257,6 @@ export default [
     },
   },
   {
-    id: "0xeb17955ea422baeddbfb0b8d8c9086c5be7a9cfdefb292119a102e981a30062e",
-    name: "USDC / stcUSD",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x8E3386B2f6084eB1B0988070c3d826995BD175c0",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x88887bE419578051FF9F4eb6C858A951921D8888",
-      symbol: "stcUSD",
-    },
-  },
-  {
     id: "0x88a18b2f4d94e7ad27a381b15531c06abf05a7c99dd5d3c3679875fed6f7e742",
     name: "USDtb / sUSDe",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -287,18 +272,18 @@ export default [
     },
   },
   {
-    id: "0xa4774e3e693fff2ebd1dcbbd69b1b0a5b9bb0ccc753bfda5dd07bdac97c4818a",
-    name: "USDT / syrupUSDT",
+    id: "0xeb17955ea422baeddbfb0b8d8c9086c5be7a9cfdefb292119a102e981a30062e",
+    name: "USDC / stcUSD",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
     lltv: "915000000000000000",
-    oracle: "0x34e50151c21c5f3499AcE66c7157aA547892e997",
+    oracle: "0x8E3386B2f6084eB1B0988070c3d826995BD175c0",
     loanToken: {
-      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT",
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
     },
     collateralToken: {
-      address: "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
-      symbol: "syrupUSDT",
+      address: "0x88887bE419578051FF9F4eb6C858A951921D8888",
+      symbol: "stcUSD",
     },
   },
   {
@@ -317,6 +302,21 @@ export default [
     },
   },
   {
+    id: "0xa4774e3e693fff2ebd1dcbbd69b1b0a5b9bb0ccc753bfda5dd07bdac97c4818a",
+    name: "USDT / syrupUSDT",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x34e50151c21c5f3499AcE66c7157aA547892e997",
+    loanToken: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+    collateralToken: {
+      address: "0x356B8d89c1e1239Cbbb9dE4815c39A1474d5BA7D",
+      symbol: "syrupUSDT",
+    },
+  },
+  {
     id: "0xff527fe9c6516f9d82a3d51422ccb031d123266e6e26d4c22c942a948c180a75",
     name: "EURC / WBTC",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -332,21 +332,6 @@ export default [
     },
   },
   {
-    id: "0xef2c308b5abecf5c8750a1aa82b47c558005feb7a03f4f8e1ad682d71ac8d0ba",
-    name: "USDC / mF-ONE",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x0cB1928EcA8783F05a07D9Ae2AfB33f38BFBEb78",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x238a700eD6165261Cf8b2e544ba797BC11e466Ba",
-      symbol: "mF-ONE",
-    },
-  },
-  {
     id: "0xa9f70093360419b4544f17a4553ac5847d896be23f020295bd95c24af4df700e",
     name: "USDT / wsrUSD",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -359,6 +344,21 @@ export default [
     collateralToken: {
       address: "0xd3fD63209FA2D55B07A0f6db36C2f43900be3094",
       symbol: "wsrUSD",
+    },
+  },
+  {
+    id: "0xef2c308b5abecf5c8750a1aa82b47c558005feb7a03f4f8e1ad682d71ac8d0ba",
+    name: "USDC / mF-ONE",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x0cB1928EcA8783F05a07D9Ae2AfB33f38BFBEb78",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x238a700eD6165261Cf8b2e544ba797BC11e466Ba",
+      symbol: "mF-ONE",
     },
   },
   {
@@ -437,21 +437,6 @@ export default [
     },
   },
   {
-    id: "0xe1b65304edd8ceaea9b629df4c3c926a37d1216e27900505c04f14b2ed279f33",
-    name: "USDC / RLP",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x19018450A02bC5c1994eaD517498311f64B2626a",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x4956b52aE2fF65D74CA2d61207523288e4528f96",
-      symbol: "RLP",
-    },
-  },
-  {
     id: "0x5f8a138ba332398a9116910f4d5e5dcd9b207024c5290ce5bc87bc2dbd8e4a86",
     name: "WETH / ETH+",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -464,6 +449,21 @@ export default [
     collateralToken: {
       address: "0xE72B141DF173b999AE7c1aDcbF60Cc9833Ce56a8",
       symbol: "ETH+",
+    },
+  },
+  {
+    id: "0x8924445a76b678c536df977ed9222fb0b23ee5311497dd0223fe6270bb20b4e6",
+    name: "USDC / sUSN",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0xC415Cc3F04F9074A9562aEEe02591e65D39A94aa",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xE24a3DC889621612422A64E6388927901608B91D",
+      symbol: "sUSN",
     },
   },
   {
@@ -497,36 +497,6 @@ export default [
     },
   },
   {
-    id: "0xb7843fe78e7e7fd3106a1b939645367967d1f986c2e45edb8932ad1896450877",
-    name: "USDT / XAUt",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "770000000000000000",
-    oracle: "0xc7d1FE3fBe90e8f755250CA3Ce4d2aE50873d9dc",
-    loanToken: {
-      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT",
-    },
-    collateralToken: {
-      address: "0x68749665FF8D2d112Fa859AA293F07A622782F38",
-      symbol: "XAUt",
-    },
-  },
-  {
-    id: "0xf4e9fb49e95a34320aea8b5e0ef515391a72368c39bdcf8ad8910645fd6eab97",
-    name: "USDC / syzUSD",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x0604084149dCB25a1739899624333D69dB1A507e",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x6DFF69eb720986E98Bb3E8b26cb9E02Ec1a35D12",
-      symbol: "syzUSD",
-    },
-  },
-  {
     id: "0xd0e50cdac92fe2172043f5e0c36532c6369d24947e40968f34a5e8819ca9ec5d",
     name: "WETH / wstETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -539,6 +509,21 @@ export default [
     collateralToken: {
       address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       symbol: "wstETH",
+    },
+  },
+  {
+    id: "0xb7843fe78e7e7fd3106a1b939645367967d1f986c2e45edb8932ad1896450877",
+    name: "USDT / XAUt",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "770000000000000000",
+    oracle: "0xc7d1FE3fBe90e8f755250CA3Ce4d2aE50873d9dc",
+    loanToken: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+    collateralToken: {
+      address: "0x68749665FF8D2d112Fa859AA293F07A622782F38",
+      symbol: "XAUt",
     },
   },
   {
@@ -572,18 +557,18 @@ export default [
     },
   },
   {
-    id: "0x8924445a76b678c536df977ed9222fb0b23ee5311497dd0223fe6270bb20b4e6",
-    name: "USDC / sUSN",
+    id: "0xf4e9fb49e95a34320aea8b5e0ef515391a72368c39bdcf8ad8910645fd6eab97",
+    name: "USDC / syzUSD",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0xC415Cc3F04F9074A9562aEEe02591e65D39A94aa",
+    lltv: "915000000000000000",
+    oracle: "0x0604084149dCB25a1739899624333D69dB1A507e",
     loanToken: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
     },
     collateralToken: {
-      address: "0xE24a3DC889621612422A64E6388927901608B91D",
-      symbol: "sUSN",
+      address: "0x6DFF69eb720986E98Bb3E8b26cb9E02Ec1a35D12",
+      symbol: "syzUSD",
     },
   },
   {
@@ -632,21 +617,6 @@ export default [
     },
   },
   {
-    id: "0xbf02d6c6852fa0b8247d5514d0c91e6c1fbde9a168ac3fd2033028b5ee5ce6d0",
-    name: "USDC / LBTC",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0xDCc04fFaCD7B49035cCdBbbA59a5f955944129DB",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x8236a87084f8B84306f72007F36F2618A5634494",
-      symbol: "LBTC",
-    },
-  },
-  {
     id: "0x95c28d447950ca6c8bbfd25fc05b80b1fd7a1cdd17a3610b4b3f1ffc8dc2e2ed",
     name: "USDC / mHYPER",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -659,6 +629,36 @@ export default [
     collateralToken: {
       address: "0x9b5528528656DBC094765E2abB79F293c21191B9",
       symbol: "mHYPER",
+    },
+  },
+  {
+    id: "0xe1b65304edd8ceaea9b629df4c3c926a37d1216e27900505c04f14b2ed279f33",
+    name: "USDC / RLP",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x19018450A02bC5c1994eaD517498311f64B2626a",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x4956b52aE2fF65D74CA2d61207523288e4528f96",
+      symbol: "RLP",
+    },
+  },
+  {
+    id: "0xbf02d6c6852fa0b8247d5514d0c91e6c1fbde9a168ac3fd2033028b5ee5ce6d0",
+    name: "USDC / LBTC",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0xDCc04fFaCD7B49035cCdBbbA59a5f955944129DB",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x8236a87084f8B84306f72007F36F2618A5634494",
+      symbol: "LBTC",
     },
   },
   {
@@ -707,6 +707,21 @@ export default [
     },
   },
   {
+    id: "0x3c16c2d107caade490b1d513ccc54cbd06a30f20ad6a9aaad8c744413872514a",
+    name: "wstETH / ynETHx",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xB1E676190A86DA2Cb99afD0496538ABe1D4C164D",
+    loanToken: {
+      address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      symbol: "wstETH",
+    },
+    collateralToken: {
+      address: "0x657d9ABA1DBb59e53f9F3eCAA878447dCfC96dCb",
+      symbol: "ynETHx",
+    },
+  },
+  {
     id: "0x031c7333014af51e4fd18031d14e4eaada58348cde3f6dc6ea8cca16f7387fb2",
     name: "USDC / mAPOLLO",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -734,21 +749,6 @@ export default [
     collateralToken: {
       address: "0x80E1048eDE66ec4c364b4F22C8768fc657FF6A42",
       symbol: "upUSDC",
-    },
-  },
-  {
-    id: "0x3c16c2d107caade490b1d513ccc54cbd06a30f20ad6a9aaad8c744413872514a",
-    name: "wstETH / ynETHx",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0xB1E676190A86DA2Cb99afD0496538ABe1D4C164D",
-    loanToken: {
-      address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      symbol: "wstETH",
-    },
-    collateralToken: {
-      address: "0x657d9ABA1DBb59e53f9F3eCAA878447dCfC96dCb",
-      symbol: "ynETHx",
     },
   },
   {
@@ -812,18 +812,18 @@ export default [
     },
   },
   {
-    id: "0xb8fef900b383db2dbbf4458c7f46acf5b140f26d603a6d1829963f241b82510e",
-    name: "USDC / OETH",
+    id: "0xe07d416323a1afbfe0bf2fe27ffb549ff565cf5c86d21b79fc60664038e597c9",
+    name: "USDC / savUSD",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0xE8aDfF9117151fb5ad7313873780b87cC56EEDB0",
+    lltv: "915000000000000000",
+    oracle: "0x839940de5043e7c6eDaf063714AFe7F20De5ff12",
     loanToken: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
     },
     collateralToken: {
-      address: "0x856c4Efb76C1D1AE02e20CEB03A2A6a08b0b8dC3",
-      symbol: "OETH",
+      address: "0xb8D89678E75a973E74698c976716308abB8a46A4",
+      symbol: "savUSD",
     },
   },
   {
@@ -842,18 +842,18 @@ export default [
     },
   },
   {
-    id: "0xe07d416323a1afbfe0bf2fe27ffb549ff565cf5c86d21b79fc60664038e597c9",
-    name: "USDC / savUSD",
+    id: "0xb8fef900b383db2dbbf4458c7f46acf5b140f26d603a6d1829963f241b82510e",
+    name: "USDC / OETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x839940de5043e7c6eDaf063714AFe7F20De5ff12",
+    lltv: "860000000000000000",
+    oracle: "0xE8aDfF9117151fb5ad7313873780b87cC56EEDB0",
     loanToken: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
     },
     collateralToken: {
-      address: "0xb8D89678E75a973E74698c976716308abB8a46A4",
-      symbol: "savUSD",
+      address: "0x856c4Efb76C1D1AE02e20CEB03A2A6a08b0b8dC3",
+      symbol: "OETH",
     },
   },
   {
@@ -902,18 +902,18 @@ export default [
     },
   },
   {
-    id: "0x0a834fe24f42cf9cbf0644926c5637a9da42dbfae8c4c4ca0c2f2d9c712896d3",
-    name: "USDC / wbravUSDC",
+    id: "0xd98cd88ae5b336086b39fb1d62ba6171282e946105b010143f0e89f8fe7cff36",
+    name: "WETH / savETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x6BAC818dF5654eA824cE723de51d7C7d9fD2f4FF",
+    lltv: "915000000000000000",
+    oracle: "0x943da86D8686f86F0b3b43fF78A92AAE1A6Ed3a7",
     loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
     },
     collateralToken: {
-      address: "0x7309E1E2e74af170c69bdE8FCB30397f8697D5FF",
-      symbol: "wbravUSDC",
+      address: "0xDA06eE2dACF9245Aa80072a4407deBDea0D7e341",
+      symbol: "savETH",
     },
   },
   {
@@ -947,18 +947,18 @@ export default [
     },
   },
   {
-    id: "0xd98cd88ae5b336086b39fb1d62ba6171282e946105b010143f0e89f8fe7cff36",
-    name: "WETH / savETH",
+    id: "0x0a834fe24f42cf9cbf0644926c5637a9da42dbfae8c4c4ca0c2f2d9c712896d3",
+    name: "USDC / wbravUSDC",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x943da86D8686f86F0b3b43fF78A92AAE1A6Ed3a7",
+    lltv: "860000000000000000",
+    oracle: "0x6BAC818dF5654eA824cE723de51d7C7d9fD2f4FF",
     loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
     },
     collateralToken: {
-      address: "0xDA06eE2dACF9245Aa80072a4407deBDea0D7e341",
-      symbol: "savETH",
+      address: "0x7309E1E2e74af170c69bdE8FCB30397f8697D5FF",
+      symbol: "wbravUSDC",
     },
   },
   {
@@ -974,21 +974,6 @@ export default [
     collateralToken: {
       address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
       symbol: "rsETH",
-    },
-  },
-  {
-    id: "0x54cebd0c5d5ad84f551a883991c39c470e081a20452eaef47eec2377ffae9f98",
-    name: "USDC / jrUSDe",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0xfDB578391A7807891bb03BeA590d2C2409F771A2",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0xC58D044404d8B14e953C115E67823784dEA53d8F",
-      symbol: "jrUSDe",
     },
   },
   {
@@ -1022,63 +1007,18 @@ export default [
     },
   },
   {
-    id: "0x9b966d26e14749cdf3be6fcf44ef404f1428b3c2f8c9e9a5172437e440597715",
-    name: "USDC / COMP",
+    id: "0x54cebd0c5d5ad84f551a883991c39c470e081a20452eaef47eec2377ffae9f98",
+    name: "USDC / jrUSDe",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "625000000000000000",
-    oracle: "0x1e96338CBF45c0432C22A40729335050a9855F53",
+    lltv: "915000000000000000",
+    oracle: "0xfDB578391A7807891bb03BeA590d2C2409F771A2",
     loanToken: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
     },
     collateralToken: {
-      address: "0xc00e94Cb662C3520282E6f5717214004A7f26888",
-      symbol: "COMP",
-    },
-  },
-  {
-    id: "0x7e1c2cc61cc013e9c6b4c0c9e5be0bddf95d2f4de64e4adc05665b0389c95bc4",
-    name: "USDC / n-st-mAPOLLO",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x091356E6793a0d960174eaAb4d470E39A99DD673",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x091356E6793a0d960174eaAb4d470E39A99DD673",
-      symbol: "n-st-mAPOLLO",
-    },
-  },
-  {
-    id: "0xa0534c78620867b7c8706e3b6df9e69a2bc67c783281b7a77e034ed75cee012e",
-    name: "WETH / ezETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "945000000000000000",
-    oracle: "0x94f93f1eADb8a2f73C415AD4C19cB791e6D0192b",
-    loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
-    },
-    collateralToken: {
-      address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
-      symbol: "ezETH",
-    },
-  },
-  {
-    id: "0x1cfdc0154ae6b9f1887a8250f2582d55606e1a2008e65108fb83dd50a928593e",
-    name: "USDC / PT-RLP-9APR2026",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x89C3Dd5E0c78136EfE412e57CC05A7835EF9F501",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x29fD7180E5cCEd14Ad148c7997e6B6857a8BE86e",
-      symbol: "PT-RLP-9APR2026",
+      address: "0xC58D044404d8B14e953C115E67823784dEA53d8F",
+      symbol: "jrUSDe",
     },
   },
   {
@@ -1097,18 +1037,33 @@ export default [
     },
   },
   {
-    id: "0x66c19b7c49ce674e964eb917d117d987b693f508f2c1e3f71ac914454ed42e13",
-    name: "WETH / savETH",
+    id: "0x7e1c2cc61cc013e9c6b4c0c9e5be0bddf95d2f4de64e4adc05665b0389c95bc4",
+    name: "USDC / n-st-mAPOLLO",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "945000000000000000",
-    oracle: "0xa11B7867be57105beFF6f16b295b28B08eb808EB",
+    lltv: "860000000000000000",
+    oracle: "0x091356E6793a0d960174eaAb4d470E39A99DD673",
     loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
     },
     collateralToken: {
-      address: "0xDA06eE2dACF9245Aa80072a4407deBDea0D7e341",
-      symbol: "savETH",
+      address: "0x091356E6793a0d960174eaAb4d470E39A99DD673",
+      symbol: "n-st-mAPOLLO",
+    },
+  },
+  {
+    id: "0x1cfdc0154ae6b9f1887a8250f2582d55606e1a2008e65108fb83dd50a928593e",
+    name: "USDC / PT-RLP-9APR2026",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x89C3Dd5E0c78136EfE412e57CC05A7835EF9F501",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x29fD7180E5cCEd14Ad148c7997e6B6857a8BE86e",
+      symbol: "PT-RLP-9APR2026",
     },
   },
   {
@@ -1127,18 +1082,33 @@ export default [
     },
   },
   {
-    id: "0xfb8315a8e5a80db41a33bb9f7d9eaf14e2110c1f2aebdba16383c07c19dc6e28",
-    name: "USDT / thBILL",
+    id: "0xe4cfbee9af4ad713b41bf79f009ca02b17c001a0c0e7bd2e6a89b1111b3d3f08",
+    name: "USDC / tBTC",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "945000000000000000",
-    oracle: "0x6d6cfa81bAcFC16b1cB9Ad2B0003A8158d188b3e",
+    lltv: "770000000000000000",
+    oracle: "0x57bfdF6aB73995C5af58A95A16798190e366CA5b",
     loanToken: {
-      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT",
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
     },
     collateralToken: {
-      address: "0x5FA487BCa6158c64046B2813623e20755091DA0b",
-      symbol: "thBILL",
+      address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
+      symbol: "tBTC",
+    },
+  },
+  {
+    id: "0x79b4e55cef9e7c214b5cc965e1984229ada26a66051e35366a75c4d92b776735",
+    name: "USDC / PT-srUSDe-15JAN2026",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x2A0326538eF89BA50d532Aa061baDCb5C87E1e8e",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x1Fb3C5c35D95F48e48FFC8e36bCCe5CB5f29F57c",
+      symbol: "PT-srUSDe-15JAN2026",
     },
   },
   {
@@ -1172,36 +1142,6 @@ export default [
     },
   },
   {
-    id: "0x79b4e55cef9e7c214b5cc965e1984229ada26a66051e35366a75c4d92b776735",
-    name: "USDC / PT-srUSDe-15JAN2026",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x2A0326538eF89BA50d532Aa061baDCb5C87E1e8e",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x1Fb3C5c35D95F48e48FFC8e36bCCe5CB5f29F57c",
-      symbol: "PT-srUSDe-15JAN2026",
-    },
-  },
-  {
-    id: "0xe4cfbee9af4ad713b41bf79f009ca02b17c001a0c0e7bd2e6a89b1111b3d3f08",
-    name: "USDC / tBTC",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "770000000000000000",
-    oracle: "0x57bfdF6aB73995C5af58A95A16798190e366CA5b",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
-      symbol: "tBTC",
-    },
-  },
-  {
     id: "0xeea9a2431eba248f1cc4d8d3d2a34b31cbf4884ecc602f9270372f892a2ba185",
     name: "PYUSD / PAXG",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -1214,6 +1154,21 @@ export default [
     collateralToken: {
       address: "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
       symbol: "PAXG",
+    },
+  },
+  {
+    id: "0x66c19b7c49ce674e964eb917d117d987b693f508f2c1e3f71ac914454ed42e13",
+    name: "WETH / savETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "945000000000000000",
+    oracle: "0xa11B7867be57105beFF6f16b295b28B08eb808EB",
+    loanToken: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+    collateralToken: {
+      address: "0xDA06eE2dACF9245Aa80072a4407deBDea0D7e341",
+      symbol: "savETH",
     },
   },
   {
@@ -1232,18 +1187,33 @@ export default [
     },
   },
   {
-    id: "0xac357133ae9d12a9507faeeeb5af0087cf83ad17732bdab2abf95781d3b130a9",
-    name: "USDC / alphaMUSD",
+    id: "0xf0edbb36183591ff28c56fdb283fdd6896cf1298990e5913208902adb87d2b75",
+    name: "WETH / ynETHx",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
     lltv: "915000000000000000",
-    oracle: "0xa405070BFE6236B6c1aF391E4777eb262eAB4Ce8",
+    oracle: "0xc28F86C86F79282E2d2A1f45442339C55f7eB22D",
+    loanToken: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+    collateralToken: {
+      address: "0x657d9ABA1DBb59e53f9F3eCAA878447dCfC96dCb",
+      symbol: "ynETHx",
+    },
+  },
+  {
+    id: "0x51c6fa2e3ab990af15e95a8c91e93482d7a87068c60133e1c7e8000f91ec7618",
+    name: "USDC / mHyperBTC",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "770000000000000000",
+    oracle: "0xecE51FE8f29a514441fB5D414faD449482eAA3c1",
     loanToken: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
     },
     collateralToken: {
-      address: "0x52317a47585A6ACDfbD7a29B494c3E2baAE96aBc",
-      symbol: "alphaMUSD",
+      address: "0xC8495EAFf71D3A563b906295fCF2f685b1783085",
+      symbol: "mHyperBTC",
     },
   },
   {
@@ -1262,6 +1232,21 @@ export default [
     },
   },
   {
+    id: "0xfb8315a8e5a80db41a33bb9f7d9eaf14e2110c1f2aebdba16383c07c19dc6e28",
+    name: "USDT / thBILL",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "945000000000000000",
+    oracle: "0x6d6cfa81bAcFC16b1cB9Ad2B0003A8158d188b3e",
+    loanToken: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+    collateralToken: {
+      address: "0x5FA487BCa6158c64046B2813623e20755091DA0b",
+      symbol: "thBILL",
+    },
+  },
+  {
     id: "0x8e6aeb10c401de3279ac79b4b2ea15fc94b7d9cfc098d6c2a1ff7b2b26d9d02c",
     name: "DAI / USDe",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -1274,21 +1259,6 @@ export default [
     collateralToken: {
       address: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
       symbol: "USDe",
-    },
-  },
-  {
-    id: "0xf9a116d22917bc9080e2c989738bc821099d358280df8f81ead58557bd39fdad",
-    name: "USDCV / WBTC",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x032F1C64899b2C89835E51aCeD9434b0aDEaA69d",
-    loanToken: {
-      address: "0x5422374B27757da72d5265cC745ea906E0446634",
-      symbol: "USDCV",
-    },
-    collateralToken: {
-      address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC",
     },
   },
   {
@@ -1322,21 +1292,6 @@ export default [
     },
   },
   {
-    id: "0xf0edbb36183591ff28c56fdb283fdd6896cf1298990e5913208902adb87d2b75",
-    name: "WETH / ynETHx",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0xc28F86C86F79282E2d2A1f45442339C55f7eB22D",
-    loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
-    },
-    collateralToken: {
-      address: "0x657d9ABA1DBb59e53f9F3eCAA878447dCfC96dCb",
-      symbol: "ynETHx",
-    },
-  },
-  {
     id: "0xdc5333039bcf15f1237133f74d5806675d83d9cf19cfd4cfdd9be674842651bf",
     name: "USDT / sUSDe",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -1367,6 +1322,21 @@ export default [
     },
   },
   {
+    id: "0xf9a116d22917bc9080e2c989738bc821099d358280df8f81ead58557bd39fdad",
+    name: "USDCV / WBTC",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x032F1C64899b2C89835E51aCeD9434b0aDEaA69d",
+    loanToken: {
+      address: "0x5422374B27757da72d5265cC745ea906E0446634",
+      symbol: "USDCV",
+    },
+    collateralToken: {
+      address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      symbol: "WBTC",
+    },
+  },
+  {
     id: "0x18b52e40c13af881209b78e14bdd5f094a6c7fa39ce411e0d119e9201f71dc20",
     name: "WBTC / pumpBTC",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -1394,6 +1364,21 @@ export default [
     collateralToken: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
       symbol: "WBTC",
+    },
+  },
+  {
+    id: "0xac357133ae9d12a9507faeeeb5af0087cf83ad17732bdab2abf95781d3b130a9",
+    name: "USDC / alphaMUSD",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xa405070BFE6236B6c1aF391E4777eb262eAB4Ce8",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x52317a47585A6ACDfbD7a29B494c3E2baAE96aBc",
+      symbol: "alphaMUSD",
     },
   },
   {
@@ -1457,18 +1442,18 @@ export default [
     },
   },
   {
-    id: "0x51c6fa2e3ab990af15e95a8c91e93482d7a87068c60133e1c7e8000f91ec7618",
-    name: "USDC / mHyperBTC",
+    id: "0xa0534c78620867b7c8706e3b6df9e69a2bc67c783281b7a77e034ed75cee012e",
+    name: "WETH / ezETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "770000000000000000",
-    oracle: "0xecE51FE8f29a514441fB5D414faD449482eAA3c1",
+    lltv: "945000000000000000",
+    oracle: "0x94f93f1eADb8a2f73C415AD4C19cB791e6D0192b",
     loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
     },
     collateralToken: {
-      address: "0xC8495EAFf71D3A563b906295fCF2f685b1783085",
-      symbol: "mHyperBTC",
+      address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+      symbol: "ezETH",
     },
   },
   {
@@ -1562,21 +1547,6 @@ export default [
     },
   },
   {
-    id: "0xd5211d0e3f4a30d5c98653d988585792bb7812221f04801be73a44ceecb11e89",
-    name: "WETH / osETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x224F2F1333b45E34fFCfC3bD01cE43C73A914498",
-    loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
-    },
-    collateralToken: {
-      address: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
-      symbol: "osETH",
-    },
-  },
-  {
     id: "0xca432a8b0f33541cfe164d388823d05b607db43b690d4856f343eec3b42402c0",
     name: "USDC / PT-mHYPER-30APR2026",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -1652,21 +1622,6 @@ export default [
     },
   },
   {
-    id: "0x8d8ab648ffa225f0b6af1c7de5d6bc5f6711771eaa8d48ce6efd83d40281da73",
-    name: "USDC / ACRDX",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "625000000000000000",
-    oracle: "0x81698aA39584bc5975E89f47F55b76B431019248",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x9477724Bb54AD5417de8Baff29e59DF3fB4DA74f",
-      symbol: "ACRDX",
-    },
-  },
-  {
     id: "0x3eb3899b02600e4c5c626a1dc3f9167c08d0675b7adbdd0daf78111574234f8b",
     name: "USDS / wstETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -1679,6 +1634,21 @@ export default [
     collateralToken: {
       address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       symbol: "wstETH",
+    },
+  },
+  {
+    id: "0x8d8ab648ffa225f0b6af1c7de5d6bc5f6711771eaa8d48ce6efd83d40281da73",
+    name: "USDC / ACRDX",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "625000000000000000",
+    oracle: "0x81698aA39584bc5975E89f47F55b76B431019248",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x9477724Bb54AD5417de8Baff29e59DF3fB4DA74f",
+      symbol: "ACRDX",
     },
   },
   {
@@ -1724,6 +1694,21 @@ export default [
     collateralToken: {
       address: "0x7122985656e38BDC0302Db86685bb972b145bD3C",
       symbol: "STONE",
+    },
+  },
+  {
+    id: "0x9de73bf59b4b09f9b974081c30a2570174f212ea62de8da777c7770a4832ae72",
+    name: "USDC / mHYPER",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "770000000000000000",
+    oracle: "0xdabD6Bb1c67a911C077c4E63b1c9cf1c0b11F1C0",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x9b5528528656DBC094765E2abB79F293c21191B9",
+      symbol: "mHYPER",
     },
   },
   {
@@ -1787,21 +1772,6 @@ export default [
     },
   },
   {
-    id: "0x760b14c9003f08ac4bf0cfb02596ee4d6f0548a4fde5826bfd56befb9ed62ae9",
-    name: "DAI / PT-USDe-31JUL2025",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0xFCaE69BEF9B6c96D89D58664d8aeA84BddCe2E5c",
-    loanToken: {
-      address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI",
-    },
-    collateralToken: {
-      address: "0x917459337CaAC939D41d7493B3999f571D20D667",
-      symbol: "PT-USDe-31JUL2025",
-    },
-  },
-  {
     id: "0xc54d7acf14de29e0e5527cabd7a576506870346a78a11a6762e2cca66322ec41",
     name: "WETH / wstETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -1814,6 +1784,21 @@ export default [
     collateralToken: {
       address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       symbol: "wstETH",
+    },
+  },
+  {
+    id: "0x760b14c9003f08ac4bf0cfb02596ee4d6f0548a4fde5826bfd56befb9ed62ae9",
+    name: "DAI / PT-USDe-31JUL2025",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xFCaE69BEF9B6c96D89D58664d8aeA84BddCe2E5c",
+    loanToken: {
+      address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      symbol: "DAI",
+    },
+    collateralToken: {
+      address: "0x917459337CaAC939D41d7493B3999f571D20D667",
+      symbol: "PT-USDe-31JUL2025",
     },
   },
   {
@@ -1907,33 +1892,18 @@ export default [
     },
   },
   {
-    id: "0xd9e34b1eed46d123ac1b69b224de1881dbc88798bc7b70f504920f62f58f28cc",
-    name: "USDC / wstUSR",
+    id: "0xf57808b9489bcbe7e7c67fd5227b0a4267a384ebb80301a097e4fa1f3fcb3234",
+    name: "USDC / BAL",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0xDa850a72080024e17c1590fbf6ea7a826dB90760",
+    lltv: "625000000000000000",
+    oracle: "0xc0A2874eAcD380A186fafe6eb4420B31d98EA3F4",
     loanToken: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
     },
     collateralToken: {
-      address: "0x1202F5C7b4B9E47a1A484E8B270be34dbbC75055",
-      symbol: "wstUSR",
-    },
-  },
-  {
-    id: "0x4f7a6aae31dce0ceb7d6e049bd9e161942365de33ed891a77ed7c98cc8e6cc2b",
-    name: "WETH / ccmETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "980000000000000000",
-    oracle: "0x083011f1d3B6886d188B89891b70f157e03b55ef",
-    loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
-    },
-    collateralToken: {
-      address: "0xB144B3b2D2a7d82e53BC70659Be03Bcd21CD94e8",
-      symbol: "ccmETH",
+      address: "0xba100000625a3754423978a60c9317c58a424e3D",
+      symbol: "BAL",
     },
   },
   {
@@ -1952,6 +1922,21 @@ export default [
     },
   },
   {
+    id: "0x4f7a6aae31dce0ceb7d6e049bd9e161942365de33ed891a77ed7c98cc8e6cc2b",
+    name: "WETH / ccmETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "980000000000000000",
+    oracle: "0x083011f1d3B6886d188B89891b70f157e03b55ef",
+    loanToken: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+    collateralToken: {
+      address: "0xB144B3b2D2a7d82e53BC70659Be03Bcd21CD94e8",
+      symbol: "ccmETH",
+    },
+  },
+  {
     id: "0x7dde86a1e94561d9690ec678db673c1a6396365f7d1d65e129c5fff0990ff758",
     name: "USDC / WETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -1964,6 +1949,21 @@ export default [
     collateralToken: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       symbol: "WETH",
+    },
+  },
+  {
+    id: "0x2325461da586eb4defde435b8baa5e5fced15cc0bce490daed53828f49776544",
+    name: "WETH / LsETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x756F5d3735Aa73740A4461f017529afDDfa3AB8a",
+    loanToken: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+    collateralToken: {
+      address: "0x8c1BEd5b9a0928467c9B1341Da1D7BD5e10b6549",
+      symbol: "LsETH",
     },
   },
   {
@@ -1982,21 +1982,6 @@ export default [
     },
   },
   {
-    id: "0xf5c5df23559b0fb56560a7578ea17d81e245153ba64b8132df026c9358864d27",
-    name: "PYUSD / wstETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x9f02D619a875B0CA383D21772e136fC18B637916",
-    loanToken: {
-      address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD",
-    },
-    collateralToken: {
-      address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      symbol: "wstETH",
-    },
-  },
-  {
     id: "0xb81eaed0df42ff6646c8daf4fe38afab93b13b6a89c9750d08e705223a45e2ef",
     name: "DAI / PT-sUSDE-31JUL2025",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -2009,6 +1994,21 @@ export default [
     collateralToken: {
       address: "0x3b3fB9C57858EF816833dC91565EFcd85D96f634",
       symbol: "PT-sUSDE-31JUL2025",
+    },
+  },
+  {
+    id: "0xf5c5df23559b0fb56560a7578ea17d81e245153ba64b8132df026c9358864d27",
+    name: "PYUSD / wstETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x9f02D619a875B0CA383D21772e136fC18B637916",
+    loanToken: {
+      address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+      symbol: "PYUSD",
+    },
+    collateralToken: {
+      address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      symbol: "wstETH",
     },
   },
   {
@@ -2042,36 +2042,6 @@ export default [
     },
   },
   {
-    id: "0xcacd4c39af872ddecd48b650557ff5bcc7d3338194c0f5b2038e0d4dec5dc022",
-    name: "WETH / rswETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "945000000000000000",
-    oracle: "0x56e2d0957d2376dF4A0519b91D1Fa19D2d63bd9b",
-    loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
-    },
-    collateralToken: {
-      address: "0xFAe103DC9cf190eD75350761e95403b7b8aFa6c0",
-      symbol: "rswETH",
-    },
-  },
-  {
-    id: "0x8bbd1763671eb82a75d5f7ca33a0023ffabdd9d1a3d4316f34753685ae988e80",
-    name: "WETH / apxETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x037D67A5E6F19d0Fb26A6603d2D4fE9d70eC3258",
-    loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
-    },
-    collateralToken: {
-      address: "0x9Ba021B0a9b958B5E75cE9f6dff97C7eE52cb3E6",
-      symbol: "apxETH",
-    },
-  },
-  {
     id: "0x6a6c8e41a6a7ccbea68e1e6a19ece1fdd863b2b6c9e0f71bbcd4dcbe8b1062e8",
     name: "USDT / wstETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -2087,21 +2057,6 @@ export default [
     },
   },
   {
-    id: "0x8e7cc042d739a365c43d0a52d5f24160fa7ae9b7e7c9a479bd02a56041d4cf77",
-    name: "USDC / USR",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x8875ceb24E656FCA062759BDCF870F59A2B0187b",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
-      symbol: "USR",
-    },
-  },
-  {
     id: "0x921afaedabc6597ac12ce8c0f1a8d562a2326c401ef1e3c77e861988890fc3ce",
     name: "USDC / mRe7YIELD",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -2114,6 +2069,21 @@ export default [
     collateralToken: {
       address: "0x87C9053C819bB28e0D73d33059E1b3DA80AFb0cf",
       symbol: "mRe7YIELD",
+    },
+  },
+  {
+    id: "0x8e7cc042d739a365c43d0a52d5f24160fa7ae9b7e7c9a479bd02a56041d4cf77",
+    name: "USDC / USR",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x8875ceb24E656FCA062759BDCF870F59A2B0187b",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
+      symbol: "USR",
     },
   },
   {
@@ -2162,6 +2132,21 @@ export default [
     },
   },
   {
+    id: "0x8bbd1763671eb82a75d5f7ca33a0023ffabdd9d1a3d4316f34753685ae988e80",
+    name: "WETH / apxETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x037D67A5E6F19d0Fb26A6603d2D4fE9d70eC3258",
+    loanToken: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+    collateralToken: {
+      address: "0x9Ba021B0a9b958B5E75cE9f6dff97C7eE52cb3E6",
+      symbol: "apxETH",
+    },
+  },
+  {
     id: "0xfcb68ab820f4abe96d6c1461ede57e0d4b8671b7235c62fc5b3f4151cc46d42c",
     name: "USDCV / wstETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -2177,21 +2162,6 @@ export default [
     },
   },
   {
-    id: "0xb0a9ac81a8c6a5274aa1a8337aed35a2cb2cd4feb5c6d3b39d41f234fbf2955b",
-    name: "USDT / PT-USDe-25SEP2025",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0xe6aBD3B78Abbb1cc1Ee76c5c3689Aa9646481Fbb",
-    loanToken: {
-      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT",
-    },
-    collateralToken: {
-      address: "0xBC6736d346a5eBC0dEbc997397912CD9b8FAe10a",
-      symbol: "PT-USDe-25SEP2025",
-    },
-  },
-  {
     id: "0x514efda728a646dcafe4fdc9afe4ea214709e110ac1b2b78185ae00c1782cc82",
     name: "WBTC / swBTC",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -2204,6 +2174,21 @@ export default [
     collateralToken: {
       address: "0x8DB2350D78aBc13f5673A411D4700BCF87864dDE",
       symbol: "swBTC",
+    },
+  },
+  {
+    id: "0xd5211d0e3f4a30d5c98653d988585792bb7812221f04801be73a44ceecb11e89",
+    name: "WETH / osETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x224F2F1333b45E34fFCfC3bD01cE43C73A914498",
+    loanToken: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+    collateralToken: {
+      address: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
+      symbol: "osETH",
     },
   },
   {
@@ -2267,6 +2252,36 @@ export default [
     },
   },
   {
+    id: "0x7384bd82fb2f2a562555d4aab25583b4e40deed124b7c95dc16be34547434193",
+    name: "EURC / WETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x7E5c3ccAb5D4f02d67d18b36b1E3b586eB194748",
+    loanToken: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+    collateralToken: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0xd9e34b1eed46d123ac1b69b224de1881dbc88798bc7b70f504920f62f58f28cc",
+    name: "USDC / wstUSR",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xDa850a72080024e17c1590fbf6ea7a826dB90760",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x1202F5C7b4B9E47a1A484E8B270be34dbbC75055",
+      symbol: "wstUSR",
+    },
+  },
+  {
     id: "0xa67cfcdf2a2637c78fd6e1879e27448be7abe90c6ef1be4a1ca4337db886c8e3",
     name: "USDC / stakedao-crvfrxUSD",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -2309,21 +2324,6 @@ export default [
     collateralToken: {
       address: "0xD9A442856C234a39a81a089C06451EBAa4306a72",
       symbol: "pufETH",
-    },
-  },
-  {
-    id: "0x7384bd82fb2f2a562555d4aab25583b4e40deed124b7c95dc16be34547434193",
-    name: "EURC / WETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x7E5c3ccAb5D4f02d67d18b36b1E3b586eB194748",
-    loanToken: {
-      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC",
-    },
-    collateralToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
     },
   },
   {
@@ -2477,21 +2477,6 @@ export default [
     },
   },
   {
-    id: "0xd729b6742d6eadee7ee38ecf85e9f0ba060398e28089adf2e5e0f43224e4688a",
-    name: "USDC / PT-tUSDe-25SEP2025",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x72ec24886A36A1C632D284Ed49293Ecd13e3eCa6",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0xd0a4B74A6B62aA2b6C02349463D9041606608F36",
-      symbol: "PT-tUSDe-25SEP2025",
-    },
-  },
-  {
     id: "0x8b1bc4d682b04a16309a8adf77b35de0c42063a7944016cfc37a79ccac0007b6",
     name: "USDC / slvlUSD",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -2504,6 +2489,21 @@ export default [
     collateralToken: {
       address: "0x4737D9b4592B40d51e110b94c9C043c6654067Ae",
       symbol: "slvlUSD",
+    },
+  },
+  {
+    id: "0xd729b6742d6eadee7ee38ecf85e9f0ba060398e28089adf2e5e0f43224e4688a",
+    name: "USDC / PT-tUSDe-25SEP2025",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x72ec24886A36A1C632D284Ed49293Ecd13e3eCa6",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xd0a4B74A6B62aA2b6C02349463D9041606608F36",
+      symbol: "PT-tUSDe-25SEP2025",
     },
   },
   {
@@ -2732,6 +2732,36 @@ export default [
     },
   },
   {
+    id: "0x6bf042818eade8df169e915e9a496d1d8b53f41bf3459b5a72666fb18ed68266",
+    name: "USDC / splDXY-BULL",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xCDF488746af18804d7446751D075Df7Fc27B53d0",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x8dbcF452799f50D3382105a19FdBfA57B7f29C73",
+      symbol: "splDXY-BULL",
+    },
+  },
+  {
+    id: "0x2ded00f9b5591ac60f7df01f5776dec67f7d7f977885ad1a6c16aab6aed66131",
+    name: "USDC / splDXY-BEAR",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xA4e55909A631ea8A4efF407108f9E6382e84A67C",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xDC7366b8BB83f9ABa2B4F989194D6c03D0A20DE9",
+      symbol: "splDXY-BEAR",
+    },
+  },
+  {
     id: "0xbf6687cb042a09451e66ebc11d7716c49fb8ccc75f484f7fab0eed6624bd5838",
     name: "USDC / mMEV",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -2744,6 +2774,21 @@ export default [
     collateralToken: {
       address: "0x030b69280892c888670EDCDCD8B69Fd8026A0BF3",
       symbol: "mMEV",
+    },
+  },
+  {
+    id: "0x9b966d26e14749cdf3be6fcf44ef404f1428b3c2f8c9e9a5172437e440597715",
+    name: "USDC / COMP",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "625000000000000000",
+    oracle: "0x1e96338CBF45c0432C22A40729335050a9855F53",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xc00e94Cb662C3520282E6f5717214004A7f26888",
+      symbol: "COMP",
     },
   },
   {
@@ -2777,6 +2822,21 @@ export default [
     },
   },
   {
+    id: "0x21b67f89513da0b0c94af8778134a1ba3f762f944f16208b42cc0663b07eaf05",
+    name: "USDC / PT-iUSD-4DEC2025",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xbc85ebE0a1C134fFB1C545016540431e060c878C",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xb44cdBEF3145C1c1E772e8228E1154c80e70618e",
+      symbol: "PT-iUSD-4DEC2025",
+    },
+  },
+  {
     id: "0x5f5bfaa51137098abc90b249c93b6051987877ada76135bb3dd7502b10d184a3",
     name: "USDC / lvlUSD",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -2792,21 +2852,6 @@ export default [
     },
   },
   {
-    id: "0x934b5427f2dbcddaddb59e04b8bbb41ef30fb7481eef95366ffa5da4290f1359",
-    name: "USDC / PT-fxSAVE-30OCT2025",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0xc8532581681f2d8f20D38b038a5a4fbFCef6cc6f",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x21aacE56a8F21210b7E76d8eF1a77253Db85BF0a",
-      symbol: "PT-fxSAVE-30OCT2025",
-    },
-  },
-  {
     id: "0x83b7ad16905809ea36482f4fbf6cfee9c9f316d128de9a5da1952607d5e4df5e",
     name: "USDC / csUSDL",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -2819,6 +2864,21 @@ export default [
     collateralToken: {
       address: "0xbEeFc011e94f43b8B7b455eBaB290C7Ab4E216f1",
       symbol: "csUSDL",
+    },
+  },
+  {
+    id: "0x934b5427f2dbcddaddb59e04b8bbb41ef30fb7481eef95366ffa5da4290f1359",
+    name: "USDC / PT-fxSAVE-30OCT2025",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xc8532581681f2d8f20D38b038a5a4fbFCef6cc6f",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x21aacE56a8F21210b7E76d8eF1a77253Db85BF0a",
+      symbol: "PT-fxSAVE-30OCT2025",
     },
   },
   {
@@ -2957,33 +3017,18 @@ export default [
     },
   },
   {
-    id: "0x21b67f89513da0b0c94af8778134a1ba3f762f944f16208b42cc0663b07eaf05",
-    name: "USDC / PT-iUSD-4DEC2025",
+    id: "0xb0a9ac81a8c6a5274aa1a8337aed35a2cb2cd4feb5c6d3b39d41f234fbf2955b",
+    name: "USDT / PT-USDe-25SEP2025",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
     lltv: "915000000000000000",
-    oracle: "0xbc85ebE0a1C134fFB1C545016540431e060c878C",
+    oracle: "0xe6aBD3B78Abbb1cc1Ee76c5c3689Aa9646481Fbb",
     loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
     },
     collateralToken: {
-      address: "0xb44cdBEF3145C1c1E772e8228E1154c80e70618e",
-      symbol: "PT-iUSD-4DEC2025",
-    },
-  },
-  {
-    id: "0x21e55c99123958ff5667f824948c97d0f64dfaa6e2848062e72bc68d200d35f9",
-    name: "USDC / PT-eUSDE-29MAY2025",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x9c0363336Bf9DaF57a16BB4e2867459bf4Dd5EB0",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x50D2C7992b802Eef16c04FeADAB310f31866a545",
-      symbol: "PT-eUSDE-29MAY2025",
+      address: "0xBC6736d346a5eBC0dEbc997397912CD9b8FAe10a",
+      symbol: "PT-USDe-25SEP2025",
     },
   },
   {
@@ -3044,6 +3089,21 @@ export default [
     collateralToken: {
       address: "0xE00bd3Df25fb187d6ABBB620b3dfd19839947b81",
       symbol: "PT-sUSDE-27MAR2025",
+    },
+  },
+  {
+    id: "0x21e55c99123958ff5667f824948c97d0f64dfaa6e2848062e72bc68d200d35f9",
+    name: "USDC / PT-eUSDE-29MAY2025",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x9c0363336Bf9DaF57a16BB4e2867459bf4Dd5EB0",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x50D2C7992b802Eef16c04FeADAB310f31866a545",
+      symbol: "PT-eUSDE-29MAY2025",
     },
   },
   {
@@ -3122,6 +3182,21 @@ export default [
     },
   },
   {
+    id: "0xcacd4c39af872ddecd48b650557ff5bcc7d3338194c0f5b2038e0d4dec5dc022",
+    name: "WETH / rswETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "945000000000000000",
+    oracle: "0x56e2d0957d2376dF4A0519b91D1Fa19D2d63bd9b",
+    loanToken: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+    collateralToken: {
+      address: "0xFAe103DC9cf190eD75350761e95403b7b8aFa6c0",
+      symbol: "rswETH",
+    },
+  },
+  {
     id: "0xe256ade8f3adad7ac2ff44de16e82ea39ad1303c71555204e14d9633aff21ebe",
     name: "WETH / n-st-weETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -3137,21 +3212,6 @@ export default [
     },
   },
   {
-    id: "0xe37784e5ff9c2795395c5a41a0cb7ae1da4a93d67bfdd8654b9ff86b3065941c",
-    name: "DAI / PT-sUSDE-26DEC2024",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x81E5E28F33D314e9211885d6f0F4080E755e4595",
-    loanToken: {
-      address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI",
-    },
-    collateralToken: {
-      address: "0xEe9085fC268F6727d5D4293dBABccF901ffDCC29",
-      symbol: "PT-sUSDE-26DEC2024",
-    },
-  },
-  {
     id: "0x1ca75949a91c157183f53282d73c37191e7cd84002310f6632047d874aad4a0f",
     name: "USDC / PT-mHYPER-20NOV2025",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -3164,6 +3224,21 @@ export default [
     collateralToken: {
       address: "0xE4d30cCF87Cb3E5E637b64A2EE21bD5d3901839A",
       symbol: "PT-mHYPER-20NOV2025",
+    },
+  },
+  {
+    id: "0xe37784e5ff9c2795395c5a41a0cb7ae1da4a93d67bfdd8654b9ff86b3065941c",
+    name: "DAI / PT-sUSDE-26DEC2024",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x81E5E28F33D314e9211885d6f0F4080E755e4595",
+    loanToken: {
+      address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      symbol: "DAI",
+    },
+    collateralToken: {
+      address: "0xEe9085fC268F6727d5D4293dBABccF901ffDCC29",
+      symbol: "PT-sUSDE-26DEC2024",
     },
   },
   {
@@ -3227,6 +3302,21 @@ export default [
     },
   },
   {
+    id: "0x1e6e9014fc7b882490a0cd420475069563f80c319b5bf3ab2e4162b0549dd4dc",
+    name: "wstETH / weETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "945000000000000000",
+    oracle: "0x6a8D47bA22631A0DE7e0e83DBc21c384a5994102",
+    loanToken: {
+      address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      symbol: "wstETH",
+    },
+    collateralToken: {
+      address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+      symbol: "weETH",
+    },
+  },
+  {
     id: "0xe7399fdebc318d76dfec7356caafcf8cd4b91287e139a3ec423f09aeeb656fc4",
     name: "USDC / DAI",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -3239,6 +3329,21 @@ export default [
     collateralToken: {
       address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
       symbol: "DAI",
+    },
+  },
+  {
+    id: "0x9c7cda0f3bb23579bbeed7186b4de76239d68eca71d905b1e06fd10867b9dcfc",
+    name: "wstETH / ezETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "945000000000000000",
+    oracle: "0xf12e6702c3582C7dA9602A31b2b2807d698284C6",
+    loanToken: {
+      address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      symbol: "wstETH",
+    },
+    collateralToken: {
+      address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+      symbol: "ezETH",
     },
   },
   {
@@ -3284,21 +3389,6 @@ export default [
     collateralToken: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
-    },
-  },
-  {
-    id: "0x94e08261235c49638bba42ab2883394ea69bbf9f2a420bde48757775d0f1a182",
-    name: "WETH / PT-tETH-29MAY2025",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0xE7De10Defe1f817bFF1dE246020B800471535eDc",
-    loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
-    },
-    collateralToken: {
-      address: "0x84D17Ef6BeC165484c320B852eEB294203e191be",
-      symbol: "PT-tETH-29MAY2025",
     },
   },
   {
@@ -3407,18 +3497,18 @@ export default [
     },
   },
   {
-    id: "0xcfd9f683c6ab4b3c95e450e3faaf582c2b5fe938ef7405c4d60f2e9fd77415cc",
-    name: "WBTC / PT-corn-SolvBTC.BBN-26DEC2024",
+    id: "0x94e08261235c49638bba42ab2883394ea69bbf9f2a420bde48757775d0f1a182",
+    name: "WETH / PT-tETH-29MAY2025",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
     lltv: "915000000000000000",
-    oracle: "0x309b563107f6AfBEa888acF1E1BffE0dB8a8d08B",
+    oracle: "0xE7De10Defe1f817bFF1dE246020B800471535eDc",
     loanToken: {
-      address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC",
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
     },
     collateralToken: {
-      address: "0x23e479ddcda990E8523494895759bD98cD2fDBF6",
-      symbol: "PT-corn-SolvBTC.BBN-26DEC2024",
+      address: "0x84D17Ef6BeC165484c320B852eEB294203e191be",
+      symbol: "PT-tETH-29MAY2025",
     },
   },
   {
@@ -3464,6 +3554,21 @@ export default [
     collateralToken: {
       address: "0x8236a87084f8B84306f72007F36F2618A5634494",
       symbol: "LBTC",
+    },
+  },
+  {
+    id: "0xcfd9f683c6ab4b3c95e450e3faaf582c2b5fe938ef7405c4d60f2e9fd77415cc",
+    name: "WBTC / PT-corn-SolvBTC.BBN-26DEC2024",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x309b563107f6AfBEa888acF1E1BffE0dB8a8d08B",
+    loanToken: {
+      address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      symbol: "WBTC",
+    },
+    collateralToken: {
+      address: "0x23e479ddcda990E8523494895759bD98cD2fDBF6",
+      symbol: "PT-corn-SolvBTC.BBN-26DEC2024",
     },
   },
   {
@@ -3527,6 +3632,21 @@ export default [
     },
   },
   {
+    id: "0x94b823e6bd8ea533b4e33fbc307faea0b307301bc48763acc4d4aa4def7636cd",
+    name: "USDC / WETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x0F948CBa8231Db7898ef36A4212581Ad7b1B4580",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
     id: "0x3889dee51674c6e728f7d05f11a3407c6853e433a0e63f8febbc45887a26a475",
     name: "USDC / MC-USR",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -3569,6 +3689,21 @@ export default [
     collateralToken: {
       address: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
       symbol: "USDe",
+    },
+  },
+  {
+    id: "0x2b8019e6b9bd3a6cb615c5ff73c21bb514cdbc30d1f7a797c082e5975500ef4b",
+    name: "USDT / cbBTC",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x76d14b72A9468c2895f8697AF71294e32b1B7249",
+    loanToken: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+    collateralToken: {
+      address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      symbol: "cbBTC",
     },
   },
   {
@@ -3617,21 +3752,6 @@ export default [
     },
   },
   {
-    id: "0xa3819a7d2aee958ca0e7404137d012b51ea47d051db69d94656956eff8c80c23",
-    name: "USDC / PT-syrupUSDC-28AUG2025",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x3B74C5fd1005Cd98f349d5d9Df78EC8b15131fa5",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0xCcE7D12f683c6dAe700154f0BAdf779C0bA1F89A",
-      symbol: "PT-syrupUSDC-28AUG2025",
-    },
-  },
-  {
     id: "0x0e75bf0dc5ea84f72e39f4c07229eb0eb9609fcddf67cf20e93922a03dacd1b3",
     name: "USDC / AA_GauntletTestUSDC",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -3674,21 +3794,6 @@ export default [
     collateralToken: {
       address: "0x94F6Cb4FaE0EB3Fa74e9847dfF2fF52fd5ec7e6e",
       symbol: "n-st-mHYPER",
-    },
-  },
-  {
-    id: "0x94b823e6bd8ea533b4e33fbc307faea0b307301bc48763acc4d4aa4def7636cd",
-    name: "USDC / WETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x0F948CBa8231Db7898ef36A4212581Ad7b1B4580",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
     },
   },
   {
@@ -3827,6 +3932,21 @@ export default [
     },
   },
   {
+    id: "0xa3819a7d2aee958ca0e7404137d012b51ea47d051db69d94656956eff8c80c23",
+    name: "USDC / PT-syrupUSDC-28AUG2025",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x3B74C5fd1005Cd98f349d5d9Df78EC8b15131fa5",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xCcE7D12f683c6dAe700154f0BAdf779C0bA1F89A",
+      symbol: "PT-syrupUSDC-28AUG2025",
+    },
+  },
+  {
     id: "0x6dd2c4f44111a54f4de7919ac33b3038dd03df491e8c6e77a4363ae0d6e8a872",
     name: "USDC / MKR",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -3869,36 +3989,6 @@ export default [
     collateralToken: {
       address: "0x35D8949372D46B7a3D5A56006AE77B215fc69bC0",
       symbol: "USD0++",
-    },
-  },
-  {
-    id: "0x459687783a68f4cf4e230618f88ce135d1cd459a850f6496751c2a9c1c6e852e",
-    name: "USDA / ezETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "770000000000000000",
-    oracle: "0xd5116061F4a1FFac23E9c6c9f6B4AF28b9AF7676",
-    loanToken: {
-      address: "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
-      symbol: "USDA",
-    },
-    collateralToken: {
-      address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
-      symbol: "ezETH",
-    },
-  },
-  {
-    id: "0xd2db5df9946c2090bbe2c52d8b8b80a95bffca8bd19a6151b1ae7687f888f6ab",
-    name: "USDC / PT-AIDaUSDT-30OCT2025",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x7e3aF96b9954baf8cf891547dF0dB666fd9bC5C6",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x968547d91681c8c9e135710Fc94BC6C35E26607e",
-      symbol: "PT-AIDaUSDT-30OCT2025",
     },
   },
   {
@@ -4019,6 +4109,21 @@ export default [
     collateralToken: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
+    },
+  },
+  {
+    id: "0xd2db5df9946c2090bbe2c52d8b8b80a95bffca8bd19a6151b1ae7687f888f6ab",
+    name: "USDC / PT-AIDaUSDT-30OCT2025",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x7e3aF96b9954baf8cf891547dF0dB666fd9bC5C6",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x968547d91681c8c9e135710Fc94BC6C35E26607e",
+      symbol: "PT-AIDaUSDT-30OCT2025",
     },
   },
   {
@@ -4187,21 +4292,6 @@ export default [
     },
   },
   {
-    id: "0x2b8019e6b9bd3a6cb615c5ff73c21bb514cdbc30d1f7a797c082e5975500ef4b",
-    name: "USDT / cbBTC",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x76d14b72A9468c2895f8697AF71294e32b1B7249",
-    loanToken: {
-      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT",
-    },
-    collateralToken: {
-      address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC",
-    },
-  },
-  {
     id: "0xfd3e5c20340aeba93f78f7dc4657dc1e11b553c68c545acc836321a14b47e457",
     name: "wUSDL / wstETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -4259,6 +4349,21 @@ export default [
     collateralToken: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
       symbol: "WBTC",
+    },
+  },
+  {
+    id: "0x459687783a68f4cf4e230618f88ce135d1cd459a850f6496751c2a9c1c6e852e",
+    name: "USDA / ezETH",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "770000000000000000",
+    oracle: "0xd5116061F4a1FFac23E9c6c9f6B4AF28b9AF7676",
+    loanToken: {
+      address: "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
+      symbol: "USDA",
+    },
+    collateralToken: {
+      address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
+      symbol: "ezETH",
     },
   },
   {
@@ -4409,21 +4514,6 @@ export default [
     collateralToken: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
       symbol: "WBTC",
-    },
-  },
-  {
-    id: "0x2325461da586eb4defde435b8baa5e5fced15cc0bce490daed53828f49776544",
-    name: "WETH / LsETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x756F5d3735Aa73740A4461f017529afDDfa3AB8a",
-    loanToken: {
-      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH",
-    },
-    collateralToken: {
-      address: "0x8c1BEd5b9a0928467c9B1341Da1D7BD5e10b6549",
-      symbol: "LsETH",
     },
   },
   {
@@ -5222,21 +5312,6 @@ export default [
     },
   },
   {
-    id: "0x1e6e9014fc7b882490a0cd420475069563f80c319b5bf3ab2e4162b0549dd4dc",
-    name: "wstETH / weETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "945000000000000000",
-    oracle: "0x6a8D47bA22631A0DE7e0e83DBc21c384a5994102",
-    loanToken: {
-      address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      symbol: "wstETH",
-    },
-    collateralToken: {
-      address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
-      symbol: "weETH",
-    },
-  },
-  {
     id: "0xa6bb1fa76ed380d7245bc56eb4fd35013342358130dd68f2b3b05c8123ea2444",
     name: "WETH / LBTC",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -5264,21 +5339,6 @@ export default [
     collateralToken: {
       address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
       symbol: "wstETH",
-    },
-  },
-  {
-    id: "0x9c7cda0f3bb23579bbeed7186b4de76239d68eca71d905b1e06fd10867b9dcfc",
-    name: "wstETH / ezETH",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "945000000000000000",
-    oracle: "0xf12e6702c3582C7dA9602A31b2b2807d698284C6",
-    loanToken: {
-      address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      symbol: "wstETH",
-    },
-    collateralToken: {
-      address: "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110",
-      symbol: "ezETH",
     },
   },
   {
@@ -5417,21 +5477,6 @@ export default [
     },
   },
   {
-    id: "0x0cb56971212f588d1ea229118f35126b50f9aec4fa1c19bf7860bdcc0e02210e",
-    name: "EURC / cbBTC",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "860000000000000000",
-    oracle: "0x794B6C9cb12dA89aa8F505053AE0d33356C2fefB",
-    loanToken: {
-      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC",
-    },
-    collateralToken: {
-      address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC",
-    },
-  },
-  {
     id: "0x7e32fa74340bd1ae6623618b76ef6c4d9023dae1fa16fe9783f6285e7215c110",
     name: "PYUSD / USDe",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -5522,36 +5567,6 @@ export default [
     },
   },
   {
-    id: "0xdeca5331fa55b630026fedf5b2bfa0d384b35dbebd9921832e67ad305f48d8d8",
-    name: "USDT / PT-RUSD-26FEB2026",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0x55FcD62CCaC955A4754712a641524A271322Cd36",
-    loanToken: {
-      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT",
-    },
-    collateralToken: {
-      address: "0xeEAa924eB3667F30Be02Db9C55d87566a3F4dF7A",
-      symbol: "PT-RUSD-26FEB2026",
-    },
-  },
-  {
-    id: "0xcf30228b60d9ec544889f5a77a2fada8e8d19ab921e0d7d35c7d011b54ade4d0",
-    name: "USDT / PT-wsrUSD-26FEB2026",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "915000000000000000",
-    oracle: "0xc98751D712732B80E688228A8eEFC905F116D1b1",
-    loanToken: {
-      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT",
-    },
-    collateralToken: {
-      address: "0x5AA4AfE7359d5a68D193f03E013d553DEb7DbD1f",
-      symbol: "PT-wsrUSD-26FEB2026",
-    },
-  },
-  {
     id: "0xdde45ad7e78bba0142b84c657963d42861d5bd6e667376fcc1239df14e7b1119",
     name: "USDC / unknown",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -5627,6 +5642,36 @@ export default [
     },
   },
   {
+    id: "0x0cb56971212f588d1ea229118f35126b50f9aec4fa1c19bf7860bdcc0e02210e",
+    name: "EURC / cbBTC",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x794B6C9cb12dA89aa8F505053AE0d33356C2fefB",
+    loanToken: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+    collateralToken: {
+      address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      symbol: "cbBTC",
+    },
+  },
+  {
+    id: "0xdeca5331fa55b630026fedf5b2bfa0d384b35dbebd9921832e67ad305f48d8d8",
+    name: "USDT / PT-RUSD-26FEB2026",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x55FcD62CCaC955A4754712a641524A271322Cd36",
+    loanToken: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+    collateralToken: {
+      address: "0xeEAa924eB3667F30Be02Db9C55d87566a3F4dF7A",
+      symbol: "PT-RUSD-26FEB2026",
+    },
+  },
+  {
     id: "0x12cacbbd1c88513cce13d54927f5f1301335779353817bc5e791e71d200f2199",
     name: "USDS / WETH",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -5639,6 +5684,21 @@ export default [
     collateralToken: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       symbol: "WETH",
+    },
+  },
+  {
+    id: "0xcf30228b60d9ec544889f5a77a2fada8e8d19ab921e0d7d35c7d011b54ade4d0",
+    name: "USDT / PT-wsrUSD-26FEB2026",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xc98751D712732B80E688228A8eEFC905F116D1b1",
+    loanToken: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+    collateralToken: {
+      address: "0x5AA4AfE7359d5a68D193f03E013d553DEb7DbD1f",
+      symbol: "PT-wsrUSD-26FEB2026",
     },
   },
   {
@@ -5987,21 +6047,6 @@ export default [
     },
   },
   {
-    id: "0x9ba82a4b7009e362b88f8c4b428e46ef2eedf7c62fe63adbc2b851733a70b848",
-    name: "USDC / stakedao-crvUSDUSDC-f",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "945000000000000000",
-    oracle: "0xAAd341b4Dc66DCC2C5d6E86e1d252c311C62f757",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0xF169457F89bEeC726e0e9344a59C85328D285f2C",
-      symbol: "stakedao-crvUSDUSDC-f",
-    },
-  },
-  {
     id: "0x7dea3baf843210ce0a4a9e6374cea47dcd55384fb36d2d701e69b221867b39e5",
     name: "USDC / ONDO",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -6029,6 +6074,21 @@ export default [
     collateralToken: {
       address: "0x6f40d4A6237C257fff2dB00FA0510DeEECd303eb",
       symbol: "FLUID",
+    },
+  },
+  {
+    id: "0x9ba82a4b7009e362b88f8c4b428e46ef2eedf7c62fe63adbc2b851733a70b848",
+    name: "USDC / stakedao-crvUSDUSDC-f",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "945000000000000000",
+    oracle: "0xAAd341b4Dc66DCC2C5d6E86e1d252c311C62f757",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xF169457F89bEeC726e0e9344a59C85328D285f2C",
+      symbol: "stakedao-crvUSDUSDC-f",
     },
   },
   {
@@ -7337,6 +7397,36 @@ export default [
     },
   },
   {
+    id: "0xacc49fbf58feb1ac971acce68f8adc177c43682d6a7087bbd4991a05cb7a2c67",
+    name: "USDC / srRoyUSDC",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x86A807dc5E689F78e280B18413001Ca0c2426Ab0",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xcD9f5907F92818bC06c9Ad70217f089E190d2a32",
+      symbol: "srRoyUSDC",
+    },
+  },
+  {
+    id: "0x00edbb2e2de487431e8be432f8f51215b01bcda10503617e2ee9c7d674492b47",
+    name: "USDC / srRoyUSDC",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "860000000000000000",
+    oracle: "0x62011dc01c0B9833C4E53e20456400e4EA4b8363",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xcD9f5907F92818bC06c9Ad70217f089E190d2a32",
+      symbol: "srRoyUSDC",
+    },
+  },
+  {
     id: "0xad656d430bb3d8c1469bf45c8ad4ebae1b04be04757c69fa424eec78d7b3f4dc",
     name: "USDC / WOUSD",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -8207,21 +8297,6 @@ export default [
     },
   },
   {
-    id: "0xf57808b9489bcbe7e7c67fd5227b0a4267a384ebb80301a097e4fa1f3fcb3234",
-    name: "USDC / BAL",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "625000000000000000",
-    oracle: "0xc0A2874eAcD380A186fafe6eb4420B31d98EA3F4",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0xba100000625a3754423978a60c9317c58a424e3D",
-      symbol: "BAL",
-    },
-  },
-  {
     id: "0x0bdde77fdaeaea9bd6e2a91021bf26c2b97a1c25d2070caaa10504698ab9159e",
     name: "PYUSD / wUSDL",
     irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
@@ -8339,6 +8414,36 @@ export default [
     collateralToken: {
       address: "0x0e397938C1Aa0680954093495B70A9F5e2249aBa",
       symbol: "QQQon",
+    },
+  },
+  {
+    id: "0xc2bc5e1e304fb1ea103dcbee37ece3c7e9219fb4b2b19d8ffdf81c39f4fbf180",
+    name: "USDC / PT-srNUSD-28MAY2026",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x0D07087b26b28995a66050f5bb7197D439221DE3",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x82b853DB31F025858792d8fA969f2a1Dc245C179",
+      symbol: "PT-srNUSD-28MAY2026",
+    },
+  },
+  {
+    id: "0x0ff9c1f2b9cb037ecb14029cbacd3a94470458cf5c6884f09c46ae354765d789",
+    name: "USDC / srNUSD",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x9E1031D287416b45C89d62780768d35dF24DF4Be",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x65a44528e8868166401eA08b549E19552af589dB",
+      symbol: "srNUSD",
     },
   },
   {
@@ -8834,21 +8939,6 @@ export default [
     collateralToken: {
       address: "0xD0097149AA4CC0d0e1fC99B8BD73fC17dC32C1E9",
       symbol: "PT-wstUSR-1740182579",
-    },
-  },
-  {
-    id: "0x9de73bf59b4b09f9b974081c30a2570174f212ea62de8da777c7770a4832ae72",
-    name: "USDC / mHYPER",
-    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
-    lltv: "770000000000000000",
-    oracle: "0xdabD6Bb1c67a911C077c4E63b1c9cf1c0b11F1C0",
-    loanToken: {
-      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC",
-    },
-    collateralToken: {
-      address: "0x9b5528528656DBC094765E2abB79F293c21191B9",
-      symbol: "mHYPER",
     },
   },
   {
@@ -9824,6 +9914,36 @@ export default [
     collateralToken: {
       address: "0x0e397938C1Aa0680954093495B70A9F5e2249aBa",
       symbol: "QQQon",
+    },
+  },
+  {
+    id: "0x8e43106df7e0363799313c9899df3fa83e6f5721ba80849642ac6912da666292",
+    name: "USDC / splDXY-BEAR",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0x6000671B89D9B75116242E5Cf3c3DD7eC0518C2e",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xDC7366b8BB83f9ABa2B4F989194D6c03D0A20DE9",
+      symbol: "splDXY-BEAR",
+    },
+  },
+  {
+    id: "0x811e0e5b937027b87b7b0c1bfa5db9d22109db4df0f445adc6124cd4ed577584",
+    name: "USDC / splDXY-BULL",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xDC1FD8aE5A5880cFdCbC673696812E6bd8C83bB5",
+    loanToken: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x8dbcF452799f50D3382105a19FdBfA57B7f29C73",
+      symbol: "splDXY-BULL",
     },
   },
   {
@@ -14144,6 +14264,21 @@ export default [
     collateralToken: {
       address: "0x35D8949372D46B7a3D5A56006AE77B215fc69bC0",
       symbol: "USD0++",
+    },
+  },
+  {
+    id: "0x64d2f82e674b764d618b630297813cd34bdc42a0fa66f92efa2ac8b1efe4bbd5",
+    name: "msUSD / siUSD",
+    irm: "0x870aC11D48B15DB9a138Cf899d20F13F79Ba00BC",
+    lltv: "915000000000000000",
+    oracle: "0xC7bB5f34D645f3849a3091Ce4b6724631ee811Af",
+    loanToken: {
+      address: "0xab5eB14c09D416F0aC63661E57EDB7AEcDb9BEfA",
+      symbol: "msUSD",
+    },
+    collateralToken: {
+      address: "0xDBDC1Ef57537E34680B898E1FEBD3D68c7389bCB",
+      symbol: "siUSD",
     },
   },
   {

@@ -952,6 +952,46 @@ export default [
     },
   },
   {
+    id: "0x3601921F4DA1a611159E2Dae7FE80dc267df0517",
+    version: "v1.1",
+    name: "Maxshot USDT0",
+    symbol: "Maxshot USDT0",
+    asset: {
+      address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      symbol: "USD₮0",
+    },
+  },
+  {
+    id: "0xF1867753eB2B8bEf61191F7Ba2c29f21b84460Ea",
+    version: "v1.1",
+    name: "testies vault",
+    symbol: "testiestesties",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xAc86fF4F00Fa71f3ECE98D9FD5E605330389F81F",
+    version: "v1.1",
+    name: "vault 123",
+    symbol: "vault 123",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xd2d46099B70880e268B0c7557b9D22d3AA848654",
+    version: "v1.1",
+    name: "usdc staging",
+    symbol: "gtstgusdc",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0xa47C5203d22Ae173788a9d9Be0F2bEeCc97F4dF9",
     version: "v2",
     name: "Blend USDC Reserve",
@@ -1589,6 +1629,126 @@ export default [
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
       symbol: "USD₮0",
+    },
+  },
+  {
+    id: "0x248e0DFCf7E7020f5CB9fAaB2C2547F183ea612C",
+    version: "v2",
+    name: "kdfksfkj",
+    symbol: "kfjdkfjs",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x9f887B60295500B840D890F985ECCf8b870364d8",
+    version: "v2",
+    name: "Blend xChain USDC Reserve",
+    symbol: "blend-xchain-usdc-reserve",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xae1ae3dAC810136e97003b6Aa0BeF5B064Ce8FaD",
+    version: "v2",
+    name: "Duplicated Key Arb",
+    symbol: "DPK.ARB.v2",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xB16F63bB4346d6099286Bb855f51478D58f155F9",
+    version: "v2",
+    name: "Maxshot USDT0",
+    symbol: "mUSDT0",
+    asset: {
+      address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      symbol: "USD₮0",
+    },
+  },
+  {
+    id: "0x707e4A3454977365e39139D1256fb0cCb4bE5D41",
+    version: "v2",
+    name: "Maxshot USDC",
+    symbol: "mUSDC",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xdE072b494d757041548F2c9c95DCf2B7F12F55b9",
+    version: "v2",
+    name: "HavenFi High Yield USDC",
+    symbol: "HFHY",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x48d2D31B16D9e9ca392307A828dEeA2B7E193b39",
+    version: "v2",
+    name: "Steakhouse High Yield Turbo",
+    symbol: "bbqXAUT0turbo",
+    asset: {
+      address: "0x40461291347e1eCbb09499F3371D3f17f10d7159",
+      symbol: "XAUt0",
+    },
+  },
+  {
+    id: "0x45cE56b690828bEa6b69A4Bd62A18FccDd88f167",
+    version: "v2",
+    name: "Blend xChain PT-sUSDai-19FEB2026",
+    symbol: "b-xchain-pt-sUSDai-19feb2026",
+    asset: {
+      address: "0x1BF1311FCF914A69Dd5805C9B06b72F80539cB3f",
+      symbol: "PT-sUSDai-19FEB2026",
+    },
+  },
+  {
+    id: "0x385a26306dD51B6719A567d9C26707F891318A98",
+    version: "v2",
+    name: "Blend xChain  PT-thBILL-19FEB2026",
+    symbol: "b-xchain-pt-thBILL-19feb2026",
+    asset: {
+      address: "0x9b3924f9652cabf3Db48B7B4C92E474c571B3Ab4",
+      symbol: "PT-thBILL-19FEB2026",
+    },
+  },
+  {
+    id: "0xBEEFFFFE0E9b26bBe3B5cE851539366991C3BF39",
+    version: "v2",
+    name: "Steakhouse High Yield Turbo XAUt0",
+    symbol: "bbqXAUT0turbo",
+    asset: {
+      address: "0x40461291347e1eCbb09499F3371D3f17f10d7159",
+      symbol: "XAUt0",
+    },
+  },
+  {
+    id: "0x0e1023647db0b5E7136B3B7Cfa885ee698a3d861",
+    version: "v2",
+    name: "ArbiAutoUSD",
+    symbol: "aaUSD",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x91CA976fFd86B0df6AD7C73C4C277430EaAb3852",
+    version: "v2",
+    name: "ARCHITECT Global Value",
+    symbol: "ARCHITECT GVI",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
     },
   },
 ] as const

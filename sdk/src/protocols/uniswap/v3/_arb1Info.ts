@@ -22,20 +22,24 @@ export default [
     symbol: "WBTC",
   },
   {
+    address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+    symbol: "USDT",
+  },
+  {
     address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
     symbol: "USDC",
   },
   {
-    address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
-    symbol: "USDT",
+    address: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
+    symbol: "GMX",
   },
   {
     address: "0x912CE59144191C1204E64559FE8253a0e49E6548",
     symbol: "ARB",
   },
   {
-    address: "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
-    symbol: "GMX",
+    address: "0x25118290e6A5f4139381D072181157035864099d",
+    symbol: "RAIN",
   },
   {
     address: "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
@@ -46,31 +50,27 @@ export default [
     symbol: "LINK",
   },
   {
-    address: "0x431402e8b9dE9aa016C743880e04E517074D8cEC",
-    symbol: "HEGIC",
-  },
-  {
     address: "0x81314B07b2f8796a477f1c31c92241ee8D86301D",
     symbol: "AVATAR",
-  },
-  {
-    address: "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
-    symbol: "AAVE",
-  },
-  {
-    address: "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
-    symbol: "CRV",
   },
   {
     address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
     symbol: "DAI",
   },
   {
+    address: "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40",
+    symbol: "tBTC",
+  },
+  {
+    address: "0x431402e8b9dE9aa016C743880e04E517074D8cEC",
+    symbol: "HEGIC",
+  },
+  {
     address: "0x9842989969687f7d249d01Cae1D2ff6b7b6b6D35",
     symbol: "CRYPTO",
   },
   {
-    address: "0xe80772Eaf6e2E18B651F160Bc9158b2A5caFCA65",
-    symbol: "USD+",
+    address: "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+    symbol: "ZRO",
   },
 ] as const
