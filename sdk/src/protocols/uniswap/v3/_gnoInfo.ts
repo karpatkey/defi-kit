@@ -30,6 +30,10 @@ export default [
     symbol: "BRZ",
   },
   {
+    address: "0x0AA1e96D2a46Ec6beB2923dE1E61Addf5F5f1dce",
+    symbol: "REG",
+  },
+  {
     address: "0x0d8c4901Dd270Fe101B8014A5dbECC4e4432eB1E",
     symbol: "s-BFN",
   },
@@ -126,6 +130,10 @@ export default [
     symbol: "s-ZUB",
   },
   {
+    address: "0xc5AAFFED01587600BE281Cac2fd3d6BCC2Edc56f",
+    symbol: "GLD",
+  },
+  {
     address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
     symbol: "EURe",
   },
@@ -144,6 +152,10 @@ export default [
   {
     address: "0xE0eD85F76D9C552478929fab44693E03F0899F23",
     symbol: "s-KPK",
+  },
+  {
+    address: "0xeeF7B1f06B092625228C835Dd5D5B14641D1e54A",
+    symbol: "s-gCRC",
   },
   {
     address: "0xf084b8F984912f0c62179Ca7EE998BeC90757B53",

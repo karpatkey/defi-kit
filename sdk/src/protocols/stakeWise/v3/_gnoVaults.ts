@@ -20,13 +20,13 @@ export default [
       "Serenita provides enterprise-grade staking services, prioritizing optimal performance while mitigating the risks associated with using majority clients. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nWe manage one of the best StakeWise Vaults on Ethereum, and aim to be a leading staking provider on Gnosis Chain as well.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
   },
   {
-    id: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
-    name: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
+    id: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
+    name: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
     description: null,
   },
   {
-    id: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
-    name: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
+    id: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
+    name: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
     description: null,
   },
   {
