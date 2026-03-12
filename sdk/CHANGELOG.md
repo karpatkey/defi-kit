@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.6](https://github.com/karpatkey/defi-kit/compare/v2.26.5...v2.26.6) (2026-03-12)
+
+
+### Bug Fixes
+
+* Balancer v2 schema ([#522](https://github.com/karpatkey/defi-kit/issues/522)) ([c787546](https://github.com/karpatkey/defi-kit/commit/c787546be6e7031265bb95fb6e452adb6284375c))
+
 ## [2.26.5](https://github.com/karpatkey/defi-kit/compare/v2.26.4...v2.26.5) (2026-02-12)
 
 
