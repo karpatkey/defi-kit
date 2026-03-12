@@ -10,40 +10,40 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xD4a0e0b9149BCee3C920d2E00b5dE09138fd8bb7",
-    variableDebtTokenAddress: "0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E",
+    variableDebtTokenAddress: "0x24e6e0795b3c7c71D965fCc4f371803d1c1DcA1E"
   },
   {
     symbol: "cbETH",
     token: "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
     usageAsCollateralEnabled: true,
-    borrowingEnabled: true,
+    borrowingEnabled: false,
     stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xcf3D55c10DB69f28fD1A75Bd73f3D8A2d9c595ad",
-    variableDebtTokenAddress: "0x1DabC36f19909425f654777249815c073E8Fd79F",
+    variableDebtTokenAddress: "0x1DabC36f19909425f654777249815c073E8Fd79F"
   },
   {
     symbol: "USDbC",
     token: "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
     usageAsCollateralEnabled: true,
-    borrowingEnabled: true,
+    borrowingEnabled: false,
     stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x0a1d576f3eFeF75b330424287a95A366e8281D54",
-    variableDebtTokenAddress: "0x7376b2F323dC56fCd4C191B34163ac8a84702DAB",
+    variableDebtTokenAddress: "0x7376b2F323dC56fCd4C191B34163ac8a84702DAB"
   },
   {
     symbol: "wstETH",
     token: "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
     usageAsCollateralEnabled: true,
-    borrowingEnabled: true,
+    borrowingEnabled: false,
     stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x99CBC45ea5bb7eF3a5BC08FB1B7E56bB2442Ef0D",
-    variableDebtTokenAddress: "0x41A7C3f5904ad176dACbb1D99101F59ef0811DC1",
+    variableDebtTokenAddress: "0x41A7C3f5904ad176dACbb1D99101F59ef0811DC1"
   },
   {
     symbol: "USDC",
@@ -54,18 +54,18 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x4e65fE4DbA92790696d040ac24Aa414708F5c0AB",
-    variableDebtTokenAddress: "0x59dca05b6c26dbd64b5381374aAaC5CD05644C28",
+    variableDebtTokenAddress: "0x59dca05b6c26dbd64b5381374aAaC5CD05644C28"
   },
   {
     symbol: "weETH",
     token: "0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
     usageAsCollateralEnabled: true,
-    borrowingEnabled: true,
+    borrowingEnabled: false,
     stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x7C307e128efA31F540F2E2d976C995E0B65F51F6",
-    variableDebtTokenAddress: "0x8D2e3F1f4b38AA9f1ceD22ac06019c7561B03901",
+    variableDebtTokenAddress: "0x8D2e3F1f4b38AA9f1ceD22ac06019c7561B03901"
   },
   {
     symbol: "cbBTC",
@@ -76,7 +76,7 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xBdb9300b7CDE636d9cD4AFF00f6F009fFBBc8EE6",
-    variableDebtTokenAddress: "0x05e08702028de6AaD395DC6478b554a56920b9AD",
+    variableDebtTokenAddress: "0x05e08702028de6AaD395DC6478b554a56920b9AD"
   },
   {
     symbol: "ezETH",
@@ -87,7 +87,7 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xDD5745756C2de109183c6B5bB886F9207bEF114D",
-    variableDebtTokenAddress: "0xbc4f5631f2843488792e4F1660d0A51Ba489bdBd",
+    variableDebtTokenAddress: "0xbc4f5631f2843488792e4F1660d0A51Ba489bdBd"
   },
   {
     symbol: "GHO",
@@ -98,7 +98,7 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x067ae75628177FD257c2B1e500993e1a0baBcBd1",
-    variableDebtTokenAddress: "0x38e59ADE183BbEb94583d44213c8f3297e9933e9",
+    variableDebtTokenAddress: "0x38e59ADE183BbEb94583d44213c8f3297e9933e9"
   },
   {
     symbol: "wrsETH",
@@ -109,7 +109,7 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x80a94C36747CF51b2FbabDfF045f6D22c1930eD1",
-    variableDebtTokenAddress: "0xe9541C77a111bCAa5dF56839bbC50894eba7aFcb",
+    variableDebtTokenAddress: "0xe9541C77a111bCAa5dF56839bbC50894eba7aFcb"
   },
   {
     symbol: "LBTC",
@@ -120,7 +120,7 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x90072A4aA69B5Eb74984Ab823EFC5f91e90b3a72",
-    variableDebtTokenAddress: "0xa2525b3f058846075506903d792d58C5a0D834c9",
+    variableDebtTokenAddress: "0xa2525b3f058846075506903d792d58C5a0D834c9"
   },
   {
     symbol: "EURC",
@@ -131,7 +131,7 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x90DA57E0A6C0d166Bf15764E03b83745Dc90025B",
-    variableDebtTokenAddress: "0x03D01595769333174036832e18fA2f17C74f8161",
+    variableDebtTokenAddress: "0x03D01595769333174036832e18fA2f17C74f8161"
   },
   {
     symbol: "AAVE",
@@ -142,18 +142,18 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0x67EAF2BeE4384a2f84Da9Eb8105C661C123736BA",
-    variableDebtTokenAddress: "0xcEC1Ea95dDEF7CFC27D3D9615E05b035af460978",
+    variableDebtTokenAddress: "0xcEC1Ea95dDEF7CFC27D3D9615E05b035af460978"
   },
   {
     symbol: "tBTC",
     token: "0x236aa50979D5f3De3Bd1Eeb40E81137F22ab794b",
     usageAsCollateralEnabled: true,
-    borrowingEnabled: true,
+    borrowingEnabled: false,
     stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xbcFFB4B3beADc989Bd1458740952aF6EC8fBE431",
-    variableDebtTokenAddress: "0x182cDEEC1D52ccad869d621bA422F449FA5809f5",
+    variableDebtTokenAddress: "0x182cDEEC1D52ccad869d621bA422F449FA5809f5"
   },
   {
     symbol: "syrupUSDC",
@@ -164,6 +164,6 @@ export default [
     isActive: true,
     isFrozen: false,
     aTokenAddress: "0xD7424238CcbE7b7198Ab3cFE232e0271E22da7bd",
-    variableDebtTokenAddress: "0x57B8C05ee2cD9d0143eBC21FBD9288C39B9F716c",
-  },
+    variableDebtTokenAddress: "0x57B8C05ee2cD9d0143eBC21FBD9288C39B9F716c"
+  }
 ] as const
