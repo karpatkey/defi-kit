@@ -57,6 +57,10 @@ export default [
         address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
         symbol: "rsETH",
       },
+      {
+        address: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+        symbol: "USDe",
+      },
     ],
   },
   {
@@ -204,6 +208,10 @@ export default [
       {
         address: "0x68749665FF8D2d112Fa859AA293F07A622782F38",
         symbol: "XAUt",
+      },
+      {
+        address: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+        symbol: "USDe",
       },
     ],
   },

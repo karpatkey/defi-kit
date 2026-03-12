@@ -2054,7 +2054,7 @@ export default [
   {
     id: "0x68Aea7b82Df6CcdF76235D46445Ed83f85F845A3",
     version: "v1.1",
-    name: "OEV-boosted USDC",
+    name: "Yearn USDC",
     symbol: "oevUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -4694,7 +4694,7 @@ export default [
   {
     id: "0xB885F6d448dA7E2C642Ec31190B629E40E87B069",
     version: "v2",
-    name: "Yearn OG USDC V2",
+    name: "Yearn OG USDC",
     symbol: "yOG-USDC-V2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -4755,7 +4755,7 @@ export default [
     id: "0xE571B648569619566CF6ce1060C97B621CB635D3",
     version: "v2",
     name: "Gauntlet USDT Frontier",
-    symbol: "gtusdcf",
+    symbol: "gtusdtf",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
       symbol: "USDT",

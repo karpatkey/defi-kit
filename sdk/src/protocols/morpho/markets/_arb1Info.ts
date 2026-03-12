@@ -377,6 +377,21 @@ export default [
     },
   },
   {
+    id: "0xdd2d0b25190bd7cb71819ff3d93c9be1efa7af1482955a7322ebac5c067c2cac",
+    name: "USDC / PT-USDai-18JUN2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0x611c72862063305A4f0106246c3Af85b6520FD3E",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x1cdDE40e29dA213f42A7fA109CcADCA372d9Ee1B",
+      symbol: "PT-USDai-18JUN2026",
+    },
+  },
+  {
     id: "0xdc3edb8cdf997ee55ac67d521f0fcb65a75272007abc5157ca1841b10635732e",
     name: "mJPYC / mKGLD",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -629,6 +644,21 @@ export default [
     collateralToken: {
       address: "0x35E5dB674D8e93a03d814FA0ADa70731efe8a4b9",
       symbol: "RLP",
+    },
+  },
+  {
+    id: "0xc7558303264f540f3e1d0a3ef2c40362503e4da8877c41366721d533dadf02a7",
+    name: "USDC / PT-USDai-18JUN2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0x5118e65f52327a72708e092b4722C1a9ee48CFe6",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x1cdDE40e29dA213f42A7fA109CcADCA372d9Ee1B",
+      symbol: "PT-USDai-18JUN2026",
     },
   },
   {
@@ -1049,6 +1079,36 @@ export default [
     collateralToken: {
       address: "0x940098b108fB7D0a7E374f6eDED7760787464609",
       symbol: "sUSDC",
+    },
+  },
+  {
+    id: "0x98225f86d3c0673d9b652b12f021f9bc6a09c9ca960680bea23c4de7e2a90f64",
+    name: "USD₮0 / PT-USDai-18JUN2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0x2252b2910f2A584C66E6215f31DBEDcC37b32AA9",
+    loanToken: {
+      address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      symbol: "USD₮0",
+    },
+    collateralToken: {
+      address: "0x1cdDE40e29dA213f42A7fA109CcADCA372d9Ee1B",
+      symbol: "PT-USDai-18JUN2026",
+    },
+  },
+  {
+    id: "0x958b40fcd0df023c156ec4a7eb8ffd47985b19d8bb02a36fb0af1bfc837fd605",
+    name: "USDC / PT-USDai-18JUN2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "915000000000000000",
+    oracle: "0x2252b2910f2A584C66E6215f31DBEDcC37b32AA9",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x1cdDE40e29dA213f42A7fA109CcADCA372d9Ee1B",
+      symbol: "PT-USDai-18JUN2026",
     },
   },
   {
@@ -1517,6 +1577,21 @@ export default [
     },
   },
   {
+    id: "0x59685fafa04ed3043e71a1000c91fa0eb5b1a490e3bd38f9eb9039f25eb7093f",
+    name: "USDC / twVSDT",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "770000000000000000",
+    oracle: "0x924098A96F5b01c6011469B2A61E69965d5D4B39",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x13310ADB7137CeF67B62EBD7A8B0BB3bdC7A9709",
+      symbol: "twVSDT",
+    },
+  },
+  {
     id: "0x5956f04c24a38b41ac48f63f972cbcfa24f98497f8d68e404942cee4e2f8c793",
     name: "MYRC / WETH",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -1652,6 +1727,21 @@ export default [
     },
   },
   {
+    id: "0x50d1b741a63204ce27bdf17e5a9300800c350ecb9278d92d2292a5713ea227e6",
+    name: "USDC / PT-sUSDai-18JUN2026",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "860000000000000000",
+    oracle: "0xfBd704607e27960BEe6dA5db68f142068215Cb7f",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x07bc5bD6cE9A17f0e7aa91E0Adbc9070dcB1d1dE",
+      symbol: "PT-sUSDai-18JUN2026",
+    },
+  },
+  {
     id: "0x4e0840dc8094be27e07689483023980b9df91a156d4bb876bedd8cc00f2498b9",
     name: "USD₮0 / PT-USDai-19FEB2026",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -1682,6 +1772,21 @@ export default [
     },
   },
   {
+    id: "0x4cd13184ac4f543040eb498202f006444985e26ff82bffc2dc05b8d22b97ee03",
+    name: "USDC / wVSDT",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "770000000000000000",
+    oracle: "0x924098A96F5b01c6011469B2A61E69965d5D4B39",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x63Fb9725B077Bafc32f2EBABCf04090901B79696",
+      symbol: "wVSDT",
+    },
+  },
+  {
     id: "0x4b9128a964529cb0bab20f470cbdc62fc69521dd2a3665671cb1c1d1aeb108b2",
     name: "unknown / MUX3LP-sUSDC-3",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -1694,6 +1799,21 @@ export default [
     collateralToken: {
       address: "0xb7500963a76f844C17FBb5d1d914F509AD863Db1",
       symbol: "MUX3LP-sUSDC-3",
+    },
+  },
+  {
+    id: "0x4af2748d71ac26350afde58339feffd84e03c93aaa69cba786b8dacdc9c0f374",
+    name: "WETH / VSDT",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x0000000000000000000000000000000000000000",
+    loanToken: {
+      address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      symbol: "WETH",
+    },
+    collateralToken: {
+      address: "0x8951D7D0E72349eA302928c853dD808A7ea1Eb06",
+      symbol: "VSDT",
     },
   },
   {
@@ -2159,6 +2279,21 @@ export default [
     collateralToken: {
       address: "0x47c031236e19d024b42f8AE6780E44A573170703",
       symbol: "GM",
+    },
+  },
+  {
+    id: "0x0e08ee683627c30374569dd44a3251f0757ac491c61fd91a97661aa26743f0dd",
+    name: "USDC / VSDT",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "770000000000000000",
+    oracle: "0x0000000000000000000000000000000000000000",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x8951D7D0E72349eA302928c853dD808A7ea1Eb06",
+      symbol: "VSDT",
     },
   },
   {

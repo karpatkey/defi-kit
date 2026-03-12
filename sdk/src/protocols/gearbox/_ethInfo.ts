@@ -151,4 +151,19 @@ export default [
       symbol: "WETH",
     },
   },
+  {
+    id: "0x683FAf5BAFd88d4c383cCaf3d61C26AF2E164409",
+    version: 310,
+    name: "WBTC",
+    symbol: "dWBTC-V3-0",
+    curator: "Gami Labs",
+    asset: {
+      address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      symbol: "WBTC",
+    },
+    underlyingToken: {
+      address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      symbol: "WBTC",
+    },
+  },
 ] as const

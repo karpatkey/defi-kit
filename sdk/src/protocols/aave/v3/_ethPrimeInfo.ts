@@ -5,7 +5,7 @@ export default [
     symbol: "wstETH",
     token: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
     usageAsCollateralEnabled: true,
-    borrowingEnabled: true,
+    borrowingEnabled: false,
     stableBorrowRateEnabled: false,
     isActive: true,
     isFrozen: false,

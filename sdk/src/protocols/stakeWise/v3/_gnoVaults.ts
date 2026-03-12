@@ -20,13 +20,13 @@ export default [
       "Serenita provides enterprise-grade staking services, prioritizing optimal performance while mitigating the risks associated with using majority clients. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nWe manage one of the best StakeWise Vaults on Ethereum, and aim to be a leading staking provider on Gnosis Chain as well.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
   },
   {
-    id: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
-    name: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
+    id: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
+    name: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
     description: null,
   },
   {
-    id: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
-    name: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
+    id: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
+    name: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
     description: null,
   },
   {
@@ -87,9 +87,15 @@ export default [
       "Gnosis Vault by Stakers.space | Fee 10% | Learn more about Gnosis staking at https://stakers.space/gnosis-staking.",
   },
   {
+    id: "0x44cc6c8229f1873660012ba36a040b89d83f2cf8",
+    name: "SLH",
+    description: null,
+  },
+  {
     id: "0xe275ce985bebf24f30548ab56c66861a802b5598",
-    name: "CNCVault1",
-    description: "Stacked by the Chartreuse Node Crew",
+    name: " CNC Genesis",
+    description:
+      "The Gateway to AI & Cloud Sovereignty\n\nCNC brings together powerful staking and real infrastructure built for demanding users. It’s designed to deliver reliability for critical operations and AI-driven workflows.\n\nWhat you get with Genesis vault staking:\n\n- Full AI Agents Suite – Unlock the complete CNC AI Platform, including advanced autonomous AI agents.\n\n- CNC Cloud Suite – Access high-performance Cloud Gaming, secure storage, and computing resources.\n\n- VIP Membership – Eligibility for private ultra-low-fee vaults and priority technical support.\n\nGenesis vault powers the CNC ecosystem, combining premium staking with next-generation decentralized intelligence.\n\nTo activate your Premium access (Cloud & AI) after staking, contact our team at joecnc@proton.me",
   },
   {
     id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
@@ -102,9 +108,10 @@ export default [
     description: null,
   },
   {
-    id: "0xe77141d0047691d4464fe1f3d3615ca10b74830b",
-    name: "CNCVault2",
-    description: "Stacked by the Chartreuse Node Crew",
+    id: "0x745847818a5790cb406c3040a386907559869be2",
+    name: " CNC Core - 9% Fee",
+    description:
+      "Industrial-Grade Staking & Performance\n\nPerformance Focused. Yield Optimized. CNC Core vault is powered by our Tier-1 enterprise infrastructure: ultra-fast fiber connectivity, NVMe SSD storage, and dedicated UPS redundancy. It is engineered for stakers who prioritize technical stability and maximum net rewards.\n\nCore Features:\n\n- Tier-1 Infrastructure : Runs on the same high-performance hardware and network as our Genesis Vault.\n- Uptime : Continuous 24/7 monitoring by on-call engineers for immediate intervention.\n- Fee Structure : A streamlined 9% fee designed to maximize your staking APR by removing additional software layers.\n\nThe strategic choice for dedicated stakers seeking professional-grade hardware and a minimal fee \nfootprint.",
   },
   {
     id: "0xc554bdbbed28d34e3675c6c53dc0ab645cf285e0",
@@ -115,5 +122,11 @@ export default [
     id: "0x1f7e70d661279a8bb657417bbc71b82b948752b2",
     name: "Dappnode Test 2",
     description: null,
+  },
+  {
+    id: "0xb221ea4b710043f3530d2bc912dbef6cab2b5c3d",
+    name: "Day One Law Team&Client Vault",
+    description:
+      "At Day One Law, we don’t just advise on crypto—we use the products, run the infrastructure, and stake on-chain alongside our clients. Our private Stakewise vault on Gnosis Chain is exclusively for our clients and team members, reinforcing our commitment to supporting the ecosystems that matter.\n\nIf you’re already working with us, you’re in. If not, and you’re looking for a legal partner who actually understands the tech, uses the protocols, and aligns with builders and investors in the space, let’s talk.\n\nWe support founders, investors, and operators pushing crypto forward—structuring their projects, securing regulatory clarity, and aligning incentives for long-term success. Our clients get real legal and strategic value, plus access to exclusive opportunities like this.\n\nWe’re not just advisors—we’re on-chain, active participants in the same products and protocols shaping the future of decentralized finance. If that’s the kind of partner you want, reach out.",
   },
 ] as const

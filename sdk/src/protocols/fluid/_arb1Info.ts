@@ -41,4 +41,9 @@ export default [
     token: "0x7dfF72693f6A4149b17e7C6314655f6A9F7c8B33",
     fToken: "0x037dFf1C12805707d7c29F163E0F09fC9102657A",
   },
+  {
+    symbol: "PYUSD",
+    token: "0x46850aD61C2B7d64d08c9C754F45254596696984",
+    fToken: "0x24BB6C093e15658AcE2C34bEe9ac16F0A6ED2b01",
+  },
 ] as const

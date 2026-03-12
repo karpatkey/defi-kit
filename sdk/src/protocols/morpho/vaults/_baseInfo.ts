@@ -1764,8 +1764,8 @@ export default [
   {
     id: "0xE74c499fA461AF1844fCa84204490877787cED56",
     version: "v1.1",
-    name: "High Yield Clearstar USDC",
-    symbol: "HYCSUSDC",
+    name: "Yield Clearstar USDC",
+    symbol: "YCSUSDC",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",
@@ -4564,8 +4564,8 @@ export default [
   {
     id: "0x4AE4FB344CeD876bddCeaB2A2A7a8a63089444b3",
     version: "v2",
-    name: "fr fr",
-    symbol: "fr fr",
+    name: "fr fr 2",
+    symbol: "frfrUSDC",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",
@@ -6969,6 +6969,16 @@ export default [
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",
+    },
+  },
+  {
+    id: "0x49deC2B14F637A1055553A6513fEEF505cCEA084",
+    version: "v2",
+    name: "a",
+    symbol: "b ",
+    asset: {
+      address: "0x4200000000000000000000000000000000000006",
+      symbol: "WETH",
     },
   },
   {
