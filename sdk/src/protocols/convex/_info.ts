@@ -6,3660 +6,3660 @@ export default [
     id: "0",
     crvLPToken: "0x845838DF265Dcd2c412A1Dc9e959c7d08537f8a2",
     cvxDepositToken: "0x32512Bee3848bfcBb7bEAf647aa697a100f3b706",
-    rewarder: "0xf34DFF761145FF0B05e917811d488B441F33a968"
+    rewarder: "0xf34DFF761145FF0B05e917811d488B441F33a968",
   },
   {
     name: "cDAI+cUSDC+USDT",
     id: "1",
     crvLPToken: "0x9fC689CCaDa600B6DF723D9E47D84d76664a1F23",
     cvxDepositToken: "0xA1c3492b71938E144ad8bE4c2fB6810b01A43dD8",
-    rewarder: "0x8B55351ea358e5Eda371575B031ee24F462d503e"
+    rewarder: "0x8B55351ea358e5Eda371575B031ee24F462d503e",
   },
   {
     name: "crvPlain3andSUSD",
     id: "4",
     crvLPToken: "0xC25a3A3b969415c80451098fa907EC722572917F",
     cvxDepositToken: "0x11D200ef1409cecA8D6d23e6496550f707772F11",
-    rewarder: "0x22eE18aca7F3Ee920D01F25dA85840D12d98E8Ca"
+    rewarder: "0x22eE18aca7F3Ee920D01F25dA85840D12d98E8Ca",
   },
   {
     name: "ypaxCrv",
     id: "5",
     crvLPToken: "0xD905e2eaeBe188fc92179b6350807D8bd91Db0D8",
     cvxDepositToken: "0x2eA94b0d3349A284488ACF2934E494b2f58ef647",
-    rewarder: "0xe3DaafC8C14147d5B4A7a56F0BfdED240158e51e"
+    rewarder: "0xe3DaafC8C14147d5B4A7a56F0BfdED240158e51e",
   },
   {
     name: "crvRenWBTC",
     id: "6",
     crvLPToken: "0x49849C98ae39Fff122806C06791Fa73784FB3675",
     cvxDepositToken: "0x74b79021Ea6De3f0D1731fb8BdfF6eE7DF10b8Ae",
-    rewarder: "0x8E299C62EeD737a5d5a53539dF37b5356a27b07D"
+    rewarder: "0x8E299C62EeD737a5d5a53539dF37b5356a27b07D",
   },
   {
     name: "crvRenWSBTC",
     id: "7",
     crvLPToken: "0x075b1bb99792c9E1041bA13afEf80C91a1e70fB3",
     cvxDepositToken: "0xbA723E335eC2939D52a2efcA2a8199cb4CB93cC3",
-    rewarder: "0xd727A5A6D1C7b31Ff9Db4Db4d24045B7dF0CFF93"
+    rewarder: "0xd727A5A6D1C7b31Ff9Db4Db4d24045B7dF0CFF93",
   },
   {
     name: "hCRV",
     id: "8",
     crvLPToken: "0xb19059ebb43466C323583928285a49f558E572Fd",
     cvxDepositToken: "0x33c00bF8CFDf42929E0884d230A55F963221f8f3",
-    rewarder: "0x618BD6cBA676a46958c63700C04318c84a7b7c0A"
+    rewarder: "0x618BD6cBA676a46958c63700C04318c84a7b7c0A",
   },
   {
     name: "3Crv",
     id: "9",
     crvLPToken: "0x6c3F90f043a72FA612cbac8115EE7e52BDe6E490",
     cvxDepositToken: "0x30D9410ED1D5DA1F6C8391af5338C93ab8d4035C",
-    rewarder: "0x689440f2Ff927E1f24c72F1087E1FAF471eCe1c8"
+    rewarder: "0x689440f2Ff927E1f24c72F1087E1FAF471eCe1c8",
   },
   {
     name: "gusd3CRV",
     id: "10",
     crvLPToken: "0xD2967f45c4f384DEEa880F807Be904762a3DeA07",
     cvxDepositToken: "0x15c2471ef46Fa721990730cfa526BcFb45574576",
-    rewarder: "0x7A7bBf95C44b144979360C3300B54A7D34b44985"
+    rewarder: "0x7A7bBf95C44b144979360C3300B54A7D34b44985",
   },
   {
     name: "usdk3CRV",
     id: "12",
     crvLPToken: "0x97E2768e8E73511cA874545DC5Ff8067eB19B787",
     cvxDepositToken: "0x47941F99F4371CC26637CaEdBbd8Ba5F4bfE5149",
-    rewarder: "0xa50e9071aCaD20b31cd2bbe4dAa816882De82BBe"
+    rewarder: "0xa50e9071aCaD20b31cd2bbe4dAa816882De82BBe",
   },
   {
     name: "musd3CRV",
     id: "14",
     crvLPToken: "0x1AEf73d49Dedc4b1778d0706583995958Dc862e6",
     cvxDepositToken: "0xd34d466233c5195193dF712936049729140DBBd7",
-    rewarder: "0xDBFa6187C79f4fE4Cda20609E75760C5AaE88e52"
+    rewarder: "0xDBFa6187C79f4fE4Cda20609E75760C5AaE88e52",
   },
   {
     name: "rsv3CRV",
     id: "15",
     crvLPToken: "0xC2Ee6b0334C261ED60C72f6054450b61B8f18E35",
     cvxDepositToken: "0x8b876C2C02B1f2Ac6Ec207B7f2f06034A4316A87",
-    rewarder: "0xedfCCF611D7c40F43e77a1340cE2C29EEEC27205"
+    rewarder: "0xedfCCF611D7c40F43e77a1340cE2C29EEEC27205",
   },
   {
     name: "dusd3CRV",
     id: "17",
     crvLPToken: "0x3a664Ab939FD8482048609f652f9a0B0677337B9",
     cvxDepositToken: "0x06f4fFa5C3636AaA5C30B3DB97bfd1cd9Ac24A19",
-    rewarder: "0x1992b82A8cCFC8f89785129D6403b13925d6226E"
+    rewarder: "0x1992b82A8cCFC8f89785129D6403b13925d6226E",
   },
   {
     name: "eursCRV",
     id: "22",
     crvLPToken: "0x194eBd173F6cDacE046C53eACcE9B953F28411d1",
     cvxDepositToken: "0xd7E2b9494c529b42Dea53EF6a237C16502E6A927",
-    rewarder: "0xcB8F69E0064d8cdD29cbEb45A14cf771D904BcD3"
+    rewarder: "0xcB8F69E0064d8cdD29cbEb45A14cf771D904BcD3",
   },
   {
     name: "eCRV",
     id: "23",
     crvLPToken: "0xA3D87FffcE63B53E0d54fAa1cc983B7eB0b74A9c",
     cvxDepositToken: "0xAF1d4C576bF55f6aE493AEebAcC3a227675e5B98",
-    rewarder: "0x192469CadE297D6B21F418cFA8c366b63FFC9f9b"
+    rewarder: "0x192469CadE297D6B21F418cFA8c366b63FFC9f9b",
   },
   {
     name: "a3CRV",
     id: "24",
     crvLPToken: "0xFd2a8fA60Abd58Efe3EeE34dd494cD491dC14900",
     cvxDepositToken: "0x23F224C37C3A69A058d86a54D3f561295A93d542",
-    rewarder: "0xE82c1eB4BC6F92f85BF7EB6421ab3b882C3F5a7B"
+    rewarder: "0xE82c1eB4BC6F92f85BF7EB6421ab3b882C3F5a7B",
   },
   {
     name: "steCRV",
     id: "25",
     crvLPToken: "0x06325440D014e39736583c165C2963BA99fAf14E",
     cvxDepositToken: "0x9518c9063eB0262D791f38d8d6Eb0aca33c63ed0",
-    rewarder: "0x0A760466E1B4621579a82a39CB56Dda2F4E70f03"
+    rewarder: "0x0A760466E1B4621579a82a39CB56Dda2F4E70f03",
   },
   {
     name: "saCRV",
     id: "26",
     crvLPToken: "0x02d341CcB60fAaf662bC0554d13778015d1b285C",
     cvxDepositToken: "0x09CCD0892b696AB21436e51588a7a7f8b649733d",
-    rewarder: "0xF86AE6790654b70727dbE58BF1a863B270317fD0"
+    rewarder: "0xF86AE6790654b70727dbE58BF1a863B270317fD0",
   },
   {
     name: "ankrCRV",
     id: "27",
     crvLPToken: "0xaA17A236F2bAdc98DDc0Cf999AbB47D47Fc0A6Cf",
     cvxDepositToken: "0x7E96955b66c89B931BBDAf187740Cc0fF2602F21",
-    rewarder: "0x8798b81b0261934aa850C8de8622472bfdc143F4"
+    rewarder: "0x8798b81b0261934aa850C8de8622472bfdc143F4",
   },
   {
     name: "usdp3CRV",
     id: "28",
     crvLPToken: "0x7Eb40E450b9655f4B3cC4259BCC731c63ff55ae6",
     cvxDepositToken: "0x7a5dC1FA2e1B10194bD2e2e9F1A224971A681444",
-    rewarder: "0x24DfFd1949F888F91A0c8341Fc98a3F280a782a8"
+    rewarder: "0x24DfFd1949F888F91A0c8341Fc98a3F280a782a8",
   },
   {
     name: "ib3CRV",
     id: "29",
     crvLPToken: "0x5282a4eF67D9C33135340fB3289cc1711c13638C",
     cvxDepositToken: "0x912EC00eaEbf3820a9B0AC7a5E15F381A1C91f22",
-    rewarder: "0x3E03fFF82F77073cc590b656D42FceB12E4910A8"
+    rewarder: "0x3E03fFF82F77073cc590b656D42FceB12E4910A8",
   },
   {
     name: "linkCRV",
     id: "30",
     crvLPToken: "0xcee60cFa923170e4f8204AE08B4fA6A3F5656F3a",
     cvxDepositToken: "0xD37969740d78C94C648d74671B8BE31eF43c30aB",
-    rewarder: "0x9700152175dc22E7d1f3245fE3c1D2cfa3602548"
+    rewarder: "0x9700152175dc22E7d1f3245fE3c1D2cfa3602548",
   },
   {
     name: "TUSD3CRV-f",
     id: "31",
     crvLPToken: "0xEcd5e75AFb02eFa118AF914515D6521aaBd189F1",
     cvxDepositToken: "0x0A2eA49EB5F9e23058deffD509D13DDd553c2A19",
-    rewarder: "0x308b48F037AAa75406426dACFACA864ebd88eDbA"
+    rewarder: "0x308b48F037AAa75406426dACFACA864ebd88eDbA",
   },
   {
     name: "FRAX3CRV-f",
     id: "32",
     crvLPToken: "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B",
     cvxDepositToken: "0xbE0F6478E0E4894CFb14f32855603A083A57c7dA",
-    rewarder: "0xB900EF131301B307dB5eFcbed9DBb50A3e209B2e"
+    rewarder: "0xB900EF131301B307dB5eFcbed9DBb50A3e209B2e",
   },
   {
     name: "LUSD3CRV-f",
     id: "33",
     crvLPToken: "0xEd279fDD11cA84bEef15AF5D39BB4d4bEE23F0cA",
     cvxDepositToken: "0xFB9B2f06FDb404Fd3E2278E9A9edc8f252F273d0",
-    rewarder: "0x2ad92A7aE036a038ff02B96c88de868ddf3f8190"
+    rewarder: "0x2ad92A7aE036a038ff02B96c88de868ddf3f8190",
   },
   {
     name: "BUSD3CRV-f",
     id: "34",
     crvLPToken: "0x4807862AA8b2bF68830e4C8dc86D0e9A998e085a",
     cvxDepositToken: "0x02D784f98A312aF3e2771297Feff1Da8273e4F29",
-    rewarder: "0xbD223812d360C9587921292D0644D18aDb6a2ad0"
+    rewarder: "0xbD223812d360C9587921292D0644D18aDb6a2ad0",
   },
   {
     name: "rCRV",
     id: "35",
     crvLPToken: "0x53a901d48795C58f485cBB38df08FA96a24669D5",
     cvxDepositToken: "0x7ADd8D0E923CB692DF6bC65d96d510f0E2fC37af",
-    rewarder: "0x61dB6c2321f784c8fAb8d5eF80f58F27C831dCc8"
+    rewarder: "0x61dB6c2321f784c8fAb8d5eF80f58F27C831dCc8",
   },
   {
     name: "alUSD3CRV-f",
     id: "36",
     crvLPToken: "0x43b4FdFD4Ff969587185cDB6f0BD875c5Fc83f8c",
     cvxDepositToken: "0xCA3D9F45FfA69ED454E66539298709cb2dB8cA61",
-    rewarder: "0x02E2151D4F351881017ABdF2DD2b51150841d5B3"
+    rewarder: "0x02E2151D4F351881017ABdF2DD2b51150841d5B3",
   },
   {
     name: "crv3crypto",
     id: "38",
     crvLPToken: "0xc4AD29ba4B3c580e6D59105FFf484999997675Ff",
     cvxDepositToken: "0x903C9974aAA431A765e60bC07aF45f0A1B3b61fb",
-    rewarder: "0x9D5C5E364D81DaB193b72db9E9BE9D8ee669B652"
+    rewarder: "0x9D5C5E364D81DaB193b72db9E9BE9D8ee669B652",
   },
   {
     name: "EURT-f",
     id: "39",
     crvLPToken: "0xFD5dB7463a3aB53fD211b4af195c5BCCC1A03890",
     cvxDepositToken: "0x2b2175AC371Ec2900AC39fb87452340F65CC9895",
-    rewarder: "0xD814BFC091111E1417a669672144aFFAA081c3CE"
+    rewarder: "0xD814BFC091111E1417a669672144aFFAA081c3CE",
   },
   {
     name: "MIM-3LP3CRV-f",
     id: "40",
     crvLPToken: "0x5a6A4D54456819380173272A5E8E9B9904BdF41B",
     cvxDepositToken: "0xabB54222c2b77158CC975a2b715a3d703c256F05",
-    rewarder: "0xFd5AbF66b003881b88567EB9Ed9c651F14Dc4771"
+    rewarder: "0xFd5AbF66b003881b88567EB9Ed9c651F14Dc4771",
   },
   {
     name: "cvxcrv-f",
     id: "41",
     crvLPToken: "0x9D0464996170c6B9e75eED71c68B99dDEDf279e8",
     cvxDepositToken: "0x8FDF7cabfEc73d5FfD1447867834b4cf39B745B7",
-    rewarder: "0x0392321e86F42C2F94FBb0c6853052487db521F0"
+    rewarder: "0x0392321e86F42C2F94FBb0c6853052487db521F0",
   },
   {
     name: "ibJPY+sJPY-f",
     id: "42",
     crvLPToken: "0x8818a9bb44Fbf33502bE7c15c500d0C783B73067",
     cvxDepositToken: "0xF527FF4d2f8D84ec51D31C6F533B8cC78AFf6918",
-    rewarder: "0xbA8fE590498ed24D330Bb925E69913b1Ac35a81E"
+    rewarder: "0xbA8fE590498ed24D330Bb925E69913b1Ac35a81E",
   },
   {
     name: "ibGBP+sGBP-f",
     id: "43",
     crvLPToken: "0xD6Ac1CB9019137a896343Da59dDE6d097F710538",
     cvxDepositToken: "0xe6b9b86a593E6c33fa3F0887753cdC39EA49B246",
-    rewarder: "0x51a16DA36c79E28dD3C8c0c19214D8aF413984Aa"
+    rewarder: "0x51a16DA36c79E28dD3C8c0c19214D8aF413984Aa",
   },
   {
     name: "ibAUD+sAUD-f",
     id: "44",
     crvLPToken: "0x3F1B0278A9ee595635B61817630cC19DE792f506",
     cvxDepositToken: "0xBec1Fa170974F0B38Eb76D8ca87053AbD5cedffF",
-    rewarder: "0xb1Fae59F23CaCe4949Ae734E63E42168aDb0CcB3"
+    rewarder: "0xb1Fae59F23CaCe4949Ae734E63E42168aDb0CcB3",
   },
   {
     name: "ibEUR+sEUR-f",
     id: "45",
     crvLPToken: "0x19b080FE1ffA0553469D20Ca36219F17Fcf03859",
     cvxDepositToken: "0x864510e93c38C771adC1B67308cE0b7c4AA1AA9e",
-    rewarder: "0xCd0559ADb6fAa2fc83aB21Cf4497c3b9b45bB29f"
+    rewarder: "0xCd0559ADb6fAa2fc83aB21Cf4497c3b9b45bB29f",
   },
   {
     name: "ibCHF+sCHF-f",
     id: "46",
     crvLPToken: "0x9c2C8910F113181783c249d8F6Aa41b51Cde0f0c",
     cvxDepositToken: "0xcd555A686486160D815C89D92EE69A88E356f34C",
-    rewarder: "0xa5A5905efc55B05059eE247d5CaC6DD6791Cfc33"
+    rewarder: "0xa5A5905efc55B05059eE247d5CaC6DD6791Cfc33",
   },
   {
     name: "ibKRW+sKRW-f",
     id: "47",
     crvLPToken: "0x8461A004b50d321CB22B7d034969cE6803911899",
     cvxDepositToken: "0xAA4e7d24230B1F3AF324C7574ABD5D28525807cA",
-    rewarder: "0x8F18C0AF0d7d511E8Bdc6B3c64926B04EDfE4892"
+    rewarder: "0x8F18C0AF0d7d511E8Bdc6B3c64926B04EDfE4892",
   },
   {
     name: "cvxRT",
     id: "48",
     crvLPToken: "0xB15fFb543211b558D40160811e5DcBcd7d5aaac9",
     cvxDepositToken: "0x281C17920DaB8B2Cb3ce631E2D53c8ccE94262B4",
-    rewarder: "0xc3628b8FAaDe10aCeAe88c9b982cE0AAc9bBaaD3"
+    rewarder: "0xc3628b8FAaDe10aCeAe88c9b982cE0AAc9bBaaD3",
   },
   {
     name: "crvEURSUSDC",
     id: "54",
     crvLPToken: "0x3D229E1B4faab62F621eF2F6A610961f7BD7b23B",
     cvxDepositToken: "0x18F320B124A80ee2FA491e1438CdA771c3d8c84b",
-    rewarder: "0xb0c1B7b83Baae51284B8BbBa02Ec37742440199d"
+    rewarder: "0xb0c1B7b83Baae51284B8BbBa02Ec37742440199d",
   },
   {
     name: "crvEURTUSD",
     id: "55",
     crvLPToken: "0x3b6831c0077a1e44ED0a21841C3bC4dC11bCE833",
     cvxDepositToken: "0x410ACa1a116cCc718e9A0BDd8080655a52f1FAC4",
-    rewarder: "0xD2B756Af4E345A8657C0656C148aDCD3000C97A4"
+    rewarder: "0xD2B756Af4E345A8657C0656C148aDCD3000C97A4",
   },
   {
     name: "OUSD3CRV-f",
     id: "56",
     crvLPToken: "0x87650D7bbfC3A9F10587d7778206671719d9910D",
     cvxDepositToken: "0xd1daFC25bf672a52eF9c092258389dC2AD078309",
-    rewarder: "0x7D536a737C13561e0D2Decf1152a653B4e615158"
+    rewarder: "0x7D536a737C13561e0D2Decf1152a653B4e615158",
   },
   {
     name: "pax-usdp3CRV-f",
     id: "57",
     crvLPToken: "0xc270b3B858c335B6BA5D5b10e2Da8a09976005ad",
     cvxDepositToken: "0x918696AB70bF4F9a22497fC73903F3498a885980",
-    rewarder: "0x500E169c15961DE8798Edb52e0f88a8662d30EC5"
+    rewarder: "0x500E169c15961DE8798Edb52e0f88a8662d30EC5",
   },
   {
     name: "3EURpool-f",
     id: "60",
     crvLPToken: "0xb9446c4Ef5EBE66268dA6700D26f96273DE3d571",
     cvxDepositToken: "0xC98786A97d667Fe67AAe694BD7949813A73f1BF0",
-    rewarder: "0x4a9b7eDD67f58654a2c33B587f98c5709AC7d482"
+    rewarder: "0x4a9b7eDD67f58654a2c33B587f98c5709AC7d482",
   },
   {
     name: "DOLA3POOL3CRV-f",
     id: "62",
     crvLPToken: "0xAA5A67c256e27A5d80712c51971408db3370927D",
     cvxDepositToken: "0xb3E8f3D7Ec208a032178880955f6c877479d1FDd",
-    rewarder: "0x835f69e58087E5B6bffEf182fe2bf959Fe253c3c"
+    rewarder: "0x835f69e58087E5B6bffEf182fe2bf959Fe253c3c",
   },
   {
     name: "RAI3CRV",
     id: "63",
     crvLPToken: "0x6BA5b4e438FA0aAf7C1bD179285aF65d13bD3D90",
     cvxDepositToken: "0x2937Ef019db60C826Fe6141EB300847f85E66956",
-    rewarder: "0x29B91c6CEC4F43aFdb6f6d71FAf1C03d6b712f55"
+    rewarder: "0x29B91c6CEC4F43aFdb6f6d71FAf1C03d6b712f55",
   },
   {
     name: "crvCVXETH",
     id: "64",
     crvLPToken: "0x3A283D9c08E8b55966afb64C515f5143cf907611",
     cvxDepositToken: "0x0bC857f97c0554d1d0D602b56F2EEcE682016fBA",
-    rewarder: "0xb1Fb0BA0676A1fFA83882c7F4805408bA232C1fA"
+    rewarder: "0xb1Fb0BA0676A1fFA83882c7F4805408bA232C1fA",
   },
   {
     name: "crvXAUTUSD",
     id: "65",
     crvLPToken: "0x8484673cA7BfF40F82B041916881aeA15ee84834",
     cvxDepositToken: "0x7B00e822F9E05882F9e088655e738F656C99C53A",
-    rewarder: "0x6cb1933E49C48AE8ec12d39aD7D85695b247deDB"
+    rewarder: "0x6cb1933E49C48AE8ec12d39aD7D85695b247deDB",
   },
   {
     name: "crvSPELLETH",
     id: "66",
     crvLPToken: "0x8282BD15dcA2EA2bDf24163E8f2781B30C43A2ef",
     cvxDepositToken: "0xe87f447ef9B76905A25ab8160c7EF66864f4984A",
-    rewarder: "0xb2f0bB6352417c1Bf017862aC165E67623611aF3"
+    rewarder: "0xb2f0bB6352417c1Bf017862aC165E67623611aF3",
   },
   {
     name: "crvTETH",
     id: "67",
     crvLPToken: "0xCb08717451aaE9EF950a2524E33B6DCaBA60147B",
     cvxDepositToken: "0x1766EDBa8CD066e3eB1912D2b8c7E2c59A3D7Ece",
-    rewarder: "0x3E91E7c822AC8b4b7905d108c3faCF22A3ee5d2c"
+    rewarder: "0x3E91E7c822AC8b4b7905d108c3faCF22A3ee5d2c",
   },
   {
     name: "YFIETH-f",
     id: "68",
     crvLPToken: "0x29059568bB40344487d62f7450E78b8E6C74e0e5",
     cvxDepositToken: "0x73b78A30A1D249D88Ad6CCb80B1e0b357Fb4b5Ea",
-    rewarder: "0x3207bDc327aB67f182B82948fd3DF757F8771324"
+    rewarder: "0x3207bDc327aB67f182B82948fd3DF757F8771324",
   },
   {
     name: "FXSETH-f",
     id: "69",
     crvLPToken: "0x90244F43D548a4f8dFecfAD91a193465B1fad6F7",
     cvxDepositToken: "0x7E72dDA16B916c986972B1c9F3fbfAe67D96D733",
-    rewarder: "0xAA0e8Ef60BaBda02Ef11c89a061D82b1D61a462C"
+    rewarder: "0xAA0e8Ef60BaBda02Ef11c89a061D82b1D61a462C",
   },
   {
     name: "ag+ib-EUR-f",
     id: "70",
     crvLPToken: "0xB37D6c07482Bc11cd28a1f11f1a6ad7b66Dec933",
     cvxDepositToken: "0xbAff5309fa5bf4556cddf83BD729A18Dc8058a9f",
-    rewarder: "0x769499A7B4093b2AA35E3F3C00B1ab5dc8EF7146"
+    rewarder: "0x769499A7B4093b2AA35E3F3C00B1ab5dc8EF7146",
   },
   {
     name: "cvxFXSFXS-f",
     id: "72",
     crvLPToken: "0xF3A43307DcAFa93275993862Aae628fCB50dC768",
     cvxDepositToken: "0xCB6D873f7BbE57584a9b08380901Dc200Be7CE74",
-    rewarder: "0xf27AFAD0142393e4b3E5510aBc5fe3743Ad669Cb"
+    rewarder: "0xf27AFAD0142393e4b3E5510aBc5fe3743Ad669Cb",
   },
   {
     name: "rETHwstETH-f",
     id: "73",
     crvLPToken: "0x447Ddd4960d9fdBF6af9a790560d0AF76795CB08",
     cvxDepositToken: "0x38C9E856C289594F8E0F095FF396142F19004cdb",
-    rewarder: "0x5c463069b99AfC9333F4dC2203a9f0c6C7658cCc"
+    rewarder: "0x5c463069b99AfC9333F4dC2203a9f0c6C7658cCc",
   },
   {
     name: "BADGERWBTC-f",
     id: "74",
     crvLPToken: "0x137469B55D1f15651BA46A89D0588e97dD0B6562",
     cvxDepositToken: "0xe7f50e96e0FE8285D3B27B3b9A464a2102C9708c",
-    rewarder: "0x36c7E7F9031647A74687ce46A8e16BcEA84f3865"
+    rewarder: "0x36c7E7F9031647A74687ce46A8e16BcEA84f3865",
   },
   {
     name: "PWRD3CRV-f",
     id: "76",
     crvLPToken: "0xbcb91E689114B9Cc865AD7871845C95241Df4105",
     cvxDepositToken: "0x80D68884f425f73395EA0a7476a786De38Ca1306",
-    rewarder: "0xC4d009E61a904BfDf39144295F12870E8305D4d9"
+    rewarder: "0xC4d009E61a904BfDf39144295F12870E8305D4d9",
   },
   {
     name: "silofrax-f",
     id: "78",
     crvLPToken: "0x2302aaBe69e6E7A1b0Aa23aAC68fcCB8A4D2B460",
     cvxDepositToken: "0x77d869e95a08b6b88f8f87DeEdEd5e9b8bb30B29",
-    rewarder: "0xE259d085f55825624bBA8571eD20984c125Ba720"
+    rewarder: "0xE259d085f55825624bBA8571eD20984c125Ba720",
   },
   {
     name: "CADCUSDC-f",
     id: "79",
     crvLPToken: "0x1054Ff2ffA34c055a13DCD9E0b4c0cA5b3aecEB9",
     cvxDepositToken: "0x98A0f1541684542Da2455A965dC8CEA1D5f26c24",
-    rewarder: "0x8731A63dD6aF83c044F623A89ABD50A8bb5a5022"
+    rewarder: "0x8731A63dD6aF83c044F623A89ABD50A8bb5a5022",
   },
   {
     name: "LFTETH-f",
     id: "81",
     crvLPToken: "0x401322B9FDdba8c0a8D40fbCECE1D1752C12316B",
     cvxDepositToken: "0x38ee3497D0A27Bb2B95cd93FD344Fde1768F5fdD",
-    rewarder: "0x87d258F95Cf6D6d13E3c9D5365dD7B46EF050FbF"
+    rewarder: "0x87d258F95Cf6D6d13E3c9D5365dD7B46EF050FbF",
   },
   {
     name: "FPIFRAX-f",
     id: "82",
     crvLPToken: "0x4704aB1fb693ce163F7c9D3A31b3FF4eaF797714",
     cvxDepositToken: "0x28ebAb5Ecbc3efB4116205c2D3237d8b16976B06",
-    rewarder: "0x1A8D59cCbbC81ecD556B86969680faD2F238F18f"
+    rewarder: "0x1A8D59cCbbC81ecD556B86969680faD2F238F18f",
   },
   {
     name: "SDTETH-f",
     id: "83",
     crvLPToken: "0x6359B6d3e327c497453d4376561eE276c6933323",
     cvxDepositToken: "0xFde6A79B7bc5D0500Ee9902fE3BD5D3FDC968379",
-    rewarder: "0xeBd7E324b6b086986efb97804929538Bf4bF2047"
+    rewarder: "0xeBd7E324b6b086986efb97804929538Bf4bF2047",
   },
   {
     name: "ibAUDUSDC-f",
     id: "84",
     crvLPToken: "0x54c8Ecf46A81496eEB0608BD3353388b5D7a2a33",
     cvxDepositToken: "0x086E91582b6E40133175861a9b85bc968B73D579",
-    rewarder: "0xbAFC4FAeB733C18411886A04679F11877D8629b1"
+    rewarder: "0xbAFC4FAeB733C18411886A04679F11877D8629b1",
   },
   {
     name: "ibCHFUSDC-f",
     id: "85",
     crvLPToken: "0x08ceA8E5B4551722dEB97113C139Dd83C26c5398",
     cvxDepositToken: "0x6B84a898ba943AaE740617DD348b6b383D9dbe47",
-    rewarder: "0x9BEc26bDd9702F4e0e4de853dd65Ec75F90b1F2e"
+    rewarder: "0x9BEc26bDd9702F4e0e4de853dd65Ec75F90b1F2e",
   },
   {
     name: "ibEURUSDC-f",
     id: "86",
     crvLPToken: "0x8682Fbf0CbF312C891532BA9F1A91e44f81ad7DF",
     cvxDepositToken: "0x77045a1086532A695895ec94E87e5d670dB94461",
-    rewarder: "0xAab7202D93B5633eB7FB3b80873C817B240F6F44"
+    rewarder: "0xAab7202D93B5633eB7FB3b80873C817B240F6F44",
   },
   {
     name: "ibGBPUSDC-f",
     id: "87",
     crvLPToken: "0x22CF19EB64226e0E1A79c69b345b31466fD273A7",
     cvxDepositToken: "0x7b31eab99a24Cd8C9044c91CA5Ce3A0632c4B919",
-    rewarder: "0x8C87E32000ADD1a7D7D69a1AE180C415AF769361"
+    rewarder: "0x8C87E32000ADD1a7D7D69a1AE180C415AF769361",
   },
   {
     name: "ibJPYUSDC-f",
     id: "88",
     crvLPToken: "0x127091edE112aEd7Bae281747771b3150Bb047bB",
     cvxDepositToken: "0xcf04e6a557383d5cBA3Ed03B2602E21335758C3f",
-    rewarder: "0x58563C872c791196d0eA17c4E53e77fa1d381D4c"
+    rewarder: "0x58563C872c791196d0eA17c4E53e77fa1d381D4c",
   },
   {
     name: "ibKRWUSDC-f",
     id: "89",
     crvLPToken: "0x80CAcCdBD3f07BbdB558DB4a9e146D099933D677",
     cvxDepositToken: "0x85d95C52cc56752B329C524A96882EE893dB3463",
-    rewarder: "0x1900249c7a90D27b246032792004FF0E092Ac2cE"
+    rewarder: "0x1900249c7a90D27b246032792004FF0E092Ac2cE",
   },
   {
     name: "KP3RETH-f",
     id: "90",
     crvLPToken: "0x4647B6D835f3B393C7A955df51EEfcf0db961606",
     cvxDepositToken: "0xb963a359eC5255E789004279C3D85fd03b17fa89",
-    rewarder: "0x0c2da920E577960f39991030CfBdd4cF0a0CfEBD"
+    rewarder: "0x0c2da920E577960f39991030CfBdd4cF0a0CfEBD",
   },
   {
     name: "PUSd-3CRV-f",
     id: "91",
     crvLPToken: "0x8EE017541375F6Bcd802ba119bdDC94dad6911A1",
     cvxDepositToken: "0xE9De8d7BFD2E8b56A99f831fAD988cfa84875A1C",
-    rewarder: "0x83a3CE160915675F5bC7cC3CfDA5f4CeBC7B7a5a"
+    rewarder: "0x83a3CE160915675F5bC7cC3CfDA5f4CeBC7B7a5a",
   },
   {
     name: "OHMETH-f",
     id: "92",
     crvLPToken: "0x3660BD168494d61ffDac21E403d0F6356cF90fD7",
     cvxDepositToken: "0x9bB0dAF4361e1b84F5A44914595c46f07e9d12a4",
-    rewarder: "0xd683C7051a28fA150EB3F4BD92263865D4a67778"
+    rewarder: "0xd683C7051a28fA150EB3F4BD92263865D4a67778",
   },
   {
     name: "sdCRVCRV-f",
     id: "93",
     crvLPToken: "0xf7b55C3732aD8b2c2dA7c24f30A69f55c54FB717",
     cvxDepositToken: "0x9eC2aac0822Fe7f32398ebFD3C035859c8449a78",
-    rewarder: "0xA7FC7e90c45C2657A9069CA99011894a76eaB82D"
+    rewarder: "0xA7FC7e90c45C2657A9069CA99011894a76eaB82D",
   },
   {
     name: "sdAGAG-f",
     id: "94",
     crvLPToken: "0x48fF31bBbD8Ab553Ebe7cBD84e1eA3dBa8f54957",
     cvxDepositToken: "0xeBa7D03F04c63c9c2344AcFe1ED0200CdE004F69",
-    rewarder: "0xC5B3B2537499e3943C9A359886193F3F89EdDc6a"
+    rewarder: "0xC5B3B2537499e3943C9A359886193F3F89EdDc6a",
   },
   {
     name: "STGUSDC-f",
     id: "95",
     crvLPToken: "0xdf55670e27bE5cDE7228dD0A6849181891c9ebA1",
     cvxDepositToken: "0x54e8599259Afe506f5BD270c5856f6C2dFC654c9",
-    rewarder: "0x17E3Bc273cFcB972167059E55104DBCC8f8431bE"
+    rewarder: "0x17E3Bc273cFcB972167059E55104DBCC8f8431bE",
   },
   {
     name: "USDD3CRV3CRV-f",
     id: "96",
     crvLPToken: "0xe6b5CC1B4b47305c58392CE3D359B10282FC36Ea",
     cvxDepositToken: "0x6Ca954aD83701ba78aD8ef591776EeE67Cc3E6B8",
-    rewarder: "0x7D475cc8A5E0416f0e63042547aDB94ca7045A5b"
+    rewarder: "0x7D475cc8A5E0416f0e63042547aDB94ca7045A5b",
   },
   {
     name: "PALETH-f",
     id: "97",
     crvLPToken: "0xbE4f3AD6C9458b901C81b734CB22D9eaE9Ad8b50",
     cvxDepositToken: "0x4c69bF4A6Fc9875EAA822f0BDF783e29C75ee20d",
-    rewarder: "0xcc4687A893C1Fa137e0CAcd96591422dEb7B717c"
+    rewarder: "0xcc4687A893C1Fa137e0CAcd96591422dEb7B717c",
   },
   {
     name: "sdFXSFXS-f",
     id: "98",
     crvLPToken: "0x8c524635d52bd7b1Bd55E062303177a7d916C046",
     cvxDepositToken: "0x85e999F4D622F050afEd93b93d29eFE7B387d7E6",
-    rewarder: "0xA84f2187371e8A61fa6634eCB3Ff6D89dF299e0e"
+    rewarder: "0xA84f2187371e8A61fa6634eCB3Ff6D89dF299e0e",
   },
   {
     name: "TOKEETH-f",
     id: "99",
     crvLPToken: "0x7ea4aD8C803653498bF6AC1D2dEbc04DCe8Fd2aD",
     cvxDepositToken: "0xE0979fC4bC4073018E88509c9b98Ebd35768E2B2",
-    rewarder: "0x3382607d00cfb668AbaB80D8EE781a2720CbC9ea"
+    rewarder: "0x3382607d00cfb668AbaB80D8EE781a2720CbC9ea",
   },
   {
     name: "crvFRAX",
     id: "100",
     crvLPToken: "0x3175Df0976dFA876431C2E9eE6Bc45b65d3473CC",
     cvxDepositToken: "0x117A0bab81F25e60900787d98061cCFae023560c",
-    rewarder: "0x7e880867363A7e321f5d260Cade2B0Bb2F717B02"
+    rewarder: "0x7e880867363A7e321f5d260Cade2B0Bb2F717B02",
   },
   {
     name: "SUSDFRAXBP3CRV-f",
     id: "101",
     crvLPToken: "0xe3c190c57b5959Ae62EfE3B6797058B76bA2f5eF",
     cvxDepositToken: "0x8E2A6e9390CbD4C3895D07E4Cb171C0527990dF6",
-    rewarder: "0x3fABBDfe05487De1720a9420fE2e16d2c3e79A9D"
+    rewarder: "0x3fABBDfe05487De1720a9420fE2e16d2c3e79A9D",
   },
   {
     name: "LUSDFRAXBP3CRV-f",
     id: "102",
     crvLPToken: "0x497CE58F34605B9944E6b15EcafE6b001206fd25",
     cvxDepositToken: "0xE8a371b5D32344033589A2F0a2712dBD12130b18",
-    rewarder: "0x053e1dad223A206e6BCa24C77786bb69a10e427d"
+    rewarder: "0x053e1dad223A206e6BCa24C77786bb69a10e427d",
   },
   {
     name: "GUSDFRAXBP3CRV-f",
     id: "104",
     crvLPToken: "0x4e43151b78b5fbb16298C1161fcbF7531d5F8D93",
     cvxDepositToken: "0xfbd79471A12929De8379a6CbaF320E150f139ac4",
-    rewarder: "0x47809eE386D1dEC29c0b13f21ba30F564517538B"
+    rewarder: "0x47809eE386D1dEC29c0b13f21ba30F564517538B",
   },
   {
     name: "BUSDFRAXBP3CRV-f",
     id: "105",
     crvLPToken: "0x8fdb0bB9365a46B145Db80D0B1C5C5e979C84190",
     cvxDepositToken: "0xf203A94e59d071062a0dd31f396bCb19a38809A4",
-    rewarder: "0x9e6Daf019767D5cEAdE416ce77E8d187b5B254F3"
+    rewarder: "0x9e6Daf019767D5cEAdE416ce77E8d187b5B254F3",
   },
   {
     name: "alUSDFRAXB3CRV-f",
     id: "106",
     crvLPToken: "0xB30dA2376F63De30b42dC055C93fa474F31330A5",
     cvxDepositToken: "0x5BcAfc77f19F72bCf1420cC1722c3e06E16Ec29a",
-    rewarder: "0x26598e3E511ADFadefD70ab2C3475Ff741741104"
+    rewarder: "0x26598e3E511ADFadefD70ab2C3475Ff741741104",
   },
   {
     name: "USDDFRAXBP3CRV-f",
     id: "107",
     crvLPToken: "0x4606326b4Db89373F5377C316d3b0F6e55Bc6A20",
     cvxDepositToken: "0x7Da92849B5774e8Fe698B9BFea8849121BE37a0e",
-    rewarder: "0x546cd3B917c1d8A6525b4A312bB0014BE031Eb28"
+    rewarder: "0x546cd3B917c1d8A6525b4A312bB0014BE031Eb28",
   },
   {
     name: "TUSDFRAXBP3CRV-f",
     id: "108",
     crvLPToken: "0x33baeDa08b8afACc4d3d07cf31d49FC1F1f3E893",
     cvxDepositToken: "0x10BE382cfAB53e0aBD093D6801B5e95C6Aedb715",
-    rewarder: "0x4a744870fD705971c8c00aC510eAc2206C93d5bb"
+    rewarder: "0x4a744870fD705971c8c00aC510eAc2206C93d5bb",
   },
   {
     name: "xFraxTplLP-f",
     id: "109",
     crvLPToken: "0xdaDfD00A2bBEb1abc4936b1644a3033e1B653228",
     cvxDepositToken: "0xA4d1551589710843476B676e351d3a5b7B94efBD",
-    rewarder: "0x43217822E188b39E90AFA54A5fcf1c76AB0F323a"
+    rewarder: "0x43217822E188b39E90AFA54A5fcf1c76AB0F323a",
   },
   {
     name: "EUROC3CRV",
     id: "110",
     crvLPToken: "0x70fc957eb90E37Af82ACDbd12675699797745F68",
     cvxDepositToken: "0x3b2fC527D63d291Bdd1b9efb7E81d74f6FD7b5B9",
-    rewarder: "0x7d955C7076566550f6B35357E7cdDF95272333F5"
+    rewarder: "0x7d955C7076566550f6B35357E7cdDF95272333F5",
   },
   {
     name: "europool-f",
     id: "112",
     crvLPToken: "0xe7A3b38c39F97E977723bd1239C3470702568e7B",
     cvxDepositToken: "0xbE665430e4C439aF6C92ED861939E60A963C6d0c",
-    rewarder: "0x14F02f3b47B407A7a0cdb9292AA077Ce9E124803"
+    rewarder: "0x14F02f3b47B407A7a0cdb9292AA077Ce9E124803",
   },
   {
     name: "agEUREUROC-f",
     id: "113",
     crvLPToken: "0xBa3436Fd341F2C8A928452Db3C5A3670d1d5Cc73",
     cvxDepositToken: "0xd5f36F6A21b22eEdBbcDbF2c3E9C7E571A380eDF",
-    rewarder: "0xA91fccC1ec9d4A2271B7A86a7509Ca05057C1A98"
+    rewarder: "0xA91fccC1ec9d4A2271B7A86a7509Ca05057C1A98",
   },
   {
     name: "pUSDFRAXBP3CRV-f",
     id: "114",
     crvLPToken: "0xC47EBd6c0f68fD5963005D28D0ba533750E5C11B",
     cvxDepositToken: "0xB17255D92892F1322d023befddaB85f172E36f67",
-    rewarder: "0x6d096C99Cc2Ea52490355311b73D86365Acf087f"
+    rewarder: "0x6d096C99Cc2Ea52490355311b73D86365Acf087f",
   },
   {
     name: "DOLAFRAXBP3CRV-f",
     id: "115",
     crvLPToken: "0xE57180685E3348589E9521aa53Af0BCD497E884d",
     cvxDepositToken: "0xf7eCC27CC9DB5d28110AF2d89b176A6623c7E351",
-    rewarder: "0x0404d05F3992347d2f0dC3a97bdd147D77C85c1c"
+    rewarder: "0x0404d05F3992347d2f0dC3a97bdd147D77C85c1c",
   },
   {
     name: "agEURFRAXB-f",
     id: "116",
     crvLPToken: "0x22e859Ee894c2068920858A60b51DC03ac5581c1",
     cvxDepositToken: "0x9e187393cBc76c8Bf8e8a06bD7737a7cabe9d66C",
-    rewarder: "0x17962aB30c7F291b125A0A38d0ad220ab22F8a5B"
+    rewarder: "0x17962aB30c7F291b125A0A38d0ad220ab22F8a5B",
   },
   {
     name: "CVXFRAXBP-f",
     id: "117",
     crvLPToken: "0x7F17A6C77C3938D235b014818092eb6305BdA110",
     cvxDepositToken: "0x123dC033d6fF314211F7953eD31bC805f85C13d5",
-    rewarder: "0xf02B3A77b1e7775de10294d78a4c3d77772B484A"
+    rewarder: "0xf02B3A77b1e7775de10294d78a4c3d77772B484A",
   },
   {
     name: "cvxCrvFrax-f",
     id: "118",
     crvLPToken: "0x527331F3F550f6f85ACFEcAB9Cc0889180C6f1d5",
     cvxDepositToken: "0x2aE739F40Cda5F053F9dbecE7E177Fcbdc4A07D9",
-    rewarder: "0xdEbc7B51043b4D0dd4f3310C68A12382b8843ceE"
+    rewarder: "0xdEbc7B51043b4D0dd4f3310C68A12382b8843ceE",
   },
   {
     name: "cvxFxsFrax-f",
     id: "119",
     crvLPToken: "0xF57ccaD8122B898A147Cc8601B1ECA88B1662c7E",
     cvxDepositToken: "0xDad9DB2c7c96a1496493E6D48d131a2667f284f9",
-    rewarder: "0x19eA715F854dB2196C6f45A174541a5Ac884D2f9"
+    rewarder: "0x19eA715F854dB2196C6f45A174541a5Ac884D2f9",
   },
   {
     name: "ALCXFRAXBP-f",
     id: "120",
     crvLPToken: "0xf985005a3793DbA4cCe241B3C19ddcd3Fe069ff4",
     cvxDepositToken: "0xCf9fC20189755354edDdED66C9ED9DFADAFd7a2E",
-    rewarder: "0xC10fD95fd3B56535668426B2c8681AD1E15Be608"
+    rewarder: "0xC10fD95fd3B56535668426B2c8681AD1E15Be608",
   },
   {
     name: "MAIPool3CRV-f",
     id: "121",
     crvLPToken: "0x66E335622ad7a6C9c72c98dbfCCE684996a20Ef9",
     cvxDepositToken: "0xe79914274Ea1332222793d7ba931647531E10a5b",
-    rewarder: "0xD3C412C3cEdbEC604425B23DCd79Aa1ac810622f"
+    rewarder: "0xD3C412C3cEdbEC604425B23DCd79Aa1ac810622f",
   },
   {
     name: "BADGERFRAX-f",
     id: "123",
     crvLPToken: "0x09b2E090531228d1b8E3d948C73b990Cb6e60720",
     cvxDepositToken: "0x25f0b7c3A7A43b409634a5759526560cC3313d75",
-    rewarder: "0xe0705A91984b076C250d410A41f615380aF1C2ed"
+    rewarder: "0xe0705A91984b076C250d410A41f615380aF1C2ed",
   },
   {
     name: "yCRV-f",
     id: "124",
     crvLPToken: "0x453D92C7d4263201C69aACfaf589Ed14202d83a4",
     cvxDepositToken: "0x070e60d04eD93A687365218fC5B5528DEA20e705",
-    rewarder: "0xe94b4cC50aC9ebeC491c3665C3E5a017a87dCF19"
+    rewarder: "0xe94b4cC50aC9ebeC491c3665C3E5a017a87dCF19",
   },
   {
     name: "RSRcrvFRAX-f",
     id: "125",
     crvLPToken: "0x3F436954afb722F5D14D868762a23faB6b0DAbF0",
     cvxDepositToken: "0x022600684e9492dA82f0da11Bf039c11109d0935",
-    rewarder: "0x28441fb9b8b026487A6174Ff39Be015810611C0F"
+    rewarder: "0x28441fb9b8b026487A6174Ff39Be015810611C0F",
   },
   {
     name: "BTRFLYETH-f",
     id: "126",
     crvLPToken: "0x7483Dd57f6488b0e194A151C57Df6Ec85C00aCE9",
     cvxDepositToken: "0x71830a73E6D8A22ff86eF852aC6Bf770CF0ED05F",
-    rewarder: "0x736431Ef2b5e7b9cB3Cdc5Bd7EaC395e04015559"
+    rewarder: "0x736431Ef2b5e7b9cB3Cdc5Bd7EaC395e04015559",
   },
   {
     name: "cbETH/ETH-f",
     id: "127",
     crvLPToken: "0x5b6C539b224014A09B3388e51CaAA8e354c959C8",
     cvxDepositToken: "0x06A2C4431FB5dBfECbCbA15154Dd53E374c14292",
-    rewarder: "0x5d02EcD9B83f1187e92aD5be3d1bd2915CA03699"
+    rewarder: "0x5d02EcD9B83f1187e92aD5be3d1bd2915CA03699",
   },
   {
     name: "frxETHCRV",
     id: "128",
     crvLPToken: "0xf43211935C781D5ca1a41d2041F397B8A7366C7A",
     cvxDepositToken: "0xC07e540DbFecCF7431EA2478Eb28A03918c1C30E",
-    rewarder: "0xbD5445402B0a287cbC77cb67B2a52e2FC635dce4"
+    rewarder: "0xbD5445402B0a287cbC77cb67B2a52e2FC635dce4",
   },
   {
     name: "XAIFRAXBP3CRV-f",
     id: "129",
     crvLPToken: "0x326290A1B0004eeE78fa6ED4F1d8f4b2523ab669",
     cvxDepositToken: "0xEbB0Dd1AfE63813AdD4c38EEbd71CE7354dd9b7e",
-    rewarder: "0x4a866fE20A442Dff55FAA010684A5C1379151458"
+    rewarder: "0x4a866fE20A442Dff55FAA010684A5C1379151458",
   },
   {
     name: "JPEGpETH-f",
     id: "130",
     crvLPToken: "0x23E7817bC73645063FB2fa85c1d098EfFE84bE90",
     cvxDepositToken: "0xd862f6E6CEBc20dCab5f73Ca6D003415A5824011",
-    rewarder: "0x820EFA9a92b2317D39D18cf5C964890dD8f9B6bE"
+    rewarder: "0x820EFA9a92b2317D39D18cf5C964890dD8f9B6bE",
   },
   {
     name: "sdtfraxbp-f",
     id: "131",
     crvLPToken: "0x893DA8A02b487FEF2F7e3F35DF49d7625aE549a3",
     cvxDepositToken: "0x95B051E97957f1D48C622Bf73225E3d4c2B189fb",
-    rewarder: "0xc3df9cC2B8FFdB801E8e6E8FF9C1245E2dEcdA98"
+    rewarder: "0xc3df9cC2B8FFdB801E8e6E8FF9C1245E2dEcdA98",
   },
   {
     name: "bLUSDLUSD3-f",
     id: "133",
     crvLPToken: "0x5ca0313D44551e32e0d7a298EC024321c4BC59B4",
     cvxDepositToken: "0xf04fF142d4B036Df35e64F386A4038b0bbBb768a",
-    rewarder: "0xe5ba5E48114ecF21dF6d0Ba958372ce878592705"
+    rewarder: "0xe5ba5E48114ecF21dF6d0Ba958372ce878592705",
   },
   {
     name: "sdYFIYFI-f",
     id: "134",
     crvLPToken: "0x79E281BC69A03DaBCcD66858c65EF6724e50aebe",
     cvxDepositToken: "0x6b9B3f3a03D89855A890A3eC1AD873515c217D87",
-    rewarder: "0xF3bAc69b98301Eacae38CEAB97166a4d78F731BC"
+    rewarder: "0xF3bAc69b98301Eacae38CEAB97166a4d78F731BC",
   },
   {
     name: "crvWSBTC",
     id: "135",
     crvLPToken: "0x051d7e5609917Bd9b73f04BAc0DED8Dd46a74301",
     cvxDepositToken: "0x7b55160e5199ec3BEdEED13C701a7B462dcBb41c",
-    rewarder: "0x2a7b6a16Cf7Be51968b69768c3feCaA7E27524A5"
+    rewarder: "0x2a7b6a16Cf7Be51968b69768c3feCaA7E27524A5",
   },
   {
     name: "crvGEARETH-f",
     id: "136",
     crvLPToken: "0x5Be6C45e2d074fAa20700C49aDA3E88a1cc0025d",
     cvxDepositToken: "0xE2C373862297Fb0926B2a6C004445D58406Da3a8",
-    rewarder: "0x502Cc0d946e79CeA4DaafCf21F374C6bce763067"
+    rewarder: "0x502Cc0d946e79CeA4DaafCf21F374C6bce763067",
   },
   {
     name: "multibtc3CRV-f",
     id: "137",
     crvLPToken: "0x2863a328A0B7fC6040f11614FA0728587DB8e353",
     cvxDepositToken: "0xFb62D1eb76Af3A9e50FC7517B2e8e13376F685f9",
-    rewarder: "0x41EAB7eB43b7b055B2Bf508cAcE932b11003029f"
+    rewarder: "0x41EAB7eB43b7b055B2Bf508cAcE932b11003029f",
   },
   {
     name: "OHMFRAXBP-f",
     id: "138",
     crvLPToken: "0x5271045F7B73c17825A7A7aee6917eE46b0B7520",
     cvxDepositToken: "0xd8F1B275c320819c7D752ef79988d0780bf00446",
-    rewarder: "0x27A8c58e3DE84280826d615D80ddb33930383fE9"
+    rewarder: "0x27A8c58e3DE84280826d615D80ddb33930383fE9",
   },
   {
     name: "clevCVX-f",
     id: "139",
     crvLPToken: "0xF9078Fb962A7D13F55d40d49C8AA6472aBD1A5a6",
     cvxDepositToken: "0x921cF78e9A06B97D60C4Bd6546D672B90594dBa7",
-    rewarder: "0x706f34D0aB8f4f9838F15b0D155C8Ef42229294B"
+    rewarder: "0x706f34D0aB8f4f9838F15b0D155C8Ef42229294B",
   },
   {
     name: "clevUSD3CRV-f",
     id: "140",
     crvLPToken: "0x84C333e94AEA4a51a21F6cf0C7F528C50Dc7592C",
     cvxDepositToken: "0xD7C886B9486db22c06121BFb912F73E1ce8B6a5e",
-    rewarder: "0x710e85B2793b3AE88Cb1Da3cb25b3d62D810d180"
+    rewarder: "0x710e85B2793b3AE88Cb1Da3cb25b3d62D810d180",
   },
   {
     name: "TRYB3POOL-f",
     id: "141",
     crvLPToken: "0x6E0e681441BE6cB1d8405752462488BD4D691E3A",
     cvxDepositToken: "0x419E3790B0c7494fA6b86c54b71523CDC67C91C2",
-    rewarder: "0x2A80d1B0aEC088cb447491c177bB0fD117e3C698"
+    rewarder: "0x2A80d1B0aEC088cb447491c177bB0fD117e3C698",
   },
   {
     name: "CLEVETH-f",
     id: "142",
     crvLPToken: "0x6C280dB098dB673d30d5B34eC04B6387185D3620",
     cvxDepositToken: "0xDf2Ae52e241167d3d144Dee6eEd0F08dE04bFCb3",
-    rewarder: "0x6be96D00B50375AF852D63DB7d55656B306f398e"
+    rewarder: "0x6be96D00B50375AF852D63DB7d55656B306f398e",
   },
   {
     name: "agEUREURe-f",
     id: "143",
     crvLPToken: "0x413928a25D6ea1A26F2625d633207755f67Bf97c",
     cvxDepositToken: "0x604A16dA0c13bF0Ce2099ECa0A873A21479aE5dD",
-    rewarder: "0x40fAF3f0205c32a00398E2e7826946356F42a76B"
+    rewarder: "0x40fAF3f0205c32a00398E2e7826946356F42a76B",
   },
   {
     name: "msUSDFRAX3CRV-f",
     id: "144",
     crvLPToken: "0xc3b19502F8c02be75F3f77fd673503520DEB51dD",
     cvxDepositToken: "0xD396ebBa2348CC35ef93eF2C9F81422305e6dC0F",
-    rewarder: "0xF189A4a1E845Fd62944F93De497409798523B397"
+    rewarder: "0xF189A4a1E845Fd62944F93De497409798523B397",
   },
   {
     name: "TBTCSBTC23CRV-f",
     id: "146",
     crvLPToken: "0xF95AAa7EBB1620e46221B73588502960Ef63dBa0",
     cvxDepositToken: "0x1aD807CaFbb7D5fd02D47b066ADeaFC78Cd8546b",
-    rewarder: "0xcD491E40849a0E3c2fF84093bbbaAa25C1eF8dE6"
+    rewarder: "0xcD491E40849a0E3c2fF84093bbbaAa25C1eF8dE6",
   },
   {
     name: "CTRETH-f",
     id: "147",
     crvLPToken: "0x3f0e7916681452D23Cd36B1281457DA721F2E5dF",
     cvxDepositToken: "0x1f9c1817B5607c4a41cC916a505ccB9B3e3755C8",
-    rewarder: "0xE1d8E3625c5C54b9dcbb52c2c8E4264c3A01450c"
+    rewarder: "0xE1d8E3625c5C54b9dcbb52c2c8E4264c3A01450c",
   },
   {
     name: "ETH MATIC-f",
     id: "148",
     crvLPToken: "0xD8eb58D76aF99547333cfEeb6a0f9bd1A63b6492",
     cvxDepositToken: "0x8CB1e13Dcb548D7c3F90e8C06B227E92b5A58D73",
-    rewarder: "0x77C43369E50D68B7B3288EEFa7D7ab1F0F6D66b3"
+    rewarder: "0x77C43369E50D68B7B3288EEFa7D7ab1F0F6D66b3",
   },
   {
     name: "LDOETH-f",
     id: "149",
     crvLPToken: "0xb79565c01b7Ae53618d9B847b9443aAf4f9011e7",
     cvxDepositToken: "0x4eBE557ae39F87D2a014719777FD4cF4d01Dc8Ee",
-    rewarder: "0x8CA990E954611E5E3d2cc51C013fCC372c8c1D38"
+    rewarder: "0x8CA990E954611E5E3d2cc51C013fCC372c8c1D38",
   },
   {
     name: "STG/FRAXBP-f",
     id: "150",
     crvLPToken: "0x9de1c3D446237ab9BaFF74127eb4F303802a2683",
     cvxDepositToken: "0x61ff639743EE7e0c7319fC639D2B92F8B49dDd3f",
-    rewarder: "0xAa57A289Bb22a1A0C583db306F6566AE2c0CAf21"
+    rewarder: "0xAa57A289Bb22a1A0C583db306F6566AE2c0CAf21",
   },
   {
     name: "DYDXETH-f",
     id: "151",
     crvLPToken: "0x4aCc1BF7D6a591016641325aA6664A1Cd178F002",
     cvxDepositToken: "0x2e91C07f2b558Ad90DFE9052C0F38fCC7A175247",
-    rewarder: "0x034cFd508d978018c93C5b91FbF7e927d6F5a780"
+    rewarder: "0x034cFd508d978018c93C5b91FbF7e927d6F5a780",
   },
   {
     name: "CNCETH-f",
     id: "152",
     crvLPToken: "0xF9835375f6b268743Ea0a54d742Aa156947f8C06",
     cvxDepositToken: "0xA16d4df116e1B2D5A0917409c13D1e98A3700D8b",
-    rewarder: "0x1A3c8B2F89B1C2593fa46C30ADA0b4E3D0133fF8"
+    rewarder: "0x1A3c8B2F89B1C2593fa46C30ADA0b4E3D0133fF8",
   },
   {
     name: "OGVETH-f",
     id: "153",
     crvLPToken: "0x8109A51542294cDBB489AE5516f42FfBD92177aa",
     cvxDepositToken: "0x49A4C796F939243ae82Ba6a188216247Eb253858",
-    rewarder: "0x702F4f9d17d5A5D35Aa2a94AE9A7E6682bab04a7"
+    rewarder: "0x702F4f9d17d5A5D35Aa2a94AE9A7E6682bab04a7",
   },
   {
     name: "rETH-f",
     id: "154",
     crvLPToken: "0x6c38cE8984a890F5e46e6dF6117C26b3F1EcfC9C",
     cvxDepositToken: "0x96C01B43853bE9E27363B15bE620769437cBa345",
-    rewarder: "0x65C8aa24db76e870DEDfC35701eff84de405D1ba"
+    rewarder: "0x65C8aa24db76e870DEDfC35701eff84de405D1ba",
   },
   {
     name: "STETHETH_C-f",
     id: "155",
     crvLPToken: "0x828b154032950C8ff7CF8085D841723Db2696056",
     cvxDepositToken: "0x2Fa3DbB59EaFFaf32A310717728C7c800A8F1fb4",
-    rewarder: "0xA61b57C452dadAF252D2f101f5Ba20aA86152992"
+    rewarder: "0xA61b57C452dadAF252D2f101f5Ba20aA86152992",
   },
   {
     name: "eUSD3CRV-f",
     id: "156",
     crvLPToken: "0xAEda92e6A3B1028edc139A4ae56Ec881f3064D4F",
     cvxDepositToken: "0x8e074d44aaBC1b3b4406fE03Da7ceF787ea85938",
-    rewarder: "0xB468dB2E478885B87D7ce0C8DA1D4373A756C138"
+    rewarder: "0xB468dB2E478885B87D7ce0C8DA1D4373A756C138",
   },
   {
     name: "cvxcrv-crv-f",
     id: "157",
     crvLPToken: "0x971add32Ea87f10bD192671630be3BE8A11b8623",
     cvxDepositToken: "0x0148CF564318272c2Bad048488F90dF4e3769f32",
-    rewarder: "0x39D78f11b246ea4A1f68573c3A5B64E83Cff2cAe"
+    rewarder: "0x39D78f11b246ea4A1f68573c3A5B64E83Cff2cAe",
   },
   {
     name: "UZDFRAXBP3CRV-f",
     id: "158",
     crvLPToken: "0x68934F60758243eafAf4D2cFeD27BF8010bede3a",
     cvxDepositToken: "0xe6c0fAA19A7fB6A0a2C01e0BBC1a782b9e4a7B48",
-    rewarder: "0x820Fad75512c8C3E57Ad021d016846CEEB5F7105"
+    rewarder: "0x820Fad75512c8C3E57Ad021d016846CEEB5F7105",
   },
   {
     name: "cvxFpis-f",
     id: "159",
     crvLPToken: "0xfBB481A443382416357fA81F16dB5A725DC6ceC8",
     cvxDepositToken: "0x445C9bB48F2673A16f9CDE4ceac73E282503Bc65",
-    rewarder: "0x929c7Ac52ef6D2bB03b9d6c2131BE94E2a1cf5e3"
+    rewarder: "0x929c7Ac52ef6D2bB03b9d6c2131BE94E2a1cf5e3",
   },
   {
     name: "eCFXETH-f",
     id: "160",
     crvLPToken: "0x8C88538688aca3b733aD08b12BEe4574c0C00907",
     cvxDepositToken: "0x27c60285F4837adaDec11723642FA52bD6eEBCf4",
-    rewarder: "0x4F9a0f637B33B0D35135cda5782797617afef00e"
+    rewarder: "0x4F9a0f637B33B0D35135cda5782797617afef00e",
   },
   {
     name: "st-frxETH-f",
     id: "161",
     crvLPToken: "0x4d9f9D15101EEC665F77210cB999639f760F831E",
     cvxDepositToken: "0x01492A2cB0Bd14034710475197B4169501B49Ead",
-    rewarder: "0xC3D0B8170E105d6476fE407934492930CAc3BDAC"
+    rewarder: "0xC3D0B8170E105d6476fE407934492930CAc3BDAC",
   },
   {
     name: "CRVfrxETH-f",
     id: "162",
     crvLPToken: "0xc34993c9aDf6a5AB3b4cA27dC71b9c7894A53974",
     cvxDepositToken: "0x41603dA2DD26E6fe29CAe074fC6772053A39C2A9",
-    rewarder: "0xd5dC65ec6948845C1C428fb60BE38FE59B50BD13"
+    rewarder: "0xd5dC65ec6948845C1C428fb60BE38FE59B50BD13",
   },
   {
     name: "cbETHfrxET-f",
     id: "163",
     crvLPToken: "0x548E063CE6F3BaC31457E4f5b4e2345286274257",
     cvxDepositToken: "0x39E1Ea9CB87a352CfFd43e0b19D573d12cf110CC",
-    rewarder: "0x0080d49D4a4921dF0F3853c5e4533462A51fbb29"
+    rewarder: "0x0080d49D4a4921dF0F3853c5e4533462A51fbb29",
   },
   {
     name: "rETHfrxETH-f",
     id: "164",
     crvLPToken: "0xbA6c373992AD8ec1f7520E5878E5540Eb36DeBf1",
     cvxDepositToken: "0xeEC515BE690BF445c8C4d1625FD82FA75Bc38bf6",
-    rewarder: "0x84754821b5484A69DB3164eF4eDC5A5657318039"
+    rewarder: "0x84754821b5484A69DB3164eF4eDC5A5657318039",
   },
   {
     name: "ankrfrxETH-f",
     id: "165",
     crvLPToken: "0xa8e14F03124Ea156A4fc416537c82ff91a647D50",
     cvxDepositToken: "0xDfE410FF58B1A5F578C7aE915281B7A9d7480891",
-    rewarder: "0xc18695D5824C49cF50E054953B3A5910c45597A0"
+    rewarder: "0xc18695D5824C49cF50E054953B3A5910c45597A0",
   },
   {
     name: "alfrxETH-f",
     id: "166",
     crvLPToken: "0xB657B895B265C38c53FFF00166cF7F6A3C70587d",
     cvxDepositToken: "0x112E8f4b685475CcEd5C38142Cd7A2aE41ef6737",
-    rewarder: "0xe0DbbCF08A5465db7c7401C86cce89030e11aB67"
+    rewarder: "0xe0DbbCF08A5465db7c7401C86cce89030e11aB67",
   },
   {
     name: "s-frxETH-f",
     id: "167",
     crvLPToken: "0x663aC72a1c3E1C4186CD3dCb184f216291F4878C",
     cvxDepositToken: "0xf67FEC3D0A32418813bE2BcdD78e058BCFa33AE8",
-    rewarder: "0x55cdF6c7E6d04b83835E4702ed395D0263237DA2"
+    rewarder: "0x55cdF6c7E6d04b83835E4702ed395D0263237DA2",
   },
   {
     name: "frxETHCVX-f",
     id: "168",
     crvLPToken: "0x6e52cCe4EaFDf77091dD1c82183b2D97b776b397",
     cvxDepositToken: "0xAc4b1295F9Aeb1DB29acB37902bE349a79a66403",
-    rewarder: "0xA064C1EeEbECD1DF41432f4B7264F508F005aF0C"
+    rewarder: "0xA064C1EeEbECD1DF41432f4B7264F508F005aF0C",
   },
   {
     name: "crvfraxUSDP",
     id: "169",
     crvLPToken: "0xFC2838a17D8e8B1D5456E0a351B0708a09211147",
     cvxDepositToken: "0x29c22337E3ce362Ce4ad8ecc9CE11fE5A08DBA3c",
-    rewarder: "0x6991C1CD588c4e6f6f1de3A0bac5B8BbAb7aAF6d"
+    rewarder: "0x6991C1CD588c4e6f6f1de3A0bac5B8BbAb7aAF6d",
   },
   {
     name: "COILFRAX-f",
     id: "170",
     crvLPToken: "0xb85010193FD15aF8390dbD62790Da70F46c1126B",
     cvxDepositToken: "0x624cEFdBe30507EEAc71882C9e42Ca0900D5B6a1",
-    rewarder: "0xAE0b6b66378C7DEFc0514D7cBc6E4e92Cf56b0af"
+    rewarder: "0xAE0b6b66378C7DEFc0514D7cBc6E4e92Cf56b0af",
   },
   {
     name: "msfrxETH-f",
     id: "171",
     crvLPToken: "0x2d600BbBcC3F1B6Cb9910A70BaB59eC9d5F81B9A",
     cvxDepositToken: "0x29889a5fE8e467da8af697C5f1eB901F4911Ab50",
-    rewarder: "0x15507737f44446EB0A86147E2C72Aa6A111A64B2"
+    rewarder: "0x15507737f44446EB0A86147E2C72Aa6A111A64B2",
   },
   {
     name: "WACMEFRXET-f",
     id: "172",
     crvLPToken: "0x596b330fA8AB2b449973309af6D6ddc002CaA52D",
     cvxDepositToken: "0x4d54486ECD5A2843CF716893117da012a7Af5c07",
-    rewarder: "0x1C47c8fCE85018AA6645b5aE39c4c61D708CB3f9"
+    rewarder: "0x1C47c8fCE85018AA6645b5aE39c4c61D708CB3f9",
   },
   {
     name: "STBT3CRV-f",
     id: "173",
     crvLPToken: "0x892D701d94a43bDBCB5eA28891DaCA2Fa22A690b",
     cvxDepositToken: "0x355f07d5E24c5fd7D129AC7833aF17eC5F672eAa",
-    rewarder: "0xf8Fa0b3899DE5B4b3cb0cfF65b528AcDD2d163F3"
+    rewarder: "0xf8Fa0b3899DE5B4b3cb0cfF65b528AcDD2d163F3",
   },
   {
     name: "OETHCRV-f",
     id: "174",
     crvLPToken: "0x94B17476A93b3262d87B9a326965D1E91f9c13E7",
     cvxDepositToken: "0xc2591073629AcD455f2fEc56A398B677F2Ccb80c",
-    rewarder: "0x24b65DC1cf053A8D96872c323d29e86ec43eB33A"
+    rewarder: "0x24b65DC1cf053A8D96872c323d29e86ec43eB33A",
   },
   {
     name: "ETHwBETHCRV",
     id: "175",
     crvLPToken: "0xBfAb6FA95E0091ed66058ad493189D2cB29385E6",
     cvxDepositToken: "0x92fc03AF11a436Fc178EEFBDcb0A25150FBD4973",
-    rewarder: "0x6cD1a734F3d49Cc5b381c2b53CF17f12bfFA2bdD"
+    rewarder: "0x6cD1a734F3d49Cc5b381c2b53CF17f12bfFA2bdD",
   },
   {
     name: "DCHF3CRV-f",
     id: "176",
     crvLPToken: "0x8Bc3F1e82Ca3d63987dc12F90538c6bF818FcD0f",
     cvxDepositToken: "0x4819eb0f28a82a3A563041c087A7AA389B2Fa3e7",
-    rewarder: "0xA3D3D65101C99f7Dc8dd2D4f15E256341c8E40de"
+    rewarder: "0xA3D3D65101C99f7Dc8dd2D4f15E256341c8E40de",
   },
   {
     name: "stETH-ng-f",
     id: "177",
     crvLPToken: "0x21E27a5E5513D6e65C4f830167390997aA84843a",
     cvxDepositToken: "0x1b74fa5951dfa4c03D0127011548fA79b956f63B",
-    rewarder: "0x6B27D7BC63F1999D14fF9bA900069ee516669ee8"
+    rewarder: "0x6B27D7BC63F1999D14fF9bA900069ee516669ee8",
   },
   {
     name: "agEUR-VEUR-f",
     id: "178",
     crvLPToken: "0xF05CFb8b4382c69f3B451C5FB55210B232E0edFA",
     cvxDepositToken: "0x7958277F0596fF2a8ace94Cd5CDECc8a7CFFf7A7",
-    rewarder: "0x60E4001E9D96618655C9e59Cdf5e9db40076b8e0"
+    rewarder: "0x60E4001E9D96618655C9e59Cdf5e9db40076b8e0",
   },
   {
     name: "crvUSDUSDT-f",
     id: "179",
     crvLPToken: "0x390f3595bCa2Df7d23783dFd126427CCeb997BF4",
     cvxDepositToken: "0x939e4C11E391a28CD81248163f3a2e595f12CE5E",
-    rewarder: "0xD1DdB0a0815fD28932fBb194C84003683AF8a824"
+    rewarder: "0xD1DdB0a0815fD28932fBb194C84003683AF8a824",
   },
   {
     name: "crvUSDUSDP-f",
     id: "180",
     crvLPToken: "0xCa978A0528116DDA3cbA9ACD3e68bc6191CA53D0",
     cvxDepositToken: "0xBCfa0Ca8568e6F2881cb7FCab2A4911cb04DF4c9",
-    rewarder: "0x80c64E468b774F7F96D4DFCe39caE2dd4C2B7f93"
+    rewarder: "0x80c64E468b774F7F96D4DFCe39caE2dd4C2B7f93",
   },
   {
     name: "crvUSDTUSD-f",
     id: "181",
     crvLPToken: "0x34D655069F4cAc1547E4C8cA284FfFF5ad4A8db0",
     cvxDepositToken: "0x803C86735243cDD390256C19ADB687b13D710404",
-    rewarder: "0x4e2637D6697ed953241D44E29Fba55748F651861"
+    rewarder: "0x4e2637D6697ed953241D44E29Fba55748F651861",
   },
   {
     name: "crvUSDUSDC-f",
     id: "182",
     crvLPToken: "0x4DEcE678ceceb27446b35C672dC7d61F30bAD69E",
     cvxDepositToken: "0x75A2F59eC37c18962c53b0244D60B53f749DF25E",
-    rewarder: "0x44D8FaB7CD8b7877D5F79974c2F501aF6E65AbBA"
+    rewarder: "0x44D8FaB7CD8b7877D5F79974c2F501aF6E65AbBA",
   },
   {
     name: "hyUSDeUSD-f",
     id: "183",
     crvLPToken: "0xc794C6A95f30d0ebF7B3Bbe85e8a0A95C9e411c1",
     cvxDepositToken: "0x7016C65CFd385994fb7C741f88A926799E9Ec1F6",
-    rewarder: "0x245Ec0d447e7f206B43120Ac292dED5E8bB9fe61"
+    rewarder: "0x245Ec0d447e7f206B43120Ac292dED5E8bB9fe61",
   },
   {
     name: "yCRV-f",
     id: "184",
     crvLPToken: "0x99f5aCc8EC2Da2BC0771c32814EFF52b712de1E5",
     cvxDepositToken: "0xCb866480cf46452128dD3Be51BB8b775b6563d03",
-    rewarder: "0x16aA741b46180bdCB83faFb65965B0A94D5a918C"
+    rewarder: "0x16aA741b46180bdCB83faFb65965B0A94D5a918C",
   },
   {
     name: "ETH+ETH-f",
     id: "185",
     crvLPToken: "0xe8a5677171c87fCB65b76957f2852515B404C7b1",
     cvxDepositToken: "0xA6A97C02885b08ABb4bf6D742796081eC54540fe",
-    rewarder: "0x15b7011bDE1C5836C67f16E6e03033c272156193"
+    rewarder: "0x15b7011bDE1C5836C67f16E6e03033c272156193",
   },
   {
     name: "swETHfxETH-f",
     id: "186",
     crvLPToken: "0xe49AdDc2D1A131c6b8145F0EBa1C946B7198e0BA",
     cvxDepositToken: "0x1fb9115929b32D4456C37B80536a2C9434061296",
-    rewarder: "0x91362eBf6DbFA5c0FD45CE4cF46DfFd4A8899c7C"
+    rewarder: "0x91362eBf6DbFA5c0FD45CE4cF46DfFd4A8899c7C",
   },
   {
     name: "crvUSDFRAX-f",
     id: "187",
     crvLPToken: "0x0CD6f267b2086bea681E922E19D40512511BE538",
     cvxDepositToken: "0x01CcDe1dFb6c84e1Cc13a6Bf777aa2160ABd11BA",
-    rewarder: "0x3CfB4B26dc96B124D15A6f360503d028cF2a3c00"
+    rewarder: "0x3CfB4B26dc96B124D15A6f360503d028cF2a3c00",
   },
   {
     name: "crvUSDTWBTCWETH",
     id: "188",
     crvLPToken: "0xf5f5B97624542D72A9E06f04804Bf81baA15e2B4",
     cvxDepositToken: "0xB77BA8B4b9d981269466eE95796A9Af57d4E82DB",
-    rewarder: "0xb05262D4aaAA38D0Af4AaB244D446ebDb5afd4A7"
+    rewarder: "0xb05262D4aaAA38D0Af4AaB244D446ebDb5afd4A7",
   },
   {
     name: "crvUSDCWBTCWETH",
     id: "189",
     crvLPToken: "0x7F86Bf177Dd4F3494b841a37e810A34dD56c829B",
     cvxDepositToken: "0x4424439deF3a8a24b64F6fec84D0C329a37c5917",
-    rewarder: "0x57f4cf13b325Ad101CfE9AD3a84d3B2302AA96c8"
+    rewarder: "0x57f4cf13b325Ad101CfE9AD3a84d3B2302AA96c8",
   },
   {
     name: "sdCRVlp-f",
     id: "190",
     crvLPToken: "0xCA0253A98D16e9C1e3614caFDA19318EE69772D0",
     cvxDepositToken: "0x5913EDA66D1b77377E0CCDF18388120Cf4eF3C05",
-    rewarder: "0xD22c1Dc9baEb5b549401Dd42E6227953cd816776"
+    rewarder: "0xD22c1Dc9baEb5b549401Dd42E6227953cd816776",
   },
   {
     name: "sdPENDLElp-f",
     id: "191",
     crvLPToken: "0x26f3f26F46cBeE59d1F8860865e13Aa39e36A8c0",
     cvxDepositToken: "0xFc6818F829680f97aDb72AB787F3B8Da4c04D100",
-    rewarder: "0xD24e00740306A67e29F189B55343F4804683d231"
+    rewarder: "0xD24e00740306A67e29F189B55343F4804683d231",
   },
   {
     name: "sdFXSlp-f",
     id: "192",
     crvLPToken: "0x71c91B173984d3955f7756914bBF9a7332538595",
     cvxDepositToken: "0x77410441e36F1f72d1a25806E5B5F7d436ee1Adf",
-    rewarder: "0x27FB53CDA31de0BFc634086e180EE8c5f44a28Eb"
+    rewarder: "0x27FB53CDA31de0BFc634086e180EE8c5f44a28Eb",
   },
   {
     name: "sdANGLElp-f",
     id: "193",
     crvLPToken: "0x96AAE323E111A19b1E0e26F55e8De21F1dD01f26",
     cvxDepositToken: "0x14A3080BD471E5EAe1F280A261562B7F236364Ed",
-    rewarder: "0x12261736A428580D53dfb2F213ae389e251Be4CF"
+    rewarder: "0x12261736A428580D53dfb2F213ae389e251Be4CF",
   },
   {
     name: "sdYFIpool-f",
     id: "194",
     crvLPToken: "0x852b90239C5034b5bb7a5e54eF1bEF3Ce3359CC8",
     cvxDepositToken: "0x2EE1f39A62b5ED6C364823D398C2E05a57F36983",
-    rewarder: "0xB94c129Cb0Adf7f5928e07476c668998251685F2"
+    rewarder: "0xB94c129Cb0Adf7f5928e07476c668998251685F2",
   },
   {
     name: "dETHfrxETH-f",
     id: "195",
     crvLPToken: "0x7C0d189E1FecB124487226dCbA3748bD758F98E4",
     cvxDepositToken: "0xF7e0B61d639EE02EC27ae847b4C1c500213D6141",
-    rewarder: "0x0106Bff3bD9C3BB9e4F8776591288F6855c4aF95"
+    rewarder: "0x0106Bff3bD9C3BB9e4F8776591288F6855c4aF95",
   },
   {
     name: "ZUSDFBP3CRV-f",
     id: "196",
     crvLPToken: "0x400d4C984779A747462e88373c3fE369EF9F5b50",
     cvxDepositToken: "0xd48494c36F98BE491f6Cfd6841617e847C819806",
-    rewarder: "0xFd3A7636694259b32B3896f59436997AD25380cA"
+    rewarder: "0xFd3A7636694259b32B3896f59436997AD25380cA",
   },
   {
     name: "crvCRVUSDTBTCWSTETH",
     id: "197",
     crvLPToken: "0x2889302a794dA87fBF1D6Db415C1492194663D13",
     cvxDepositToken: "0x2E88830dcD7459F70EcB49b2f36316103F77C78C",
-    rewarder: "0xdEC6Ad921212d9eFe9643DDBfc1A1F1d4731060d"
+    rewarder: "0xdEC6Ad921212d9eFe9643DDBfc1A1F1d4731060d",
   },
   {
     name: "crvUSDSUSD-f",
     id: "198",
     crvLPToken: "0x94cC50e4521bD271C1a997a3A4Dc815C2F920b41",
     cvxDepositToken: "0x7E3D98a647B355703613ECa07f9C5853d0f9d242",
-    rewarder: "0xbe99C9A460488Ef88eF46db02a1222563acAd636"
+    rewarder: "0xbe99C9A460488Ef88eF46db02a1222563acAd636",
   },
   {
     name: "VCHFFRAXBP-f",
     id: "199",
     crvLPToken: "0x490217Ea1e69042A56716698d803DeABE8B9B148",
     cvxDepositToken: "0x773A74311069C44D75bBa6E9BD3579719fDeD775",
-    rewarder: "0x6c3b5c66747645719726e232Ea005758f7817376"
+    rewarder: "0x6c3b5c66747645719726e232Ea005758f7817376",
   },
   {
     name: "crvUSDMIM-f",
     id: "200",
     crvLPToken: "0xBe426b0f37c112dd20d5866769c8034171567b31",
     cvxDepositToken: "0x833F6D1d69f9130Ad6D48796DD0d62363112cBa5",
-    rewarder: "0xb3113f4dA77EA0Ec93Fb2aa0272c1aB73bf4F0B0"
+    rewarder: "0xb3113f4dA77EA0Ec93Fb2aa0272c1aB73bf4F0B0",
   },
   {
     name: "ALDETH-f",
     id: "201",
     crvLPToken: "0x6663b6D50992ef4fc0380199397c87C2f5256075",
     cvxDepositToken: "0xFF84151681Ac003945D17eaA996Ed3Db927BA5A9",
-    rewarder: "0x26cE86C54f779ea79be855b3B99201fe4dCf0c5b"
+    rewarder: "0x26cE86C54f779ea79be855b3B99201fe4dCf0c5b",
   },
   {
     name: "DUSDFRAXBP3CRV-f",
     id: "202",
     crvLPToken: "0xC73151DcA19ffF7A16aE421a9fb35455832d66d3",
     cvxDepositToken: "0xCE0577c6Eab716db59b851AEa1896C502B671250",
-    rewarder: "0xA9717e6EA61075D4767708F28aB08D0Ae630bC7d"
+    rewarder: "0xA9717e6EA61075D4767708F28aB08D0Ae630bC7d",
   },
   {
     name: "cvxfxs-fxs-f",
     id: "203",
     crvLPToken: "0x6a9014FB802dCC5efE3b97Fd40aAa632585636D0",
     cvxDepositToken: "0x3635129F2Eac3a966a9AA5e8fd6787Bbd33B7d37",
-    rewarder: "0x19F3C877eA278e61fE1304770dbE5D78521792D2"
+    rewarder: "0x19F3C877eA278e61fE1304770dbE5D78521792D2",
   },
   {
     name: "pUSDFRAXBP3CRV-f",
     id: "204",
     crvLPToken: "0xE60986759872393a8360A4a7abEAb3A6e0BA7848",
     cvxDepositToken: "0xbe40fc60EA89D7A95F60113321110868FaC3DaBA",
-    rewarder: "0xb64D8A89D6C3475D7E402Fa2Ce175dcf557481D1"
+    rewarder: "0xb64D8A89D6C3475D7E402Fa2Ce175dcf557481D1",
   },
   {
     name: "pETHfrxETH-f",
     id: "205",
     crvLPToken: "0x6f3388c40A7d063b5E17Cc4213B7674b5DE44C32",
     cvxDepositToken: "0xDafEAE7931657c598e570E67aD6448A076E6e2Ba",
-    rewarder: "0xeF9555dCFa2E9014B416833C6FDEa09db1d6B17F"
+    rewarder: "0xeF9555dCFa2E9014B416833C6FDEa09db1d6B17F",
   },
   {
     name: "crvUSDCWETHINV",
     id: "206",
     crvLPToken: "0x5426178799ee0a0181A89b4f57eFddfAb49941Ec",
     cvxDepositToken: "0xd207260589762a00BB91Cc07B6F61b6892F00Aeb",
-    rewarder: "0x21E2d7f66DF6F4e8199210b9490a51831C9847C7"
+    rewarder: "0x21E2d7f66DF6F4e8199210b9490a51831C9847C7",
   },
   {
     name: "JPEGETH-f",
     id: "207",
     crvLPToken: "0x34eD182D0812D119c92907852D2B429f095A9b07",
     cvxDepositToken: "0x9E46604E3CAdc45644d43945248b372790F70698",
-    rewarder: "0x3e966Aec2a7b31F237e0E1C394a254C500DFb07B"
+    rewarder: "0x3e966Aec2a7b31F237e0E1C394a254C500DFb07B",
   },
   {
     name: "crvUSDUZD-f",
     id: "208",
     crvLPToken: "0xfC636D819d1a98433402eC9dEC633d864014F28C",
     cvxDepositToken: "0x8b5Ca74d1347C748ED65822C957c5C2b02Db1824",
-    rewarder: "0x6EeFB42b64C4Fa4558D7e9e9163246468e45F623"
+    rewarder: "0x6EeFB42b64C4Fa4558D7e9e9163246468e45F623",
   },
   {
     name: "ETHxWETH-f",
     id: "209",
     crvLPToken: "0xd82C2eB10F4895CABED6EDa6eeee234bd1A9838B",
     cvxDepositToken: "0xE5e2b8e2dc90927152F3d2bAFc255Ce42ee89121",
-    rewarder: "0x9f6277061ec97A8fE5a1672bde4fc6b12dBb5DD6"
+    rewarder: "0x9f6277061ec97A8fE5a1672bde4fc6b12dBb5DD6",
   },
   {
     name: "z-frxETH-f-f",
     id: "210",
     crvLPToken: "0xfC89b519658967fCBE1f525f1b8f4bf62d9b9018",
     cvxDepositToken: "0x52EdB08ab81e4Cc32cf318aed17dB11c09C3E8B9",
-    rewarder: "0x98B662443695f7328F6A7fDe9894CC0E88630269"
+    rewarder: "0x98B662443695f7328F6A7fDe9894CC0E88630269",
   },
   {
     name: "crvUSDETHCRV",
     id: "211",
     crvLPToken: "0x4eBdF703948ddCEA3B11f675B4D1Fba9d2414A14",
     cvxDepositToken: "0xa11a2c04D62b4A2324Fc857Fa14762Ad94751b4F",
-    rewarder: "0xF956a46DbA1A0a567168db8655bc18E9050C7738"
+    rewarder: "0xF956a46DbA1A0a567168db8655bc18E9050C7738",
   },
   {
     name: "crvUSDGUSD-f",
     id: "212",
     crvLPToken: "0xeCDd0cE505da71cd9dE855CD6804BA1e8C7bdB07",
     cvxDepositToken: "0xd9187466c4a20963fe2D1cd0eeD70dB623a13528",
-    rewarder: "0x3d55c3109cd2b5707E7C237f8bB15e0ec4b7CafB"
+    rewarder: "0x3d55c3109cd2b5707E7C237f8bB15e0ec4b7CafB",
   },
   {
     name: "crvUSDGHO-f",
     id: "213",
     crvLPToken: "0x86152dF0a0E321Afb3B0B9C4deb813184F365ADa",
     cvxDepositToken: "0x453CAFf58C6a1E01f7E19Dbf5Fa8382ca8cA3Ec1",
-    rewarder: "0xC25d31c9DFBa32e3609233291772CACB30303338"
+    rewarder: "0xC25d31c9DFBa32e3609233291772CACB30303338",
   },
   {
     name: "GRAIFRAXBP3CRV-f",
     id: "214",
     crvLPToken: "0x3175f54A354C83e8ADe950c14FA3e32fc794c0Dc",
     cvxDepositToken: "0x6CceedbC3551B619da21e552623Dc7C64Ae15168",
-    rewarder: "0xC4581E043F676b95Eb1430474C69f3559a758086"
+    rewarder: "0xC4581E043F676b95Eb1430474C69f3559a758086",
   },
   {
     name: "crvUSDDOLA-f",
     id: "215",
     crvLPToken: "0x8272E1A3dBef607C04AA6e5BD3a1A134c8ac063B",
     cvxDepositToken: "0x408abF1a02388A5EF19E3dB1e08db5eFdC510DFF",
-    rewarder: "0xC94208D230EEdC4cDC4F80141E21aA485A515660"
+    rewarder: "0xC94208D230EEdC4cDC4F80141E21aA485A515660",
   },
   {
     name: "rETHfrxETH-f",
     id: "216",
     crvLPToken: "0xfcc067EFb7bE2EEbD32615F14fC22195abB68e9B",
     cvxDepositToken: "0x02a2206268b49A9b3ee5DD51577E5bDa0072d5F1",
-    rewarder: "0xf011aD8E91D1dc8625e5548755AEa1F6Fff81089"
+    rewarder: "0xf011aD8E91D1dc8625e5548755AEa1F6Fff81089",
   },
   {
     name: "msETHWETH-f",
     id: "217",
     crvLPToken: "0xa4c567c662349BeC3D0fB94C4e7f85bA95E208e4",
     cvxDepositToken: "0xb6D1960DB6A611AE3302B87bE26960A82bd7ebe2",
-    rewarder: "0x442E773FFB0043551417D5A37E10c17990fB075c"
+    rewarder: "0x442E773FFB0043551417D5A37E10c17990fB075c",
   },
   {
     name: "crvUSDXAI-f",
     id: "218",
     crvLPToken: "0xA8a02c7D9ada50444F8c658F43Dc440675B21797",
     cvxDepositToken: "0x4C1bCA3c1273B9e7d9f147Cdaaf98E85488fEe16",
-    rewarder: "0x36618a6ec10EfaB33bbFBf99273f3998E1Ebb1Ad"
+    rewarder: "0x36618a6ec10EfaB33bbFBf99273f3998E1Ebb1Ad",
   },
   {
     name: "frxeth-ng-f",
     id: "219",
     crvLPToken: "0x9c3B46C0Ceb5B9e304FCd6D88Fc50f7DD24B31Bc",
     cvxDepositToken: "0xAA71e0065A29F2529aBC0F615874009287966229",
-    rewarder: "0xFafDE12dC476C4913e29F47B4747860C148c5E4f"
+    rewarder: "0xFafDE12dC476C4913e29F47B4747860C148c5E4f",
   },
   {
     name: "2BTC-f",
     id: "220",
     crvLPToken: "0xB7ECB2AA52AA64a717180E030241bC75Cd946726",
     cvxDepositToken: "0x5f9fD1EdB19003097Fa0feCe5021f9273415C3d4",
-    rewarder: "0x5793691B4ba69665213614d7ac722Db2d3f41927"
+    rewarder: "0x5793691B4ba69665213614d7ac722Db2d3f41927",
   },
   {
     name: "crvUSDMAI-f",
     id: "221",
     crvLPToken: "0x1982Fe483f4bff067A2183c98fA231423d41E92B",
     cvxDepositToken: "0x848bE1Bcb119Ec4b9bCe3ef15451ff977C89880B",
-    rewarder: "0x75c091a75d4C13855c6d6cF7935FCcc3A14800F3"
+    rewarder: "0x75c091a75d4C13855c6d6cF7935FCcc3A14800F3",
   },
   {
     name: "JPEGpETH-f",
     id: "222",
     crvLPToken: "0xDA68f66fC0f10Ee61048E70106Df4BDB26bAF595",
     cvxDepositToken: "0x9b89CC8BBBF93078bD9b9c88791a596eE8E4d849",
-    rewarder: "0x6bf9762014336cf87CfA8bb93B50efeD73c96FD5"
+    rewarder: "0x6bf9762014336cf87CfA8bb93B50efeD73c96FD5",
   },
   {
     name: "pETH-WETH-f",
     id: "223",
     crvLPToken: "0x1C5F80b6B68A9E1Ef25926EeE00b5255791b996B",
     cvxDepositToken: "0x553a06e40cD636BCB0E297F6242D9B996e88f5d4",
-    rewarder: "0x5A20643fc0c2c39aB28aFAC727f8A2cB6a1D616C"
+    rewarder: "0x5A20643fc0c2c39aB28aFAC727f8A2cB6a1D616C",
   },
   {
     name: "xETHstETH-f",
     id: "224",
     crvLPToken: "0xD4cEdEf74fB8885b8e1dE21fBA5a2E2F33F21f58",
     cvxDepositToken: "0x8C9b8C58bF67E00B7e14b49e5A7b2a8d2811B6AB",
-    rewarder: "0xeAE6Fb62D508A5daEC16b343c3c4Ed9664443079"
+    rewarder: "0xeAE6Fb62D508A5daEC16b343c3c4Ed9664443079",
   },
   {
     name: "mkUSD3CRV-f",
     id: "225",
     crvLPToken: "0x0CFe5C777A7438C9Dd8Add53ed671cEc7A5FAeE5",
     cvxDepositToken: "0x187601595F6D5746566BC0361a48d13066F11C71",
-    rewarder: "0x35FbE5520E70768DCD6E3215Ed54E14CBccA10D2"
+    rewarder: "0x35FbE5520E70768DCD6E3215Ed54E14CBccA10D2",
   },
   {
     name: "mkcrvUSD-f",
     id: "226",
     crvLPToken: "0x3de254A0f838a844F727fee81040e0FA7884B935",
     cvxDepositToken: "0x910Ac7Da9f5228E3aF164AA067dd2ED3c7fc177B",
-    rewarder: "0xdFBd12c4a2F6419CF0a8d65255Ba4BE7535917ED"
+    rewarder: "0xdFBd12c4a2F6419CF0a8d65255Ba4BE7535917ED",
   },
   {
     name: "feth-f",
     id: "227",
     crvLPToken: "0x19033d99A7b7010157b81e5eE5A8E63A583fB735",
     cvxDepositToken: "0xf6bF6e859Fb43118cecD8eAF50070B3556a28984",
-    rewarder: "0xFcef86a917fb2D0AB39D60e111a3763927Db485d"
+    rewarder: "0xFcef86a917fb2D0AB39D60e111a3763927Db485d",
   },
   {
     name: "xETHETH-f",
     id: "228",
     crvLPToken: "0x16eAd9a10b1A77007E6E329B076aD1Fe97a6F7C0",
     cvxDepositToken: "0xC35C443171b99dB8D3B247FfF663d4bccFf03D4A",
-    rewarder: "0x0831c171938033d0C5218B509502E2d95AC10cAb"
+    rewarder: "0x0831c171938033d0C5218B509502E2d95AC10cAb",
   },
   {
     name: "LUSDcrvUSD-f",
     id: "229",
     crvLPToken: "0x9978c6B08d28d3B74437c917c5dD7C026df9d55C",
     cvxDepositToken: "0x155437eC45bb9af86cc07Fb47f2eF885Cccee335",
-    rewarder: "0x633D3B227696B3FacF628a197f982eF68d26c7b5"
+    rewarder: "0x633D3B227696B3FacF628a197f982eF68d26c7b5",
   },
   {
     name: "crvUSDETHSILO",
     id: "230",
     crvLPToken: "0x86bF09aCB47AB31686bE413d614E9ded3666a1d3",
     cvxDepositToken: "0x98bD4d8520b72c63F66f6B0FD898679e23a6EB7A",
-    rewarder: "0x890648e84780B94E1242CFF7912849240565FD4b"
+    rewarder: "0x890648e84780B94E1242CFF7912849240565FD4b",
   },
   {
     name: "yETH-f",
     id: "231",
     crvLPToken: "0x69ACcb968B19a53790f43e57558F5E443A91aF22",
     cvxDepositToken: "0x4A27DA0Da403E119c5f7c9812Ea8F76828831a36",
-    rewarder: "0xB0867ADE998641Ab1Ff04cF5cA5e5773fA92AaE3"
+    rewarder: "0xB0867ADE998641Ab1Ff04cF5cA5e5773fA92AaE3",
   },
   {
     name: "ethx-f",
     id: "232",
     crvLPToken: "0x59Ab5a5b5d617E478a2479B0cAD80DA7e2831492",
     cvxDepositToken: "0x1dF858Ae1fE8F58d6157B8Eb9f7089e62e303982",
-    rewarder: "0x399e111c7209a741B06F8F86Ef0Fdd88fC198D20"
+    rewarder: "0x399e111c7209a741B06F8F86Ef0Fdd88fC198D20",
   },
   {
     name: "triSDT",
     id: "233",
     crvLPToken: "0x954313005C56b555bdC41B84D6c63B69049d7847",
     cvxDepositToken: "0x5C2c6E21e141Dd3D13C34754A20d620A1bb731B5",
-    rewarder: "0x1f2a117314e6e8655E0A1C97669b7B836e2cDb91"
+    rewarder: "0x1f2a117314e6e8655E0A1C97669b7B836e2cDb91",
   },
   {
     name: "mkusdETH-f",
     id: "234",
     crvLPToken: "0x65f228ED6a6001eD6485535e0Dc33E525734f54c",
     cvxDepositToken: "0x186d436028aBd5b661f9b90b7EC54f9304423A54",
-    rewarder: "0xe0EC41Afe8323045703a5a7C8e4FD3Be9D285bff"
+    rewarder: "0xe0EC41Afe8323045703a5a7C8e4FD3Be9D285bff",
   },
   {
     name: "PPFRAXBP3CRV-f",
     id: "235",
     crvLPToken: "0x61fA2c947e523F9ABfb8d7e2903A5D5218C119a7",
     cvxDepositToken: "0xA26C663FDa205Cf0eBA22Dc939763B1931c5Fb84",
-    rewarder: "0x4180404f74A5Ba2145bCe39855f248f350b21523"
+    rewarder: "0x4180404f74A5Ba2145bCe39855f248f350b21523",
   },
   {
     name: "fETHFraxBP-f",
     id: "236",
     crvLPToken: "0x3d28f9192E34e51414e69FBEE5b11B35590FB9Fb",
     cvxDepositToken: "0xB0Fd7C14447A2583cCDa374Ef5E3f9f888c4a283",
-    rewarder: "0x2267b760Ce858617ff1Ef8E7c598397093c276bD"
+    rewarder: "0x2267b760Ce858617ff1Ef8E7c598397093c276bD",
   },
   {
     name: "frxETHOETH-f",
     id: "237",
     crvLPToken: "0xfa0BBB0A5815F6648241C9221027b70914dd8949",
     cvxDepositToken: "0x39eD23b6d7078bB8746C011d6F846C7DBC006078",
-    rewarder: "0x105fb5f119117853af8D7D57581a13dDeCa01e21"
+    rewarder: "0x105fb5f119117853af8D7D57581a13dDeCa01e21",
   },
   {
     name: "USDC+LP-f",
     id: "238",
     crvLPToken: "0xfed2B54453F75634bcdaEA5e5b11a3f99b9C28Fa",
     cvxDepositToken: "0x2C279b072A33a293fFcDaa40BBDCD4B43Df2e4C8",
-    rewarder: "0xD1Bdd9a20359903Dd5939F10Ce5A2d5b1f7624F7"
+    rewarder: "0xD1Bdd9a20359903Dd5939F10Ce5A2d5b1f7624F7",
   },
   {
     name: "crvUSDPY-f",
     id: "239",
     crvLPToken: "0x857110B5f8eFD66CC3762abb935315630AC770B5",
     cvxDepositToken: "0x2989d4f9D440374D9c6BCe14277CD13C19465777",
-    rewarder: "0xc8Edf80be4F462Ab5a3fA1e3236A5Ec5AF1b6aac"
+    rewarder: "0xc8Edf80be4F462Ab5a3fA1e3236A5Ec5AF1b6aac",
   },
   {
     name: "FXNETH-f",
     id: "240",
     crvLPToken: "0xE06A65e09Ae18096B99770A809BA175FA05960e2",
     cvxDepositToken: "0xf7E2d2b4FA91672D090F658b5a02E0A86C90fA23",
-    rewarder: "0x2b732f0Eee9e1b4329C25Cbb8bdC0dc3bC1448E2"
+    rewarder: "0x2b732f0Eee9e1b4329C25Cbb8bdC0dc3bC1448E2",
   },
   {
     name: "USTPFRAXBP3CRV-f",
     id: "241",
     crvLPToken: "0x8e9De7E69424c848972870798286E8bc5EcB295F",
     cvxDepositToken: "0x57C79388403a43e7bcd570b383615812Cac3f3cB",
-    rewarder: "0x676dCBd10e46c37337B62318F9343ADc19CE803a"
+    rewarder: "0x676dCBd10e46c37337B62318F9343ADc19CE803a",
   },
   {
     name: "cvxfxn-fxn-f",
     id: "242",
     crvLPToken: "0x1062FD8eD633c1f080754c19317cb3912810B5e5",
     cvxDepositToken: "0xf627F650DED7AA24C6fAC37CaA0cC49A436Dd4F5",
-    rewarder: "0x19A0117a5bE27e4D3059Be13FB069eB8f1646d86"
+    rewarder: "0x19A0117a5bE27e4D3059Be13FB069eB8f1646d86",
   },
   {
     name: "pETHfrxETH-f",
     id: "243",
     crvLPToken: "0x27f715999252a6E4d4794b4c9ff2Ce3D6ea8Fd9B",
     cvxDepositToken: "0x35A0Ec696d3b75f337a5F8dE7393dBFE4F788622",
-    rewarder: "0xD59B9C25A8686E6a93b7E3784D3155dC55419D2D"
+    rewarder: "0xD59B9C25A8686E6a93b7E3784D3155dC55419D2D",
   },
   {
     name: "sdFXNFXN-f",
     id: "244",
     crvLPToken: "0x28Ca243dc0aC075dD012fCf9375C25D18A844d96",
     cvxDepositToken: "0x410260f585bd283217199c324f2387E84661eaC5",
-    rewarder: "0x883D7AB9078970b0204c50B56e1c3F72AB5544f9"
+    rewarder: "0x883D7AB9078970b0204c50B56e1c3F72AB5544f9",
   },
   {
     name: "frxETHpETH-f",
     id: "245",
     crvLPToken: "0x320B564Fb9CF36933eC507a846ce230008631fd3",
     cvxDepositToken: "0x1941da8D12A6B39B76bd54c865c8cD3a4553E9C3",
-    rewarder: "0x42aaC689261723d06d2a8f356448bd8249f831Bc"
+    rewarder: "0x42aaC689261723d06d2a8f356448bd8249f831Bc",
   },
   {
     name: "frxETHJPEG-f",
     id: "246",
     crvLPToken: "0x680f8abdA81B4db9219665EeAB814785Bf8AcEc6",
     cvxDepositToken: "0x9171b3401FA61cDBf1eB1445F15EA051367A90F9",
-    rewarder: "0x8e4e4032310303Bd42394cE1a38AFCB3F9941604"
+    rewarder: "0x8e4e4032310303Bd42394cE1a38AFCB3F9941604",
   },
   {
     name: "dYFIETH-f",
     id: "247",
     crvLPToken: "0xE8449F1495012eE18dB7Aa18cD5706b47e69627c",
     cvxDepositToken: "0x195806DeAC40056A63697a9dc0a780bFaa941ee2",
-    rewarder: "0x49Dd6BCf56ABBE00DbB816EF6664c4cf5bdd81A1"
+    rewarder: "0x49Dd6BCf56ABBE00DbB816EF6664c4cf5bdd81A1",
   },
   {
     name: "crvstUSDT-f",
     id: "248",
     crvLPToken: "0xB9eC78Bd89d3Ef17537f130CC72750FD4DE85f82",
     cvxDepositToken: "0xfbc4c85D401Da6b5681d51Ad5B9541232EFd1aD9",
-    rewarder: "0xDe91Bf29ADF79FbfbbF0d646EAf024c0CB9fac25"
+    rewarder: "0xDe91Bf29ADF79FbfbbF0d646EAf024c0CB9fac25",
   },
   {
     name: "crvSTBT-f",
     id: "249",
     crvLPToken: "0x707EAe1CcFee0B8fef07D3F18EAFD1246762d587",
     cvxDepositToken: "0x7649Ccae08C353e8eAc7d5C683Ce40977Db3A9Cd",
-    rewarder: "0x62f3C96017F2Ba9D83BD70500B738FEEebc5FFc6"
+    rewarder: "0x62f3C96017F2Ba9D83BD70500B738FEEebc5FFc6",
   },
   {
     name: "ETHxfrxETH-f",
     id: "250",
     crvLPToken: "0x4029f7DcBdF6059ed80DA6856526E7510D64fA21",
     cvxDepositToken: "0xa107959100A139E7B4ab3109eFF143C55E7B2778",
-    rewarder: "0xFe4aC9cd3892BACbeA12C9185a577164f56831fD"
+    rewarder: "0xFe4aC9cd3892BACbeA12C9185a577164f56831fD",
   },
   {
     name: "TryLSD",
     id: "251",
     crvLPToken: "0x2570f1bD5D2735314FC102eb12Fc1aFe9e6E7193",
     cvxDepositToken: "0xd2901393Ea1790A889c05cA6007A5487eeB46Fed",
-    rewarder: "0xb14B2bbA5446BcE656b37b22f4c2De6446226dFb"
+    rewarder: "0xb14B2bbA5446BcE656b37b22f4c2De6446226dFb",
   },
   {
     name: "crvsFRAX-f",
     id: "252",
     crvLPToken: "0xfEF79304C80A694dFd9e603D624567D470e1a0e7",
     cvxDepositToken: "0x6EeF4bc928857Eef7e8B5Bc9F7E7F79fF3361dab",
-    rewarder: "0x73eA73C3a191bd05F3266eB2414609dC5Fe777a2"
+    rewarder: "0x73eA73C3a191bd05F3266eB2414609dC5Fe777a2",
   },
   {
     name: "crvsDAI-f",
     id: "253",
     crvLPToken: "0x1539c2461d7432cc114b0903f1824079BfCA2C92",
     cvxDepositToken: "0x7618543385aDEaE5D511a711150Ea4125d475aFe",
-    rewarder: "0x24f4555E2B179b86EB2FCeda9C23E593d3929bac"
+    rewarder: "0x24f4555E2B179b86EB2FCeda9C23E593d3929bac",
   },
   {
     name: "crvUSDM-f",
     id: "254",
     crvLPToken: "0x2dabF79E16ceb92B651651f47b6E835C9DB5828A",
     cvxDepositToken: "0x81E9D0083808A8816a3BF7af9F9aacB3086B5002",
-    rewarder: "0x1cD51d1367Cf023a0142d804637Fa19019bCBC9d"
+    rewarder: "0x1cD51d1367Cf023a0142d804637Fa19019bCBC9d",
   },
   {
     name: "crvFRAXTBTCFRXETH",
     id: "255",
     crvLPToken: "0x4D1941a887eC788F059b3bfcC8eE1E97b968825B",
     cvxDepositToken: "0xa0821fDc8d62413757B9da2357b0e5371f45335e",
-    rewarder: "0x4af50A690062970DAf1d2f0Fa9042C6f5a5495E3"
+    rewarder: "0x4af50A690062970DAf1d2f0Fa9042C6f5a5495E3",
   },
   {
     name: "crUSDCFRAX-f",
     id: "256",
     crvLPToken: "0x40928E9af1Ff90093670daA60C1E34249D68A69B",
     cvxDepositToken: "0x28A3D95b883B212a8D9054000c5D58BE5aead04E",
-    rewarder: "0x561f7cf0037405b97406eEF5eE288563D9c05151"
+    rewarder: "0x561f7cf0037405b97406eEF5eE288563D9c05151",
   },
   {
     name: "PRISMAETH-f",
     id: "257",
     crvLPToken: "0xb34e1a3D07f9D180Bc2FDb9Fd90B8994423e33c1",
     cvxDepositToken: "0x79b9498C5745Ee4990E646ca444cb59260830410",
-    rewarder: "0xc4C1C6d0c20801369dcF77E8De060e47077ca20f"
+    rewarder: "0xc4C1C6d0c20801369dcF77E8De060e47077ca20f",
   },
   {
     name: "cvxprismlp-f",
     id: "258",
     crvLPToken: "0x3b21C2868B6028CfB38Ff86127eF22E68d16d53B",
     cvxDepositToken: "0x62cf4541661aC31C667AF22dB3b9a5D272e0734D",
-    rewarder: "0x4b10c7fAd37cB7A9DaCcEeEe40C0d97549918298"
+    rewarder: "0x4b10c7fAd37cB7A9DaCcEeEe40C0d97549918298",
   },
   {
     name: "mkPRISMA-f",
     id: "259",
     crvLPToken: "0x067079c14B85169e6a29703769dadDef90816f4C",
     cvxDepositToken: "0x5f92F5e23FED472a8c07393a51De39ddC1263d05",
-    rewarder: "0x30c0B8B1e02Ad1DE47B7F6edE8Fb7933736d48fa"
+    rewarder: "0x30c0B8B1e02Ad1DE47B7F6edE8Fb7933736d48fa",
   },
   {
     name: "yPRISMA-f",
     id: "260",
     crvLPToken: "0x69833361991ed76f9e8DBBcdf9ea1520fEbFb4a7",
     cvxDepositToken: "0xd32D72568616D995B3903DB652c888caF01a4D7C",
-    rewarder: "0xc5E3DC0a7F8b5dBED9a9df329ADfae802dEAf2Af"
+    rewarder: "0xc5E3DC0a7F8b5dBED9a9df329ADfae802dEAf2Af",
   },
   {
     name: "mevETHfrxE-f",
     id: "261",
     crvLPToken: "0x9b77bd0a665F05995b68e36fC1053AFFfAf0d4B5",
     cvxDepositToken: "0xEFD9bC8c4f341a7dA06835F1790118D8372BA033",
-    rewarder: "0x9A767E19cD9E5c9eD8494281da409Be38Fc76015"
+    rewarder: "0x9A767E19cD9E5c9eD8494281da409Be38Fc76015",
   },
   {
     name: "mkUSDUSDC",
     id: "262",
     crvLPToken: "0xF980B4A4194694913Af231De69AB4593f5E0fCDc",
     cvxDepositToken: "0x9a96f66dA4BB121546D42C3e3d70585aD1368c24",
-    rewarder: "0x10ce6D8f33D820458f1F8aC23FfBaC90b248c0C0"
+    rewarder: "0x10ce6D8f33D820458f1F8aC23FfBaC90b248c0C0",
   },
   {
     name: "USDVcrvUSD",
     id: "263",
     crvLPToken: "0xe1E77dE32fb301cE55871bA095fd6b8e5D9aBAd8",
     cvxDepositToken: "0x792b455a1bba11E55F445B43E0fB44C31CE365BE",
-    rewarder: "0x88D90EA745d3287aBf61EcdfA65F71B165b197a0"
+    rewarder: "0x88D90EA745d3287aBf61EcdfA65F71B165b197a0",
   },
   {
     name: "USDV3crv",
     id: "264",
     crvLPToken: "0xc273fd237F23cb13296D0Cc2897F0B7A61e83387",
     cvxDepositToken: "0x86D744D448a8DD91d919dFA6a3edD598cEcEB74f",
-    rewarder: "0x1A7A7B4C60fDF87Be5B57B6160D9388950e2db9d"
+    rewarder: "0x1A7A7B4C60fDF87Be5B57B6160D9388950e2db9d",
   },
   {
     name: "ETHxwstETH-f",
     id: "265",
     crvLPToken: "0xfffAE954601cFF1195a8E20342db7EE66d56436B",
     cvxDepositToken: "0xaE4Dbb312983E34238577e0151c43c6278E4aEF8",
-    rewarder: "0x85b118e0Fa5706d99b270be43d782FBE429aD409"
+    rewarder: "0x85b118e0Fa5706d99b270be43d782FBE429aD409",
   },
   {
     name: "frxETHIQ-f",
     id: "266",
     crvLPToken: "0x4AE86d8732390d852A13cb918463BC6e5775FaDD",
     cvxDepositToken: "0x844705455a199e8F897251097E0f1C6eDE9990ae",
-    rewarder: "0xBf7b90683fD7E64dBF624809d49bdcB20f09e560"
+    rewarder: "0xBf7b90683fD7E64dBF624809d49bdcB20f09e560",
   },
   {
     name: "sdai-usdm",
     id: "267",
     crvLPToken: "0x425BfB93370F14fF525aDb6EaEAcfE1f4e3b5802",
     cvxDepositToken: "0xC86D9D4Ce5A563AF89e12Ef19A08985B56F5Bff7",
-    rewarder: "0x80fb39bf2b1aeEcdB1b3E7829aB6eCcae02Caa0D"
+    rewarder: "0x80fb39bf2b1aeEcdB1b3E7829aB6eCcae02Caa0D",
   },
   {
     name: "osETH-rETH",
     id: "268",
     crvLPToken: "0xe080027Bd47353b5D1639772b4a75E9Ed3658A0d",
     cvxDepositToken: "0xE3eA98BD863bEF37D951973743aAC2e56edd99BC",
-    rewarder: "0xBA7eBDEF7723e55c909Ac44226FB87a93625c44e"
+    rewarder: "0xBA7eBDEF7723e55c909Ac44226FB87a93625c44e",
   },
   {
     name: "crvDBRINV",
     id: "269",
     crvLPToken: "0xC7DE47b9Ca2Fc753D6a2F167D8b3e19c6D18b19a",
     cvxDepositToken: "0x64416C823a5102EF813296Bc00a7578180C2B28f",
-    rewarder: "0x9a2d1b49b7c8783E37780AcE4ffA3416Eea64357"
+    rewarder: "0x9a2d1b49b7c8783E37780AcE4ffA3416Eea64357",
   },
   {
     name: "PYUSDUSDC",
     id: "270",
     crvLPToken: "0x383E6b4437b59fff47B619CBA855CA29342A8559",
     cvxDepositToken: "0x6a845c389B43f27cda5569127a83525644738567",
-    rewarder: "0xc583e81bB36A1F620A804D8AF642B63b0ceEb5c0"
+    rewarder: "0xc583e81bB36A1F620A804D8AF642B63b0ceEb5c0",
   },
   {
     name: "pxethweth",
     id: "271",
     crvLPToken: "0xC8Eb2Cf2f792F77AF0Cd9e203305a585E588179D",
     cvxDepositToken: "0x9DbFF964743D838D9660ddfd89ba629CC54E09D0",
-    rewarder: "0x3B793E505A3C7dbCb718Fe871De8eBEf7854e74b"
+    rewarder: "0x3B793E505A3C7dbCb718Fe871De8eBEf7854e74b",
   },
   {
     name: "pxfrxeth",
     id: "272",
     crvLPToken: "0xe2Ed1dAc3A9547BC6057e32bf8133b5268D7d987",
     cvxDepositToken: "0xDE183818eb02AfEa367C1AAFF1BFdeDecE6B2B05",
-    rewarder: "0x72b99E2cf3f9A2bbDA1Cc76894E4554d7aA8FE2E"
+    rewarder: "0x72b99E2cf3f9A2bbDA1Cc76894E4554d7aA8FE2E",
   },
   {
     name: "pxsteth",
     id: "273",
     crvLPToken: "0x6951bDC4734b9f7F3E1B74afeBC670c736A0EDB6",
     cvxDepositToken: "0xdCc6CA531Bf37a72fEA22e890abF96B1E5a68940",
-    rewarder: "0x633556C8413FCFd45D83656290fF8d64EE41A7c1"
+    rewarder: "0x633556C8413FCFd45D83656290fF8d64EE41A7c1",
   },
   {
     name: "TriBSN",
     id: "274",
     crvLPToken: "0x35B269Fe0106d3645d9780C5aaD97C8eb8041c40",
     cvxDepositToken: "0xe0D993D3D6ee4DeBb0f5Fb8F809b41d9E9807606",
-    rewarder: "0x9C2D762331dF03576cfd8891d45450AFE9e9e637"
+    rewarder: "0x9C2D762331dF03576cfd8891d45450AFE9e9e637",
   },
   {
     name: "weETH-WETH",
     id: "275",
     crvLPToken: "0x13947303F63b363876868D070F14dc865C36463b",
     cvxDepositToken: "0xfa81e3ed8fB9054A526f8bc45826fF5b6e878881",
-    rewarder: "0x2D159E01A5cEe7498F84Be68276a5266b3cb3774"
+    rewarder: "0x2D159E01A5cEe7498F84Be68276a5266b3cb3774",
   },
   {
     name: "FRAXUSDV",
     id: "276",
     crvLPToken: "0x63b546F3860a75F732EFDE9Ff8EB1a6bA96b5c64",
     cvxDepositToken: "0x51Ef06FE2a210f21978b69641A5Be16c2D6A773c",
-    rewarder: "0xc18644bAC04Eb780a7E70079037790410578b321"
+    rewarder: "0xc18644bAC04Eb780a7E70079037790410578b321",
   },
   {
     name: "FRAXsDAI",
     id: "277",
     crvLPToken: "0xcE6431D21E3fb1036CE9973a3312368ED96F5CE7",
     cvxDepositToken: "0xAb4feFd9cabC03D935cAD345b7626C3180238fb3",
-    rewarder: "0xE627082369689b2B86D948c377A4aE4e739C59eE"
+    rewarder: "0xE627082369689b2B86D948c377A4aE4e739C59eE",
   },
   {
     name: "FRAXUSDe",
     id: "278",
     crvLPToken: "0x5dc1BF6f1e983C0b21EfB003c105133736fA0743",
     cvxDepositToken: "0x511966406E60E6Fce53A09CDB5ed5FBea120DE86",
-    rewarder: "0xc030b717b96B83bf4EC4a075dD547614953968FD"
+    rewarder: "0xc030b717b96B83bf4EC4a075dD547614953968FD",
   },
   {
     name: "FRAXFPI",
     id: "279",
     crvLPToken: "0x2Cf99A343e4ECF49623E82f2Ec6A9b62e16Ff3fe",
     cvxDepositToken: "0xBA927A88eb7B7902ffC5cd99b94fA2964d1a1E03",
-    rewarder: "0x062450B06EB92F1C4E227C41c987ed97c93Ae232"
+    rewarder: "0x062450B06EB92F1C4E227C41c987ed97c93Ae232",
   },
   {
     name: "FRAXPYUSD",
     id: "280",
     crvLPToken: "0xA5588F7cdf560811710A2D82D3C9c99769DB1Dcb",
     cvxDepositToken: "0x839CF70a09f1CB104b4eb0B48E26B855A0F7e855",
-    rewarder: "0xB10a6e39Ed8a66fEd3aAef3866a95611a49B9a95"
+    rewarder: "0xB10a6e39Ed8a66fEd3aAef3866a95611a49B9a95",
   },
   {
     name: "FXB240630",
     id: "281",
     crvLPToken: "0x4ef4c7519023F30A78647EEab321d6cFabC2513c",
     cvxDepositToken: "0x5A82ae31C1a36833B9E148d01E967c1b05eDb346",
-    rewarder: "0x830a71574E3c8AE9da477cE1B7F12849E9f7c8c8"
+    rewarder: "0x830a71574E3c8AE9da477cE1B7F12849E9f7c8c8",
   },
   {
     name: "FXB241231",
     id: "282",
     crvLPToken: "0x6307E6688819951Cf8D6B6066018243D2496952F",
     cvxDepositToken: "0x06382622D0FafB372dA64b765EAd3d082a8BCabB",
-    rewarder: "0x249cE0b1a682AD7b02e43271f9f0C9ac85Ec47e8"
+    rewarder: "0x249cE0b1a682AD7b02e43271f9f0C9ac85Ec47e8",
   },
   {
     name: "FXB261231",
     id: "283",
     crvLPToken: "0xe035e27A8eD6842b478933820f90093D205F7098",
     cvxDepositToken: "0x7Ce2F444D0B034f44EeA4FE77608f0c680966D20",
-    rewarder: "0xC9F6D73fD06b8EEB0A4E87cAd407219E10F31712"
+    rewarder: "0xC9F6D73fD06b8EEB0A4E87cAd407219E10F31712",
   },
   {
     name: "alETHwETH",
     id: "284",
     crvLPToken: "0x8eFD02a0a40545F32DbA5D664CbBC1570D3FedF6",
     cvxDepositToken: "0x0CC29aBF54c54144227C9092EdEcC3fb31959052",
-    rewarder: "0xF2Be647c432E90B0e1111b279F69E77d2548eEe6"
+    rewarder: "0xF2Be647c432E90B0e1111b279F69E77d2548eEe6",
   },
   {
     name: "USDVcrvUSD",
     id: "285",
     crvLPToken: "0x6DD32bb2fCeA3Db7608E17286b5d00f1B19a2eD8",
     cvxDepositToken: "0xf647DA9e3619A8e951f5d5125a7e860C6D079c51",
-    rewarder: "0x5750e9C71D5Afa876170DF3966a4Bb7Cc3E73400"
+    rewarder: "0x5750e9C71D5Afa876170DF3966a4Bb7Cc3E73400",
   },
   {
     name: "crvsFRAX",
     id: "286",
     crvLPToken: "0x73a0cba58c19ed5F27C6590BD792eC38dE4815Ea",
     cvxDepositToken: "0x85658F6E095B9E8715965311783dEAc1B8d96753",
-    rewarder: "0x0d71205733e8b736E04f80B5da89f3D11C067a2b"
+    rewarder: "0x0d71205733e8b736E04f80B5da89f3D11C067a2b",
   },
   {
     name: "wETHrETH",
     id: "287",
     crvLPToken: "0x9EfE1A1Cbd6Ca51Ee8319AFc4573d253C3B732af",
     cvxDepositToken: "0x83aABee8EfCf02e89aacF2bF23Fe40930CC88653",
-    rewarder: "0x2686e9E88AAc7a3B3007CAD5b7a2253438cac6D4"
+    rewarder: "0x2686e9E88AAc7a3B3007CAD5b7a2253438cac6D4",
   },
   {
     name: "crvsDAI",
     id: "288",
     crvLPToken: "0xC55Bcf5370e67fbA281E2aac8937B4Ea71E7785F",
     cvxDepositToken: "0xEBacfeD2ba9896aF52c06a76D086A10e2e95bd8f",
-    rewarder: "0xdf1ffAF161a54e8E7c3e1391b4905EeFedE86FF4"
+    rewarder: "0xdf1ffAF161a54e8E7c3e1391b4905EeFedE86FF4",
   },
   {
     name: "PYcrvUSD",
     id: "289",
     crvLPToken: "0x625E92624Bc2D88619ACCc1788365A69767f6200",
     cvxDepositToken: "0x7881699ffc5e9Eb0C9e6f09eeE0C7c427F2323C7",
-    rewarder: "0x79579633029a61963eDfbA1C0BE22498b6e0D33D"
+    rewarder: "0x79579633029a61963eDfbA1C0BE22498b6e0D33D",
   },
   {
     name: "USDV3crv",
     id: "290",
     crvLPToken: "0x00e6Fd108C4640d21B40d02f18Dd6fE7c7F725CA",
     cvxDepositToken: "0xd39Cf3f804C5FCbD7B487B61e68Af19B1252fbb6",
-    rewarder: "0x437BdEa046406130646E67514eed0aC965692963"
+    rewarder: "0x437BdEa046406130646E67514eed0aC965692963",
   },
   {
     name: "crvstUSDT",
     id: "291",
     crvLPToken: "0x678053c553B963f83798b54D7F69deC086D527BA",
     cvxDepositToken: "0x6C366B4A0b59b3403C8ccEc948fa7b6804551b72",
-    rewarder: "0x9798e88f495Ed494a52F5D4615C5D53C16139A5e"
+    rewarder: "0x9798e88f495Ed494a52F5D4615C5D53C16139A5e",
   },
   {
     name: "eUSDmkUSD",
     id: "292",
     crvLPToken: "0xc37c0E88551Ed383c1aBEDc6628a5579071BF56f",
     cvxDepositToken: "0xa41c422B418eE4e18b13F40c246D05C3013aC4c5",
-    rewarder: "0xBdeb10ed4FE95a2f79A9D60F9C16206BfcBA6Ef7"
+    rewarder: "0xBdeb10ed4FE95a2f79A9D60F9C16206BfcBA6Ef7",
   },
   {
     name: "eUSDcrvUSD",
     id: "293",
     crvLPToken: "0x91285c4fC766ffF6F3acAfeEC7a0423275257faE",
     cvxDepositToken: "0x16e21804A962F098F5C02Bd8E18Cb7cD26d90c2A",
-    rewarder: "0x01099Fe2c82C6F5Dc7485697fBC234f034E3329A"
+    rewarder: "0x01099Fe2c82C6F5Dc7485697fBC234f034E3329A",
   },
   {
     name: "weeTH/rswE",
     id: "294",
     crvLPToken: "0x278cfB6f06B1EFc09d34fC7127d6060C61d629Db",
     cvxDepositToken: "0x99b6FD0C3C0311b237D12806b3d067Eb7D053311",
-    rewarder: "0xc72dA58342e6bE07858B12c0AFE3Db9aF098b849"
+    rewarder: "0xc72dA58342e6bE07858B12c0AFE3Db9aF098b849",
   },
   {
     name: "rswETH/ETH",
     id: "295",
     crvLPToken: "0xeE04382c4cA6c450213923fE0f0daB19b0ff3939",
     cvxDepositToken: "0x459D0282D40d2EE20BEBd4213bff77B3F5a5824c",
-    rewarder: "0x5FBA4b8417d239AF93ce194c6F25A1D29020A799"
+    rewarder: "0x5FBA4b8417d239AF93ce194c6F25A1D29020A799",
   },
   {
     name: "BobrCRV",
     id: "296",
     crvLPToken: "0x9FeE65D5A627e73212989c8BbEdC5Fa5Cae3821F",
     cvxDepositToken: "0x55E77245bE7AD7680E991CD6Aec3953744e35a09",
-    rewarder: "0xbf93ffB9C681052b810E300B38F59676a78f16b3"
+    rewarder: "0xbf93ffB9C681052b810E300B38F59676a78f16b3",
   },
   {
     name: "GHOBTCwstE",
     id: "297",
     crvLPToken: "0x8Cd52ee292313C4D851e71A7064F096504aB3eE9",
     cvxDepositToken: "0xE2f351EE66e83A41bad79E45bEDFE451ffBf7199",
-    rewarder: "0x923D3C32f870E7953dd4020D0585D6419C44e4Ca"
+    rewarder: "0x923D3C32f870E7953dd4020D0585D6419C44e4Ca",
   },
   {
     name: "pUSD3crv",
     id: "298",
     crvLPToken: "0x2482DFb5A65D901d137742AB1095f26374509352",
     cvxDepositToken: "0x8c97D911BF1f47B7d33334B9dcf197Bfe93c7104",
-    rewarder: "0x4C204392a9E4d5f8390541971B59FC95B24782b5"
+    rewarder: "0x4C204392a9E4d5f8390541971B59FC95B24782b5",
   },
   {
     name: "xETHpxETH",
     id: "299",
     crvLPToken: "0x3C91EAeac42DfaEad5F356167c52837e443b9f94",
     cvxDepositToken: "0xCef9FA76c26747B341984633dac29E20E7B64aF8",
-    rewarder: "0xc30946E3c09D86c3546e11286BC2779b2a40A972"
+    rewarder: "0xc30946E3c09D86c3546e11286BC2779b2a40A972",
   },
   {
     name: "ETH+pxETH-f",
     id: "300",
     crvLPToken: "0x982bcd444C9445c15CCe3eca506ef01E8348Fe5D",
     cvxDepositToken: "0x359589fb4fc290009c3a0B10a232610e9E0A310B",
-    rewarder: "0x29aB65DB26116249b0D30c2349C1C7Fa56648203"
+    rewarder: "0x29aB65DB26116249b0D30c2349C1C7Fa56648203",
   },
   {
     name: "pxETHmkUSD-f",
     id: "301",
     crvLPToken: "0x6ade6971Ca3d90990C30d39c78b0534C7166e07b",
     cvxDepositToken: "0x1C9427B79093Aacc5BEe197Bf32aB72403992371",
-    rewarder: "0x484A34B0154A97B09828736888b95bb298F3a8DF"
+    rewarder: "0x484A34B0154A97B09828736888b95bb298F3a8DF",
   },
   {
     name: "mkUSDPay",
     id: "302",
     crvLPToken: "0x9e10f9Fb6F0D32B350CEe2618662243d4f24C64a",
     cvxDepositToken: "0x66710eBFdeD4aAf3D6675Bdd7c9cE11F0914D71E",
-    rewarder: "0x09E18C6F03b5ee9D3F39c3865aa53A12E46E54B2"
+    rewarder: "0x09E18C6F03b5ee9D3F39c3865aa53A12E46E54B2",
   },
   {
     name: "rsETHsfrx",
     id: "303",
     crvLPToken: "0x3772ba91B46f456AE487CB0974040c861c045810",
     cvxDepositToken: "0x55AB2644A9C2e12a3eE4d21b52f7887b143327C7",
-    rewarder: "0xe6615Ea24fE001BCDAB18FD37Dd8331A573b4EF3"
+    rewarder: "0xe6615Ea24fE001BCDAB18FD37Dd8331A573b4EF3",
   },
   {
     name: "crvPufETH",
     id: "304",
     crvLPToken: "0xB3c8Ce1eE157b0DCAa96897C9170aEe6281706c9",
     cvxDepositToken: "0xc1683201Ac71E95Ec9fDf7E5978c29F17377247f",
-    rewarder: "0x5C87E2baf2B5E62874ACe511360F36dBc7f17449"
+    rewarder: "0x5C87E2baf2B5E62874ACe511360F36dBc7f17449",
   },
   {
     name: "BSGGUSDT-f",
     id: "305",
     crvLPToken: "0xd0Fb39E59037fC6Ae8aF5cb495CeA690ED501fDd",
     cvxDepositToken: "0x04B32a27C4a7b602546eCEffEEEF561AFE63BDCd",
-    rewarder: "0x1053ec04658fB611b441c17425D07f6E9fF8Ec37"
+    rewarder: "0x1053ec04658fB611b441c17425D07f6E9fF8Ec37",
   },
   {
     name: "mkUSDUSDe",
     id: "306",
     crvLPToken: "0x1ab3D612EA7df26117554ddDD379764EBcE1A5Ad",
     cvxDepositToken: "0xa7CbB93842694eDbc079253b41fb997e41988De1",
-    rewarder: "0x79c8cFe8C740A6E51D1D5Fe5767ca9E186F45873"
+    rewarder: "0x79c8cFe8C740A6E51D1D5Fe5767ca9E186F45873",
   },
   {
     name: "MKULTRA",
     id: "307",
     crvLPToken: "0xC236BAE6e35b3Fb7335e1c35CA0862Ce92bd5DE3",
     cvxDepositToken: "0xE579a3C29a41983b88fac871bB160414eecd4207",
-    rewarder: "0x0506216b2018c476C8B77D016ea09eA47DB2426a"
+    rewarder: "0x0506216b2018c476C8B77D016ea09eA47DB2426a",
   },
   {
     name: "vETHETH",
     id: "308",
     crvLPToken: "0x6685fcFCe05e7502bf9f0AA03B36025b09374726",
     cvxDepositToken: "0xdf666a5370fB4b21672F9145b29a56d589cc91fd",
-    rewarder: "0xDeCD2d71263757B49b5C38f78de63bA7760f09ae"
+    rewarder: "0xDeCD2d71263757B49b5C38f78de63bA7760f09ae",
   },
   {
     name: "CRVZUNUSD",
     id: "309",
     crvLPToken: "0x8C24b3213FD851db80245FCCc42c40B94Ac9a745",
     cvxDepositToken: "0xDB025419b9e8f1AD7eF3Eb732E143C1be64034A1",
-    rewarder: "0xB0408d1477554268Ece9b0a40290C345196fBf1B"
+    rewarder: "0xB0408d1477554268Ece9b0a40290C345196fBf1B",
   },
   {
-    name: "\"pxveth\"",
+    name: '"pxveth"',
     id: "310",
     crvLPToken: "0x7F20EEa5bc667F4601E35af15868F3Bc6e447050",
     cvxDepositToken: "0x29F29CFEA71e412dDa053169Cb731Eadb83e6A27",
-    rewarder: "0x947bbE8f08084BCa294c8bfa509C26241ddaa6C6"
+    rewarder: "0x947bbE8f08084BCa294c8bfa509C26241ddaa6C6",
   },
   {
     name: "fxUSDcrvUS",
     id: "311",
     crvLPToken: "0x8fFC7b89412eFD0D17EDEa2018F6634eA4C2FCb2",
     cvxDepositToken: "0x5D257CAC1164c39A46B7dC9E47c9855A13dc095C",
-    rewarder: "0x65C57A4bbCb1A0E23A2ed8cAfbA5BA6133C8DaC8"
+    rewarder: "0x65C57A4bbCb1A0E23A2ed8cAfbA5BA6133C8DaC8",
   },
   {
     name: "fxUSDpyUSD",
     id: "312",
     crvLPToken: "0xd6982da59F1D26476E259559508f4135135cf9b8",
     cvxDepositToken: "0xdFB4b6F781e8F722cBe0F6Ad19417B5e479cfD8a",
-    rewarder: "0x18DB87dEE953BA34eb839739Cd6E2F2d01eEa471"
+    rewarder: "0x18DB87dEE953BA34eb839739Cd6E2F2d01eEa471",
   },
   {
     name: "fxUSDDola",
     id: "313",
     crvLPToken: "0x189B4e49B5cAf33565095097b4B960F14032C7D0",
     cvxDepositToken: "0x6fb595e696b0A065415Fa5f047A69CBbEa40Db63",
-    rewarder: "0x2ef1dA0368470B2603BAb392932E70205eEb9046"
+    rewarder: "0x2ef1dA0368470B2603BAb392932E70205eEb9046",
   },
   {
     name: "fxUSDGrai",
     id: "314",
     crvLPToken: "0x69Cf42F15F9325986154b61A013da6E8feC82CCF",
     cvxDepositToken: "0xb7E924d4D836FeF4bFeE6D16fc71F83d2b9eAB99",
-    rewarder: "0x2F7473369B5d21418B10543823a6a38BcE529908"
+    rewarder: "0x2F7473369B5d21418B10543823a6a38BcE529908",
   },
   {
     name: "fxUSDFrax",
     id: "315",
     crvLPToken: "0x1EE81c56e42EC34039D993d12410d437DdeA341E",
     cvxDepositToken: "0x1AF31b777119cDfB22D7B2F4b7Da0E144f1e31Fb",
-    rewarder: "0xfbb02DFA57C2eA0E6F5F2c260957d8656ab7A94a"
+    rewarder: "0xfbb02DFA57C2eA0E6F5F2c260957d8656ab7A94a",
   },
   {
     name: "fxUSDGHO",
     id: "316",
     crvLPToken: "0x74345504Eaea3D9408fC69Ae7EB2d14095643c5b",
     cvxDepositToken: "0x3Abbaf4AC59f6e99AD96dc010DF472Cf4803d2ee",
-    rewarder: "0x77e69Dc146C6044b996ad5c93D88D104Ee13F186"
+    rewarder: "0x77e69Dc146C6044b996ad5c93D88D104Ee13F186",
   },
   {
     name: "crvDOLA",
     id: "317",
     crvLPToken: "0xef484de8C07B6e2d732A92B5F78e81B38f99f95E",
     cvxDepositToken: "0x430bE19e180fd8c2199eC5FAEabE2F5CDba68C94",
-    rewarder: "0xE8cBdBFD4A1D776AB1146B63ABD1718b2F92a823"
+    rewarder: "0xE8cBdBFD4A1D776AB1146B63ABD1718b2F92a823",
   },
   {
     name: "CVGFRAXBP-f",
     id: "318",
     crvLPToken: "0x421E13b4e805993A0d50aD8c6c47A4F693f04424",
     cvxDepositToken: "0x3cB8E5cac768D6Dd3E7683dBC78E255aae66EDBB",
-    rewarder: "0x0736b746F53826A1eEC888a05EBF592AF68946Db"
+    rewarder: "0x0736b746F53826A1eEC888a05EBF592AF68946Db",
   },
   {
     name: "fxUSDmkUSD",
     id: "319",
     crvLPToken: "0xcA554E2e2948a211D4650Fe0F4E271f01f9cB5F1",
     cvxDepositToken: "0xb39DaC5860c475B66EA9610FDE6Eb001c35a81DB",
-    rewarder: "0x99C9dd0a99A3e05997Ae9a2AB469a4e414C9d8fb"
+    rewarder: "0x99C9dd0a99A3e05997Ae9a2AB469a4e414C9d8fb",
   },
   {
     name: "fxUSDULTRA",
     id: "320",
     crvLPToken: "0xF33aB11E5C4e55DAcB13644f0C0A9d1e199A796F",
     cvxDepositToken: "0xe84D5287c3343CD332E0332CDCb89E7daf4428EA",
-    rewarder: "0x9A0E529223a9c2fCD27aB4894F086eb97Ea4477A"
+    rewarder: "0x9A0E529223a9c2fCD27aB4894F086eb97Ea4477A",
   },
   {
     name: "3payLlama",
     id: "321",
     crvLPToken: "0x2E1D500091ef244FDcB6b83C86143e28388E473A",
     cvxDepositToken: "0xEe6f2B88ffdC5EFCB28C99644ce1e43a2f0c9FE1",
-    rewarder: "0x1c80ABEeF625267DDCCc8FB1Fd80BfBF8Da0DB39"
+    rewarder: "0x1c80ABEeF625267DDCCc8FB1Fd80BfBF8Da0DB39",
   },
   {
     name: "USDecrvUSD",
     id: "322",
     crvLPToken: "0xF55B0f6F2Da5ffDDb104b58a60F2862745960442",
     cvxDepositToken: "0xb8d67c2e2e98E7d18Fd775FC1EDf78e71b8eb4F1",
-    rewarder: "0x8A684068E50dD174949ceB73041039158D3B366b"
+    rewarder: "0x8A684068E50dD174949ceB73041039158D3B366b",
   },
   {
     name: "crvUSDCJPY",
     id: "323",
     crvLPToken: "0xca546aE6c3B2BB9Fba2b6e5EeB0881097CecE5B0",
     cvxDepositToken: "0xC430704a7cb048b6d35FF5468A6766c826a5d850",
-    rewarder: "0xFA7c7863A798CF209b40127da4D054A6c34Ec211"
+    rewarder: "0xFA7c7863A798CF209b40127da4D054A6c34Ec211",
   },
   {
     name: "ETHCJPY",
     id: "324",
     crvLPToken: "0x592878b920101946Fb5915aB97961bC546f211CC",
     cvxDepositToken: "0x50ecC157B8e601dD877E2fe5a8950c69C1853dC4",
-    rewarder: "0xfae6645b8FaF13FC3CE6B9d61829e1fF57Ffc038"
+    rewarder: "0xfae6645b8FaF13FC3CE6B9d61829e1fF57Ffc038",
   },
   {
     name: "cvcrvUSD",
     id: "325",
     crvLPToken: "0xCeA18a8752bb7e7817F9AE7565328FE415C0f2cA",
     cvxDepositToken: "0xf0ac58AF1ca98aFce29fAe456E853688ab9d41E2",
-    rewarder: "0x4bf2d8484474170bff8a8c34475be3d87dFF28cA"
+    rewarder: "0x4bf2d8484474170bff8a8c34475be3d87dFF28cA",
   },
   {
     name: "cvcrvUSD",
     id: "326",
     crvLPToken: "0x5AE28c9197a4a6570216fC7e53E7e0221D7A0FEF",
     cvxDepositToken: "0x8E01c8Bb252b3d6B529A8C4D7b4e216BbA81B83F",
-    rewarder: "0x1e0049051ffbA90765cfE08D3EA85f31F695Cce9"
+    rewarder: "0x1e0049051ffbA90765cfE08D3EA85f31F695Cce9",
   },
   {
     name: "cvcrvUSD",
     id: "327",
     crvLPToken: "0x8cf1DE26729cfB7137AF1A6B2a665e099EC319b5",
     cvxDepositToken: "0x9360F9904FAAF70D834c93E41782f3A07EAf0f91",
-    rewarder: "0xaE1bDD4E38582c9c6Ea5aBf17bb085ae0176D063"
+    rewarder: "0xaE1bDD4E38582c9c6Ea5aBf17bb085ae0176D063",
   },
   {
     name: "cvcrvUSD",
     id: "328",
     crvLPToken: "0xb2b23C87a4B6d1b03Ba603F7C3EB9A81fDC0AAC9",
     cvxDepositToken: "0x1eA38C04A6b2AcAe0690e603cf9Da15bCEe84aF7",
-    rewarder: "0xDdeeADfDA45FD674a95e578DF2b57c98a2B1BF0e"
+    rewarder: "0xDdeeADfDA45FD674a95e578DF2b57c98a2B1BF0e",
   },
   {
     name: "CVGETH",
     id: "329",
     crvLPToken: "0x004C167d27ADa24305b76D80762997Fa6EB8d9B2",
     cvxDepositToken: "0x13AF7262ec301c3D38347Ad06A4b7a4bA8612844",
-    rewarder: "0x5489a4276AA4cf57ec28Ae0619215A20fE2B2dCe"
+    rewarder: "0x5489a4276AA4cf57ec28Ae0619215A20fE2B2dCe",
   },
   {
     name: "ZUNFRXETH",
     id: "330",
     crvLPToken: "0x3A65cbaebBFecbeA5D0CB523ab56fDbda7fF9aAA",
     cvxDepositToken: "0xCB5d9126402cC17eF47b81BD48B43D52bF474Cd4",
-    rewarder: "0x756d67A10974Fa0e0cE63F82AF4E7ef0d46d452D"
+    rewarder: "0x756d67A10974Fa0e0cE63F82AF4E7ef0d46d452D",
   },
   {
     name: "fxUSDrUSD",
     id: "331",
     crvLPToken: "0x2116BFaD62b383043230501f6a124c6EA60CcfA5",
     cvxDepositToken: "0xbA14a55271261E1a3bCb6EE81BD4c428E521De4f",
-    rewarder: "0x5ab09936cD1e186Fb82a2762CfbD0Ced10633c50"
+    rewarder: "0x5ab09936cD1e186Fb82a2762CfbD0Ced10633c50",
   },
   {
     name: "fxUSDalUSD",
     id: "332",
     crvLPToken: "0x27cB9629aE3Ee05cb266B99cA4124EC999303c9D",
     cvxDepositToken: "0x6EC17da52FDDA0Acad5F3AF845334c8A13f6d9e1",
-    rewarder: "0x720154D25092804244D1638Eca532536631cE461"
+    rewarder: "0x720154D25092804244D1638Eca532536631cE461",
   },
   {
     name: "revPool",
     id: "333",
     crvLPToken: "0xdf9015472Ea23e3BeA6fbD6092915F9Ed6980a99",
     cvxDepositToken: "0xdDfB678E7941864EEa7A93aB7E932Ce0439Ae660",
-    rewarder: "0x0585A9c5BF0AF8F34CBd4A61A74D4Df309C00395"
+    rewarder: "0x0585A9c5BF0AF8F34CBd4A61A74D4Df309C00395",
   },
   {
     name: "cvcrvUSD",
     id: "334",
     crvLPToken: "0x52096539ed1391CB50C6b9e4Fd18aFd2438ED23b",
     cvxDepositToken: "0xbE1A4d6A2703CAB220109C67425C3f28907630cb",
-    rewarder: "0x9daD26722EF4e2855418b5d76E8325B5005e1AbB"
+    rewarder: "0x9daD26722EF4e2855418b5d76E8325B5005e1AbB",
   },
   {
     name: "GHOcrvUSD",
     id: "335",
     crvLPToken: "0x635EF0056A597D13863B73825CcA297236578595",
     cvxDepositToken: "0x53f4474c06c699307514bd55FB1607005F46a889",
-    rewarder: "0x5eC758f79b96AE74e7F1Ba9583009aFB3fc8eACB"
+    rewarder: "0x5eC758f79b96AE74e7F1Ba9583009aFB3fc8eACB",
   },
   {
     name: "frxafETH",
     id: "336",
     crvLPToken: "0x55Faa4a58f6510f78c1466C71C63200D62a197D2",
     cvxDepositToken: "0xc1312a64c38909b13241E0a99001b0fb9C304d4a",
-    rewarder: "0x195B73357C2954Ed1a5a8F3BbDC8d8e7F5337519"
+    rewarder: "0x195B73357C2954Ed1a5a8F3BbDC8d8e7F5337519",
   },
   {
     name: "CDCETH/ETH",
     id: "337",
     crvLPToken: "0x86EA1191a219989d2dA3a85c949a12A92f8ED3Db",
     cvxDepositToken: "0x91C0f0403eDC057f40e47A6b6Ee226bC489Ac343",
-    rewarder: "0x7ED2C45cb650B5174E089CCE183E510A79eEdb02"
+    rewarder: "0x7ED2C45cb650B5174E089CCE183E510A79eEdb02",
   },
   {
     name: "cvgSDTSDT",
     id: "338",
     crvLPToken: "0xC6628f00F29cc89a87BBeE7554C4725611200fD7",
     cvxDepositToken: "0x0E3be609dEAf7c900276Ec2dC5B2b5bA08C8f17d",
-    rewarder: "0x41f57AbD96d7e98cCC2C14DF672Bb1750152065D"
+    rewarder: "0x41f57AbD96d7e98cCC2C14DF672Bb1750152065D",
   },
   {
     name: "eUSDfxUSD",
     id: "339",
     crvLPToken: "0x16b54e3aC8e3ba088333985035b869847e36E770",
     cvxDepositToken: "0x8Da7c985FC26A19DFB3774af9E529D0f133b0bF7",
-    rewarder: "0x056056063ba7cE97fB4a1bCAaeDEE6AB0DA2Ac6a"
+    rewarder: "0x056056063ba7cE97fB4a1bCAaeDEE6AB0DA2Ac6a",
   },
   {
     name: "rev DOLA",
     id: "340",
     crvLPToken: "0x20BB4a325924917E3336753BA5350a84F70f392e",
     cvxDepositToken: "0x3580ec4EAdAa0823a69bf221a63D7AFc26256a65",
-    rewarder: "0xaBe67e32Bd9d4c9575015Fc81C4f5ACdE12c6CD5"
+    rewarder: "0xaBe67e32Bd9d4c9575015Fc81C4f5ACdE12c6CD5",
   },
   {
     name: "rev fxUSD",
     id: "341",
     crvLPToken: "0x6fC7eA6CA8Cd2759803eb78159C931a8FF5E0557",
     cvxDepositToken: "0x0Df9c85B825161fE65D40dfd61917232B0f14e97",
-    rewarder: "0xd39D1F27C1a4b2aCd10C493D9639384bE024Dc2B"
+    rewarder: "0xd39D1F27C1a4b2aCd10C493D9639384bE024Dc2B",
   },
   {
     name: "rev alUSD",
     id: "342",
     crvLPToken: "0xF5a7906b41B858B66d3A7cBe167dF1fB43FfE977",
     cvxDepositToken: "0x1872713149ffD2Cf2AD3cAb013382FBfC75ca426",
-    rewarder: "0x5dd79E776DAa5ec67251da07d2Fc446B275eA5cC"
+    rewarder: "0x5dd79E776DAa5ec67251da07d2Fc446B275eA5cC",
   },
   {
     name: "cvcrvUSD",
     id: "343",
     crvLPToken: "0x7586C58bf6292B3C9DeFC8333fc757d6c5dA0f7E",
     cvxDepositToken: "0xBc87d2C5E1EeD436dfd789DC3A24BD641e423f6e",
-    rewarder: "0xaeeB7EF4B7D8E18F84C8519b1D31E318D7410013"
+    rewarder: "0xaeeB7EF4B7D8E18F84C8519b1D31E318D7410013",
   },
   {
     name: "cvcrvUSD",
     id: "344",
     crvLPToken: "0xccd37EB6374Ae5b1f0b85ac97eFf14770e0D0063",
     cvxDepositToken: "0xDF2Cf819DBC1E5a5774eE760D2678330cf4665e2",
-    rewarder: "0xfe382f1Bf78e6D6012cB38C284Fe123ec9821966"
+    rewarder: "0xfe382f1Bf78e6D6012cB38C284Fe123ec9821966",
   },
   {
     name: "cvcrvUSD",
     id: "345",
     crvLPToken: "0xff467c6E827ebbEa64DA1ab0425021E6c89Fbe0d",
     cvxDepositToken: "0x877be1eCAE8dD452dEfa63A59C00A9340018016c",
-    rewarder: "0x6AA3687d31853b86189733Fc3fC6DBebAaA392dE"
+    rewarder: "0x6AA3687d31853b86189733Fc3fC6DBebAaA392dE",
   },
   {
     name: "ULTRAUSDC",
     id: "346",
     crvLPToken: "0xC03FEF1c425956A3Cd5762022E511e0d4148B3D6",
     cvxDepositToken: "0x548371C660DeE2dEcEcB86B4662bA82946443948",
-    rewarder: "0xA0D0431cD3b33F69Ee81AeC20E3Da55Bf15f78C5"
+    rewarder: "0xA0D0431cD3b33F69Ee81AeC20E3Da55Bf15f78C5",
   },
   {
     name: "FXScrvUSD",
     id: "347",
     crvLPToken: "0xfb8b95Fb2296a0Ad4b6b1419fdAA5AA5F13e4009",
     cvxDepositToken: "0xB9Ceab0E75930F98cA46445b274A23567a20F9cf",
-    rewarder: "0xbAE1866A2BcB508e6721d06146d17552A41Cb235"
+    rewarder: "0xbAE1866A2BcB508e6721d06146d17552A41Cb235",
   },
   {
     name: "thUSD3CRV-f",
     id: "348",
     crvLPToken: "0x212a60171E22988492B7C38a1A3553c60F1892BE",
     cvxDepositToken: "0xfb59D28Fe7d703c490bFb65b8d179BE6928001AE",
-    rewarder: "0x7B07Aaa12E230f5c9eEb9b01580e0379E5b330a1"
+    rewarder: "0x7B07Aaa12E230f5c9eEb9b01580e0379E5b330a1",
   },
   {
     name: "crvUSDthUS-f",
     id: "349",
     crvLPToken: "0xDd9E687c73A2031A8f5058B596d740f53c1cb220",
     cvxDepositToken: "0xa01320d358F4FC6A6a792CcFBcfff72EC759bB9B",
-    rewarder: "0x2329211E6bFc5fCF6904Ca3594eBE5c3DC3B8208"
+    rewarder: "0x2329211E6bFc5fCF6904Ca3594eBE5c3DC3B8208",
   },
   {
     name: "upYFI",
     id: "350",
     crvLPToken: "0x13120b7599DdF33782c748A847cc1d3c96387Ecd",
     cvxDepositToken: "0xA7555E86b678F186fEe6f6A40e5aDFc1c629dc76",
-    rewarder: "0xfA3d6EeE335D7eF008FA5439B9dDe463e3cAACDc"
+    rewarder: "0xfA3d6EeE335D7eF008FA5439B9dDe463e3cAACDc",
   },
   {
     name: "TriSDT+",
     id: "351",
     crvLPToken: "0x1830c553dC76d3447B69b7B0dC19CF9e3c739C78",
     cvxDepositToken: "0x81373A22d55E1FDC867e8A17C2fa0520803e9D87",
-    rewarder: "0x7D6f35df464077B414Dafdf4240d091A34965108"
+    rewarder: "0x7D6f35df464077B414Dafdf4240d091A34965108",
   },
   {
     name: "USD3rgUSD",
     id: "352",
     crvLPToken: "0xde73E407EFC75EdBAfc5bcD62Ebb1E7A9b38EBCD",
     cvxDepositToken: "0x2715024E897E6dA554F59ACBb26EaE61d82e5510",
-    rewarder: "0x1EB6689327b8E12cDD0F8806aFDc9caeD40862de"
+    rewarder: "0x1EB6689327b8E12cDD0F8806aFDc9caeD40862de",
   },
   {
     name: "ZETACRVUSD",
     id: "353",
     crvLPToken: "0x119806f0e93a213029b599D7bBAE50bD965C2cC4",
     cvxDepositToken: "0x486D36C3Abd5b8EcfCA778358cc2537cdE4D1584",
-    rewarder: "0x15D36E55f6e77aa8dbBba99B08DcD81CD7577D95"
+    rewarder: "0x15D36E55f6e77aa8dbBba99B08DcD81CD7577D95",
   },
   {
     name: "pitchFXS-f",
     id: "354",
     crvLPToken: "0x0AD66FeC8dB84F8A3365ADA04aB23ce607ac6E24",
     cvxDepositToken: "0x73Ec592eb69AD5fa01420066D919d480707a9Cc2",
-    rewarder: "0x394A62b52A863A588e90c0dB2C4d9D580Ba00AD4"
+    rewarder: "0x394A62b52A863A588e90c0dB2C4d9D580Ba00AD4",
   },
   {
     name: "weeth-ng",
     id: "355",
     crvLPToken: "0xDB74dfDD3BB46bE8Ce6C33dC9D82777BCFc3dEd5",
     cvxDepositToken: "0x3f353d76Ae89dc2C89Dcd0426e7Fa9c96A332273",
-    rewarder: "0x5411CC583f0b51104fA523eEF9FC77A29DF80F58"
+    rewarder: "0x5411CC583f0b51104fA523eEF9FC77A29DF80F58",
   },
   {
     name: "thUSD3CRV",
     id: "356",
     crvLPToken: "0x91553BAD9Fbc8bD69Ff5d5678Cbf7D514d00De0b",
     cvxDepositToken: "0x0cbFD287fb2c78D4864f2bE972e632d1869A21Ce",
-    rewarder: "0x7E44379FF8e35D9d0f81EE232e038Ca4a0968196"
+    rewarder: "0x7E44379FF8e35D9d0f81EE232e038Ca4a0968196",
   },
   {
     name: "thUSDcrvUS",
     id: "357",
     crvLPToken: "0x9E641187391B7a5fE9ee193359408CA3894f68a2",
     cvxDepositToken: "0xa7BF50EbA736d11E9A3718Ce3874D18Ea4BeE9b8",
-    rewarder: "0x4BA59aD628C2E19bCb117814541b0Ac0C41ce15C"
+    rewarder: "0x4BA59aD628C2E19bCb117814541b0Ac0C41ce15C",
   },
   {
     name: "STACMEWACM-f",
     id: "358",
     crvLPToken: "0x4424b4A37ba0088D8a718b8fc2aB7952C7e695F5",
     cvxDepositToken: "0x317a61f94ab4386DBb88aA5E61D18487D1fB60Bd",
-    rewarder: "0xcB0cE9281BE34E2ED2d02F2b7446b438EAA335e4"
+    rewarder: "0xcB0cE9281BE34E2ED2d02F2b7446b438EAA335e4",
   },
   {
     name: "rev FRAX",
     id: "359",
     crvLPToken: "0x627c22bD39C69e65F749F6307430da881709941c",
     cvxDepositToken: "0x5C5b337FCd45C9b79ba6256CF8d189578ed1EE6d",
-    rewarder: "0x4831D22fbBCd48b95b3dDBb89B7458d679Ab5f24"
+    rewarder: "0x4831D22fbBCd48b95b3dDBb89B7458d679Ab5f24",
   },
   {
     name: "PALETHV2",
     id: "360",
     crvLPToken: "0x85847Ef522d78EfDBeC8Afb0045dC7D6982837c3",
     cvxDepositToken: "0x0EE5257F670CD6870B390F6e9b21C14DB201BCd7",
-    rewarder: "0xE3F9591D26D58829f317367D5f547d5Ac6313C9c"
+    rewarder: "0xE3F9591D26D58829f317367D5f547d5Ac6313C9c",
   },
   {
     name: "cvcrvUSD",
     id: "361",
     crvLPToken: "0x4a7999c55d3a93dAf72EA112985e57c2E3b9e95D",
     cvxDepositToken: "0x5afeD68bBab7B959c493847BC490C95415Ae12e5",
-    rewarder: "0x68e400d058D4c0066344D1B3F392878e993B38Ab"
+    rewarder: "0x68e400d058D4c0066344D1B3F392878e993B38Ab",
   },
   {
     name: "crvU-sUSDe",
     id: "362",
     crvLPToken: "0x57064F49Ad7123C92560882a45518374ad982e85",
     cvxDepositToken: "0xeF0712bfF9E4e581CC6F39aF9483CA9EA03ed8Ed",
-    rewarder: "0x0Fce355888851408F30A6ccC3C77f6D9EEe75834"
+    rewarder: "0x0Fce355888851408F30A6ccC3C77f6D9EEe75834",
   },
   {
     name: "ZUNWETH",
     id: "363",
     crvLPToken: "0x9dBcfC09E651c040EE68D6DbEB8a09F8dd0cAA77",
     cvxDepositToken: "0xb4F6051a20f372F1142B510B5e99E313a668c3C7",
-    rewarder: "0x0c02d3138a64e031092761C71aC9C63074a21872"
+    rewarder: "0x0c02d3138a64e031092761C71aC9C63074a21872",
   },
   {
     name: "cvcrvUSD",
     id: "364",
     crvLPToken: "0x21CF1c5Dc48C603b89907FE6a7AE83EA5e3709aF",
     cvxDepositToken: "0xa968cd9c220E4fD04449cAe0910A120C1d125bc2",
-    rewarder: "0xF6dABA0b7Fa6F52b533414D0934865e8715cb543"
+    rewarder: "0xF6dABA0b7Fa6F52b533414D0934865e8715cb543",
   },
   {
     name: "cvcrvUSD",
     id: "365",
     crvLPToken: "0x8fb1c7AEDcbBc1222325C39dd5c1D2d23420CAe3",
     cvxDepositToken: "0xd6Ab4Ca1fb1D3993db4d37b04621D28B669b671E",
-    rewarder: "0xcE2E915Dd0530E66Cfc34b7421E9A93F09A9A6b5"
+    rewarder: "0xcE2E915Dd0530E66Cfc34b7421E9A93F09A9A6b5",
   },
   {
     name: "USD3eUSD",
     id: "366",
     crvLPToken: "0x79586fa680958102154093B795Fdb8EFBc013822",
     cvxDepositToken: "0xf3Db48031157299a4f26383c6762074Ab10F4f2D",
-    rewarder: "0x01EdE9cA2d9c49cfe7385dC31BB2313c855D29c7"
+    rewarder: "0x01EdE9cA2d9c49cfe7385dC31BB2313c855D29c7",
   },
   {
     name: "ZUNFXUSD",
     id: "367",
     crvLPToken: "0x13eA95Ce68185e334d3747539845A3b7643a8cab",
     cvxDepositToken: "0x60b2C94226bb85772DA80CB184AF67933e04eb38",
-    rewarder: "0xeB503b47F192e83b73Dc39185f61114e94e644B8"
+    rewarder: "0xeB503b47F192e83b73Dc39185f61114e94e644B8",
   },
   {
     name: "dgnETHETH+",
     id: "368",
     crvLPToken: "0x021cF6B7ebb8c8EFcF21396Eb4c94658976172c7",
     cvxDepositToken: "0x35df357aDB203646dFB0000853F792A79A82Ab24",
-    rewarder: "0x68366805E9e1Dd58d053Ed4EA4A0a4a346c9393C"
+    rewarder: "0x68366805E9e1Dd58d053Ed4EA4A0a4a346c9393C",
   },
   {
     name: "eUSDUSDC",
     id: "369",
     crvLPToken: "0x08BfA22bB3e024CDfEB3eca53c0cb93bF59c4147",
     cvxDepositToken: "0xa3536c636F8D3e72224e9f690dD55C646B63B6c9",
-    rewarder: "0xdD2642EBD57A6e8BF9644040Ef15A39Ad568feC9"
+    rewarder: "0xdD2642EBD57A6e8BF9644040Ef15A39Ad568feC9",
   },
   {
     name: "USD3ETH+",
     id: "370",
     crvLPToken: "0x06A2e1521aFDe7f7Dc30d351DCF04408042F536E",
     cvxDepositToken: "0x1fBDCcDDF7B6CB7c1AE7fa0Ea45FE0AbAF9eBF71",
-    rewarder: "0xE77005903C1Ab09DC89c8f9F76b6a7D346E7b72C"
+    rewarder: "0xE77005903C1Ab09DC89c8f9F76b6a7D346E7b72C",
   },
   {
     name: "cvcrvUSD",
     id: "371",
     crvLPToken: "0xc687141c18F20f7Ba405e45328825579fDdD3195",
     cvxDepositToken: "0x04f08cAA46a9ADD56dd639709e124aC6F5046f0d",
-    rewarder: "0xAa2a3e2aF248CC6A2401D876ad37738073a53F1B"
+    rewarder: "0xAa2a3e2aF248CC6A2401D876ad37738073a53F1B",
   },
   {
     name: "cvgCVXCVX1",
     id: "372",
     crvLPToken: "0xc50E191F703FB3160fC15d8b168A8c740fec3666",
     cvxDepositToken: "0x50Ee70a38bb718ad6E9670D467c6363f2Efa0Ec0",
-    rewarder: "0x6857a7B214Fe26FA01Ce23d8921865D8007AC3Bd"
+    rewarder: "0x6857a7B214Fe26FA01Ce23d8921865D8007AC3Bd",
   },
   {
     name: "ETHFIweETH",
     id: "373",
     crvLPToken: "0xcCCD572B22dee28479B11DD99589a1e4c0682a7E",
     cvxDepositToken: "0x70343e9266F7A1A55f3565B5544ddfB338EDbD7D",
-    rewarder: "0x1f6DF932AE093C076e75B49d3F03c723237Ba7E5"
+    rewarder: "0x1f6DF932AE093C076e75B49d3F03c723237Ba7E5",
   },
   {
     name: "aUSDT-USDT",
     id: "374",
     crvLPToken: "0x8F476f43bAA2D4b6C215d2408340919bF7DE0520",
     cvxDepositToken: "0xb5a9A9707AF4fF671C680aCfA6244aD185De644B",
-    rewarder: "0x16A7C8A51963c44b9576CC83895C8AbFb123A138"
+    rewarder: "0x16A7C8A51963c44b9576CC83895C8AbFb123A138",
   },
   {
     name: "COVEYFI",
     id: "375",
     crvLPToken: "0xa3f152837492340dAAf201F4dFeC6cD73A8a9760",
     cvxDepositToken: "0x1Eb6AB298d4e7DEf8e512398eDA819a8C8EB66d3",
-    rewarder: "0x8712a25baC7Ba1157489BcDa0d4Df67715317cDa"
+    rewarder: "0x8712a25baC7Ba1157489BcDa0d4Df67715317cDa",
   },
   {
     name: "cvcrvUSD",
     id: "376",
     crvLPToken: "0xd0c183C9339e73D7c9146D48E1111d1FBEe2D6f9",
     cvxDepositToken: "0x2c2de79df4bb810497943328f7288375d6344800",
-    rewarder: "0x359C0B82070e0A1a036d018F20Eb695E1e52019a"
+    rewarder: "0x359C0B82070e0A1a036d018F20Eb695E1e52019a",
   },
   {
     name: "USDCfxUSD",
     id: "377",
     crvLPToken: "0x5018BE882DccE5E3F2f3B0913AE2096B9b3fB61f",
     cvxDepositToken: "0x0b243F1341d5aB31d1eb9E13eDA5e4239e0991Af",
-    rewarder: "0x64973eE75eB00B99E99EEb8c380550a5C4Eb680d"
+    rewarder: "0x64973eE75eB00B99E99EEb8c380550a5C4Eb680d",
   },
   {
     name: "fxUSDrUSD",
     id: "378",
     crvLPToken: "0x52bF165abd26106D810733CC29FAfF68b96DECe8",
     cvxDepositToken: "0x775fE8CA65a1c5e360Fc8eeA709739601E1451f0",
-    rewarder: "0xE00Da4e45b5ddF09C1E4AB99C7bb47C18687611F"
+    rewarder: "0xE00Da4e45b5ddF09C1E4AB99C7bb47C18687611F",
   },
   {
     name: "USRUSDC",
     id: "379",
     crvLPToken: "0x3eE841F47947FEFbE510366E4bbb49e145484195",
     cvxDepositToken: "0x02F118837f5AcfeA9f028767f2700d1AC0a00107",
-    rewarder: "0x24e7fC74809902E635d1F8998dB72dCfD1dC6a80"
+    rewarder: "0x24e7fC74809902E635d1F8998dB72dCfD1dC6a80",
   },
   {
     name: "eBTCtBTC",
     id: "380",
     crvLPToken: "0x272BF7e4Ce3308B1Fb5e54d6a1Fc32113619c401",
     cvxDepositToken: "0xe1Cb0158111A9048569791e0fdC7ed06b11716D6",
-    rewarder: "0xDbd17Dc03a442D4349de988533737db3fBb5eC39"
+    rewarder: "0xDbd17Dc03a442D4349de988533737db3fBb5eC39",
   },
   {
     name: "ynETH-B",
     id: "381",
     crvLPToken: "0x19B8524665aBAC613D82eCE5D8347BA44C714bDd",
     cvxDepositToken: "0x9b2DCd16cd8A93D98eFa0D2a254FaB82d8047602",
-    rewarder: "0xd49CE838E090e242ab96dAe42774c26969C67b2D"
+    rewarder: "0xd49CE838E090e242ab96dAe42774c26969C67b2D",
   },
   {
     name: "ZUNPXETH",
     id: "382",
     crvLPToken: "0x17D964DA2bD337CfEaEd30a27c9Ab6580676E730",
     cvxDepositToken: "0xFD18B89CC8A0159312fA56Fa1d3af0F761318AcA",
-    rewarder: "0x87A02B6E111a0FC58dF745ce877A35472D96f462"
+    rewarder: "0x87A02B6E111a0FC58dF745ce877A35472D96f462",
   },
   {
     name: "CVXafCVX",
     id: "383",
     crvLPToken: "0x7956FAd09a1D1C47550331E7f06bF7c7B7C2aF08",
     cvxDepositToken: "0x268F7494396f6d1cB4f014e0C4314E53a47F5Ef9",
-    rewarder: "0x1735184939Be6E2044FB7FCa1546a5D4F7dD6538"
+    rewarder: "0x1735184939Be6E2044FB7FCa1546a5D4F7dD6538",
   },
   {
     name: "cvcrvUSD",
     id: "384",
     crvLPToken: "0x14361C243174794E2207296a6AD59bb0Dec1d388",
     cvxDepositToken: "0x2d777290Ab033DEAEc3cd95526eD45C626245F80",
-    rewarder: "0x7fC1B3BC96EF0D1C63F48504743e6c013BDE0324"
+    rewarder: "0x7fC1B3BC96EF0D1C63F48504743e6c013BDE0324",
   },
   {
     name: "SDTWETH",
     id: "385",
     crvLPToken: "0xA19bf6fBf05624282cb6ed498f4761f22e084Edd",
     cvxDepositToken: "0x1D6FDa866054F14E060790d009191320f7B0d488",
-    rewarder: "0x411fe77fAF1991ddfc606C94ACf7F91bd8A61387"
+    rewarder: "0x411fe77fAF1991ddfc606C94ACf7F91bd8A61387",
   },
   {
     name: "YFImkUSD",
     id: "386",
     crvLPToken: "0x5756bbdDC03DaB01a3900F01Fb15641C3bfcc457",
     cvxDepositToken: "0x979CcA9622E1cee964D96163aEfa3D377fbd67d6",
-    rewarder: "0xC046f096a2b3b1D5CF2c5fdFeB23D8E2Ab08E080"
+    rewarder: "0xC046f096a2b3b1D5CF2c5fdFeB23D8E2Ab08E080",
   },
   {
     name: "dgnETHETH+",
     id: "387",
     crvLPToken: "0x5bA541585D6297B756F08B7c61a7E37752123B4F",
     cvxDepositToken: "0x1e56e7E4460c4D89Be0ca9F058954d0eBf88606C",
-    rewarder: "0xA2FF14e7B059184C170B6968f78f358D0eEfd0b8"
+    rewarder: "0xA2FF14e7B059184C170B6968f78f358D0eEfd0b8",
   },
   {
     name: "AUSDFRAX",
     id: "388",
     crvLPToken: "0xf5D7c5484C02C03cF131b76C67C3EB969828bD3D",
     cvxDepositToken: "0xd3665De8d48559dd7390CFC756eE64209FB4Ba98",
-    rewarder: "0x474e0c325997e15311f98284FF383Bd1853f71Bf"
+    rewarder: "0x474e0c325997e15311f98284FF383Bd1853f71Bf",
   },
   {
     name: "pufETHwstE",
     id: "389",
     crvLPToken: "0xEEda34A377dD0ca676b9511EE1324974fA8d980D",
     cvxDepositToken: "0xA2B529DE9a0Ed9e613a7766504eD034B13e14040",
-    rewarder: "0xFc3f980268FdC40eF6F302380B3E62A3c017Dc78"
+    rewarder: "0xFc3f980268FdC40eF6F302380B3E62A3c017Dc78",
   },
   {
     name: "crv-stUSDT",
     id: "390",
     crvLPToken: "0xB73527615C25ac2D226db2581525f69968926caf",
     cvxDepositToken: "0xaF8EAb48441CB4F5c3Ae680F21B7C82394eEbdB9",
-    rewarder: "0xe499B4e0E2203D3d6E2879AB9091388f4E301167"
+    rewarder: "0xe499B4e0E2203D3d6E2879AB9091388f4E301167",
   },
   {
     name: "hETHWETH",
     id: "391",
     crvLPToken: "0x1f7e9321CE32Af1F9EA1185fD10D31Fea31FFD95",
     cvxDepositToken: "0x828E2fAF82C25Ca867a1392e79206F94c9e3fcdA",
-    rewarder: "0x9AB157bfaD66De1aE0eFf4802895dD9C8B755e25"
+    rewarder: "0x9AB157bfaD66De1aE0eFf4802895dD9C8B755e25",
   },
   {
     name: "cbBTC-WBTC",
     id: "392",
     crvLPToken: "0x839d6bDeDFF886404A6d7a788ef241e4e28F4802",
     cvxDepositToken: "0xe0b1a458f01331CE68E5FDd0BaC8ac391887dc14",
-    rewarder: "0xEd211Ec6F81f3516Ef6c5DFaC6CF09cD33A6Dff3"
+    rewarder: "0xEd211Ec6F81f3516Ef6c5DFaC6CF09cD33A6Dff3",
   },
   {
     name: "USRRLP",
     id: "393",
     crvLPToken: "0xC907ba505C2E1cbc4658c395d4a2c7E6d2c32656",
     cvxDepositToken: "0x7dC9d935059782D118099EDA88C35FDF7cD93EA7",
-    rewarder: "0xc2892644C2d17C0C348ac7f4487353c0E9eE4F42"
+    rewarder: "0xc2892644C2d17C0C348ac7f4487353c0E9eE4F42",
   },
   {
     name: "alETHpxETH",
     id: "394",
     crvLPToken: "0x30bf3E17CAD0baF1d6B64079Ec219808d2708fEb",
     cvxDepositToken: "0xd68bAb1aEC631Ec36Bab7148B1fCEC457A240082",
-    rewarder: "0x7AC80c1a7633071fD5598c4fc5A6DEAb422cb60E"
+    rewarder: "0x7AC80c1a7633071fD5598c4fc5A6DEAb422cb60E",
   },
   {
     name: "zunBTCtBTC",
     id: "395",
     crvLPToken: "0x6fBc5Ddc181240Cb1d9bcEc6Fdea429036818035",
     cvxDepositToken: "0x53Af952d746d8eD0eCaD990c7123355d8803615E",
-    rewarder: "0xb78B95f5dF4C378fFE043249A65b90fF81A838BB"
+    rewarder: "0xb78B95f5dF4C378fFE043249A65b90fF81A838BB",
   },
   {
     name: "tBTC/thUSD",
     id: "396",
     crvLPToken: "0xb79bBc5C96ba248E10C1Bdac1a2B83790fF22B7F",
     cvxDepositToken: "0xaFeBd06d5d0D3F3744AE80182d360077d149B6f8",
-    rewarder: "0x4e6B8586f9b7cB47062616d6e6ace079D0913A4C"
+    rewarder: "0x4e6B8586f9b7cB47062616d6e6ace079D0913A4C",
   },
   {
     name: "dola-save",
     id: "397",
     crvLPToken: "0xff17dAb22F1E61078aBa2623c89cE6110E878B3c",
     cvxDepositToken: "0x55570F3B50D8A3c0A0E1c913BCe4E9ABa01c58De",
-    rewarder: "0x9CFcfb1513Ad5fC4C868D92fA79753d937C327fE"
+    rewarder: "0x9CFcfb1513Ad5fC4C868D92fA79753d937C327fE",
   },
   {
     name: "DOLA-sUSDe",
     id: "398",
     crvLPToken: "0x744793B5110f6ca9cC7CDfe1CE16677c3Eb192ef",
     cvxDepositToken: "0x75F72e6541819E4524d081289919C379E594fc34",
-    rewarder: "0xf1d547f657a05A4A081F899070A5585eb9F326b2"
+    rewarder: "0xf1d547f657a05A4A081F899070A5585eb9F326b2",
   },
   {
     name: "DOLA-sUSDS",
     id: "399",
     crvLPToken: "0x8b83c4aA949254895507D09365229BC3a8c7f710",
     cvxDepositToken: "0x9888b94958353d1C56259e81EA6F17506Df9f73c",
-    rewarder: "0x081EB123C1ddA50541eE778b59AC2f69704b9A19"
+    rewarder: "0x081EB123C1ddA50541eE778b59AC2f69704b9A19",
   },
   {
     name: "savedola",
     id: "400",
     crvLPToken: "0x76A962BA6770068bCF454D34dDE17175611e6637",
     cvxDepositToken: "0x26Fc3833271bF620D758f013f43e46A604a486aE",
-    rewarder: "0x731868E273CDD4fC2dDC91c7E9553986355B5C3a"
+    rewarder: "0x731868E273CDD4fC2dDC91c7E9553986355B5C3a",
   },
   {
     name: "llamathena",
     id: "401",
     crvLPToken: "0xd29f8980852c2c76fC3f6E96a7Aa06E0BedCC1B1",
     cvxDepositToken: "0x237926E55f9deee89833a42dEb92d3a6970850B4",
-    rewarder: "0x11fD8801a051b296E337a3e1168839fb346D5940"
+    rewarder: "0x11fD8801a051b296E337a3e1168839fb346D5940",
   },
   {
     name: "tBTC/cbBTC",
     id: "402",
     crvLPToken: "0xAE6Ee608b297305AbF3EB609B81FEBbb8F6A0bb3",
     cvxDepositToken: "0x3A5DCeB4bea8De0F0cDe09d9F495ad5EBFE2b707",
-    rewarder: "0xB683a3D855D016A1c78c3e7887812A7CAB3989B0"
+    rewarder: "0xB683a3D855D016A1c78c3e7887812A7CAB3989B0",
   },
   {
     name: "USDMcrvUSD",
     id: "403",
     crvLPToken: "0x30cE6E5A75586F0E83bCAc77C9135E980e6bc7A8",
     cvxDepositToken: "0x3c80854782b5BF9B457598ef6c7f63085C8B79Af",
-    rewarder: "0x38Ec9f564dBA0aaB7bFA44e0Fe4b0D74Ff6B6Ec1"
+    rewarder: "0x38Ec9f564dBA0aaB7bFA44e0Fe4b0D74Ff6B6Ec1",
   },
   {
     name: "fxUSDMIM",
     id: "404",
     crvLPToken: "0xD7Bf9bb6Bd088317Effd116E2B70ea3A054cBceb",
     cvxDepositToken: "0x53c0968d20124458717d52f931f315166AA4e24e",
-    rewarder: "0xdC50b178A93406BC6057c2D4fEd85023F2bb2510"
+    rewarder: "0xdC50b178A93406BC6057c2D4fEd85023F2bb2510",
   },
   {
     name: "ETHASF",
     id: "405",
     crvLPToken: "0x3D0d331390D14DF42c16FC20700F7e6Ad4849c50",
     cvxDepositToken: "0x422dda056F8c7a88AaDb1445B805A6099871Ce43",
-    rewarder: "0x992D16CB19a1b0a354B8C9748473C5667fDe654b"
+    rewarder: "0x992D16CB19a1b0a354B8C9748473C5667fDe654b",
   },
   {
     name: "USD3USDM",
     id: "406",
     crvLPToken: "0x8999EB39237DD9E3C184fb2f10780a95a34A14ef",
     cvxDepositToken: "0x5C0cf07866F0B479E80cBf953DDa2C379208c142",
-    rewarder: "0xD4d62998B4013c57195170c67A9b03a1618874F0"
+    rewarder: "0xD4d62998B4013c57195170c67A9b03a1618874F0",
   },
   {
     name: "USD3sDAI",
     id: "407",
     crvLPToken: "0x0E84996AC18fcF6Fe18C372520798CE0cdf892D4",
     cvxDepositToken: "0x3A1c5c92a29AeF96359ECefA3D6F404327Ee4F27",
-    rewarder: "0x3A203D91F7E87b4dFFC82103CC4F2089EDF971B7"
+    rewarder: "0x3A203D91F7E87b4dFFC82103CC4F2089EDF971B7",
   },
   {
     name: "USD3sUSDe",
     id: "408",
     crvLPToken: "0x964573B560DA1cE5b10dd09a4723c5ccBE9f9688",
     cvxDepositToken: "0x9ae89593C2f35EaC799e59ab54a68e55e0c03324",
-    rewarder: "0xb516FE0CaDC13F2dD86E734694cF307f22A43B3a"
+    rewarder: "0xb516FE0CaDC13F2dD86E734694cF307f22A43B3a",
   },
   {
     name: "BTCGHOETH",
     id: "409",
     crvLPToken: "0x8a4f252812dFF2A8636E4F7EB249d8FC2E3bd77f",
     cvxDepositToken: "0x952A316330705AC7B2116aa3dECaB4Dd211340c7",
-    rewarder: "0x4d10e7FC03dE065Aef3dfbc0394CbEd1e4d36D6E"
+    rewarder: "0x4d10e7FC03dE065Aef3dfbc0394CbEd1e4d36D6E",
   },
   {
     name: "AIOZETH",
     id: "410",
     crvLPToken: "0x8D688646ebB400f7DE2b713B80b6a58fCF35d2d9",
     cvxDepositToken: "0xF844260cD2788BfDF2ca6D623C681066F0528C30",
-    rewarder: "0x7292586Fd198C8a2fB92652457224965B10cFd2D"
+    rewarder: "0x7292586Fd198C8a2fB92652457224965B10cFd2D",
   },
   {
     name: "SkySaver",
     id: "411",
     crvLPToken: "0xfD1627E3f3469C8392C8c3A261D8F0677586e5e1",
     cvxDepositToken: "0x785b7A336021c7022fB3cf73EE4D455ce7055e46",
-    rewarder: "0x1319C366FEd9B37D1CFd9a84b75eE04671a4c6E1"
+    rewarder: "0x1319C366FEd9B37D1CFd9a84b75eE04671a4c6E1",
   },
   {
     name: "USD3scrvUS",
     id: "412",
     crvLPToken: "0xE99810Cd5AdCD7b13455aE1BE678B382d61f2d1E",
     cvxDepositToken: "0x87F738bF73e4406c92d4fe2c859471261718A474",
-    rewarder: "0x14Ff472b31b550E709bF15ADB7a4F052F00BF14b"
+    rewarder: "0x14Ff472b31b550E709bF15ADB7a4F052F00BF14b",
   },
   {
     name: "alUSDsDOLA",
     id: "413",
     crvLPToken: "0x460638e6F7605B866736e38045C0DE8294d7D87f",
     cvxDepositToken: "0x6a601eE54f96470D74F159249C90701Db1405e1C",
-    rewarder: "0x7Ee5f33E36988070A8E265A0f28a91514f45f630"
+    rewarder: "0x7Ee5f33E36988070A8E265A0f28a91514f45f630",
   },
   {
     name: "WBETHSTETH",
     id: "414",
     crvLPToken: "0x525e99f743EE495F3b032baa737BC590dc1C85b5",
     cvxDepositToken: "0xe4900ca526c2324956a962e0921DA10B6F632200",
-    rewarder: "0xCD071b81fa9a559EaBC0235779DCb58a1EfCeDd7"
+    rewarder: "0xCD071b81fa9a559EaBC0235779DCb58a1EfCeDd7",
   },
   {
     name: "cvcrvUSD",
     id: "415",
     crvLPToken: "0x52036c9046247C3358c987A2389FFDe6Ef8564c9",
     cvxDepositToken: "0xbF8ECcdf66547ecBFa15B035aD724aDE9013e9B8",
-    rewarder: "0x726E52aBB10597E28D9Ad4C0969b1DfC31092b52"
+    rewarder: "0x726E52aBB10597E28D9Ad4C0969b1DfC31092b52",
   },
   {
     name: "INV/WETH",
     id: "416",
     crvLPToken: "0x6bD88c57523bF138A19b263E8ebC8661c836B171",
     cvxDepositToken: "0xE5d593C4625Baef241139F9503c9F18c19e5a725",
-    rewarder: "0x31e8accEEbAC3DB72D99C32FbBDbFb1e93cD1F91"
+    rewarder: "0x31e8accEEbAC3DB72D99C32FbBDbFb1e93cD1F91",
   },
   {
     name: "yn-ETH/LSD",
     id: "417",
     crvLPToken: "0x1f59cC10c6360DA918B0235c98E58008452816EB",
     cvxDepositToken: "0xE3e8C77b63f6099790145E14F1f50b9aD271e800",
-    rewarder: "0x310E864768884C0b9033a393B01C2EE5A1f14e70"
+    rewarder: "0x310E864768884C0b9033a393B01C2EE5A1f14e70",
   },
   {
     name: "ynETHx/ETH",
     id: "418",
     crvLPToken: "0xD65ed4BcE447195187f37cE7D82f56AdF1826F8F",
     cvxDepositToken: "0x6F6ef39C60D7baDC0B5b1120fBA8C7B7D7e4feb6",
-    rewarder: "0x8153F3b92940AC09a497156AE4515679185c05A8"
+    rewarder: "0x8153F3b92940AC09a497156AE4515679185c05A8",
   },
   {
     name: "deUSD/DOLA",
     id: "419",
     crvLPToken: "0x6691DBb44154A9f23f8357C56FC9ff5548A8bdc4",
     cvxDepositToken: "0xd01c1Bff6a12a23761081E5dbAC896eaB9Eba5b7",
-    rewarder: "0xD30E66cBc869Aa808eB9c81f8Aad8408767E3a3E"
+    rewarder: "0xD30E66cBc869Aa808eB9c81f8Aad8408767E3a3E",
   },
   {
     name: "sdeUSDDOLA",
     id: "420",
     crvLPToken: "0x82202CAEC5E6d85014eADC68D4912F3C90093e7C",
     cvxDepositToken: "0xFE021509D6948cd1B515cCCa17D7d5991B5d23c2",
-    rewarder: "0x5a78d3b72831DaC9ED7042B647A797EeEa84249e"
+    rewarder: "0x5a78d3b72831DaC9ED7042B647A797EeEa84249e",
   },
   {
     name: "DOLA/USR",
     id: "421",
     crvLPToken: "0x38De22a3175708D45E7c7c64CD78479C8B56f76E",
     cvxDepositToken: "0x5c12a0Adb42B5E6A2dB15E2a46Ef1e66342dd923",
-    rewarder: "0xE694a5e9272ea7ed2DC25f0c6D21640fb8a83166"
+    rewarder: "0xE694a5e9272ea7ed2DC25f0c6D21640fb8a83166",
   },
   {
     name: "GHOUSR",
     id: "422",
     crvLPToken: "0x4628f13651eaD6793F8d838B34B8f8522Fb0cc52",
     cvxDepositToken: "0xE1De25F53fB0500F0Dd795adbd3dBAaa926fA781",
-    rewarder: "0x3724B6BCc6A2b4EF5455a27919AA97B3Bb5AEd68"
+    rewarder: "0x3724B6BCc6A2b4EF5455a27919AA97B3Bb5AEd68",
   },
   {
     name: "BOLDUSDC",
     id: "423",
     crvLPToken: "0xaDb6851875B7496E3D565B754d8a79508480a203",
     cvxDepositToken: "0x6C40F98044732FF0E217f0b4D26e1E1c5b366a54",
-    rewarder: "0xe0d6568247B7AE8Be21b34332717F8321b952106"
+    rewarder: "0xe0d6568247B7AE8Be21b34332717F8321b952106",
   },
   {
     name: "uniETH ETH",
     id: "424",
     crvLPToken: "0x0f2F4D68308dB60d36268a602EF273421A227021",
     cvxDepositToken: "0xF76c38C1119Acfb46f71CdB7192d20261DB51529",
-    rewarder: "0x6027c6A794b49aC3A15DF7f79008151D53D9144D"
+    rewarder: "0x6027c6A794b49aC3A15DF7f79008151D53D9144D",
   },
   {
     name: "crv2pool",
     id: "425",
     crvLPToken: "0x4f493B7dE8aAC7d55F71853688b1F7C8F0243C85",
     cvxDepositToken: "0x9a2B4b546f106753ddB510BbFf0820B18bE3940D",
-    rewarder: "0x83644fa70538e5251D125205186B14A76cA63606"
+    rewarder: "0x83644fa70538e5251D125205186B14A76cA63606",
   },
   {
     name: "2CRV",
     id: "426",
     crvLPToken: "0x1005F7406f32a61BD760CfA14aCCd2737913d546",
     cvxDepositToken: "0x808cb5f02a6DbAf5AcA2ec44d39c433eA40210B6",
-    rewarder: "0xFF0B20976D215a7F0EDb3827d6D7539FECdAD56c"
+    rewarder: "0xFF0B20976D215a7F0EDb3827d6D7539FECdAD56c",
   },
   {
     name: "sUSDa/USDa",
     id: "427",
     crvLPToken: "0xc95D0BA00Cdf61440E6F86cc55cCD477D7287A32",
     cvxDepositToken: "0xB04f639A8D3f77494847fc5F860b4243Cf4bD4EC",
-    rewarder: "0x67cb3AC6C85A17FA0A447a141454627f490810C5"
+    rewarder: "0x67cb3AC6C85A17FA0A447a141454627f490810C5",
   },
   {
     name: "OUSD/USDT",
     id: "428",
     crvLPToken: "0x37715D41Ee0AF05E77ad3a434a11bbFF473eFe41",
     cvxDepositToken: "0x2A602ac02796Fb30AE960dbB40086a06CDbd1a95",
-    rewarder: "0xe0523964509de264a6d57d7E3de0C0751ACD511B"
+    rewarder: "0xe0523964509de264a6d57d7E3de0C0751ACD511B",
   },
   {
     name: "sUSDUSDe",
     id: "429",
     crvLPToken: "0x59a06b97b2d566B9Dee2a368EaC8787Cfa57f95D",
     cvxDepositToken: "0xc399E1b3Ec21ddf5a88aF3ad7EFcF0df4bf99D69",
-    rewarder: "0x268ee43857694fe53FF8729b8171266ee2514c69"
+    rewarder: "0x268ee43857694fe53FF8729b8171266ee2514c69",
   },
   {
     name: "frxsUSDS",
     id: "430",
     crvLPToken: "0x81A2612F6dEA269a6Dd1F6DeAb45C5424EE2c4b7",
     cvxDepositToken: "0xD5c130ABb363dB08c0831083D329D4f61b01D83C",
-    rewarder: "0x44be1A72619eDDDccAb744eE9e1E69A0B639F85f"
+    rewarder: "0x44be1A72619eDDDccAb744eE9e1E69A0B639F85f",
   },
   {
     name: "frxUSDe",
     id: "431",
     crvLPToken: "0xdBb1d219d84eaCEFb850ee04caCf2f1830934580",
     cvxDepositToken: "0x7f09bDEE76F6d628820246c07Fc331FCb3984518",
-    rewarder: "0xb5a97cFB06f9005005a79dAA27EB44106b7ad79A"
+    rewarder: "0xb5a97cFB06f9005005a79dAA27EB44106b7ad79A",
   },
   {
     name: "frxscrvUSD",
     id: "432",
     crvLPToken: "0x4d968a5Db8dA0822A2F08840f553De4129aAe5F3",
     cvxDepositToken: "0xe022220e758Ca4A52Dc123867F1B6921e1F0c71C",
-    rewarder: "0xcfF9C8f2f6be91E54D035bEdcb788f3BFf8E0924"
+    rewarder: "0xcfF9C8f2f6be91E54D035bEdcb788f3BFf8E0924",
   },
   {
     name: "sfrscrvUSD",
     id: "433",
     crvLPToken: "0x15e4ff94B70a8F146b4e4aFD069014d126035752",
     cvxDepositToken: "0x4d3548CaB39F34b29ee184c86eAe2E1A07d48bA9",
-    rewarder: "0x6C4075355Eea626cBFaEeACd9Fd8F5016a08B2E0"
+    rewarder: "0x6C4075355Eea626cBFaEeACd9Fd8F5016a08B2E0",
   },
   {
     name: "sfrxsUSDe",
     id: "434",
     crvLPToken: "0x3BD1017929b43c1414bE2Aca39892590fBa4d6e2",
     cvxDepositToken: "0xc05F37B40337507De310bB0979584e9ebA85a914",
-    rewarder: "0x57d7dCB768808BA8348C5d3E3f97542a99499a35"
+    rewarder: "0x57d7dCB768808BA8348C5d3E3f97542a99499a35",
   },
   {
     name: "sDOLA yUSD",
     id: "435",
     crvLPToken: "0x9353976A6B6E7A9e1E9B1F2aaaBA629aD310947f",
     cvxDepositToken: "0x9ff68ea3A35ff8a2c8785A79108AAf8f35d81380",
-    rewarder: "0x389BC347B01B0148AC0F43aE9923e5358D926933"
+    rewarder: "0x389BC347B01B0148AC0F43aE9923e5358D926933",
   },
   {
     name: "sUSD+sUSDe",
     id: "436",
     crvLPToken: "0x4b5E827F4C0a1042272a11857a355dA1F4Ceebae",
     cvxDepositToken: "0xb5CeC9E680B8D53A4CAe0c57Ef995E0876c47484",
-    rewarder: "0x14d2DC2CeBC25f217bc9Aee5AC3A7967Ca7ceBae"
+    rewarder: "0x14d2DC2CeBC25f217bc9Aee5AC3A7967Ca7ceBae",
   },
   {
     name: "crvUSDe",
     id: "437",
     crvLPToken: "0x5B03CcCAb7BA3010fA5CAd23746cbf0794938e96",
     cvxDepositToken: "0xD200A1935A7dbfA819a835d4f1f9C2776CE1d684",
-    rewarder: "0x60eF3c53c86E1eCEc76d900B6cf2f0B39ffD98B2"
+    rewarder: "0x60eF3c53c86E1eCEc76d900B6cf2f0B39ffD98B2",
   },
   {
     name: "cvcrvUSD",
     id: "438",
     crvLPToken: "0x8E3009b59200668e1efda0a2F2Ac42b24baa2982",
     cvxDepositToken: "0xE2bb8B08Be19bd8316c8115223fDd48ac48555ce",
-    rewarder: "0x8867Df8D263077f94Ddb5E86c4328Fd8d2c0E818"
+    rewarder: "0x8867Df8D263077f94Ddb5E86c4328Fd8d2c0E818",
   },
   {
     name: "reusdsfrx",
     id: "439",
     crvLPToken: "0xed785Af60bEd688baa8990cD5c4166221599A441",
     cvxDepositToken: "0x47FdB72CcC93Bc9568a82917dFF767FDbB4f2f5F",
-    rewarder: "0x18574c2047A2D4786567A2C31B4f25Ae291ed6bF"
+    rewarder: "0x18574c2047A2D4786567A2C31B4f25Ae291ed6bF",
   },
   {
     name: "reusdscrv",
     id: "440",
     crvLPToken: "0xc522A6606BBA746d7960404F22a3DB936B6F4F50",
     cvxDepositToken: "0x20F1c81B123FFcD19B5469f0EB2C4FD37983dBBc",
-    rewarder: "0x7Fafc1876970dBD9F6568586EFa7d0FAc0FE8EA8"
+    rewarder: "0x7Fafc1876970dBD9F6568586EFa7d0FAc0FE8EA8",
   },
   {
     name: "wethrsup",
     id: "441",
     crvLPToken: "0xEe351f12EAE8C2B8B9d1B9BFd3c5dd565234578d",
     cvxDepositToken: "0x12611382e49e51f2b74C8E14361028dc373AE0dC",
-    rewarder: "0xbD60aAe56ede51f20D8E416637D7c80737441460"
+    rewarder: "0xbD60aAe56ede51f20D8E416637D7c80737441460",
   },
   {
     name: "OGNETHUSD",
     id: "442",
     crvLPToken: "0xB8ac7ce449Ed72FF61dE8043d67B507f9F523Fa2",
     cvxDepositToken: "0xcfBD855194Aea2dEBF9FC898ee61e0aA05aE5b21",
-    rewarder: "0x2c69273f8E983EDDEB517602e46bBF429FE90BC8"
+    rewarder: "0x2c69273f8E983EDDEB517602e46bBF429FE90BC8",
   },
   {
     name: "RLUSD/USDC",
     id: "443",
     crvLPToken: "0xD001aE433f254283FeCE51d4ACcE8c53263aa186",
     cvxDepositToken: "0xBd5D4c539B3773086632416A4EC8ceF57c945319",
-    rewarder: "0x5A71E7e04F8725fD42a216949E7099ebd08A42E3"
+    rewarder: "0x5A71E7e04F8725fD42a216949E7099ebd08A42E3",
   },
   {
     name: "BOBOETH",
     id: "444",
     crvLPToken: "0x7a4AdfbC173E2D4f224f11496b0d0ef86F336091",
     cvxDepositToken: "0xc75d1412388F50924714665706a04a8A78B56C08",
-    rewarder: "0x2d33c4d4821C3e6780475010780Fca493Fad2222"
+    rewarder: "0x2d33c4d4821C3e6780475010780Fca493Fad2222",
   },
   {
     name: "cvcrvUSD",
     id: "445",
     crvLPToken: "0x992B77179A5cF876bcD566FF4b3EAE6482012B90",
     cvxDepositToken: "0xaD3cCC7A65d64FA0B7bf78Bd135e043377EC188D",
-    rewarder: "0x6095EC5De7acA5e8938F4ED92E1F868Cab243f5E"
+    rewarder: "0x6095EC5De7acA5e8938F4ED92E1F868Cab243f5E",
   },
   {
     name: "reusdsdola",
     id: "446",
     crvLPToken: "0x48d670D189B4b48757992D36897bCa6E3f889040",
     cvxDepositToken: "0x4A8CF354F7cd3C51fFAD5D90B8d14Ef3a007fd6F",
-    rewarder: "0x2042468f1D356F78717818531958d744114347B4"
+    rewarder: "0x2042468f1D356F78717818531958d744114347B4",
   },
   {
     name: "reusdfxusd",
     id: "447",
     crvLPToken: "0xb0ef04ACE97d350E24Efa5139d2590D26a61A8Dc",
     cvxDepositToken: "0xBb4259Ce230FFA2858528796b3Ee46CB5c0C9eD8",
-    rewarder: "0x46E764CC319f0033d35902b1ACf2CdA45C7B9b7b"
+    rewarder: "0x46E764CC319f0033d35902b1ACf2CdA45C7B9b7b",
   },
   {
     name: "3CRVlvUSD3CRV-f",
     id: "448",
     crvLPToken: "0xe9123CBC5d1EA65301D417193c40A72Ac8D53501",
     cvxDepositToken: "0xacf7967AE8dE42837004f2049Ac2421f9704CDed",
-    rewarder: "0xfE99d86691e3B73Af7f62c9374A1eB4B1152Ad97"
+    rewarder: "0xfE99d86691e3B73Af7f62c9374A1eB4B1152Ad97",
   },
   {
     name: "USDC/USDf",
     id: "449",
     crvLPToken: "0x72310DAAed61321b02B08A547150c07522c6a976",
     cvxDepositToken: "0x6FC9E1764850c61F91F3eF57d1A05013f047f7f4",
-    rewarder: "0x4A87e4219f10510b0943DCD0cD0247868Ec59E85"
+    rewarder: "0x4A87e4219f10510b0943DCD0cD0247868Ec59E85",
   },
   {
     name: "GOLD++",
     id: "450",
     crvLPToken: "0xC48A38499A90E3b883c509ca08eC1b540CDF15EE",
     cvxDepositToken: "0x138a3ABaCD5539db57Edb12eDf58b24C28574d18",
-    rewarder: "0x475Be1B034139F4a0Ec46DD48e4B138Fc4D47843"
+    rewarder: "0x475Be1B034139F4a0Ec46DD48e4B138Fc4D47843",
   },
   {
     name: "OETH/WETH",
     id: "451",
     crvLPToken: "0xcc7d5785AD5755B6164e21495E07aDb0Ff11C2A8",
     cvxDepositToken: "0x2a1e7Cf85E533348AC5770514bF713544a11f856",
-    rewarder: "0xAc15ffFdCA77fc86770bEAbA20cbC1bc2D00494c"
+    rewarder: "0xAc15ffFdCA77fc86770bEAbA20cbC1bc2D00494c",
   },
   {
     name: "msETHOETH",
     id: "452",
     crvLPToken: "0xB5b93dde9D87563184d31F3b7f85dd58404E2ee0",
     cvxDepositToken: "0xBDEEc3667374A521E7dc446767eB66F193c41350",
-    rewarder: "0x6597d955e2510Ee86539C68fe2e4D6b01ba6374d"
+    rewarder: "0x6597d955e2510Ee86539C68fe2e4D6b01ba6374d",
   },
   {
     name: "cvcrvUSD",
     id: "453",
     crvLPToken: "0xc33aa628b10655B36Eaa7ee880D6Bc4789dD2289",
     cvxDepositToken: "0x7Cec246e1d1A0F281D9Eb7cEFcC877FAB88aA3Ab",
-    rewarder: "0x53b36C332e333CC7d2ff19Dd4242954a78eFD370"
+    rewarder: "0x53b36C332e333CC7d2ff19Dd4242954a78eFD370",
   },
   {
     name: "tacBTCpool",
     id: "454",
     crvLPToken: "0xFfF8634dE89271b6075C55FA89B4E9A087Fdb9FE",
     cvxDepositToken: "0x6e7AC116633cd8807672202365cA1dd43D661134",
-    rewarder: "0xca55D40f6703a5FcC46d8277D1D78751acCe9305"
+    rewarder: "0xca55D40f6703a5FcC46d8277D1D78751acCe9305",
   },
   {
     name: "OUSD/USDC",
     id: "455",
     crvLPToken: "0x6d18E1a7faeB1F0467A77C0d293872ab685426dc",
     cvxDepositToken: "0xc4C1cD8a1d6ebC366e8620582553F8b1464f9Ffc",
-    rewarder: "0x5dC92f3a58ab899453935A9226B0Efa93F09Fb0B"
+    rewarder: "0x5dC92f3a58ab899453935A9226B0Efa93F09Fb0B",
   },
   {
     name: "tacETH",
     id: "456",
     crvLPToken: "0xc73B0328Bd40Ea35Aad34d0fDC1dBE64C4f9c59F",
     cvxDepositToken: "0x86C37c2148b2659786D605BA023C1f1F0471EB3F",
-    rewarder: "0xf1Fe3DfDAB616D4Eb2EB8dBa3ccCe311989DA46C"
+    rewarder: "0xf1Fe3DfDAB616D4Eb2EB8dBa3ccCe311989DA46C",
   },
   {
     name: "tacUSDpool",
     id: "457",
     crvLPToken: "0x51F5466690978173f45270f57e06e25b0c888261",
     cvxDepositToken: "0xBF7767d0Fa5d06628a6dbbF55ddBB99001b18c4A",
-    rewarder: "0xDEcB4beFF6428035d99A548F2869A5Ef11d9Cacd"
+    rewarder: "0xDEcB4beFF6428035d99A548F2869A5Ef11d9Cacd",
   },
   {
     name: "cvcrvUSD",
     id: "458",
     crvLPToken: "0xdfA525BD3A8e59d336EF725309F855250538c337",
     cvxDepositToken: "0xFaF452D2c4518F1167acD6b39f47E46750bDaE52",
-    rewarder: "0xEb6DB7F04cF8cAf6873399A506A06BdBBDA456d5"
+    rewarder: "0xEb6DB7F04cF8cAf6873399A506A06BdBBDA456d5",
   },
   {
     name: "USDNfxUSD",
     id: "459",
     crvLPToken: "0xB6aF437ceEa0DBeA524115eFC905F0F44fd1eBAF",
     cvxDepositToken: "0x55D6d853b7acE76dcE6162e661c9e42c6D18CDbC",
-    rewarder: "0xfC84FAA5B9a0293B853a607bdcfA285c6C947830"
+    rewarder: "0xfC84FAA5B9a0293B853a607bdcfA285c6C947830",
   },
   {
     name: "ROMEUSDT",
     id: "460",
     crvLPToken: "0xF0909Ea2428bBBA587797D6874a3F611B31d907c",
     cvxDepositToken: "0xc4b4dC15EAC730E1D036dE9a8bb245C332f5ea6D",
-    rewarder: "0x2C12AF9728a818fe54768BCE011394C2fed67d81"
+    rewarder: "0x2C12AF9728a818fe54768BCE011394C2fed67d81",
   },
   {
     name: "crv2USDaf",
     id: "461",
     crvLPToken: "0x95591348FE9718bE8bfa3afcC9b017D9Ec18A7fa",
     cvxDepositToken: "0xc13A2bD68A84105C13068A39115CD7E3ebe767D9",
-    rewarder: "0x1A6Fcc741528c8f02942A0BA9997979106175dE3"
+    rewarder: "0x1A6Fcc741528c8f02942A0BA9997979106175dE3",
   },
   {
     name: "fxSavecrv",
     id: "462",
     crvLPToken: "0xb6E4821c6fCABe32f5F452dfD3Ef20Ce2A3a48E2",
     cvxDepositToken: "0xD54b0E54cF439494F3F7519b8D2Ca0D042644202",
-    rewarder: "0x53Da3D4b0BC0F7db48CEACEd16e150fEC1165216"
+    rewarder: "0x53Da3D4b0BC0F7db48CEACEd16e150fEC1165216",
   },
   {
     name: "cvcrvUSD",
     id: "463",
     crvLPToken: "0x01144442fba7aDccB5C9DC9cF33dd009D50A9e1D",
     cvxDepositToken: "0x0DaB0728C4A0a396b02Bbd6c8F5693B53ab7cf61",
-    rewarder: "0xE23d9Fdc55b1028A0EE70b875e674BE03c596039"
+    rewarder: "0xE23d9Fdc55b1028A0EE70b875e674BE03c596039",
   },
   {
     name: "yUSD USDC",
     id: "464",
     crvLPToken: "0x81301848168bAe6Add206aA50052E247Cb366d3A",
     cvxDepositToken: "0xE4716D8b7909B562E03d9E65f1f8EE4Ec5def808",
-    rewarder: "0xD4A5b2194E9eC8232Aa7c6C1d9beeF3B001D91a9"
+    rewarder: "0xD4A5b2194E9eC8232Aa7c6C1d9beeF3B001D91a9",
   },
   {
     name: "wA7A5USDT",
     id: "465",
     crvLPToken: "0xeb593fe90591923FDdd97F2e5fCb1a14CE656E5D",
     cvxDepositToken: "0x01969B9F0EA3a1C4d8F1612914dE61EE5A090B22",
-    rewarder: "0xca94039a69913057a8Aa809A7B54b8F6EF8c7719"
+    rewarder: "0xca94039a69913057a8Aa809A7B54b8F6EF8c7719",
   },
   {
     name: "deUSDUSDC",
     id: "466",
     crvLPToken: "0x5F6c431AC417f0f430B84A666a563FAbe681Da94",
     cvxDepositToken: "0xC1e6ED0bb5d74AF0f0154e9E581674322982059E",
-    rewarder: "0xc596ACBAD169D7C4Ed0B49E6665371550bF360B4"
+    rewarder: "0xc596ACBAD169D7C4Ed0B49E6665371550bF360B4",
   },
   {
     name: "frxAFbold",
     id: "467",
     crvLPToken: "0xB3fc0D6cD41427fFa4a6059ecA2090Fb76350B89",
     cvxDepositToken: "0x7c7762478b878A94C8f0aDFd676086762742AC00",
-    rewarder: "0x15C8FFdB65FDe5055d9B0CD95ce0b7dDedCa90a3"
+    rewarder: "0x15C8FFdB65FDe5055d9B0CD95ce0b7dDedCa90a3",
   },
   {
     name: "yUSDafBOLD",
     id: "468",
     crvLPToken: "0x0a991BbB28460d93892F57D48FFbEfE6C5a61c46",
     cvxDepositToken: "0x8758511C6647978BD16944063B5F1BaA809B6Adf",
-    rewarder: "0x593797eecDeb3035D8B9e5F87b8E03B2F72f0AA8"
+    rewarder: "0x593797eecDeb3035D8B9e5F87b8E03B2F72f0AA8",
   },
   {
     name: "lvlUSDUSDC",
     id: "469",
     crvLPToken: "0x1220868672D5B10F3E1cB9Ab519E4d0B08545ea4",
     cvxDepositToken: "0xDf62F509dfC729Dc44d8FDa5A6895CaB59a583d4",
-    rewarder: "0x29bC8147756BA38D55cDD1E2dc94c7dFCc7922f6"
+    rewarder: "0x29bC8147756BA38D55cDD1E2dc94c7dFCc7922f6",
   },
   {
     name: "ETH+ETH",
     id: "470",
     crvLPToken: "0x2c683fAd51da2cd17793219CC86439C1875c353e",
     cvxDepositToken: "0xf0BB7682830941e105Ce0FE2c043d1Bb058d45B6",
-    rewarder: "0x9e0A248528Aa933ff1F8f707ea75F61eD780836E"
+    rewarder: "0x9e0A248528Aa933ff1F8f707ea75F61eD780836E",
   },
   {
     name: "s/lvlUSD",
     id: "471",
     crvLPToken: "0xF244324FBB57f09F0606FF088bC894b051d632Eb",
     cvxDepositToken: "0x3d6dC85c2BbF2BAfA7d6bF818069F894DB885c0f",
-    rewarder: "0xeecf8cC131A60098ff3536BDD94cad8Ac8890658"
+    rewarder: "0xeecf8cC131A60098ff3536BDD94cad8Ac8890658",
   },
   {
     name: "MANAETH",
     id: "472",
     crvLPToken: "0x27CB06F65d8B7228147375E15d37912b93b501CC",
     cvxDepositToken: "0x974045fC2d285c8E8DafD50dc5644934654797C8",
-    rewarder: "0x72584A2C2755289B2012A85F9EA59201D5D45F56"
+    rewarder: "0x72584A2C2755289B2012A85F9EA59201D5D45F56",
   },
   {
     name: "sdeUSDdeUS",
     id: "473",
     crvLPToken: "0x2c7A1b4950Fe369e79fB3471284d4a4E66fbEA76",
     cvxDepositToken: "0x8C1d373B5970Df341FBd28798Ad39833F99AD8D8",
-    rewarder: "0x170F1A70c94851707C405985671d86D36d7f5a74"
+    rewarder: "0x170F1A70c94851707C405985671d86D36d7f5a74",
   },
   {
     name: "uniEfrxE",
     id: "474",
     crvLPToken: "0x78C579A2Dcfe10Ae8B3C888A583337Beb4D91733",
     cvxDepositToken: "0xe77815343c3f913C7E9F07BBE87B5e8506179E93",
-    rewarder: "0x4683d23005D56fD44B67D52b62bD43318983B9C1"
+    rewarder: "0x4683d23005D56fD44B67D52b62bD43318983B9C1",
   },
   {
     name: "USD3sUSDS",
     id: "475",
     crvLPToken: "0x65b05F6b0472b1f36a2F6d90A14cD21900851609",
     cvxDepositToken: "0xE1921dF0EC5c1F6733f8e210b5c3569e19bAdb37",
-    rewarder: "0x49d0d76d64f55B41254B39a2115A25FC06fE74C3"
+    rewarder: "0x49d0d76d64f55B41254B39a2115A25FC06fE74C3",
   },
   {
     name: "ZCHFUSDT",
     id: "476",
     crvLPToken: "0x6031bDd613E6A2F587b244e078053Fe7BbaBE3B5",
     cvxDepositToken: "0xDCd6d9377De8A8bF4c5Cf051Cf660c2422E7eaab",
-    rewarder: "0x0D2c64161135740b879d7ba30041f78D4723c7ad"
+    rewarder: "0x0D2c64161135740b879d7ba30041f78D4723c7ad",
   },
   {
     name: "frxUSDUSDf",
     id: "477",
     crvLPToken: "0x98E9599dab3A936C35DE48E13E026Ef4eA20B5e6",
     cvxDepositToken: "0xf9FBf66C7dddAf166B1E208aC8EffDccBEDEefe2",
-    rewarder: "0x4f092EfCbe292E9b2a22cE795F11031bDc892980"
+    rewarder: "0x4f092EfCbe292E9b2a22cE795F11031bDc892980",
   },
   {
     name: "crvUSDVUSD",
     id: "478",
     crvLPToken: "0xB1c189dfDe178FE9F90E72727837cC9289fB944F",
     cvxDepositToken: "0x38b29673Fc140171e8F113a571792a158Faae45d",
-    rewarder: "0xE8c5620622047047bB9c26dbC685434b29D0A9F0"
+    rewarder: "0xE8c5620622047047bB9c26dbC685434b29D0A9F0",
   },
   {
     name: "deUSDUSDT",
     id: "479",
     crvLPToken: "0x7C4e143B23D72E6938E06291f705B5ae3D5c7c7C",
     cvxDepositToken: "0xb9A25e872046b0fA21Df8faA6E12F4A753b26D05",
-    rewarder: "0x9a5318db2f94a71fB0Eab59002441c7324F7551B"
+    rewarder: "0x9a5318db2f94a71fB0Eab59002441c7324F7551B",
   },
   {
     name: "crvfrxUSD",
     id: "480",
     crvLPToken: "0x13e12BB0E6A2f1A3d6901a59a9d585e89A6243e1",
     cvxDepositToken: "0x25a171120DB4Fd1c44f1969777fACadE918e85E5",
-    rewarder: "0xBB8494177E2A846E233ec7D56944F0D15E697eE2"
+    rewarder: "0xBB8494177E2A846E233ec7D56944F0D15E697eE2",
   },
   {
     name: "BOLDUSDC",
     id: "481",
     crvLPToken: "0xEFc6516323FbD28e80B85A497B65A86243a54B3E",
     cvxDepositToken: "0x0DC6381c9B6d2F9ebf21386608046967cDB29228",
-    rewarder: "0x5451716CB79A51fEA5f8331B028b45f10452f7e8"
+    rewarder: "0x5451716CB79A51fEA5f8331B028b45f10452f7e8",
   },
   {
     name: "iUSDUSDC",
     id: "482",
     crvLPToken: "0x2E2d6C119bdF226C420cB40E3B9fC9689cF5986e",
     cvxDepositToken: "0xc31979ae44C0c0569903e6EcC56a91D323dC3c87",
-    rewarder: "0x6e9750Ddc390E0003B3e33d6D62a49A5E64Aa344"
+    rewarder: "0x6e9750Ddc390E0003B3e33d6D62a49A5E64Aa344",
   },
   {
     name: "cvcrvUSD",
     id: "483",
     crvLPToken: "0x7430f11Eeb64a4ce50C8f92177485d34C48DA72c",
     cvxDepositToken: "0xfd53Bfbe5C611381D06133F97090483e2fDb06B4",
-    rewarder: "0x53FEd2512bcdFcF20BD9Cc47EE049726011470fd"
+    rewarder: "0x53FEd2512bcdFcF20BD9Cc47EE049726011470fd",
   },
   {
     name: "USDafscrv",
     id: "484",
     crvLPToken: "0x3bE454C4391690ab4DDae3Fb987c8147b8Ecc08A",
     cvxDepositToken: "0xa15bF97b29fB2b5Ae43c1A83E78cd7A089Dd1eA3",
-    rewarder: "0xDc717a66D6fb22251d9E6E4e45eFDAD521aE12F0"
+    rewarder: "0xDc717a66D6fb22251d9E6E4e45eFDAD521aE12F0",
   },
   {
     name: "VSPWETH",
     id: "485",
     crvLPToken: "0x20F858D88124857274994516eEaC7720fe39B8ea",
     cvxDepositToken: "0x224407E8E3432bc8701e752050605cbC5557e34d",
-    rewarder: "0x8825A44b055FAEDa01Ba917C7eBB57ae94f53E42"
+    rewarder: "0x8825A44b055FAEDa01Ba917C7eBB57ae94f53E42",
   },
   {
     name: "uniBTCfrx",
     id: "486",
     crvLPToken: "0x7780884A24E4d84a6Fbb5EFF5aBa8B944d5cA52C",
     cvxDepositToken: "0x8F1224d008415952f8A15506C824075b9346c20F",
-    rewarder: "0xA12d64FfC48F01c5dAe709Db5130497c99A3149E"
+    rewarder: "0xA12d64FfC48F01c5dAe709Db5130497c99A3149E",
   },
   {
     name: "ebUSDUSDC",
     id: "487",
     crvLPToken: "0xD25f2cC6819FBD34641712122397eFbaf9b6A6e2",
     cvxDepositToken: "0x0167850fFeAC15501781E7Cb45dD7208bF60b386",
-    rewarder: "0x3eF636075372e093c48Bb32AEaEEfCB17367A9Ab"
+    rewarder: "0x3eF636075372e093c48Bb32AEaEEfCB17367A9Ab",
   },
   {
     name: "RFRX-CRV",
     id: "488",
     crvLPToken: "0xc2FcdD48209DD383B1f2AC120b84b2A75EE18BD3",
     cvxDepositToken: "0xdFfefB650EaD7393CFB24e64f07DEFA03969415f",
-    rewarder: "0xe103350ac2712cFAF470cB6da0F8B5aa517d10eF"
+    rewarder: "0xe103350ac2712cFAF470cB6da0F8B5aa517d10eF",
   },
   {
     name: "JUSD USDC",
     id: "489",
     crvLPToken: "0x6A0c68Bc96658A2B97201d94986Bf7753000f2cF",
     cvxDepositToken: "0x2Ff84F68556D9055b012Ad8D3450787cDA06d9ED",
-    rewarder: "0x59cA1f2cd4C61146C9360058Db869CBccf5caa18"
+    rewarder: "0x59cA1f2cd4C61146C9360058Db869CBccf5caa18",
   },
   {
     name: "uniBTCwBTC",
     id: "490",
     crvLPToken: "0x404fdadA7fC68B5B633D184067c9643732f8A045",
     cvxDepositToken: "0x4aAc246fffDa2fa82F849b8F1a37fC0b4Dc83018",
-    rewarder: "0x129Bd315f8F2CB7288654057953f75986BBa0Af4"
+    rewarder: "0x129Bd315f8F2CB7288654057953f75986BBa0Af4",
   },
   {
     name: "litsfrxUSD",
     id: "491",
     crvLPToken: "0x640Bc08845EA4bd89842D51D48c8f53EAC84Cfa6",
     cvxDepositToken: "0xA7B150e49E301242FeDA0baa72F25d39232365aA",
-    rewarder: "0x2a50b1f9bf10B32Bc969eC91B2066F7D1C603EF9"
+    rewarder: "0x2a50b1f9bf10B32Bc969eC91B2066F7D1C603EF9",
   },
   {
     name: "cvcrvUSD",
     id: "492",
     crvLPToken: "0xC32B0Cf36e06c790A568667A17DE80cba95A5Aad",
     cvxDepositToken: "0xB08eaBb0B0B3101ecD23596fd16E5b44EB8bC172",
-    rewarder: "0x073567a3AFF6FA18c28B5613665e9a1F2Af9ceda"
+    rewarder: "0x073567a3AFF6FA18c28B5613665e9a1F2Af9ceda",
   },
   {
     name: "cvcrvUSD",
     id: "493",
     crvLPToken: "0xb89aF59FfD0c2Bf653F45B60441B875027696733",
     cvxDepositToken: "0x2DeC761111c30a6514A825FC0ed6B39C5BeB4324",
-    rewarder: "0xbE30c1BF5e53f6Da124EA7B8c89C13FCA901A437"
+    rewarder: "0xbE30c1BF5e53f6Da124EA7B8c89C13FCA901A437",
   },
   {
     name: "unibrBTC",
     id: "494",
     crvLPToken: "0xA90bb21c391acF795638Fa07F78C325AC8f73fbA",
     cvxDepositToken: "0xF288438aE11a18632F0FAC617D0AdB773FCB4F9a",
-    rewarder: "0x421E601A0203a2dBA369a21f63C8E2Ea6895A819"
+    rewarder: "0x421E601A0203a2dBA369a21f63C8E2Ea6895A819",
   },
   {
     name: "BDfxUSDCaf",
     id: "495",
     crvLPToken: "0x8B878AFE454e31CF0A79c6D7cf2f077DD286C12f",
     cvxDepositToken: "0xa14B00e62f4Cf04132Bf31Ffb42e6845BCd8E11e",
-    rewarder: "0x4522692F8b63bbF933fBaE6a915d4d7a13742C87"
+    rewarder: "0x4522692F8b63bbF933fBaE6a915d4d7a13742C87",
   },
   {
     name: "DOLAwstUSR",
     id: "496",
     crvLPToken: "0x64273624eb57c5cA961d366CBF3968e760Bf0452",
     cvxDepositToken: "0x5B323610BcdC6938C6f45eE99E82935f800b4421",
-    rewarder: "0x7F548ca54A86a326CE42772879338d429F14f048"
+    rewarder: "0x7F548ca54A86a326CE42772879338d429F14f048",
   },
   {
     name: "DOLAfxSAVE",
     id: "497",
     crvLPToken: "0x2b854e225d7282854819327D0CA5b8D8AA8CAaED",
     cvxDepositToken: "0x5DDd08b6b776B8aeafE8452FD03588F1bfFc1a6B",
-    rewarder: "0x796C7Fd50a4df1063728624D620fD495E0fB8114"
+    rewarder: "0x796C7Fd50a4df1063728624D620fD495E0fB8114",
   },
   {
     name: "msUSDfxUSD",
     id: "498",
     crvLPToken: "0x138Bb0f3208bd729a561F3786DDb97BBc69e6628",
     cvxDepositToken: "0x628a8EC742c645594303F813280e9eA9cfeEd5e1",
-    rewarder: "0x35e1Afd9b38BBD18D8d3b2b14876fAf7F5fc2EE0"
+    rewarder: "0x35e1Afd9b38BBD18D8d3b2b14876fAf7F5fc2EE0",
   },
   {
     name: "sfrxUSD2",
     id: "499",
     crvLPToken: "0xF292eB6c5dcb693Eaaf392D0562a01C3710E5978",
     cvxDepositToken: "0x8F38EaE1E57f6d86353c15BE21B7491Da6840eCe",
-    rewarder: "0x206689DaEDd00c82870D616c2e49b9d601A3d292"
+    rewarder: "0x206689DaEDd00c82870D616c2e49b9d601A3d292",
   },
   {
     name: "LQTYFORKS",
     id: "500",
     crvLPToken: "0x54628EA95D7e748c3783b855f4583DA96FB21895",
     cvxDepositToken: "0xd81963401F97f095B75f8aaAc513B9bC232f21a7",
-    rewarder: "0xBd6a5AF932610F154EBB7057aCE2810Ba96fcE1E"
+    rewarder: "0xBd6a5AF932610F154EBB7057aCE2810Ba96fcE1E",
   },
   {
     name: "USDFIfrxUS",
     id: "501",
     crvLPToken: "0x2eFC11c7Bb2E0FBdBa8A05a3712398860E6A8E53",
     cvxDepositToken: "0x9D3317cCa3aFEA7a085213a4F1eB8D64923Aae41",
-    rewarder: "0x268E8A23813C1B54F84AcAf92830604fFBC29B75"
+    rewarder: "0x268E8A23813C1B54F84AcAf92830604fFBC29B75",
   },
   {
     name: "sfrxUSDe",
     id: "502",
     crvLPToken: "0x86fecb2f93c537397f9dFD894bCf6A95fa87a25e",
     cvxDepositToken: "0xDc98f982069c26Ad92257066C927c893B36F7f3b",
-    rewarder: "0x6D5905BDF522b25CC08d75eCb93177ac2656C5A2"
+    rewarder: "0x6D5905BDF522b25CC08d75eCb93177ac2656C5A2",
   },
   {
     name: "cvcrvUSD",
     id: "503",
     crvLPToken: "0xFc05ee9dEC7275A273B1E1A8a821dA3CdF752f9B",
     cvxDepositToken: "0xA8935bF71761E5E67FA08b6452fa2BF39ea50d61",
-    rewarder: "0x93158E2684b517acA652B90A9CC57d7973bde49a"
+    rewarder: "0x93158E2684b517acA652B90A9CC57d7973bde49a",
   },
   {
     name: "SQUILL",
     id: "504",
     crvLPToken: "0x2034b76BB7318d5fda07Ec183c0308c5E06C9C8C",
     cvxDepositToken: "0x8eAF336154B06baDd41126AF6e432b7d61FA33C6",
-    rewarder: "0x81984E7D41Fa91BE917DE0931d0Fa454ce2AbFdE"
+    rewarder: "0x81984E7D41Fa91BE917DE0931d0Fa454ce2AbFdE",
   },
   {
     name: "MUSD-sUSDe",
     id: "505",
     crvLPToken: "0x765Cbd88947fcBc5df1F763d02E384B0a2DD285E",
     cvxDepositToken: "0x0E488D2E1A9E0BDf3913cF60C5B8b687c4f5Bc99",
-    rewarder: "0xAb2D9Eb10af7988F7bFF0997649a46Ec36b69872"
+    rewarder: "0xAb2D9Eb10af7988F7bFF0997649a46Ec36b69872",
   },
   {
     name: "YB-crvUSD",
     id: "506",
     crvLPToken: "0xec977F46467a3021785Cff88894886E617abd65b",
     cvxDepositToken: "0x3c139Ea11D35764BD5a37DACe118CEB7B6D09634",
-    rewarder: "0x7b18B9e2b17499557692157e90E4cf897c4de741"
+    rewarder: "0x7b18B9e2b17499557692157e90E4cf897c4de741",
   },
   {
     name: "frxUSDaf",
     id: "507",
     crvLPToken: "0x20d4c49a873EaeFf76EfBD0cF19002F6E19EF52c",
     cvxDepositToken: "0xbAda8d6EEc7D32229637CDFC5CE816A3d15b1cf6",
-    rewarder: "0xA9E05EfE250013D57D79A7F0F7a26e977ec010c1"
+    rewarder: "0xA9E05EfE250013D57D79A7F0F7a26e977ec010c1",
   },
   {
     name: "Fraxelixir",
     id: "508",
     crvLPToken: "0x4eeB03b2b8f55159f47B3548fAaFE3efaFF43eb9",
     cvxDepositToken: "0x0193B1c603C7E7d35e366A4F966231134f4b67BF",
-    rewarder: "0x7eA5EA61f26FC17cE96db9C8842276AfeEDc93C8"
+    rewarder: "0x7eA5EA61f26FC17cE96db9C8842276AfeEDc93C8",
   },
   {
     name: "RWA/fxUSD",
     id: "509",
     crvLPToken: "0xBDf86bD28cB3a8Af5D46cCD2f56131Be6718B1d8",
     cvxDepositToken: "0xED81D7446C38188E757F4bB56C93d8bCb9C77986",
-    rewarder: "0x2384DF5C229A2a13Ce2e2D1644cDfDc0535CAED1"
+    rewarder: "0x2384DF5C229A2a13Ce2e2D1644cDfDc0535CAED1",
   },
   {
     name: "FrxMsUSD",
     id: "510",
     crvLPToken: "0x9A9e2e70919c75D80aAaA1D483c46CdBb8ac4d1b",
     cvxDepositToken: "0x8776057375455A92ac296Df174a42E2e8a371dC7",
-    rewarder: "0x60Aa76b7797644c89EB004b84286B47517a8DDb3"
+    rewarder: "0x60Aa76b7797644c89EB004b84286B47517a8DDb3",
   },
   {
     name: "MUSD/2pool",
     id: "511",
     crvLPToken: "0xB5571E76693ba60110B5811DD650FFefce1C955f",
     cvxDepositToken: "0xE6626C15aB80fb6694B5E39c4172551aB20A2E20",
-    rewarder: "0xC14aD130D6d2cf3F5CDD6E9b7A5B65115183F3cb"
+    rewarder: "0xC14aD130D6d2cf3F5CDD6E9b7A5B65115183F3cb",
   },
   {
     name: "USPDUSDC",
     id: "512",
     crvLPToken: "0x06Cf5F9B93E9FCFDB33D6B3791eb152567Cd8D36",
     cvxDepositToken: "0x353ac8df45838196E64fBB915496452cD0449CD0",
-    rewarder: "0xeac0ba9bf71F82DaF8E38Dd64FDF6f2063787910"
+    rewarder: "0xeac0ba9bf71F82DaF8E38Dd64FDF6f2063787910",
   },
   {
     name: "sdYBYB-LP",
     id: "513",
     crvLPToken: "0x98b540fa89690969D111D045afCa575C91519B1A",
     cvxDepositToken: "0x0A865Ee577a419796af459D33cCb0517ea8C88A8",
-    rewarder: "0xd360DC3e7f66FC03b171E3C69953ceF689077d62"
+    rewarder: "0xd360DC3e7f66FC03b171E3C69953ceF689077d62",
   },
   {
     name: "ZCHF/CRVUSD",
     id: "514",
     crvLPToken: "0x027B40F5917FCd0eac57d7015e120096A5F92ca9",
     cvxDepositToken: "0x2B623F121b9c6514842aBA07b8A8a05Efc2C83b3",
-    rewarder: "0x03b5d5bBd97e1A40378aB4d7E359b6F24D4dcAD0"
+    rewarder: "0x03b5d5bBd97e1A40378aB4d7E359b6F24D4dcAD0",
   },
   {
     name: "USDCUSDU",
     id: "515",
     crvLPToken: "0x6C5Ff8DCe52BE77b4eCE6B51996018f0C1713bA9",
     cvxDepositToken: "0xCEC49b81bEc4ec8eAA5E4333eC0aB3885F8a3c8f",
-    rewarder: "0x4Eb5767474a63ebB54Af3f72BF78F6aeFb451FE5"
+    rewarder: "0x4Eb5767474a63ebB54Af3f72BF78F6aeFb451FE5",
   },
   {
     name: "yYB-LP",
     id: "516",
     crvLPToken: "0x5Ee9606e5611Fd6CE14BD2BC12db70BD53dC9daA",
     cvxDepositToken: "0xC5a6c8Ace374A4d753DaDB3ad4d715d9D2D497d9",
-    rewarder: "0xF9c656E0049B3Dd86A433c2de070956ea4017452"
+    rewarder: "0xF9c656E0049B3Dd86A433c2de070956ea4017452",
   },
   {
     name: "ETHfxUSD",
     id: "517",
     crvLPToken: "0xb2ee8f9622C5A480928836c0575df7d150f72d98",
     cvxDepositToken: "0x77C41C207b4522b69448f075fe47839D4641104e",
-    rewarder: "0xdedEC7713C782faBE1F6b6643B402EC27F083264"
+    rewarder: "0xdedEC7713C782faBE1F6b6643B402EC27F083264",
   },
   {
     name: "pmcrvUSD",
     id: "518",
     crvLPToken: "0xEcb0F0d68C19BdAaDAEbE24f6752A4Db34e2c2cb",
     cvxDepositToken: "0x46Ab620E49cC170CB9b3B9F7dc9BE6C34EE18cC4",
-    rewarder: "0xC75C8C6d2D47AAa711d79E1FE20D4cb1AD147702"
+    rewarder: "0xC75C8C6d2D47AAa711d79E1FE20D4cb1AD147702",
   },
   {
     name: "pmfrxUSD",
     id: "519",
     crvLPToken: "0xBf5047039F2980C21eB5692c790BAd8A9533b900",
     cvxDepositToken: "0x18dC17a63531Bf4E1BF8367963Ba9A68F9e3fC59",
-    rewarder: "0x76468E4ec9eAdc70599502D2Da330BB22fea1202"
+    rewarder: "0x76468E4ec9eAdc70599502D2Da330BB22fea1202",
   },
   {
     name: "ynUSDx/USD",
     id: "520",
     crvLPToken: "0xfcCa47DdD4336F08835005d912124b472eD29448",
     cvxDepositToken: "0x6f7158Cca95e08AFaf3E37d0a6ECA8725f42a373",
-    rewarder: "0xc86Cf3743Ee2D73c3BD6578b41cfAf104C4D0207"
+    rewarder: "0xc86Cf3743Ee2D73c3BD6578b41cfAf104C4D0207",
   },
   {
     name: "OETHAstETH",
     id: "521",
     crvLPToken: "0x95753095F15870ACC0cB0Ed224478ea61aeb0b8e",
     cvxDepositToken: "0xccbD33071bE1faDdC39Aa612852aEcA1020bd07B",
-    rewarder: "0x9e00d312d9A0Ea001BE169747588f7C420D00d13"
+    rewarder: "0x9e00d312d9A0Ea001BE169747588f7C420D00d13",
   },
   {
     name: "ynETHx/YND",
     id: "522",
     crvLPToken: "0x8e6f84d924CB70b67A3872f9CA4f99C851dc7D48",
     cvxDepositToken: "0x3515E6DFd47AfddAa44e7D239ed2a55DD360D63C",
-    rewarder: "0x844d6a8970058A77FAAAA3EFA125FfC102EaF3EE"
+    rewarder: "0x844d6a8970058A77FAAAA3EFA125FfC102EaF3EE",
   },
   {
     name: "yn-RWA/USD",
     id: "523",
     crvLPToken: "0xFFd3b4D343A8964a5C3c1caAc20f319C41A97BFF",
     cvxDepositToken: "0x3C6a48CCB2F3144FfbE69E746b05210De3845Dd2",
-    rewarder: "0xba7bEB3bf18C84dCA6E653e9bF2E931674ca607e"
+    rewarder: "0xba7bEB3bf18C84dCA6E653e9bF2E931674ca607e",
   },
   {
     name: "ynRWAx/USD",
     id: "524",
     crvLPToken: "0xf05Bc5C38a8F5E3D98c72f11bC59E713F8a32228",
     cvxDepositToken: "0x8a00865678bea071F16A924fc03979eaf8ae9FdD",
-    rewarder: "0x4Eaa34095a12Bf93C139518Fb9Db8E3129827f0C"
+    rewarder: "0x4Eaa34095a12Bf93C139518Fb9Db8E3129827f0C",
   },
   {
     name: "ynETH/ETHx",
     id: "525",
     crvLPToken: "0xd04E38dae7203F6Ab49238Ede14dF7a5Ba7da63e",
     cvxDepositToken: "0x46e216c50E51bf8b11AD9D94Dc543986d762af86",
-    rewarder: "0xCD4490a9Fe820b0a4f73A2FAba56E0437BCFC8F8"
+    rewarder: "0xCD4490a9Fe820b0a4f73A2FAba56E0437BCFC8F8",
   },
   {
     name: "fxUSDnr",
     id: "526",
     crvLPToken: "0x3204d754a3003cEc155e2D8F44b3b48eD60b7Cc6",
     cvxDepositToken: "0xb47608223d89Ee7f1514dcAA5dc13e2E2dc4a6a8",
-    rewarder: "0x28877f9DC3D05B998a8a676D4b3568071657676B"
+    rewarder: "0x28877f9DC3D05B998a8a676D4b3568071657676B",
   },
   {
     name: "HemiCbWBTC",
     id: "527",
     crvLPToken: "0x66039342C66760874047c36943B1e2d8300363BB",
     cvxDepositToken: "0xb75C1E2130c304c49336d15D45D3C4995c73CbcB",
-    rewarder: "0x18590AF2d5326B543D926e08B556867396dC7d4e"
+    rewarder: "0x18590AF2d5326B543D926e08B556867396dC7d4e",
   },
   {
     name: "dsfrxUSD",
     id: "528",
     crvLPToken: "0x2C2A700766886290359ccf39Cb2173a39af1CEf9",
     cvxDepositToken: "0x1445fF92ABdcE1b84d3b73472b298e2FB88835D4",
-    rewarder: "0x0aB0911b4C7Bc10b6402cc06f2C96CBB7EEdcE87"
+    rewarder: "0x0aB0911b4C7Bc10b6402cc06f2C96CBB7EEdcE87",
   },
   {
     name: "dUSDfrxUSD",
     id: "529",
     crvLPToken: "0x249839821B7B673bC68a6d9bC74811fa33A8a49f",
     cvxDepositToken: "0x433c610FcF38f0C1F19f5f4797dfC5b43008a43f",
-    rewarder: "0x8701e30F327aAa56e9f3B854a9CD2AEF53807bDE"
+    rewarder: "0x8701e30F327aAa56e9f3B854a9CD2AEF53807bDE",
   },
   {
     name: "sdsfrxrUSD",
     id: "530",
     crvLPToken: "0x4DE61e58f5f1E495e3BC58516268Bba25b5a57Fd",
     cvxDepositToken: "0xBb7B3aE8DB007E20EC0808629c5ceFB1686F371E",
-    rewarder: "0x7210b77205C2bFC88250bDDFca04548F232346f8"
+    rewarder: "0x7210b77205C2bFC88250bDDFca04548F232346f8",
   },
   {
     name: "savUSDUSDC",
     id: "531",
     crvLPToken: "0x2E1776968EC75Bfd13dbC5B94AE57034d7e85Fb9",
     cvxDepositToken: "0x538DaFdA25E9c7F67d9607D77f832913e49FC3F9",
-    rewarder: "0xB5D4992f2d2c0B6C8de45E36811edd1921f9eF1e"
+    rewarder: "0xB5D4992f2d2c0B6C8de45E36811edd1921f9eF1e",
   },
   {
     name: "frxUSDOUSD",
     id: "532",
     crvLPToken: "0x68d03Ed49800e92D7Aa8aB171424007e55Fd1F49",
     cvxDepositToken: "0xd6CB81A8F3756130C46B783bcA80E60fB82Dc5f1",
-    rewarder: "0x42Cf537ddBa32EA5EdF70417a9242788b4523a75"
+    rewarder: "0x42Cf537ddBa32EA5EdF70417a9242788b4523a75",
   },
   {
     name: "RWA/OUSD",
     id: "533",
     crvLPToken: "0xf75f2b5fc5F375e1aD3130dD0eEC7219Fe821204",
     cvxDepositToken: "0x971D1617679D6dF8a79B4A1BBa9dEfd00927d6AD",
-    rewarder: "0x6bcA5C4ca34aACb33cB082B498685B381c9e0A63"
+    rewarder: "0x6bcA5C4ca34aACb33cB082B498685B381c9e0A63",
   },
   {
     name: "OUSDMUSD",
     id: "534",
     crvLPToken: "0x23b78Dc3b1b0A27f3838219e97d806Aae377a1b2",
     cvxDepositToken: "0x033Cf6074a065b6d0782c7494ec2a3fC0D8Fd037",
-    rewarder: "0xe0333026d84dFfB08999124f0d674e7aC47BCB07"
+    rewarder: "0xe0333026d84dFfB08999124f0d674e7aC47BCB07",
   },
   {
     name: "OUSDmsUSD",
     id: "535",
     crvLPToken: "0x9AfAd25833D0F47b3A3D9204dDF965CB172De0CB",
     cvxDepositToken: "0x1671d9fECD6d4F80bc462b26996CF1c877360f50",
-    rewarder: "0xa70f992848911c076f0CC82D96078d0F9e2DB8af"
+    rewarder: "0xa70f992848911c076f0CC82D96078d0F9e2DB8af",
   },
   {
     name: "OUSDcrvUSD",
     id: "536",
     crvLPToken: "0xEfa939F4932cfF8A92fd6A7C5Fe52cD2AD77f3EC",
     cvxDepositToken: "0xE352C7C070669Aa9f7A687C7f02353092dd135Dc",
-    rewarder: "0xf0d205aE5B23e5969CbCa3DcCd799FE77Fcda5CB"
+    rewarder: "0xf0d205aE5B23e5969CbCa3DcCd799FE77Fcda5CB",
   },
   {
     name: "OUSDfxUSD",
     id: "537",
     crvLPToken: "0xe2C27FD0e83DA0348d58402dFB9C7D8B3773fd76",
     cvxDepositToken: "0x29fA5ccA9651515681eE16A0C244eAbC8185E24A",
-    rewarder: "0x668B2c45Fb09905D14CE7c016B5bF425B73b0Ca4"
+    rewarder: "0x668B2c45Fb09905D14CE7c016B5bF425B73b0Ca4",
   },
   {
     name: "OUSDUSDnr",
     id: "538",
     crvLPToken: "0x1791bBFa950F7db0B52Ecb0729584BaD886665F5",
     cvxDepositToken: "0xABe3508C76304430E1F181ae61bb478316B92407",
-    rewarder: "0xb54935b82AFA738Ac4EA78306da3246674e69Ed9"
+    rewarder: "0xb54935b82AFA738Ac4EA78306da3246674e69Ed9",
   },
   {
     name: "OUSD/USDT",
     id: "539",
     crvLPToken: "0xdcc3eC9aF62DFcb63033243E90481eB18Baeb897",
     cvxDepositToken: "0x90Ba052998307849C00E60A671cB1f8577125a23",
-    rewarder: "0xAfad35A708fA496129BdC8811ceB5AE0126BA856"
+    rewarder: "0xAfad35A708fA496129BdC8811ceB5AE0126BA856",
   },
   {
     name: "cUSDOUSDC",
     id: "540",
     crvLPToken: "0x90455bd11Ce8a67C57d467e634Dc142b8e4105Aa",
     cvxDepositToken: "0x8D4567bdc60908c882a7ee4339D475af200B049d",
-    rewarder: "0xF9317B19f68E58DfE065a190758926ceF58C7bB0"
+    rewarder: "0xF9317B19f68E58DfE065a190758926ceF58C7bB0",
   },
   {
     name: "USGUSDC",
     id: "541",
     crvLPToken: "0x97BA10115da528c113462EDE9C20D7adc806D93f",
     cvxDepositToken: "0xaB7364878bd4Ec38a89134D6D8350B7FDa66eBc1",
-    rewarder: "0x3eAFd8C2B36B93A8463A5f460a01A1b3D37b6929"
+    rewarder: "0x3eAFd8C2B36B93A8463A5f460a01A1b3D37b6929",
   },
   {
     name: "USGfrxUSD",
     id: "542",
     crvLPToken: "0xEfc056790bb19702b2164ec6Ea6bA3AE01d81195",
     cvxDepositToken: "0x1c0A3daCd1D6cD370302D1Caa50aA663fD9fc2EE",
-    rewarder: "0x8D79FA117C3B3a4da1D3F1c037f2e500a2f6D70D"
+    rewarder: "0x8D79FA117C3B3a4da1D3F1c037f2e500a2f6D70D",
   },
   {
     name: "OUSDpmUSD",
     id: "543",
     crvLPToken: "0x57690E5287d36733664caa21fa2Dc48c156e962D",
     cvxDepositToken: "0x35E4ea1079426ec7BCa3132cd181387B72647582",
-    rewarder: "0xfd4d8924822f25e8bf1a6364b0BF6eD9BaA8A066"
+    rewarder: "0xfd4d8924822f25e8bf1a6364b0BF6eD9BaA8A066",
   },
   {
     name: "OUSDUSDe",
     id: "544",
     crvLPToken: "0xDbdc27b649239f9C5aFdc92e57c2601A0cE71a89",
     cvxDepositToken: "0x9B361A8511433c991d0ccEB3dcD26cb016ad7A70",
-    rewarder: "0x3385166e75b8CACB8e6172171E9c3570Adbcbd98"
+    rewarder: "0x3385166e75b8CACB8e6172171E9c3570Adbcbd98",
   },
   {
     name: "OUSDeUSD",
     id: "545",
     crvLPToken: "0xCF8A5C32953D08C197f0A92676CFb59314b5c62e",
     cvxDepositToken: "0x76c0b681Be4eac39e57C3C962bB36c48779E044C",
-    rewarder: "0x5bbAa8fAD5c2B75f07A5CBd72285d9545F362D18"
+    rewarder: "0x5bbAa8fAD5c2B75f07A5CBd72285d9545F362D18",
   },
   {
     name: "OUSDavUSD",
     id: "546",
     crvLPToken: "0xb1E75B9C6367a27499CD59631d3B27224BeFDE4f",
     cvxDepositToken: "0x613638B0D89Db8e15eB5678D76A4e1E86cAD093C",
-    rewarder: "0xbD00090AA139E4F19A85AcD8bf4bBaE0f7A0Ec8D"
+    rewarder: "0xbD00090AA139E4F19A85AcD8bf4bBaE0f7A0Ec8D",
   },
   {
     name: "crvUSDETHLDO",
     id: "547",
     crvLPToken: "0x5b3BA844b3859f56524e99Ae54857b36c8Ae3eFE",
     cvxDepositToken: "0x018cfBA53B25d373E4E08A0e42d2B70728B19675",
-    rewarder: "0xFB757110F4f94165A636E915b9182b67A2117cc7"
+    rewarder: "0xFB757110F4f94165A636E915b9182b67A2117cc7",
   },
   {
     name: "OGNOETH",
     id: "548",
     crvLPToken: "0x56A344F1aA03943f536b94436dE6A6e10116Cf86",
     cvxDepositToken: "0xF3F223a784a3529A67d11fd30093b75801599Fb9",
-    rewarder: "0x818ff532A93D369a717cD739590c4B2350D2a737"
+    rewarder: "0x818ff532A93D369a717cD739590c4B2350D2a737",
   },
   {
     name: "srRyfrxUSD",
     id: "549",
     crvLPToken: "0x8fc753F96752b35F64D1bAE514e6CF8DB0b9322e",
     cvxDepositToken: "0x7ACe006F1FBD3Fcb237BCA6fA9904Ee7327F392A",
-    rewarder: "0x96d608EDA39e161BeDeC0A88D2300EC7013d9Fa5"
-  }
+    rewarder: "0x96d608EDA39e161BeDeC0A88D2300EC7013d9Fa5",
+  },
 ] as const

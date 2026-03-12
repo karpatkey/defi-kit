@@ -8,8 +8,8 @@ export default [
     symbol: "bbETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xBEEF01735c132Ada46AA9aA4c54623cAA92A64CB",
@@ -18,8 +18,8 @@ export default [
     symbol: "steakUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x2e52Efab5be3c4AacDb832386F5a670Fe1C60555",
@@ -28,8 +28,8 @@ export default [
     symbol: "bbETH",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x186514400e52270cef3D80e1c6F8d10A75d47344",
@@ -38,8 +38,8 @@ export default [
     symbol: "bbUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbEEF02e5E13584ab96848af90261f0C8Ee04722a",
@@ -48,8 +48,8 @@ export default [
     symbol: "steakPYUSD",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0xbeef033b4520267C5acFcb45414117b633fCb3Dd",
@@ -58,8 +58,8 @@ export default [
     symbol: "steakUSDM",
     asset: {
       address: "0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812",
-      symbol: "wUSDM"
-    }
+      symbol: "wUSDM",
+    },
   },
   {
     id: "0xbEef047a543E45807105E51A8BBEFCc5950fcfBa",
@@ -68,8 +68,8 @@ export default [
     symbol: "steakUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x19f91632ba0367cD7B1fc8816071cB31519e5d8a",
@@ -78,8 +78,8 @@ export default [
     symbol: "testMM",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x78Fc2c2eD1A4cDb5402365934aE5648aDAd094d0",
@@ -88,8 +88,8 @@ export default [
     symbol: "Re7WETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x2C25f6C25770fFEC5959D34B94Bf898865e5D6b1",
@@ -98,8 +98,8 @@ export default [
     symbol: "bbUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xC21DB71648B18C5B9E038d88393C9b254cf8eaC8",
@@ -108,8 +108,8 @@ export default [
     symbol: "ERY",
     asset: {
       address: "0x3231Cb76718CDeF2155FC47b5286d82e6eDA273f",
-      symbol: "EURe"
-    }
+      symbol: "EURe",
+    },
   },
   {
     id: "0x2371e134e3455e0593363cBF89d3b6cf53740618",
@@ -118,8 +118,8 @@ export default [
     symbol: "gtWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xdd0f28e19C1780eb6396170735D45153D261490d",
@@ -128,8 +128,8 @@ export default [
     symbol: "gtUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBEEf050ecd6a16c4e7bfFbB52Ebba7846C4b8cD4",
@@ -138,8 +138,8 @@ export default [
     symbol: "steakETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xbEeF06E7027EB8A1F0ab6ceF743542EA31b8492b",
@@ -148,8 +148,8 @@ export default [
     symbol: "steakEURe",
     asset: {
       address: "0x3231Cb76718CDeF2155FC47b5286d82e6eDA273f",
-      symbol: "EURe"
-    }
+      symbol: "EURe",
+    },
   },
   {
     id: "0xbEeF087c8430C0f9dCBa39BA866Eb7c22200599B",
@@ -158,8 +158,8 @@ export default [
     symbol: "steakEURC",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0xbeEf094333AEdD535c130958c204E84f681FD9FA",
@@ -168,8 +168,8 @@ export default [
     symbol: "steakWBTC",
     asset: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC"
-    }
+      symbol: "WBTC",
+    },
   },
   {
     id: "0x53675a75A0D6E5C13DBfb0d691EA679357ca5DDa",
@@ -178,8 +178,8 @@ export default [
     symbol: "gtUSDCmkr",
     asset: {
       address: "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
-      symbol: "MKR"
-    }
+      symbol: "MKR",
+    },
   },
   {
     id: "0xEbFA750279dEfa89b8D99bdd145a016F6292757b",
@@ -188,8 +188,8 @@ export default [
     symbol: "gtUSDCmkr",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x8Be3f517a3382Ec57a730C41b739717b214b375d",
@@ -198,8 +198,8 @@ export default [
     symbol: "smellDAI",
     asset: {
       address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI"
-    }
+      symbol: "DAI",
+    },
   },
   {
     id: "0x95EeF579155cd2C5510F312c8fA39208c3Be01a8",
@@ -208,8 +208,8 @@ export default [
     symbol: "Re7USDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x4cA0E178c94f039d7F202E09d8d1a655Ed3fb6b6",
@@ -218,8 +218,8 @@ export default [
     symbol: "USDC RWA",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xB8C7F2a4B3bF76CC04bd55Ebc259b33a67b3b36d",
@@ -228,8 +228,8 @@ export default [
     symbol: "spDAI",
     asset: {
       address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI"
-    }
+      symbol: "DAI",
+    },
   },
   {
     id: "0x73e65DBD630f90604062f6E02fAb9138e713edD9",
@@ -238,8 +238,8 @@ export default [
     symbol: "spDAI",
     asset: {
       address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI"
-    }
+      symbol: "DAI",
+    },
   },
   {
     id: "0x8CB3649114051cA5119141a34C200D65dc0Faa73",
@@ -248,8 +248,8 @@ export default [
     symbol: "gtUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x500331c9fF24D9d11aee6B07734Aa72343EA74a5",
@@ -258,8 +258,8 @@ export default [
     symbol: "gtDAIcore",
     asset: {
       address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI"
-    }
+      symbol: "DAI",
+    },
   },
   {
     id: "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658",
@@ -268,8 +268,8 @@ export default [
     symbol: "gtLRTcore",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x125D41A6e5dbf455cD9Df8F80BCC6fd172D52Cc6",
@@ -278,8 +278,8 @@ export default [
     symbol: "gtUSDAcore",
     asset: {
       address: "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
-      symbol: "USDA"
-    }
+      symbol: "USDA",
+    },
   },
   {
     id: "0xBE40491F3261Fd42724F1AEb465796eb11c06ddF",
@@ -288,8 +288,8 @@ export default [
     symbol: "Re7FRAX",
     asset: {
       address: "0x853d955aCEf822Db058eb8505911ED77F175b99e",
-      symbol: "FRAX"
-    }
+      symbol: "FRAX",
+    },
   },
   {
     id: "0x89D80f5e9BC88d8021b352064ae73F0eAf79EBd8",
@@ -298,8 +298,8 @@ export default [
     symbol: "Re7USDA",
     asset: {
       address: "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
-      symbol: "USDA"
-    }
+      symbol: "USDA",
+    },
   },
   {
     id: "0x67315dd969B8Cd3a3520C245837Bf71f54579C75",
@@ -308,8 +308,8 @@ export default [
     symbol: "llama-crvUSD",
     asset: {
       address: "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
-      symbol: "crvUSD"
-    }
+      symbol: "crvUSD",
+    },
   },
   {
     id: "0x8eB67A509616cd6A7c1B3c8C21D48FF57df3d458",
@@ -318,8 +318,8 @@ export default [
     symbol: "gtUSDCcore",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x60d715515d4411f7F43e4206dc5d4a3677f0eC78",
@@ -328,8 +328,8 @@ export default [
     symbol: "Re7USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x2a79E2c69ff4d3a50BF335153e4c09Fa360F3386",
@@ -338,8 +338,8 @@ export default [
     symbol: "mUSD0",
     asset: {
       address: "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
-      symbol: "USD0"
-    }
+      symbol: "USD0",
+    },
   },
   {
     id: "0x4F460bb11cf958606C69A963B4A17f9DaEEea8b6",
@@ -348,8 +348,8 @@ export default [
     symbol: "fxUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeEF07E929F84466a591De130e4154667214F491",
@@ -358,8 +358,8 @@ export default [
     symbol: "steakEURCV",
     asset: {
       address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
-      symbol: "EURCV"
-    }
+      symbol: "EURCV",
+    },
   },
   {
     id: "0xc080f56504e0278828A403269DB945F6c6D6E014",
@@ -368,8 +368,8 @@ export default [
     symbol: "gteUSDc",
     asset: {
       address: "0xA0d69E286B938e21CBf7E51D71F6A4c8918f482F",
-      symbol: "eUSD"
-    }
+      symbol: "eUSD",
+    },
   },
   {
     id: "0xd63070114470f685b75B74D60EEc7c1113d33a3D",
@@ -378,8 +378,8 @@ export default [
     symbol: "USUALUSDC+",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x9a8bC3B04b7f3D87cfC09ba407dCED575f2d61D8",
@@ -388,8 +388,8 @@ export default [
     symbol: "MCwETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x7f172587B13f85992e8d36c1D8723dFd1bDD931E",
@@ -398,8 +398,8 @@ export default [
     symbol: "MZAI",
     asset: {
       address: "0x6900057428C99Fb373397D657Beb40D92D8aC97f",
-      symbol: "USDz"
-    }
+      symbol: "USDz",
+    },
   },
   {
     id: "0x8a0D114B72A5ba5ABF37283EF98708945db4423e",
@@ -408,8 +408,8 @@ export default [
     symbol: "ZAI-MM-VAULT",
     asset: {
       address: "0x69000405f9DcE69BD4Cbf4f2865b79144A69BFE0",
-      symbol: "USDz"
-    }
+      symbol: "USDz",
+    },
   },
   {
     id: "0xdA1F00d47054A1807f6bf2403Ce48a14d894A18b",
@@ -418,8 +418,8 @@ export default [
     symbol: "rdcDAI",
     asset: {
       address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI"
-    }
+      symbol: "DAI",
+    },
   },
   {
     id: "0x443df5eEE3196e9b2Dd77CaBd3eA76C3dee8f9b2",
@@ -428,8 +428,8 @@ export default [
     symbol: "gtWBTCc",
     asset: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC"
-    }
+      symbol: "WBTC",
+    },
   },
   {
     id: "0xbEEf0075e03A5cE0D84d4ACcF3481363E0584F5c",
@@ -438,8 +438,8 @@ export default [
     symbol: "steakM",
     asset: {
       address: "0x437cc33344a0B27A429f795ff6B469C72698B291",
-      symbol: "wM"
-    }
+      symbol: "wM",
+    },
   },
   {
     id: "0xE0C98605f279e4D7946d25B75869c69802823763",
@@ -448,8 +448,8 @@ export default [
     symbol: "Re7WBTC",
     asset: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC"
-    }
+      symbol: "WBTC",
+    },
   },
   {
     id: "0x43fD147d5319B8Cf39a6e57143684Efca9CF3613",
@@ -458,8 +458,8 @@ export default [
     symbol: "Re7tBTC",
     asset: {
       address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
-      symbol: "tBTC"
-    }
+      symbol: "tBTC",
+    },
   },
   {
     id: "0xBeEf11eCb698f4B5378685C05A210bdF71093521",
@@ -468,8 +468,8 @@ export default [
     symbol: "steakRUSD",
     asset: {
       address: "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
-      symbol: "rUSD"
-    }
+      symbol: "rUSD",
+    },
   },
   {
     id: "0x1B4cd53a1A8e5F50aB6320EF34E5fB4D3df7B6f6",
@@ -478,8 +478,8 @@ export default [
     symbol: "gtAUSDc",
     asset: {
       address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
-      symbol: "AUSD"
-    }
+      symbol: "AUSD",
+    },
   },
   {
     id: "0xeC3B2CC4C6a8fC9a13620A91622483b56E2E6fD9",
@@ -488,8 +488,8 @@ export default [
     symbol: "pufethweth86lltv",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xF2eFEBE45180C8c04edFdBfF3d88e58C9D61a03E",
@@ -498,8 +498,8 @@ export default [
     symbol: "apUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xB1A757A68D4a04a6B5A0F06d0cB4FD739048F614",
@@ -508,8 +508,8 @@ export default [
     symbol: "apWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x4FBB60166199d36dD2fB09005154F0938B6d717B",
@@ -518,8 +518,8 @@ export default [
     symbol: "AnzenUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x4Ff4186188f8406917293A9e01A1ca16d3cf9E59",
@@ -528,8 +528,8 @@ export default [
     symbol: "sbMorphoUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x1265a81d42d513Df40d0031f8f2e1346954d665a",
@@ -538,8 +538,8 @@ export default [
     symbol: "MC.eUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x8E3C0A68F8065Dc666065f16cf902596A60d540e",
@@ -548,8 +548,8 @@ export default [
     symbol: "MCwBTC",
     asset: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC"
-    }
+      symbol: "WBTC",
+    },
   },
   {
     id: "0x1c530D6de70c05A81bF1670157b9d928e9699089",
@@ -558,8 +558,8 @@ export default [
     symbol: "MCwBTC",
     asset: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC"
-    }
+      symbol: "WBTC",
+    },
   },
   {
     id: "0xC0A14627D6a23f70c809777CEd873238581C1032",
@@ -568,8 +568,8 @@ export default [
     symbol: "MC.USD0",
     asset: {
       address: "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
-      symbol: "USD0"
-    }
+      symbol: "USD0",
+    },
   },
   {
     id: "0x225C119fFaf1CaddCfCDb493283eDF4b816Bf773",
@@ -578,8 +578,8 @@ export default [
     symbol: "USUALUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xbEEfa1aBfEbE621DF50ceaEF9f54FdB73648c92C",
@@ -588,8 +588,8 @@ export default [
     symbol: "steakUSDA",
     asset: {
       address: "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
-      symbol: "USDA"
-    }
+      symbol: "USDA",
+    },
   },
   {
     id: "0xBEEFa260c2CE39122367cEAb0b4F94e6068cAcb6",
@@ -598,8 +598,8 @@ export default [
     symbol: "steakEURA",
     asset: {
       address: "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
-      symbol: "EURA"
-    }
+      symbol: "EURA",
+    },
   },
   {
     id: "0xBeEf796ae50ba5423857CAc27DD36369cfc8241b",
@@ -608,8 +608,8 @@ export default [
     symbol: "steakPAXG",
     asset: {
       address: "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
-      symbol: "PAXG"
-    }
+      symbol: "PAXG",
+    },
   },
   {
     id: "0xBeEfDA19BC6114633FC17e6d074A6A2b472C756f",
@@ -618,8 +618,8 @@ export default [
     symbol: "steakUSDS",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0x98cF0B67Da0F16E1F8f1a1D23ad8Dc64c0c70E0b",
@@ -628,8 +628,8 @@ export default [
     symbol: "MCcbBTC",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0x0F359FD18BDa75e9c49bC027E7da59a4b01BF32a",
@@ -638,8 +638,8 @@ export default [
     symbol: "reUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x78B18E07dc43017fcEaabaD0751d6464c0F56b25",
@@ -648,8 +648,8 @@ export default [
     symbol: "gtmsETHc",
     asset: {
       address: "0x64351fC9810aDAd17A690E4e1717Df5e7e085160",
-      symbol: "msETH"
-    }
+      symbol: "msETH",
+    },
   },
   {
     id: "0xfbDEE8670b273E12b019210426E70091464b02Ab",
@@ -658,8 +658,8 @@ export default [
     symbol: "MC.wM",
     asset: {
       address: "0x437cc33344a0B27A429f795ff6B469C72698B291",
-      symbol: "wM"
-    }
+      symbol: "wM",
+    },
   },
   {
     id: "0xF587f2e8AfF7D76618d3B6B4626621860FbD54e3",
@@ -668,8 +668,8 @@ export default [
     symbol: "gtcbBTCc",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0xBEeFd1C0C6C1F7c94DC6b989DBA2E983A47A26A8",
@@ -678,8 +678,8 @@ export default [
     symbol: "steakUSDL",
     asset: {
       address: "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
-      symbol: "wUSDL"
-    }
+      symbol: "wUSDL",
+    },
   },
   {
     id: "0xbEEFC01767ed5086f35deCb6C00e6C12bc7476C1",
@@ -688,8 +688,8 @@ export default [
     symbol: "csUSDL",
     asset: {
       address: "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
-      symbol: "wUSDL"
-    }
+      symbol: "wUSDL",
+    },
   },
   {
     id: "0x6188C18CB1c9Ef246aDf4454cC184a84A4Fc5465",
@@ -698,8 +698,8 @@ export default [
     symbol: "vertexUSDCig",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xA02F5E93f783baF150Aa1F8b341Ae90fe0a772f7",
@@ -708,8 +708,8 @@ export default [
     symbol: "Re7cbBTC",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0x7526e974d8A8469d29EE606630215245287a07Bf",
@@ -718,8 +718,8 @@ export default [
     symbol: "ccmUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xB9C9158aB81f90996cAD891fFbAdfBaad733c8C6",
@@ -728,8 +728,8 @@ export default [
     symbol: "recbBTC",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0x2f1aBb81ed86Be95bcf8178bA62C8e72D6834775",
@@ -738,8 +738,8 @@ export default [
     symbol: "pWBTC",
     asset: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC"
-    }
+      symbol: "WBTC",
+    },
   },
   {
     id: "0x6859B34a9379122d25A9FA46f0882d434fee36c3",
@@ -748,8 +748,8 @@ export default [
     symbol: "gtmsUSDc",
     asset: {
       address: "0xab5eB14c09D416F0aC63661E57EDB7AEcDb9BEfA",
-      symbol: "msUSD"
-    }
+      symbol: "msUSD",
+    },
   },
   {
     id: "0xdC94785959B73F7A168452b3654E44fEc6A750e4",
@@ -758,8 +758,8 @@ export default [
     symbol: "gtLBTCc",
     asset: {
       address: "0x8236a87084f8B84306f72007F36F2618A5634494",
-      symbol: "LBTC"
-    }
+      symbol: "LBTC",
+    },
   },
   {
     id: "0xBEEF6806363b51a90fFD1a632a8de32873b63a9E",
@@ -768,8 +768,8 @@ export default [
     symbol: "steakUSDCrwa",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xc554929a61d862F2741077F8aafa147479c0b308",
@@ -778,8 +778,8 @@ export default [
     symbol: "hyETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xBEeFFF209270748ddd194831b3fa287a5386f5bC",
@@ -788,8 +788,8 @@ export default [
     symbol: "bbqUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeeFfF68CC520D68f82641EFF84330C631E2490E",
@@ -798,8 +798,8 @@ export default [
     symbol: "bbqDAI",
     asset: {
       address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI"
-    }
+      symbol: "DAI",
+    },
   },
   {
     id: "0x45c1875F1C48622b3D9740Af2D7dc62Bc9a72422",
@@ -808,8 +808,8 @@ export default [
     symbol: "reGOLD",
     asset: {
       address: "0x2103E845C5E135493Bb6c2A4f0B8651956eA8682",
-      symbol: "XAUM"
-    }
+      symbol: "XAUM",
+    },
   },
   {
     id: "0xBD4073e6E929F197a9d18e22A68C276E8B400375",
@@ -818,8 +818,8 @@ export default [
     symbol: "ZAIMorpho",
     asset: {
       address: "0x69000dFD5025E82f48Eb28325A2B88a241182CEd",
-      symbol: "ZAI"
-    }
+      symbol: "ZAI",
+    },
   },
   {
     id: "0xC1d3e596984982bfBAefC85387107c26c319E465",
@@ -828,8 +828,8 @@ export default [
     symbol: "XXtestUSDc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x2d8283b177D2e6AD92E09BDf13e10d1c2cE327d0",
@@ -838,8 +838,8 @@ export default [
     symbol: "appx",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xa79a5fb6f619dA3ED71087Fb5cD33B16A5B666B5",
@@ -848,8 +848,8 @@ export default [
     symbol: "nfxUSD",
     asset: {
       address: "0x085780639CC2cACd35E474e71f4d000e2405d8f6",
-      symbol: "fxUSD"
-    }
+      symbol: "fxUSD",
+    },
   },
   {
     id: "0x89610f2125A54547A7FB2A1B7926Be734A632255",
@@ -858,8 +858,8 @@ export default [
     symbol: "nWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xF94fC6A60f1FAd0fb9652df0e261bE7D9064C370",
@@ -868,8 +868,8 @@ export default [
     symbol: "gUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xBeeF7959aE71D4e45e1863dae0B94C35244AF816",
@@ -878,8 +878,8 @@ export default [
     symbol: "steakPAXG",
     asset: {
       address: "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
-      symbol: "PAXG"
-    }
+      symbol: "PAXG",
+    },
   },
   {
     id: "0xbEeFc011e94f43b8B7b455eBaB290C7Ab4E216f1",
@@ -888,8 +888,8 @@ export default [
     symbol: "csUSDL",
     asset: {
       address: "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
-      symbol: "wUSDL"
-    }
+      symbol: "wUSDL",
+    },
   },
   {
     id: "0x6D4e530B8431a52FFDA4516BA4Aadc0951897F8C",
@@ -898,8 +898,8 @@ export default [
     symbol: "steakUSDCrwa",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x08995EC16F3FAD0C357B3Da68Eee09A88932DEc0",
@@ -908,8 +908,8 @@ export default [
     symbol: "steakUSDClite",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x132E6C9C33A62D7727cd359b1f51e5B566E485Eb",
@@ -918,8 +918,8 @@ export default [
     symbol: "resolvUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x701907283a57FF77E255C3f1aAD790466B8CE4ef",
@@ -928,8 +928,8 @@ export default [
     symbol: "mhyETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x51056b3F809f4cFE17E1A8715B82f5dbbCA5a5A1",
@@ -938,8 +938,8 @@ export default [
     symbol: "meUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x7204B7Dbf9412567835633B6F00C3Edc3a8D6330",
@@ -948,8 +948,8 @@ export default [
     symbol: "csUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x833AdaeF212c5cD3f78906B44bBfb18258F238F0",
@@ -958,8 +958,8 @@ export default [
     symbol: "bbqWSTETH",
     asset: {
       address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      symbol: "wstETH"
-    }
+      symbol: "wstETH",
+    },
   },
   {
     id: "0xA0804346780b4c2e3bE118ac957D1DB82F9d7484",
@@ -968,8 +968,8 @@ export default [
     symbol: "bbqUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x1e6ffa4e9F63d10B8820A3ab52566Af881Dab53c",
@@ -978,8 +978,8 @@ export default [
     symbol: "gtWETHe",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x214B47C50057eFaa7adc1B1C2608C3751Cd77D78",
@@ -988,8 +988,8 @@ export default [
     symbol: "aprUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xD5Ac156319f2491d4ad1Ec4aA5ed0ED48C0fa173",
@@ -998,8 +998,8 @@ export default [
     symbol: "9SUSDCcore",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xE87ed29896B91421ff43f69257ABF78300e40c7a",
@@ -1008,8 +1008,8 @@ export default [
     symbol: "Re7wstETH",
     asset: {
       address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      symbol: "wstETH"
-    }
+      symbol: "wstETH",
+    },
   },
   {
     id: "0x059Fc6723b9bF77DbF4283C8d7C90eA8Af44EF10",
@@ -1018,8 +1018,8 @@ export default [
     symbol: "sbMorphotBTC",
     asset: {
       address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
-      symbol: "tBTC"
-    }
+      symbol: "tBTC",
+    },
   },
   {
     id: "0x974c8FBf4fd795F66B85B73ebC988A51F1A040a9",
@@ -1028,8 +1028,8 @@ export default [
     symbol: "hUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xa71D08A159258553a5Ac190d60Fa919425Ff02EA",
@@ -1038,8 +1038,8 @@ export default [
     symbol: "hUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x42D425Fb918acBbd73B10B851979E8fc469B3e9A",
@@ -1048,8 +1048,8 @@ export default [
     symbol: "hDAI",
     asset: {
       address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI"
-    }
+      symbol: "DAI",
+    },
   },
   {
     id: "0x6ACa9D74215e9512d9608aFF3e87dac0d9ce6218",
@@ -1058,8 +1058,8 @@ export default [
     symbol: "hWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xba04de02ED8cecc3befb8575a95d56D901c9C602",
@@ -1068,8 +1068,8 @@ export default [
     symbol: "hcbBTC",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0xc82b74bC114D7e2D4047Ccf14f7a6109b654Ab91",
@@ -1078,8 +1078,8 @@ export default [
     symbol: "hWBTC",
     asset: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC"
-    }
+      symbol: "WBTC",
+    },
   },
   {
     id: "0x20b8020cC34F7105bE5605300FcCa00728f0a5d1",
@@ -1088,8 +1088,8 @@ export default [
     symbol: "MC.USD0",
     asset: {
       address: "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
-      symbol: "USD0"
-    }
+      symbol: "USD0",
+    },
   },
   {
     id: "0xD50DA5F859811A91fD1876C9461fD39c23C747Ad",
@@ -1098,8 +1098,8 @@ export default [
     symbol: "MC-USR",
     asset: {
       address: "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
-      symbol: "USR"
-    }
+      symbol: "USR",
+    },
   },
   {
     id: "0xdBB316375B4dC992B2c8827D120c09dFB1d3455D",
@@ -1108,8 +1108,8 @@ export default [
     symbol: "msolvbtcbbn",
     asset: {
       address: "0xd9D920AA40f578ab794426F5C90F6C731D159DEf",
-      symbol: "xSolvBTC"
-    }
+      symbol: "xSolvBTC",
+    },
   },
   {
     id: "0x5085Dd6FAd07c12e38fae01bc2a4938d2C08B1Bc",
@@ -1118,8 +1118,8 @@ export default [
     symbol: "aprUSR",
     asset: {
       address: "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
-      symbol: "USR"
-    }
+      symbol: "USR",
+    },
   },
   {
     id: "0xA8875aaeBc4f830524e35d57F9772FfAcbdD6C45",
@@ -1128,8 +1128,8 @@ export default [
     symbol: "gtusdcrwa",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xc582F04d8a82795aa2Ff9c8bb4c1c889fe7b754e",
@@ -1138,8 +1138,8 @@ export default [
     symbol: "gtusdcf",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x79FD640000F8563A866322483524a4b48f1Ed702",
@@ -1148,8 +1148,8 @@ export default [
     symbol: "gtusdtf",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x097FFEDb80d4b2Ca6105a07a4D90eB739C45A666",
@@ -1158,8 +1158,8 @@ export default [
     symbol: "steakUSDTlite",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xA1b60d96e5C50dA627095B9381dc5a46AF1a9a42",
@@ -1168,8 +1168,8 @@ export default [
     symbol: "steakUSDQ",
     asset: {
       address: "0xc83e27f270cce0A3A3A29521173a83F402c1768b",
-      symbol: "USDQ"
-    }
+      symbol: "USDQ",
+    },
   },
   {
     id: "0x30881Baa943777f92DC934d53D3bFdF33382cab3",
@@ -1178,8 +1178,8 @@ export default [
     symbol: "steakUSDR",
     asset: {
       address: "0x7B43E3875440B44613DC3bC08E7763e6Da63C8f8",
-      symbol: "USDR"
-    }
+      symbol: "USDR",
+    },
   },
   {
     id: "0x75741A12B36D181f44F389E0c6B1E0210311e3Ff",
@@ -1188,8 +1188,8 @@ export default [
     symbol: "steakEURCV",
     asset: {
       address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
-      symbol: "EURCV"
-    }
+      symbol: "EURCV",
+    },
   },
   {
     id: "0xa5aA40F27DAeDE9748822ef836170f202e196B5A",
@@ -1198,8 +1198,8 @@ export default [
     symbol: "steakM",
     asset: {
       address: "0x437cc33344a0B27A429f795ff6B469C72698B291",
-      symbol: "wM"
-    }
+      symbol: "wM",
+    },
   },
   {
     id: "0x67E23A4bc1195d66326D07609c3F20eD9a0B87E4",
@@ -1208,8 +1208,8 @@ export default [
     symbol: "lumenUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x0404fD1a77756EB029F06b5CDea88B2B2ddC2fEE",
@@ -1218,8 +1218,8 @@ export default [
     symbol: "elixirUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x749794E985Af5a9A384B9cEe6D88DaB4CE1576A1",
@@ -1228,8 +1228,8 @@ export default [
     symbol: "MC_USD0",
     asset: {
       address: "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
-      symbol: "USD0"
-    }
+      symbol: "USD0",
+    },
   },
   {
     id: "0x47fe8Ab9eE47DD65c24df52324181790b9F47EfC",
@@ -1238,8 +1238,8 @@ export default [
     symbol: "aWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xD50B9Bbf136D1BD5CD5AC6ed9b3F26c458a6d4A6",
@@ -1248,8 +1248,8 @@ export default [
     symbol: "adUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x8986cbE8b98C342888Aa2787C2979b6E32a40149",
@@ -1258,8 +1258,8 @@ export default [
     symbol: "aUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x0B6C8ef0DE1Be5ed1B59E6e7a67fB9442FB9E49C",
@@ -1268,8 +1268,8 @@ export default [
     symbol: "DPK.Eth",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x777791C4d6DC2CE140D00D2828a7C93503c67777",
@@ -1278,8 +1278,8 @@ export default [
     symbol: "hyperUSDCd",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x3365184e87d2Bd75961780454A5810BEc956F0dD",
@@ -1288,8 +1288,8 @@ export default [
     symbol: "OHMsUSDS",
     asset: {
       address: "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
-      symbol: "sUSDS"
-    }
+      symbol: "sUSDS",
+    },
   },
   {
     id: "0x59D9571A54593a5EC47d6A20837D96745ECF5C37",
@@ -1298,8 +1298,8 @@ export default [
     symbol: "specUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xC59928341D08fEf900C6FA847fA9D775D27e482f",
@@ -1308,8 +1308,8 @@ export default [
     symbol: "sfUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x3FA495ecB30E4910bAC2a31818fd68d0DBb042a4",
@@ -1318,8 +1318,8 @@ export default [
     symbol: "sfUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x00B6f2C15E4439749f192D10c70f65354848Cf4b",
@@ -1328,8 +1328,8 @@ export default [
     symbol: "9SUSR",
     asset: {
       address: "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
-      symbol: "USR"
-    }
+      symbol: "USR",
+    },
   },
   {
     id: "0x1E2aAaDcF528b9cC08F43d4fd7db488cE89F5741",
@@ -1338,8 +1338,8 @@ export default [
     symbol: "9SUSDC11Core",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x59307D26FAc64FF9AEfA9371e00299521aA2263B",
@@ -1348,8 +1348,8 @@ export default [
     symbol: "abweth",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xF1fd0D68B39FE514FD3dd3aE3BcC5FE4FE2Da0e6",
@@ -1358,8 +1358,8 @@ export default [
     symbol: "sfUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x68Cae900D68BC148244663FCc15d896271020b81",
@@ -1368,8 +1368,8 @@ export default [
     symbol: "sfETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xDE0a65391f73aa130b7543AF2ce547Fd00Ec372a",
@@ -1378,8 +1378,8 @@ export default [
     symbol: "sfDAI",
     asset: {
       address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI"
-    }
+      symbol: "DAI",
+    },
   },
   {
     id: "0xFa7ED49Eb24A6117D8a3168EEE69D26b45C40C63",
@@ -1388,8 +1388,8 @@ export default [
     symbol: "aZCHF",
     asset: {
       address: "0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
-      symbol: "ZCHF"
-    }
+      symbol: "ZCHF",
+    },
   },
   {
     id: "0x2C75C49c2807eEb8bbFBE1aD49eA543abBEe63d8",
@@ -1398,8 +1398,8 @@ export default [
     symbol: "SyStUSD Stratagies",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x6619F92861C760AD11BA0D56E8ED63A33EccE22B",
@@ -1408,8 +1408,8 @@ export default [
     symbol: "asZCHF",
     asset: {
       address: "0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
-      symbol: "ZCHF"
-    }
+      symbol: "ZCHF",
+    },
   },
   {
     id: "0x64964E162Aa18d32f91eA5B24a09529f811AEB8e",
@@ -1418,8 +1418,8 @@ export default [
     symbol: "Re7USDCp",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbEEF8DF2Ce4BaB5420123F9BF80dea4c65673257",
@@ -1428,8 +1428,8 @@ export default [
     symbol: "bbqCBBTC",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0xCcAbB9099bF5973d43288f217cF158348E3B9bB5",
@@ -1438,8 +1438,8 @@ export default [
     symbol: "pUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x5994cAAC1cc0EBE4D31e73dF46155c26D24B15Df",
@@ -1448,8 +1448,8 @@ export default [
     symbol: "sakuraUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x4EDfaB296F8Eb15aC0907CF9eCb7079b1679Da57",
@@ -1458,8 +1458,8 @@ export default [
     symbol: "aprUSDe",
     asset: {
       address: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
-      symbol: "USDe"
-    }
+      symbol: "USDe",
+    },
   },
   {
     id: "0x757eaFF4D8fAc610c60029522c433c47ae63199D",
@@ -1468,8 +1468,8 @@ export default [
     symbol: "CUSDO",
     asset: {
       address: "0x8238884Ec9668Ef77B90C6dfF4D1a9F4F4823BFe",
-      symbol: "USDO"
-    }
+      symbol: "USDO",
+    },
   },
   {
     id: "0x01ff97514d77Bf3D1f989b382eC33C02F74038be",
@@ -1478,8 +1478,8 @@ export default [
     symbol: "flagshipUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xD8FEaE012ffa83e6649c509F848Dc4bA0E4F3dfB",
@@ -1488,8 +1488,8 @@ export default [
     symbol: "frontierUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xf1fd8AC6346eC7BC4116Ba7aDc81102B2BC4C52D",
@@ -1498,8 +1498,8 @@ export default [
     symbol: "MC_USDCP",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x2F21c6499fa53a680120e654a27640Fc8Aa40BeD",
@@ -1508,8 +1508,8 @@ export default [
     symbol: "USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xdef1Fce2df6270Fdf7E1214343BeBbaB8583D43d",
@@ -1518,8 +1518,8 @@ export default [
     symbol: "IMF-USDS",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0xC5E96d92C156c5328aA7952Fd21D10349b91B434",
@@ -1528,8 +1528,8 @@ export default [
     symbol: "testlvl",
     asset: {
       address: "0x7C1156E515aA1A2E851674120074968C905aAF37",
-      symbol: "lvlUSD"
-    }
+      symbol: "lvlUSD",
+    },
   },
   {
     id: "0xbEEF36A5C1372F8D7d211527FCE9f83FE02d8A73",
@@ -1538,8 +1538,8 @@ export default [
     symbol: "bbqETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xb0f05E4De970A1aaf77f8C2F823953a367504BA9",
@@ -1548,8 +1548,8 @@ export default [
     symbol: "aUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbEEffF79FFA3EE2D1bfcC32dE9cFd8129528D0E4",
@@ -1558,8 +1558,8 @@ export default [
     symbol: "safe-bbqWSTETH",
     asset: {
       address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      symbol: "wstETH"
-    }
+      symbol: "wstETH",
+    },
   },
   {
     id: "0xBeEFB45B6F9acB175e70acF16dC20D6120044c70",
@@ -1568,8 +1568,8 @@ export default [
     symbol: "safe-steakETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xbEeFCe6c76C7D7A8066562Fe9FF0e343a52dD92F",
@@ -1578,8 +1578,8 @@ export default [
     symbol: "safe-steakUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBEeF47b9F76C9672B967A7b88d0afFf245Be13ad",
@@ -1588,8 +1588,8 @@ export default [
     symbol: "safe-steakUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x4427ceE946c626A60084000C2AbACCa9342FD8BD",
@@ -1598,8 +1598,8 @@ export default [
     symbol: "ee",
     asset: {
       address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      symbol: "wstETH"
-    }
+      symbol: "wstETH",
+    },
   },
   {
     id: "0x2C3Cc1C02856894345797Cf6ee76aE76AC0f4031",
@@ -1608,8 +1608,8 @@ export default [
     symbol: "M11C lvlUSD",
     asset: {
       address: "0x7C1156E515aA1A2E851674120074968C905aAF37",
-      symbol: "lvlUSD"
-    }
+      symbol: "lvlUSD",
+    },
   },
   {
     id: "0xe12B879cE6Cd2B37dE0AE888F86a7b57FF26a212",
@@ -1618,8 +1618,8 @@ export default [
     symbol: "yiUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x0562AE950276B24F3eAE0d0a518dADB7Ad2F8D66",
@@ -1628,8 +1628,8 @@ export default [
     symbol: "edgeUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x62fE596d59fB077c2Df736dF212E0AFfb522dC78",
@@ -1638,8 +1638,8 @@ export default [
     symbol: "CSUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBEEFF900ec6faB1465252D2fBe731db8d1Ad5FD9",
@@ -1648,8 +1648,8 @@ export default [
     symbol: "safe-bbqWBTC",
     asset: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC"
-    }
+      symbol: "WBTC",
+    },
   },
   {
     id: "0x888883f0eDDF69Ca4BfD00Af93714Ff97F188888",
@@ -1658,8 +1658,8 @@ export default [
     symbol: "hyperUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x28d24D4380B26A1Ef305Ad8D8DB258159E472F33",
@@ -1668,8 +1668,8 @@ export default [
     symbol: "USUAL_MV",
     asset: {
       address: "0xC4441c2BE5d8fA8126822B9929CA0b81Ea0DE38E",
-      symbol: "USUAL"
-    }
+      symbol: "USUAL",
+    },
   },
   {
     id: "0x341193ED21711472e71aECa4A942123452bd0ddA",
@@ -1678,8 +1678,8 @@ export default [
     symbol: "Re7USDCc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x101b77d83c40207FA3A616E8b3aAeED166Dad03e",
@@ -1688,8 +1688,8 @@ export default [
     symbol: "fUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x05e13DE0ce29a9Df350EF54fE37a8729af06Ecc3",
@@ -1698,8 +1698,8 @@ export default [
     symbol: "fUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xE89371eAaAC6D46d4C3ED23453241987916224FC",
@@ -1708,8 +1708,8 @@ export default [
     symbol: "ymvOG-WETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x4d52545235A3dF246a8928c583E47AE7eeC4aCfE",
@@ -1718,8 +1718,8 @@ export default [
     symbol: "Re7USDf",
     asset: {
       address: "0xFa2B947eEc368f42195f24F36d2aF29f7c24CeC2",
-      symbol: "USDf"
-    }
+      symbol: "USDf",
+    },
   },
   {
     id: "0xd4cD451d6f99AB9269FBfd0Ca7E2C9d1ebebe87a",
@@ -1728,8 +1728,8 @@ export default [
     symbol: "ceresUSDe",
     asset: {
       address: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
-      symbol: "USDe"
-    }
+      symbol: "USDe",
+    },
   },
   {
     id: "0x3DC15A363f5Dcf3B9dB90a5C0e2a5Cdf8f1CD77E",
@@ -1738,8 +1738,8 @@ export default [
     symbol: "ymvOG-DAI",
     asset: {
       address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-      symbol: "DAI"
-    }
+      symbol: "DAI",
+    },
   },
   {
     id: "0x998D6B176eD2a57660cEb76d8421cDf00c752a8c",
@@ -1748,8 +1748,8 @@ export default [
     symbol: "exsUSDS",
     asset: {
       address: "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
-      symbol: "sUSDS"
-    }
+      symbol: "sUSDS",
+    },
   },
   {
     id: "0xef0B6b77E014A9EB897b56466ea53175E14B9F34",
@@ -1758,8 +1758,8 @@ export default [
     symbol: "YLV-USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x8fE7B529B89e06d6c17BBCE7b096Df4fE34455AA",
@@ -1768,8 +1768,8 @@ export default [
     symbol: "kinto-usdc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xa281f2Ded799e63f2dBa12164824DD1Ea8d39B24",
@@ -1778,8 +1778,8 @@ export default [
     symbol: "BTIB01V",
     asset: {
       address: "0x09896Fed3a813E6c3512E455972CeCD8D703055a",
-      symbol: "IB01.bt"
-    }
+      symbol: "IB01.bt",
+    },
   },
   {
     id: "0xbEEf11C63d7173BdCC2037e7220eE9Bd0cCDA862",
@@ -1788,8 +1788,8 @@ export default [
     symbol: "steakUSDClevel",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x3c124fB80e6eedD88D108C2F04013AE5CD571Abc",
@@ -1798,8 +1798,8 @@ export default [
     symbol: "fUSDf",
     asset: {
       address: "0xFa2B947eEc368f42195f24F36d2aF29f7c24CeC2",
-      symbol: "USDf"
-    }
+      symbol: "USDf",
+    },
   },
   {
     id: "0x889dd190bB6b0662DB3fE0AAc29eEDCa3D2ba22A",
@@ -1808,8 +1808,8 @@ export default [
     symbol: "MC_sUSDS",
     asset: {
       address: "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
-      symbol: "sUSDS"
-    }
+      symbol: "sUSDS",
+    },
   },
   {
     id: "0xf79F51f8F473eD34f6b2b13ee74c3208286D53EB",
@@ -1818,8 +1818,8 @@ export default [
     symbol: "AVGWETHCORE",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x5b56F90340dBAa6a8693DADb141D620f0e154fE6",
@@ -1828,8 +1828,8 @@ export default [
     symbol: "AVGUSDCCORE",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x48ee006b5CA63863Bb550F63C78cE36862C42074",
@@ -1838,8 +1838,8 @@ export default [
     symbol: "BestUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x92Da51BE45A9a4002E0f85C5443D95602fCBbf7F",
@@ -1848,8 +1848,8 @@ export default [
     symbol: "USDC DOJO",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xb5e4576C2FAA16b0cC59D1A2f3366164844Ef9E0",
@@ -1858,8 +1858,8 @@ export default [
     symbol: "tacCBBTC",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0x91af035b1C43bEf2cb3d6E2A4CEbD800852F03c3",
@@ -1868,8 +1868,8 @@ export default [
     symbol: "USUAL_RIMU",
     asset: {
       address: "0xC4441c2BE5d8fA8126822B9929CA0b81Ea0DE38E",
-      symbol: "USUAL"
-    }
+      symbol: "USUAL",
+    },
   },
   {
     id: "0x0bB2751a90fFF62e844b1521637DeD28F3f5046A",
@@ -1878,8 +1878,8 @@ export default [
     symbol: "9SETHCore",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x64a4fb7Ab60fC4A7E52960DF0F1dcae06675aae9",
@@ -1888,8 +1888,8 @@ export default [
     symbol: "gnoméUSUAL",
     asset: {
       address: "0xC4441c2BE5d8fA8126822B9929CA0b81Ea0DE38E",
-      symbol: "USUAL"
-    }
+      symbol: "USUAL",
+    },
   },
   {
     id: "0xBEefb9f61CC44895d8AEc381373555a64191A9c4",
@@ -1898,8 +1898,8 @@ export default [
     symbol: "vbshUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x31A5684983EeE865d943A696AAC155363bA024f9",
@@ -1908,8 +1908,8 @@ export default [
     symbol: "vbgtWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xc54b4E08C1Dcc199fdd35c6b5Ab589ffD3428a8d",
@@ -1918,8 +1918,8 @@ export default [
     symbol: "vbgtUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x812B2C6Ab3f4471c0E43D4BB61098a9211017427",
@@ -1928,8 +1928,8 @@ export default [
     symbol: "vbgtWBTC",
     asset: {
       address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-      symbol: "WBTC"
-    }
+      symbol: "WBTC",
+    },
   },
   {
     id: "0xBeEFC1CDAfc5b4a649b54D07AFc6bF0f75C6F4E2",
@@ -1938,8 +1938,8 @@ export default [
     symbol: "steakUSDTBethena",
     asset: {
       address: "0xC139190F447e929f090Edeb554D95AbB8b18aC1C",
-      symbol: "USDtb"
-    }
+      symbol: "USDtb",
+    },
   },
   {
     id: "0xbdbF0494Af9826ba25bcb810e23C36Bc6D8378fA",
@@ -1948,8 +1948,8 @@ export default [
     symbol: "dreamUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xd41830d88dfD08678b0B886E0122193d54b02Acc",
@@ -1958,8 +1958,8 @@ export default [
     symbol: "MC_PTs",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xEF8C049Df1e798FEc8645709867966410a711941",
@@ -1968,8 +1968,8 @@ export default [
     symbol: "PEPE/USDC",
     asset: {
       address: "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
-      symbol: "PEPE"
-    }
+      symbol: "PEPE",
+    },
   },
   {
     id: "0xe2a8c78cBC766b1D472e0Bc52D5c1e512BCa2C1c",
@@ -1978,8 +1978,8 @@ export default [
     symbol: "PKUSRV",
     asset: {
       address: "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
-      symbol: "USR"
-    }
+      symbol: "USR",
+    },
   },
   {
     id: "0x6D84E690150bf1B0F99e6CF02C7a1fE352489713",
@@ -1988,8 +1988,8 @@ export default [
     symbol: "USCD_OFFICE",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x30A4fB0c64313613c3633807971482eDf3182618",
@@ -1998,8 +1998,8 @@ export default [
     symbol: "JUSD Vault test",
     asset: {
       address: "0x000000096CB3D4007fC2b79b935C4540C5c2d745",
-      symbol: "jUSD"
-    }
+      symbol: "jUSD",
+    },
   },
   {
     id: "0xcb7E96E1d4DFe35Ac674AF5Fa121Bcd9B0AAb1b1",
@@ -2008,8 +2008,8 @@ export default [
     symbol: "JUSD LVLUSD",
     asset: {
       address: "0x7C1156E515aA1A2E851674120074968C905aAF37",
-      symbol: "lvlUSD"
-    }
+      symbol: "lvlUSD",
+    },
   },
   {
     id: "0x109eDC846C98BB468a79AFdB4688a519416f1Dc4",
@@ -2018,8 +2018,8 @@ export default [
     symbol: "wvEURC",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0xE01813b0A12B14CC13BD5E9F0E8a2Aa7543617a1",
@@ -2028,8 +2028,8 @@ export default [
     symbol: "HYUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x103085e1aa4E8D7A41045B5CBe472EF5301C93B4",
@@ -2038,8 +2038,8 @@ export default [
     symbol: "suUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xeBb1ce9c7c18f0AB128e711B4f5C3C20fEB1f158",
@@ -2048,8 +2048,8 @@ export default [
     symbol: "mvlUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x68Aea7b82Df6CcdF76235D46445Ed83f85F845A3",
@@ -2058,8 +2058,8 @@ export default [
     symbol: "oevUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x9D4B8BBe39E42F371bE3dbC86Ea6e6B34F123B11",
@@ -2068,8 +2068,8 @@ export default [
     symbol: "TESTCSUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xDA4063Ec62c3F3c1D2BdBf7Dbfb2b2C906f8E8b2",
@@ -2078,8 +2078,8 @@ export default [
     symbol: "MC_USDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xF9bdDd4A9b3A45f980e11fDDE96e16364dDBEc49",
@@ -2088,8 +2088,8 @@ export default [
     symbol: "ymvOG-USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbEEf390D2e65d6E43A67875106d4A48f700F2832",
@@ -2098,8 +2098,8 @@ export default [
     symbol: "safe-bbqUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbEEf0c18715ACDdC14a3123a608F491319F1C28C",
@@ -2108,8 +2108,8 @@ export default [
     symbol: "safe-bbqUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xfBC84DBfAA2196853FdB6cAE52ef8F56DD76770a",
@@ -2118,8 +2118,8 @@ export default [
     symbol: "BOLDCS",
     asset: {
       address: "0x6440f144b7e50D6a8439336510312d2F54beB01D",
-      symbol: "BOLD"
-    }
+      symbol: "BOLD",
+    },
   },
   {
     id: "0x80b82A65d5E081272b00065d545eb09aDf68B989",
@@ -2128,8 +2128,8 @@ export default [
     symbol: "Test",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xb12376f591622975E85422D0ab5616dA273df97a",
@@ -2138,8 +2138,8 @@ export default [
     symbol: "INV TWG USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xD3468749951Ed99566c528CCcF56dB3d23BDdF43",
@@ -2148,8 +2148,8 @@ export default [
     symbol: "svUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x739d8a60ED4b14E4cB6DCAEAF79d2ec0Ca092237",
@@ -2158,8 +2158,8 @@ export default [
     symbol: "svETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x38248d715336d4CAd20d3e12E8dc34DA596f9d6c",
@@ -2168,8 +2168,8 @@ export default [
     symbol: "RIMUusdc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
@@ -2178,8 +2178,8 @@ export default [
     symbol: "penUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xcbd3f67d660b5485Cc872Dfa31CdBe5C03101E89",
@@ -2188,8 +2188,8 @@ export default [
     symbol: "SUV",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x2ed10624315b74a78f11FAbedAa1A228c198aEfB",
@@ -2198,8 +2198,8 @@ export default [
     symbol: "gteurcc",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0xcE22b5Fb17ccbc0C5d87DC2e0dF47DD71E3AdC0a",
@@ -2208,8 +2208,8 @@ export default [
     symbol: "sUSDu",
     asset: {
       address: "0xdde3eC717f220Fc6A29D6a4Be73F91DA5b718e55",
-      symbol: "USDU"
-    }
+      symbol: "USDU",
+    },
   },
   {
     id: "0x0B5281e1fa7fC7c1f0890F311d5f04D55c0Fd63c",
@@ -2218,8 +2218,8 @@ export default [
     symbol: "sUSDu+",
     asset: {
       address: "0xcE22b5Fb17ccbc0C5d87DC2e0dF47DD71E3AdC0a",
-      symbol: "sUSDu"
-    }
+      symbol: "sUSDu",
+    },
   },
   {
     id: "0xbdd4859050468fBc11Dec07113a6e633608A1372",
@@ -2228,8 +2228,8 @@ export default [
     symbol: "svUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xcB82e29930835A937429D4BCAD0a6fa6636755D7",
@@ -2238,8 +2238,8 @@ export default [
     symbol: "ADP",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xdC2Dd5189F70Fe2832D9caf7b17d27AA3D79dbE1",
@@ -2248,8 +2248,8 @@ export default [
     symbol: "yDG-USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xa00A5B20F487D0113784F85FBa88db66a408F1e0",
@@ -2258,8 +2258,8 @@ export default [
     symbol: "agUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBEeF1f5Bd88285E5B239B6AAcb991d38ccA23Ac9",
@@ -2268,8 +2268,8 @@ export default [
     symbol: "steakUSDCinfinifi",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeEfdDbd3bef4726bCF9627a9BA3B901D4958745",
@@ -2278,8 +2278,8 @@ export default [
     symbol: "steakUSDTethena",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x5440Ea551935782fE87FE7BdBE9C4A101755179B",
@@ -2288,8 +2288,8 @@ export default [
     symbol: "yUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x515d0e660E02C2c149a025d47f352EE6cB236B93",
@@ -2298,8 +2298,8 @@ export default [
     symbol: "sparkUSDS",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0xe41a0583334f0dc4E023Acd0bFef3667F6FE0597",
@@ -2308,8 +2308,8 @@ export default [
     symbol: "sparkUSDS",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0x965Ec3552427B8258BD0a0c7baA234618fc98D01",
@@ -2318,8 +2318,8 @@ export default [
     symbol: "edgeUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x2Ccb3717b04Df3603b1471738d4d500Fa8e57b85",
@@ -2328,8 +2328,8 @@ export default [
     symbol: "Ellen01",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x5a545AB9D7d08Aa8625bf78CB8EB1080b0393cf8",
@@ -2338,8 +2338,8 @@ export default [
     symbol: "edgeWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x55555815a5595991C3A0Ff119B59AEF6C8B55555",
@@ -2348,8 +2348,8 @@ export default [
     symbol: "adpUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xB2d9F816e615cdAB2d0Bd201DCcb650CDFC44134",
@@ -2358,8 +2358,8 @@ export default [
     symbol: "TESTINGUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x38Bc32F98c6D5C2Bb8c743a4Aa364b4F529fD1Ac",
@@ -2368,8 +2368,8 @@ export default [
     symbol: "sweapUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x40DD8f13395a1dD5C8aB5B6a7ecDb4F782838E45",
@@ -2378,8 +2378,8 @@ export default [
     symbol: "SPCSUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x0C36327e93F749a7eec04603410dF776150f47DE",
@@ -2388,8 +2388,8 @@ export default [
     symbol: "abrc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xD6816A95FE4A1dc5Df7ae62f257e83c11d617788",
@@ -2398,8 +2398,8 @@ export default [
     symbol: "MaxUSDT",
     asset: {
       address: "0x9F56094C450763769BA0EA9Fe2876070c0fD5F77",
-      symbol: "PT-sUSDE-25SEP2025"
-    }
+      symbol: "PT-sUSDE-25SEP2025",
+    },
   },
   {
     id: "0x6BCD56D505843a96a3e026942033486a6c0bAaf2",
@@ -2408,8 +2408,8 @@ export default [
     symbol: "ABCOE",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x48889608059f5c83041fe701580FF4DDDF737E4d",
@@ -2418,8 +2418,8 @@ export default [
     symbol: "adpETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xCdaea3dde6cE5969aA1414A82A3A681cEd51Ce72",
@@ -2428,8 +2428,8 @@ export default [
     symbol: "hyperUSDCm",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x83b779E6eC421a676a9A20743679914680A928f9",
@@ -2438,8 +2438,8 @@ export default [
     symbol: "hyperBastionUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x6D6D386C4855d9b604D7E14c70526407F6272394",
@@ -2448,8 +2448,8 @@ export default [
     symbol: "hyperETHd",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xf8Db59ad207b34DB4E028fA03CbCef5F75214E38",
@@ -2458,8 +2458,8 @@ export default [
     symbol: "MUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x973f758aA6C15bafa8bBEFfD4b9449F5b5885edD",
@@ -2468,8 +2468,8 @@ export default [
     symbol: "n-USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeEf96B330ef1Fe7Ebe41eCe0Bd4a41A94Bc03DC",
@@ -2478,8 +2478,8 @@ export default [
     symbol: "cronosUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x7802B8C35bFCB5B9a44a8dcC135b8Fda0fEd70F3",
@@ -2488,8 +2488,8 @@ export default [
     symbol: "MUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xAe86261C403E8Da7B71Dcd3343ED9F1c8A972d63",
@@ -2498,8 +2498,8 @@ export default [
     symbol: "ellenUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x1941aDa601B91Ea7538E73442a1a632E8F9Ffb70",
@@ -2508,8 +2508,8 @@ export default [
     symbol: "pUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xd73270593E2542e5A43b8c7FBE4F2d5c9c4A443c",
@@ -2518,8 +2518,8 @@ export default [
     symbol: "pUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xca7c196f00e04A5e1c71B91476d0d58f82499734",
@@ -2528,8 +2528,8 @@ export default [
     symbol: "tkUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xfeaC08ffA38d95ec5Ed7C46c933C8891a44C5F26",
@@ -2538,8 +2538,8 @@ export default [
     symbol: "sparkUSDCbc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x4339C355728327852Fcd4c142fE87C06371E795C",
@@ -2548,8 +2548,8 @@ export default [
     symbol: "TEESTEEETT",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xF03F45AFB809412649Bfb879105517e39e28d406",
@@ -2558,8 +2558,8 @@ export default [
     symbol: "sbxUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBBfaF69e3B932f38541a130CD5f3cB0e7100Fa0d",
@@ -2568,8 +2568,8 @@ export default [
     symbol: "sbxEURC",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0x76deDAf4Ec78777716BdEba484037C9d5fBF5D11",
@@ -2578,8 +2578,8 @@ export default [
     symbol: "aUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xDCD35020c5bB97016358578131f012Baa9F53cf3",
@@ -2588,8 +2588,8 @@ export default [
     symbol: "dForce USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xc2007A9c48Eecb36868Cf9D1da5D8566e90bf042",
@@ -2598,8 +2598,8 @@ export default [
     symbol: "dForce USDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x90880852B607065152360aB718b8a7a6bA979281",
@@ -2608,8 +2608,8 @@ export default [
     symbol: "dForce WETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xda4D1A3187Eba9Ecaa137867bD4541f78D51638e",
@@ -2618,8 +2618,8 @@ export default [
     symbol: "aMUSD",
     asset: {
       address: "0xdD468A1DDc392dcdbEf6db6e34E89AA338F9F186",
-      symbol: "MUSD"
-    }
+      symbol: "MUSD",
+    },
   },
   {
     id: "0x2D9926E6a6B84476ed5718972159F3e4B33DbCCd",
@@ -2628,8 +2628,8 @@ export default [
     symbol: "SVMEe",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0x7C3f446cBC012aebEb21e9Fe66e69AE312f87cc1",
@@ -2638,8 +2638,8 @@ export default [
     symbol: "mevEURCV",
     asset: {
       address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
-      symbol: "EURCV"
-    }
+      symbol: "EURCV",
+    },
   },
   {
     id: "0x56A76b428244a50513ec81e225a293d128fd581D",
@@ -2648,8 +2648,8 @@ export default [
     symbol: "sparkUSDCbc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x7777773E9C2635B0c78A189Bb81D7540CD777777",
@@ -2658,8 +2658,8 @@ export default [
     symbol: "adpETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x5Dc3Bd5a89E033e8ae54B6e5AE967C98EdB5B4c4",
@@ -2668,8 +2668,8 @@ export default [
     symbol: "M11C USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xFDe988570C0440Fc49FFEF4b0355bE53C879885b",
@@ -2678,18 +2678,18 @@ export default [
     symbol: "DBD",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x7f838C4c70B841A4979aF44053c8965f4694F9E5",
     version: "v1.1",
-    name: "\"><img src=x onerror=alert()>",
-    symbol: "\"><img src=x onerror=alert()>",
+    name: '"><img src=x onerror=alert()>',
+    symbol: '"><img src=x onerror=alert()>',
     asset: {
       address: "0xBEEF01735c132Ada46AA9aA4c54623cAA92A64CB",
-      symbol: "steakUSDC"
-    }
+      symbol: "steakUSDC",
+    },
   },
   {
     id: "0x05BbAbbbAE447129A03d3B36c7D6e62fECD2Cee5",
@@ -2698,8 +2698,8 @@ export default [
     symbol: "mvUSDC-DREY",
     asset: {
       address: "0xBEEF01735c132Ada46AA9aA4c54623cAA92A64CB",
-      symbol: "steakUSDC"
-    }
+      symbol: "steakUSDC",
+    },
   },
   {
     id: "0xe108fbc04852B5df72f9E44d7C29F47e7A993aDd",
@@ -2708,8 +2708,8 @@ export default [
     symbol: "kpk_USDC_Prime",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x018f8f5F52AAfF23FF838aE4637aFe22713FB428",
@@ -2718,8 +2718,8 @@ export default [
     symbol: "USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xd4e95092a8f108728c49f32A30f30556896563b5",
@@ -2728,8 +2728,8 @@ export default [
     symbol: "kpkUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x0c6aec603d48eBf1cECc7b247a2c3DA08b398DC1",
@@ -2738,8 +2738,8 @@ export default [
     symbol: "kpk_EURC_Yield",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0xB24704424191943dC5BB9aFE7C4EeD0fC4b1fA72",
@@ -2748,8 +2748,8 @@ export default [
     symbol: "LLNS-zkBTC",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xf29ce940178C8794802fB48a6c1B2EdDdAC96431",
@@ -2758,8 +2758,8 @@ export default [
     symbol: "luloUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x73Ea4fff78a427d8b9bd77216aF4c42e78E2F5b8",
@@ -2768,8 +2768,8 @@ export default [
     symbol: "GTEST",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x9cAF2EC3c6E9d9Af0447bDa6f24EAc60745E9a2a",
@@ -2778,8 +2778,8 @@ export default [
     symbol: "USDTesting",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x4529437099Ad37ba6fc87d6e11d233f7fc8Fc0F1",
@@ -2788,8 +2788,8 @@ export default [
     symbol: "EURCTesting",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0x9861937124611b0B674b18c640e73480f10A5213",
@@ -2798,8 +2798,8 @@ export default [
     symbol: "STRN",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xd1aE35a2D9249Bf72EB9319DCE2b7658bE106A83",
@@ -2808,8 +2808,8 @@ export default [
     symbol: "MHILBTC",
     asset: {
       address: "0x88563b651ABF39D5e24d8210bcAB62014A504108",
-      symbol: "HilBTC"
-    }
+      symbol: "HilBTC",
+    },
   },
   {
     id: "0x52317a47585A6ACDfbD7a29B494c3E2baAE96aBc",
@@ -2818,8 +2818,8 @@ export default [
     symbol: "aMUSD",
     asset: {
       address: "0xdD468A1DDc392dcdbEf6db6e34E89AA338F9F186",
-      symbol: "MUSD"
-    }
+      symbol: "MUSD",
+    },
   },
   {
     id: "0x9eFC6415af8f07d0D757C9F7c75251e33170fF0F",
@@ -2828,8 +2828,8 @@ export default [
     symbol: "sgEURCV",
     asset: {
       address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
-      symbol: "EURCV"
-    }
+      symbol: "EURCV",
+    },
   },
   {
     id: "0xA2284171d67575934f7CB8fd9446b0a4996eAdB1",
@@ -2838,8 +2838,8 @@ export default [
     symbol: "sgUSDCV",
     asset: {
       address: "0x5422374B27757da72d5265cC745ea906E0446634",
-      symbol: "USDCV"
-    }
+      symbol: "USDCV",
+    },
   },
   {
     id: "0x5593bf07cB1aDa24462EF23240c530441BBAd3e8",
@@ -2848,8 +2848,8 @@ export default [
     symbol: "sgfUSDCV",
     asset: {
       address: "0x5422374B27757da72d5265cC745ea906E0446634",
-      symbol: "USDCV"
-    }
+      symbol: "USDCV",
+    },
   },
   {
     id: "0x34eCe536d2ae03192B06c0A67030D1Faf4c0Ba43",
@@ -2858,8 +2858,8 @@ export default [
     symbol: "sgfEURCV",
     asset: {
       address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
-      symbol: "EURCV"
-    }
+      symbol: "EURCV",
+    },
   },
   {
     id: "0xd663fBF4F1ab3B555A2E6a1485306A4b0F89518d",
@@ -2868,8 +2868,8 @@ export default [
     symbol: "reUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xF62f6060CB3833Daeb61b6AD960d6d531A0867d2",
@@ -2878,8 +2878,8 @@ export default [
     symbol: "aiWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x987FE7691bd513B03ea90392cAE37675CE0293Fb",
@@ -2888,8 +2888,8 @@ export default [
     symbol: "MyCool-W",
     asset: {
       address: "0xB0fFa8000886e57F86dd5264b9582b2Ad87b2b91",
-      symbol: "W"
-    }
+      symbol: "W",
+    },
   },
   {
     id: "0x8F40e713a1Cfeff2A052E0c610C8118Be3f75b12",
@@ -2898,8 +2898,8 @@ export default [
     symbol: "CSINSTUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xc5C44cB3fF1450B5325f212E02ffdfe5c92cf2Cf",
@@ -2908,8 +2908,8 @@ export default [
     symbol: "n-WETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x425651EA3ab6240A317794579ed62fcF7E7E817e",
@@ -2918,8 +2918,8 @@ export default [
     symbol: "Cypher",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xC004b0C1eaeA96d3ea0A08C2f0eFAa0DF93B6450",
@@ -2928,8 +2928,8 @@ export default [
     symbol: "synUSD",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xdEF169B328eaE0d27Ea9D74053fAa0B733F3Bbb6",
@@ -2938,8 +2938,8 @@ export default [
     symbol: "IMF-wstETH",
     asset: {
       address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      symbol: "wstETH"
-    }
+      symbol: "wstETH",
+    },
   },
   {
     id: "0xbEef11A6Ca3C67bbEa90e5601beDBE78832dd789",
@@ -2948,8 +2948,8 @@ export default [
     symbol: "steakUSDCV",
     asset: {
       address: "0x5422374B27757da72d5265cC745ea906E0446634",
-      symbol: "USDCV"
-    }
+      symbol: "USDCV",
+    },
   },
   {
     id: "0x6C26793c7F1e2785c09b460676e797b716f0Bc8E",
@@ -2958,8 +2958,8 @@ export default [
     symbol: "kUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x6EA03c62a5d63AEFa4b9289c727CB5341Aa615a4",
@@ -2968,8 +2968,8 @@ export default [
     symbol: "vXCN",
     asset: {
       address: "0xA2cd3D43c775978A96BdBf12d733D5A1ED94fb18",
-      symbol: "XCN"
-    }
+      symbol: "XCN",
+    },
   },
   {
     id: "0xC8D921298D59187e8a46e0072D2e9B3B2F9190b3",
@@ -2978,8 +2978,8 @@ export default [
     symbol: "ARB-CANAUSDT-V1",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x3f604074F3F12Ff70c29e6bCC9232c707DC4D970",
@@ -2988,8 +2988,8 @@ export default [
     symbol: "PRIME",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xeDc72B49542E4362c677b8369bC23882Ed635A75",
@@ -2998,8 +2998,8 @@ export default [
     symbol: "NUSDS",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0x98bF4be2415e405ac902ac5dCb197f68AAcBBB65",
@@ -3008,8 +3008,8 @@ export default [
     symbol: "WETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x7286193fE6077bfd9bD69715C832EB48c55DF01f",
@@ -3018,8 +3018,8 @@ export default [
     symbol: "Optimex USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xCEaa95811FA0651C04A0F0b4D454C5F1a8556a5F",
@@ -3028,8 +3028,8 @@ export default [
     symbol: "CyUSD",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x4F2ba48FaF0bA42c4E4b7871d3861418c83aE568",
@@ -3038,8 +3038,8 @@ export default [
     symbol: "Sova USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbF34DE704C23E3Ad125c3f5e1510dadcd27B298D",
@@ -3048,8 +3048,8 @@ export default [
     symbol: "CSINSTUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xB8C9Ae462626Ec6162645F3E7e3441E7918c89F0",
@@ -3058,8 +3058,8 @@ export default [
     symbol: "BUSDCV",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBEEf2B5FD3D94469b7782aeBe6364E6e6FB1B709",
@@ -3068,8 +3068,8 @@ export default [
     symbol: "grove-bbqUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x2E87d6bfA3F2A932e0c70A32607c0B839404984D",
@@ -3078,8 +3078,8 @@ export default [
     symbol: "PUSDSHY",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0x5285047B35b357157f3948925ac604FcCa4850a8",
@@ -3088,8 +3088,8 @@ export default [
     symbol: "sbxUSDCV",
     asset: {
       address: "0x5422374B27757da72d5265cC745ea906E0446634",
-      symbol: "USDCV"
-    }
+      symbol: "USDCV",
+    },
   },
   {
     id: "0x420690B889D474771539521B3d8C2aE276BA3880",
@@ -3098,8 +3098,8 @@ export default [
     symbol: "IMF-WETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xfD1241C4fc37680De370dDc20eBF7bC5e561E1c1",
@@ -3108,8 +3108,8 @@ export default [
     symbol: "duneUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xd564F765F9aD3E7d2d6cA782100795a885e8e7C8",
@@ -3118,8 +3118,8 @@ export default [
     symbol: "kpk_ETH_Prime",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x234E5AE16eDf321AB5c2DDeBb0CCdf05aACb233b",
@@ -3128,8 +3128,8 @@ export default [
     symbol: "testWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xB83ddaAC0dE644E5778dEA84d3C3480A0F6C8bAA",
@@ -3138,8 +3138,8 @@ export default [
     symbol: "TUSDSV1V",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0x79970dbE7bd03958fA442Bdd041A51a68946ce2C",
@@ -3148,8 +3148,8 @@ export default [
     symbol: "CPT48",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0x786977528B0265C5C5Bc9544ac56C863c03e34D1",
@@ -3158,8 +3158,8 @@ export default [
     symbol: "LTSTRAT-USDS",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0xF8899E64Bb269Cd333a486A70ea883Dd0E2FD451",
@@ -3168,8 +3168,8 @@ export default [
     symbol: "MV",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x94643e86aa5E38DDAc6c7791C1297f4E40cD96c1",
@@ -3178,8 +3178,8 @@ export default [
     symbol: "1337USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x39Ae00999470c00E1f10603eDa39f0F1b1E979E7",
@@ -3188,8 +3188,8 @@ export default [
     symbol: "bachata_USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x9B5E92fd227876b4C07a8c02367E2CB23c639DfA",
@@ -3198,8 +3198,8 @@ export default [
     symbol: "CSHYUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x252c546687e45463DC3061e7Fb710f1673a975eC",
@@ -3208,8 +3208,8 @@ export default [
     symbol: "1337ETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x8c69f21B1b4822bfDe1f0700D70E6Ec97A27B8a5",
@@ -3218,8 +3218,8 @@ export default [
     symbol: "DLV",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xa3fC33543bEee52bC60bAbC80aF3d29789637B6D",
@@ -3228,8 +3228,8 @@ export default [
     symbol: "CSWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x3a02F089f212dAEF4E54ec2616FFf71952A74B15",
@@ -3238,8 +3238,8 @@ export default [
     symbol: "USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xc02Aabef00f0571E27bB66Cc37c7057e1A850cC2",
@@ -3248,8 +3248,8 @@ export default [
     symbol: "MWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xbeEF346d7099865208Ff331e4f648f4154DDAa05",
@@ -3258,8 +3258,8 @@ export default [
     symbol: "bbqUSDCreservoir",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbEeF1898443D2eB9C9C471e073f46A3928dB21dE",
@@ -3268,8 +3268,8 @@ export default [
     symbol: "bbqUSDCterm",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xC50Abc20468b1b5597321d57002a6D4ed0AD0209",
@@ -3278,8 +3278,8 @@ export default [
     symbol: "brrrUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xD138BBE603e5cfB872cf636EF929F62dC9B137a5",
@@ -3288,8 +3288,8 @@ export default [
     symbol: "CapUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xDfbfc1A08EED81A3Da75C5079fa19EFF476a8b6f",
@@ -3298,8 +3298,8 @@ export default [
     symbol: "Cap USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x13AA4f80AD5F06cE4f1A3a3cA58C37059F0EE4c5",
@@ -3308,8 +3308,8 @@ export default [
     symbol: "sdUSDCv1",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x3bc4697F484F48f219B3f1Fdd2AD39cb3e986923",
@@ -3318,8 +3318,8 @@ export default [
     symbol: "PHYUSDCETH",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x09C4C7B1D2e9Aa7506db8B76f1dBbD61c08c114b",
@@ -3328,8 +3328,8 @@ export default [
     symbol: "EVST",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x0B2d98BBF3E38Df1D1B7Be7343732E32e8B1F818",
@@ -3338,8 +3338,8 @@ export default [
     symbol: "capUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x6701957aaA39e9352a42729Cc65436a4C945cB90",
@@ -3348,8 +3348,8 @@ export default [
     symbol: "AlphaPingPtFrontierUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xF9B85b19F6885511165505299648E6d052E8D4C8",
@@ -3358,8 +3358,8 @@ export default [
     symbol: "AlphaPingCore",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x874E7Fb1aBb4c27a7BbEeeFA39E888b63181939C",
@@ -3368,8 +3368,8 @@ export default [
     symbol: "AlphaPingPrime",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x08A7CC3c379fe36380d3F3e4EDea3FD9b07e36D4",
@@ -3378,8 +3378,8 @@ export default [
     symbol: "ezUSD",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x4d135cC7623D07b0ccF8931c1fAb5D67a40b0F46",
@@ -3388,8 +3388,8 @@ export default [
     symbol: "3JUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x66320aFF501D091D0929E7208977a0a94b823B43",
@@ -3398,8 +3398,8 @@ export default [
     symbol: "hypercbBTCd",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0xA1FF9C28Ebc160c1Dcde4b9aA9551f617880c6fb",
@@ -3408,8 +3408,8 @@ export default [
     symbol: "REUSDCVAULT",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x8b96Ed36DD3393FB4a8Bfe36b91b40AA5a4f7235",
@@ -3418,8 +3418,8 @@ export default [
     symbol: "pJPYC",
     asset: {
       address: "0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
-      symbol: "JPYC"
-    }
+      symbol: "JPYC",
+    },
   },
   {
     id: "0xC71eF24cBE7fC859bD0C1F34eae087aCC7aAE633",
@@ -3428,8 +3428,8 @@ export default [
     symbol: "pUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x440aee600E9661FA76fB47ef74c4b8F711F52924",
@@ -3438,8 +3438,8 @@ export default [
     symbol: "LampRWA",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x25D385fCab771e36a826BBFB47e2Ddaa2f19D449",
@@ -3448,8 +3448,8 @@ export default [
     symbol: "SIMPLE",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0xA4790AA534bf8D26EfB8DF6CB446caeECE782f73",
@@ -3458,8 +3458,8 @@ export default [
     symbol: "KdUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x7993A99d5227F764A710C0De5317332Cc28C6636",
@@ -3468,8 +3468,8 @@ export default [
     symbol: "KdUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xb88bCE156594F066278434f2Bb94e129A3211C1F",
@@ -3478,8 +3478,8 @@ export default [
     symbol: "axLLP",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xb90291c9627CF5A6B0AE203e8F93EC83F54B3c38",
@@ -3488,8 +3488,8 @@ export default [
     symbol: "CM",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x6Ddc39fDa3EA91824bb66841b95ab7aED3a5b883",
@@ -3498,8 +3498,8 @@ export default [
     symbol: "naUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xFDe11264001397547e8457735bDdBcb62A73F33d",
@@ -3508,8 +3508,8 @@ export default [
     symbol: "KEKEL",
     asset: {
       address: "0xf7168c8AbB0ff80116413a8d95396BBdC318A3fF",
-      symbol: "KEKE"
-    }
+      symbol: "KEKE",
+    },
   },
   {
     id: "0xb5a4d705bb345D8C5753878AAFC6969547AFC061",
@@ -3518,8 +3518,8 @@ export default [
     symbol: "HckUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x7193794ec82f527Efb618Ac50C078D348eCBA4b6",
@@ -3528,8 +3528,8 @@ export default [
     symbol: "erUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xF685241626B66b8aACab5a6B1925B1AcDB095871",
@@ -3538,8 +3538,8 @@ export default [
     symbol: "HckUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xb1A90da78f33A54FC7B4BEDad5880221d263456A",
@@ -3548,8 +3548,8 @@ export default [
     symbol: "senPYUSD",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0x711a68a82dd80cB0435b281aF76B0B80804eFab9",
@@ -3558,8 +3558,8 @@ export default [
     symbol: "augustUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x9B7cca326004967f9D2B7cF5F2328d82cF65b302",
@@ -3568,8 +3568,8 @@ export default [
     symbol: "augustAUSD",
     asset: {
       address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
-      symbol: "AUSD"
-    }
+      symbol: "AUSD",
+    },
   },
   {
     id: "0xB78fc16378A2955f11Dd380511Fd13C43CBac9ba",
@@ -3578,8 +3578,8 @@ export default [
     symbol: "brrrUSDCv1",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x480be0C8e7f480A94d5B7Cd0e9A21E8EDDf4A91b",
@@ -3588,8 +3588,8 @@ export default [
     symbol: "AUSDt",
     asset: {
       address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
-      symbol: "AUSD"
-    }
+      symbol: "AUSD",
+    },
   },
   {
     id: "0x29F2Cbc1e6F3250e008f91b3FFA5ffa7C460a0Fc",
@@ -3598,8 +3598,8 @@ export default [
     symbol: "inf-usdcmfone",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xc1D460067923C6F0d171a6E08E579f9Ceae3D797",
@@ -3608,8 +3608,8 @@ export default [
     symbol: "KdPYUSD",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0x29B5D891f1E9390074271BE40670157081e614a3",
@@ -3618,8 +3618,8 @@ export default [
     symbol: "PGDX",
     asset: {
       address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
-      symbol: "AUSD"
-    }
+      symbol: "AUSD",
+    },
   },
   {
     id: "0x5B8b9FA8e4145eE06025F642cAdB1B47e5F39F04",
@@ -3628,8 +3628,8 @@ export default [
     symbol: "OUSD-V1",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xe272BDd255d0256DDD04DA9AC4BADa04D9f16399",
@@ -3638,8 +3638,8 @@ export default [
     symbol: "OTSS1",
     asset: {
       address: "0x4C1746A800D224393fE2470C70A35717eD4eA5F1",
-      symbol: "PLUME"
-    }
+      symbol: "PLUME",
+    },
   },
   {
     id: "0x36716540fcAB3eE593651Ea4A00A48c85D6Fd74C",
@@ -3648,8 +3648,8 @@ export default [
     symbol: "senPYUSD",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0x093223c1FfE8e796D0643C01f8FBA62a3aBF6c00",
@@ -3658,8 +3658,8 @@ export default [
     symbol: "senPYUSD",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0x4f2F15FbED585E09F17BdA9Ec873e614a569E636",
@@ -3668,8 +3668,8 @@ export default [
     symbol: "senPYUSD",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0xBEeff2b772fa2F443cbd1Dd6D33b0C4bebF4aeb7",
@@ -3678,8 +3678,8 @@ export default [
     symbol: "bbqAUSD",
     asset: {
       address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
-      symbol: "AUSD"
-    }
+      symbol: "AUSD",
+    },
   },
   {
     id: "0x761F0E9A916FB3CD9b2BDbe9ade07D6Fe730c84b",
@@ -3688,8 +3688,8 @@ export default [
     symbol: "sen-cbBTC",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0xDaBD12c08D568731af203288eb46Faf6C726aB07",
@@ -3698,8 +3698,8 @@ export default [
     symbol: "sen-tBTC",
     asset: {
       address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
-      symbol: "tBTC"
-    }
+      symbol: "tBTC",
+    },
   },
   {
     id: "0x19b3cD7032B8C062E8d44EaCad661a0970DD8c55",
@@ -3708,8 +3708,8 @@ export default [
     symbol: "senPYUSD",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0x59C878Ebe28D5ef2Ce230eED29422Cc7a2bf9953",
@@ -3718,8 +3718,8 @@ export default [
     symbol: "arbcapmmUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x8FA31cA7c72e5E3939ef64D55BBE4d526dfc76C9",
@@ -3728,8 +3728,8 @@ export default [
     symbol: "blueUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xB3f4D94A209045Ef35661e657Db9ADAc584141f1",
@@ -3738,8 +3738,8 @@ export default [
     symbol: "Api3CoreUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x794705195807451207df19A387A1fda12914140e",
@@ -3748,8 +3748,8 @@ export default [
     symbol: "sen-MUSD",
     asset: {
       address: "0xdD468A1DDc392dcdbEf6db6e34E89AA338F9F186",
-      symbol: "MUSD"
-    }
+      symbol: "MUSD",
+    },
   },
   {
     id: "0x23B1BAAE491471deF5Be350e63282Fa687874924",
@@ -3758,8 +3758,8 @@ export default [
     symbol: "sen-USDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xBC0B65E3c2f78320c2D72b1A2D6ef85CdD9e702F",
@@ -3768,8 +3768,8 @@ export default [
     symbol: "PYHYEURC",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0x62efA7CAcC11CAA959A8f956EC4F683302397e5c",
@@ -3778,8 +3778,8 @@ export default [
     symbol: "ynUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x6D4Ff9d68101341BD9D4A510a90E2Ff8BF7de950",
@@ -3788,8 +3788,8 @@ export default [
     symbol: "Skale",
     asset: {
       address: "0x00c83aeCC790e8a4453e5dD3B0B4b3680501a7A7",
-      symbol: "SKL"
-    }
+      symbol: "SKL",
+    },
   },
   {
     id: "0x62067831C193810F3b044Cc42249632b5d08Bc6b",
@@ -3798,8 +3798,8 @@ export default [
     symbol: "KabuUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x8B3b3a5657f1B5169712c9e06437fe80645637C7",
@@ -3808,8 +3808,8 @@ export default [
     symbol: "deprecated2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x78077F8Ba6a9bB0909878De65195ccAc4294Ca21",
@@ -3818,8 +3818,8 @@ export default [
     symbol: "deprecated",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xc88eFFD6e74D55c78290892809955463468E982A",
@@ -3828,8 +3828,8 @@ export default [
     symbol: "kpk_ETH_Yield",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x9178eBE0691593184c1D785a864B62a326cc3509",
@@ -3838,8 +3838,8 @@ export default [
     symbol: "kpk_USDC_Yield",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x19fa187F0A5e653C9C1b98Ba380e3B3399B114F7",
@@ -3848,8 +3848,8 @@ export default [
     symbol: "JTT",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x3c754561CD0B4df9513b7B6bC200963620c7b77e",
@@ -3858,8 +3858,8 @@ export default [
     symbol: "LampHY",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x38A4E979425D93DcC20af37bE22966D1bff9ecD0",
@@ -3868,8 +3868,8 @@ export default [
     symbol: "naEURC",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0x9A36c86678CAdA1aD9646B99976206Fc0410d9E1",
@@ -3878,8 +3878,8 @@ export default [
     symbol: "EURC",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0xdB93466fA32b9f898881c225bAB921C1035c6d26",
@@ -3888,8 +3888,8 @@ export default [
     symbol: "EURX",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0xEF0aDE42a4885604AfF94033F8F8c474BAeC5C4E",
@@ -3898,8 +3898,8 @@ export default [
     symbol: "bEURC",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0x959de0785A58a587a77FcFc079f09a131a27187B",
@@ -3908,8 +3908,8 @@ export default [
     symbol: "lEUR",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0x69a61A331d56a6fE6ea1226dE89744982Ffca4C4",
@@ -3918,8 +3918,8 @@ export default [
     symbol: "PYHYWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xC3be62EBD4dbb46901F241d5144Cde38a7f8a954",
@@ -3928,8 +3928,8 @@ export default [
     symbol: "Wth",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xbbC901782e2409751ac7bB7C6a778080570600E0",
@@ -3938,8 +3938,8 @@ export default [
     symbol: "BUS",
     asset: {
       address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
-      symbol: "USDS"
-    }
+      symbol: "USDS",
+    },
   },
   {
     id: "0x5541693d0090f2C9b386D2144b7138933265f209",
@@ -3948,8 +3948,8 @@ export default [
     symbol: "erUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x0C1B9c8559A9706ffD5324B3AaF33D0f7b7177e4",
@@ -3958,8 +3958,8 @@ export default [
     symbol: "ethenasenPYUSD",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0x2C793f5cB25B35A99648783c01E6cCCC200D2096",
@@ -3968,8 +3968,8 @@ export default [
     symbol: "senPYUSDcore",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0x90B482cA9769807569998B20e062e024B1A0A39d",
@@ -3978,8 +3978,8 @@ export default [
     symbol: "tstv",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xc44a34150DFDC051cFa173Da9608BbD12F2fd157",
@@ -3988,8 +3988,8 @@ export default [
     symbol: "ptUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xdcdCEa96147672Fe3B56dCb1AA5608332B67Ff84",
@@ -3998,8 +3998,8 @@ export default [
     symbol: "ptUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x612C91147c7b162765b4343994a05ab65181cD5e",
@@ -4008,8 +4008,8 @@ export default [
     symbol: "testtt",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x458A135f2359c25b4ff5daDCDE29765758cf490E",
@@ -4018,8 +4018,8 @@ export default [
     symbol: "testtt",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xef236dA50f27EfB24EDdE34cC0D6504018F26DC7",
@@ -4028,8 +4028,8 @@ export default [
     symbol: "testtt",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xdA1CE5b0379883c3d1D4Ebb85b61979844c41cd4",
@@ -4038,8 +4038,8 @@ export default [
     symbol: "testtt",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xc14488a2188Cc7cCF1C40d5e56D43F4211c5509C",
@@ -4048,8 +4048,8 @@ export default [
     symbol: "test9",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xCE341182ad323b9CB5aD45A60859dbc356dC3dDd",
@@ -4058,8 +4058,8 @@ export default [
     symbol: "zzzz",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbB5ad5d522684de9dD3f545fa6D6ac5BBCA4710E",
@@ -4068,8 +4068,8 @@ export default [
     symbol: "alphaWETHCoreV2",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xE31027e24b6770d3Ac48d5418176426787771321",
@@ -4078,8 +4078,8 @@ export default [
     symbol: "testG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x9EeAD226dd9fBa1415B7495A0844035ff1Fc2B93",
@@ -4088,8 +4088,8 @@ export default [
     symbol: "testG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xeBC63D17b552323f6ab0709d773FeB9a7401effC",
@@ -4098,8 +4098,8 @@ export default [
     symbol: "testG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbF27BfF704cE0a0f1b287fF6429B9375D8446092",
@@ -4108,8 +4108,8 @@ export default [
     symbol: "testG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x29839aa25edC1c900C704702559AD84D036A8F8f",
@@ -4118,8 +4118,8 @@ export default [
     symbol: "testG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x5431ca0179365C39C635b22dF562bB1796E3ac7D",
@@ -4128,8 +4128,8 @@ export default [
     symbol: "testG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xa830F31eee1b93D9339C33A81175286De8748429",
@@ -4138,8 +4138,8 @@ export default [
     symbol: "hcp",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x870bFeb87Fb68EFC7A4DC7e82feed1a1A8d373d3",
@@ -4148,8 +4148,8 @@ export default [
     symbol: "testG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x6a0D30cC6e52ee99DCF5b1F623afdb9D3C5E4fE6",
@@ -4158,8 +4158,8 @@ export default [
     symbol: "testG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xeCD6E58C6Cf196eC4566178c76EeB175FDDC5F16",
@@ -4168,8 +4168,8 @@ export default [
     symbol: "testG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x6440be3f7a486404Fd5615753Ec79ff6f32e661f",
@@ -4178,8 +4178,8 @@ export default [
     symbol: "testG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x613EE866E4fF1EABE6C2D2434140DD8D820577E9",
@@ -4188,8 +4188,8 @@ export default [
     symbol: "m11USDCv2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x755F2871B8424702f45bB294e9b071B32f3F5917",
@@ -4198,8 +4198,8 @@ export default [
     symbol: "gtUSDCp",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x8c106EEDAd96553e64287A5A6839c3Cc78afA3D0",
@@ -4208,8 +4208,8 @@ export default [
     symbol: "gtusdcp",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x5f342382D5F77F0f99E8f26161E689df6c7Cded3",
@@ -4218,8 +4218,8 @@ export default [
     symbol: "gtwethb",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x550d857B0555e872103Ed58F124D5153AEdf1879",
@@ -4228,8 +4228,8 @@ export default [
     symbol: "gtwethp",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x43fCd85E8D9D003D515f886891B7C742AC9f92da",
@@ -4238,8 +4238,8 @@ export default [
     symbol: "gtwethp",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x9a1D6bd5b8642C41F25e0958129B85f8E1176F3e",
@@ -4248,8 +4248,8 @@ export default [
     symbol: "gtusdcf",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xd296290f78d8436c01F0553ddB42653C8D778004",
@@ -4258,8 +4258,8 @@ export default [
     symbol: "Testt",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xfAF012F030f4f6bB9b43e1cC80D0574C067E18A2",
@@ -4268,8 +4268,8 @@ export default [
     symbol: "Testt",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xa1F315C7C8D0088a4Ed63e83AE62674113747e1a",
@@ -4278,8 +4278,8 @@ export default [
     symbol: "ARB-CANAUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x04422053aDDbc9bB2759b248B574e3FCA76Bc145",
@@ -4288,8 +4288,8 @@ export default [
     symbol: "kUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x74847d0D124ce5C89Ca8f4e7547AECD09E86B2E0",
@@ -4298,8 +4298,8 @@ export default [
     symbol: "PRIME",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x69A238Ae7ebeb3c53ff3B544E48B96a2142fc284",
@@ -4308,8 +4308,8 @@ export default [
     symbol: "CSUSDCCORE",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x81aC09804213710C11675f68d7579e3E0F2e261c",
@@ -4318,8 +4318,8 @@ export default [
     symbol: "synUSDm",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x30cACd22F178C9E57b0b010e1f9432881aa530C4",
@@ -4328,8 +4328,8 @@ export default [
     symbol: "byzUSD",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x881260e209efAF6792fC793Ba922177B3607A64f",
@@ -4338,8 +4338,8 @@ export default [
     symbol: "test_WETH_v2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x4Ef53d2cAa51C447fdFEEedee8F07FD1962C9ee6",
@@ -4348,8 +4348,8 @@ export default [
     symbol: "kpk_USDC_PrimeV2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xa877D5bb0274dcCbA8556154A30E1Ca4021a275f",
@@ -4358,8 +4358,8 @@ export default [
     symbol: "kpk_EURC_YieldV2",
     asset: {
       address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
-      symbol: "EURC"
-    }
+      symbol: "EURC",
+    },
   },
   {
     id: "0xbB3a3905e326d0e0EA37Da19eDd5e4d9C1A50e6A",
@@ -4368,8 +4368,8 @@ export default [
     symbol: "discarded",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xE6BEAEe51D3EE6Fc88A324088053c4a732bBa3E9",
@@ -4378,8 +4378,8 @@ export default [
     symbol: "1337USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x5181cD56C2C71d20094d23d43F4D6362834643AE",
@@ -4388,8 +4388,8 @@ export default [
     symbol: "Re7WETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xe8475ab59ebC297Df7a2e8D7793AB88Fc2DF7B4b",
@@ -4398,8 +4398,8 @@ export default [
     symbol: "bachata_USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x787FC686879EaCE7Ad94A63fcEcd520fdeAf7AF9",
@@ -4408,8 +4408,8 @@ export default [
     symbol: "fxRe7USDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x1CE2354074C717a266aDADCD5e34104f233Da446",
@@ -4418,8 +4418,8 @@ export default [
     symbol: "Re7USDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x66018886048A969d5e3EDB0Aba6292bA6f06aB07",
@@ -4428,8 +4428,8 @@ export default [
     symbol: "Re7USDCc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x04447273Ee808702a4855403af0acE8E7c042122",
@@ -4438,8 +4438,8 @@ export default [
     symbol: "Re7USDCp",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x093272C07700d3cA5301C3Bf9B3A392624179E2F",
@@ -4448,8 +4448,8 @@ export default [
     symbol: "hyperUSDCd",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeef0C40fbfC72d8dc24acAdE2ec2B5a6A2C7Fc4",
@@ -4458,8 +4458,8 @@ export default [
     symbol: "steakUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeeff48d072197e2F8F8F9bd49Af900EBc6EeA4E",
@@ -4468,8 +4468,8 @@ export default [
     symbol: "bbqUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeeff2C5bF38f90e3482a8b19F12E5a6D2FCa757",
@@ -4478,8 +4478,8 @@ export default [
     symbol: "bbqUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeef088055857739C12CD3765F20b7679Def0f51",
@@ -4488,8 +4488,8 @@ export default [
     symbol: "steakUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xE1D8baE89a4B9633F536D2AeBE057A211381B054",
@@ -4498,8 +4498,8 @@ export default [
     symbol: "kc-stillwater-usdc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x21A303957549682f8b0C340aad4ae693f91dE8d7",
@@ -4508,8 +4508,8 @@ export default [
     symbol: "LampRWA",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x5E5b30c5fD07da26d1e515dfEDb1D37C93417652",
@@ -4518,8 +4518,8 @@ export default [
     symbol: "svUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeeff5d996F649eB9b35514610A5F660Da3d0684",
@@ -4528,8 +4528,8 @@ export default [
     symbol: "bbqUSDCterm",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xe08afcdb51872BBD51241f49e84F29D910cedFB4",
@@ -4538,8 +4538,8 @@ export default [
     symbol: "discarded",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xBb50A5341368751024ddf33385BA8cf61fE65FF9",
@@ -4548,8 +4548,8 @@ export default [
     symbol: "kpk_ETH_PrimeV2",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x8EDCC305E633d29BFB383872e79401c506cE9E6f",
@@ -4558,8 +4558,8 @@ export default [
     symbol: "sdUSDCv2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xAC301bf985551fa1bFBED418E39F0e62eA04fF00",
@@ -4568,8 +4568,8 @@ export default [
     symbol: "curveusdc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xe28b0b99Ac2bD1123DdaB0398D6Ef3B68b6994f6",
@@ -4578,8 +4578,8 @@ export default [
     symbol: "ezUSD",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xcE64BB7C271387c9831f67C54ec0611Caf453359",
@@ -4588,8 +4588,8 @@ export default [
     symbol: "rampnetwork-steakhouseUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbEEF00B21d79c9cfd857b3944743D11F8426e184",
@@ -4598,8 +4598,8 @@ export default [
     symbol: "rampnetwork-steakhouseUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x91292Ae9e3Fd9d2eE9b83349843947cF02350B73",
@@ -4608,8 +4608,8 @@ export default [
     symbol: "ready-bbqUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x38AaB7cED2e026a88c6830AaE3D87466DdB09C3e",
@@ -4618,8 +4618,8 @@ export default [
     symbol: "pJPYC",
     asset: {
       address: "0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
-      symbol: "JPYC"
-    }
+      symbol: "JPYC",
+    },
   },
   {
     id: "0xA7A78E8e98c734f87A3B07D8DB627C67001ABD02",
@@ -4628,8 +4628,8 @@ export default [
     symbol: "gtsy",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x7aD470Ba664cfc15998dB4d458699A4E76f2d0B6",
@@ -4638,8 +4638,8 @@ export default [
     symbol: "SGUCP",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xE08145eb0132a219aad1B78a85baD8666a97CB94",
@@ -4648,8 +4648,8 @@ export default [
     symbol: "SGUCC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x43FB24Ad02a101Acc128eB2AD76a240245C2aD47",
@@ -4658,8 +4658,8 @@ export default [
     symbol: "SGUTP",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x6aB8dd6124E5F5789B8b5074C5760b9917A2DFc6",
@@ -4668,8 +4668,8 @@ export default [
     symbol: "SGUTC",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x517cd9689881F04942A333640DAff318732683B4",
@@ -4678,8 +4678,8 @@ export default [
     symbol: "axLLP",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x6f86e4224aB8C1c3E001eBb397D7Eb69E82Ac0A0",
@@ -4688,8 +4688,8 @@ export default [
     symbol: "CM",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xB885F6d448dA7E2C642Ec31190B629E40E87B069",
@@ -4698,8 +4698,8 @@ export default [
     symbol: "yOG-USDC-V2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xCdbe4A5B5bAd2BC04492052Df2F881B5727d034d",
@@ -4708,8 +4708,8 @@ export default [
     symbol: "hypercbBTCd",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0x7C51228C60FE580249F0bD99F61740c0594B23b3",
@@ -4718,8 +4718,8 @@ export default [
     symbol: "byzUSDi",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x5cf02f71D2c5e928F9B406db4BD8680a07e3eBD1",
@@ -4728,8 +4728,8 @@ export default [
     symbol: "CAL",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x62efCdAf376AC83c80e4BB4a74CBaC96936b6345",
@@ -4738,8 +4738,8 @@ export default [
     symbol: "OptimexUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xf3557AD5E984211ac8A0874A670344f2C3376471",
@@ -4748,8 +4748,8 @@ export default [
     symbol: "gtusdtp",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xE571B648569619566CF6ce1060C97B621CB635D3",
@@ -4758,8 +4758,8 @@ export default [
     symbol: "gtusdtf",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x28A9B2e74D9e50E89d4efE6B5461A01C43113614",
@@ -4768,8 +4768,8 @@ export default [
     symbol: "OptimexUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeef00B5d83C1188F07A5184230a805639c39f04",
@@ -4778,8 +4778,8 @@ export default [
     symbol: "steakPYUSD",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0xbeef0046fcab1dE47E41fB75BB3dC4Dfc94108E3",
@@ -4788,8 +4788,8 @@ export default [
     symbol: "steakETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xbeef003C68896c7D2c3c60d363e8d71a49Ab2bf9",
@@ -4798,8 +4798,8 @@ export default [
     symbol: "steakUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xee0fc3bEe614Dda3e8E7D29541F64EEA71a00b22",
@@ -4808,8 +4808,8 @@ export default [
     symbol: "TESTVAULT",
     asset: {
       address: "0x99CD4Ec3f88A45940936F469E4bB72A2A701EEB9",
-      symbol: "stUSDS"
-    }
+      symbol: "stUSDS",
+    },
   },
   {
     id: "0xfed0070Bf03F2f0eCc1074D91058F786df262536",
@@ -4818,8 +4818,8 @@ export default [
     symbol: "HckUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x047fec0E3e7f018dDCC834dcF4fe633DA3A26071",
@@ -4828,8 +4828,8 @@ export default [
     symbol: "juneTEST",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xD1E9242e075Db4bdd3f3c721D7d5fd4180A94A7e",
@@ -4838,8 +4838,8 @@ export default [
     symbol: "REECOUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x633bdC298c7F663A9000257DC495C30E910351A4",
@@ -4848,8 +4848,8 @@ export default [
     symbol: "tWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x7ceB0f01Cb7187a2EBED5661eCC4d5701d8F2350",
@@ -4858,8 +4858,8 @@ export default [
     symbol: "augustUSDCv2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x29B70A270723731bBCBE94E1F1A53977677AB604",
@@ -4868,8 +4868,8 @@ export default [
     symbol: "m3xUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xA01B3A71487753F28d8f5fDF166B7B467C765D09",
@@ -4878,8 +4878,8 @@ export default [
     symbol: "brrrUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x3E776B961B290FcE55A5E1b6f5484Aba8922550A",
@@ -4888,8 +4888,8 @@ export default [
     symbol: "ready-bbqUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeeFf0956ACb02E6F203e83D6eaE357A1d7d116C",
@@ -4898,8 +4898,8 @@ export default [
     symbol: "ready-bbqUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbe518068EB6135117207256F8C9aFf81B4382DB1",
@@ -4908,8 +4908,8 @@ export default [
     symbol: "yOG-WETH-V2",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xbeeff07d991C04CD640DE9F15C08ba59c4FEDEb7",
@@ -4918,8 +4918,8 @@ export default [
     symbol: "bbqUSDT",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x9A6CB6CaffE68b91C9A36E2657489Da3c2b1E116",
@@ -4928,8 +4928,8 @@ export default [
     symbol: "tWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xE7F8Fb5CccC3e70B922FE696ae6B550557f88Da5",
@@ -4938,8 +4938,8 @@ export default [
     symbol: "augustAUSDv2",
     asset: {
       address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
-      symbol: "AUSD"
-    }
+      symbol: "AUSD",
+    },
   },
   {
     id: "0x0229dB3921dE71CFa43Cfe9fb6A87b403647A9ae",
@@ -4948,8 +4948,8 @@ export default [
     symbol: "hyperUSDCm",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x1394841afe9cb4Eaad8d60278AF25ecbe179C5Af",
@@ -4958,8 +4958,8 @@ export default [
     symbol: "hyperETHd",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xCeD26785C5d1AD90A37bF6CFa5f278A50daC9E8D",
@@ -4968,8 +4968,8 @@ export default [
     symbol: "hyperUSDTd",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0x812376D6a705913F067371Ab29166E29f0360A44",
@@ -4978,8 +4978,8 @@ export default [
     symbol: "sen-cbBTC",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0xbeef0C075Da5D01112AE5cF34d257074fB5DDB2f",
@@ -4988,8 +4988,8 @@ export default [
     symbol: "steakEURCV",
     asset: {
       address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
-      symbol: "EURCV"
-    }
+      symbol: "EURCV",
+    },
   },
   {
     id: "0xFb44F0aCE2D757c4368001EF6755F5C3d58f94B0",
@@ -4998,8 +4998,8 @@ export default [
     symbol: "mOUSD-V2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbEeFf89ABb7815cCD5182BD1FF82C4a4F8FCb13D",
@@ -5008,8 +5008,8 @@ export default [
     symbol: "bbqAUSD",
     asset: {
       address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
-      symbol: "AUSD"
-    }
+      symbol: "AUSD",
+    },
   },
   {
     id: "0xb576765fB15505433aF24FEe2c0325895C559FB2",
@@ -5018,8 +5018,8 @@ export default [
     symbol: "senPYUSDmain",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0xbeef0D24920098C404c7Fc7942ee6d0f66d65D57",
@@ -5028,8 +5028,8 @@ export default [
     symbol: "safe-steakEURCV",
     asset: {
       address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
-      symbol: "EURCV"
-    }
+      symbol: "EURCV",
+    },
   },
   {
     id: "0xFB154c729A16802c4ad1E8f7FF539a8b9f49c960",
@@ -5038,8 +5038,8 @@ export default [
     symbol: "OUSD-V2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xB7305D968ECD8a23a13eC01927E3f9588C7653B5",
@@ -5048,8 +5048,8 @@ export default [
     symbol: "erUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xe2221Aa07ec3266DA87763E2b1e28d07A8a4e53b",
@@ -5058,8 +5058,8 @@ export default [
     symbol: "Api3CoreUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBEEFFFcbA46C49A24cfBfFc19166e8f089B59300",
@@ -5068,8 +5068,8 @@ export default [
     symbol: "ptETHturbo",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0xBEEFFF4716a49418D69c251cab8759bB107e57C8",
@@ -5078,8 +5078,8 @@ export default [
     symbol: "bbqUSDCturbo",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xd8A6511979D9C5D387c819E9F8ED9F3a5C6c5379",
@@ -5088,8 +5088,8 @@ export default [
     symbol: "bbqPYUSD",
     asset: {
       address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-      symbol: "PYUSD"
-    }
+      symbol: "PYUSD",
+    },
   },
   {
     id: "0xBEEFFFC57A26fD8D3b693Ba025ead597DbECEBfe",
@@ -5098,8 +5098,8 @@ export default [
     symbol: "bbqUSDCterm",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xD5cCe260E7a755DDf0Fb9cdF06443d593AaeaA13",
@@ -5108,8 +5108,8 @@ export default [
     symbol: "kpk_USDC_YieldV2",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x5dbf760b4fd0cDdDe0366b33aEb338b2A6d77725",
@@ -5118,8 +5118,8 @@ export default [
     symbol: "kpk_ETH_YieldV2",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      symbol: "WETH"
-    }
+      symbol: "WETH",
+    },
   },
   {
     id: "0x9215f1777383d48165e6F3a842Bf0E0A89b5C667",
@@ -5128,8 +5128,8 @@ export default [
     symbol: "xIxGxNxOxRxExAsset",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBEEFFF506B52B3323c48aFE0Cb405A284F0f9cF2",
@@ -5138,8 +5138,8 @@ export default [
     symbol: "ptCBBTCturbo",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      symbol: "cbBTC"
-    }
+      symbol: "cbBTC",
+    },
   },
   {
     id: "0x54210d3f1A066413891AF9E17210E787d5C6e3f4",
@@ -5148,8 +5148,8 @@ export default [
     symbol: "KabuUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xE77a01FC0DE7686a02E88bC323de66BF9fEEa2EB",
@@ -5158,8 +5158,8 @@ export default [
     symbol: "LampHY",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xa30D20cB10c869bAf99EbeADFD79408fe7Ad8FaA",
@@ -5168,8 +5168,8 @@ export default [
     symbol: "gusdt",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-      symbol: "USDT"
-    }
+      symbol: "USDT",
+    },
   },
   {
     id: "0xb1EC0Be0fe8485F0B5309bB1aA1cE7d4B100E265",
@@ -5178,8 +5178,8 @@ export default [
     symbol: "AUSD",
     asset: {
       address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
-      symbol: "AUSD"
-    }
+      symbol: "AUSD",
+    },
   },
   {
     id: "0xe05faDf242331808f504661BEA65972594869826",
@@ -5188,8 +5188,8 @@ export default [
     symbol: "CS3JANEUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xA1B096268D200d0ecFD57015700F6a0DA9c494e2",
@@ -5198,8 +5198,8 @@ export default [
     symbol: "ynUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xeBBaE8CfAbB0092d5B32f00EBeE0c8139d24dDcd",
@@ -5208,8 +5208,8 @@ export default [
     symbol: "AVGUSDCcons",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xE41a5E49E0afA6C3058BA8f44D82Cb38a3B86EE9",
@@ -5218,8 +5218,8 @@ export default [
     symbol: "TEST",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x7f5b0a5a8517d46967F408C59334ada9a11CB8c3",
@@ -5228,8 +5228,8 @@ export default [
     symbol: "TEST",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x61D162885700174b065142bf28DB64573F06EfD5",
@@ -5238,8 +5238,8 @@ export default [
     symbol: "TEST",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xbeef3F9595EC8a4C222AcDB2daA401C59580ac4e",
@@ -5248,8 +5248,8 @@ export default [
     symbol: "3F-steakUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBeEf3F9495E101EBf379D16cDE98131717bdb7bf",
@@ -5258,8 +5258,8 @@ export default [
     symbol: "3F-steakUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xD003882EbAbed209d27f30C7E80077efB7F78498",
@@ -5268,8 +5268,8 @@ export default [
     symbol: "AIRG",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBeEf3FC80fd62989190085221dFBb02F2f8a3B9C",
@@ -5278,8 +5278,8 @@ export default [
     symbol: "3F-steakUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x3d719f2A8E5e9674e9e37057029f5EC65B4d7256",
@@ -5288,8 +5288,8 @@ export default [
     symbol: "TEST",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBeefF08dF54897e7544aB01d0e86f013DA354111",
@@ -5298,8 +5298,8 @@ export default [
     symbol: "grove-bbqUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x66CCc79753E58ae213614D81515A95f9610aaF1F",
@@ -5308,8 +5308,8 @@ export default [
     symbol: "AUSD",
     asset: {
       address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
-      symbol: "AUSD"
-    }
+      symbol: "AUSD",
+    },
   },
   {
     id: "0xAdAe2890377F3e51593b9Df212fbBA8Ba07FB31E",
@@ -5318,8 +5318,8 @@ export default [
     symbol: "FUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0x79955080F90207De42A20aEB4DA43EFf2FFB2DDc",
@@ -5328,8 +5328,8 @@ export default [
     symbol: "TEST",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xAE57b2874673C7E0f5462B598220775017094E8f",
@@ -5338,8 +5338,8 @@ export default [
     symbol: "skyMoneyUsdsRiskCapital",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xcf27EE38fE6D62db157B34F5c67F30c09132c481",
@@ -5348,8 +5348,8 @@ export default [
     symbol: "TEST",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
+      symbol: "USDC",
+    },
   },
   {
     id: "0xBEEf3f3A04e28895f3D5163d910474901981183D",
@@ -5358,7 +5358,7 @@ export default [
     symbol: "3F-steakUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-      symbol: "USDC"
-    }
-  }
+      symbol: "USDC",
+    },
+  },
 ] as const

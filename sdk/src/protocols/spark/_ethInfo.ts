@@ -11,7 +11,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x4DEDf26112B3Ec8eC46e7E31EA5e123490B05B8B",
     stableDebtTokenAddress: "0xfe2B7a7F4cC0Fb76f7Fc1C6518D586F1e4559176",
-    variableDebtTokenAddress: "0xf705d2B7e92B3F38e6ae7afaDAA2fEE110fE5914"
+    variableDebtTokenAddress: "0xf705d2B7e92B3F38e6ae7afaDAA2fEE110fE5914",
   },
   {
     symbol: "sDAI",
@@ -23,7 +23,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x78f897F0fE2d3B5690EbAe7f19862DEacedF10a7",
     stableDebtTokenAddress: "0xEc6C6aBEd4DC03299EFf82Ac8A0A83643d3cB335",
-    variableDebtTokenAddress: "0xaBc57081C04D921388240393ec4088Aa47c6832B"
+    variableDebtTokenAddress: "0xaBc57081C04D921388240393ec4088Aa47c6832B",
   },
   {
     symbol: "USDC",
@@ -35,7 +35,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x377C3bd93f2a2984E1E7bE6A5C22c525eD4A4815",
     stableDebtTokenAddress: "0x887Ac022983Ff083AEb623923789052A955C6798",
-    variableDebtTokenAddress: "0x7B70D04099CB9cfb1Db7B6820baDAfB4C5C70A67"
+    variableDebtTokenAddress: "0x7B70D04099CB9cfb1Db7B6820baDAfB4C5C70A67",
   },
   {
     symbol: "WETH",
@@ -47,7 +47,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x59cD1C87501baa753d0B5B5Ab5D8416A45cD71DB",
     stableDebtTokenAddress: "0x3c6b93D38ffA15ea995D1BC950d5D0Fa6b22bD05",
-    variableDebtTokenAddress: "0x2e7576042566f8D6990e07A1B61Ad1efd86Ae70d"
+    variableDebtTokenAddress: "0x2e7576042566f8D6990e07A1B61Ad1efd86Ae70d",
   },
   {
     symbol: "wstETH",
@@ -59,7 +59,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x12B54025C112Aa61fAce2CDB7118740875A566E9",
     stableDebtTokenAddress: "0x9832D969a0c8662D98fFf334A4ba7FeE62b109C2",
-    variableDebtTokenAddress: "0xd5c3E3B566a42A6110513Ac7670C1a86D76E13E6"
+    variableDebtTokenAddress: "0xd5c3E3B566a42A6110513Ac7670C1a86D76E13E6",
   },
   {
     symbol: "WBTC",
@@ -71,7 +71,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x4197ba364AE6698015AE5c1468f54087602715b2",
     stableDebtTokenAddress: "0x4b29e6cBeE62935CfC92efcB3839eD2c2F35C1d9",
-    variableDebtTokenAddress: "0xf6fEe3A8aC8040C3d6d81d9A4a168516Ec9B51D2"
+    variableDebtTokenAddress: "0xf6fEe3A8aC8040C3d6d81d9A4a168516Ec9B51D2",
   },
   {
     symbol: "GNO",
@@ -83,7 +83,7 @@ export default [
     isFrozen: true,
     aTokenAddress: "0x7b481aCC9fDADDc9af2cBEA1Ff2342CB1733E50F",
     stableDebtTokenAddress: "0xbf13910620722D4D4F8A03962894EB3335Bf4FaE",
-    variableDebtTokenAddress: "0x57a2957651DA467fCD4104D749f2F3684784c25a"
+    variableDebtTokenAddress: "0x57a2957651DA467fCD4104D749f2F3684784c25a",
   },
   {
     symbol: "rETH",
@@ -95,7 +95,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x9985dF20D7e9103ECBCeb16a84956434B6f06ae8",
     stableDebtTokenAddress: "0xa9a4037295Ea3a168DC3F65fE69FdA524d52b3e1",
-    variableDebtTokenAddress: "0xBa2C8F2eA5B56690bFb8b709438F049e5Dd76B96"
+    variableDebtTokenAddress: "0xBa2C8F2eA5B56690bFb8b709438F049e5Dd76B96",
   },
   {
     symbol: "USDT",
@@ -107,7 +107,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0xe7dF13b8e3d6740fe17CBE928C7334243d86c92f",
     stableDebtTokenAddress: "0x0Dae62F953Ceb2E969fB4dE85f3F9074fa920776",
-    variableDebtTokenAddress: "0x529b6158d1D2992E3129F7C69E81a7c677dc3B12"
+    variableDebtTokenAddress: "0x529b6158d1D2992E3129F7C69E81a7c677dc3B12",
   },
   {
     symbol: "weETH",
@@ -119,7 +119,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x3CFd5C0D4acAA8Faee335842e4f31159fc76B008",
     stableDebtTokenAddress: "0x5B1F8aF3E6C0BF4d20e8e5220a4e4A3A8fA6Dc0A",
-    variableDebtTokenAddress: "0xc2bD6d2fEe70A0A73a33795BdbeE0368AeF5c766"
+    variableDebtTokenAddress: "0xc2bD6d2fEe70A0A73a33795BdbeE0368AeF5c766",
   },
   {
     symbol: "cbBTC",
@@ -131,7 +131,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0xb3973D459df38ae57797811F2A1fd061DA1BC123",
     stableDebtTokenAddress: "0x26a76E2fa1EaDbe7C30f0c333059Bcc3642c28d2",
-    variableDebtTokenAddress: "0x661fE667D2103eb52d3632a3eB2cAbd123F27938"
+    variableDebtTokenAddress: "0x661fE667D2103eb52d3632a3eB2cAbd123F27938",
   },
   {
     symbol: "sUSDS",
@@ -143,7 +143,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x6715bc100A183cc65502F05845b589c1919ca3d3",
     stableDebtTokenAddress: "0x55580770e14E008082aB2E8d08a16Cc1dC192741",
-    variableDebtTokenAddress: "0x4e89b83f426fED3f2EF7Bb2d7eb5b53e288e1A13"
+    variableDebtTokenAddress: "0x4e89b83f426fED3f2EF7Bb2d7eb5b53e288e1A13",
   },
   {
     symbol: "USDS",
@@ -155,7 +155,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0xC02aB1A5eaA8d1B114EF786D9bde108cD4364359",
     stableDebtTokenAddress: "0xDFf828d767E560cf94E4907b2e60673E772748A4",
-    variableDebtTokenAddress: "0x8c147debea24Fb98ade8dDa4bf142992928b449e"
+    variableDebtTokenAddress: "0x8c147debea24Fb98ade8dDa4bf142992928b449e",
   },
   {
     symbol: "LBTC",
@@ -167,7 +167,7 @@ export default [
     isFrozen: false,
     aTokenAddress: "0xa9d4EcEBd48C282a70CfD3c469d6C8F178a5738E",
     stableDebtTokenAddress: "0xfBaF333a919cb92CAf9e85966D4E28FFF80e5D1D",
-    variableDebtTokenAddress: "0x096bdDFEE63F44A97cC6D2945539Ee7C8f94637D"
+    variableDebtTokenAddress: "0x096bdDFEE63F44A97cC6D2945539Ee7C8f94637D",
   },
   {
     symbol: "tBTC",
@@ -179,7 +179,7 @@ export default [
     isFrozen: true,
     aTokenAddress: "0xce6Ca9cDce00a2b0c0d1dAC93894f4Bd2c960567",
     stableDebtTokenAddress: "0xf4B45Ed75B50eC613661bcdF2353AA45a288872E",
-    variableDebtTokenAddress: "0x764591dC9ba21c1B92049331b80b6E2a2acF8B17"
+    variableDebtTokenAddress: "0x764591dC9ba21c1B92049331b80b6E2a2acF8B17",
   },
   {
     symbol: "ezETH",
@@ -191,7 +191,7 @@ export default [
     isFrozen: true,
     aTokenAddress: "0xB131cD463d83782d4DE33e00e35EF034F0869bA1",
     stableDebtTokenAddress: "0x6bA1a093F5328cA31Ee6ed70E243cBA40d24B174",
-    variableDebtTokenAddress: "0xB0B14Dd477E6159B4F3F210cF45F0954F57c0FAb"
+    variableDebtTokenAddress: "0xB0B14Dd477E6159B4F3F210cF45F0954F57c0FAb",
   },
   {
     symbol: "rsETH",
@@ -203,7 +203,7 @@ export default [
     isFrozen: true,
     aTokenAddress: "0x856f1Ea78361140834FDCd0dB0b08079e4A45062",
     stableDebtTokenAddress: "0x1B16e95958e06291c028e709727f8B0BB56451D3",
-    variableDebtTokenAddress: "0xc528F0C91CFAE4fd86A68F6Dfd4d7284707Bec68"
+    variableDebtTokenAddress: "0xc528F0C91CFAE4fd86A68F6Dfd4d7284707Bec68",
   },
   {
     symbol: "PYUSD",
@@ -215,6 +215,6 @@ export default [
     isFrozen: false,
     aTokenAddress: "0x779224df1c756b4EDD899854F32a53E8c2B2ce5d",
     stableDebtTokenAddress: "0x76e39b016ae2B4db14b40845aBE4B9b7aDAf0c12",
-    variableDebtTokenAddress: "0x3357D2DB7763D6Cd3a99f0763EbF87e0096D95f9"
-  }
+    variableDebtTokenAddress: "0x3357D2DB7763D6Cd3a99f0763EbF87e0096D95f9",
+  },
 ] as const
