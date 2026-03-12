@@ -24,6 +24,7 @@ export const eth = {
   aave_v3: aaveV3.eth,
   ankr: ankr.eth,
   aura: aura.eth,
+  balancer_v2: balancerV2.eth,
   compound_v3: compoundV3.eth,
   convex: convex.eth,
   cowswap: cowSwap.eth,
