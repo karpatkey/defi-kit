@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.7](https://github.com/karpatkey/defi-kit/compare/v2.26.6...v2.26.7) (2026-03-13)
+
+
+### Bug Fixes
+
+* dump script ([#524](https://github.com/karpatkey/defi-kit/issues/524)) ([90a112f](https://github.com/karpatkey/defi-kit/commit/90a112f09a87713b33966117cb41cf90b91eb33c))
+
 ## [2.26.6](https://github.com/karpatkey/defi-kit/compare/v2.26.5...v2.26.6) (2026-03-12)
 
 
