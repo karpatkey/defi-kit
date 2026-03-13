@@ -18,25 +18,15 @@ describe("rocketPool", () => {
     })
 
     it("deposit and withdraw through deposit pool", async () => {
-      const depositAmount =
-        await kit.asAvatar.rocketPool.depositPool.getMaximumDepositAmount()
+      await expect(
+        kit.asMember.rocketPool.depositPool.deposit({
+          value: parseEther("0.01"),
+        })
+      ).not.toRevert()
 
-      const burnAmount =
-        await kit.asAvatar.rocketPool.depositPool.getExcessBalance()
-
-      if (depositAmount > 0n) {
-        await expect(
-          kit.asMember.rocketPool.depositPool.deposit({
-            value: parseEther("1"),
-          })
-        ).not.toRevert()
-      }
-
-      if (burnAmount > 0n) {
-        await expect(
-          kit.asMember.rocketPool.rEth.burn(parseEther("0.0001"))
-        ).not.toRevert()
-      }
+      await expect(
+        kit.asMember.rocketPool.rEth.burn(parseEther("0.0001"))
+      ).not.toRevert()
     })
 
     it("deposit and withdraw using secondary markets with swap router (only through roles)", async () => {

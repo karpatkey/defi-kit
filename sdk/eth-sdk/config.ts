@@ -171,7 +171,7 @@ export const contracts = {
     rocketPool: {
       storage: "0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46",
       rEth: "0xae78736Cd615f374D3085123A210448E74Fc6393",
-      depositPool: "0xDD3f50F8A6CafbE9b31a427582963f465E745AF8", // This address might due to Rocket Pool's Architecture
+      depositPool: "0xCE15294273CFb9D9b628F4D61636623decDF4fdC", // This address might due to Rocket Pool's Architecture
       swapRouter: "0x16D5A408e807db8eF7c578279BEeEe6b228f1c1C",
     },
     spark: {
