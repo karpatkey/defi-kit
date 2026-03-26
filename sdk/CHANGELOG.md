@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.8](https://github.com/karpatkey/defi-kit/compare/v2.26.7...v2.26.8) (2026-03-26)
+
+
+### Bug Fixes
+
+* Morpho Vaults Script ([#526](https://github.com/karpatkey/defi-kit/issues/526)) ([9a0f2aa](https://github.com/karpatkey/defi-kit/commit/9a0f2aa5da0e26dd9b96b722a54074aeebf4c703))
+
 ## [2.26.7](https://github.com/karpatkey/defi-kit/compare/v2.26.6...v2.26.7) (2026-03-13)
 
 
