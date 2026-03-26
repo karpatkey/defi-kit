@@ -1,5 +1,5 @@
 from defabipedia import Chain
-from karpatkit.functions import get_logs_web3, get_contract, get_symbol
+from karpatkit.functions import get_logs_web3, get_contract, get_symbol, last_block
 from karpatkit.node import get_node
 from lib.dump import dump
 import json
@@ -58,6 +58,7 @@ VAULT_ABI = json.loads('[{"inputs":[],"name":"asset","outputs":[{"internalType":
 def get_vaults_data(chain):
     web3 = get_node(chain)
     result = []
+    block_end = last_block(chain, web3)
     
     # Get V1 vaults
     if chain in VAULT_V1_FACTORY:
@@ -66,7 +67,7 @@ def get_vaults_data(chain):
             blockchain=chain,
             address=factory_info["address"],
             block_start=factory_info["fromBlock"],
-            block_end="latest",
+            block_end=block_end,
             topics=[CreateMetaMorpho],
             web3=web3,
         )
@@ -102,7 +103,7 @@ def get_vaults_data(chain):
             blockchain=chain,
             address=factory_info["address"],
             block_start=factory_info["fromBlock"],
-            block_end="latest",
+            block_end=block_end,
             topics=[CreateMetaMorpho],
             web3=web3,
         )
@@ -138,7 +139,7 @@ def get_vaults_data(chain):
             blockchain=chain,
             address=factory_info["address"],
             block_start=factory_info["fromBlock"],
-            block_end="latest",
+            block_end=block_end,
             topics=[CreateVaultV2],
             web3=web3,
         )

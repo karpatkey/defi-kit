@@ -872,6 +872,16 @@ export default [
     },
   },
   {
+    id: "0x3E379e09F4a9a4617b5AE6C45288F01a3D278c7F",
+    version: "v1",
+    name: "TestPrimeUSDC",
+    symbol: "TPUSDC",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
     id: "0xBeeF7959aE71D4e45e1863dae0B94C35244AF816",
     version: "v1.1",
     name: "Steakhouse PAXG",
@@ -1274,8 +1284,8 @@ export default [
   {
     id: "0x777791C4d6DC2CE140D00D2828a7C93503c67777",
     version: "v1.1",
-    name: "Hyperithm USDC Degen",
-    symbol: "hyperUSDCd",
+    name: "Hyperithm USDC Apex",
+    symbol: "hyperUSDCa",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -1654,8 +1664,8 @@ export default [
   {
     id: "0x888883f0eDDF69Ca4BfD00Af93714Ff97F188888",
     version: "v1.1",
-    name: "Hyperithm USDT",
-    symbol: "hyperUSDT",
+    name: "Hyperithm USDT Core",
+    symbol: "hyperUSDTc",
     asset: {
       address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
       symbol: "USDT",
@@ -2424,8 +2434,8 @@ export default [
   {
     id: "0xCdaea3dde6cE5969aA1414A82A3A681cEd51Ce72",
     version: "v1.1",
-    name: "Hyperithm USDC Midcurve",
-    symbol: "hyperUSDCm",
+    name: "Hyperithm USDC Core",
+    symbol: "hyperUSDCc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -2444,8 +2454,8 @@ export default [
   {
     id: "0x6D6D386C4855d9b604D7E14c70526407F6272394",
     version: "v1.1",
-    name: "Hyperithm ETH Degen",
-    symbol: "hyperETHd",
+    name: "Hyperithm ETH Apex",
+    symbol: "hyperETHa",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       symbol: "WETH",
@@ -3194,8 +3204,8 @@ export default [
   {
     id: "0x9B5E92fd227876b4C07a8c02367E2CB23c639DfA",
     version: "v1.1",
-    name: "Clearstar High Yield USDC",
-    symbol: "CSHYUSDC",
+    name: "Clearstar Yield USDC",
+    symbol: "CSYUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -3394,8 +3404,8 @@ export default [
   {
     id: "0x66320aFF501D091D0929E7208977a0a94b823B43",
     version: "v1.1",
-    name: "Hyperithm cbBTC Degen",
-    symbol: "hypercbBTCd",
+    name: "Hyperithm cbBTC Apex",
+    symbol: "hypercbBTCa",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
       symbol: "cbBTC",
@@ -3972,6 +3982,336 @@ export default [
     },
   },
   {
+    id: "0x3af9477CdB6E291150Dc9E19724b9097C102c188",
+    version: "v1.1",
+    name: "TelosC AUSD Equities & Commodities",
+    symbol: "eqAUSD",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0x3Dfe70B05657949A5dB340754aD664810ac63b21",
+    version: "v1.1",
+    name: "WETH ARM Vault",
+    symbol: "WETH-ARM",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0xFB219e20e7Ad26345FD3474EBA6C9250482971Cf",
+    version: "v1.1",
+    name: "Philidor USDC Prime",
+    symbol: "phiUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xA726EcC858652a6917a8ee5Ca7e1D2963191A43f",
+    version: "v1.1",
+    name: "Philidor EURC Prime",
+    symbol: "phiEURC",
+    asset: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+  },
+  {
+    id: "0xbeEffff0629438aD198c47F80d66FA4Be5C0caF6",
+    version: "v1.1",
+    name: "Grove x Steakhouse High Yield AUSD",
+    symbol: "grove-bbqAUSD",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0x9f5576CCBdF64e84f6e8c546DEb65E706966E26d",
+    version: "v1.1",
+    name: "Etherealm ETH",
+    symbol: "erETH",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x62578B2C9676E951c476d77406f8914e5446b661",
+    version: "v1.1",
+    name: "Hybrid Tandem Propulsion USDC",
+    symbol: "HTP USDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x00B2681EC02650B16A2E4F6D34ea7d8866ed8eA4",
+    version: "v1.1",
+    name: "cakeUSDC",
+    symbol: "ckUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xEB4388bb10cB60388Ea8b6927F39945203C1FED3",
+    version: "v1.1",
+    name: "wNXM-stNXM Vault",
+    symbol: "ib-wNXM",
+    asset: {
+      address: "0x0d438F3b5175Bebc262bF23753C1E53d03432bDE",
+      symbol: "wNXM",
+    },
+  },
+  {
+    id: "0xF9A61C85Bfe6cbc586c8704AD7cdEa7695e81AeD",
+    version: "v1.1",
+    name: "TestPrimeUSDC",
+    symbol: "TPUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xBeeFBedc6fF26A7C4234434e2944dBDb6D4FbF37",
+    version: "v1.1",
+    name: "Steakhouse Prime EURC",
+    symbol: "steakEURC",
+    asset: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+  },
+  {
+    id: "0x633ceC920306495ee526cAD96464087DF5204889",
+    version: "v1.1",
+    name: "ACRDX USDC Vault V1",
+    symbol: "acrdxUSDC-V1",
+    asset: {
+      address: "0xB6A9c3375b3a57dA78F7C467Bd7B91cb8665A61e",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x4ff0DE50900E3d999ab2c6F957918773992aa35a",
+    version: "v1.1",
+    name: "LaCroixVaults",
+    symbol: "LCUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x23D4D3A21741F13c3DA4B7922bAf678208A18dEc",
+    version: "v1.1",
+    name: "Reserve Muer",
+    symbol: "MUER",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xB352fd86B73D72bc16817aa101dfB1C03C95Bd24",
+    version: "v1.1",
+    name: "BlackWing USDC Core",
+    symbol: "BWC(USDC)",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xF2315Eb6B19019B7c0AeD91d562E2f6fAe26DB36",
+    version: "v1.1",
+    name: "LMFAO<b>LOL</b>",
+    symbol: "LMFAO<b>LOL</b>",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x6Fd59570172411Fc810258FeF8A12cE1b7EF60d7",
+    version: "v1.1",
+    name: "Mprinter USDC Yield Vault",
+    symbol: "mUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x466e855072d87284314200DEDB9bfDa7145859bc",
+    version: "v1.1",
+    name: "usdc staging",
+    symbol: "gtstgusdc",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x061fd7757bc028551fe001b8844d0B312838F08d",
+    version: "v1.1",
+    name: "DRF USDT Vault",
+    symbol: "drfUSDT",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0xB4c1029E29F09093BE7BFa61C5D1D2d0AdDE9abb",
+    version: "v1.1",
+    name: "0x5003121c11daf46d7ce8c1ebc1c51cbc3a8002a9",
+    symbol: "0x5003121c11daf46d7ce8c1ebc1c51cbc3a8002a9",
+    asset: {
+      address: "0x5003121c11DAF46D7Ce8c1eBc1c51cbC3A8002A9",
+      symbol: "KEKEL",
+    },
+  },
+  {
+    id: "0x0551DE0FF64E0ef199CA5714700F1c648E9Fca88",
+    version: "v1.1",
+    name: "Philidor wstETH",
+    symbol: "phiwstETH",
+    asset: {
+      address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      symbol: "wstETH",
+    },
+  },
+  {
+    id: "0xB2376cC88EA47C80fFC3De60dAe8F2F48BC872a3",
+    version: "v1.1",
+    name: "Stake DAO frxUSD v1",
+    symbol: "sdFRXUSDv1",
+    asset: {
+      address: "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+      symbol: "frxUSD",
+    },
+  },
+  {
+    id: "0xf4670D639898ebeb0c8D401E1df423e37b922A93",
+    version: "v1.1",
+    name: "Sovereign Treasury Yield Vault",
+    symbol: "styvUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x1518652736c4eFD9DFA46D68aE83b69C8af802F0",
+    version: "v1.1",
+    name: "xIxGxNxOxRxEx",
+    symbol: "xIxGxNxOxRxEx",
+    asset: {
+      address: "0x91d14789071e5E195FFC9F745348736677De3292",
+      symbol: "dCOMP",
+    },
+  },
+  {
+    id: "0xE6F0ce5394B3D15b4aB1216D84F544b8f38E4D69",
+    version: "v1.1",
+    name: "Api3 dCOMP USDC",
+    symbol: "Api3-dCOMP-USDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x71cb2F8038B2C5D65ddc740B2F3268890CD2A89C",
+    version: "v1.1",
+    name: "Sentora RLUSD",
+    symbol: "senRLUSD",
+    asset: {
+      address: "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
+      symbol: "RLUSD",
+    },
+  },
+  {
+    id: "0x52aCfdF7Cee53d6Bf23aE20d78e3175564C55ef4",
+    version: "v1.1",
+    name: "test",
+    symbol: "dusdc",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xdaD4e51d64c3B65A9d27aD9F3185B09449712065",
+    version: "v1.1",
+    name: "kpk USDT Prime",
+    symbol: "kpk_USDT_Prime",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x311D1F9F998DCb5Ad794a2584d5DEB603b970d9b",
+    version: "v1.1",
+    name: "Cozy USDC",
+    symbol: "cozyUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x81AE586dE7876a4C06163bEe0598AD2471E67322",
+    version: "v1.1",
+    name: "Julian Capital Yield USDC",
+    symbol: "JULIANUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xbEEF8833f9Ff8e9D950Df3CEFb78DA88931C0450",
+    version: "v1.1",
+    name: "Steakhouse Resolv USR",
+    symbol: "bbqUSRresolv",
+    asset: {
+      address: "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
+      symbol: "USR",
+    },
+  },
+  {
+    id: "0x35dD24fA0cad1cAE633616436cECEDC99a19Ae9f",
+    version: "v1.1",
+    name: "Test USDT",
+    symbol: "testUSDT",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x87cb57D154ED695c4652ed755D49D7C99708b943",
+    version: "v1.1",
+    name: "alpha8USDC",
+    symbol: "alpha8USDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0x90B482cA9769807569998B20e062e024B1A0A39d",
     version: "v2",
     name: "Test Vault",
@@ -4444,8 +4784,8 @@ export default [
   {
     id: "0x093272C07700d3cA5301C3Bf9B3A392624179E2F",
     version: "v2",
-    name: "Hyperithm USDC Degen",
-    symbol: "hyperUSDCd",
+    name: "Hyperithm USDC Apex",
+    symbol: "hyperUSDCa",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -4704,8 +5044,8 @@ export default [
   {
     id: "0xCdbe4A5B5bAd2BC04492052Df2F881B5727d034d",
     version: "v2",
-    name: "Hyperithm cbBTC Degen",
-    symbol: "hypercbBTCd",
+    name: "Hyperithm cbBTC Apex",
+    symbol: "hypercbBTCa",
     asset: {
       address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
       symbol: "cbBTC",
@@ -4944,8 +5284,8 @@ export default [
   {
     id: "0x0229dB3921dE71CFa43Cfe9fb6A87b403647A9ae",
     version: "v2",
-    name: "Hyperithm USDC Midcurve",
-    symbol: "hyperUSDCm",
+    name: "Hyperithm USDC Core",
+    symbol: "hyperUSDCc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -4954,8 +5294,8 @@ export default [
   {
     id: "0x1394841afe9cb4Eaad8d60278AF25ecbe179C5Af",
     version: "v2",
-    name: "Hyperithm ETH Degen",
-    symbol: "hyperETHd",
+    name: "Hyperithm ETH Apex",
+    symbol: "hyperETHa",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
       symbol: "WETH",
@@ -5356,6 +5696,1576 @@ export default [
     version: "v2",
     name: "3F x Steakhouse USDC",
     symbol: "3F-steakUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xc770a57fCfBC716a1F94C414d9a62792C766E883",
+    version: "v2",
+    name: "Philidor USDC Prime",
+    symbol: "phiUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xaA8d9E2aBa210639cE6C7cE21385e7c673ACa6f3",
+    version: "v2",
+    name: "Yearn USDC",
+    symbol: "yNM-USDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xf842F89A478107AceF530F655861bE4BbAFaC822",
+    version: "v2",
+    name: "PIKA Vault",
+    symbol: "PIKAPOO",
+    asset: {
+      address: "0xa9D54F37EbB99f83B603Cc95fc1a5f3907AacCfd",
+      symbol: "PIKA",
+    },
+  },
+  {
+    id: "0xe479bCbc98579bA3E1a1261f7bE85C4C10303d88",
+    version: "v2",
+    name: "Sentora PYUSD Core V2",
+    symbol: "senPYUSDcoreV2",
+    asset: {
+      address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+      symbol: "PYUSD",
+    },
+  },
+  {
+    id: "0x4208be3A5Db3E990bDEF7a10D3209E01aA3Bc274",
+    version: "v2",
+    name: "TelosC AUSD Equities and Commodities",
+    symbol: "eqcAUSD",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0x937911fbeCa47213dD6A9bce647a5d984B80096E",
+    version: "v2",
+    name: "USDC TEST ",
+    symbol: "USDC_TEST",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x690F0bDc73b8d5e16F5B2d96e195e6bf22595f34",
+    version: "v2",
+    name: "CCM Atlas Prime",
+    symbol: "ccmAtlasETH",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x29CA54dd3Ae9E43aBb10880f5E08da439Bf25F99",
+    version: "v2",
+    name: "DeTrade Serenity USDC",
+    symbol: "dt-eth-serenityUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x842A84Df61DbE701c5dAE345F3f8E64aF727E48C",
+    version: "v2",
+    name: "Gauntlet EURC Core",
+    symbol: "gteurcc",
+    asset: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+  },
+  {
+    id: "0x453CD0425B571902718574cF5a6f30c1699a3006",
+    version: "v2",
+    name: "Blend USDC",
+    symbol: "blend-usdc",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x197703794ee88D8FC66108D878444f5a26c748d1",
+    version: "v2",
+    name: "Blend PT srUSDe-2APR2026",
+    symbol: "blend-srUSDe-2APR2026",
+    asset: {
+      address: "0x9Bf45ab47747F4B4dD09B3C2c73953484b4eB375",
+      symbol: "PT-srUSDe-2APR2026",
+    },
+  },
+  {
+    id: "0x00721c8bb486ad403D662C769Cf640C74C0439A4",
+    version: "v2",
+    name: "Blend PT jrUSDe-2APR2026",
+    symbol: "blend-jrUSDe-2APR2026",
+    asset: {
+      address: "0xd0609Ac13000d88B0BEbf5Bb21074916eDd92Bb1",
+      symbol: "PT-jrUSDe-2APR2026",
+    },
+  },
+  {
+    id: "0x132Fe294ea9b6faD8cA00554D211d5F2b905c1AD",
+    version: "v2",
+    name: "Avantgarde WETH Conservative",
+    symbol: "AVGWETHcons",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0xf42bca228D9bd3e2F8EE65Fec3d21De1063882d4",
+    version: "v2",
+    name: "sky.money USDS Risk Capital",
+    symbol: "skyMoneyUsdsRiskCapital",
+    asset: {
+      address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
+      symbol: "USDS",
+    },
+  },
+  {
+    id: "0x9f39B13bB472126D6937Bf25A39338E664eeFa82",
+    version: "v2",
+    name: "Alpha USDC Prime V2",
+    symbol: "alphaUSDCPrimeV2",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xBEeFF047C03714965a54b671A37C18beF6b96210",
+    version: "v2",
+    name: "Steakhouse Reservoir USDC",
+    symbol: "bbqSUDCreservoir",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xf1CA44EEa3A4eFFcB195A970a2f1d8553f76F9A1",
+    version: "v2",
+    name: "Alpha USDC Core V2",
+    symbol: "alphaUSDCCoreV2",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xBEEFf072E9EFdc7c819b374066DD876b334210A3",
+    version: "v2",
+    name: "Steakhouse Reservoir USDC",
+    symbol: "bbqUSDCreservoir",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x6efF1A518b0656c5aC9376B25318784b64A27C11",
+    version: "v2",
+    name: "Duplicated Key",
+    symbol: "DPK.ETH.v2",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x2679f32C0FF31e3d09DE6d2046D15F8fB7173f6e",
+    version: "v2",
+    name: "Pocky's High Yield EURCV V2",
+    symbol: "PHYEURCVV2",
+    asset: {
+      address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
+      symbol: "EURCV",
+    },
+  },
+  {
+    id: "0xF39AC02DEc8faE8292d5f42202e4Cd885356256B",
+    version: "v2",
+    name: "SingularV ETH",
+    symbol: "svETH",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0xf7c83eD78D1dcAd6736F9f74C8A2293314441De6",
+    version: "v2",
+    name: "SingularV USDT",
+    symbol: "svUSDT",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0xFa17f7AAdbfAc2C5d3C8125555404c1AE17Df853",
+    version: "v2",
+    name: "Clearstar Yield USDC",
+    symbol: "CSYUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x396153bed69a2263183107E613c527B5476e6b0e",
+    version: "v2",
+    name: "Clearstar Reactor ETH",
+    symbol: "CSRETH",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0xae9A5aa54ae43BB8811435F02A29E9d2B43CDC7C",
+    version: "v2",
+    name: "Clearstar Reactor ETH",
+    symbol: "CSRETH",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x9C605F8cbb74C7D00cE46Ff81de68A313AC17192",
+    version: "v2",
+    name: "DeTrade Serenity EURC",
+    symbol: "dt-serenityEURC",
+    asset: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+  },
+  {
+    id: "0xBEEfF0d672ab7F5018dFB614c93981045D4aA98a",
+    version: "v2",
+    name: "Grove x Steakhouse AUSD",
+    symbol: "grove-bbqAUSD",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0xB33E87f90323ecF2E3196B865302e070B4507DBf",
+    version: "v2",
+    name: "Maxshot USDC",
+    symbol: "mUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x70D4aC733E1ea63d42A981293407ABbC5f534390",
+    version: "v2",
+    name: "Ellen Capital - USDC Prime",
+    symbol: "ePrimeUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x827F945F10fE304877f1bB567BC1c7F565E25bf7",
+    version: "v2",
+    name: "Maxshot USDT0",
+    symbol: "mUSDT0",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0xD281ed26059E3510577098A599c9d34DA74AA75B",
+    version: "v2",
+    name: "Test1236",
+    symbol: "test1236usdc",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x951a9f4A2cE19B9DeA6B37e691d076A345b6c0F8",
+    version: "v2",
+    name: "Alpha USDC Enhanced V2",
+    symbol: "alphaUSDCEnhancedV2",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x610f5B68bD1EED68Af649A3fD3DC2CAa1ee4Ae7E",
+    version: "v2",
+    name: "Alpha LINK Enhanced V2",
+    symbol: "alphaLINKEnhancedV2",
+    asset: {
+      address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      symbol: "LINK",
+    },
+  },
+  {
+    id: "0x057F46a0222B84b7b951Cb9A1Ff189E63B8E13b6",
+    version: "v2",
+    name: "Hadjime USDC Prime",
+    symbol: "USDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x2f965159Ead23c588F3EFcfF285e1b85Eb57e4C3",
+    version: "v2",
+    name: "B4B_t",
+    symbol: "B4B_t",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xbeef003E31546C7210687f1A7b40d096BE83ec58",
+    version: "v2",
+    name: "Steakhouse Prime EURC",
+    symbol: "steakEURC",
+    asset: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+  },
+  {
+    id: "0x509289cCa7Fe28CC34629445CCF658Ac310e6f60",
+    version: "v2",
+    name: "Pangolins USDC",
+    symbol: "pUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x413290c60f754e37Ae3266da85d75489133F255A",
+    version: "v2",
+    name: "mvUSDT",
+    symbol: "mvUSDT",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0xB857C44Ceee3FEC4A468A6f4C36e6EF320F81EEF",
+    version: "v2",
+    name: "mvUSDC",
+    symbol: "mvUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x18032C694f8ebfdcc030cB8C54c3701a107c2F72",
+    version: "v2",
+    name: "OV USDC",
+    symbol: "ovusdc",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xD547DA208F29c36682872407f8032BDa878d42b7",
+    version: "v2",
+    name: "BruvskiTest",
+    symbol: "$BRUV",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x8C8F6d3c9b647afb942B4Ac0C28818F0674a0F01",
+    version: "v2",
+    name: "OV USDT",
+    symbol: "ovusdt",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x60BfF627bD38896456834D81aB8faE7f5D03dA6F",
+    version: "v2",
+    name: "Babylonian WETH Prime Discount",
+    symbol: "bWETHpd",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0xb789265cf021A9E290f69a07dE4F0E32D6372665",
+    version: "v2",
+    name: "USDC_AI",
+    symbol: "UAI",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xF3Cc5c9A25508D8d959618fd48F6AbC18cA4Db49",
+    version: "v2",
+    name: "Clearstar Boring USDC",
+    symbol: "CSBUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xd7B96aF2EBe299bB4ED8C03946163732f6A463Ca",
+    version: "v2",
+    name: "Foundation Core K",
+    symbol: "FCK",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xc71f3BAaeBd3fa9c5716fC66b89493ae66BeAc50",
+    version: "v2",
+    name: "Pocky's High Yield USDC V2 Eth",
+    symbol: "PHYUSDCV2ETH",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x2B58132964f038461E3D8b56df582f49FEcc8745",
+    version: "v2",
+    name: "Clearstar Boring USDT",
+    symbol: "CSBUSDT",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x14A90D27338f40E22E1458A92934061cCAe144fC",
+    version: "v2",
+    name: "HavenFi EURC - Core",
+    symbol: "hfEURC",
+    asset: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+  },
+  {
+    id: "0x8D5b25930799751FB6B288818500ECda66c56254",
+    version: "v2",
+    name: "DeTrade Serenity WETH",
+    symbol: "dt-serenityWETH",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x6624c638780816228a25a15A4f30287d30c459C2",
+    version: "v2",
+    name: "ARCHITECT Global Value",
+    symbol: "ARCHITECT GVI",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x5E27F0a16d761fD702Ab7cd96c093a5393136b87",
+    version: "v2",
+    name: "Test Free Wrapper",
+    symbol: "TFW",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x98Cb4e70ded66FC55b795Af710c05A3d7c593Ed1",
+    version: "v2",
+    name: "tGLD USDC Vault",
+    symbol: "tGLDv-USDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x7290245b3e564f0Ae2dA5af0690eF4842CF13c75",
+    version: "v2",
+    name: "tGLD USDC Vault",
+    symbol: "tGLDv-USDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x68B2486900f8FDBa433aBCe27Bc557023477e2b8",
+    version: "v2",
+    name: "USDC Conservative Vault",
+    symbol: "cvUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x3a139f89b5377e5Eaf613B5f5d132D325F118b43",
+    version: "v2",
+    name: "panawill test vault",
+    symbol: "USDCPTest",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xa01Fd84E0f1585DC299Ac8795AAb954C0ADA3817",
+    version: "v2",
+    name: "Revault1",
+    symbol: "REV1",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xE584aA81EE567A589ab9cC93e88caBc4F2a6AE5D",
+    version: "v2",
+    name: "Revault2",
+    symbol: "REV2",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0xEa05c873CC17Ab5AbB57f700C68d962D6a0DE33b",
+    version: "v2",
+    name: "Revault3",
+    symbol: "REV3",
+    asset: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+  },
+  {
+    id: "0xbEef00e64ceB8908B58025793fE46Ee2038c2315",
+    version: "v2",
+    name: "Techblock x Steakhouse EURCV",
+    symbol: "techblockEURCV",
+    asset: {
+      address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
+      symbol: "EURCV",
+    },
+  },
+  {
+    id: "0xa4816711cb16d69D3f338F3D28B8169e22830ce8",
+    version: "v2",
+    name: "VSG crvUSD Vault",
+    symbol: "vsgCRVUSD",
+    asset: {
+      address: "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
+      symbol: "crvUSD",
+    },
+  },
+  {
+    id: "0x22A8EB1801a0e1F55EE8f95D24C13873B7C9d29E",
+    version: "v2",
+    name: "Revault4",
+    symbol: "REV4",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x1E7DE02B0c180d8E4a020aa9dE294bACfd9E6578",
+    version: "v2",
+    name: "Spreads Finance SPYx V2",
+    symbol: "sprSPX/USDC",
+    asset: {
+      address: "0x90A2a4c76b5D8c0bc892A69EA28Aa775a8f2dD48",
+      symbol: "SPYx",
+    },
+  },
+  {
+    id: "0x2086eB7beAbB123961A940bDC0b018A43De02A85",
+    version: "v2",
+    name: "NuWealth Anchor USDC",
+    symbol: "nuUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x6d387c4756610682C4E562c636dac46ac40780c8",
+    version: "v2",
+    name: "NuWealth Anchor USDT",
+    symbol: "nuUSDT",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x02D2488A2292C25D0D313A1b8D882A2d28E74598",
+    version: "v2",
+    name: "NuWealth Anchor EURC",
+    symbol: "nuEURC",
+    asset: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+  },
+  {
+    id: "0xE15fcC81118895b67b6647BBd393182dF44E11E0",
+    version: "v2",
+    name: "sky.money USDS Flagship",
+    symbol: "skyMoneyUsdsFlagship",
+    asset: {
+      address: "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
+      symbol: "USDS",
+    },
+  },
+  {
+    id: "0xd8CD72A2eB7A4312404C00AeD5172C0026da0C27",
+    version: "v2",
+    name: "Alpha Frax USD Enhanced V2",
+    symbol: "alphaFraxUSDenhanced",
+    asset: {
+      address: "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+      symbol: "frxUSD",
+    },
+  },
+  {
+    id: "0x569C9Af18412D1cDe35c9eA918420F0F5d60B807",
+    version: "v2",
+    name: "Rini USDC Oak",
+    symbol: "RUO",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xa7BD284FD921BC0219ad4ffe3F943bEA3fc4319B",
+    version: "v2",
+    name: "USDT Strategy ",
+    symbol: "strgyUSDT",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0xBEef009f900feD83d52048556122338aADDA8fe9",
+    version: "v2",
+    name: "Techblock x Steakhouse EURCV",
+    symbol: "techblockEURCV",
+    asset: {
+      address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
+      symbol: "EURCV",
+    },
+  },
+  {
+    id: "0xBEeF007ECFBfdF9B919d0050821A9B6DbD634fF0",
+    version: "v2",
+    name: "Techblock x Steakhouse EURCV",
+    symbol: "techblockEURCV",
+    asset: {
+      address: "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
+      symbol: "EURCV",
+    },
+  },
+  {
+    id: "0xCE13e39534082FCF8f13F6D84e6D95414D14271e",
+    version: "v2",
+    name: "Stake DAO frxUSD v2",
+    symbol: "sdFRXUSDv2",
+    asset: {
+      address: "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+      symbol: "frxUSD",
+    },
+  },
+  {
+    id: "0xc7CDcFDEfC64631ED6799C95e3b110cd42F2bD22",
+    version: "v2",
+    name: "Spark Blue Chip USDT Vault",
+    symbol: "sparkUSDTbc",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0xCf3B48cF1748758D2653300300Df3f92915006d6",
+    version: "v2",
+    name: "High",
+    symbol: "Hi",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xF7c3A485ED9Ec23d22686D03440EBC6e3C87920F",
+    version: "v2",
+    name: "Flowdesk AUSD Equity Strategy",
+    symbol: "fAUSDe",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0x758aaF09e1147e68c01Ca397d12293aB744C6161",
+    version: "v2",
+    name: "Steakhouse High Yield Turbo AUSD",
+    symbol: "bbqAUSDturbo",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0x89816d51bcB9bD2DE97719Adaa9eFaaC32653E86",
+    version: "v2",
+    name: "Steakhouse High Yield Turbo AUSD",
+    symbol: "bbqAUSDturbo",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0xBEEFFF7e4EedD83A4a4aB53A68D03eC77C9a57a8",
+    version: "v2",
+    name: "Steakhouse High Yield Turbo AUSD",
+    symbol: "bbqAUSDturbo",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0xFe1456aa6d05c050BB922092B6C99eC8bAfd4e70",
+    version: "v2",
+    name: "Steakhouse High Yield Term AUSD",
+    symbol: "bbqAUSDterm",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0xBEEFF0DeaC1aBa71EF0D88C4291354eb92ef4589",
+    version: "v2",
+    name: "Steakhouse High Yield Term AUSD",
+    symbol: "bbqAUSDterm",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0xF03C521F3F1D122ffFEF451936D483EAB95BE17c",
+    version: "v2",
+    name: "Steakhouse Prime frxUSD",
+    symbol: "steakFRXUSD",
+    asset: {
+      address: "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+      symbol: "frxUSD",
+    },
+  },
+  {
+    id: "0xbeef009FF4FB1727297BF2526806F4A73E4b99aD",
+    version: "v2",
+    name: "Steakhouse Prime frxUSD",
+    symbol: "steakFRXUSD",
+    asset: {
+      address: "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+      symbol: "frxUSD",
+    },
+  },
+  {
+    id: "0x56bfa6f53669B836D1E0Dfa5e99706b12c373ecf",
+    version: "v2",
+    name: "sky.money USDC Risk Capital",
+    symbol: "skyMoneyUsdcRiskCapital",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x2bD3A43863c07B6A01581FADa0E1614ca5DF0E3d",
+    version: "v2",
+    name: "sky.money USDT Risk Capital",
+    symbol: "skyMoneyUsdtRiskCapital",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x153Bd1abE60104Bd46aa05a27fA12D1346D64A57",
+    version: "v2",
+    name: "Alpha USDC Forex V2",
+    symbol: "alphaForexV2",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xC9D7B729AdFB2D3F837E0C15b63a252c74224A7e",
+    version: "v2",
+    name: "HavenFi Balanced USDC (Mainnet)",
+    symbol: "hfUSDCbalancedEth",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x6D5B44a162C60EfD4A87C8A2431aB77c26667c8D",
+    version: "v2",
+    name: "TEST USDe Vault",
+    symbol: "TEST_USDe_Vault",
+    asset: {
+      address: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+      symbol: "USDe",
+    },
+  },
+  {
+    id: "0x77Df2575Eb4Cac4a0E47166b5219879d5023E7cA",
+    version: "v2",
+    name: "TEST USDe Vault",
+    symbol: "TEST_USDe_Vault",
+    asset: {
+      address: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+      symbol: "USDe",
+    },
+  },
+  {
+    id: "0xdFa838353618Da83DF98F5B4b457E881B7f79b0f",
+    version: "v2",
+    name: "TEST USDe Vault",
+    symbol: "TEST_USDe_Vault",
+    asset: {
+      address: "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+      symbol: "USDe",
+    },
+  },
+  {
+    id: "0xDde88620e613B69ea6deFdEd8B153C1C0b976475",
+    version: "v2",
+    name: "kMUSDStrat",
+    symbol: "kMUStrat",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xa3ae5746b21De27A44944097D8Fe96fe2cF9a437",
+    version: "v2",
+    name: "YF x Unified Labs USDC",
+    symbol: "YFUni",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x8E56CB6Bc1a8961ed9062B99045D3299b27CDb4D",
+    version: "v2",
+    name: "Avantgarde USDC Dynamic",
+    symbol: "AVGUSDCdyn",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x42Cd15137cC85FA7e114Ab0D63Fd1d6770c004a3",
+    version: "v2",
+    name: " tsetm",
+    symbol: " tsetm",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x454706aa25B2d0D0d0328679e630fdEd7CDfbc9c",
+    version: "v2",
+    name: "USDC PRIME",
+    symbol: "gtUSDCpx",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x96D8cF81acAD83E533b3Ad4Fb039f145BED1C14F",
+    version: "v2",
+    name: "USDC PRIME",
+    symbol: "gtUSDCpx",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xfaAd1a890Ef7557Ca62655B76CDDaF6F42d3C738",
+    version: "v2",
+    name: "USDT PRIME",
+    symbol: "gtUSDTpx",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x7aED0d1A530258F3F6eAb891F293d7F52d26DB06",
+    version: "v2",
+    name: "USDT PRIME",
+    symbol: "gtUSDTpx",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x78d4A8fdE3b7b371f9C1830Ba139f8193d13a10E",
+    version: "v2",
+    name: "USDT PRIME",
+    symbol: "gtUSDTpx",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x41A56BC3738F98EC919bf130Fb69DcBB942c4D68",
+    version: "v2",
+    name: "USDT PRIME",
+    symbol: "gtUSDTpx",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x36cfe1568461E499391ef0A555300F1ae2da2439",
+    version: "v2",
+    name: "Api3 dCOMP USDC",
+    symbol: "Api3-dCOMP-USDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x55c07EC292a96b93015367F7372ADA773bdfD8fE",
+    version: "v2",
+    name: "sky.money USDT Savings",
+    symbol: "skyMoneyUsdtSavings",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x23f5E9c35820f4baB695Ac1F19c203cC3f8e1e11",
+    version: "v2",
+    name: "sky.money USDT Savings",
+    symbol: "skyMoneyUsdtSavings",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x1cC6A6111feC40eb8DEA478bcc2c0A099365F3d2",
+    version: "v2",
+    name: "Vault Name",
+    symbol: "vUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x2fcF14f338BB302E4525625FC751DE54f3D5613e",
+    version: "v2",
+    name: "Vault Name",
+    symbol: "vUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x9B08469CCfEa991E17d7EB9D883C43fE2cE2Ff89",
+    version: "v2",
+    name: "Vault Name",
+    symbol: "vUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xE080b9deE72C2B753d807Aa47509A010Ba06dc51",
+    version: "v2",
+    name: "Morpho USDC Vault Fee Wrapper",
+    symbol: "vaultUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x0691F32ba24757C591D07121dE63559E4a108184",
+    version: "v2",
+    name: "Morpho USDC Vault Fee Wrapper",
+    symbol: "vaultUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x3F8Ae96fA5a959244EaBc56CDa95b4863E65d2Fd",
+    version: "v2",
+    name: "Morpho USDC Vault Fee Wrapper",
+    symbol: "vaultUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x6dC58a0FdfC8D694e571DC59B9A52EEEa780E6bf",
+    version: "v2",
+    name: "Sentora RLUSD Main",
+    symbol: "senRLUSDv2",
+    asset: {
+      address: "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
+      symbol: "RLUSD",
+    },
+  },
+  {
+    id: "0xaDE901e905193B9F30f61ddD9DFd8E0815ee25da",
+    version: "v2",
+    name: "Strategic USDC Yield Vault",
+    symbol: "STRGY",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xDB2035e7fcEA6Ee957609c874c85e5De48927c35",
+    version: "v2",
+    name: "Halalcash Levered Tether USD",
+    symbol: "HALALUSDT",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x297f388D90060c07C017749938B400432FEE7B22",
+    version: "v2",
+    name: "WETH PRIME",
+    symbol: "xweth",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x4522c5a7917e9f96F14FA2661b721a95280b9FF7",
+    version: "v2",
+    name: "WETH PRIME",
+    symbol: "xweth",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0xFd70693888Be43fA07589B95901b06010516fD5d",
+    version: "v2",
+    name: "NuWealth Anchor RLUSD",
+    symbol: "nuRLUSD",
+    asset: {
+      address: "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
+      symbol: "RLUSD",
+    },
+  },
+  {
+    id: "0x8A9f4605394CcE926Fa9BffaAAD3f31D942cf533",
+    version: "v2",
+    name: "NuWealth Anchor PYUSD",
+    symbol: "nuPYUSD",
+    asset: {
+      address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+      symbol: "PYUSD",
+    },
+  },
+  {
+    id: "0x04C5F310d479aDC5EA2D21695765A61b7E2726e7",
+    version: "v2",
+    name: "Polymarket's oracle UMA",
+    symbol: "UMA.rocks",
+    asset: {
+      address: "0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828",
+      symbol: "UMA",
+    },
+  },
+  {
+    id: "0xc0E0882Dd2DADAc322510538CD5088a38cE52b69",
+    version: "v2",
+    name: "Blend USDC",
+    symbol: "blend-usdc",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xC363EA35D7F38B1d7f3c620Fd66aeDD545e2a637",
+    version: "v2",
+    name: "ThirdGuard USDC Prime",
+    symbol: "tgUSDCp",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x65D217B44aDe6a55984E868cBCFd55D1343A8e1E",
+    version: "v2",
+    name: "kpk USDT Prime V2",
+    symbol: "kpk_USDT_PrimeV2",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x2F99e35Ea811F3cC230B26dfF817604B5D4B6e38",
+    version: "v2",
+    name: "ByzPrime EUR",
+    symbol: "byzEUR",
+    asset: {
+      address: "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      symbol: "EURC",
+    },
+  },
+  {
+    id: "0x3399F04381F58E1bF190D6b20474dCB339FC6F9d",
+    version: "v2",
+    name: "Morpho USDC Vault Fee Wrapper",
+    symbol: "vaultUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xBEeFf08E1887A11D91B9Ca68c133c08Ae3c4B44f",
+    version: "v2",
+    name: "Steakhouse Reservoir rUSD",
+    symbol: "bbqRUSDreservoir",
+    asset: {
+      address: "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
+      symbol: "rUSD",
+    },
+  },
+  {
+    id: "0x870F0BF29A25A40E7CC087cD5C53e70C11F2C8A8",
+    version: "v2",
+    name: "kpk USDT Prime V2",
+    symbol: "kpk_USDT_PrimeV2",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x9CAe2726D0A403bd61Ef72A6876503329A638A40",
+    version: "v2",
+    name: "USDT Vault",
+    symbol: "mmUSDT",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x37Cf7c7D80a2eEA813Af6a115fA63Df23862a1E7",
+    version: "v2",
+    name: "RockawayX USDC Prime",
+    symbol: "roxpUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xB9a95828E9471C815e12541c5CC1244BC208c4C2",
+    version: "v2",
+    name: "Julian Capital USDC Balanced",
+    symbol: "JULIANUSDCBAL",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x87c221938F2Ce88B72EFcC8480e163AD7BD61a23",
+    version: "v2",
+    name: "Speransky ",
+    symbol: "USDC Alpha",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xc7265BcB1f29320001dB32CE8C54DE99Dd9bB6D1",
+    version: "v2",
+    name: "gtsy-eth",
+    symbol: "GETH1",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0xeb6719c14BA01Bf1D6bFB78A65F63f12FabF202C",
+    version: "v2",
+    name: "Alpha APXUSD V2",
+    symbol: "alphaAPXUSDV2",
+    asset: {
+      address: "0x98A878b1Cd98131B271883B390f68D2c90674665",
+      symbol: "apxUSD",
+    },
+  },
+  {
+    id: "0xf5bb58F088f06F3060BdDf16e93156273CE3FBB7",
+    version: "v2",
+    name: "RockawayX USDC Prime",
+    symbol: "roxUSDCp",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xBFd9b6897fE93eD8b2B1A3Aa6a3DEB5D2a14f74F",
+    version: "v2",
+    name: "RockawayX USDC Yield",
+    symbol: "roxUSDCy",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x61584E6fC18B39E4799787C4E52Dd3b265d4dcDD",
+    version: "v2",
+    name: "RockawayX wETH",
+    symbol: "roxWETH",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x32401B9fb79065Bc15949DE0BD43927492f02F0C",
+    version: "v2",
+    name: "Flowdesk AUSD RWA Strategy",
+    symbol: "fAUSDe",
+    asset: {
+      address: "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+      symbol: "AUSD",
+    },
+  },
+  {
+    id: "0x51F5D4686e39275AF71DE605AD333067E7017aE3",
+    version: "v2",
+    name: "Markov USDC Prime",
+    symbol: "mkmUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xbeeff9eBE518d1C7E552c4BbfB99487435c4dEc9",
+    version: "v2",
+    name: "Steakhouse Resolv USR",
+    symbol: "bbqUSRresolv",
+    asset: {
+      address: "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
+      symbol: "USR",
+    },
+  },
+  {
+    id: "0xD3CfFB7B62bae7abF6618cC5c1F160Dfa826110C",
+    version: "v2",
+    name: "G12 Labs Stable Yield",
+    symbol: "uG12",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x0fC4f2cF88670D3ABF741695411906bc51B8fB68",
+    version: "v2",
+    name: "Prime USDC",
+    symbol: "primeUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x35Cbe8542E70fa2f7F9cDF129F19e593F4b4f560",
+    version: "v2",
+    name: "Alpha USDC Asia V2",
+    symbol: "alphaUSDCAsiaV2",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xBEEFFFDE1CABD3d8A3cd4fd5e04DbA51B9D4Ac39",
+    version: "v2",
+    name: "Steakhouse High Yield Turbo XAUT",
+    symbol: "bbqXAUTturbo",
+    asset: {
+      address: "0x68749665FF8D2d112Fa859AA293F07A622782F38",
+      symbol: "XAUt",
+    },
+  },
+  {
+    id: "0xcd726DBb3Fa43A93377866Ccfddf165cd82185Cc",
+    version: "v2",
+    name: "Gauntlet PYUSD",
+    symbol: "gtpyusd",
+    asset: {
+      address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+      symbol: "PYUSD",
+    },
+  },
+  {
+    id: "0x38181D2421A00e34618b3108A8B1C031a164a935",
+    version: "v2",
+    name: "Gauntlet PYUSD",
+    symbol: "gtpyusd",
+    asset: {
+      address: "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+      symbol: "PYUSD",
+    },
+  },
+  {
+    id: "0x437a4A671286569e3Be9a09dd3ef731405032E71",
+    version: "v2",
+    name: "RBC-pmUSD",
+    symbol: "RBC-pmUSD",
+    asset: {
+      address: "0xC0c17dD08263C16f6b64E772fB9B723Bf1344DdF",
+      symbol: "pmUSD",
+    },
+  },
+  {
+    id: "0x2B70FEc5c8D32E9D2d9d45d776a16Ca3108C7836",
+    version: "v2",
+    name: "Test",
+    symbol: "vTest",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x97e006d1a6313dfb4Ae27edfF73b06b352091f9E",
+    version: "v2",
+    name: "Test Vault",
+    symbol: "tv",
+    asset: {
+      address: "0x06ea695B91700071B161A434fED42D1DcbAD9f00",
+      symbol: "hemiBTC",
+    },
+  },
+  {
+    id: "0x64F35F6025bFbdDF667f76E21D10A6BfeE61748B",
+    version: "v2",
+    name: "ThirdGuard USDC Prime",
+    symbol: "tgUSDCp",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x4F55F2b5C98590D1C45E52E8EF1b7a49eA414019",
+    version: "v2",
+    name: "Gated Test",
+    symbol: "gatedUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x6f48cE6380693808682E43140E3Eeb877a096Aa1",
+    version: "v2",
+    name: "Gated Test",
+    symbol: "gatedUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x5034518e0AE0479ED595d4A013d67c00886e14f4",
+    version: "v2",
+    name: "USX Mainnet USDC",
+    symbol: "usx-mainnet-usdc",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xb133Bbf63b7e62Af3fe255E394F741fDEFA01F09",
+    version: "v2",
+    name: "Obsidian USDC",
+    symbol: "obUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x5f829B1B473cBA86838E1B7BB7E144DbDE228e21",
+    version: "v2",
+    name: "RockawayX USDC Prime",
+    symbol: "roxpUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xc561466Bd078D5d1C94AB25d83efBDA1DAC8Dcc8",
+    version: "v2",
+    name: "wETH",
+    symbol: "roxWETH",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x64C18DCC4Ccb3b8D27877a4aeBB4C3126CB39cB9",
+    version: "v2",
+    name: "RockawayX wETH",
+    symbol: "roxWETH",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0xE0181090c22579B6A217f1522cbf8c9f1F0C1965",
+    version: "v2",
+    name: "RockawayX USDC Yield",
+    symbol: "roxUSDCy",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x6283C40558521515595cbCc573f8A0489Ab4d1E7",
+    version: "v2",
+    name: "VETRO VUSD Meta Vault",
+    symbol: "VUSDmeta",
+    asset: {
+      address: "0xCa83DDE9c22254f58e771bE5E157773212AcBAc3",
+      symbol: "VUSD",
+    },
+  },
+  {
+    id: "0x33d3a6768e099e1007f75726E47dE19AcdcC8e2c",
+    version: "v2",
+    name: "attempt",
+    symbol: "attempt",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x991B834d51a5984da8849448F6711C04505BEfE1",
+    version: "v2",
+    name: "Ditobanx Mainnet USDC",
+    symbol: "ditobanx-mainnet-usdc",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
