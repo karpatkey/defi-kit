@@ -18,38 +18,6 @@ export default [
     rewarder: "0x55BFBb2a8De4D7001C5542d19C702433252C904b",
   },
   {
-    name: "50PENDLE-50WETH",
-    id: "61",
-    bpt: "0xFD1Cf6FD41F229Ca86ada0584c63C49C3d66BbC9",
-    tokens: [
-      {
-        address: "0x808507121B80c02388fAd14726482e061B8da827",
-        symbol: "PENDLE",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-      },
-    ],
-    rewarder: "0x08129a472dfb92A1596Bbe31f27c53914a990563",
-  },
-  {
-    name: "20WETH-80ALCX",
-    id: "74",
-    bpt: "0xf16aEe6a71aF1A9Bc8F56975A4c2705ca7A782Bc",
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-      },
-      {
-        address: "0xdBdb4d16EdA451D0503b854CF79D55697F90c8DF",
-        symbol: "ALCX",
-      },
-    ],
-    rewarder: "0x8B227E3D50117E80a02cd0c67Cd6F89A8b7B46d7",
-  },
-  {
     name: "B-wjAura-wETH",
     id: "82",
     bpt: "0x68e3266C9C8bbD44ad9Dca5AFBfe629022AeE9fE",
@@ -64,22 +32,6 @@ export default [
       },
     ],
     rewarder: "0x0583A75B3D91020E9Db90301Ded0A2676e55d1c0",
-  },
-  {
-    name: "50COIL-50USDC",
-    id: "95",
-    bpt: "0x42FBD9F666AaCC0026ca1B88C94259519e03dd67",
-    tokens: [
-      {
-        address: "0x823E1B82cE1Dc147Bbdb25a203f046aFab1CE918",
-        symbol: "COIL",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-      },
-    ],
-    rewarder: "0x6f6801b49B5D8CA2Ea5FEAD9096F347B9355a330",
   },
   {
     name: "50WETH-50AURA",
@@ -146,22 +98,6 @@ export default [
     rewarder: "0xA6e54eA1C67396Bde9e92cA462197bE59Af3E875",
   },
   {
-    name: "B-rETH-STABLE",
-    id: "109",
-    bpt: "0x1E19CF2D73a72Ef1332C882F20534B6519Be0276",
-    tokens: [
-      {
-        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
-        symbol: "rETH",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-      },
-    ],
-    rewarder: "0xDd1fE5AD401D4777cE89959b7fa587e569Bf125D",
-  },
-  {
     name: "20WETH-80WNCG",
     id: "110",
     bpt: "0xe8cc7E765647625B95F59C15848379D10B9AB4af",
@@ -178,54 +114,6 @@ export default [
     rewarder: "0x1E356C39CAAC89Da64A7f50b47564ca52C8cACA9",
   },
   {
-    name: "B-80GNO-20WETH",
-    id: "116",
-    bpt: "0xF4C0DD9B82DA36C07605df83c8a416F11724d88b",
-    tokens: [
-      {
-        address: "0x6810e776880C02933D47DB1b9fc05908e5386b96",
-        symbol: "GNO",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-      },
-    ],
-    rewarder: "0x971fAF6BE8C20f53fe3acF065fe6E14FBA0b8a9a",
-  },
-  {
-    name: "20WETH-80T",
-    id: "119",
-    bpt: "0x8167A1117691f39e05e9131cfA88F0e3A620E967",
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-      },
-      {
-        address: "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5",
-        symbol: "T",
-      },
-    ],
-    rewarder: "0x77E20717a5a77893D1a94BbebC5f990b957062A7",
-  },
-  {
-    name: "wstETH-WETH-BPT",
-    id: "153",
-    bpt: "0x93d199263632a4EF4Bb438F1feB99e57b4b5f0BD",
-    tokens: [
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-      },
-    ],
-    rewarder: "0x2a14dB8D09dB0542f6A371c0cB308A768227D67D",
-  },
-  {
     name: "STG/USDC",
     id: "154",
     bpt: "0x3ff3a210e57cFe679D9AD1e9bA6453A716C56a2e",
@@ -240,42 +128,6 @@ export default [
       },
     ],
     rewarder: "0x8bd520Bf5d59F959b25EE7b78811142dDe543134",
-  },
-  {
-    name: "GHO/USDT/USDC",
-    id: "157",
-    bpt: "0x8353157092ED8Be69a9DF8F95af097bbF33Cb2aF",
-    tokens: [
-      {
-        address: "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
-        symbol: "GHO",
-      },
-      {
-        address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        symbol: "USDC",
-      },
-      {
-        address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        symbol: "USDT",
-      },
-    ],
-    rewarder: "0xBDD6984C3179B099E9D383ee2F44F3A57764BF7d",
-  },
-  {
-    name: "2BTC",
-    id: "159",
-    bpt: "0xe4e72f872c4048925a78E1e6Fddac411C9ae348A",
-    tokens: [
-      {
-        address: "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
-        symbol: "tBTC",
-      },
-      {
-        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-        symbol: "WBTC",
-      },
-    ],
-    rewarder: "0xb3c8cC0f433200C3a92664A5fEa626eD077e9D39",
   },
   {
     name: "RDNT-WETH",
@@ -326,70 +178,6 @@ export default [
     rewarder: "0x4313428170c09ca81117a95f0418aefE3446d935",
   },
   {
-    name: "osETH/wETH-BPT",
-    id: "179",
-    bpt: "0xDACf5Fa19b1f720111609043ac67A9818262850c",
-    tokens: [
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-      },
-      {
-        address: "0xf1C9acDc66974dFB6dEcB12aA385b9cD01190E38",
-        symbol: "osETH",
-      },
-    ],
-    rewarder: "0x5F032f15B4e910252EDaDdB899f7201E89C8cD6b",
-  },
-  {
-    name: "80MIMO-20WETH",
-    id: "180",
-    bpt: "0xee3959FD00a0B996d801fc34B7CE566bD037f5f5",
-    tokens: [
-      {
-        address: "0x90B831fa3Bebf58E9744A14D638E25B4eE06f9Bc",
-        symbol: "MIMO",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-      },
-    ],
-    rewarder: "0x098DCC73cd97C2BE5eAC5bD59c50cc034b60C06E",
-  },
-  {
-    name: "weETH/rETH",
-    id: "182",
-    bpt: "0x05ff47AFADa98a98982113758878F9A8B9FddA0a",
-    tokens: [
-      {
-        address: "0xae78736Cd615f374D3085123A210448E74Fc6393",
-        symbol: "rETH",
-      },
-      {
-        address: "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
-        symbol: "weETH",
-      },
-    ],
-    rewarder: "0x07A319A023859BbD49CC9C38ee891c3EA9283Cc5",
-  },
-  {
-    name: "pxETH/wETH",
-    id: "185",
-    bpt: "0x88794C65550DeB6b4087B7552eCf295113794410",
-    tokens: [
-      {
-        address: "0x04C154b66CB340F3Ae24111CC767e0184Ed00Cc6",
-        symbol: "pxETH",
-      },
-      {
-        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        symbol: "WETH",
-      },
-    ],
-    rewarder: "0x570eA5C8A528E3495EE9883910012BeD598E8814",
-  },
-  {
     name: "80T-20TBTC",
     id: "188",
     bpt: "0x6228f64D5BA8376652Bfe7E36569D595347cF6Fb",
@@ -406,54 +194,6 @@ export default [
     rewarder: "0x8660F02Ca94970C45add17CEDdCC81DD4D90ffED",
   },
   {
-    name: "ETHx/wstETH",
-    id: "207",
-    bpt: "0xB91159aa527D4769CB9FAf3e4ADB760c7E8C8Ea7",
-    tokens: [
-      {
-        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-        symbol: "wstETH",
-      },
-      {
-        address: "0xA35b1B31Ce002FBF2058D22F30f95D405200A15b",
-        symbol: "ETHx",
-      },
-    ],
-    rewarder: "0x571a20C14a7c3Ac6d30Ee7D1925940bb0C027696",
-  },
-  {
-    name: "ECLP-paUSD-GYD",
-    id: "210",
-    bpt: "0xae2D97CbBc13B67988ECEd2abA0F6939655eD3De",
-    tokens: [
-      {
-        address: "0x571f54D23cDf2211C83E9A0CbD92AcA36c48Fa02",
-        symbol: "paUSD",
-      },
-      {
-        address: "0xe07F9D810a48ab5c3c914BA3cA53AF14E4491e8A",
-        symbol: "GYD",
-      },
-    ],
-    rewarder: "0x01B8209e20B999eE3271A880fA0Ef17cd3eFB1F6",
-  },
-  {
-    name: "ECLP-PAR-EURA",
-    id: "211",
-    bpt: "0x2044aFEF1268100918F88De66a3532Eab3D8f3ef",
-    tokens: [
-      {
-        address: "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
-        symbol: "EURA",
-      },
-      {
-        address: "0x68037790A0229e9Ce6EaA8A99ea92964106C4703",
-        symbol: "PAR",
-      },
-    ],
-    rewarder: "0xdB745558A1b71E5C355aF79c2E54118e753F5c83",
-  },
-  {
     name: "ECLP-stdeUSD-deUSD",
     id: "228",
     bpt: "0x41FDbea2E52790c0a1Dc374F07b628741f2E062D",
@@ -468,22 +208,6 @@ export default [
       },
     ],
     rewarder: "0x7405Bf405185391525Ab06fABcdFf51fdc656A46",
-  },
-  {
-    name: "60GOLD-40WETH",
-    id: "229",
-    bpt: "0xcF8dFdb73e7434b05903B5599fB96174555F4353",
-    tokens: [
-      {
-        address: "0x583019fF0f430721aDa9cfb4fac8F06cA104d0B4",
-        symbol: "st-yETH",
-      },
-      {
-        address: "0x9DeB0fc809955b79c85e82918E8586d3b7d2695a",
-        symbol: "GOLD",
-      },
-    ],
-    rewarder: "0xca5Ee20b1bF03EfBCfD28f01Cd2cAb4d0028E64c",
   },
   {
     name: "ECLP-sUSDe-GYD",

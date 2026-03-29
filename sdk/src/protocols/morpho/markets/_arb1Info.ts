@@ -62,6 +62,21 @@ export default [
     },
   },
   {
+    id: "0xfc94eddcfda4f240982948c4390045a296a048fcd088a875a8a58c06d92745d5",
+    name: "USDC / GVLT",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x25Dfe65120a1e688cfdd1BC90B2c2c219c222B6b",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xccd0554EbcE9a27034456C0F8d24091AD894BA70",
+      symbol: "GVLT",
+    },
+  },
+  {
     id: "0xfa96426d35010588da342240f90edd236aeef10fdf793c11526e4a6ad6a6da01",
     name: "WETH / wstETH",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -1949,6 +1964,21 @@ export default [
     collateralToken: {
       address: "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe",
       symbol: "weETH",
+    },
+  },
+  {
+    id: "0x344f54c0341644a5a8c3f93300bf716031998b46b18b24e4dc67d92434ca6d36",
+    name: "USDC / GVLT",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x1104D3cd2cfa891964eF88BDE9F5d1DBe4947101",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x57587e47A0aF9d1BB93c0D4B3df671B053aB4366",
+      symbol: "GVLT",
     },
   },
   {

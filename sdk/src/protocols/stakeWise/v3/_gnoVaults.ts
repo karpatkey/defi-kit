@@ -123,10 +123,4 @@ export default [
     name: "Dappnode Test 2",
     description: null,
   },
-  {
-    id: "0xb221ea4b710043f3530d2bc912dbef6cab2b5c3d",
-    name: "Day One Law Team&Client Vault",
-    description:
-      "At Day One Law, we don’t just advise on crypto—we use the products, run the infrastructure, and stake on-chain alongside our clients. Our private Stakewise vault on Gnosis Chain is exclusively for our clients and team members, reinforcing our commitment to supporting the ecosystems that matter.\n\nIf you’re already working with us, you’re in. If not, and you’re looking for a legal partner who actually understands the tech, uses the protocols, and aligns with builders and investors in the space, let’s talk.\n\nWe support founders, investors, and operators pushing crypto forward—structuring their projects, securing regulatory clarity, and aligning incentives for long-term success. Our clients get real legal and strategic value, plus access to exclusive opportunities like this.\n\nWe’re not just advisors—we’re on-chain, active participants in the same products and protocols shaping the future of decentralized finance. If that’s the kind of partner you want, reach out.",
-  },
 ] as const
