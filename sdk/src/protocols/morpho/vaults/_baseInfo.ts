@@ -1142,6 +1142,16 @@ export default [
     },
   },
   {
+    id: "0x50e038007302fC1655697522B7bCAEd5422003DA",
+    version: "v1",
+    name: "Spine RWA Potential Vault",
+    symbol: "sprwaUSDC",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0xBbEAb58fF0fB74371eFc6126C6935271D3744145",
     version: "v1.1",
     name: "Elixir Capital USDC",
@@ -4636,6 +4646,26 @@ export default [
     version: "v1.1",
     name: "test vault",
     symbol: "teusdc",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x813862F7276D673a5079Ef174bc1A35e4b970F95",
+    version: "v1.1",
+    name: "Julian Capital USDC Liquid",
+    symbol: "JULIANUSDCLIQ",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x3743a36acdCAb10A08Dda6418131cD3Bf4a1b368",
+    version: "v1.1",
+    name: "RWA RWA RWA",
+    symbol: "rwaUSDC",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",
@@ -10752,6 +10782,16 @@ export default [
     },
   },
   {
+    id: "0x306a8E806F4f0c19069d1d76B2579Dd6E87cdC34",
+    version: "v2",
+    name: "Archer Base USDC",
+    symbol: "archer-base-usdc",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0xCF75D2d4e561991FD1E1606A4fa793781d5f141d",
     version: "v2",
     name: "Abdicated",
@@ -11336,6 +11376,56 @@ export default [
     version: "v2",
     name: "Morpho Vault",
     symbol: "TVLT",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xdC33Da979D178409ec362028Be106d827905961f",
+    version: "v2",
+    name: "Yield Hunter USDC",
+    symbol: "yhUSDC",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xfF8BfdC9ADD5A8c10DB10A2557FbaB0520306b50",
+    version: "v2",
+    name: "SurfDAO KTA",
+    symbol: "sdKTA",
+    asset: {
+      address: "0xc0634090F2Fe6c6d75e61Be2b949464aBB498973",
+      symbol: "KTA",
+    },
+  },
+  {
+    id: "0x04871D1Fae8f6e1d133DbDdEED8d52Ca2497E048",
+    version: "v2",
+    name: "UE Standard Lien-Only BR12 Genesis",
+    symbol: "ueSL-BR12-G",
+    asset: {
+      address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xFa66acd1c6b34A32e9920AcC27fE35AEBBA2Bb24",
+    version: "v2",
+    name: "ARGt Vault",
+    symbol: "mvARGt",
+    asset: {
+      address: "0xf016413834E6D1A14F3D628B11D6Ef725a6bdbDD",
+      symbol: "ARGt",
+    },
+  },
+  {
+    id: "0x012f6f383F13BD437DFBfCBe94D1A8C5fC40E650",
+    version: "v2",
+    name: "UE Standard Lien-Only BR12 Genesis",
+    symbol: "ueSL-BR12-G",
     asset: {
       address: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
       symbol: "USDC",

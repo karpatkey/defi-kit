@@ -768,7 +768,7 @@ export default [
     symbol: "blend-hyperUSDC-v1",
     asset: {
       address: "0x4B6F1C9E5d470b97181786b26da0d0945A7cf027",
-      symbol: "hyperUSDC",
+      symbol: "hyperUSDCa",
     },
   },
   {
@@ -1082,6 +1082,16 @@ export default [
     },
   },
   {
+    id: "0x4d87C18b7b3b64d79ee28745701620f658c21341",
+    version: "v1.1",
+    name: "Trinity Gold USDC Vault",
+    symbol: "tgUSDC",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0xa47C5203d22Ae173788a9d9Be0F2bEeCc97F4dF9",
     version: "v2",
     name: "Blend USDC Reserve",
@@ -1138,7 +1148,7 @@ export default [
     symbol: "blend-hyperUSDC",
     asset: {
       address: "0x4B6F1C9E5d470b97181786b26da0d0945A7cf027",
-      symbol: "hyperUSDC",
+      symbol: "hyperUSDCa",
     },
   },
   {
@@ -2089,6 +2099,16 @@ export default [
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
       symbol: "USD₮0",
+    },
+  },
+  {
+    id: "0x1e7F0372dd54B224130db49ec26854aFAF1eBca2",
+    version: "v2",
+    name: "Sherpa Direct",
+    symbol: "SED",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
     },
   },
 ] as const
