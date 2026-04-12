@@ -20,6 +20,12 @@ export default [
       "A vault for private users. Powered by NodeSet's uniquely decentralized infrastructure network.",
   },
   {
+    id: "0x4aafdb911085dd7703e57951279744dd713f744d",
+    name: "Nodz",
+    description:
+      "Nodz is a highly reliable Stakewise vault operator on Ethereum",
+  },
+  {
     id: "0x663a8c9e88c5cdc565cc4bf0b2bec8d862d744a6",
     name: "CCM GigaVault",
     description: "CCM is the name, staking is the game",
@@ -30,20 +36,14 @@ export default [
     description: null,
   },
   {
-    id: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
-    name: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
-    description: null,
-  },
-  {
     id: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
     name: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
     description: null,
   },
   {
-    id: "0xb36fc5e542cb4fc562a624912f55da2758998113",
-    name: "Serenita - Powered by Vero",
-    description:
-      "Serenita provides enterprise-grade staking services with a focus on top-tier performance and minimal risk. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nThe validators in this Vault are powered by Vero, our custom-built multi-node validator client software. Similar to DVT technology, Vero verifies the chain’s latest state across multiple independent client implementations—shielding our validators from single-client bugs and downtime.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
+    id: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
+    name: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
+    description: null,
   },
   {
     id: "0x1b3ce55dde0e0d4b9a200855406e7b14334c10b0",
@@ -67,6 +67,12 @@ export default [
     name: "Dream vault",
     description:
       "This is a private vault and accumulating ETH for a home node runner from family and friends",
+  },
+  {
+    id: "0xb36fc5e542cb4fc562a624912f55da2758998113",
+    name: "Serenita - Powered by Vero",
+    description:
+      "Serenita provides enterprise-grade staking services with a focus on top-tier performance and minimal risk. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nThe validators in this Vault are powered by Vero, our custom-built multi-node validator client software. Similar to DVT technology, Vero verifies the chain’s latest state across multiple independent client implementations—shielding our validators from single-client bugs and downtime.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
   },
   {
     id: "0x663580b3edad914d0b59cea88616f06278d42bb2",
@@ -119,11 +125,6 @@ export default [
     description: null,
   },
   {
-    id: "0x0af0a2671bb19d4be5d6c6899ec712341e472d4b",
-    name: "Illus Capital",
-    description: "Illus Capital Private Staking Vault",
-  },
-  {
     id: "0x5799be451ee9fddd171c23bf5be86eccfe1f062f",
     name: "Blockdaemon",
     description:
@@ -146,6 +147,17 @@ export default [
     name: "Stakesaurus SEA Home Nodes",
     description:
       "High availability setup using a network of home-based nodes in Southeast Asia running minority clients by Stakesaurus' community\n\nCentralised infrastructure is detrimental to both the network and your own ETH (e.g., cloud services, data centres). Correlation penalties can wipe out your hard-earned yield in the best case and take a sizeable chunk out of your capital in the worst.\n\nOur solution? A geographically distributed network of home-staking nodes in Singapore and Malaysia (other SEA locations coming soon!) contributed by the Stakesaurus community. This network of uncorrelated nodes acts as a fallback for one another to provide a high-availability staking service.\n\nWe believe in keeping staking operations as simple as possible to minimise tail risk events and security flaws.\n\nStake with this vault to support my efforts in growing the Solo staking community in Asia!",
+  },
+  {
+    id: "0x0af0a2671bb19d4be5d6c6899ec712341e472d4b",
+    name: "Illus Capital",
+    description: "Illus Capital Private Staking Vault",
+  },
+  {
+    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
+    name: "Meria",
+    description:
+      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0xb46dba422bcf7f113da2eeb41c0e2cc6298d6bba",
@@ -181,12 +193,6 @@ export default [
     id: "0x4e0a83509f5d0ef2e55b6f08dbf2462b72bcd30a",
     name: "Solo Staker",
     description: "Staking forever",
-  },
-  {
-    id: "0x3f2f7424074bac9337ddca38e83e1518436e0ed0",
-    name: "Meria",
-    description:
-      "Meria is an institutionnal-grade staking service provider. We operate blockchain infrastructure on over +30 networks, all managed by a team of experienced node operators",
   },
   {
     id: "0x3102b4013cb506481e959c8f4500b994d2bff22e",
