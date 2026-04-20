@@ -113,20 +113,4 @@ export default [
     ],
     rewarder: "0x66EeE72121E64Cd5fb67B306087511ca20B1956E",
   },
-  {
-    name: "ECLP-wstETH-GYD",
-    id: "89",
-    bpt: "0x6ce1D1e46548ef657f8D7Ebddfc4BEaDB04F72f3",
-    tokens: [
-      {
-        address: "0x5979D7b546E38E414F7E9822514be443A4800529",
-        symbol: "wstETH",
-      },
-      {
-        address: "0xCA5d8F8a8d49439357d3CF46Ca2e720702F132b8",
-        symbol: "GYD",
-      },
-    ],
-    rewarder: "0x9af228E16Ed7C9a39A44844860c8c72A4c4a1fDa",
-  },
 ] as const
