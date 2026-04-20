@@ -2,22 +2,6 @@
 
 export default [
   {
-    name: "BPT-rETH-ETH",
-    id: "0",
-    bpt: "0x4Fd63966879300caFafBB35D157dC5229278Ed23",
-    tokens: [
-      {
-        address: "0x4200000000000000000000000000000000000006",
-        symbol: "WETH",
-      },
-      {
-        address: "0x9Bcef72be871e61ED4fBbc7630889beE758eb81D",
-        symbol: "rETH",
-      },
-    ],
-    rewarder: "0x61ac9315a1Ae71633E95Fb35601B59180eC8d61d",
-  },
-  {
     name: "BPT-RESERVE",
     id: "1",
     bpt: "0x1D95129c18a8c91C464111FDf7d0Eb241B37a985",
@@ -68,30 +52,6 @@ export default [
       },
     ],
     rewarder: "0x9f43f726dF654E033B04c39989af90ab44875fEB",
-  },
-  {
-    name: "bpt-stablebeets",
-    id: "10",
-    bpt: "0x9Da11Ff60bfc5aF527f58fd61679c3AC98d040d9",
-    tokens: [
-      {
-        address: "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
-        symbol: "USDC",
-      },
-      {
-        address: "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
-        symbol: "USDC",
-      },
-      {
-        address: "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
-        symbol: "USDT",
-      },
-      {
-        address: "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
-        symbol: "DAI",
-      },
-    ],
-    rewarder: "0x2e3CD130F5166AfdA2Cb0A2714F60e218D2A3643",
   },
   {
     name: "BPT-OPARA",

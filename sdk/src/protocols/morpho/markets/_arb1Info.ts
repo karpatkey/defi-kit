@@ -62,6 +62,21 @@ export default [
     },
   },
   {
+    id: "0xfc94eddcfda4f240982948c4390045a296a048fcd088a875a8a58c06d92745d5",
+    name: "USDC / GVLT",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x25Dfe65120a1e688cfdd1BC90B2c2c219c222B6b",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xccd0554EbcE9a27034456C0F8d24091AD894BA70",
+      symbol: "GVLT",
+    },
+  },
+  {
     id: "0xfa96426d35010588da342240f90edd236aeef10fdf793c11526e4a6ad6a6da01",
     name: "WETH / wstETH",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -737,6 +752,21 @@ export default [
     },
   },
   {
+    id: "0xbe0f7ce619e4faeeae2cfecfcc5cceae6ce656537da40ef400ae94139272412d",
+    name: "USDC / TART",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x640Fc1a44Ed4E0ed681969103BB793A18c22770E",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xD1aB66a665B887d5507A457D957151CB36E4f0F2",
+      symbol: "TART",
+    },
+  },
+  {
     id: "0xbd0a07e2f6a2348577610d04039a2327f4e84b98b2255665ece4c927259a50f4",
     name: "USDC / vyUSD",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -962,6 +992,21 @@ export default [
     },
   },
   {
+    id: "0xa46d32d4f61adbbcfe5827bdd66548c8660fbb2f170705184ce517a15aff8537",
+    name: "WETH / WBTC",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x16fd4509BeDe2Bd3ab3cA433c1ae8064B01Ec3dF",
+    loanToken: {
+      address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      symbol: "WETH",
+    },
+    collateralToken: {
+      address: "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+      symbol: "WBTC",
+    },
+  },
+  {
     id: "0xa35d91efb3e284a0ab7098e8c5a65caf58ea0451073e36a544a821fd8f350953",
     name: "USDC / GLV [WBTC-USDC]",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -1049,6 +1094,21 @@ export default [
     collateralToken: {
       address: "0x4186BFC76E2E237523CBC30FD220FE055156b41F",
       symbol: "rsETH",
+    },
+  },
+  {
+    id: "0x99115cd86d78bf823c0d4bc60fcd512436e44ea15e4dd025e531ed0941153578",
+    name: "USDC / TART",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x1F052C4e8370Ee599B2267aCb4D6e268672a9527",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x2B1D0BaD12Eb981D9d3c304cB623Fd211Cf84651",
+      symbol: "TART",
     },
   },
   {
@@ -1562,6 +1622,21 @@ export default [
     },
   },
   {
+    id: "0x5dd281933e74e576825deda2f28764f1ad3818faa485cbefc808bef0fc1518e5",
+    name: "USDC / GVLT",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x1104D3cd2cfa891964eF88BDE9F5d1DBe4947101",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xF24e1f3a17200a7C8ff8F61BD7a65745AD42D8dd",
+      symbol: "GVLT",
+    },
+  },
+  {
     id: "0x5bf9c5869328b1f3201f41d45b740afe2ca13f623282957d8c84ec84b61ae793",
     name: "sUSDe / MUX3LP-sUSDe-4",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -1574,6 +1649,21 @@ export default [
     collateralToken: {
       address: "0x3d0572808510C293Bc5C9C42033Dd471266D4b3A",
       symbol: "MUX3LP-sUSDe-4",
+    },
+  },
+  {
+    id: "0x5ae03ec9af76f2485413ee5c1109eb14760b47e9049c7f3db868d9ef659ef473",
+    name: "USDC / TART",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0xf2Fc7311345C3157949bC21b30805F94d539BC8e",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xaf7358D7f5583f0655b454ebC0BCc54d90fe8ecd",
+      symbol: "TART",
     },
   },
   {
@@ -1649,6 +1739,21 @@ export default [
     collateralToken: {
       address: "0x66CFbD79257dC5217903A36293120282548E2254",
       symbol: "wstUSR",
+    },
+  },
+  {
+    id: "0x57459ec5b43ed4920b658ce3a68293f1d7e26b1135069750fbf881d60364708d",
+    name: "USDC / TBUND",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x1D448CfB01448f1d9Dc4bEf55118046542EB591E",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xc923e4D60E401C10BA4a7199418b3BD22b118400",
+      symbol: "TBUND",
     },
   },
   {
@@ -1952,6 +2057,21 @@ export default [
     },
   },
   {
+    id: "0x344f54c0341644a5a8c3f93300bf716031998b46b18b24e4dc67d92434ca6d36",
+    name: "USDC / GVLT",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x1104D3cd2cfa891964eF88BDE9F5d1DBe4947101",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0x57587e47A0aF9d1BB93c0D4B3df671B053aB4366",
+      symbol: "GVLT",
+    },
+  },
+  {
     id: "0x33e0c8ab132390822b07e5dc95033cf250c963153320b7ffca73220664da2ea0",
     name: "USDC / wstETH",
     irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
@@ -2084,6 +2204,21 @@ export default [
     collateralToken: {
       address: "0x5979D7b546E38E414F7E9822514be443A4800529",
       symbol: "wstETH",
+    },
+  },
+  {
+    id: "0x1e4869e7087be6fb493599a2d86e93ccbd1a03fed4f3f22fb685c8030e36480d",
+    name: "USDC / HYDRO",
+    irm: "0x66F30587FB8D4206918deb78ecA7d5eBbafD06DA",
+    lltv: "625000000000000000",
+    oracle: "0x0A96cB06A7BaDc652D1816e087940644754d9BD6",
+    loanToken: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+    collateralToken: {
+      address: "0xD3bE2Ace01fDe553E7eAa42752cf7bb0EE7BD999",
+      symbol: "HYDRO",
     },
   },
   {

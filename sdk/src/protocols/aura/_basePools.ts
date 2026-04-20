@@ -50,22 +50,6 @@ export default [
     rewarder: "0xff860c4D5bA79a523B4Cfffda059844DDcbD966e",
   },
   {
-    name: "ECLP-cbETH-wstETH",
-    id: "13",
-    bpt: "0x54D86E177cdC664B5F9B17eB5fd6A76Fa529e466",
-    tokens: [
-      {
-        address: "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
-        symbol: "cbETH",
-      },
-      {
-        address: "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
-        symbol: "wstETH",
-      },
-    ],
-    rewarder: "0x588ee7aD6Dc38176Df272d0e723BeE6161938036",
-  },
-  {
     name: "20WETH-80IMO",
     id: "18",
     bpt: "0x007bb7a4bfc214DF06474E39142288E99540f2b3",
