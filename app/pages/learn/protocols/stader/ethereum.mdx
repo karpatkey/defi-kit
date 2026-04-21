@@ -49,7 +49,7 @@ Deposit ETH and receive `ETHx` tokens.
   | `receiver`   | equal to `AVATAR` |
   | `referralId` | -                 |
 
-### `UserWithdrawManager · requestWithdraw`
+### `UserWithdrawManager · requestWithdraw(uint256,address)`
 
 Redeem `ETHx` and receive ETH. The unstaked ETH will not be immediately added to your wallet as there is an unstaking period of 7-10 days subject to entry and exit queues on the Ethereum network.
 
@@ -60,6 +60,19 @@ Redeem `ETHx` and receive ETH. The unstaked ETH will not be immediately added to
   | :----------- | :---------------- |
   | `ethXAmount` | -                 |
   | `owner`      | equal to `AVATAR` |
+
+  ### `UserWithdrawManager · requestWithdraw`
+
+Redeem `ETHx` and receive ETH. The unstaked ETH will not be immediately added to your wallet as there is an unstaking period of 7-10 days subject to entry and exit queues on the Ethereum network.
+
+- **Contract:** `UserWithdrawManager`
+- **Function:** `requestWithdraw(uint256,address,string)`
+
+  | Parameter    | Constraint        |
+  | :----------- | :---------------- |
+  | `ethXAmount` | -                 |
+  | `owner`      | equal to `AVATAR` |
+  | `referralId` | -                 |
 
 ### `UserWithdrawManager · claim`
 
