@@ -20,10 +20,9 @@ export const eth = {
     allow.mainnet.stader.userWithdrawManager[
       "requestWithdraw(uint256,address)"
     ](undefined, c.avatar),
-    allow.mainnet.stader.userWithdrawManager["requestWithdraw(uint256,address,string)"](
-      undefined,
-      c.avatar,
-    ),
+    allow.mainnet.stader.userWithdrawManager[
+      "requestWithdraw(uint256,address,string)"
+    ](undefined, c.avatar),
     allow.mainnet.stader.userWithdrawManager.claim(),
   ],
 }
