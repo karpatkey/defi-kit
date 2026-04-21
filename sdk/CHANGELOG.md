@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.9](https://github.com/karpatkey/defi-kit/compare/v2.26.8...v2.26.9) (2026-04-21)
+
+
+### Bug Fixes
+
+* Stader: add requestWithdraw() additional version ([#528](https://github.com/karpatkey/defi-kit/issues/528)) ([f5b20d2](https://github.com/karpatkey/defi-kit/commit/f5b20d27443646e7338091078d4e6d63b522d9b4))
+
 ## [2.26.8](https://github.com/karpatkey/defi-kit/compare/v2.26.7...v2.26.8) (2026-03-26)
 
 
