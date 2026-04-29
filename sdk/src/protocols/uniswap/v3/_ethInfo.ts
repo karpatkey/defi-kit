@@ -1573,4 +1573,8 @@ export default [
     address: "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7",
     symbol: "rsETH",
   },
+  {
+    address: "0xcAFeAA466736ac01e0AC9Ca72644beF348694731",
+    symbol: "RWIV",
+  },
 ] as const
