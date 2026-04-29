@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.10](https://github.com/karpatkey/defi-kit/compare/v2.26.9...v2.26.10) (2026-04-29)
+
+
+### Bug Fixes
+
+* Nexus - Add RWIV token to UniV3 eth Info file ([#530](https://github.com/karpatkey/defi-kit/issues/530)) ([5b919af](https://github.com/karpatkey/defi-kit/commit/5b919afdd7da9c0e61c36967138b2a82c531ba1e))
+
 ## [2.26.9](https://github.com/karpatkey/defi-kit/compare/v2.26.8...v2.26.9) (2026-04-21)
 
 
