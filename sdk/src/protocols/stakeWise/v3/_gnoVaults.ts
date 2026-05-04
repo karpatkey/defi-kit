@@ -20,25 +20,20 @@ export default [
       "Serenita provides enterprise-grade staking services, prioritizing optimal performance while mitigating the risks associated with using majority clients. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.\n\nWe manage one of the best StakeWise Vaults on Ethereum, and aim to be a leading staking provider on Gnosis Chain as well.\n\nFor a deeper understanding of our operational approach, visit our website at serenita.io",
   },
   {
-    id: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
-    name: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
-    description: null,
-  },
-  {
     id: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
     name: "0x15639e82d2072fa510e5d2b5f0db361c823bcad3",
     description: null,
   },
   {
-    id: "0xf7ee331fe545d25c91977161eed2957c5cffd313",
-    name: "NodeHeart - 10% Fee",
-    description: "Stake with me!",
+    id: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
+    name: "0x34284c27a2304132af751b0dec5bba2cf98ed039",
+    description: null,
   },
   {
-    id: "0x0686f6bbb28fd0642aebf5b89654aeba9cc73dea",
-    name: "Chorus One",
+    id: "0xf7ee331fe545d25c91977161eed2957c5cffd313",
+    name: "NodeHeart - 10% Fee",
     description:
-      "Chorus One is a trusted staking provider, offering secure and reliable services to individual and institutional stakers alike. Operating on 60+ blockchain networks, we're the choice of over 150,000 delegators worldwide, including leading institutions like BitGo, Ledger, and Hex Trust.\n\nKnown for our enterprise-grade infrastructure and research-driven approach, we've never been slashed and consistently strive to deliver the highest possible yields for our stakers.\n\nStake your GNO with confidence today. Learn more at chorus.one",
+      "Stake with NodeHeart. Transparent osGNO/GNO spread and StakeWise Vault analytics.\n\nhttps://analysis.nodeheart.xyz/osgno-gno\n",
   },
   {
     id: "0x809484b8579dc605917b8f94aa284282d5fe375d",
@@ -51,12 +46,6 @@ export default [
     name: "Axol.io",
     description:
       "Sustainable nodes for gnosis, ran by the LATAM team at Axol.io",
-  },
-  {
-    id: "0xe0a342ed4e0f0dbe97c4810534cfcb6550ea017d",
-    name: "Stakecat",
-    description:
-      "Node operators, securing and decentralizing Ethereum |  AVS operator: http://avs.stakecat.space\n \nWe provide greater decentralization for networks with our own infrastructure for validators and high availability to compete with centralized data center performance.\n\nmore about Stakecat here: https://www.stakecat.space/",
   },
   {
     id: "0xeba0b1524714e50f5844db7f9f821bba08402974",
@@ -76,11 +65,6 @@ export default [
       "stakewise V3 vault on gnosis, brought to you by alpineforge.eu with <3\nhappy staking! 🦉hoot, hoot!",
   },
   {
-    id: "0x39f27264ebaa1e3abf085df3845782d450ac942b",
-    name: "Pro Fox",
-    description: null,
-  },
-  {
     id: "0x79dbec2d18a758c62d410f9763956d52fbd4a3cc",
     name: "Stakers.space",
     description:
@@ -98,14 +82,21 @@ export default [
       "The Gateway to AI & Cloud Sovereignty\n\nCNC brings together powerful staking and real infrastructure built for demanding users. It’s designed to deliver reliability for critical operations and AI-driven workflows.\n\nWhat you get with Genesis vault staking:\n\n- Full AI Agents Suite – Unlock the complete CNC AI Platform, including advanced autonomous AI agents.\n\n- CNC Cloud Suite – Access high-performance Cloud Gaming, secure storage, and computing resources.\n\n- VIP Membership – Eligibility for private ultra-low-fee vaults and priority technical support.\n\nGenesis vault powers the CNC ecosystem, combining premium staking with next-generation decentralized intelligence.\n\nTo activate your Premium access (Cloud & AI) after staking, contact our team at joecnc@proton.me",
   },
   {
-    id: "0x8a20669daa7969788f0ae7dbd38ac76e102ef213",
-    name: "FCC GNO Vault",
-    description: "FCC GNO Liquid Staking Public Vault",
-  },
-  {
     id: "0x1f87105abbd23b49f2abf0995b21b52b97aacdc4",
     name: "AI IA Private Vault",
     description: null,
+  },
+  {
+    id: "0x0686f6bbb28fd0642aebf5b89654aeba9cc73dea",
+    name: "Chorus One",
+    description:
+      "Chorus One is a trusted staking provider, offering secure and reliable services to individual and institutional stakers alike. Operating on 60+ blockchain networks, we're the choice of over 150,000 delegators worldwide, including leading institutions like BitGo, Ledger, and Hex Trust.\n\nKnown for our enterprise-grade infrastructure and research-driven approach, we've never been slashed and consistently strive to deliver the highest possible yields for our stakers.\n\nStake your GNO with confidence today. Learn more at chorus.one",
+  },
+  {
+    id: "0x9f5f127982b8a2566cf53c375c0523f58789fd46",
+    name: "Noak",
+    description:
+      "Noak is an independent Gnosis validator operator running self-hosted hardware on a fully auditable stack. No cloud, no intermediaries.\n\nThe operation is built around a simple principle: every layer of the infrastructure is owned, operated, and monitored by the people accountable for it. Decisions are traceable, metrics are public, and commitments are kept on schedule.\n\nLaunch fee is 4%, with a public and pre-announced fee schedule. Full details at noak.pro.\n\nA custom monitoring and alerting stack supervises the validators 24/7, with independent performance verification and zero slashing events to date.\n\nWeekly performance reports are published automatically in English and Spanish on the Noak Telegram channel, so anyone can track how the Vault behaves over time, not only when things go well.\n\nWebsite: noak.pro. Telegram channel: @noak_gno.",
   },
   {
     id: "0x745847818a5790cb406c3040a386907559869be2",
@@ -124,9 +115,8 @@ export default [
     description: null,
   },
   {
-    id: "0xb221ea4b710043f3530d2bc912dbef6cab2b5c3d",
-    name: "Day One Law Team&Client Vault",
-    description:
-      "At Day One Law, we don’t just advise on crypto—we use the products, run the infrastructure, and stake on-chain alongside our clients. Our private Stakewise vault on Gnosis Chain is exclusively for our clients and team members, reinforcing our commitment to supporting the ecosystems that matter.\n\nIf you’re already working with us, you’re in. If not, and you’re looking for a legal partner who actually understands the tech, uses the protocols, and aligns with builders and investors in the space, let’s talk.\n\nWe support founders, investors, and operators pushing crypto forward—structuring their projects, securing regulatory clarity, and aligning incentives for long-term success. Our clients get real legal and strategic value, plus access to exclusive opportunities like this.\n\nWe’re not just advisors—we’re on-chain, active participants in the same products and protocols shaping the future of decentralized finance. If that’s the kind of partner you want, reach out.",
+    id: "0x4e8af3b04370f3756857409f6a576f00a7613453",
+    name: "tesorito",
+    description: null,
   },
 ] as const

@@ -768,7 +768,7 @@ export default [
     symbol: "blend-hyperUSDC-v1",
     asset: {
       address: "0x4B6F1C9E5d470b97181786b26da0d0945A7cf027",
-      symbol: "hyperUSDC",
+      symbol: "hyperUSDCa",
     },
   },
   {
@@ -824,7 +824,7 @@ export default [
   {
     id: "0x2D91466BCC6946B58869fE2ae521A856737C3f6e",
     version: "v1.1",
-    name: "Edge UltraYield USDC",
+    name: "UltraYield USDC",
     symbol: "edgeUSDC",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
@@ -1082,6 +1082,16 @@ export default [
     },
   },
   {
+    id: "0x4d87C18b7b3b64d79ee28745701620f658c21341",
+    version: "v1.1",
+    name: "Trinity Gold USDC Vault",
+    symbol: "tgUSDC",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0xa47C5203d22Ae173788a9d9Be0F2bEeCc97F4dF9",
     version: "v2",
     name: "Blend USDC Reserve",
@@ -1138,7 +1148,7 @@ export default [
     symbol: "blend-hyperUSDC",
     asset: {
       address: "0x4B6F1C9E5d470b97181786b26da0d0945A7cf027",
-      symbol: "hyperUSDC",
+      symbol: "hyperUSDCa",
     },
   },
   {
@@ -1454,7 +1464,7 @@ export default [
   {
     id: "0xbeeff77CE5C059445714E6A3490E273fE7F2492F",
     version: "v2",
-    name: "Steakhouse High Yield",
+    name: "Steakhouse High Yield USDT0",
     symbol: "bbqUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
@@ -1464,7 +1474,7 @@ export default [
   {
     id: "0xbeeff1D5dE8F79ff37a151681100B039661da518",
     version: "v2",
-    name: "Steakhouse High Yield",
+    name: "Steakhouse High Yield USDC",
     symbol: "bbqUSDC",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
@@ -2089,6 +2099,76 @@ export default [
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
       symbol: "USD₮0",
+    },
+  },
+  {
+    id: "0x1e7F0372dd54B224130db49ec26854aFAF1eBca2",
+    version: "v2",
+    name: "Sherpa Direct",
+    symbol: "SED",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x5460D9D0ba8A7a1c1Ecd0ebf1445e161025eE9D4",
+    version: "v2",
+    name: "TEST2",
+    symbol: "test2",
+    asset: {
+      address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      symbol: "USD₮0",
+    },
+  },
+  {
+    id: "0xE93234eB6491411F5a82f6f3fbec0196FC981620",
+    version: "v2",
+    name: "TestVault",
+    symbol: "DTV",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x4F38e7a76b9C32Ab68FBf500E4d52806B15AB93b",
+    version: "v2",
+    name: "Pods USDC Yield by KPK",
+    symbol: "podsUSDCy",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x3526F7998AA78d6513faB53f203CA132B2656890",
+    version: "v2",
+    name: "myz1237",
+    symbol: "YZ",
+    asset: {
+      address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x56CD44fdD14141F8297eFFaa2c0387445f242De8",
+    version: "v2",
+    name: "Bloom Active",
+    symbol: "BID",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xf26E3AD205a1Dd3617D969f00238a7511CedC761",
+    version: "v2",
+    name: "Bloom Arbitrum USDC",
+    symbol: "BLOOMARBITRUMUSDC",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
     },
   },
 ] as const
