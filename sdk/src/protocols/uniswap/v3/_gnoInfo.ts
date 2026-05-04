@@ -22,12 +22,24 @@ export default [
     symbol: "USDC",
   },
   {
+    address: "0x13550ae65f22A36f60A50d625B70b58666488263",
+    symbol: "wBOB",
+  },
+  {
+    address: "0x6350691fEEa80D13A483A086cb07b129265C9864",
+    symbol: "s-i2e",
+  },
+  {
     address: "0x4ECaBa5870353805a9F068101A40E0f32ed605C6",
     symbol: "USDT",
   },
   {
     address: "0x0a06c8354A6CC1a07549a38701eAc205942E3Ac6",
     symbol: "BRZ",
+  },
+  {
+    address: "0x0AA1e96D2a46Ec6beB2923dE1E61Addf5F5f1dce",
+    symbol: "REG",
   },
   {
     address: "0x0d8c4901Dd270Fe101B8014A5dbECC4e4432eB1E",
@@ -64,6 +76,10 @@ export default [
   {
     address: "0x31B32b96049F8FD24969611252c4e44a1b4A07eB",
     symbol: "s-SCOUT",
+  },
+  {
+    address: "0x3E76f9CAaf9B47089810B4579C598228735E7a11",
+    symbol: "PAXG",
   },
   {
     address: "0x420CA0f9B9b604cE0fd9C18EF134C705e5Fa3430",
@@ -126,6 +142,10 @@ export default [
     symbol: "s-ZUB",
   },
   {
+    address: "0xc5AAFFED01587600BE281Cac2fd3d6BCC2Edc56f",
+    symbol: "GLD",
+  },
+  {
     address: "0xcB444e90D8198415266c6a2724b7900fb12FC56E",
     symbol: "EURe",
   },
@@ -138,12 +158,24 @@ export default [
     symbol: "s-gCRC",
   },
   {
+    address: "0xd36a035c5b34d5D84773dd7Aafc93B98ff21863F",
+    symbol: "i2eCRC",
+  },
+  {
     address: "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
     symbol: "ZCHF",
   },
   {
     address: "0xE0eD85F76D9C552478929fab44693E03F0899F23",
     symbol: "s-KPK",
+  },
+  {
+    address: "0xEdBC7449a9b594CA4E053D9737EC5Dc4CbCcBfb2",
+    symbol: "aGnoEURe",
+  },
+  {
+    address: "0xeeF7B1f06B092625228C835Dd5D5B14641D1e54A",
+    symbol: "s-gCRC",
   },
   {
     address: "0xf084b8F984912f0c62179Ca7EE998BeC90757B53",
