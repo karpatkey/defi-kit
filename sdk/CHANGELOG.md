@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.11](https://github.com/karpatkey/defi-kit/compare/v2.26.10...v2.26.11) (2026-06-16)
+
+
+### Bug Fixes
+
+* Update db files ([#538](https://github.com/karpatkey/defi-kit/issues/538)) ([57d740c](https://github.com/karpatkey/defi-kit/commit/57d740cad25d5d0df0a5441a3430ab535bc45409))
+
 ## [2.26.10](https://github.com/karpatkey/defi-kit/compare/v2.26.9...v2.26.10) (2026-04-29)
 
 
