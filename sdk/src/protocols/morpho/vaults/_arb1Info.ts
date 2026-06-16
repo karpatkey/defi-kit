@@ -824,7 +824,7 @@ export default [
   {
     id: "0x2D91466BCC6946B58869fE2ae521A856737C3f6e",
     version: "v1.1",
-    name: "Edge UltraYield USDC",
+    name: "UltraYield USDC",
     symbol: "edgeUSDC",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
@@ -1076,6 +1076,26 @@ export default [
     version: "v1.1",
     name: "Trinity Gold USDC Vault",
     symbol: "tgUSDC",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x4d87C18b7b3b64d79ee28745701620f658c21341",
+    version: "v1.1",
+    name: "Trinity Gold USDC Vault",
+    symbol: "tgUSDC",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x3577f216908BE1DB18EbF094f6A5dc1eDd542002",
+    version: "v1.1",
+    name: "Parity High Yield USDC",
+    symbol: "pcHYUSDC",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
       symbol: "USDC",
@@ -1454,8 +1474,8 @@ export default [
   {
     id: "0xbeeff77CE5C059445714E6A3490E273fE7F2492F",
     version: "v2",
-    name: "Steakhouse High Yield",
-    symbol: "bbqUSDT0",
+    name: "Bitget x Steakhouse USDT",
+    symbol: "bitgetUSDT0",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
       symbol: "USD₮0",
@@ -1464,8 +1484,8 @@ export default [
   {
     id: "0xbeeff1D5dE8F79ff37a151681100B039661da518",
     version: "v2",
-    name: "Steakhouse High Yield",
-    symbol: "bbqUSDC",
+    name: "Bitget x Steakhouse USDC",
+    symbol: "bitgetUSDC",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
       symbol: "USDC",
@@ -1614,8 +1634,8 @@ export default [
   {
     id: "0x5837e4189819637853a357aF36650902347F5e73",
     version: "v2",
-    name: "kpk USDC Yield",
-    symbol: "kpk_USDC_YieldV2",
+    name: "KPK USDC Yield",
+    symbol: "KPK_USDC_Yield",
     asset: {
       address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
       symbol: "USDC",
@@ -2082,10 +2102,160 @@ export default [
     },
   },
   {
+    id: "0x26475c4623250dE2da9f9aE907a2AA178d98AEE2",
+    version: "v2",
+    name: "Philidor USDC Prime Arbitrum",
+    symbol: "philidor-usdc-prime-arbitrum",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xF476D6B4e3Fa80C97aA42247db4C779f17C41A4b",
+    version: "v2",
+    name: "Pagga Arbitrum USDC",
+    symbol: "pagga-arbitrum-usdc",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0x84eAa12b88519d567d9811Dd4434D2e7b6AB13Ad",
     version: "v2",
     name: "Test",
     symbol: "TST",
+    asset: {
+      address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      symbol: "USD₮0",
+    },
+  },
+  {
+    id: "0x1e7F0372dd54B224130db49ec26854aFAF1eBca2",
+    version: "v2",
+    name: "Sherpa Direct",
+    symbol: "SED",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x5460D9D0ba8A7a1c1Ecd0ebf1445e161025eE9D4",
+    version: "v2",
+    name: "TEST2",
+    symbol: "test2",
+    asset: {
+      address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      symbol: "USD₮0",
+    },
+  },
+  {
+    id: "0xE93234eB6491411F5a82f6f3fbec0196FC981620",
+    version: "v2",
+    name: "TestVault",
+    symbol: "DTV",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x4F38e7a76b9C32Ab68FBf500E4d52806B15AB93b",
+    version: "v2",
+    name: "Pods USDC Yield by KPK",
+    symbol: "podsUSDCy",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x3526F7998AA78d6513faB53f203CA132B2656890",
+    version: "v2",
+    name: "myz1237",
+    symbol: "YZ",
+    asset: {
+      address: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x56CD44fdD14141F8297eFFaa2c0387445f242De8",
+    version: "v2",
+    name: "Bloom Active",
+    symbol: "BID",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xf26E3AD205a1Dd3617D969f00238a7511CedC761",
+    version: "v2",
+    name: "Bloom Arbitrum USDC",
+    symbol: "BLOOMARBITRUMUSDC",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x7eB33cF4808f1D04Efc7ecFff2bdeaA23960d71e",
+    version: "v2",
+    name: "Resilience Asset Strategy",
+    symbol: "MacroRAS",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x2f3b870B3a02bd10A63D8f6B4490A31B35ba897E",
+    version: "v2",
+    name: "Arbitrum USDC",
+    symbol: "arbitrum-usdc",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xbeeff96dD606189562dDBBdE0cdB1c13f984680b",
+    version: "v2",
+    name: "Steakhouse High Yield USDC",
+    symbol: "bbqUSDC",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xbeefff50b7Bb6D1a6c6A9b97b60b5cAa24B6b5CC",
+    version: "v2",
+    name: "Steakhouse High Yield USDT",
+    symbol: "bbqUSDT",
+    asset: {
+      address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      symbol: "USD₮0",
+    },
+  },
+  {
+    id: "0xA07FC91439A8BE56119A8429Bf3836a4FAf94d02",
+    version: "v2",
+    name: "Prism Steakhouse USDC",
+    symbol: "PrismShUSDC",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x321EBcC5E7b634E51529D5C39e71E4b5c00d712A",
+    version: "v2",
+    name: "Prism Steakhouse USDT",
+    symbol: "PrismShUSDT",
     asset: {
       address: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
       symbol: "USD₮0",
