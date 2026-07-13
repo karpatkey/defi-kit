@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.12](https://github.com/karpatkey/defi-kit/compare/v2.26.11...v2.26.12) (2026-07-13)
+
+
+### Bug Fixes
+
+* scope `depositAndMintOsToken` on the vault proxy, not the implementation ([#545](https://github.com/karpatkey/defi-kit/issues/545)) ([bb67a06](https://github.com/karpatkey/defi-kit/commit/bb67a06bb65e382bee6179d00e85d98ecdc70979))
+
 ## [2.26.11](https://github.com/karpatkey/defi-kit/compare/v2.26.10...v2.26.11) (2026-06-16)
 
 
