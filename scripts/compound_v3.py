@@ -28,6 +28,10 @@ COMETS = [
     {
         'address': '0xe85Dc543813B8c2CFEaAc371517b925a166a9293',
         'symbol': 'cWBTCv3'
+    },
+    {
+        'address': '0xf5a628D53c47fBA2C062cd6F5B6D255cb05645Eb',
+        'symbol': 'cinUSDC'
     }
 ]
 
