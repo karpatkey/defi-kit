@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.13](https://github.com/karpatkey/defi-kit/compare/v2.26.12...v2.26.13) (2026-08-25)
+
+
+### Bug Fixes
+
+* Compound v3 - Add Institutional Market (cinUSDC) ([#559](https://github.com/karpatkey/defi-kit/issues/559)) ([f276cf4](https://github.com/karpatkey/defi-kit/commit/f276cf4fe2584a448e7edd7d77a9e9573b91db4b))
+
 ## [2.26.12](https://github.com/karpatkey/defi-kit/compare/v2.26.11...v2.26.12) (2026-07-13)
 
 
