@@ -330,8 +330,8 @@ export default [
     ],
   },
   {
-    address: "0xf5a628D53c47fBA2C062cd6F5B6D255cb05645Eb",
-    symbol: "cinUSDC",
+    address: "0x207158a267CBD2598BB3d611D8CBdEE2709F2F8C",
+    symbol: "ciUSDCv3",
     borrowToken: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
