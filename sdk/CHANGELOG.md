@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.26.14](https://github.com/karpatkey/defi-kit/compare/v2.26.13...v2.26.14) (2026-09-07)
+
+
+### Bug Fixes
+
+* Compound v3 - migrate Institutional Market to ciUSDCv3 ([#561](https://github.com/karpatkey/defi-kit/issues/561)) ([67d3a34](https://github.com/karpatkey/defi-kit/commit/67d3a34b7849a85547502d3bc53d64dd796d2255))
+
 ## [2.26.13](https://github.com/karpatkey/defi-kit/compare/v2.26.12...v2.26.13) (2026-08-25)
 
 
