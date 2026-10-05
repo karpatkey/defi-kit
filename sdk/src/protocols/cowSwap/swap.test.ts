@@ -26,7 +26,7 @@ describe("cowSwap", () => {
     }
     let testOrderFeeAmountBP = Math.ceil(
       (parseInt(testOrder.feeAmount) / parseInt(testOrder.sellAmount)) * 10000
-    ) // = 535 bps
+    ) // = 1981 bps
     const testOrderValidDuration = 60 * 30 // 30 min
 
     beforeAll(async () => {
@@ -35,6 +35,10 @@ describe("cowSwap", () => {
         await eth.swap({
           sell: [contracts.mainnet.usdc],
           buy: [contracts.mainnet.weth],
+          // `feeAmountBp` now defaults to 0, so this order's fee has to be
+          // allowed explicitly for token pair scoping to be what is under test
+          // here. The new default is covered in appData.test.ts.
+          feeAmountBp: testOrderFeeAmountBP,
         })
       )
 
@@ -42,7 +46,11 @@ describe("cowSwap", () => {
       const block = await provider.getBlock("latest")
 
       testOrder.receiver = wallets.avatar
-      testOrder.validTo = block!.timestamp + testOrderValidDuration
+      // `signOrder` requires validTo to be *strictly* below
+      // `block.timestamp + validDuration`. Using the full duration puts it
+      // exactly on the boundary, which then only passes if a second happens
+      // to elapse before the tx is mined. Keep a margin so this is deterministic.
+      testOrder.validTo = block!.timestamp + testOrderValidDuration - 60
     })
 
     it("it only allows swapping the specified token pair", async () => {

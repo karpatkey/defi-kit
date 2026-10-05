@@ -22,13 +22,14 @@ import { Callout } from "nextra/components"
 
 **Parameters**
 
-| Name          | Type                  | Description                                                           |
-| :------------ | :-------------------- | :-------------------------------------------------------------------- |
-| `sell`        | _string[] (required)_ | ETH \| `Token` address                                                |
-| `buy`         | _string[] (optional)_ | ETH \| `Token` address                                                |
-| `feeAmountBp` | _int (optional)_      | Fee amount basis points (0-10000), where 0 is 0% and 10000 is 100%    |
-| `twap`        | _bool (optional)_     | false = Market Order / true = TWAP Order                              |
-| `receiver`    | _address (optional)_  | Address that will receive output tokens when a TWAP Order is executed |
+| Name          | Type                            | Description                                                                                                     |
+| :------------ | :------------------------------ | :-------------------------------------------------------------------------------------------------------------- |
+| `sell`        | _string[] (required)_           | ETH \| `Token` address                                                                                          |
+| `buy`         | _string[] (optional)_           | ETH \| `Token` address                                                                                          |
+| `feeAmountBp` | _int (optional)_                | Fee amount basis points (0-10000), where 0 is 0% and 10000 is 100%. Defaults to `0` when omitted                |
+| `appData`     | _string \| string[] (optional)_ | bytes32 hash of the order's app data document. If given, only orders carrying one of these hashes can be signed |
+| `twap`        | _bool (optional)_               | false = Market Order / true = TWAP Order                                                                        |
+| `receiver`    | _address (optional)_            | Address that will receive output tokens when a TWAP Order is executed                                           |
 
 <Callout type="info">
   When using the Pilot Extension, all swaps will be routed through a delegate
@@ -63,8 +64,34 @@ import { Callout } from "nextra/components"
 </Callout>
 
 <Callout type="info">
-  `RECEIVER` below refers to the address given in the `receiver` parameter. 
-  This address will receive the output tokens from the TWAP Order.
+  `APP_DATA` below refers to the bytes32 hash(es) given in `appData`. The app
+  data document is part of the signed order digest and CoW reads
+  `metadata.partnerFee` out of it, so leaving it unscoped allows a role member
+  to route a fee of up to 100 bps of the traded volume to an address of their
+  choosing. Pinning the hash pins the document.
+
+Over the SDK this takes a single hash or an array. Over the REST API, pass
+either `?appData=0xaaa…,0xbbb…` or `?appData=0xaaa…&appData=0xbbb…`.
+
+</Callout>
+
+<Callout type="warning">
+  The pinned hash must equal the keccak of the *exact* app data document the
+  order submitter uploads. CoW's UI and SDK embed per-order metadata (quote id,
+  slippage, order class) into that document, so its hash differs on every order.
+  A role scoped with `appData` therefore only works if the submitter switches to
+  a fixed document — otherwise every order is forbidden.
+</Callout>
+
+<Callout type="warning">
+  `feeAmountBp` defaults to `0`, which caps `order.feeAmount` at 1 wei. Left
+  unscoped, a member could pass 10000 and sign away the entire sell amount as
+  "fee". Pass an explicit value only if orders genuinely need to carry one.
+</Callout>
+
+<Callout type="info">
+  `RECEIVER` below refers to the address given in the `receiver` parameter. This
+  address will receive the output tokens from the TWAP Order.
 </Callout>
 
 <Callout type="error">
@@ -131,9 +158,10 @@ order settlement logic.
   | :-------- | :----------------------------------- |
   | `handler` | equal to `ExtensibleFallbackHandler` |
 
-<Callout type="info"> 
-  Learn more about how the CoW Swap fallback handler works and why it’s needed in 
-  [this article by CoW Swap](https://cow.fi/learn/all-you-need-to-know-about-cow-swap-new-safe-fallback-handler). 
+<Callout type="info">
+  Learn more about how the CoW Swap fallback handler works and why it’s needed
+  in [this article by CoW
+  Swap](https://cow.fi/learn/all-you-need-to-know-about-cow-swap-new-safe-fallback-handler).
 </Callout>
 
 #### `RECEIVER · setDomainVerifier`
@@ -175,17 +203,18 @@ This is the core function used to submit TWAP Orders via the `ComposableCow` con
 **Breakdown of `params.staticInput` Parameter Scoping**  
 The `staticInput` structure is defined in the [ComposableCow repository](https://github.com/cowprotocol/composable-cow).
 
-| Field          | Scoped | Description                                                                                    |
-| -------------- | ------ | ---------------------------------------------------------------------------------------------- |
-| sellToken      | Yes    | Address of the token being sold. Scoped using the tokens listed in `sell`.                     |
-| buyToken       | Yes    | Address of the token being bought. Scoped using the tokens listed in `buy`.                    |
-| receiver       | Yes    | Receiver of the swap proceeds (address(0) = Safe itself). Scoped as `AVATAR` or `ZeroAddress`. |
-| partSellAmount | No     | Amount of sellToken per TWAP chunk.                                                            |
-| minPartLimit   | No     | Minimum expected buyToken per chunk.                                                           |
-| t0             | No     | Start time (unix timestamp).                                                                   |
-| n              | No     | Number of parts in the TWAP.                                                                   |
-| t              | No     | Interval duration between parts (in seconds).                                                  |
-| span           | No     | Optional active span within each interval (in seconds).                                        |
+| Field          | Scoped                     | Description                                                                                    |
+| -------------- | -------------------------- | ---------------------------------------------------------------------------------------------- |
+| sellToken      | Yes                        | Address of the token being sold. Scoped using the tokens listed in `sell`.                     |
+| buyToken       | Yes                        | Address of the token being bought. Scoped using the tokens listed in `buy`.                    |
+| receiver       | Yes                        | Receiver of the swap proceeds (address(0) = Safe itself). Scoped as `AVATAR` or `ZeroAddress`. |
+| partSellAmount | No                         | Amount of sellToken per TWAP chunk.                                                            |
+| minPartLimit   | No                         | Minimum expected buyToken per chunk.                                                           |
+| t0             | No                         | Start time (unix timestamp).                                                                   |
+| n              | No                         | Number of parts in the TWAP.                                                                   |
+| t              | No                         | Interval duration between parts (in seconds).                                                  |
+| span           | No                         | Optional active span within each interval (in seconds).                                        |
+| appData        | Only if `appData` is given | bytes32 hash of the order's app data document. Scoped to `APP_DATA`.                           |
 
 ### If `TWAP` is `false`:
 
@@ -196,22 +225,22 @@ Sign order to swap `SELL_TOKEN` for `BUY_TOKEN`.
 - **Contract:** `OrderSigner`
 - **Function:** `signOrder((address,address,address,uint256,uint256,uint32,bytes32,uint256,bytes32,bool,bytes32,bytes32),uint32,uint256)` → delegatecall
 
-  | Parameter                 | Constraint                        |
-  | :------------------------ | :-------------------------------- |
-  | `order.sellToken`         | equal to `SELL_TOKEN`             |
-  | `order.buyToken`          | equal to `BUY_TOKEN`              |
-  | `order.receiver`          | equal to `AVATAR`                 |
-  | `order.sellAmount`        | -                                 |
-  | `order.buyAmount`         | -                                 |
-  | `order.validTo`           | -                                 |
-  | `order.appData`           | -                                 |
-  | `order.feeAmount`         | -                                 |
-  | `order.kind`              | -                                 |
-  | `order.partiallyFillable` | -                                 |
-  | `order.sellTokenBalance`  | -                                 |
-  | `order.buyTokenBalance`   | -                                 |
-  | `validDuration`           | -                                 |
-  | `feeAmountBp`             | lower or equal to `FEE_AMOUNT_BP` |
+  | Parameter                 | Constraint                                           |
+  | :------------------------ | :--------------------------------------------------- |
+  | `order.sellToken`         | equal to `SELL_TOKEN`                                |
+  | `order.buyToken`          | equal to `BUY_TOKEN`                                 |
+  | `order.receiver`          | equal to `AVATAR`                                    |
+  | `order.sellAmount`        | -                                                    |
+  | `order.buyAmount`         | -                                                    |
+  | `order.validTo`           | -                                                    |
+  | `order.appData`           | equal to `APP_DATA`, if given                        |
+  | `order.feeAmount`         | -                                                    |
+  | `order.kind`              | -                                                    |
+  | `order.partiallyFillable` | -                                                    |
+  | `order.sellTokenBalance`  | -                                                    |
+  | `order.buyTokenBalance`   | -                                                    |
+  | `validDuration`           | -                                                    |
+  | `feeAmountBp`             | lower or equal to `FEE_AMOUNT_BP` (`0` if not given) |
 
 <Callout type="info">
   The `signOrder` function does not allow sending ETH. Therefore, ETH must be
@@ -225,17 +254,23 @@ Unsign and cancel order.
 - **Contract:** `OrderSigner`
 - **Function:** `unsignOrder((address,address,address,uint256,uint256,uint32,bytes32,uint256,bytes32,bool,bytes32,bytes32))` → delegatecall
 
-  | Parameter                 | Constraint            |
-  | :------------------------ | :-------------------- |
-  | `order.sellToken`         | equal to `SELL_TOKEN` |
-  | `order.buyToken`          | equal to `BUY_TOKEN`  |
-  | `order.receiver`          | equal to `AVATAR`     |
-  | `order.sellAmount`        | -                     |
-  | `order.buyAmount`         | -                     |
-  | `order.validTo`           | -                     |
-  | `order.appData`           | -                     |
-  | `order.feeAmount`         | -                     |
-  | `order.kind`              | -                     |
-  | `order.partiallyFillable` | -                     |
-  | `order.sellTokenBalance`  | -                     |
-  | `order.buyTokenBalance`   | -                     |
+  | Parameter                 | Constraint |
+  | :------------------------ | :--------- |
+  | `order.sellToken`         | -          |
+  | `order.buyToken`          | -          |
+  | `order.receiver`          | -          |
+  | `order.sellAmount`        | -          |
+  | `order.buyAmount`         | -          |
+  | `order.validTo`           | -          |
+  | `order.appData`           | -          |
+  | `order.feeAmount`         | -          |
+  | `order.kind`              | -          |
+  | `order.partiallyFillable` | -          |
+  | `order.sellTokenBalance`  | -          |
+  | `order.buyTokenBalance`   | -          |
+
+<Callout type="info">
+  `unsignOrder` is deliberately left unscoped: it only cancels a presignature
+  the avatar already made, so it cannot move funds. A role member can therefore
+  cancel any of the avatar's pending CoW orders.
+</Callout>

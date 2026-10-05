@@ -1,3 +1,4 @@
+import { Operator } from "zodiac-roles-sdk"
 import { eth } from "."
 import { wallets } from "../../../test/wallets"
 import { applyPermissions } from "../../../test/helpers"
@@ -17,6 +18,34 @@ describe("cowSwap", () => {
           receiver: wallets.avatar as `0x${string}`,
         })
       )
+    })
+
+    // `buy` is documented as optional on both paths, but on the TWAP path
+    // omitting it used to throw `updatedBuy is not iterable`. Builds only — no
+    // permissions are applied, so this does not disturb the suite's scoping.
+    it("builds permissions when `buy` is omitted, leaving buyToken unscoped", async () => {
+      const permissions = await eth.swap({
+        sell: [contracts.mainnet.weth],
+        twap: true,
+        receiver: wallets.avatar as `0x${string}`,
+      })
+
+      // createWithContext((address,bytes32,bytes),address,bytes,bool)
+      const createWithContext = permissions.find(
+        (p: any) => p.selector === "0x0d0d9800"
+      ) as any
+      expect(createWithContext).toBeDefined()
+
+      // params[0].staticInput, i.e. the abi-encoded TWAP struct
+      const staticInput = createWithContext.condition.children[0].children[2]
+      expect(staticInput.children).toHaveLength(10)
+
+      // Asserting Pass specifically: a plain length check would still pass if a
+      // future edit pinned buyToken to, say, the zero address.
+      expect(staticInput.children[1].operator).toBe(Operator.Pass)
+      expect(staticInput.children[1].compValue).toBeUndefined()
+      // ...while sellToken is still constrained.
+      expect(staticInput.children[0].operator).not.toBe(Operator.Pass)
     })
 
     it("TWAP Order", async () => {
