@@ -243,17 +243,23 @@ Unsign and cancel order.
 - **Contract:** `OrderSigner`
 - **Function:** `unsignOrder((address,address,address,uint256,uint256,uint32,bytes32,uint256,bytes32,bool,bytes32,bytes32))` → delegatecall
 
-  | Parameter                 | Constraint            |
-  | :------------------------ | :-------------------- |
-  | `order.sellToken`         | equal to `SELL_TOKEN` |
-  | `order.buyToken`          | equal to `BUY_TOKEN`  |
-  | `order.receiver`          | equal to `AVATAR`     |
-  | `order.sellAmount`        | -                     |
-  | `order.buyAmount`         | -                     |
-  | `order.validTo`           | -                     |
-  | `order.appData`           | -                     |
-  | `order.feeAmount`         | -                     |
-  | `order.kind`              | -                     |
-  | `order.partiallyFillable` | -                     |
-  | `order.sellTokenBalance`  | -                     |
-  | `order.buyTokenBalance`   | -                     |
+  | Parameter                 | Constraint |
+  | :------------------------ | :--------- |
+  | `order.sellToken`         | -          |
+  | `order.buyToken`          | -          |
+  | `order.receiver`          | -          |
+  | `order.sellAmount`        | -          |
+  | `order.buyAmount`         | -          |
+  | `order.validTo`           | -          |
+  | `order.appData`           | -          |
+  | `order.feeAmount`         | -          |
+  | `order.kind`              | -          |
+  | `order.partiallyFillable` | -          |
+  | `order.sellTokenBalance`  | -          |
+  | `order.buyTokenBalance`   | -          |
+
+<Callout type="info">
+  `unsignOrder` is deliberately left unscoped: it only cancels a presignature
+  the avatar already made, so it cannot move funds. A role member can therefore
+  cancel any of the avatar's pending CoW orders.
+</Callout>
