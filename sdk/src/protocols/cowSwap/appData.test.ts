@@ -8,8 +8,22 @@ import { eth as kit } from "../../../test/kit"
 import { Chain } from "../../../src"
 
 describe("cowSwap", () => {
-  describe("swap", () => {
-    const appData = '{"version":"0.9.0","metadata":{}}'
+  describe("swap appData & fee scoping", () => {
+    const allowedAppDataDoc = '{"version":"0.9.0","metadata":{}}'
+    const allowedAppData = solidityPackedKeccak256(
+      ["string"],
+      [allowedAppDataDoc]
+    ) as `0x${string}`
+
+    // Same order shape, but its app data document carries a partner fee that
+    // routes 100 bps of volume to an address the member controls.
+    const partnerFeeAppData = solidityPackedKeccak256(
+      ["string"],
+      [
+        '{"version":"0.9.0","metadata":{"partnerFee":{"bps":100,"recipient":"0x1111111111111111111111111111111111111111"}}}',
+      ]
+    ) as `0x${string}`
+
     const testOrder = {
       sellToken: contracts.mainnet.usdc,
       buyToken: contracts.mainnet.weth,
@@ -17,16 +31,13 @@ describe("cowSwap", () => {
       sellAmount: "96825924243465932",
       buyAmount: "474505929366652675891",
       validTo: 0, // set in beforeAll
-      appData: solidityPackedKeccak256(["string"], [appData]),
-      feeAmount: "19174075756534068",
+      appData: allowedAppData,
+      feeAmount: "0",
       kind: id("sell"),
       partiallyFillable: false,
       sellTokenBalance: id("erc20"),
       buyTokenBalance: id("erc20"),
     }
-    let testOrderFeeAmountBP = Math.ceil(
-      (parseInt(testOrder.feeAmount) / parseInt(testOrder.sellAmount)) * 10000
-    ) // = 535 bps
     const testOrderValidDuration = 60 * 30 // 30 min
 
     beforeAll(async () => {
@@ -35,10 +46,8 @@ describe("cowSwap", () => {
         await eth.swap({
           sell: [contracts.mainnet.usdc],
           buy: [contracts.mainnet.weth],
-          // `feeAmountBp` now defaults to 0, so this order's fee has to be
-          // allowed explicitly for token pair scoping to be what is under test
-          // here. The new default is covered in appData.test.ts.
-          feeAmountBp: testOrderFeeAmountBP,
+          appData: allowedAppData,
+          // `feeAmountBp` deliberately omitted: it must default to 0.
         })
       )
 
@@ -53,32 +62,58 @@ describe("cowSwap", () => {
       testOrder.validTo = block!.timestamp + testOrderValidDuration - 60
     })
 
-    it("it only allows swapping the specified token pair", async () => {
+    it("allows signing an order carrying the pinned appData", async () => {
       await expect(
         kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
           testOrder,
           testOrderValidDuration,
-          testOrderFeeAmountBP
+          0
         )
       ).not.toRevert()
+    })
 
+    it("forbids an order whose appData routes a partner fee elsewhere", async () => {
       await expect(
         kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
-          {
-            ...testOrder,
-            sellToken: contracts.mainnet.weth,
-            buyToken: contracts.mainnet.usdc,
-          },
+          { ...testOrder, appData: partnerFeeAppData },
           testOrderValidDuration,
-          testOrderFeeAmountBP
+          0
         )
       ).toBeForbidden()
     })
 
-    it("allows cancelling orders", async () => {
+    it("forbids any other appData, including the empty document", async () => {
       await expect(
-        kit.asMember.cowSwap.orderSigner.unsignOrder.delegateCall(testOrder)
-      ).not.toRevert()
+        kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
+          {
+            ...testOrder,
+            appData:
+              "0x0000000000000000000000000000000000000000000000000000000000000000",
+          },
+          testOrderValidDuration,
+          0
+        )
+      ).toBeForbidden()
+    })
+
+    it("defaults feeAmountBP to 0, forbidding a member-chosen fee cap", async () => {
+      await expect(
+        kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
+          testOrder,
+          testOrderValidDuration,
+          535
+        )
+      ).toBeForbidden()
+
+      // The extreme case this closes: 10000 bps lets feeAmount equal the whole
+      // sellAmount.
+      await expect(
+        kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
+          testOrder,
+          testOrderValidDuration,
+          10000
+        )
+      ).toBeForbidden()
     })
   })
 })

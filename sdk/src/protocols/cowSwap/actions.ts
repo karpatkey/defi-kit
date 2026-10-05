@@ -19,12 +19,13 @@ export const swap = async (
     sell: (`0x${string}` | "ETH" | "XDAI")[]
     buy?: (`0x${string}` | "ETH" | "XDAI")[]
     feeAmountBp?: number
+    appData?: `0x${string}` | `0x${string}`[]
     twap?: boolean
     receiver?: `0x${string}`
   },
   chain: Chain
 ) => {
-  const { sell, buy, feeAmountBp, twap = false, receiver } = options
+  const { sell, buy, feeAmountBp, appData, twap = false, receiver } = options
   const permissions: Permission[] = []
 
   if (sell.length === 0) {
@@ -52,6 +53,33 @@ export const swap = async (
     }
   }
 
+  // `appData` is the keccak256 hash of the order's app data document. It is part
+  // of the signed order digest, and CoW reads `metadata.partnerFee` out of that
+  // document, so leaving it unscoped lets a role member route a fee of up to
+  // 100 bps of the traded volume to an address of their choosing. Pinning the
+  // hash pins the document.
+  const appDataValues =
+    appData === undefined
+      ? undefined
+      : Array.isArray(appData)
+      ? appData
+      : [appData]
+
+  if (appDataValues) {
+    if (appDataValues.length === 0) {
+      throw new Error(
+        "`appData` must not be an empty array. Pass `undefined` if you want to allow any app data."
+      )
+    }
+    for (const value of appDataValues) {
+      if (!/^0x[0-9a-fA-F]{64}$/.test(value)) {
+        throw new Error(
+          `\`appData\` must be a 32 byte hex string, got: ${value}`
+        )
+      }
+    }
+  }
+
   const wrappedNativeToken = getWrappedNativeToken(chain)
 
   if (sell.includes("ETH") || sell.includes("XDAI")) {
@@ -72,6 +100,7 @@ export const swap = async (
     sellToken: oneOf(updatedSell),
     buyToken: updatedBuy && oneOf(updatedBuy),
     receiver: c.avatar,
+    appData: appDataValues && oneOf(appDataValues),
   }
 
   permissions.push(
@@ -97,13 +126,35 @@ export const swap = async (
         {
           handler: TWAP,
           // staticInput structure: https://github.com/cowprotocol/composable-cow
+          // Only the leading fields named here are inspected by the Roles
+          // modifier; any trailing word of the struct is left unconstrained. So
+          // `appData` has to be spelled out all the way at index 9 to be
+          // scopeable, with the untouched fields in between left `undefined`.
           staticInput: c.abiEncodedMatches(
             [
               c.or(...(updatedSell as [string, string, ...string[]])),
               c.or(...(updatedBuy as [string, string, ...string[]])),
               c.or(c.avatar, ZeroAddress),
+              undefined, // partSellAmount
+              undefined, // minPartLimit
+              undefined, // t0
+              undefined, // n
+              undefined, // t
+              undefined, // span
+              appDataValues && oneOf(appDataValues),
             ],
-            ["address", "address", "address"]
+            [
+              "address",
+              "address",
+              "address",
+              "uint256",
+              "uint256",
+              "uint256",
+              "uint256",
+              "uint256",
+              "uint256",
+              "bytes32",
+            ]
           ),
         },
         currentBlockTimestampFactory,
@@ -112,10 +163,14 @@ export const swap = async (
     )
   } else {
     permissions.push(
+      // `feeAmountBP` caps the order's `feeAmount` at
+      // `sellAmount * feeAmountBP / 10000 + 1`. Left unscoped a member could
+      // pass 10000 and sign away the entire sell amount as "fee", so it
+      // defaults to 0 (i.e. at most 1 wei) unless a cap is asked for.
       allow.mainnet.cowSwap.orderSigner.signOrder(
         orderStructScoping,
         undefined,
-        feeAmountBp !== undefined ? c.lte(feeAmountBp) : undefined,
+        c.lte(feeAmountBp ?? 0),
         { delegatecall: true }
       ),
 
