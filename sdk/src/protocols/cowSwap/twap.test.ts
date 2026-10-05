@@ -19,6 +19,19 @@ describe("cowSwap", () => {
       )
     })
 
+    // `buy` is documented as optional on both paths, but on the TWAP path
+    // omitting it used to throw `updatedBuy is not iterable`. Builds only — no
+    // permissions are applied, so this does not disturb the suite's scoping.
+    it("builds permissions when `buy` is omitted", async () => {
+      await expect(
+        eth.swap({
+          sell: [contracts.mainnet.weth],
+          twap: true,
+          receiver: wallets.avatar as `0x${string}`,
+        })
+      ).resolves.toHaveLength(4)
+    })
+
     it("TWAP Order", async () => {
       await expect(
         kit.asMember.cowSwap.composableCow.createWithContext(

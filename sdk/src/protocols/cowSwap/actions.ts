@@ -133,7 +133,11 @@ export const swap = async (
           staticInput: c.abiEncodedMatches(
             [
               c.or(...(updatedSell as [string, string, ...string[]])),
-              c.or(...(updatedBuy as [string, string, ...string[]])),
+              // `buy` is documented as optional ("no restriction on the buy
+              // side"), but spreading it when undefined threw a TypeError.
+              // Leaving the scoping undefined is what actually yields that.
+              updatedBuy &&
+                c.or(...(updatedBuy as [string, string, ...string[]])),
               c.or(c.avatar, ZeroAddress),
               undefined, // partSellAmount
               undefined, // minPartLimit
