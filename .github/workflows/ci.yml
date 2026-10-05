@@ -51,7 +51,6 @@ jobs:
             general,
             aave/v3,
             ankr,
-            aura,
             balancer,
             circle,
             compound/v3,
