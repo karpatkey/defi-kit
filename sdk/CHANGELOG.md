@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.27.0](https://github.com/karpatkey/defi-kit/compare/v2.26.14...v2.27.0) (2026-10-05)
+
+
+### Features
+
+* CoW Swap - scope `appData` and default the fee cap to 0 ([#563](https://github.com/karpatkey/defi-kit/issues/563)) ([882873c](https://github.com/karpatkey/defi-kit/commit/882873cbc47bc1bb805f92a7be61886e3963becf))
+
 ## [2.26.14](https://github.com/karpatkey/defi-kit/compare/v2.26.13...v2.26.14) (2026-09-07)
 
 
