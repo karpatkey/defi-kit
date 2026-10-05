@@ -77,6 +77,14 @@ either `?appData=0xaaa…,0xbbb…` or `?appData=0xaaa…&appData=0xbbb…`.
 </Callout>
 
 <Callout type="warning">
+  The pinned hash must equal the keccak of the *exact* app data document the
+  order submitter uploads. CoW's UI and SDK embed per-order metadata (quote id,
+  slippage, order class) into that document, so its hash differs on every order.
+  A role scoped with `appData` therefore only works if the submitter switches to
+  a fixed document — otherwise every order is forbidden.
+</Callout>
+
+<Callout type="warning">
   `feeAmountBp` defaults to `0`, which caps `order.feeAmount` at 1 wei. Left
   unscoped, a member could pass 10000 and sign away the entire sell amount as
   "fee". Pass an explicit value only if orders genuinely need to carry one.
