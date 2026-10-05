@@ -15,6 +15,13 @@ describe("cowSwap", () => {
       [allowedAppDataDoc]
     ) as `0x${string}`
 
+    // A second legitimate document, so the permission pins an array and the
+    // `oneOf` -> `Or` branch is exercised rather than the single-value `eq`.
+    const secondAppData = solidityPackedKeccak256(
+      ["string"],
+      ['{"version":"1.1.0","metadata":{}}']
+    ) as `0x${string}`
+
     // Same order shape, but its app data document carries a partner fee that
     // routes 100 bps of volume to an address the member controls.
     const partnerFeeAppData = solidityPackedKeccak256(
@@ -46,7 +53,7 @@ describe("cowSwap", () => {
         await eth.swap({
           sell: [contracts.mainnet.usdc],
           buy: [contracts.mainnet.weth],
-          appData: allowedAppData,
+          appData: [allowedAppData, secondAppData],
           // `feeAmountBp` deliberately omitted: it must default to 0.
         })
       )
@@ -72,6 +79,16 @@ describe("cowSwap", () => {
       ).not.toRevert()
     })
 
+    it("allows either pinned appData, not just the first", async () => {
+      await expect(
+        kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
+          { ...testOrder, appData: secondAppData },
+          testOrderValidDuration,
+          0
+        )
+      ).not.toRevert()
+    })
+
     it("forbids an order whose appData routes a partner fee elsewhere", async () => {
       await expect(
         kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
@@ -82,7 +99,9 @@ describe("cowSwap", () => {
       ).toBeForbidden()
     })
 
-    it("forbids any other appData, including the empty document", async () => {
+    // 0x00..00 is the legacy "no appData" sentinel, not the keccak of any
+    // document, so it is worth asserting separately from an arbitrary hash.
+    it("forbids any other appData, including the zero sentinel", async () => {
       await expect(
         kit.asMember.cowSwap.orderSigner.signOrder.delegateCall(
           {

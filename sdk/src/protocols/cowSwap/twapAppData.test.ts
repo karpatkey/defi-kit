@@ -53,7 +53,7 @@ describe("cowSwap", () => {
           "0x",
           true
         )
-      ).toBeAllowed()
+      ).not.toRevert()
     })
 
     it("forbids a TWAP order with any other appData", async () => {

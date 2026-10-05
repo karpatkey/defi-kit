@@ -12,7 +12,7 @@ const createSwapSchema = (tokenType: "ETH" | "XDAI") => {
     // into an array. A union of value-or-array would defeat both, so
     // `?appData=0xa,0xb` would 400 and the generated annotation URI (which
     // serialises arrays comma-joined) would be unresolvable.
-    appData: zx.bytes32().array().optional(),
+    appData: zx.bytes32().array().nonempty().optional(),
     twap: z.boolean().optional(),
     receiver: zx.address().optional(),
   })

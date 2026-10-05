@@ -26,7 +26,7 @@ describe("cowSwap", () => {
     }
     let testOrderFeeAmountBP = Math.ceil(
       (parseInt(testOrder.feeAmount) / parseInt(testOrder.sellAmount)) * 10000
-    ) // = 535 bps
+    ) // = 1981 bps
     const testOrderValidDuration = 60 * 30 // 30 min
 
     beforeAll(async () => {

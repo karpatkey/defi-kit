@@ -70,6 +70,10 @@ import { Callout } from "nextra/components"
   `metadata.partnerFee` out of it, so leaving it unscoped allows a role member
   to route a fee of up to 100 bps of the traded volume to an address of their
   choosing. Pinning the hash pins the document.
+
+Over the SDK this takes a single hash or an array. Over the REST API, pass
+either `?appData=0xaaa…,0xbbb…` or `?appData=0xaaa…&appData=0xbbb…`.
+
 </Callout>
 
 <Callout type="warning">
