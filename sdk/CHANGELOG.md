@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.27.1](https://github.com/karpatkey/defi-kit/compare/v2.27.0...v2.27.1) (2026-10-08)
+
+
+### Bug Fixes
+
+* Morpho Vaults - update vault data files ([#566](https://github.com/karpatkey/defi-kit/issues/566)) ([af2de02](https://github.com/karpatkey/defi-kit/commit/af2de02ab7670d5cc13c2479dc96af17c7668eb6))
+
 ## [2.27.0](https://github.com/karpatkey/defi-kit/compare/v2.26.14...v2.27.0) (2026-10-05)
 
 
