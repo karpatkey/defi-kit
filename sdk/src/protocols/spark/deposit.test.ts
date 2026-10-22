@@ -4,8 +4,9 @@ import { applyPermissions, stealErc20 } from "../../../test/helpers"
 import { contracts } from "../../../eth-sdk/config"
 import { Status } from "../../../test/types"
 import { eth as kit } from "../../../test/kit"
-import { formatUnits, parseEther, parseUnits } from "ethers"
+import { Contract, formatUnits, parseEther, parseUnits } from "ethers"
 import { Chain } from "../../../src"
+import { getProvider } from "../../../test/provider"
 
 const maxAmount =
   115792089237316195423570985008687907853269984665640564039457584007913129639935n
@@ -41,17 +42,28 @@ describe("spark", () => {
     })
 
     it("only allows withdrawing ETH from avatars' position", async () => {
+      // Depositing exactly 1 ETH leaves an spWETH balance that can be a wei
+      // short of 1e18: Aave scales by the liquidity index on the way in and
+      // back out, rounding down. Withdrawing a hardcoded `parseEther("1")`
+      // then asks for more than the position holds. Derive it instead, so this
+      // tests "exit the whole position" rather than a rounding boundary.
+      const position = await new Contract(
+        contracts.mainnet.spark.spWeth,
+        ["function balanceOf(address) view returns (uint256)"],
+        getProvider(Chain.eth)
+      ).balanceOf(wallets.avatar)
+
       await expect(
         kit.asMember.spark.spWeth.approve(
           contracts.mainnet.spark.wrappedTokenGatewayV3,
-          parseEther("1")
+          position
         )
       ).not.toRevert()
 
       await expect(
         kit.asMember.spark.wrappedTokenGatewayV3.withdrawETH(
           contracts.mainnet.spark.poolV3,
-          parseEther("1"),
+          position,
           wallets.avatar
         )
       ).not.toRevert()
