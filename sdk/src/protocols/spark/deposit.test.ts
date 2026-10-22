@@ -45,13 +45,18 @@ describe("spark", () => {
       // Depositing exactly 1 ETH leaves an spWETH balance that can be a wei
       // short of 1e18: Aave scales by the liquidity index on the way in and
       // back out, rounding down. Withdrawing a hardcoded `parseEther("1")`
-      // then asks for more than the position holds. Derive it instead, so this
-      // tests "exit the whole position" rather than a rounding boundary.
-      const position = await new Contract(
-        contracts.mainnet.spark.spWeth,
-        ["function balanceOf(address) view returns (uint256)"],
-        getProvider(Chain.eth)
-      ).balanceOf(wallets.avatar)
+      // then asks for more than the position holds, so derive it instead.
+      //
+      // Withdraw only half: the next test needs a non-zero spWETH balance for
+      // `setUserUseReserveAsCollateral`, which reverts on an empty position.
+      // That previously went unnoticed because this withdrawal was silently
+      // failing and leaving the position intact.
+      const position =
+        (await new Contract(
+          contracts.mainnet.spark.spWeth,
+          ["function balanceOf(address) view returns (uint256)"],
+          getProvider(Chain.eth)
+        ).balanceOf(wallets.avatar)) / 2n
 
       await expect(
         kit.asMember.spark.spWeth.approve(
