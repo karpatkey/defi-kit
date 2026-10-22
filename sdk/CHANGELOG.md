@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.27.2](https://github.com/karpatkey/defi-kit/compare/v2.27.1...v2.27.2) (2026-10-22)
+
+
+### Bug Fixes
+
+* Spark - approve sUSDS, not sUSDC, to the sUSDS PSM router ([#569](https://github.com/karpatkey/defi-kit/issues/569)) ([324f382](https://github.com/karpatkey/defi-kit/commit/324f3828b6fda56597ac5716c3a8e41e72c9687c))
+
 ## [2.27.1](https://github.com/karpatkey/defi-kit/compare/v2.27.0...v2.27.1) (2026-10-08)
 
 
