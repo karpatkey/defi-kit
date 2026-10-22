@@ -157,8 +157,13 @@ export const depositsUSDS = (): Permission[] => {
       [contracts.mainnet.spark.psmUsdcSusds]
     ),
     allow.mainnet.spark.psmUsdcSusds.swapAndDeposit(c.avatar),
+    // `withdrawAndSwap`/`redeemAndSwap` pull the router's immutable
+    // `savingsToken()`, which is sUSDS — not sUSDC ("Spark USDC Vault", an
+    // unrelated vault). Approving sUSDC left the exit unusable: the approval the
+    // router actually needs was forbidden, and the swap reverted with
+    // `SUsds/insufficient-allowance`. Mirrors the sDAI pair above.
     ...allowErc20Approve(
-      [contracts.mainnet.spark.sUsdc],
+      [contracts.mainnet.spark.sUsds],
       [contracts.mainnet.spark.psmUsdcSusds]
     ),
     allow.mainnet.spark.psmUsdcSusds.withdrawAndSwap(c.avatar),
