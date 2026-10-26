@@ -41,7 +41,7 @@ jobs:
       
   deploy_prod:                                   # <-- new job just for release deploy
     if: github.event_name == 'release' && github.event.action == 'published'
-    runs-on: self-hosted
+    runs-on: blacksmith-2vcpu-ubuntu-2404
     permissions:
       deployments: write                         # <-- allow creating the environment deployment
       contents: read
