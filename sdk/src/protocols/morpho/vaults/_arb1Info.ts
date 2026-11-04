@@ -2511,4 +2511,184 @@ export default [
       symbol: "TAC",
     },
   },
+  {
+    id: "0x47eBDE241D95eDDA2eb7620463b5258cc28Aa3E4",
+    version: "v2",
+    name: "e2e renamed mv834hn3",
+    symbol: "rmv834hn3",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0x5F9D1fb1766ABf2fC7ce734c3487FF93CB864a9c",
+    version: "v2",
+    name: "e2e vault e2emv4zf7pk",
+    symbol: "e2emv4zf7pk",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0x887380F3016eAb8F142307fe6229796647f1F832",
+    version: "v2",
+    name: "e2e renamed mv6ggoqz",
+    symbol: "rmv6ggoqz",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0x362a866b9c3c67436D02b14aB02235C3e048ec8c",
+    version: "v2",
+    name: "e2e vault e2emv6deov1",
+    symbol: "e2emv6deov1",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0xe810129816D755868CbC49b69A1F165987531438",
+    version: "v2",
+    name: "CapStack USD Alpha Vault",
+    symbol: "csUSDa",
+    asset: {
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x5d2e881cb20e898E5b45185d1883426727B9fBCA",
+    version: "v2",
+    name: "CapStack BTC Vault",
+    symbol: "csBTC",
+    asset: {
+      address: "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+      symbol: "WBTC",
+    },
+  },
+  {
+    id: "0x351E8a5E8A68B709C4aF22871E7D828413bdbAd6",
+    version: "v2",
+    name: "e2e vault e2emv6mwara",
+    symbol: "e2emv6mwara",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0x335Ad7D5aA2FB8Cf2a46AFCdA1E4E8AB4AfAA52C",
+    version: "v2",
+    name: "UniPool TAC",
+    symbol: "uTAC",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0x03a13A286175b29a6D12F884F5fD27F2AD2A9260",
+    version: "v2",
+    name: "e2e renamed mv9n1sn8",
+    symbol: "rmv9n1sn8",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0xC444d7BEf44c5391Fd7a35b94E21Bb13Ec0Dbd24",
+    version: "v2",
+    name: "e2e vault e2emv9jeitw",
+    symbol: "e2emv9jeitw",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0x8C911944757902cf8Abdcb0D39315BF10870cD53",
+    version: "v2",
+    name: "e2e renamed mvat2s9w",
+    symbol: "rmvat2s9w",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0x5C060DE9837E601C159D8f2FE6b731CAFb8b2F1d",
+    version: "v2",
+    name: "UniPool TAC",
+    symbol: "uTAC",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0xFe6132c5450BDD59A288bE6f1aD58fbf70C15C7e",
+    version: "v2",
+    name: "e2e vault e2egov270a",
+    symbol: "e2egov270a",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0x6B28999AF02fd07c697026162fa8dc6B8226Bb46",
+    version: "v2",
+    name: "e2e vault e2emvhsugay",
+    symbol: "e2emvhsugay",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0xe7946F5f44FDfE7409Ea349Bfb6e42beb94c683f",
+    version: "v2",
+    name: "UniPool TAC",
+    symbol: "uTAC",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0xceD77B60B96c2181c08Ac380f512FD7643141D42",
+    version: "v2",
+    name: "e2e vault e2egov9cfa",
+    symbol: "e2egov9cfa",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0x2663393C8B7f6E2c023d1910444CdA163CA571Fe",
+    version: "v2",
+    name: "e2e vault e2emvp59mrh",
+    symbol: "e2emvp59mrh",
+    asset: {
+      address: "0x7657543CdBA5B886c5CC65409Fba2D6AbE61EfA7",
+      symbol: "TAC",
+    },
+  },
+  {
+    id: "0x2F721BaC99D5c900b5E9F4BF020dfaFf22270151",
+    version: "v2",
+    name: "Clearstar Core USDG",
+    symbol: "CSUSDGCORE",
+    asset: {
+      address: "0x004B506865409877C9fA29bfb1ebA929984B9bbC",
+      symbol: "USDG",
+    },
+  },
 ] as const
