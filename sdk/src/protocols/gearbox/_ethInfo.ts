@@ -107,6 +107,21 @@ export default [
     },
   },
   {
+    id: "0xBd8Ec7444dB271635584Cc38F5d06C72eAB762f5",
+    version: 310,
+    name: "frxUSD Market",
+    symbol: "KPKfrxUSD",
+    curator: "kpk",
+    asset: {
+      address: "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+      symbol: "frxUSD",
+    },
+    underlyingToken: {
+      address: "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+      symbol: "frxUSD",
+    },
+  },
+  {
     id: "0x119f75D5AC5739Ae49ffC46117a20654793A9b18",
     version: 310,
     name: "EDGE UltraYield USDC",
