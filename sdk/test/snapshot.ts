@@ -1,5 +1,6 @@
 import { Chain } from "../src"
 import { getProvider } from "./provider"
+import { activeChains } from "./chains"
 
 export const snapshot = async (chain: Chain): Promise<string> =>
   await getProvider(chain).send("evm_snapshot", [])
@@ -23,5 +24,9 @@ const revertToBase = async (chain: Chain) => {
 }
 
 export const revertAllToBase = async () => {
-  await Promise.all(Object.values(Chain).map(revertToBase))
+  // Only the chains this run started forks for: setup-after-env registers this
+  // as a global afterAll, so it runs after every test file -- including the
+  // ones the shard filtered to empty. Reverting a chain with no fork behind it
+  // makes ethers retry "failed to detect network" forever and hangs the job.
+  await Promise.all(activeChains().map(revertToBase))
 }
