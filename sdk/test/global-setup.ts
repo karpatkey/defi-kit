@@ -3,11 +3,11 @@ import { wallets, createWallets } from "./wallets"
 import { baseSnapshot } from "./snapshot"
 import { getProvider } from "./provider"
 import { deployRolesMod, setupRole } from "./rolesMod"
-import { ANVIL_PORTS } from "./chains"
+import { ANVIL_PORTS, activeChains } from "./chains"
 import { Chain } from "../src/types"
 
 export default async () => {
-  await Promise.all(Object.values(Chain).map((chain) => prepareChain(chain)))
+  await Promise.all(activeChains().map((chain) => prepareChain(chain)))
 }
 
 async function prepareChain(chain: Chain) {

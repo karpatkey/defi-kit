@@ -45,34 +45,15 @@ jobs:
       cancel-in-progress: true
     strategy:
       fail-fast: false
-      # Each shard starts FIVE anvil forks (eth, arb1, gno, oeth, base) via
-      # `yarn anvil`, because global-setup.ts prepares every chain in
-      # `Object.values(Chain)` regardless of which one the shard tests. With 16
-      # shards unthrottled that is up to 80 concurrent archive-syncing forks
-      # against the same RPC, which gets us rate-limited (429/502/503 served as
-      # HTML, surfacing as `SyntaxError: Unexpected token '<'` in the tests).
-      # Throttling spreads the load instead of rationing the plan.
-      max-parallel: 4
+      # TEMPORARY PROBE - do not merge as is.
+      # Measures whether the RPC failures are load-driven at all. These five
+      # shards are eth-only and all fail today. With TEST_CHAINS=eth each starts
+      # ONE fork instead of five, so the whole run opens 5 upstream connections
+      # against the ~20 that `max-parallel: 4` produced (and 80 unthrottled).
+      # All green  -> load matters, scope the forks per shard for real.
+      # Still red  -> the RPC is simply unreliable; drop this and wait.
       matrix:
-        label:
-          [
-            general,
-            aave/v3,
-            ankr,
-            balancer,
-            circle,
-            compound/v3,
-            convex,
-            cowSwap,
-            fluid,
-            lido,
-            rocketPool,
-            sky,
-            spark,
-            stader,
-            stakeWise/v3,
-            uniswap,
-          ]
+        label: [lido, rocketPool, stader, ankr, sky]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v4
@@ -101,6 +82,8 @@ jobs:
           version: v1.8.6
 
       - name: Run tests
+        env:
+          TEST_CHAINS: eth
         run: |
           cd sdk
           yarn test ${{ matrix.label }}
