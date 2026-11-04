@@ -45,6 +45,14 @@ jobs:
       cancel-in-progress: true
     strategy:
       fail-fast: false
+      # Each shard starts FIVE anvil forks (eth, arb1, gno, oeth, base) via
+      # `yarn anvil`, because global-setup.ts prepares every chain in
+      # `Object.values(Chain)` regardless of which one the shard tests. With 16
+      # shards unthrottled that is up to 80 concurrent archive-syncing forks
+      # against the same RPC, which gets us rate-limited (429/502/503 served as
+      # HTML, surfacing as `SyntaxError: Unexpected token '<'` in the tests).
+      # Throttling spreads the load instead of rationing the plan.
+      max-parallel: 4
       matrix:
         label:
           [
