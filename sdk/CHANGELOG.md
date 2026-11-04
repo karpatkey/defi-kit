@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.27.3](https://github.com/karpatkey/defi-kit/compare/v2.27.2...v2.27.3) (2026-11-04)
+
+
+### Bug Fixes
+
+* update protocol db files (aave v3, gearbox, morpho, spark, stakewise v3) ([#573](https://github.com/karpatkey/defi-kit/issues/573)) ([a776479](https://github.com/karpatkey/defi-kit/commit/a776479e14fea40bc4f3ef223ac717d715ef8df2))
+
 ## [2.27.2](https://github.com/karpatkey/defi-kit/compare/v2.27.1...v2.27.2) (2026-10-22)
 
 
