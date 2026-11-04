@@ -18,6 +18,7 @@ import { createSigner, wallets } from "./wallets"
 import { execThroughRole } from "./helpers"
 import { ContractFactories, KnownContracts } from "@gnosis-guild/zodiac"
 import { Chain } from "../src"
+import { activeChains } from "./chains"
 
 /** We need to skip over functions with "view" state mutability. We do this by matching the ethers ContractMethod type  */
 interface StateMutatingContractMethod {
@@ -225,10 +226,22 @@ export const arb1 = {} as any as Awaited<ReturnType<typeof initArb1Kits>>
 export const oeth = {} as any as Awaited<ReturnType<typeof initOethKits>>
 export const base = {} as any as Awaited<ReturnType<typeof initBaseKits>>
 
+// Only build kits for chains this run started forks for. Every test file
+// imports this module, so an unconditional init reaches for a signer on all
+// five chains even in a shard that tests one -- and a signer on a chain with
+// no fork behind it retries "failed to detect network" forever.
 beforeAll(async () => {
-  Object.assign(eth, await initEthKits())
-  Object.assign(gno, await initGnoKits())
-  Object.assign(arb1, await initArb1Kits())
-  Object.assign(oeth, await initOethKits())
-  Object.assign(base, await initBaseKits())
+  const active = new Set<Chain>(activeChains())
+  const inits: [Chain, object, () => Promise<object>][] = [
+    [Chain.eth, eth, initEthKits],
+    [Chain.gno, gno, initGnoKits],
+    [Chain.arb1, arb1, initArb1Kits],
+    [Chain.oeth, oeth, initOethKits],
+    [Chain.base, base, initBaseKits],
+  ]
+  await Promise.all(
+    inits
+      .filter(([chain]) => active.has(chain))
+      .map(async ([, target, init]) => Object.assign(target, await init()))
+  )
 })
