@@ -85,8 +85,12 @@ jobs:
       - name: Install anvil
         uses: foundry-rs/foundry-toolchain@v1
         with:
-          # https://github.com/foundry-rs/foundry/releases/tag/nightly-fd565286372b42a19b22d6a756e59a1b60a4135c
-          version: nightly-fd565286372b42a19b22d6a756e59a1b60a4135c
+          # foundryup now refuses releases without a Sigstore attestation, and the
+          # nightly this was pinned to (nightly-fd565286…, 2025) predates them:
+          #   "requires a Sigstore attestation; refusing to download unverified binaries"
+          # Pinned to a stable tag rather than a nightly so this cannot recur.
+          # https://github.com/foundry-rs/foundry/releases/tag/v1.8.6
+          version: v1.8.6
 
       - name: Run tests
         run: |

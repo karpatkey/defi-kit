@@ -1244,7 +1244,7 @@ export default [
   {
     id: "0x47fe8Ab9eE47DD65c24df52324181790b9F47EfC",
     version: "v1.1",
-    name: "ALPHA wETH Core",
+    name: "Villandrando",
     symbol: "aWETH",
     asset: {
       address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
@@ -1554,7 +1554,7 @@ export default [
   {
     id: "0xb0f05E4De970A1aaf77f8C2F823953a367504BA9",
     version: "v1.1",
-    name: "ALPHA USDC Core",
+    name: "Hawkwood",
     symbol: "aUSDC",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
@@ -6904,8 +6904,8 @@ export default [
   {
     id: "0x153Bd1abE60104Bd46aa05a27fA12D1346D64A57",
     version: "v2",
-    name: "Alpha USDC Forex V2",
-    symbol: "alphaForexV2",
+    name: "Acuto",
+    symbol: "Acuto",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
@@ -10402,6 +10402,16 @@ export default [
     },
   },
   {
+    id: "0x4b7D98a652C4ca87B3EAE4A64F7FF852de2Ef9B7",
+    version: "v2",
+    name: "Stake DAO USDC Core",
+    symbol: "sdUSDCcore",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0xb226449292d311B8c0e3271a9A3534fF0717b19a",
     version: "v2",
     name: "Gauntlet USDC RWA",
@@ -10562,10 +10572,240 @@ export default [
     },
   },
   {
+    id: "0xcf609F8327E68b42AF54F9D529b9f65d68038435",
+    version: "v2",
+    name: "Pendle Ecosystem High Yield USDC",
+    symbol: "pendleUSDChy",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
     id: "0x355A1c6A3f1946d4DbD7cE932492925AB9F261a7",
     version: "v2",
     name: "YO Ecosystem Vault",
     symbol: "yoEcoVault",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x075C563aCc16391390Fc68D11a2a5c998299173e",
+    version: "v2",
+    name: "RockawayX USDC  Yield",
+    symbol: "aUSDC-RX",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x2AA9B1F12bbFE1E01dcb4DD52E6836d68416e3B6",
+    version: "v2",
+    name: "Tempora Labs Cash Plus USDC (Test 2E)",
+    symbol: "tlCashPlusUSDC2E",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x8E44B1cbfAD6b63F27A074Ff50dF30eDbAa8B934",
+    version: "v2",
+    name: "Tenor wemUSD/USDC Collateral Vault",
+    symbol: "wemUSD-USDC-collat",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x784650Ba36Fb0Fca780B2beba81245E7357A17F1",
+    version: "v2",
+    name: "Tenor wemUSD/USDC Lending Vault",
+    symbol: "wemUSD-USDC-lend",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xDd9C28a02468B4491F37DE660aA49C5B115875a0",
+    version: "v2",
+    name: "OW USDC",
+    symbol: "owUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x3705194BAa2A7D30Cd5123E0C9ba2e4b30981a73",
+    version: "v2",
+    name: "test-m",
+    symbol: "m1",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x038d362028f89bcea7F598afb8d6Ff44b0a16708",
+    version: "v2",
+    name: "Frax Ecosystem Accelerator",
+    symbol: "FRAXELERATOR",
+    asset: {
+      address: "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+      symbol: "frxUSD",
+    },
+  },
+  {
+    id: "0x50b12e54Db5d0B9801966Ca3C3C799BAd90fAAA4",
+    version: "v2",
+    name: "tPYR USDC Vault",
+    symbol: "tPYRv-USDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xBA242f6Dc6dB6146fffb7FC4fFf07EC98661b4Cf",
+    version: "v2",
+    name: "Tenor weETH/USDC Lending Vault",
+    symbol: "weETH-USDC-lend",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x7873F890A3Eec30909Bdb2cF65C4FA70DB905aac",
+    version: "v2",
+    name: "KPK wBRL Yield",
+    symbol: "KPK_wBRL_Yield",
+    asset: {
+      address: "0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0",
+      symbol: "wBRL",
+    },
+  },
+  {
+    id: "0x06770383fBd0677b0E57E24f40D6F621544aaA8D",
+    version: "v2",
+    name: "DLA USDC cbBTC Ethereum",
+    symbol: "dlaUSDCcbBTCeth",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x2fA7a3b008CfbcE1729AB42ac838E07f7be8a2E3",
+    version: "v2",
+    name: "Re Enhanced Vault",
+    symbol: "REENHANCEDUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xc4643595394a310A92aBb507bDeE04F03b977Ebc",
+    version: "v2",
+    name: "DLA USDC WBTC Ethereum",
+    symbol: "dlaUSDCWBTCeth",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xea4EC913f50C41b757A36e887496C7FcCc11C57b",
+    version: "v2",
+    name: "DLA USDT WBTC Ethereum",
+    symbol: "dlaUSDTWBTCeth",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0x29bf8A7ea489d7744e5Ee37AC4342498Aa8B3cd0",
+    version: "v2",
+    name: "DLA USDC wstETH Ethereum",
+    symbol: "dlaUSDCwstETHeth",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xb24Ea13f4F1936125Da2e001B835fa98906239Aa",
+    version: "v2",
+    name: "DLA USDT wstETH Ethereum",
+    symbol: "dlaUSDTwstETHeth",
+    asset: {
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      symbol: "USDT",
+    },
+  },
+  {
+    id: "0xc3bbdc7492b8Fef1B4db98E38475f720A2d9D3EB",
+    version: "v2",
+    name: "DLA WETH wstETH Ethereum 96.5",
+    symbol: "dlaWETHwstETHeth965",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x1f635F293ce3578f50A4CcbFE0D3A782cfB117Cc",
+    version: "v2",
+    name: "DLA WETH wstETH Ethereum 94.5",
+    symbol: "dlaWETHwstETHeth945",
+    asset: {
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      symbol: "WETH",
+    },
+  },
+  {
+    id: "0x687a789c8BfAF4Bd8162c2D211bbBce4DfDFC64e",
+    version: "v2",
+    name: "MetaWork Galaxy USDC Enhanced",
+    symbol: "mwGUSDCe",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x8E4fB6ba8DB181d293457BB73a52a76dB621B032",
+    version: "v2",
+    name: "Amanet USDC Savings",
+    symbol: "amUSDC",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0x64783Fa182d523d1bc05ee95D3830E3a71c9eaB0",
+    version: "v2",
+    name: "Tenor wstETH/USDC Lending Vault",
+    symbol: "wstETH-USDC-lend",
+    asset: {
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      symbol: "USDC",
+    },
+  },
+  {
+    id: "0xD841dD70f8407611eA84c73d3D31974aa04649f9",
+    version: "v2",
+    name: "Centurion USDC",
+    symbol: "centUSD",
     asset: {
       address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
       symbol: "USDC",
