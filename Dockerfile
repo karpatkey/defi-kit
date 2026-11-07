@@ -4,6 +4,10 @@ FROM node:24-alpine as base
 # --upgrade pulls Alpine's current store: 20261020-r0 dropped emSign ECC Root
 # CA - G3, whose intermediates' keys leaked in October 2026.
 RUN apk add --no-cache --upgrade ca-certificates ca-certificates-bundle
+# Verify TLS against the Alpine store above, not Node's bundled roots, which
+# still hold emSign ECC Root CA - G3 until a Node 24.x release carries
+# nodejs/node#66871.
+ENV NODE_OPTIONS=--use-openssl-ca
 
 # Install dependencies only when needed
 FROM base AS deps
@@ -34,10 +38,6 @@ WORKDIR /app
 
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
-# Verify TLS against the Alpine store above, not Node's bundled roots, which
-# still hold emSign ECC Root CA - G3 until a Node 24.x release carries
-# nodejs/node#66871.
-ENV NODE_OPTIONS=--use-openssl-ca
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
