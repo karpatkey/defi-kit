@@ -27,7 +27,7 @@
     "nextra": "^2.13.2",
     "nextra-theme-docs": "^2.13.2",
     "playground": "workspace:*",
-    "postcss": "^8.4.28",
+    "postcss": "^8.5.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.32.6",
