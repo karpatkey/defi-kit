@@ -37,7 +37,7 @@ jobs:
       
       - name: Build Docker image using composite action
         if: github.event_name != 'release' || github.event.action != 'published'
-        uses: karpatkey/build-actions/build-docker-image@main
+        uses: kpk/build-actions/build-docker-image@main
       
   deploy_prod:                                   # <-- new job just for release deploy
     if: github.event_name == 'release' && github.event.action == 'published'
@@ -50,4 +50,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: deploy prod release
-        uses: karpatkey/build-actions/release-prod@main
+        uses: kpk/build-actions/release-prod@main

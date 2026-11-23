@@ -1,7 +1,7 @@
 {
   "name": "defi-kit-monorepo",
   "private": true,
-  "repository": "https://github.com/karpatkey/defi-kit.git",
+  "repository": "https://github.com/kpk/defi-kit.git",
   "author": "karpatkey",
   "license": "LGPL-3.0",
   "workspaces": [
