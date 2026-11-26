@@ -16,8 +16,29 @@ const findComet = (symbolOrAddress: string): Comet => {
   return comet
 }
 
-const findCometByBorrowToken = (symbolOrAddress: string): Comet => {
+/**
+ * Resolves a `borrow` target, which may be either a comet (symbol or address)
+ * or a borrow token (symbol or address).
+ *
+ * Several comets can share a borrow token - USDC is the base asset of both
+ * cUSDCv3 and ciUSDCv3 - and a borrow token alone cannot distinguish between
+ * them. Comet identifiers are therefore tried first, so that a market with an
+ * ambiguous borrow token can still be targeted explicitly. Resolution by
+ * borrow token is unchanged and keeps returning the first matching comet, so
+ * existing policies written against a token symbol are unaffected.
+ */
+const findCometForBorrow = (symbolOrAddress: string): Comet => {
   const symbolAddressLower = symbolOrAddress.toLowerCase()
+
+  const cometByIdentifier = comets.find(
+    (comet) =>
+      comet.symbol.toLowerCase() === symbolAddressLower ||
+      comet.address.toLowerCase() === symbolAddressLower
+  )
+  if (cometByIdentifier) {
+    return cometByIdentifier
+  }
+
   const comet = comets.find(
     (comet) =>
       comet.borrowToken.symbol.toLowerCase() === symbolAddressLower ||
@@ -65,8 +86,13 @@ export const eth = {
   borrow: async ({
     targets,
   }: {
-    targets: (BorrowToken["symbol"] | BorrowToken["address"])[]
+    targets: (
+      | Comet["symbol"]
+      | Comet["address"]
+      | BorrowToken["symbol"]
+      | BorrowToken["address"]
+    )[]
   }) => {
-    return targets.flatMap((target) => borrow(findCometByBorrowToken(target)))
+    return targets.flatMap((target) => borrow(findCometForBorrow(target)))
   },
 }
