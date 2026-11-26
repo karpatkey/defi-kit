@@ -11,11 +11,14 @@ import { Chain } from ".../../../src"
 // between blocks 26,360,000 (7 Nov 2026, still working) and 26,380,000
 // (9 Nov 2026, paused). Reproduced against a mainnet fork:
 //
-//   stakeAndClaimAethC()  -> reverted: "This action currently paused"
-//   unstakeAETH(1e18)     -> reverted: "This action currently paused"
+//   "deposit ETH"                 stakeAndClaimAethC() -> paused
+//   "only withdraw with flash..."  swapEth()           -> cascade: the
+//       member holds no ankrETH, because the deposit above cannot run
+//   "withdraw with standard..."    unstakeAETH(1e18)   -> paused
 //
-// The third case then fails as a cascade, since no ankrETH can be acquired
-// to swap. ankrETH itself is still live, so this is the protocol being
+// So two cases revert directly on the pause and one is a knock-on effect.
+// Clearing only the direct reverts is not enough to call the suite healthy.
+// ankrETH itself is still live, so this is the protocol being
 // unavailable rather than a problem with the permissions we generate.
 //
 // These tests fork at latest, so they will keep failing until Ankr unpauses.

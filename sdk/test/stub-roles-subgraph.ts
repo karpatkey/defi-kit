@@ -24,8 +24,18 @@
  */
 const SQD_URL = "https://gnosisguild.squids.live/roles:production/api/graphql"
 
-const EMPTY_SUBGRAPH_RESPONSE = {
-  data: { role: null, rolesModifier: null },
+/**
+ * Keyed by `operationName` so that each query gets the shape it expects. A
+ * single catch-all body would be returned for queries this stub has never
+ * seen, and `fetchFromSubgraph` only throws when the whole `data` object is
+ * falsy - so an unknown query would get a silently wrong answer and surface
+ * much later as a confusing `TypeError` deep inside the SDK. Anything
+ * unrecognised is rejected loudly instead.
+ */
+const EMPTY_RESULTS: Record<string, unknown> = {
+  Role: { role: null },
+  RolesMod: { rolesModifier: null },
+  RolesModConfig: { rolesModifier: null },
 }
 
 const realFetch = globalThis.fetch
@@ -39,7 +49,18 @@ globalThis.fetch = (async (input: any, init?: any) => {
       : input?.url
 
   if (url === SQD_URL) {
-    return new Response(JSON.stringify(EMPTY_SUBGRAPH_RESPONSE), {
+    const operationName = JSON.parse(String(init?.body ?? "{}")).operationName
+    const data = EMPTY_RESULTS[operationName]
+
+    if (!data) {
+      throw new Error(
+        `The Roles subgraph is stubbed in tests and has no canned result for ` +
+          `operation "${operationName}". Add one to ${"test/stub-roles-subgraph.ts"} ` +
+          `with the shape that query expects.`
+      )
+    }
+
+    return new Response(JSON.stringify({ data }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
     })
