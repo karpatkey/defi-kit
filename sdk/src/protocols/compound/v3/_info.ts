@@ -355,4 +355,30 @@ export default [
       },
     ],
   },
+  {
+    address: "0xe58fC3D0ECcB7dE485CD1F477427b680c96436d0",
+    symbol: "ciUSDGv3",
+    borrowToken: {
+      address: "0xe343167631d89B6Ffc58B88d6b7fB0228795491D",
+      symbol: "USDG",
+    },
+    collateralTokens: [
+      {
+        address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+        symbol: "WETH",
+      },
+      {
+        address: "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+        symbol: "wstETH",
+      },
+      {
+        address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        symbol: "cbBTC",
+      },
+      {
+        address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+        symbol: "WBTC",
+      },
+    ],
+  },
 ] as const
