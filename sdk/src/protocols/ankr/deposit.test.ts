@@ -7,7 +7,25 @@ import { eth as kit } from "../../../test/kit"
 import { parseEther } from "ethers"
 import { Chain } from ".../../../src"
 
-describe("ankr", () => {
+// Skipped: Ankr paused staking and unstaking on its ETH2Staking contract
+// between blocks 26,360,000 (7 Nov 2026, still working) and 26,380,000
+// (9 Nov 2026, paused). Reproduced against a mainnet fork:
+//
+//   "deposit ETH"                 stakeAndClaimAethC() -> paused
+//   "only withdraw with flash..."  swapEth()           -> cascade: the
+//       member holds no ankrETH, because the deposit above cannot run
+//   "withdraw with standard..."    unstakeAETH(1e18)   -> paused
+//
+// So two cases revert directly on the pause and one is a knock-on effect.
+// Clearing only the direct reverts is not enough to call the suite healthy.
+// ankrETH itself is still live, so this is the protocol being
+// unavailable rather than a problem with the permissions we generate.
+//
+// These tests fork at latest, so they will keep failing until Ankr unpauses.
+// Un-skip once `stakeAndClaimAethC` succeeds on a fresh fork again; if Ankr
+// is being wound down for good, delete this suite and the CI shard as was
+// done for Aura.
+describe.skip("ankr", () => {
   describe("deposit", () => {
     beforeAll(async () => {
       await applyPermissions(Chain.eth, await eth.deposit())
