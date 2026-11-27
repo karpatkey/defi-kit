@@ -4,5 +4,6 @@ module.exports = {
   testEnvironment: "node",
   testTimeout: 60000,
   globalSetup: "./test/global-setup.ts",
+  setupFiles: ["./test/stub-roles-subgraph.ts"],
   setupFilesAfterEnv: ["./test/setup-after-env.ts"],
 }
