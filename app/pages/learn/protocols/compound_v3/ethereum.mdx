@@ -143,17 +143,25 @@ Claim rewards.
 
 | Name      | Type                  | Description                          |
 | :-------- | :-------------------- | :----------------------------------- |
-| `targets` | _string[] (required)_ | `Token` symbols \| `Token` addresses |
+| `targets` | _string[] (required)_ | `Comet` symbols \| `Comet` addresses \| `Token` symbols \| `Token` addresses |
 
 <Callout type="info">
-  `TARGET_COMET` below refers to the address of the `Comet`. It is automatically
-  determined based on the base token provided in each element of `targets`.
+  `TARGET_COMET` below refers to the address of the `Comet`. Each element of
+  `targets` may name the `Comet` directly, or name its base token, in which
+  case the `Comet` is determined from that token.
 </Callout>
 
 <Callout type="info">
-  `TARGET_TOKEN` refers to the ERC-20 address of each token in `targets`.
-  `targets` must be a subset of the base tokens of the available Comets. For
-  example, for `cUSDCv3` the base token is `USDC`.
+  `TARGET_TOKEN` refers to the ERC-20 address of the base token of each
+  `TARGET_COMET`. A base token must be the base token of one of the available
+  Comets - for example, for `cUSDCv3` the base token is `USDC`.
+</Callout>
+
+<Callout type="warning">
+  Several Comets can share a base token: `USDC` is the base token of both
+  `cUSDCv3` and `ciUSDCv3`. A base token therefore resolves to the first
+  matching `Comet` (`cUSDCv3` for `USDC`). Name the `Comet` itself to target
+  the other one.
 </Callout>
 
 ### `TARGET_TOKEN · approve`

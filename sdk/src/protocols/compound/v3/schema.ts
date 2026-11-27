@@ -32,6 +32,11 @@ const zToken = z.enum([...ethCollateralTokens, ...ethBorrowTokens] as [
 
 const zBorrowToken = z.enum(ethBorrowTokens as [string, string, ...string[]])
 
+// A borrow target may be a comet or a borrow token. Comets are accepted so
+// that markets sharing a borrow token (USDC backs both cUSDCv3 and ciUSDCv3)
+// can be addressed unambiguously - see findCometForBorrow in ./index.ts
+const zBorrowTarget = z.union([zComet, zBorrowToken])
+
 export const eth = {
   deposit: z.object({
     targets: zComet.array(),
@@ -39,6 +44,6 @@ export const eth = {
   }),
 
   borrow: z.object({
-    targets: zBorrowToken.array(),
+    targets: zBorrowTarget.array(),
   }),
 }
