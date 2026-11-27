@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.27.4](https://github.com/karpatkey/defi-kit/compare/v2.27.3...v2.27.4) (2026-11-27)
+
+
+### Bug Fixes
+
+* Compound v3 - add USDG Institutional Market (ciUSDGv3) ([#577](https://github.com/karpatkey/defi-kit/issues/577)) ([124bd2e](https://github.com/karpatkey/defi-kit/commit/124bd2ecf475aa517f73801983f60d0c0d93b026))
+* Compound v3 - let borrow target a comet, not only a borrow token ([#579](https://github.com/karpatkey/defi-kit/issues/579)) ([8934232](https://github.com/karpatkey/defi-kit/commit/8934232e594e580a619b02f0aef3190cb1d433fb))
+* restore CI - stub the unreachable Roles subgraph, skip paused ankr suite ([#578](https://github.com/karpatkey/defi-kit/issues/578)) ([ce00290](https://github.com/karpatkey/defi-kit/commit/ce00290d895d2c5c0b00d6ad14d9b913f8737c6b))
+
 ## [2.27.3](https://github.com/karpatkey/defi-kit/compare/v2.27.2...v2.27.3) (2026-11-04)
 
 
